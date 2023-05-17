@@ -1,0 +1,23 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+@*<link rel="stylesheet" href="@Url.Content("~/Content/devextreme.light.custom.css")" type="text/css" />
+<link rel="stylesheet" href="@Url.Content("~/Content/reporting.light.custom.css")" type="text/css" />*@
+
+@*@Html.DevExpress().WebDocumentViewer(settings =>
+{
+    settings.Name = "WebDocumentViewer";
+}).Bind(new DevExpress.XtraReports.Web.CachedReportSourceWeb(new ReportsEngine.Reports.DOIbyOwner())).GetHtml()
+
+@Html.DevExpress().ReportDesigner(settings =>
+{
+    settings.Name = "ReportDesigner1";
+}).Bind(new ReportsEngine.Reports.DOIbyOwner()).GetHtml()*@
+
+<ul>
+    <li />
+    @Html.ActionLink("Report Designer", "Designer", "Home")
+    <li />
+    @Html.ActionLink("Document Viewer", "Viewer", "Home")
+</ul>

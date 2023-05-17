@@ -1,0 +1,10 @@
+﻿
+@{
+    ViewBag.Title = "Designer";
+}
+
+@Html.DevExpress().ReportDesigner(settings =>
+{
+    settings.Name = "ReportDesigner1";
+}).BindToUrl("DOIbyOwner").GetHtml()
+
