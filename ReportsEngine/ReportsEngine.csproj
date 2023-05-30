@@ -332,6 +332,12 @@
       <DependentUpon>Report1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\WebApiODataService\WebApiODataServiceProject\WebApiODataServiceProject.csproj">
+      <Project>{5236761f-7e8b-4fb0-9144-d1113efb6e4d}</Project>
+      <Name>WebApiODataServiceProject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -1,14 +1,15 @@
-﻿using System;
-using System.Collections.Concurrent;
+﻿using DevExpress.DataAccess.ConnectionParameters;
+using DevExpress.XtraReports;
+using DevExpress.XtraReports.UI;
+using ReportsEngine.Reports;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Reflection;
 using System.ServiceModel;
-using DevExpress.XtraReports.Web.Extensions;
-using DevExpress.XtraReports.UI;
-using ReportsEngine.Reports;
-
+using System.Web;
+using System.Web.UI;
+using WebApiODataServiceProject;
 
 namespace ReportsEngine.Services
 {
@@ -56,27 +57,99 @@ namespace ReportsEngine.Services
             // This method is called only for valid URLs after the IsValidUrl method is called.
             try
             {
-                if (Directory.EnumerateFiles(reportDirectory).Select(Path.GetFileNameWithoutExtension).Contains(url))
+                string[] parts = url.Split('?');
+                string reportName = parts[0];
+                string parametersString = parts.Length > 1 ? parts[1] : String.Empty;
+                string currentDatabaseID = "";
+                XtraReport report = null;
+
+                if (ReportsFactory.Reports.ContainsKey(reportName))
                 {
-                   if (File.Exists(Path.Combine(reportDirectory, url + FileExtension)))
-                    { 
-                        return File.ReadAllBytes(Path.Combine(reportDirectory, url + FileExtension));
-                    }
+                    report = ReportsFactory.Reports[reportName]();
                 }
-                if (ReportsFactory.Reports.ContainsKey(url))
+
+                if (report != null)
                 {
+                    string user = "reportuser";
+                    string password = "Re.port_243";
+                    
+                    string PulseServerName = "Pulse.Avatar.Local";
+                    string PulseDatabaseName = "AvatarPulse";
+                    string Pulseuser = "RoyaltyOwnerRelationsUser";
+                    string Pulsepassword = "SzCz0tka";
+
+                    ConnectionStringInfo connectionStringParts = new ConnectionStringInfo();
+                    //Get the Database ConnectionString based on plngDatabaseID
+                    connectionStringParts = WebApiODataServiceProject.DatabaseSelection.getConnectionStringInfo(currentDatabaseID);
+                   
+
+
+
+                    // Assign parameters here
+                    var parameters = HttpUtility.ParseQueryString(parametersString);
+                    foreach (string parameterName in parameters.AllKeys)
+                    {
+                        //if (parameterName == "plngDatabaseID")
+                        //{
+
+                        //}
+                        //else
+                        //{
+                        //    report.Parameters[parameterName].Value = Convert.ChangeType(
+                        //        parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                        //}
+
+                        report.Parameters["pstrServerName"].Value = "Developer1";
+                        report.Parameters["pstrDatabaseName"].Value = "Providence";
+                        report.Parameters["plngCompanyID"].Value =  1;
+                        report.Parameters["plngUserID"].Value = 1043;
+
+                        string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + user + ";Password=" + password + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;";
+                        string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;";
+
+                        var dataSources = DataSourceManager.GetDataSources(report, true);
+                        foreach (var dataSource in dataSources)
+                        {
+                            if (dataSource is DevExpress.DataAccess.Sql.SqlDataSource sds && !String.IsNullOrEmpty(sds.ConnectionName))
+                            {
+                                if (sds.Name == "Dynamic")
+                                {
+                                    OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                    olapParams.ConnectionString = connectionStringDynamic;
+                                    sds.ConnectionParameters = olapParams;
+                                }
+                                else
+                                {
+                                    if (sds.Name == "Pulse")
+                                    {
+                                        OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                        olapParams.ConnectionString = connectionStringPulse;
+                                        sds.ConnectionParameters = olapParams;
+                                    }
+
+                                }
+
+                            }
+                        }
+
+
+
+                    }
+                    report.RequestParameters = false;
+
                     using (MemoryStream ms = new MemoryStream())
                     {
-                        ReportsFactory.Reports[url]().SaveLayoutToXml(ms);
+                        report.SaveLayoutToXml(ms);
                         return ms.ToArray();
                     }
                 }
             }
-            catch (Exception)
+            catch (SystemException ex)
             {
-                throw new FaultException(new FaultReason("Could not get report data."), new FaultCode("Server"), "GetData");
+                throw new FaultException("Could not get report data." + ex.Message);
             }
-            throw new FaultException(new FaultReason(string.Format("Could not find report '{0}'.", url)), new FaultCode("Server"), "GetData");
+            throw new FaultException(
+                string.Format("Could not find report '{0}'.", url));
         }
 
         public override Dictionary<string, string> GetUrls()
