@@ -9,7 +9,6 @@ using System.Linq;
 using System.ServiceModel;
 using System.Web;
 using System.Web.UI;
-using WebApiODataServiceProject;
 
 namespace ReportsEngine.Services
 {
@@ -72,68 +71,61 @@ namespace ReportsEngine.Services
                 {
                     string user = "reportuser";
                     string password = "Re.port_243";
-                    
+
                     string PulseServerName = "Pulse.Avatar.Local";
                     string PulseDatabaseName = "AvatarPulse";
                     string Pulseuser = "RoyaltyOwnerRelationsUser";
                     string Pulsepassword = "SzCz0tka";
 
-                    ConnectionStringInfo connectionStringParts = new ConnectionStringInfo();
-                    //Get the Database ConnectionString based on plngDatabaseID
-                    connectionStringParts = WebApiODataServiceProject.DatabaseSelection.getConnectionStringInfo(currentDatabaseID);
-                   
-
-
-
                     // Assign parameters here
                     var parameters = HttpUtility.ParseQueryString(parametersString);
                     foreach (string parameterName in parameters.AllKeys)
                     {
-                        //if (parameterName == "plngDatabaseID")
-                        //{
-
-                        //}
-                        //else
-                        //{
-                        //    report.Parameters[parameterName].Value = Convert.ChangeType(
-                        //        parameters.Get(parameterName), report.Parameters[parameterName].Type);
-                        //}
-
-                        report.Parameters["pstrServerName"].Value = "Developer1";
-                        report.Parameters["pstrDatabaseName"].Value = "Providence";
-                        report.Parameters["plngCompanyID"].Value =  1;
-                        report.Parameters["plngUserID"].Value = 1043;
-
-                        string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + user + ";Password=" + password + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;";
-                        string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;";
-
-                        var dataSources = DataSourceManager.GetDataSources(report, true);
-                        foreach (var dataSource in dataSources)
+                        if (parameterName == "plngDatabaseID")
                         {
-                            if (dataSource is DevExpress.DataAccess.Sql.SqlDataSource sds && !String.IsNullOrEmpty(sds.ConnectionName))
+                            DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();
+                            currentDatabaseID = parameters["plngDatabaseID"];
+                            //Get the Database ConnectionString based on plngDatabaseID
+                            connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
+                            report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
+                            report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+
+                            string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + user + ";Password=" + password + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;";
+                            string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;";
+
+                            var dataSources = DataSourceManager.GetDataSources(report, true);
+                            foreach (var dataSource in dataSources)
                             {
-                                if (sds.Name == "Dynamic")
+                                if (dataSource is DevExpress.DataAccess.Sql.SqlDataSource sds && !String.IsNullOrEmpty(sds.ConnectionName))
                                 {
-                                    OlapConnectionParameters olapParams = new OlapConnectionParameters();
-                                    olapParams.ConnectionString = connectionStringDynamic;
-                                    sds.ConnectionParameters = olapParams;
-                                }
-                                else
-                                {
-                                    if (sds.Name == "Pulse")
+                                    if (sds.Name == "Dynamic")
                                     {
                                         OlapConnectionParameters olapParams = new OlapConnectionParameters();
-                                        olapParams.ConnectionString = connectionStringPulse;
+                                        olapParams.ConnectionString = connectionStringDynamic;
                                         sds.ConnectionParameters = olapParams;
                                     }
-
+                                    else
+                                    {
+                                        if (sds.Name == "Pulse")
+                                        {
+                                            OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                            olapParams.ConnectionString = connectionStringPulse;
+                                            sds.ConnectionParameters = olapParams;
+                                        }
+                                    }
                                 }
-
                             }
                         }
-
-
-
+                        else
+                        {
+                            if (parameterName == "pstrSubtitle")
+                            {
+                                report.Parameters["Subtitle"].Value = parameters["pstrSubtitle"].ToString();
+                            }
+                            else
+                                report.Parameters[parameterName].Value = Convert.ChangeType(
+                                    parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                        }
                     }
                     report.RequestParameters = false;
 
@@ -182,5 +174,6 @@ namespace ReportsEngine.Services
             SetData(report, defaultUrl);
             return defaultUrl;
         }
+
     }
 }
