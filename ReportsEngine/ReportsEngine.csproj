@@ -293,11 +293,23 @@
     </Compile>
     <Compile Include="Models\ReportsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\AFEMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AFEMasterList.Designer.cs">
+      <DependentUpon>AFEMasterList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APEditListcs.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\APEditListcs.Designer.cs">
       <DependentUpon>APEditListcs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ChartofAccountListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ChartofAccountListing.Designer.cs">
+      <DependentUpon>ChartofAccountListing.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\DOIbyOwner.cs">
       <SubType>Component</SubType>
@@ -323,8 +335,14 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\AFEMasterList.resx">
+      <DependentUpon>AFEMasterList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APEditListcs.resx">
       <DependentUpon>APEditListcs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ChartofAccountListing.resx">
+      <DependentUpon>ChartofAccountListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\DOIbyOwner.resx">
       <DependentUpon>DOIbyOwner.cs</DependentUpon>
