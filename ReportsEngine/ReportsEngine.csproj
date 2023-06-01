@@ -45,7 +45,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -317,6 +317,12 @@
     <Compile Include="Reports\DOIbyOwner.Designer.cs">
       <DependentUpon>DOIbyOwner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\DOIByOwnerAddress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\DOIByOwnerAddress.Designer.cs">
+      <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Report1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -324,6 +330,12 @@
       <DependentUpon>Report1.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportsFactory.cs" />
+    <Compile Include="Services\DOIbyOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\DOIbyOwner.Designer.cs">
+      <DependentUpon>DOIbyOwner.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\DynamicConnectionHandler.cs" />
     <Compile Include="Services\ReportStorageWebExtension.cs" />
   </ItemGroup>
@@ -347,8 +359,14 @@
     <EmbeddedResource Include="Reports\DOIbyOwner.resx">
       <DependentUpon>DOIbyOwner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\DOIByOwnerAddress.resx">
+      <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Services\DOIbyOwner.resx">
+      <DependentUpon>DOIbyOwner.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

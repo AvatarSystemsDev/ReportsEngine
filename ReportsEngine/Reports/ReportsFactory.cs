@@ -11,8 +11,9 @@ namespace ReportsEngine.Reports
         static ReportsFactory()
         {
             Reports.Add("APEditListcs", () => new APEditListcs());
-            Reports.Add("DOIbyOwner", () => new DOIbyOwner());
-
+            Reports.Add("AFEMasterList", () => new AFEMasterList());
+            Reports.Add("ChartofAccountListing", () => new ChartofAccountListing());
+            Reports.Add("DOIByOwnerAddress", () => new DOIByOwnerAddress());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
