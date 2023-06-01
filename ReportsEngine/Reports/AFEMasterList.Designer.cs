@@ -153,6 +153,9 @@
             this.pbooShowInactive = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
+            this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
+            this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.xrControlStyle2 = new DevExpress.XtraReports.UI.XRControlStyle();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExecutionTime)).BeginInit();
@@ -449,7 +452,7 @@
             this.Textbox4,
             this.Textbox9,
             this.Textbox13});
-            this.pageHeaderBand1.HeightF = 137.78F;
+            this.pageHeaderBand1.HeightF = 109.4467F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -500,6 +503,7 @@
             this.Rectangle4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 62.78F);
             this.Rectangle4.Name = "Rectangle4";
             this.Rectangle4.SizeF = new System.Drawing.SizeF(779.84F, 25F);
+            this.Rectangle4.StyleName = "xrControlStyle2";
             // 
             // Textbox11
             // 
@@ -517,6 +521,7 @@
             this.Textbox11.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox11.SerializableRtfString = resources.GetString("Textbox11.SerializableRtfString");
             this.Textbox11.SizeF = new System.Drawing.SizeF(262.85F, 25F);
+            this.Textbox11.StyleName = "xrControlStyle2";
             // 
             // Textbox2
             // 
@@ -589,10 +594,11 @@
             this.pageFooterBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pageFooterBand1.BorderWidth = 1F;
             this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPageInfo1,
             this.CopyRight,
             this.Textbox5,
             this.ExecutionTime});
-            this.pageFooterBand1.HeightF = 63.09F;
+            this.pageFooterBand1.HeightF = 50F;
             this.pageFooterBand1.Name = "pageFooterBand1";
             this.pageFooterBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -605,11 +611,12 @@
             this.CopyRight.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Copyright Avatar Systems, Inc.\'")});
             this.CopyRight.KeepTogether = true;
-            this.CopyRight.LocationFloat = new DevExpress.Utils.PointFloat(573.16F, 30.39999F);
+            this.CopyRight.LocationFloat = new DevExpress.Utils.PointFloat(575.16F, 22.99999F);
             this.CopyRight.Multiline = true;
             this.CopyRight.Name = "CopyRight";
             this.CopyRight.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.CopyRight.SizeF = new System.Drawing.SizeF(234.84F, 25F);
+            this.CopyRight.StyleName = "xrControlStyle2";
             this.CopyRight.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox5
@@ -622,11 +629,12 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'User: \' + [Pulse_Master_UserRecord].[FirstName] +  \' \' + [Pulse_Master_UserRecor" +
                     "d].[LastName]")});
             this.Textbox5.KeepTogether = true;
-            this.Textbox5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 32.40001F);
+            this.Textbox5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 25F);
             this.Textbox5.Multiline = true;
             this.Textbox5.Name = "Textbox5";
             this.Textbox5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox5.SizeF = new System.Drawing.SizeF(276.04F, 25F);
+            this.Textbox5.StyleName = "xrControlStyle2";
             this.Textbox5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // ExecutionTime
@@ -638,11 +646,12 @@
             this.ExecutionTime.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "\'Run Date:\' + Now()")});
             this.ExecutionTime.KeepTogether = true;
-            this.ExecutionTime.LocationFloat = new DevExpress.Utils.PointFloat(0.5900065F, 7.400004F);
+            this.ExecutionTime.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.ExecutionTime.Name = "ExecutionTime";
             this.ExecutionTime.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.ExecutionTime.SerializableRtfString = resources.GetString("ExecutionTime.SerializableRtfString");
             this.ExecutionTime.SizeF = new System.Drawing.SizeF(275.45F, 25F);
+            this.ExecutionTime.StyleName = "xrControlStyle2";
             // 
             // pstrDatabaseName
             // 
@@ -801,6 +810,27 @@
             selectNode3,
             selectNode4});
             // 
+            // xrControlStyle1
+            // 
+            this.xrControlStyle1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrControlStyle1.Name = "xrControlStyle1";
+            // 
+            // xrPageInfo1
+            // 
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(575.1699F, 0F);
+            this.xrPageInfo1.Name = "xrPageInfo1";
+            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(234.83F, 23F);
+            this.xrPageInfo1.StyleName = "xrControlStyle2";
+            this.xrPageInfo1.StylePriority.UseTextAlignment = false;
+            this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrPageInfo1.TextFormatString = "Page {0} of {1}";
+            // 
+            // xrControlStyle2
+            // 
+            this.xrControlStyle2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrControlStyle2.Name = "xrControlStyle2";
+            // 
             // AFEMasterList
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -828,6 +858,8 @@
             this.pstrEndingAFENumber,
             this.pbooShowInactive,
             this.pbooShowCriteria});
+            this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
+            this.xrControlStyle2});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox11)).EndInit();
@@ -873,5 +905,8 @@
         private DevExpress.XtraReports.UI.XRLabel CopyRight;
         private DevExpress.XtraReports.UI.XRLabel Textbox5;
         private DevExpress.XtraReports.UI.XRRichText ExecutionTime;
+        private DevExpress.XtraReports.UI.XRControlStyle xrControlStyle1;
+        private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
+        private DevExpress.XtraReports.UI.XRControlStyle xrControlStyle2;
     }
 }
