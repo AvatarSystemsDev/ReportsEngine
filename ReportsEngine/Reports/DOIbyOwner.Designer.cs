@@ -1288,7 +1288,7 @@
             this.xrLabel3});
             this.SubBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "IIF(?pbooTotalByInterestType, false, true)\n")});
-            this.SubBand1.HeightF = 36.08201F;
+            this.SubBand1.HeightF = 23.00003F;
             this.SubBand1.Name = "SubBand1";
             // 
             // xrLabel1
@@ -1351,7 +1351,7 @@
             this.xrTable2});
             this.SubBand2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "IIF(?pbooTotalByInterestType, true, false)\n")});
-            this.SubBand2.HeightF = 82.96F;
+            this.SubBand2.HeightF = 75.33503F;
             this.SubBand2.Name = "SubBand2";
             // 
             // xrTable4
