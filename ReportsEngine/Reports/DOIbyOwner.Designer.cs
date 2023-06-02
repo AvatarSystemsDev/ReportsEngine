@@ -163,6 +163,7 @@
             this.CostDecimal1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.OtherDecimal1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
             this.Rectangle3 = new DevExpress.XtraReports.UI.XRPanel();
             this.Textbox8 = new DevExpress.XtraReports.UI.XRRichText();
@@ -219,7 +220,6 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-            this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox11)).BeginInit();
@@ -445,7 +445,7 @@
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 10F;
+            this.bottomMarginBand1.HeightF = 0F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // Tablix1
@@ -665,6 +665,24 @@
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // Textbox7
+            // 
+            this.Textbox7.BorderColor = System.Drawing.Color.Black;
+            this.Textbox7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Textbox7.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Textbox7.BorderWidth = 1F;
+            this.Textbox7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]\n")});
+            this.Textbox7.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox7.KeepTogether = true;
+            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.Textbox7.Multiline = true;
+            this.Textbox7.Name = "Textbox7";
+            this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox7.SizeF = new System.Drawing.SizeF(829.9999F, 26.975F);
+            this.Textbox7.StylePriority.UseFont = false;
+            this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
             // ReportTitle
             // 
             this.ReportTitle.BorderColor = System.Drawing.Color.Black;
@@ -881,13 +899,13 @@
             this.ExecutionTime,
             this.Textbox5,
             this.CopyRight});
-            this.pageFooterBand1.HeightF = 62.15F;
+            this.pageFooterBand1.HeightF = 58.02339F;
             this.pageFooterBand1.Name = "pageFooterBand1";
             this.pageFooterBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrPageInfo1
             // 
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(552.32F, 7.56003F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(552.32F, 4.56003F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(234.83F, 23F);
@@ -904,7 +922,7 @@
             this.ExecutionTime.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "\'Run Date:\' + Now()")});
             this.ExecutionTime.KeepTogether = true;
-            this.ExecutionTime.LocationFloat = new DevExpress.Utils.PointFloat(5.85F, 5.56F);
+            this.ExecutionTime.LocationFloat = new DevExpress.Utils.PointFloat(5.85F, 2.56F);
             this.ExecutionTime.Name = "ExecutionTime";
             this.ExecutionTime.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.ExecutionTime.SerializableRtfString = resources.GetString("ExecutionTime.SerializableRtfString");
@@ -920,7 +938,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'User: \' + [Pulse_Master_UserRecord].[FirstName] +  \' \' + [Pulse_Master_UserRecor" +
                     "d].[LastName]")});
             this.Textbox5.KeepTogether = true;
-            this.Textbox5.LocationFloat = new DevExpress.Utils.PointFloat(7.24F, 33.33F);
+            this.Textbox5.LocationFloat = new DevExpress.Utils.PointFloat(7.24F, 30.33F);
             this.Textbox5.Multiline = true;
             this.Textbox5.Name = "Textbox5";
             this.Textbox5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -936,7 +954,7 @@
             this.CopyRight.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Copyright Avatar Systems, Inc.\'")});
             this.CopyRight.KeepTogether = true;
-            this.CopyRight.LocationFloat = new DevExpress.Utils.PointFloat(552.31F, 33.33F);
+            this.CopyRight.LocationFloat = new DevExpress.Utils.PointFloat(552.31F, 30.33F);
             this.CopyRight.Multiline = true;
             this.CopyRight.Name = "CopyRight";
             this.CopyRight.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -1471,24 +1489,6 @@
             this.groupHeaderBand1.HeightF = 26.64674F;
             this.groupHeaderBand1.Name = "groupHeaderBand1";
             // 
-            // Textbox7
-            // 
-            this.Textbox7.BorderColor = System.Drawing.Color.Black;
-            this.Textbox7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox7.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox7.BorderWidth = 1F;
-            this.Textbox7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]\n")});
-            this.Textbox7.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
-            this.Textbox7.KeepTogether = true;
-            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.Textbox7.Multiline = true;
-            this.Textbox7.Name = "Textbox7";
-            this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox7.SizeF = new System.Drawing.SizeF(829.9999F, 26.975F);
-            this.Textbox7.StylePriority.UseFont = false;
-            this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
             // DOIbyOwner
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1509,7 +1509,7 @@
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "DOIbyOwner";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(10F, 9F, 10F, 10F);
+            this.Margins = new DevExpress.Drawing.DXMargins(10F, 9F, 10F, 0F);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
