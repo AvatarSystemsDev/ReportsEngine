@@ -117,6 +117,14 @@ namespace ReportsEngine.Reports
             
 
         }
+        public XRCheckBox CreateXRCheckBox()
+        {
+            // Creates the XRCheckBox control.
+            XRCheckBox xrCheckBox1 = new XRCheckBox();
+            xrCheckBox1.SizeF = new SizeF(150F, 20F);
+
+            return xrCheckBox1;
+        }
     }
 
 
