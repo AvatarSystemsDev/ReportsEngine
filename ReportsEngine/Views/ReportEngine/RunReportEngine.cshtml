@@ -5,7 +5,48 @@
 
 <h2>RunReportEngine</h2>
 
+<script type="text/javascript" id="script">
+    function onBeforeRender(s, e) {
+        e.tabPanel.tabs.push(new DevExpress.Analytics.TabInfo({
+            text: "Test",
+            template: "my-test-panel",
+            imageTemplateName: "fivestar",
+            model: null
+        }));
+    }
+</script>
+<script type="text/html" id="my-test-panel">
+    <asp:Button Text="Button" runat="server" />
+</script>
+<script type="text/html" id="fivestar">
+    <svg viewBox="-3.4 -4 32 32" xmlns="http://www.w3.org/2000/svg"
+         xmlns:xlink="http://www.w3.org/1999/xlink">
+        <g id="Layer_1" transform="translate(-3.4, -4)"
+           style="enable-background:new 0 0 32 32">
+            <g id="Rating_1_">
+                <polygon class="dxd-icon-fill"
+                         points="16,4 19.9,11.9 28.6,13.2 22.3,19.3 23.8,28 16,23.9 8.2,28 9.7,19.3 3.4,13.2 12.1,11.9  " />
+            </g>
+        </g>
+    </svg>
+</script>
+
+<script>
+        function customizeActions(s, e) {
+            var printAction = e.GetById(DevExpress.Report.Preview.ActionId.Print);
+            if (printAction) {
+                printAction.text = "Custom Print Toolbar";
+            }
+            var printPageAction = e.GetById(DevExpress.Report.Preview.ActionId.PrintPage);
+            if (printPageAction) {
+                printPageAction.text = "Custom Print Page Toolbar";
+            }
+    }
+</script>
+
+
 @Html.DevExpress().WebDocumentViewer(settings =>
 {
     settings.Name = "WebDocumentViewer";
+    settings.ClientSideEvents.CustomizeMenuActions = "customizeActions";
 }).Bind(new DevExpress.XtraReports.Web.CachedReportSourceWeb(new ReportsEngine.Reports.DOIbyOwner())).GetHtml()

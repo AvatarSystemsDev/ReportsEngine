@@ -81,7 +81,6 @@ namespace ReportsEngine.Reports
             // Handle the DataSourceDemanded event of a report.
             //this.DataSourceDemanded += DOIbyOwner_DataSourceDemanded;
             this.BeforePrint += DOIbyOwner_BeforePrint;
-
         }
 
         private void DOIbyOwner_DataSourceDemanded(object sender, EventArgs e)
