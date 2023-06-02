@@ -166,7 +166,6 @@
             this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
             this.Rectangle3 = new DevExpress.XtraReports.UI.XRPanel();
-            this.Textbox8 = new DevExpress.XtraReports.UI.XRRichText();
             this.Textbox11 = new DevExpress.XtraReports.UI.XRRichText();
             this.Textbox13 = new DevExpress.XtraReports.UI.XRRichText();
             this.Textbox9 = new DevExpress.XtraReports.UI.XRLabel();
@@ -230,7 +229,6 @@
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Textbox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExecutionTime)).BeginInit();
@@ -723,7 +721,6 @@
             this.Rectangle3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel7,
             this.xrLabel6,
-            this.Textbox8,
             this.Textbox11,
             this.Textbox13});
             this.Rectangle3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -731,26 +728,6 @@
             this.Rectangle3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 65.48999F);
             this.Rectangle3.Name = "Rectangle3";
             this.Rectangle3.SizeF = new System.Drawing.SizeF(809.9999F, 29.16167F);
-            // 
-            // Textbox8
-            // 
-            this.Textbox8.BorderColor = System.Drawing.Color.Black;
-            this.Textbox8.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox8.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox8.BorderWidth = 1F;
-            this.Textbox8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "Iif(?pstrBeginningPropertyNumber <= \'!\'  And ?pstrEndingPropertyNumber == \'ZZZZZZ" +
-                    "ZZZZ-ZZZZZZZZZZ\', \'All Properties\', ?pstrBeginningPropertyNumber + \' to \' + ?pst" +
-                    "rEndingPropertyNumber)")});
-            this.Textbox8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox8.KeepTogether = true;
-            this.Textbox8.LocationFloat = new DevExpress.Utils.PointFloat(72.91666F, 0F);
-            this.Textbox8.Name = "Textbox8";
-            this.Textbox8.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox8.SerializableRtfString = resources.GetString("Textbox8.SerializableRtfString");
-            this.Textbox8.SizeF = new System.Drawing.SizeF(52.08334F, 22.00998F);
-            this.Textbox8.StyleName = "xr9ptBLStyle";
-            this.Textbox8.StylePriority.UseFont = false;
             // 
             // Textbox11
             // 
@@ -1639,7 +1616,6 @@
             this.xr10ptRL});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Textbox8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox13)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ExecutionTime)).EndInit();
@@ -1673,7 +1649,6 @@
         private DevExpress.XtraReports.UI.PageHeaderBand pageHeaderBand1;
         private DevExpress.XtraReports.UI.XRLabel ReportTitle;
         private DevExpress.XtraReports.UI.XRPanel Rectangle3;
-        private DevExpress.XtraReports.UI.XRRichText Textbox8;
         private DevExpress.XtraReports.UI.XRRichText Textbox11;
         private DevExpress.XtraReports.UI.XRRichText Textbox13;
         private DevExpress.XtraReports.UI.XRLabel Textbox9;
