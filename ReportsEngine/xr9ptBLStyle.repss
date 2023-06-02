@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<StyleSheetSerializer SerializerVersion="22.2.6.0" FileName="">
+  <Styles>
+    <Item1 Name="xrHeaderStyle" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Segoe UI Light, 14pt" BackColor="White" StringFormat="Center;Center;0;None;Character;GenericDefault" TextAlignment="MiddleCenter" />
+    <Item2 Name="xrNameStyle" BorderStyle="Inset" Padding="0,0,0,0,100" Font="Segoe UI Light, 14pt" ForeColor="Black" StringFormat="Center;Center;0;None;Character;GenericDefault" TextAlignment="MiddleCenter" />
+    <Item3 Name="xr9ptBLStyle" BorderStyle="Inset" Font="Segoe UI, 9pt, style=Bold" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+    <Item4 Name="xr10ptRL" BorderStyle="Inset" Font="Segoe UI, 10pt" BackColor="White" StringFormat="Near;Center;0;None;Character;GenericDefault" TextAlignment="MiddleLeft" />
+  </Styles>
+</StyleSheetSerializer>

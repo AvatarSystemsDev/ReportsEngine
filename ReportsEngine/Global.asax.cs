@@ -1,4 +1,5 @@
-﻿using DevExpress.Web.Mvc;
+﻿using DevExpress.Security.Resources;
+using DevExpress.Web.Mvc;
 using ReportsEngine.Services;
 using System;
 using System.Collections.Generic;
@@ -22,6 +23,8 @@ namespace ReportsEngine {
             DevExpress.XtraReports.Web.Extensions.ReportStorageWebExtension.RegisterExtensionGlobal(new CustomReportStorageWebExtension(Server.MapPath("/Reports")));
             DevExpress.XtraReports.Web.ClientControls.LoggerService.Initialize(ProcessException);
             DevExpress.XtraReports.Web.ClientControls.LoggerService.Initialize(new ErrorLoggerService());
+            // Allow style sheets to be loaded only from the "C:\\StaticResources\\" file directory
+            AccessSettings.ReportingSpecificResources.SetRules(DirectoryAccessRule.Allow(Server.MapPath("/Styles")));
 
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
             MVCxReportDesigner.StaticInitialize();

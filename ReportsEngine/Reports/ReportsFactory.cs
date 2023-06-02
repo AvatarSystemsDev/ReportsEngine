@@ -14,6 +14,7 @@ namespace ReportsEngine.Reports
             Reports.Add("AFEMasterList", () => new AFEMasterList());
             Reports.Add("ChartofAccountListing", () => new ChartofAccountListing());
             Reports.Add("DOIByOwnerAddress", () => new DOIbyOwnerAddress());
+            Reports.Add("DOIbyOwner", () => new DOIbyOwner());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

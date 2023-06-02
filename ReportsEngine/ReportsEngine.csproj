@@ -284,6 +284,7 @@
     <Content Include="Views\ReportEngine\RunReportEngine.cshtml" />
     <Content Include="Views\Home\Designer.cshtml" />
     <Content Include="Views\Home\Viewer.cshtml" />
+    <Content Include="Styles\xr9ptBLStyle.repss" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
