@@ -1,5 +1,7 @@
 ﻿using DevExpress.Security.Resources;
 using DevExpress.Web.Mvc;
+using DevExpress.XtraReports.Web.WebDocumentViewer;
+//using DocumentOperationServiceSample.Services;
 using ReportsEngine.Services;
 using System;
 using System.Collections.Generic;
@@ -25,7 +27,7 @@ namespace ReportsEngine {
             DevExpress.XtraReports.Web.ClientControls.LoggerService.Initialize(new ErrorLoggerService());
             // Allow style sheets to be loaded only from the "C:\\StaticResources\\" file directory
             AccessSettings.ReportingSpecificResources.SetRules(DirectoryAccessRule.Allow(Server.MapPath("/Styles")));
-
+            DefaultWebDocumentViewerContainer.Register<DocumentOperationService, ServiceOperations>();
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
             MVCxReportDesigner.StaticInitialize();
             AreaRegistration.RegisterAllAreas();
@@ -37,6 +39,7 @@ namespace ReportsEngine {
             ModelBinders.Binders.DefaultBinder = new DevExpress.Web.Mvc.DevExpressEditorsBinder();
 
             DevExpress.Web.ASPxWebControl.CallbackError += Application_Error;
+            
         }
 
         protected void Application_Error(object sender, EventArgs e) {

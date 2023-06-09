@@ -1,4 +1,8 @@
-﻿
+﻿<style>
+    #EmailPDF {
+        background-color: mediumpurple;
+    }
+</style>
 @{
     ViewBag.Title = "Viewer";
 }
@@ -6,4 +10,5 @@
 @Html.DevExpress().WebDocumentViewer(settings =>
 {
     settings.Name = "WebDocumentViewer1";
+    settings.ClientSideEvents.CustomizeMenuActions = "CustomizeMenuActions";
 }).Bind("DOIbyOwner").GetHtml()

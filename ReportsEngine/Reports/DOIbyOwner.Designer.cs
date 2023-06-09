@@ -1018,7 +1018,7 @@ namespace ReportsEngine.Reports
             this.rundate.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.rundate.SizeF = new System.Drawing.SizeF(311.11F, 25F);
             this.rundate.StylePriority.UseTextAlignment = false;
-            this.rundate.Text = "Tuesday, June 6, 2023 8:03 AM";
+            this.rundate.Text = DateTime.Now.ToString("dddd") + ", " + DateTime.Now.ToString("MMMM d") + ", " + DateTime.Now.ToString("yyyy h:mm tt");
             this.rundate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrPageInfo1

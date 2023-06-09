@@ -48,5 +48,5 @@
 @Html.DevExpress().WebDocumentViewer(settings =>
 {
     settings.Name = "WebDocumentViewer";
-    settings.ClientSideEvents.CustomizeMenuActions = "customizeActions";
+    settings.ClientSideEvents.CustomizeMenuActions = "CustomizeMenuActions";
 }).Bind(new DevExpress.XtraReports.Web.CachedReportSourceWeb(new ReportsEngine.Reports.DOIbyOwner())).GetHtml()

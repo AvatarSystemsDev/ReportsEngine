@@ -1,11 +1,14 @@
 ﻿using DevExpress.DataAccess.ConnectionParameters;
+using DevExpress.XtraPrinting;
 using DevExpress.XtraReports;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts;
 using ReportsEngine.Reports;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Net.Mail;
 using System.ServiceModel;
 using System.Web;
 using System.Web.UI;

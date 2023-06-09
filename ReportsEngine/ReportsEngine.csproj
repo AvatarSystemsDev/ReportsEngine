@@ -356,6 +356,7 @@
     </Compile>
     <Compile Include="Services\DynamicConnectionHandler.cs" />
     <Compile Include="Services\ReportStorageWebExtension.cs" />
+    <Compile Include="Services\ServiceOperations.cs" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
