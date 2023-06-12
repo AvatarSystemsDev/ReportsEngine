@@ -1,4 +1,5 @@
-﻿using System;
+﻿using WebApiODataServiceProject;
+using System;
 using System.IO;
 using System.Net;
 using System.Net.Mail;
@@ -8,6 +9,7 @@ using DevExpress.XtraEditors.CustomEditor;
 using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.Web.WebDocumentViewer;
 using DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts;
+using System.Linq;
 
 namespace ReportsEngine.Services
 {
@@ -21,6 +23,7 @@ namespace ReportsEngine.Services
 
         public override DocumentOperationResponse PerformOperation(DocumentOperationRequest request, PrintingSystemBase initialPrintingSystem, PrintingSystemBase printingSystemWithEditingFields)
         {
+
             using (var stream = new MemoryStream())
             {
                 printingSystemWithEditingFields.ExportToPdf(stream);
@@ -37,65 +40,36 @@ namespace ReportsEngine.Services
         }
         DocumentOperationResponse SendEmail(MailAddressCollection recipients, string subject, string messageBody, Attachment attachment)
         {
-            string SmtpHost = "smtp.office365.com";
-            int SmtpPort = 25;
-            if (string.IsNullOrEmpty(SmtpHost) || SmtpPort == -1)
+            EmailSystem.SendEmail(recipients.ToString(), subject, messageBody, attachment);
+            // There was a repository off the internet that was doing the same thing that I copied from
+            // Necessary to get that little message at the bottom of the report viewer whenever a document is sent successfully. Very satisfying.
+            try
             {
-                return new DocumentOperationResponse { Message = "Please configure the SMTP server settings." };
-            }
-
-            string SmtpUserName = "CFox@avatarcloud.net";
-            string SmtpUserPassword = "CMF_187559"; // Password not used for anything else. Knock yourself out.
-            string SmtpFrom = "CFox@avatarcloud.net";
-            string SmtpFromDisplayName = "Carter Fox Avatar Systems";
-            using (var smtpClient = new SmtpClient(SmtpHost, SmtpPort))
-            {
-                smtpClient.DeliveryMethod = SmtpDeliveryMethod.Network;
-                smtpClient.EnableSsl = true;
-
-                if (!string.IsNullOrEmpty(SmtpUserName))
+                if (attachment != null)
                 {
-                    smtpClient.Credentials = new NetworkCredential(SmtpUserName, SmtpUserPassword);
+                    EmailSystem.SendEmail(recipients.ToString(), subject, messageBody, attachment);
+                    return new DocumentOperationResponse
+                    {
+                        Succeeded = true,
+                        Message = "Null Mail was sent successfully"
+                    };
+                }
+                //smtpClient.Send(message);
+                EmailSystem.SendEmail(recipients.ToString(), subject, messageBody, attachment);
+                return new DocumentOperationResponse
+                {
+                    Succeeded = true,
+                    Message = "Mail was sent successfully"
+                };
+                }
+                catch (SmtpException e)
+                {
+                    return new DocumentOperationResponse
+                    {
+                        Message = "Sending an email message failed."
+                    };
                 }
 
-                using (var message = new MailMessage())
-                {
-                    message.Subject = subject.Replace("\r", "").Replace("\n", "");
-                    message.IsBodyHtml = true;
-                    message.Body = messageBody;
-                    message.From = new MailAddress(SmtpFrom, SmtpFromDisplayName);
-
-                    foreach (var item in recipients)
-                    {
-                        message.To.Add(item);
-                    }
-
-                    try
-                    {
-                        if (attachment != null)
-                        {
-                            message.Attachments.Add(attachment);
-                        }
-                        smtpClient.Send(message);
-                        return new DocumentOperationResponse
-                        {
-                            Succeeded = true,
-                            Message = "Mail was sent successfully"
-                        };
-                    }
-                    catch (SmtpException e)
-                    {
-                        return new DocumentOperationResponse
-                        {
-                            Message = "Sending an email message failed."
-                        };
-                    }
-                    finally
-                    {
-                        message.Attachments.Clear();
-                    }
-                }
-            }
         }
 
         protected string RemoveNewLineSymbols(string value)

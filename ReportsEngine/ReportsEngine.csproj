@@ -388,6 +388,16 @@
       <DependentUpon>DOIbyOwner.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Providence.Common.Data\Providence.Common.Data.csproj">
+      <Project>{fe12bb1c-27f2-4051-b594-da63f1be13f8}</Project>
+      <Name>Providence.Common.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\WebApiODataService\WebApiODataServiceProject\WebApiODataServiceProject.csproj">
+      <Project>{5236761f-7e8b-4fb0-9144-d1113efb6e4d}</Project>
+      <Name>WebApiODataServiceProject</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
