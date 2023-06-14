@@ -3,6 +3,8 @@ using DevExpress.XtraPrinting;
 using DevExpress.XtraReports;
 using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts;
+using DevExpress.XtraReports.Parameters;
+
 using ReportsEngine.Reports;
 using System;
 using System.Collections.Generic;
@@ -81,6 +83,7 @@ namespace ReportsEngine.Services
                     string Pulsepassword = "SzCz0tka";
 
                     // Assign parameters here
+                    List<Parameter> para = report.Parameters.Cast<Parameter>().ToList();
                     var parameters = HttpUtility.ParseQueryString(parametersString);
                     foreach (string parameterName in parameters.AllKeys)
                     {
@@ -124,6 +127,37 @@ namespace ReportsEngine.Services
                             if (parameterName == "pstrSubtitle")
                             {
                                 report.Parameters["Subtitle"].Value = parameters["pstrSubtitle"].ToString();
+                            }
+                            else if (parameterName == "pstrParamVisibility")
+                            {
+                                //report.Parameters["pdteDateToUse"].Visible = false;
+                                string temp = parameters.ToString().Substring(parameters.ToString().IndexOf("pstrParamVisibility") + 20);
+                                string index = "";
+                                for (int x = 0; x < temp.Length; x++)
+                                {
+                                    if (temp[x] == 'T'|| temp[x] == 't')
+                                    {
+                                        para[Int32.Parse(index)].Visible = true;
+                                    }
+                                    else if (temp[x] == 'F' || temp[x] == 'f')
+                                    {
+                                        para[Int32.Parse(index)].Visible = false;
+                                    }
+                                    else if (temp[x] == '-')
+                                    {
+
+                                    }
+                                    else
+                                    {
+                                        index += temp[x];
+                                    }
+                                }
+                                Console.WriteLine(temp);
+
+                            }
+                            else if (parameterName == "pdteDateToUse")
+                            {
+                                //report.Parameters["pdteDateToUse"] = parameters["pdteDateToUse"].ToString();
                             }
                             else
                                 report.Parameters[parameterName].Value = Convert.ChangeType(

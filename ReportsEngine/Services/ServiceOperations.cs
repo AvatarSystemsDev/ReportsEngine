@@ -40,12 +40,11 @@ namespace ReportsEngine.Services
         }
         DocumentOperationResponse SendEmail(MailAddressCollection recipients, string subject, string messageBody, Attachment attachment)
         {
-            EmailSystem.SendEmail(recipients.ToString(), subject, messageBody, attachment);
             // There was a repository off the internet that was doing the same thing that I copied from
             // Necessary to get that little message at the bottom of the report viewer whenever a document is sent successfully. Very satisfying.
             try
             {
-                if (attachment != null)
+                if (attachment == null)
                 {
                     EmailSystem.SendEmail(recipients.ToString(), subject, messageBody, attachment);
                     return new DocumentOperationResponse
