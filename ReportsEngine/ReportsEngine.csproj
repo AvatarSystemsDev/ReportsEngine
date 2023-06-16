@@ -307,6 +307,7 @@
     <Compile Include="Controllers\ReportDesignerController.cs" />
     <Compile Include="Controllers\ReportEngineController.cs" />
     <Compile Include="Controllers\WebDocumentViewerController.cs" />
+    <Compile Include="CustomToString.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -342,6 +343,12 @@
     <Compile Include="Reports\DOIByOwnerAddress.Designer.cs">
       <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\GeneralLedgerDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\GeneralLedgerDetail.Designer.cs">
+      <DependentUpon>GeneralLedgerDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Report1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -375,6 +382,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\DOIByOwnerAddress.resx">
       <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GeneralLedgerDetail.resx">
+      <DependentUpon>GeneralLedgerDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>

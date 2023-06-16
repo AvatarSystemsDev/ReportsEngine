@@ -28,6 +28,7 @@ namespace ReportsEngine {
             // Allow style sheets to be loaded only from the "C:\\StaticResources\\" file directory
             AccessSettings.ReportingSpecificResources.SetRules(DirectoryAccessRule.Allow(Server.MapPath("/Styles")));
             DefaultWebDocumentViewerContainer.Register<DocumentOperationService, ServiceOperations>();
+            DevExpress.XtraReports.Expressions.CustomFunctions.Register(new CustomToString());
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
             MVCxReportDesigner.StaticInitialize();
             AreaRegistration.RegisterAllAreas();
