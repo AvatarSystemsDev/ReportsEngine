@@ -42,7 +42,9 @@ namespace ReportsEngine.Reports
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DOIbyOwner));
@@ -112,7 +114,7 @@ namespace ReportsEngine.Reports
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -279,11 +281,20 @@ namespace ReportsEngine.Reports
             storedProcQuery2.Name = "LookupProperties";
             queryParameter9.Name = "@pbooIncludeFirstLast";
             queryParameter9.Type = typeof(bool);
-            queryParameter9.ValueInfo = "True";
+            queryParameter9.ValueInfo = "False";
+            queryParameter10.Name = "@plngCompanyID";
+            queryParameter10.Type = typeof(int);
+            queryParameter10.ValueInfo = "0";
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter9});
+            queryParameter9,
+            queryParameter10});
             storedProcQuery2.StoredProcName = "Properties_ReportLookup";
             storedProcQuery3.Name = "LookupOwners";
+            queryParameter11.Name = "@plngCompanyID";
+            queryParameter11.Type = typeof(int);
+            queryParameter11.ValueInfo = "0";
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter11});
             storedProcQuery3.StoredProcName = "Owners_ReportLookup";
             storedProcQuery4.Name = "LookupInterestType";
             storedProcQuery4.StoredProcName = "ReportWizard_PopulateInterestTypesForDOIReports";
@@ -434,11 +445,11 @@ namespace ReportsEngine.Reports
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter10.Name = "UserID";
-            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter12.Name = "UserID";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter10});
+            queryParameter12});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});
@@ -1018,7 +1029,7 @@ namespace ReportsEngine.Reports
             this.rundate.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.rundate.SizeF = new System.Drawing.SizeF(311.11F, 25F);
             this.rundate.StylePriority.UseTextAlignment = false;
-            this.rundate.Text = DateTime.Now.ToString("dddd") + ", " + DateTime.Now.ToString("MMMM d") + ", " + DateTime.Now.ToString("yyyy h:mm tt");
+            this.rundate.Text = "Thursday, June 15, 2023 10:20 AM";
             this.rundate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrPageInfo1
@@ -1752,7 +1763,6 @@ namespace ReportsEngine.Reports
             // IsDeductionExemptCheckBox
             // 
             this.IsDeductionExemptCheckBox.Description = "Deduction Exempt";
-            this.IsDeductionExemptCheckBox.Visible = false;
             this.IsDeductionExemptCheckBox.Name = "IsDeductionExemptCheckBox";
             this.IsDeductionExemptCheckBox.Type = typeof(bool);
             this.IsDeductionExemptCheckBox.ValueInfo = "False";
@@ -1763,6 +1773,7 @@ namespace ReportsEngine.Reports
             dynamicListLookUpSettings7.SortMember = null;
             dynamicListLookUpSettings7.ValueMember = "IsDeductionExempt";
             this.IsDeductionExemptCheckBox.ValueSourceSettings = dynamicListLookUpSettings7;
+            this.IsDeductionExemptCheckBox.Visible = false;
             // 
             // xrCrossBandBox1
             // 

@@ -49,6 +49,7 @@
     <Reference Include="DevExpress.Utils.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
@@ -348,12 +349,6 @@
       <DependentUpon>Report1.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportsFactory.cs" />
-    <Compile Include="Services\DOIbyOwner.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Services\DOIbyOwner.Designer.cs">
-      <DependentUpon>DOIbyOwner.cs</DependentUpon>
-    </Compile>
     <Compile Include="Services\DynamicConnectionHandler.cs" />
     <Compile Include="Services\ReportStorageWebExtension.cs" />
     <Compile Include="Services\ServiceOperations.cs" />
@@ -383,9 +378,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Services\DOIbyOwner.resx">
-      <DependentUpon>DOIbyOwner.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

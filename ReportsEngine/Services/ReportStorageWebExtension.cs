@@ -130,6 +130,7 @@ namespace ReportsEngine.Services
                             }
                             else if (parameterName == "pstrParamVisibility")
                             {
+                                /*
                                 //report.Parameters["pdteDateToUse"].Visible = false;
                                 string temp = parameters.ToString().Substring(parameters.ToString().IndexOf("pstrParamVisibility") + 20);
                                 string index = "";
@@ -152,7 +153,8 @@ namespace ReportsEngine.Services
                                         index += temp[x];
                                     }
                                 }
-                                Console.WriteLine(temp);
+                                //Console.WriteLine(temp);
+                                */
 
                             }
                             else if (parameterName == "pdteDateToUse")
@@ -162,6 +164,7 @@ namespace ReportsEngine.Services
                             else
                                 report.Parameters[parameterName].Value = Convert.ChangeType(
                                     parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                                
                         }
                     }
                     report.RequestParameters = false;

@@ -47,11 +47,20 @@
                 printPageAction.text = "Custom Print Page Toolbar";
             }
     }
+    function onBeforeRender(s, e) {
+        alert("Prerender");
+        e.tabPanel.tabs.push(new DevExpress.Analytics.TabInfo({
+            text: "Test",
+            template: "my-test-panel",
+            imageTemplateName: "fivestar",
+            model: null
+        }));
+    }
 </script>
-
 
 @Html.DevExpress().WebDocumentViewer(settings =>
 {
     settings.Name = "WebDocumentViewer";
     settings.ClientSideEvents.CustomizeMenuActions = "CustomizeMenuActions";
+    settings.ClientSideEvents.BeforeRender = "onBeforeRender";
 }).Bind(new DevExpress.XtraReports.Web.CachedReportSourceWeb(new ReportsEngine.Reports.DOIbyOwner())).GetHtml()

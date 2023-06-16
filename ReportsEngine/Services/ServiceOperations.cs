@@ -10,6 +10,10 @@ using DevExpress.XtraPrinting;
 using DevExpress.XtraReports.Web.WebDocumentViewer;
 using DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts;
 using System.Linq;
+using System.Collections.Generic;
+using Providence.Common.Data;
+using System.Web.WebPages;
+using Newtonsoft.Json;
 
 namespace ReportsEngine.Services
 {
@@ -28,47 +32,58 @@ namespace ReportsEngine.Services
             {
                 printingSystemWithEditingFields.ExportToPdf(stream);
                 stream.Position = 0;
-                var mailAddress = new MailAddress(request.CustomData);
-                var recipients = new MailAddressCollection() { mailAddress };
-                var attachment = new Attachment(stream, "Emailed Report.pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
-                return SendEmail(recipients, "Avatar Systems Emailed Reports", "Attached is your emailed report", attachment);
+                //var mailAddress = new MailAddress(request.CustomData);
+                //var recipients = new MailAddressCollection() { mailAddress };
+                var emailDataJson = request.CustomData; // Assuming request.CustomData is the JSON string
+                dynamic emailData = JsonConvert.DeserializeObject(emailDataJson);
+
+                String emailAddress = emailData.emailAddress;
+                String emailMessage = emailData.emailMessage;
+                String emailSubject = emailData.emailSubject;
+                String attachmentName = emailData.attachmentName;
+                var attachment = new Attachment(stream, attachmentName + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+                return SendEmail(emailAddress, emailSubject, emailMessage, attachment);
             }
         }
         public DocumentOperationResponse customDocumentOperation(DocumentOperationRequest request, PrintingSystemBase initialPrintingSystem, PrintingSystemBase printingSystemWithEditingFields)
         {
             return null;
         }
-        DocumentOperationResponse SendEmail(MailAddressCollection recipients, string subject, string messageBody, Attachment attachment)
+        DocumentOperationResponse SendEmail(string recipients, string subject, string messageBody, Attachment attachment)
         {
             // There was a repository off the internet that was doing the same thing that I copied from
             // Necessary to get that little message at the bottom of the report viewer whenever a document is sent successfully. Very satisfying.
-            try
+            string currentRecipient = "";
+            string message = "Message could not be sent to:";
+            bool SentToEveryone = true;
+            List<string> SendTo = recipients.Split(';').ToList();
+            foreach(string recipient in SendTo)
             {
-                if (attachment == null)
+                currentRecipient = recipient;
+                try
                 {
-                    EmailSystem.SendEmail(recipients.ToString(), subject, messageBody, attachment);
-                    return new DocumentOperationResponse
-                    {
-                        Succeeded = true,
-                        Message = "Null Mail was sent successfully"
-                    };
+                    EmailSystem.SendEmail(recipient, subject, messageBody, attachment);
                 }
-                //smtpClient.Send(message);
-                EmailSystem.SendEmail(recipients.ToString(), subject, messageBody, attachment);
+                catch (Exception)
+                {
+                    message += " " + currentRecipient;
+                    SentToEveryone = false;
+                }
+            }
+            if (SentToEveryone)
+            {
+                message = "Message was sent successfully";
                 return new DocumentOperationResponse
                 {
                     Succeeded = true,
-                    Message = "Mail was sent successfully"
+                    Message = message
                 };
-                }
-                catch (SmtpException e)
-                {
-                    return new DocumentOperationResponse
-                    {
-                        Message = "Sending an email message failed."
-                    };
-                }
-
+            }
+            return new DocumentOperationResponse
+            {
+                Succeeded = false,
+                Message = message
+            };            
         }
 
         protected string RemoveNewLineSymbols(string value)
