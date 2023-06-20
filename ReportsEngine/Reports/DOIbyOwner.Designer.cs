@@ -281,7 +281,7 @@ namespace ReportsEngine.Reports
             storedProcQuery2.Name = "LookupProperties";
             queryParameter9.Name = "@pbooIncludeFirstLast";
             queryParameter9.Type = typeof(bool);
-            queryParameter9.ValueInfo = "False";
+            queryParameter9.ValueInfo = "True";
             queryParameter10.Name = "@plngCompanyID";
             queryParameter10.Type = typeof(int);
             queryParameter10.ValueInfo = "0";

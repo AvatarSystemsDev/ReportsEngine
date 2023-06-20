@@ -61,6 +61,8 @@ namespace ReportsEngine.Services
             // This method is called only for valid URLs after the IsValidUrl method is called.
             try
             {
+                DateTime now = DateTime.Now;
+                var startDate = new DateTime(now.Year, now.Month, 1);
                 string[] parts = url.Split('?');
                 string reportName = parts[0];
                 string parametersString = parts.Length > 1 ? parts[1] : String.Empty;
@@ -85,6 +87,12 @@ namespace ReportsEngine.Services
                     // Assign parameters here
                     List<Parameter> para = report.Parameters.Cast<Parameter>().ToList();
                     var parameters = HttpUtility.ParseQueryString(parametersString);
+                    if (report.Parameters.Contains(report.Parameters["pdteBeginningPostDate"])) {
+                        report.Parameters["pdteBeginningPostDate"].Value = startDate;
+                    }
+                    if (report.Parameters.Contains(report.Parameters["pdteEndingPostDate"])) {
+                        report.Parameters["pdteEndingPostDate"].Value = startDate.AddMonths(1).AddDays(-1);
+                    }
                     foreach (string parameterName in parameters.AllKeys)
                     {
                         if (parameterName == "plngDatabaseID")
@@ -122,7 +130,7 @@ namespace ReportsEngine.Services
                                 }
                             }
                         }
-                        else
+                        else 
                         {
                             if (parameterName == "pstrSubtitle")
                             {
@@ -130,7 +138,7 @@ namespace ReportsEngine.Services
                             }
                             else if (parameterName == "pstrParamVisibility")
                             {
-                                /*
+
                                 //report.Parameters["pdteDateToUse"].Visible = false;
                                 string temp = parameters.ToString().Substring(parameters.ToString().IndexOf("pstrParamVisibility") + 20);
                                 string index = "";
@@ -153,9 +161,6 @@ namespace ReportsEngine.Services
                                         index += temp[x];
                                     }
                                 }
-                                //Console.WriteLine(temp);
-                                */
-
                             }
                             else if (parameterName == "pdteDateToUse")
                             {

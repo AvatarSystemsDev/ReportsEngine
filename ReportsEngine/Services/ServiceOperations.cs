@@ -14,6 +14,7 @@ using System.Collections.Generic;
 using Providence.Common.Data;
 using System.Web.WebPages;
 using Newtonsoft.Json;
+using static WebApiODataServiceProject.EmailSystem;
 
 namespace ReportsEngine.Services
 {
@@ -27,23 +28,60 @@ namespace ReportsEngine.Services
 
         public override DocumentOperationResponse PerformOperation(DocumentOperationRequest request, PrintingSystemBase initialPrintingSystem, PrintingSystemBase printingSystemWithEditingFields)
         {
-
-            using (var stream = new MemoryStream())
+            string customDataJson = request.CustomData;
+            dynamic customData = JsonConvert.DeserializeObject(customDataJson);
+            if (customData.action == "email")
             {
-                printingSystemWithEditingFields.ExportToPdf(stream);
-                stream.Position = 0;
-                //var mailAddress = new MailAddress(request.CustomData);
-                //var recipients = new MailAddressCollection() { mailAddress };
-                var emailDataJson = request.CustomData; // Assuming request.CustomData is the JSON string
-                dynamic emailData = JsonConvert.DeserializeObject(emailDataJson);
+                using (var stream = new MemoryStream())
+                {
+                    printingSystemWithEditingFields.ExportToPdf(stream);
+                    stream.Position = 0;
+                    //var mailAddress = new MailAddress(request.CustomData);
+                    //var recipients = new MailAddressCollection() { mailAddress };
+                    var emailDataJson = request.CustomData; // Assuming request.CustomData is the JSON string
+                    dynamic emailData = customData; //Naming something more intuitive
 
-                String emailAddress = emailData.emailAddress;
-                String emailMessage = emailData.emailMessage;
-                String emailSubject = emailData.emailSubject;
-                String attachmentName = emailData.attachmentName;
-                var attachment = new Attachment(stream, attachmentName + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
-                return SendEmail(emailAddress, emailSubject, emailMessage, attachment);
+                    String emailAddress = emailData.emailAddress;
+                    String emailMessage = emailData.emailMessage;
+                    String emailSubject = emailData.emailSubject;
+                    String attachmentName = emailData.attachmentName;
+                    var attachment = new Attachment(stream, attachmentName + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
+                    return SendEmail(emailAddress, emailSubject, emailMessage, attachment);
+                }
             }
+            else if (customData.action == "save parameters")
+            {
+                string message = "Save parameters not currently set up ";
+                foreach (var parameter in customData.parameters)
+                {
+                    message += parameter.path;
+                    message += parameter.value;
+                }
+                return new DocumentOperationResponse
+                {
+                    Succeeded = false,
+                    Message = message
+                };
+            }
+            else if (customData.action == "retrieve saved parameters")
+            {
+                string message = "Retrieve parameters not currently set up";
+                return new DocumentOperationResponse
+                {
+                    Succeeded = false,
+                    Message = message
+                };
+            }
+            else
+            {
+                string message = "Invalid custom operation. Custom Operation set up in ServiceOperations";
+                return new DocumentOperationResponse
+                {
+                    Succeeded = false,
+                    Message = message
+                };
+            }
+
         }
         public DocumentOperationResponse customDocumentOperation(DocumentOperationRequest request, PrintingSystemBase initialPrintingSystem, PrintingSystemBase printingSystemWithEditingFields)
         {
