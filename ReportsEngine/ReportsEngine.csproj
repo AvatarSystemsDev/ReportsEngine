@@ -314,7 +314,6 @@
     <Compile Include="Controllers\ReportDesignerController.cs" />
     <Compile Include="Controllers\ReportEngineController.cs" />
     <Compile Include="Controllers\WebDocumentViewerController.cs" />
-    <Compile Include="CustomToString.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
