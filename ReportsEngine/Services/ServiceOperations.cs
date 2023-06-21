@@ -49,16 +49,18 @@ namespace ReportsEngine.Services
             }
             else if (customData.action == "save parameters")
             {
+                /*
                 string message = "Save parameters not currently set up ";
                 foreach (var parameter in customData.parameters)
                 {
                     message += parameter.path;
                     message += parameter.value;
                 }
+                */
                 return new DocumentOperationResponse
                 {
-                    Succeeded = false,
-                    Message = message
+                    Succeeded = customData.success,
+                    Message = customData.message
                 };
             }
             else if (customData.action == "retrieve saved parameters")
@@ -76,8 +78,8 @@ namespace ReportsEngine.Services
                 return new DocumentOperationResponse
                 {
                     Succeeded = false,
-                    Message = message
-                };
+                    Message = "asdf"
+            };
             }
 
         }

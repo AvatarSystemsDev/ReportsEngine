@@ -15,5 +15,15 @@ namespace ReportsEngine.Controllers
             Response.AppendHeader("Access-Control-Allow-Origin", "*");
             return result;
         }
+        /*
+        [HttpPost]
+        public ActionResult SaveParameters(dynamic x)
+        {
+            // Process the received parameters
+            // You can perform any necessary operations here
+
+            return Json(new { success = true }); // Return a success response to the client
+        }
+        */
     }
 }
