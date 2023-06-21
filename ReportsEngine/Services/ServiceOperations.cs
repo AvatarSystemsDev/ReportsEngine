@@ -11,10 +11,8 @@ using DevExpress.XtraReports.Web.WebDocumentViewer;
 using DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts;
 using System.Linq;
 using System.Collections.Generic;
-using Providence.Common.Data;
 using System.Web.WebPages;
 using Newtonsoft.Json;
-using static WebApiODataServiceProject.EmailSystem;
 
 namespace ReportsEngine.Services
 {
