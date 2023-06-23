@@ -36,18 +36,33 @@ namespace ReportsEngine.Services
                     stream.Position = 0;
                     //var mailAddress = new MailAddress(request.CustomData);
                     //var recipients = new MailAddressCollection() { mailAddress };
-                    var emailDataJson = request.CustomData; // Assuming request.CustomData is the JSON string
-                    dynamic emailData = customData; //Naming something more intuitive
+                    //var emailDataJson = request.CustomData; // Assuming request.CustomData is the JSON string
 
-                    String emailAddress = emailData.emailAddress;
-                    String emailMessage = emailData.emailMessage;
-                    String emailSubject = emailData.emailSubject;
-                    String attachmentName = emailData.attachmentName;
+                    string emailAddress = customData.emailAddress;
+                    string emailMessage = customData.emailMessage;
+                    string emailSubject = customData.emailSubject;
+                    string attachmentName = customData.attachmentName;
                     var attachment = new Attachment(stream, attachmentName + ".pdf", System.Net.Mime.MediaTypeNames.Application.Pdf);
                     return SendEmail(emailAddress, emailSubject, emailMessage, attachment);
                 }
             }
             else if (customData.action == "save parameters")
+            {
+                /*
+                string message = "Save parameters not currently set up ";
+                foreach (var parameter in customData.parameters)
+                {
+                    message += parameter.path;
+                    message += parameter.value;
+                }
+                */
+                return new DocumentOperationResponse
+                {
+                    Succeeded = customData.success,
+                    Message = customData.message
+                };
+            }
+            else if (customData.action == "save parameters team")
             {
                 /*
                 string message = "Save parameters not currently set up ";
@@ -69,7 +84,15 @@ namespace ReportsEngine.Services
                 return new DocumentOperationResponse
                 {
                     Succeeded = false,
-                    Message = message
+                    Message = customData.message
+                };
+            }
+            else if (customData.action == "retrieve saved parameters team")
+            {
+                return new DocumentOperationResponse
+                {
+                    Succeeded = false,
+                    Message = customData.message
                 };
             }
             else
@@ -79,7 +102,7 @@ namespace ReportsEngine.Services
                 {
                     Succeeded = false,
                     Message = "asdf"
-            };
+                };
             }
 
         }
