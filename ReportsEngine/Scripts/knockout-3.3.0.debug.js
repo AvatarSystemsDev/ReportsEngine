@@ -254,7 +254,9 @@ ko.utils = (function () {
 
         moveCleanedNodesToContainerElement: function(nodes) {
             // Ensure it's a real array, as we're about to reparent the nodes and
-            // we don't want the underlying collection to change while we're doing that.
+            // we don't want the underlying collection to change while we're 
+            
+            ng that.
             var nodesArray = ko.utils.makeArray(nodes);
             var templateDocument = (nodesArray[0] && nodesArray[0].ownerDocument) || document;
 

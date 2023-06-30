@@ -188,9 +188,9 @@
     <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.9\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
     </Reference>
-	  <Reference Include="WebApiODataServiceProject">
-		  <HintPath>path\to\WebApiODataServiceProject.dll</HintPath>
-	  </Reference>
+    <Reference Include="WebApiODataServiceProject">
+      <HintPath>path\to\WebApiODataServiceProject.dll</HintPath>
+    </Reference>
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Web" />
@@ -365,6 +365,12 @@
       <DependentUpon>Report1.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportsFactory.cs" />
+    <Compile Include="Reports\ExcelGeneralLedgerDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ExcelGeneralLedgerDetail.Designer.cs">
+      <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\DynamicConnectionHandler.cs" />
     <Compile Include="Services\ReportStorageWebExtension.cs" />
     <Compile Include="Services\ServiceOperations.cs" />
@@ -379,31 +385,41 @@
     <EmbeddedResource Include="Properties\licenses.licx" />
     <EmbeddedResource Include="Reports\AFEMasterList.resx">
       <DependentUpon>AFEMasterList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APEditListcs.resx">
       <DependentUpon>APEditListcs.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ChartofAccountListing.resx">
       <DependentUpon>ChartofAccountListing.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\DOIbyOwner.resx">
       <DependentUpon>DOIbyOwner.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\DOIByOwnerAddress.resx">
       <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\GeneralLedgerDetail.resx">
       <DependentUpon>GeneralLedgerDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ExcelGeneralLedgerDetail.resx">
+      <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\WebApiODataService\WebApiODataServiceProject\WebApiODataServiceProject.csproj">
       <Project>{5236761f-7e8b-4fb0-9144-d1113efb6e4d}</Project>
       <Name>WebApiODataServiceProject</Name>
-	  <HintPath>C:\AvatarProjectGitHub\WebApiODataService\WebApiODataServiceProject\bin\WebApiODataServiceProject.dll</HintPath>
+      <HintPath>C:\AvatarProjectGitHub\WebApiODataService\WebApiODataServiceProject\bin\WebApiODataServiceProject.dll</HintPath>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

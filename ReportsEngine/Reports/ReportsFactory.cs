@@ -16,6 +16,8 @@ namespace ReportsEngine.Reports
             Reports.Add("DOIByOwnerAddress", () => new DOIbyOwnerAddress());
             Reports.Add("DOIbyOwner", () => new DOIbyOwner());
             Reports.Add("GeneralLedgerDetail", () => new GeneralLedgerDetail());
+            Reports.Add("ExcelGeneralLedgerDetail", () => new ExcelGeneralLedgerDetail());
+
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

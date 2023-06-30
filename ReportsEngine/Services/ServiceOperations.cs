@@ -13,6 +13,9 @@ using System.Linq;
 using System.Collections.Generic;
 using System.Web.WebPages;
 using Newtonsoft.Json;
+using DevExpress.XtraReports.UI;
+using ReportsEngine.Reports;
+using DevExpress.XtraReports.Web.Native.ParametersPanel;
 
 namespace ReportsEngine.Services
 {
@@ -83,7 +86,7 @@ namespace ReportsEngine.Services
                 string message = "Retrieve parameters not currently set up";
                 return new DocumentOperationResponse
                 {
-                    Succeeded = false,
+                    Succeeded = customData.success,
                     Message = customData.message
                 };
             }
@@ -91,9 +94,38 @@ namespace ReportsEngine.Services
             {
                 return new DocumentOperationResponse
                 {
-                    Succeeded = false,
+                    Succeeded = customData.success,
                     Message = customData.message
                 };
+            }
+            else if (customData.action == "export to excel")
+            {
+                try
+                {
+                    string reportType = customData.reportNameExcel;
+                    XtraReport report = ReportsFactory.Reports[reportType]();
+
+                    if (report != null)
+                    {
+                    }
+                    //report.Parameters /
+                    string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),"Downloads");
+                    downloadsPath = Path.Combine(downloadsPath, reportType + ".xlsx");
+                    report.ExportToXlsx(downloadsPath);
+                    return new DocumentOperationResponse
+                    {
+                        Succeeded = true,
+                        Message = "Printed to Excel",
+                    };
+                }
+                catch
+                {
+                    return new DocumentOperationResponse
+                    {
+                        Succeeded = false,
+                        Message = "Error getting report to excel",
+                    };
+                }
             }
             else
             {
@@ -104,6 +136,7 @@ namespace ReportsEngine.Services
                     Message = "asdf"
                 };
             }
+
 
         }
         public DocumentOperationResponse customDocumentOperation(DocumentOperationRequest request, PrintingSystemBase initialPrintingSystem, PrintingSystemBase printingSystemWithEditingFields)
