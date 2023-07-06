@@ -16,6 +16,14 @@ using Newtonsoft.Json;
 using DevExpress.XtraReports.UI;
 using ReportsEngine.Reports;
 using DevExpress.XtraReports.Web.Native.ParametersPanel;
+using System.Text.RegularExpressions;
+using System.Web;
+using System.Security.Policy;
+using DevExpress.XtraReports.Parameters;
+using DevExpress.DataAccess.ConnectionParameters;
+using DevExpress.XtraReports;
+using static DevExpress.Web.Internal.ColorPicker;
+using static DevExpress.XtraEditors.Mask.MaskSettings;
 
 namespace ReportsEngine.Services
 {
@@ -102,16 +110,83 @@ namespace ReportsEngine.Services
             {
                 try
                 {
+                    
+
                     string reportType = customData.reportNameExcel;
                     XtraReport report = ReportsFactory.Reports[reportType]();
+                    string reportTitle = Regex.Replace(reportType, @"(?<!^)(?=\p{Lu})", " ");
+                    reportTitle = reportTitle.Substring(reportTitle.IndexOf(" ")+1);
 
-                    if (report != null)
-                    {
-                    }
+                    //string[] parts = url.Split('?');
+                    //string parametersString = parts.Length > 1 ? parts[1] : String.Empty;
+                    //List<Parameter> para = report.Parameters.Cast<Parameter>().ToList();
+                    //var parameters = HttpUtility.ParseQueryString(parametersString);
+
+                    //if (report != null)
+                    //{
+                    //}
                     //report.Parameters /
+                    foreach (dynamic parameterData in customData.reportParameters)
+                    {
+                        if (parameterData.Name.Value == "DatabaseID")
+                        {
+                            string user = "reportuser";
+                            string password = "Re.port_243";
+
+                            string PulseServerName = "Pulse.Avatar.Local";
+                            string PulseDatabaseName = "AvatarPulse";
+                            string Pulseuser = "RoyaltyOwnerRelationsUser";
+                            string Pulsepassword = "SzCz0tka";
+
+
+                            DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();
+                            int currentDatabaseID = ((int) parameterData.Value.Value);
+                            //Get the Database ConnectionString based on plngDatabaseID
+                            connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
+                            report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
+                            report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+
+                            string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + user + ";Password=" + password + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;TrustServerCertificate=true;";
+                            string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;TrustServerCertificate=true;";
+
+                            var dataSources = DataSourceManager.GetDataSources(report, true);
+                            foreach (var dataSource in dataSources)
+                            {
+                                if (dataSource is DevExpress.DataAccess.Sql.SqlDataSource sds && !String.IsNullOrEmpty(sds.ConnectionName))
+                                {
+                                    if (sds.Name == "Dynamic")
+                                    {
+                                        OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                        olapParams.ConnectionString = connectionStringDynamic;
+                                        sds.ConnectionParameters = olapParams;
+                                    }
+                                    else
+                                    {
+                                        if (sds.Name == "Pulse")
+                                        {
+                                            OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                            olapParams.ConnectionString = connectionStringPulse;
+                                            sds.ConnectionParameters = olapParams;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        else
+                        {
+                            report.Parameters[parameterData.Name.Value].Value = parameterData.Value;
+                        }
+
+                    }
+
                     string downloadsPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.UserProfile),"Downloads");
-                    downloadsPath = Path.Combine(downloadsPath, reportType + ".xlsx");
-                    report.ExportToXlsx(downloadsPath);
+                    //downloadsPath = Path.Combine(downloadsPath, reportType + ".xlsx");
+                    string fileName = $"{reportTitle} {DateTime.Now:MM-dd-yyyy HH mm}.xlsx";
+                    downloadsPath = Path.Combine(downloadsPath, fileName);
+                    XlsxExportOptions exportOptions = new XlsxExportOptions();
+                    exportOptions.TextExportMode = TextExportMode.Value;
+                    report.ExportToXlsx(downloadsPath,exportOptions);
+
                     return new DocumentOperationResponse
                     {
                         Succeeded = true,
