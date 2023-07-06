@@ -63,18 +63,6 @@
     <Reference Include="Microsoft.AspNet.Identity.EntityFramework, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.AspNet.Identity.EntityFramework.2.2.3\lib\net45\Microsoft.AspNet.Identity.EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.AspNetCore.Cors, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNetCore.Cors.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Cors.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNetCore.Http.Abstractions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNetCore.Http.Abstractions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNetCore.Http.Extensions, Version=2.2.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.AspNetCore.Http.Extensions.2.2.0\lib\netstandard2.0\Microsoft.AspNetCore.Http.Extensions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.AspNetCore.Http.Features, Version=5.0.17.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\WebApiODataService\packages\Microsoft.AspNetCore.Http.Features.5.0.17\lib\net461\Microsoft.AspNetCore.Http.Features.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=7.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\..\WebApiODataService\packages\Microsoft.Bcl.AsyncInterfaces.7.0.0\lib\net462\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -91,8 +79,8 @@
     <Reference Include="Microsoft.Extensions.FileProviders.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\WebApiODataService\packages\Microsoft.Extensions.FileProviders.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.FileProviders.Abstractions.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\WebApiODataService\packages\Microsoft.Extensions.Logging.Abstractions.7.0.0\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\..\WebApiOdataService\packages\Microsoft.Extensions.Logging.Abstractions.7.0.1\lib\net462\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Extensions.Options, Version=7.0.0.1, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\WebApiODataService\packages\Microsoft.Extensions.Options.7.0.1\lib\net462\Microsoft.Extensions.Options.dll</HintPath>
@@ -100,14 +88,11 @@
     <Reference Include="Microsoft.Extensions.Primitives, Version=7.0.0.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
       <HintPath>..\..\WebApiODataService\packages\Microsoft.Extensions.Primitives.7.0.0\lib\net462\Microsoft.Extensions.Primitives.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.Identity.Client, Version=4.47.2.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.Identity.Client.4.47.2\lib\net461\Microsoft.Identity.Client.dll</HintPath>
+    <Reference Include="Microsoft.Identity.Client, Version=4.54.1.0, Culture=neutral, PublicKeyToken=0a613f4dd989e8ae, processorArchitecture=MSIL">
+      <HintPath>..\..\WebApiOdataService\packages\Microsoft.Identity.Client.4.54.1\lib\net461\Microsoft.Identity.Client.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.22.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
-      <HintPath>..\packages\Microsoft.IdentityModel.Abstractions.6.22.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
-    </Reference>
-    <Reference Include="Microsoft.Net.Http.Headers, Version=2.2.8.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
-      <HintPath>..\..\WebApiODataService\packages\Microsoft.Net.Http.Headers.2.2.8\lib\netstandard2.0\Microsoft.Net.Http.Headers.dll</HintPath>
+    <Reference Include="Microsoft.IdentityModel.Abstractions, Version=6.31.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\WebApiOdataService\packages\Microsoft.IdentityModel.Abstractions.6.31.0\lib\net472\Microsoft.IdentityModel.Abstractions.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
       <EmbedInteropTypes>True</EmbedInteropTypes>
