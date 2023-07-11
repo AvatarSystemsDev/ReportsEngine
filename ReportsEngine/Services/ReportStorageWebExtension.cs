@@ -21,6 +21,14 @@ namespace ReportsEngine.Services
     {
         readonly string reportDirectory;
         const string FileExtension = ".repx";
+
+        private const string ReportUser = "reportuser";
+        private const string ReportUserPassword = "Re.port_243";
+        private const string PulseServerName = "Pulse.Avatar.Local";
+        private const string PulseDatabaseName = "AvatarPulse";
+        private const string Pulseuser = "RoyaltyOwnerRelationsUser";
+        private const string Pulsepassword = "SzCz0tka";
+
         public CustomReportStorageWebExtension(string reportDirectory)
         {
             if (!Directory.Exists(reportDirectory))
@@ -61,12 +69,9 @@ namespace ReportsEngine.Services
             // This method is called only for valid URLs after the IsValidUrl method is called.
             try
             {
-                DateTime now = DateTime.Now;
-                var startDate = new DateTime(now.Year, now.Month, 1);
                 string[] parts = url.Split('?');
                 string reportName = parts[0];
                 string parametersString = parts.Length > 1 ? parts[1] : String.Empty;
-                string currentDatabaseID = "";
                 XtraReport report = null;
 
                 if (ReportsFactory.Reports.ContainsKey(reportName))
@@ -76,103 +81,19 @@ namespace ReportsEngine.Services
 
                 if (report != null)
                 {
-                    string user = "reportuser";
-                    string password = "Re.port_243";
-
-                    string PulseServerName = "Pulse.Avatar.Local";
-                    string PulseDatabaseName = "AvatarPulse";
-                    string Pulseuser = "RoyaltyOwnerRelationsUser";
-                    string Pulsepassword = "SzCz0tka";
-
-                    // Assign parameters here
-                    List<Parameter> para = report.Parameters.Cast<Parameter>().ToList();
-                    var parameters = HttpUtility.ParseQueryString(parametersString);
+                    //TODO names of these parameters will be different by report
+                    //Set Date Ranges to current month 
+                    DateTime now = DateTime.Now;
+                    var startDate = new DateTime(now.Year, now.Month, 1);
                     if (report.Parameters.Contains(report.Parameters["pdteBeginningPostDate"])) {
                         report.Parameters["pdteBeginningPostDate"].Value = startDate;
                     }
                     if (report.Parameters.Contains(report.Parameters["pdteEndingPostDate"])) {
                         report.Parameters["pdteEndingPostDate"].Value = startDate.AddMonths(1).AddDays(-1);
                     }
-                    foreach (string parameterName in parameters.AllKeys)
-                    {
-                        if (parameterName == "plngDatabaseID")
-                        {
-                            DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();
-                            currentDatabaseID = parameters["plngDatabaseID"];
-                            //Get the Database ConnectionString based on plngDatabaseID
-                            connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
-                            report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
-                            report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
 
-                            string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + user + ";Password=" + password + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;TrustServerCertificate=true;";
-                            string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;TrustServerCertificate=true;";
-
-                            var dataSources = DataSourceManager.GetDataSources(report, true);
-                            foreach (var dataSource in dataSources)
-                            {
-                                if (dataSource is DevExpress.DataAccess.Sql.SqlDataSource sds && !String.IsNullOrEmpty(sds.ConnectionName))
-                                {
-                                    if (sds.Name == "Dynamic")
-                                    {
-                                        OlapConnectionParameters olapParams = new OlapConnectionParameters();
-                                        olapParams.ConnectionString = connectionStringDynamic;
-                                        sds.ConnectionParameters = olapParams;
-                                    }
-                                    else
-                                    {
-                                        if (sds.Name == "Pulse")
-                                        {
-                                            OlapConnectionParameters olapParams = new OlapConnectionParameters();
-                                            olapParams.ConnectionString = connectionStringPulse;
-                                            sds.ConnectionParameters = olapParams;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                        else 
-                        {
-                            if (parameterName == "pstrSubtitle")
-                            {
-                                report.Parameters["Subtitle"].Value = parameters["pstrSubtitle"].ToString();
-                            }
-                            else if (parameterName == "pstrParamVisibility")
-                            {
-
-                                //report.Parameters["pdteDateToUse"].Visible = false;
-                                string temp = parameters.ToString().Substring(parameters.ToString().IndexOf("pstrParamVisibility") + 20);
-                                string index = "";
-                                for (int x = 0; x < temp.Length; x++)
-                                {
-                                    if (temp[x] == 'T'|| temp[x] == 't')
-                                    {
-                                        para[Int32.Parse(index)].Visible = true;
-                                    }
-                                    else if (temp[x] == 'F' || temp[x] == 'f')
-                                    {
-                                        para[Int32.Parse(index)].Visible = false;
-                                    }
-                                    else if (temp[x] == '-')
-                                    {
-
-                                    }
-                                    else
-                                    {
-                                        index += temp[x];
-                                    }
-                                }
-                            }
-                            else if (parameterName == "pdteDateToUse")
-                            {
-                                //report.Parameters["pdteDateToUse"] = parameters["pdteDateToUse"].ToString();
-                            }
-                            else
-                                report.Parameters[parameterName].Value = Convert.ChangeType(
-                                    parameters.Get(parameterName), report.Parameters[parameterName].Type);
-                                
-                        }
-                    }
-                    report.RequestParameters = false;
+                    // Assign parameters here
+                    setReportParameters(report, HttpUtility.ParseQueryString(parametersString));
 
                     using (MemoryStream ms = new MemoryStream())
                     {
@@ -218,6 +139,90 @@ namespace ReportsEngine.Services
             // and return the resulting URL used to save a report in your storage.
             SetData(report, defaultUrl);
             return defaultUrl;
+        }
+
+        public static void setReportParameters(XtraReport report, System.Collections.Specialized.NameValueCollection parameters)
+        {
+            bool AwaitParameterInputPassed = false;
+
+            foreach (string parameterName in parameters.AllKeys)
+            {
+                if (parameterName == "plngDatabaseID")
+                {
+                    DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();
+                    string currentDatabaseID = parameters["plngDatabaseID"];
+                    //Get the Database ConnectionString based on plngDatabaseID
+                    connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
+                    report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
+                    report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+
+                    string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + ReportUser + ";Password=" + ReportUserPassword + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;TrustServerCertificate=true;";
+                    string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;TrustServerCertificate=true;";
+
+                    var dataSources = DataSourceManager.GetDataSources(report, true);
+                    foreach (var dataSource in dataSources)
+                    {
+                        if (dataSource is DevExpress.DataAccess.Sql.SqlDataSource sds && !String.IsNullOrEmpty(sds.ConnectionName))
+                        {
+                            if (sds.Name == "Dynamic")
+                            {
+                                OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                olapParams.ConnectionString = connectionStringDynamic;
+                                sds.ConnectionParameters = olapParams;
+                            }
+                            else if (sds.Name == "Pulse")
+                            {
+                                OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                olapParams.ConnectionString = connectionStringPulse;
+                                sds.ConnectionParameters = olapParams;
+                            }
+                        }
+                    }
+                }
+                else if (parameterName == "pstrSubtitle")
+                {
+                    report.Parameters["Subtitle"].Value = parameters["pstrSubtitle"].ToString();
+                }
+                else if (parameterName == "pstrParamVisibility")
+                {
+                    List<Parameter> para = report.Parameters.Cast<Parameter>().ToList();
+                    string temp = parameters.ToString().Substring(parameters.ToString().IndexOf("pstrParamVisibility") + 20);
+                    string index = "";
+                    for (int x = 0; x < temp.Length; x++)
+                    {
+                        if (temp[x] == 'T' || temp[x] == 't')
+                        {
+                            para[Int32.Parse(index)].Visible = true;
+                        }
+                        else if (temp[x] == 'F' || temp[x] == 'f')
+                        {
+                            para[Int32.Parse(index)].Visible = false;
+                        }
+                        else if (temp[x] == '-')
+                        {
+
+                        }
+                        else
+                        {
+                            index += temp[x];
+                        }
+                    }
+                }
+                else if (parameterName == "pbooAwaitParameterInput")
+                {
+                    AwaitParameterInputPassed = true;
+                    report.RequestParameters = (parameters["pbooAwaitParameterInput"].ToString().ToLower() == "true");
+                }
+                else
+                {
+                    report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                }
+            }
+
+            if (!AwaitParameterInputPassed)
+            {
+                report.RequestParameters = false;
+            }
         }
 
     }
