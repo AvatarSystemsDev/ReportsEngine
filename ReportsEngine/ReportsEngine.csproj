@@ -411,6 +411,12 @@
     </Compile>
     <Compile Include="Models\ReportsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\AccountingCenterListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\AccountingCenterListing.Designer.cs">
+      <DependentUpon>AccountingCenterListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\AFEMasterList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -441,6 +447,12 @@
     <Compile Include="Reports\DOIByOwnerAddress.Designer.cs">
       <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ExcelAccountingCenterListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ExcelAccountingCenterListing.Designer.cs">
+      <DependentUpon>ExcelAccountingCenterListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\ExcelChartofAccountListing.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -467,6 +479,12 @@
       <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\DynamicConnectionHandler.cs" />
+    <Compile Include="Services\ExcelAccountingCenterListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Services\ExcelAccountingCenterListing.Designer.cs">
+      <DependentUpon>ExcelAccountingCenterListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\ReportStorageWebExtension.cs" />
     <Compile Include="Services\ServiceOperations.cs" />
   </ItemGroup>
@@ -478,6 +496,9 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\AccountingCenterListing.resx">
+      <DependentUpon>AccountingCenterListing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\AFEMasterList.resx">
       <DependentUpon>AFEMasterList.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -497,6 +518,9 @@
     <EmbeddedResource Include="Reports\DOIByOwnerAddress.resx">
       <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
       <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ExcelAccountingCenterListing.resx">
+      <DependentUpon>ExcelAccountingCenterListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ExcelChartofAccountListing.resx">
       <DependentUpon>ExcelChartofAccountListing.cs</DependentUpon>

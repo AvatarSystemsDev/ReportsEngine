@@ -18,6 +18,8 @@ namespace ReportsEngine.Reports
             Reports.Add("DOIbyOwner", () => new DOIbyOwner());
             Reports.Add("GeneralLedgerDetail", () => new GeneralLedgerDetail());
             Reports.Add("ExcelGeneralLedgerDetail", () => new ExcelGeneralLedgerDetail());
+            Reports.Add("AccountingCenterListing", () => new AccountingCenterListing());
+            Reports.Add("ExcelAccountingCenterListing", () => new ExcelAccountingCenterListing());
 
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
