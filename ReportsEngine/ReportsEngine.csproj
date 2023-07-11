@@ -411,10 +411,10 @@
     </Compile>
     <Compile Include="Models\ReportsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Reports\AccountingCenterListing.cs">
+    <Compile Include="Reports\MDReports\AccountingCenterListing.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\AccountingCenterListing.Designer.cs">
+    <Compile Include="Reports\MDReports\AccountingCenterListing.Designer.cs">
       <DependentUpon>AccountingCenterListing.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\AFEMasterList.cs">
@@ -429,10 +429,10 @@
     <Compile Include="Reports\APEditListcs.Designer.cs">
       <DependentUpon>APEditListcs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\ChartofAccountListing.cs">
+    <Compile Include="Reports\MDReports\ChartofAccountListing.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\ChartofAccountListing.Designer.cs">
+    <Compile Include="Reports\MDReports\ChartofAccountListing.Designer.cs">
       <DependentUpon>ChartofAccountListing.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\DOIbyOwner.cs">
@@ -447,22 +447,22 @@
     <Compile Include="Reports\DOIByOwnerAddress.Designer.cs">
       <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\ExcelAccountingCenterListing.cs">
+    <Compile Include="Reports\MDReports\ExcelAccountingCenterListing.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\ExcelAccountingCenterListing.Designer.cs">
+    <Compile Include="Reports\MDReports\ExcelAccountingCenterListing.Designer.cs">
       <DependentUpon>ExcelAccountingCenterListing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\ExcelChartofAccountListing.cs">
+    <Compile Include="Reports\MDReports\ExcelChartofAccountListing.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\ExcelChartofAccountListing.Designer.cs">
+    <Compile Include="Reports\MDReports\ExcelChartofAccountListing.Designer.cs">
       <DependentUpon>ExcelChartofAccountListing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\GeneralLedgerDetail.cs">
+    <Compile Include="Reports\FinancialReports\GeneralLedgerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\GeneralLedgerDetail.Designer.cs">
+    <Compile Include="Reports\FinancialReports\GeneralLedgerDetail.Designer.cs">
       <DependentUpon>GeneralLedgerDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Report1.cs">
@@ -472,10 +472,10 @@
       <DependentUpon>Report1.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\ReportsFactory.cs" />
-    <Compile Include="Reports\ExcelGeneralLedgerDetail.cs">
+    <Compile Include="Reports\FinancialReports\ExcelGeneralLedgerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\ExcelGeneralLedgerDetail.Designer.cs">
+    <Compile Include="Reports\FinancialReports\ExcelGeneralLedgerDetail.Designer.cs">
       <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Services\DynamicConnectionHandler.cs" />
@@ -496,7 +496,7 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
-    <EmbeddedResource Include="Reports\AccountingCenterListing.resx">
+    <EmbeddedResource Include="Reports\MDReports\AccountingCenterListing.resx">
       <DependentUpon>AccountingCenterListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\AFEMasterList.resx">
@@ -507,7 +507,7 @@
       <DependentUpon>APEditListcs.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ChartofAccountListing.resx">
+    <EmbeddedResource Include="Reports\MDReports\ChartofAccountListing.resx">
       <DependentUpon>ChartofAccountListing.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -519,13 +519,13 @@
       <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ExcelAccountingCenterListing.resx">
+    <EmbeddedResource Include="Reports\MDReports\ExcelAccountingCenterListing.resx">
       <DependentUpon>ExcelAccountingCenterListing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ExcelChartofAccountListing.resx">
+    <EmbeddedResource Include="Reports\MDReports\ExcelChartofAccountListing.resx">
       <DependentUpon>ExcelChartofAccountListing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\GeneralLedgerDetail.resx">
+    <EmbeddedResource Include="Reports\FinancialReports\GeneralLedgerDetail.resx">
       <DependentUpon>GeneralLedgerDetail.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -533,7 +533,7 @@
       <DependentUpon>Report1.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\ExcelGeneralLedgerDetail.resx">
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelGeneralLedgerDetail.resx">
       <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
