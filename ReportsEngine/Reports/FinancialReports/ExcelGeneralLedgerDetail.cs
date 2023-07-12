@@ -13,5 +13,9 @@ namespace ReportsEngine.Reports
             InitializeComponent();
         }
 
+        private void ExcelGeneralLedgerDetail_BeforePrint(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

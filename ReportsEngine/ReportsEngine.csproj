@@ -411,22 +411,46 @@
     </Compile>
     <Compile Include="Models\ReportsModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Reports\FinancialReports\ExcelFinancialCodeListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelFinancialCodeListing.Designer.cs">
+      <DependentUpon>ExcelFinancialCodeListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelFiscalYearOpeningTrialBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelFiscalYearOpeningTrialBalance.Designer.cs">
+      <DependentUpon>ExcelFiscalYearOpeningTrialBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\FinancialCodeListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\FinancialCodeListing.Designer.cs">
+      <DependentUpon>FinancialCodeListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\FiscalYearOpeningTrialBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\FiscalYearOpeningTrialBalance.Designer.cs">
+      <DependentUpon>FiscalYearOpeningTrialBalance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\AccountingCenterListing.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\MDReports\AccountingCenterListing.Designer.cs">
       <DependentUpon>AccountingCenterListing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\AFEMasterList.cs">
+    <Compile Include="Reports\MDReports\AFEMasterList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\AFEMasterList.Designer.cs">
+    <Compile Include="Reports\MDReports\AFEMasterList.Designer.cs">
       <DependentUpon>AFEMasterList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APEditListcs.cs">
+    <Compile Include="Reports\APReports\APEditListcs.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\APEditListcs.Designer.cs">
+    <Compile Include="Reports\APReports\APEditListcs.Designer.cs">
       <DependentUpon>APEditListcs.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\ChartofAccountListing.cs">
@@ -435,16 +459,16 @@
     <Compile Include="Reports\MDReports\ChartofAccountListing.Designer.cs">
       <DependentUpon>ChartofAccountListing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\DOIbyOwner.cs">
+    <Compile Include="Reports\MDReports\DOIbyOwner.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\DOIbyOwner.Designer.cs">
+    <Compile Include="Reports\MDReports\DOIbyOwner.Designer.cs">
       <DependentUpon>DOIbyOwner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\DOIByOwnerAddress.cs">
+    <Compile Include="Reports\MDReports\DOIByOwnerAddress.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\DOIByOwnerAddress.Designer.cs">
+    <Compile Include="Reports\MDReports\DOIByOwnerAddress.Designer.cs">
       <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\ExcelAccountingCenterListing.cs">
@@ -496,14 +520,26 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\licenses.licx" />
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelFinancialCodeListing.resx">
+      <DependentUpon>ExcelFinancialCodeListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelFiscalYearOpeningTrialBalance.resx">
+      <DependentUpon>ExcelFiscalYearOpeningTrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\FinancialCodeListing.resx">
+      <DependentUpon>FinancialCodeListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\FiscalYearOpeningTrialBalance.resx">
+      <DependentUpon>FiscalYearOpeningTrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AccountingCenterListing.resx">
       <DependentUpon>AccountingCenterListing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\AFEMasterList.resx">
+    <EmbeddedResource Include="Reports\MDReports\AFEMasterList.resx">
       <DependentUpon>AFEMasterList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APEditListcs.resx">
+    <EmbeddedResource Include="Reports\APReports\APEditListcs.resx">
       <DependentUpon>APEditListcs.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -511,11 +547,11 @@
       <DependentUpon>ChartofAccountListing.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\DOIbyOwner.resx">
+    <EmbeddedResource Include="Reports\MDReports\DOIbyOwner.resx">
       <DependentUpon>DOIbyOwner.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\DOIByOwnerAddress.resx">
+    <EmbeddedResource Include="Reports\MDReports\DOIByOwnerAddress.resx">
       <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>

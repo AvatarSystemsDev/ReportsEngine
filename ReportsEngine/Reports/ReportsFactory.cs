@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraReports.UI;
+using ReportsEngine.Reports.FinancialReports;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,7 +21,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelGeneralLedgerDetail", () => new ExcelGeneralLedgerDetail());
             Reports.Add("AccountingCenterListing", () => new AccountingCenterListing());
             Reports.Add("ExcelAccountingCenterListing", () => new ExcelAccountingCenterListing());
-
+            Reports.Add("FiscalYearOpeningTrialBalance", () => new FiscalYearOpeningTrialBalance());
+            Reports.Add("ExcelFiscalYearOpeningTrialBalance", () => new ExcelFiscalYearOpeningTrialBalance());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
