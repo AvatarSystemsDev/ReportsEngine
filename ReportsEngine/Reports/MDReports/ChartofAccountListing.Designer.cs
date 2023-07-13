@@ -146,8 +146,8 @@
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrReportName = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrCompanyHeader = new DevExpress.XtraReports.UI.XRLabel();
             this.Rectangle4 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrLabel27 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox7 = new DevExpress.XtraReports.UI.XRRichText();
@@ -766,8 +766,8 @@
             this.xrLabel14,
             this.xrLabel12,
             this.xrLabel5,
-            this.xrLabel2,
-            this.xrLabel1,
+            this.xrReportName,
+            this.xrCompanyHeader,
             this.Rectangle4,
             this.Textbox4,
             this.Textbox14,
@@ -920,42 +920,41 @@
             this.xrLabel5.Text = "Cash Flow\r\nCategory";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
-            // xrLabel2
+            // xrReportName
             // 
-            this.xrLabel2.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel2.BorderWidth = 0F;
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel2.KeepTogether = true;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 14.66667F);
-            this.xrLabel2.Multiline = true;
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(810.0001F, 21.66668F);
-            this.xrLabel2.StylePriority.UseBorderWidth = false;
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UsePadding = false;
-            this.xrLabel2.Text = "Chart of Accounts by Listing";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrReportName.BorderColor = System.Drawing.Color.Black;
+            this.xrReportName.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrReportName.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrReportName.BorderWidth = 0F;
+            this.xrReportName.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrReportName.KeepTogether = true;
+            this.xrReportName.LocationFloat = new DevExpress.Utils.PointFloat(0F, 14.66667F);
+            this.xrReportName.Multiline = true;
+            this.xrReportName.Name = "xrReportName";
+            this.xrReportName.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrReportName.SizeF = new System.Drawing.SizeF(810.0001F, 21.66668F);
+            this.xrReportName.StylePriority.UseBorderWidth = false;
+            this.xrReportName.StylePriority.UseFont = false;
+            this.xrReportName.StylePriority.UsePadding = false;
+            this.xrReportName.Text = "Chart of Accounts by Listing";
+            this.xrReportName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // xrLabel1
+            // xrCompanyHeader
             // 
-            this.xrLabel1.BorderWidth = 0F;
-            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.xrCompanyHeader.BorderWidth = 0F;
+            this.xrCompanyHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]")});
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel1.Multiline = true;
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(810.0001F, 14.66667F);
-            this.xrLabel1.StylePriority.UseBorderWidth = false;
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.StylePriority.UsePadding = false;
-            this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "xrLabel1";
-            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrCompanyHeader.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrCompanyHeader.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrCompanyHeader.Multiline = true;
+            this.xrCompanyHeader.Name = "xrCompanyHeader";
+            this.xrCompanyHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrCompanyHeader.SizeF = new System.Drawing.SizeF(810.0001F, 14.66667F);
+            this.xrCompanyHeader.StylePriority.UseBorderWidth = false;
+            this.xrCompanyHeader.StylePriority.UseFont = false;
+            this.xrCompanyHeader.StylePriority.UsePadding = false;
+            this.xrCompanyHeader.StylePriority.UseTextAlignment = false;
+            this.xrCompanyHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Rectangle4
             // 
@@ -1491,8 +1490,8 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowNotes;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
         private DevExpress.DataAccess.Sql.SqlDataSource Pulse;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.UI.XRLabel xrCompanyHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrReportName;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;

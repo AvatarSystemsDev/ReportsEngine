@@ -130,9 +130,6 @@
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.Textbox10 = new DevExpress.XtraReports.UI.XRLabel();
-            this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
-            this.Rectangle4 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox4 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox14 = new DevExpress.XtraReports.UI.XRLabel();
@@ -152,13 +149,14 @@
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngYear = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.pdteStartPostDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -371,7 +369,7 @@
             this.xrLabel9.BorderWidth = 0F;
             this.xrLabel9.CanGrow = false;
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CreditAmount]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([CreditAmount] = 0,\'\',[CreditAmount])\n")});
             this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel9.ForeColor = System.Drawing.Color.Black;
             this.xrLabel9.KeepTogether = true;
@@ -390,6 +388,7 @@
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel9.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             // 
             // xrLabel1
             // 
@@ -480,7 +479,7 @@
             this.xrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel4.BorderWidth = 0F;
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DebitAmount]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([DebitAmount] = 0,\'\',[DebitAmount])")});
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel4.ForeColor = System.Drawing.Color.Black;
             this.xrLabel4.KeepTogether = true;
@@ -498,6 +497,7 @@
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel4.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             // 
             // xrLabel5
             // 
@@ -533,76 +533,24 @@
             this.pageHeaderBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pageHeaderBand1.BorderWidth = 1F;
             this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Textbox10,
+            this.xrLabel6,
             this.ReportTitle,
-            this.Rectangle4,
             this.Textbox4,
             this.Textbox14,
             this.Textbox17,
             this.Textbox18,
             this.Textbox19,
             this.Textbox20});
-            this.pageHeaderBand1.HeightF = 117.5834F;
+            this.pageHeaderBand1.HeightF = 101.9167F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // Textbox10
-            // 
-            this.Textbox10.BorderColor = System.Drawing.Color.Black;
-            this.Textbox10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox10.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox10.BorderWidth = 1F;
-            this.Textbox10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]\n")});
-            this.Textbox10.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
-            this.Textbox10.KeepTogether = true;
-            this.Textbox10.LocationFloat = new DevExpress.Utils.PointFloat(0.5899747F, 0F);
-            this.Textbox10.Multiline = true;
-            this.Textbox10.Name = "Textbox10";
-            this.Textbox10.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Textbox10.SizeF = new System.Drawing.SizeF(809.41F, 21.66667F);
-            this.Textbox10.StylePriority.UseFont = false;
-            this.Textbox10.StylePriority.UsePadding = false;
-            this.Textbox10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // ReportTitle
-            // 
-            this.ReportTitle.BorderColor = System.Drawing.Color.Black;
-            this.ReportTitle.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.ReportTitle.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.ReportTitle.BorderWidth = 1F;
-            this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.ReportTitle.KeepTogether = true;
-            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 21.66667F);
-            this.ReportTitle.Multiline = true;
-            this.ReportTitle.Name = "ReportTitle";
-            this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.ReportTitle.SizeF = new System.Drawing.SizeF(810.0001F, 19.58333F);
-            this.ReportTitle.StylePriority.UseFont = false;
-            this.ReportTitle.StylePriority.UsePadding = false;
-            this.ReportTitle.Text = "Fiscal Year Opening Trial Balance";
-            this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // Rectangle4
-            // 
-            this.Rectangle4.BorderColor = System.Drawing.Color.Black;
-            this.Rectangle4.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Rectangle4.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Rectangle4.BorderWidth = 1F;
-            this.Rectangle4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel6});
-            this.Rectangle4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)")});
-            this.Rectangle4.LocationFloat = new DevExpress.Utils.PointFloat(0.5900383F, 41.25001F);
-            this.Rectangle4.Name = "Rectangle4";
-            this.Rectangle4.SizeF = new System.Drawing.SizeF(809.41F, 20F);
             // 
             // xrLabel6
             // 
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Fiscal Year \' + ?plngYear")});
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(0.5900701F, 21.25001F);
             this.xrLabel6.Multiline = true;
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -622,7 +570,7 @@
             this.Textbox4.BorderWidth = 0F;
             this.Textbox4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox4.KeepTogether = true;
-            this.Textbox4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 61.25F);
+            this.Textbox4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 41.25001F);
             this.Textbox4.Multiline = true;
             this.Textbox4.Name = "Textbox4";
             this.Textbox4.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -642,7 +590,7 @@
             this.Textbox14.BorderWidth = 0F;
             this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox14.KeepTogether = true;
-            this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(207.9914F, 61.25F);
+            this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(207.9913F, 41.25001F);
             this.Textbox14.Multiline = true;
             this.Textbox14.Name = "Textbox14";
             this.Textbox14.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -662,7 +610,7 @@
             this.Textbox17.BorderWidth = 0F;
             this.Textbox17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox17.KeepTogether = true;
-            this.Textbox17.LocationFloat = new DevExpress.Utils.PointFloat(113.3014F, 61.25F);
+            this.Textbox17.LocationFloat = new DevExpress.Utils.PointFloat(113.3014F, 41.25001F);
             this.Textbox17.Multiline = true;
             this.Textbox17.Name = "Textbox17";
             this.Textbox17.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -682,7 +630,7 @@
             this.Textbox18.BorderWidth = 0F;
             this.Textbox18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox18.KeepTogether = true;
-            this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(622.8196F, 61.25F);
+            this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(622.8196F, 41.25001F);
             this.Textbox18.Multiline = true;
             this.Textbox18.Name = "Textbox18";
             this.Textbox18.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -703,7 +651,7 @@
             this.Textbox19.BorderWidth = 0F;
             this.Textbox19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox19.KeepTogether = true;
-            this.Textbox19.LocationFloat = new DevExpress.Utils.PointFloat(437.8866F, 61.25002F);
+            this.Textbox19.LocationFloat = new DevExpress.Utils.PointFloat(437.8866F, 41.25002F);
             this.Textbox19.Multiline = true;
             this.Textbox19.Name = "Textbox19";
             this.Textbox19.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -723,7 +671,7 @@
             this.Textbox20.BorderWidth = 0F;
             this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox20.KeepTogether = true;
-            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(716.4099F, 61.25F);
+            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(716.41F, 41.25001F);
             this.Textbox20.Multiline = true;
             this.Textbox20.Name = "Textbox20";
             this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -876,18 +824,6 @@
             this.plngYear.Name = "plngYear";
             this.plngYear.Type = typeof(int);
             this.plngYear.ValueInfo = "2023";
-            // 
-            // xrCrossBandBox2
-            // 
-            this.xrCrossBandBox2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrCrossBandBox2.BorderWidth = 1F;
-            this.xrCrossBandBox2.EndBand = this.pageHeaderBand1;
-            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 113.4583F);
-            this.xrCrossBandBox2.Name = "xrCrossBandBox2";
-            this.xrCrossBandBox2.StartBand = this.pageHeaderBand1;
-            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 110.375F);
-            this.xrCrossBandBox2.WidthF = 810.0001F;
             // 
             // pdteStartPostDate
             // 
@@ -1051,6 +987,7 @@
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel7.Summary = xrSummary1;
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel7.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             // 
             // xrLabel8
             // 
@@ -1080,6 +1017,37 @@
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel8.Summary = xrSummary2;
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel8.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            // 
+            // ReportTitle
+            // 
+            this.ReportTitle.BorderColor = System.Drawing.Color.Black;
+            this.ReportTitle.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.ReportTitle.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.ReportTitle.BorderWidth = 1F;
+            this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.ReportTitle.KeepTogether = true;
+            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.ReportTitle.Multiline = true;
+            this.ReportTitle.Name = "ReportTitle";
+            this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.ReportTitle.SizeF = new System.Drawing.SizeF(810.0001F, 19.58333F);
+            this.ReportTitle.StylePriority.UseFont = false;
+            this.ReportTitle.StylePriority.UsePadding = false;
+            this.ReportTitle.Text = "Fiscal Year Opening Trial Balance";
+            this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrCrossBandBox2
+            // 
+            this.xrCrossBandBox2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
+            this.xrCrossBandBox2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrCrossBandBox2.BorderWidth = 1F;
+            this.xrCrossBandBox2.EndBand = this.pageHeaderBand1;
+            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 98.87498F);
+            this.xrCrossBandBox2.Name = "xrCrossBandBox2";
+            this.xrCrossBandBox2.StartBand = this.pageHeaderBand1;
+            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 94.74998F);
+            this.xrCrossBandBox2.WidthF = 810.0001F;
             // 
             // FiscalYearOpeningTrialBalance
             // 
@@ -1135,9 +1103,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.PageHeaderBand pageHeaderBand1;
-        private DevExpress.XtraReports.UI.XRLabel Textbox10;
-        private DevExpress.XtraReports.UI.XRLabel ReportTitle;
-        private DevExpress.XtraReports.UI.XRPanel Rectangle4;
         private DevExpress.XtraReports.UI.XRLabel Textbox4;
         private DevExpress.XtraReports.UI.XRLabel Textbox14;
         private DevExpress.XtraReports.UI.XRLabel Textbox17;
@@ -1154,7 +1119,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
         private DevExpress.XtraReports.Parameters.Parameter plngYear;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
-        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox2;
         private DevExpress.XtraReports.UI.XRLabel Textbox5;
         private DevExpress.XtraReports.UI.XRLabel xrCopyright;
         private DevExpress.XtraReports.UI.XRPageInfo xrRunDate;
@@ -1169,5 +1133,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand1;
+        private DevExpress.XtraReports.UI.XRLabel ReportTitle;
+        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox2;
     }
 }
