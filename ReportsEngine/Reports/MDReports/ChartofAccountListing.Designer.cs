@@ -181,6 +181,7 @@
             // 
             this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
+            storedProcQuery1.MetaSerializable = "<Meta X=\"20\" Y=\"20\" Width=\"229\" Height=\"341\" />";
             storedProcQuery1.Name = "DataSet1";
             queryParameter1.Name = "@plngCompanyID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
@@ -196,8 +197,10 @@
             queryParameter2,
             queryParameter3});
             storedProcQuery1.StoredProcName = "Report_ChartOfAccountsListing";
+            storedProcQuery2.MetaSerializable = "<Meta X=\"269\" Y=\"20\" Width=\"126\" Height=\"101\" />";
             storedProcQuery2.Name = "LookupCompanies";
             storedProcQuery2.StoredProcName = "Companies_ReportLookup";
+            storedProcQuery3.MetaSerializable = "<Meta X=\"415\" Y=\"20\" Width=\"116\" Height=\"101\" />";
             storedProcQuery3.Name = "LookupAccounts";
             queryParameter4.Name = "@plngCompanyID";
             queryParameter4.Type = typeof(int);
