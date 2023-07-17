@@ -12,5 +12,10 @@ namespace ReportsEngine.Reports.FinancialReports
         {
             InitializeComponent();
         }
+
+        private void SummaryGeneralLedger_BeforePrint(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

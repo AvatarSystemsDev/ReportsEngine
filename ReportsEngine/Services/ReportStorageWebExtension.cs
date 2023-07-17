@@ -72,6 +72,23 @@ namespace ReportsEngine.Services
                 string[] parts = url.Split('?');
                 string reportName = parts[0];
                 string parametersString = parts.Length > 1 ? parts[1] : String.Empty;
+                int companyidindex = url.IndexOf("=",url.IndexOf("plngCompanyID"))+1; // Find equal sign after plngCompanyID
+                int companyid;
+                int indexQ = url.IndexOf("?", companyidindex);
+                int indexA = url.IndexOf("&", companyidindex);
+
+                if (indexA == -1 && indexQ == -1)
+                {
+                    companyid = Int32.Parse(url.Substring(companyidindex));
+                }
+                else if (indexA > indexQ)
+                {
+                    companyid = Int32.Parse(url.Substring(companyidindex, indexQ));
+                }
+                else
+                {
+                    companyid = Int32.Parse(url.Substring(companyidindex, indexA));
+                }
                 XtraReport report = null;
 
                 if (ReportsFactory.Reports.ContainsKey(reportName))
@@ -93,7 +110,7 @@ namespace ReportsEngine.Services
                     }
 
                     // Assign parameters here
-                    setReportParameters(report, HttpUtility.ParseQueryString(parametersString));
+                    setReportParameters(report, HttpUtility.ParseQueryString(parametersString),companyid);
 
                     using (MemoryStream ms = new MemoryStream())
                     {
@@ -141,7 +158,7 @@ namespace ReportsEngine.Services
             return defaultUrl;
         }
 
-        public static void setReportParameters(XtraReport report, System.Collections.Specialized.NameValueCollection parameters)
+        public static void setReportParameters(XtraReport report, System.Collections.Specialized.NameValueCollection parameters, int companyid)
         {
             bool AwaitParameterInputPassed = false;
 
@@ -155,10 +172,11 @@ namespace ReportsEngine.Services
                     connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
                     report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
                     report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+                    report.Parameters["plngCompanyID"].Value = companyid;
 
                     string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + ReportUser + ";Password=" + ReportUserPassword + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;TrustServerCertificate=true;";
                     string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;TrustServerCertificate=true;";
-
+                    
                     var dataSources = DataSourceManager.GetDataSources(report, true);
                     foreach (var dataSource in dataSources)
                     {
