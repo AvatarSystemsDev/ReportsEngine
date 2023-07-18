@@ -246,6 +246,7 @@
             this.pstrEndingOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowAFE = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
+            this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1018,10 +1019,12 @@
             this.xrLabel1,
             this.ReportTitle,
             this.Rectangle1});
-            this.pageHeaderBand1.HeightF = 117.75F;
+            this.pageHeaderBand1.HeightF = 84.28505F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.pageHeaderBand1.StylePriority.UseBorderWidth = false;
+            this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
+            this.SubBand3});
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel1
@@ -1852,11 +1855,11 @@
             this.xrCrossBandHeader.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
             this.xrCrossBandHeader.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrCrossBandHeader.BorderWidth = 1F;
-            this.xrCrossBandHeader.EndBand = this.pageHeaderBand1;
-            this.xrCrossBandHeader.EndPointFloat = new DevExpress.Utils.PointFloat(2.083778F, 117.6667F);
+            this.xrCrossBandHeader.EndBand = this.SubBand3;
+            this.xrCrossBandHeader.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 10.00005F);
             this.xrCrossBandHeader.Name = "xrCrossBandHeader";
-            this.xrCrossBandHeader.StartBand = this.pageHeaderBand1;
-            this.xrCrossBandHeader.StartPointFloat = new DevExpress.Utils.PointFloat(2.083778F, 113.5F);
+            this.xrCrossBandHeader.StartBand = this.SubBand3;
+            this.xrCrossBandHeader.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 5.83334F);
             this.xrCrossBandHeader.WidthF = 1057.916F;
             // 
             // xrCompanySubheaderStyle
@@ -2261,6 +2264,12 @@
             selectNode6,
             selectNode7});
             // 
+            // SubBand3
+            // 
+            this.SubBand3.HeightF = 14.34657F;
+            this.SubBand3.Name = "SubBand3";
+            this.SubBand3.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            // 
             // GeneralLedgerDetail
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2430,5 +2439,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel35;
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.UI.XRPageInfo xrRunDate;
+        private DevExpress.XtraReports.UI.SubBand SubBand3;
     }
 }

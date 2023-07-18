@@ -69,9 +69,10 @@ namespace ReportsEngine.Services
 
                     string reportType = customData.reportNameExcel;
                     XtraReport report = ReportsFactory.Reports[reportType]();
-                    
+                    int companyID = customData.CompanyID;
                     string parameters = customData.reportParameters.ToString();
-                    CustomReportStorageWebExtension.setReportParameters(report, HttpUtility.ParseQueryString(parameters),customData.CompanyID);
+
+                    CustomReportStorageWebExtension.setReportParameters(report, HttpUtility.ParseQueryString(parameters), companyID);
 
                     XlsxExportOptions exportOptions = new XlsxExportOptions();
                     exportOptions.TextExportMode = TextExportMode.Value;
