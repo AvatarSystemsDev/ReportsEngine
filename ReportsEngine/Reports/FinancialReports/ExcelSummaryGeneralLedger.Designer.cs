@@ -519,7 +519,7 @@
             this.xrLabel13.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel13.BorderWidth = 1F;
-            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel13.KeepTogether = true;
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(928.4211F, 0F);
             this.xrLabel13.Multiline = true;
@@ -527,6 +527,7 @@
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel13.SizeF = new System.Drawing.SizeF(90.21164F, 37.70835F);
             this.xrLabel13.StylePriority.UseBorderWidth = false;
+            this.xrLabel13.StylePriority.UseFont = false;
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.Text = "Volume";
@@ -538,7 +539,7 @@
             this.xrLabel22.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel22.BorderWidth = 1F;
-            this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel22.KeepTogether = true;
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(1018.633F, 0F);
             this.xrLabel22.Multiline = true;
@@ -546,6 +547,7 @@
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel22.SizeF = new System.Drawing.SizeF(90.21164F, 37.70835F);
             this.xrLabel22.StylePriority.UseBorderWidth = false;
+            this.xrLabel22.StylePriority.UseFont = false;
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.StylePriority.UseTextAlignment = false;
             this.xrLabel22.Text = "Ending\r\nBalance";
@@ -557,7 +559,7 @@
             this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel1.BorderWidth = 1F;
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(747.9979F, 0F);
             this.xrLabel1.Multiline = true;
@@ -565,6 +567,7 @@
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(90.21164F, 37.70835F);
             this.xrLabel1.StylePriority.UseBorderWidth = false;
+            this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.Text = "Volume";
@@ -576,7 +579,7 @@
             this.xrLabel15.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel15.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel15.BorderWidth = 1F;
-            this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel15.KeepTogether = true;
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(838.2095F, 0F);
             this.xrLabel15.Multiline = true;
@@ -584,6 +587,7 @@
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel15.SizeF = new System.Drawing.SizeF(90.21164F, 37.70835F);
             this.xrLabel15.StylePriority.UseBorderWidth = false;
+            this.xrLabel15.StylePriority.UseFont = false;
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             this.xrLabel15.Text = "Activity";
@@ -595,7 +599,7 @@
             this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel2.BorderWidth = 1F;
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(567.5748F, 0F);
             this.xrLabel2.Multiline = true;
@@ -603,6 +607,7 @@
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(90.21164F, 37.70835F);
             this.xrLabel2.StylePriority.UseBorderWidth = false;
+            this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.StylePriority.UsePadding = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
             this.xrLabel2.Text = "Volume";
@@ -614,7 +619,7 @@
             this.xrLabel12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel12.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel12.BorderWidth = 1F;
-            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel12.KeepTogether = true;
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(657.7863F, 0F);
             this.xrLabel12.Multiline = true;
@@ -622,6 +627,7 @@
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(90.21164F, 37.70835F);
             this.xrLabel12.StylePriority.UseBorderWidth = false;
+            this.xrLabel12.StylePriority.UseFont = false;
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.Text = "Beginning Balance";
@@ -633,7 +639,7 @@
             this.xrLabel9.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel9.BorderWidth = 1F;
-            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel9.KeepTogether = true;
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(477.3631F, 0F);
             this.xrLabel9.Multiline = true;
@@ -641,6 +647,7 @@
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel9.SizeF = new System.Drawing.SizeF(90.21164F, 37.70835F);
             this.xrLabel9.StylePriority.UseBorderWidth = false;
+            this.xrLabel9.StylePriority.UseFont = false;
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.Text = "Year To-Date Balance";
@@ -652,7 +659,7 @@
             this.Textbox51.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox51.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox51.BorderWidth = 1F;
-            this.Textbox51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox51.KeepTogether = true;
             this.Textbox51.LocationFloat = new DevExpress.Utils.PointFloat(387.1515F, 0F);
             this.Textbox51.Multiline = true;
@@ -660,6 +667,7 @@
             this.Textbox51.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Textbox51.SizeF = new System.Drawing.SizeF(90.21164F, 37.70835F);
             this.Textbox51.StylePriority.UseBorderWidth = false;
+            this.Textbox51.StylePriority.UseFont = false;
             this.Textbox51.StylePriority.UsePadding = false;
             this.Textbox51.StylePriority.UseTextAlignment = false;
             this.Textbox51.Text = "Year Begin Balance";
@@ -671,7 +679,7 @@
             this.Textbox20.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox20.BorderWidth = 1F;
-            this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox20.KeepTogether = true;
             this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(167.2934F, 0F);
             this.Textbox20.Multiline = true;
@@ -679,6 +687,7 @@
             this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Textbox20.SizeF = new System.Drawing.SizeF(219.858F, 37.70835F);
             this.Textbox20.StylePriority.UseBorderWidth = false;
+            this.Textbox20.StylePriority.UseFont = false;
             this.Textbox20.StylePriority.UsePadding = false;
             this.Textbox20.StylePriority.UseTextAlignment = false;
             this.Textbox20.Text = "Description\r\n ";
@@ -690,7 +699,7 @@
             this.Textbox3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox3.BorderWidth = 1F;
-            this.Textbox3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox3.KeepTogether = true;
             this.Textbox3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox3.Multiline = true;
@@ -698,6 +707,7 @@
             this.Textbox3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Textbox3.SizeF = new System.Drawing.SizeF(112.165F, 37.70835F);
             this.Textbox3.StylePriority.UseBorderWidth = false;
+            this.Textbox3.StylePriority.UseFont = false;
             this.Textbox3.StylePriority.UsePadding = false;
             this.Textbox3.StylePriority.UseTextAlignment = false;
             this.Textbox3.Text = "Account Number";
@@ -709,7 +719,7 @@
             this.Textbox23.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox23.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox23.BorderWidth = 1F;
-            this.Textbox23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox23.KeepTogether = true;
             this.Textbox23.LocationFloat = new DevExpress.Utils.PointFloat(112.1651F, 0F);
             this.Textbox23.Multiline = true;
@@ -717,6 +727,7 @@
             this.Textbox23.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Textbox23.SizeF = new System.Drawing.SizeF(55.12833F, 37.70835F);
             this.Textbox23.StylePriority.UseBorderWidth = false;
+            this.Textbox23.StylePriority.UseFont = false;
             this.Textbox23.StylePriority.UsePadding = false;
             this.Textbox23.StylePriority.UseTextAlignment = false;
             this.Textbox23.Text = "Center Number";

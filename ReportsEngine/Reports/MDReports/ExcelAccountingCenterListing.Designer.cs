@@ -117,9 +117,7 @@
             this.xrLabel3.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel3.BorderColor = System.Drawing.Color.Black;
             this.xrLabel3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel3.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel3.BorderWidth = 1F;
             this.xrLabel3.CanGrow = false;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -147,9 +145,7 @@
             this.xrLabel5.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel5.BorderColor = System.Drawing.Color.Black;
             this.xrLabel5.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel5.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel5.BorderWidth = 1F;
             this.xrLabel5.CanGrow = false;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -177,9 +173,7 @@
             this.xrLabel2.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel2.BorderColor = System.Drawing.Color.Black;
             this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel2.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel2.BorderWidth = 1F;
             this.xrLabel2.CanGrow = false;
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -205,9 +199,7 @@
             this.xrLabel1.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel1.BorderColor = System.Drawing.Color.Black;
             this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel1.BorderWidth = 1F;
             this.xrLabel1.CanGrow = false;
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -250,9 +242,7 @@
             this.Textbox20.BackColor = System.Drawing.Color.Transparent;
             this.Textbox20.BorderColor = System.Drawing.Color.Black;
             this.Textbox20.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox20.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.Textbox20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox20.BorderWidth = 1F;
             this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox20.KeepTogether = true;
@@ -274,9 +264,7 @@
             this.Textbox4.BackColor = System.Drawing.Color.Transparent;
             this.Textbox4.BorderColor = System.Drawing.Color.Black;
             this.Textbox4.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox4.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.Textbox4.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox4.BorderWidth = 1F;
             this.Textbox4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox4.KeepTogether = true;
@@ -298,9 +286,7 @@
             this.Textbox14.BackColor = System.Drawing.Color.Transparent;
             this.Textbox14.BorderColor = System.Drawing.Color.Black;
             this.Textbox14.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox14.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.Textbox14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox14.BorderWidth = 1F;
             this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox14.KeepTogether = true;
@@ -322,9 +308,7 @@
             this.Textbox19.BackColor = System.Drawing.Color.Transparent;
             this.Textbox19.BorderColor = System.Drawing.Color.Black;
             this.Textbox19.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox19.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.Textbox19.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox19.BorderWidth = 1F;
             this.Textbox19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox19.KeepTogether = true;

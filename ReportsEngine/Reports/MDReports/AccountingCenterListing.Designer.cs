@@ -144,7 +144,6 @@
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrCopyright = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -156,6 +155,7 @@
             this.pstrEndingAccountCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -568,8 +568,8 @@
             this.xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel8.BorderWidth = 1F;
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrLabel8.ExpressionBindings")),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)\n"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrLabel8.ExpressionBindings"))});
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel8.ForeColor = System.Drawing.Color.Black;
             this.xrLabel8.KeepTogether = true;
@@ -706,10 +706,10 @@
             this.xrFooterControl.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrFooterControl.BorderWidth = 1F;
             this.xrFooterControl.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrRunDate,
             this.xrPageInfo1,
             this.xrCopyright,
-            this.Textbox5,
-            this.xrRunDate});
+            this.Textbox5});
             this.xrFooterControl.LocationFloat = new DevExpress.Utils.PointFloat(0.5900701F, 0F);
             this.xrFooterControl.Name = "xrFooterControl";
             this.xrFooterControl.SizeF = new System.Drawing.SizeF(809.4099F, 33.9267F);
@@ -773,22 +773,6 @@
             this.Textbox5.SizeF = new System.Drawing.SizeF(311.11F, 8.583386F);
             this.Textbox5.StylePriority.UsePadding = false;
             this.Textbox5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrRunDate
-            // 
-            this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10.00001F);
-            this.xrRunDate.Name = "xrRunDate";
-            this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrRunDate.SizeF = new System.Drawing.SizeF(311.11F, 11.7084F);
-            this.xrRunDate.StylePriority.UseBackColor = false;
-            this.xrRunDate.StylePriority.UseBorderColor = false;
-            this.xrRunDate.StylePriority.UsePadding = false;
-            this.xrRunDate.StylePriority.UseTextAlignment = false;
-            this.xrRunDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrRunDate.TextFormatString = "Run Date: {0:h:mm tt dd MMMM yyyy}";
             // 
             // pstrDatabaseName
             // 
@@ -971,6 +955,22 @@
             this.SubBand1.HeightF = 12.2083F;
             this.SubBand1.Name = "SubBand1";
             // 
+            // xrRunDate
+            // 
+            this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
+            this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
+            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10.00001F);
+            this.xrRunDate.Name = "xrRunDate";
+            this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+            this.xrRunDate.SizeF = new System.Drawing.SizeF(311.11F, 11.7084F);
+            this.xrRunDate.StylePriority.UseBackColor = false;
+            this.xrRunDate.StylePriority.UseBorderColor = false;
+            this.xrRunDate.StylePriority.UsePadding = false;
+            this.xrRunDate.StylePriority.UseTextAlignment = false;
+            this.xrRunDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrRunDate.TextFormatString = "Run Date: {0:MMMM dd, yyyy h:mm tt}";
+            // 
             // AccountingCenterListing
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1042,7 +1042,6 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox5;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox2;
-        private DevExpress.XtraReports.UI.XRPageInfo xrRunDate;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningAccountCenterNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingAccountCenterNumber;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
@@ -1052,5 +1051,6 @@
         private DevExpress.XtraReports.UI.XRPanel xrFooterControl;
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.UI.SubBand SubBand1;
+        private DevExpress.XtraReports.UI.XRPageInfo xrRunDate;
     }
 }

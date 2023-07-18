@@ -140,10 +140,10 @@
             this.Textbox18 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox19 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox20 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.Textbox5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCopyright = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
@@ -158,8 +158,8 @@
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
+            this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -731,6 +731,11 @@
             this.Textbox20.Text = "Credits";
             this.Textbox20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
+            // SubBand1
+            // 
+            this.SubBand1.HeightF = 15.33826F;
+            this.SubBand1.Name = "SubBand1";
+            // 
             // pageFooterBand1
             // 
             this.pageFooterBand1.BorderColor = System.Drawing.Color.Black;
@@ -738,9 +743,9 @@
             this.pageFooterBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pageFooterBand1.BorderWidth = 0F;
             this.pageFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrRunDate,
             this.Textbox5,
             this.xrCopyright,
-            this.xrRunDate,
             this.xrPageInfo1});
             this.pageFooterBand1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 6F);
             this.pageFooterBand1.HeightF = 30.29178F;
@@ -789,22 +794,6 @@
             this.xrCopyright.StylePriority.UsePadding = false;
             this.xrCopyright.StylePriority.UseTextAlignment = false;
             this.xrCopyright.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrRunDate
-            // 
-            this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10.00001F);
-            this.xrRunDate.Name = "xrRunDate";
-            this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrRunDate.SizeF = new System.Drawing.SizeF(310.0683F, 11.7084F);
-            this.xrRunDate.StylePriority.UseBackColor = false;
-            this.xrRunDate.StylePriority.UseBorderColor = false;
-            this.xrRunDate.StylePriority.UsePadding = false;
-            this.xrRunDate.StylePriority.UseTextAlignment = false;
-            this.xrRunDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrRunDate.TextFormatString = "Run Date: {0:h:mm tt dd MMMM yyyy}";
             // 
             // xrPageInfo1
             // 
@@ -1067,11 +1056,6 @@
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel8.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             // 
-            // SubBand1
-            // 
-            this.SubBand1.HeightF = 15.33826F;
-            this.SubBand1.Name = "SubBand1";
-            // 
             // xrCrossBandBox1
             // 
             this.xrCrossBandBox1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
@@ -1083,6 +1067,22 @@
             this.xrCrossBandBox1.StartBand = this.SubBand1;
             this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 5.749893F);
             this.xrCrossBandBox1.WidthF = 814.757F;
+            // 
+            // xrRunDate
+            // 
+            this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
+            this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
+            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10.00001F);
+            this.xrRunDate.Name = "xrRunDate";
+            this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+            this.xrRunDate.SizeF = new System.Drawing.SizeF(311.11F, 11.7084F);
+            this.xrRunDate.StylePriority.UseBackColor = false;
+            this.xrRunDate.StylePriority.UseBorderColor = false;
+            this.xrRunDate.StylePriority.UsePadding = false;
+            this.xrRunDate.StylePriority.UseTextAlignment = false;
+            this.xrRunDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrRunDate.TextFormatString = "Run Date: {0:MMMM dd, yyyy h:mm tt}";
             // 
             // FiscalYearOpeningTrialBalance
             // 
@@ -1156,7 +1156,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel Textbox5;
         private DevExpress.XtraReports.UI.XRLabel xrCopyright;
-        private DevExpress.XtraReports.UI.XRPageInfo xrRunDate;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.Parameters.Parameter pdteStartPostDate;
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
@@ -1172,5 +1171,6 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox1;
         private DevExpress.XtraReports.UI.SubBand SubBand1;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox1;
+        private DevExpress.XtraReports.UI.XRPageInfo xrRunDate;
     }
 }

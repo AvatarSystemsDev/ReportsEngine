@@ -75,7 +75,8 @@ namespace ReportsEngine.Services
                     CustomReportStorageWebExtension.setReportParameters(report, HttpUtility.ParseQueryString(parameters), companyID);
 
                     XlsxExportOptions exportOptions = new XlsxExportOptions();
-                    exportOptions.TextExportMode = TextExportMode.Value;
+                    //exportOptions.TextExportMode = TextExportMode.Value;
+                    exportOptions.ShowGridLines = true;
 
                     report.ExportToXlsx(fileDownloadName, exportOptions);
 
