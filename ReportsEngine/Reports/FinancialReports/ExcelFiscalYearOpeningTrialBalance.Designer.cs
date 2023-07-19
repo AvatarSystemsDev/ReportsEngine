@@ -342,7 +342,7 @@
             this.Textbox19.StylePriority.UseBorderWidth = false;
             this.Textbox19.StylePriority.UseFont = false;
             this.Textbox19.StylePriority.UsePadding = false;
-            this.Textbox19.Text = "Cost Center\r\nName";
+            this.Textbox19.Text = "Accounting Center\r\nName";
             this.Textbox19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox18
@@ -387,7 +387,7 @@
             this.Textbox17.StylePriority.UseBorderWidth = false;
             this.Textbox17.StylePriority.UseFont = false;
             this.Textbox17.StylePriority.UsePadding = false;
-            this.Textbox17.Text = "Account\r\nCenter #";
+            this.Textbox17.Text = "Accounting Center\r\nNumber";
             this.Textbox17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox14

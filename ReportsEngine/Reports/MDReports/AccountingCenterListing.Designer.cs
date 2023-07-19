@@ -139,8 +139,10 @@
             this.Textbox14 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox19 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox20 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrFooterControl = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrCopyright = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox5 = new DevExpress.XtraReports.UI.XRLabel();
@@ -154,8 +156,6 @@
             this.pstrBeginningAccountCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingAccountCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -513,7 +513,7 @@
             this.xrLabel7.StylePriority.UseBackColor = false;
             this.xrLabel7.StylePriority.UseBorderWidth = false;
             this.xrLabel7.StylePriority.UsePadding = false;
-            this.xrLabel7.Text = "Account Center #";
+            this.xrLabel7.Text = "Accounting Center";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Rectangle3
@@ -684,6 +684,12 @@
             this.Textbox20.Text = "Reference Number";
             this.Textbox20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
+            // SubBand1
+            // 
+            this.SubBand1.HeightF = 12.5F;
+            this.SubBand1.Name = "SubBand1";
+            this.SubBand1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            // 
             // pageFooterBand1
             // 
             this.pageFooterBand1.BorderColor = System.Drawing.Color.Black;
@@ -714,6 +720,22 @@
             this.xrFooterControl.Name = "xrFooterControl";
             this.xrFooterControl.SizeF = new System.Drawing.SizeF(809.4099F, 33.9267F);
             this.xrFooterControl.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            // 
+            // xrRunDate
+            // 
+            this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
+            this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
+            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10.00001F);
+            this.xrRunDate.Name = "xrRunDate";
+            this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
+            this.xrRunDate.SizeF = new System.Drawing.SizeF(311.11F, 11.7084F);
+            this.xrRunDate.StylePriority.UseBackColor = false;
+            this.xrRunDate.StylePriority.UseBorderColor = false;
+            this.xrRunDate.StylePriority.UsePadding = false;
+            this.xrRunDate.StylePriority.UseTextAlignment = false;
+            this.xrRunDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrRunDate.TextFormatString = "Run Date: {0:MMMM dd, yyyy h:mm tt}";
             // 
             // xrPageInfo1
             // 
@@ -826,11 +848,11 @@
             this.xrCrossBandBox2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrCrossBandBox2.BorderWidth = 1F;
             this.xrCrossBandBox2.EndBand = this.SubBand1;
-            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 9.37496F);
+            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 8.999988F);
             this.xrCrossBandBox2.Name = "xrCrossBandBox2";
             this.xrCrossBandBox2.StartBand = this.SubBand1;
-            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 5.431557F);
-            this.xrCrossBandBox2.WidthF = 815.425F;
+            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 4.999987F);
+            this.xrCrossBandBox2.WidthF = 809.9997F;
             // 
             // pstrBeginningAccountCenterNumber
             // 
@@ -949,27 +971,6 @@
             selectNode2,
             selectNode3,
             selectNode4});
-            // 
-            // SubBand1
-            // 
-            this.SubBand1.HeightF = 12.2083F;
-            this.SubBand1.Name = "SubBand1";
-            // 
-            // xrRunDate
-            // 
-            this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10.00001F);
-            this.xrRunDate.Name = "xrRunDate";
-            this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrRunDate.SizeF = new System.Drawing.SizeF(311.11F, 11.7084F);
-            this.xrRunDate.StylePriority.UseBackColor = false;
-            this.xrRunDate.StylePriority.UseBorderColor = false;
-            this.xrRunDate.StylePriority.UsePadding = false;
-            this.xrRunDate.StylePriority.UseTextAlignment = false;
-            this.xrRunDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrRunDate.TextFormatString = "Run Date: {0:MMMM dd, yyyy h:mm tt}";
             // 
             // AccountingCenterListing
             // 

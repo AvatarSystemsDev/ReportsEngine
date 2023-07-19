@@ -429,6 +429,12 @@
     <Compile Include="Reports\FinancialReports\ExcelSummaryGeneralLedger.Designer.cs">
       <DependentUpon>ExcelSummaryGeneralLedger.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelTrialBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelTrialBalance.Designer.cs">
+      <DependentUpon>ExcelTrialBalance.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\FinancialCodeListing.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -446,6 +452,12 @@
     </Compile>
     <Compile Include="Reports\FinancialReports\SummaryGeneralLedger.Designer.cs">
       <DependentUpon>SummaryGeneralLedger.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\TrialBalance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\TrialBalance.Designer.cs">
+      <DependentUpon>TrialBalance.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\AccountingCenterListing.cs">
       <SubType>Component</SubType>
@@ -541,6 +553,9 @@
     <EmbeddedResource Include="Reports\FinancialReports\ExcelSummaryGeneralLedger.resx">
       <DependentUpon>ExcelSummaryGeneralLedger.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelTrialBalance.resx">
+      <DependentUpon>ExcelTrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\FinancialCodeListing.resx">
       <DependentUpon>FinancialCodeListing.cs</DependentUpon>
     </EmbeddedResource>
@@ -549,6 +564,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\SummaryGeneralLedger.resx">
       <DependentUpon>SummaryGeneralLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\TrialBalance.resx">
+      <DependentUpon>TrialBalance.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AccountingCenterListing.resx">
       <DependentUpon>AccountingCenterListing.cs</DependentUpon>

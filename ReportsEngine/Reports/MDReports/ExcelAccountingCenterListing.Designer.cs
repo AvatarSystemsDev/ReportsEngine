@@ -300,7 +300,7 @@
             this.Textbox14.StylePriority.UseBorderWidth = false;
             this.Textbox14.StylePriority.UseFont = false;
             this.Textbox14.StylePriority.UsePadding = false;
-            this.Textbox14.Text = "Account Center Name";
+            this.Textbox14.Text = "Accounting Center Name";
             this.Textbox14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox19

@@ -195,7 +195,7 @@
             this.xrLabel8.StylePriority.UsePadding = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel8.TextFormatString = "{0:\'$\'#,0.00;-\'$\'#,0.00}";
+            this.xrLabel8.TextFormatString = "{0:C}";
             // 
             // xrLabel16
             // 
@@ -225,7 +225,7 @@
             this.xrLabel16.StylePriority.UsePadding = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel16.TextFormatString = "{0:\'$\'#,0.00;-\'$\'#,0.00}";
+            this.xrLabel16.TextFormatString = "{0:C}";
             // 
             // xrLabel17
             // 
@@ -255,7 +255,7 @@
             this.xrLabel17.StylePriority.UsePadding = false;
             this.xrLabel17.StylePriority.UseTextAlignment = false;
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel17.TextFormatString = "{0:\'$\'#,0.00;-\'$\'#,0.00}";
+            this.xrLabel17.TextFormatString = "{0:C}";
             // 
             // xrLabel3
             // 
@@ -531,7 +531,7 @@
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.Text = "Volume";
-            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel22
             // 
@@ -551,7 +551,7 @@
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.StylePriority.UseTextAlignment = false;
             this.xrLabel22.Text = "Ending\r\nBalance";
-            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel1
             // 
@@ -571,7 +571,7 @@
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.Text = "Volume";
-            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel15
             // 
@@ -591,7 +591,7 @@
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             this.xrLabel15.Text = "Activity";
-            this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel2
             // 
@@ -611,7 +611,7 @@
             this.xrLabel2.StylePriority.UsePadding = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
             this.xrLabel2.Text = "Volume";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel12
             // 
@@ -631,7 +631,7 @@
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.Text = "Beginning Balance";
-            this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel9
             // 
@@ -651,7 +651,7 @@
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.Text = "Year To-Date Balance";
-            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox51
             // 
@@ -671,7 +671,7 @@
             this.Textbox51.StylePriority.UsePadding = false;
             this.Textbox51.StylePriority.UseTextAlignment = false;
             this.Textbox51.Text = "Year Begin Balance";
-            this.Textbox51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.Textbox51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox20
             // 
@@ -730,7 +730,7 @@
             this.Textbox23.StylePriority.UseFont = false;
             this.Textbox23.StylePriority.UsePadding = false;
             this.Textbox23.StylePriority.UseTextAlignment = false;
-            this.Textbox23.Text = "Center Number";
+            this.Textbox23.Text = "Acctg. Center";
             this.Textbox23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // pstrDatabaseName

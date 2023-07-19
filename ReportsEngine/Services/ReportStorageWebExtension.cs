@@ -108,6 +108,11 @@ namespace ReportsEngine.Services
                     if (report.Parameters.Contains(report.Parameters["pdteEndingPostDate"])) {
                         report.Parameters["pdteEndingPostDate"].Value = startDate.AddMonths(1).AddDays(-1);
                     }
+                    if (report.Parameters.Contains(report.Parameters["plngYear"]))
+                    {
+                        int currentYear = DateTime.Now.Year;
+                        report.Parameters["plngYear"].Value = currentYear;
+                    }
 
                     // Assign parameters here
                     setReportParameters(report, HttpUtility.ParseQueryString(parametersString),companyid);
