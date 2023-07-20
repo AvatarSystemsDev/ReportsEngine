@@ -117,7 +117,7 @@
             this.xrLabel3,
             this.xrLabel4,
             this.xrLabel5});
-            this.Tablix1.HeightF = 20F;
+            this.Tablix1.HeightF = 15F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
             // 
@@ -133,10 +133,10 @@
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel6.ForeColor = System.Drawing.Color.Black;
             this.xrLabel6.KeepTogether = true;
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(115.4795F, 0F);
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(113.3014F, 0F);
             this.xrLabel6.Name = "xrLabel6";
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(115.4795F, 20F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(117.6576F, 15F);
             this.xrLabel6.StylePriority.UseBackColor = false;
             this.xrLabel6.StylePriority.UseBorderColor = false;
             this.xrLabel6.StylePriority.UseBorderDashStyle = false;
@@ -163,7 +163,7 @@
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(115.4795F, 20F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(113.3014F, 15F);
             this.xrLabel1.StylePriority.UseBackColor = false;
             this.xrLabel1.StylePriority.UseBorderColor = false;
             this.xrLabel1.StylePriority.UseBorderDashStyle = false;
@@ -190,7 +190,7 @@
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(230.9589F, 0F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(418.8445F, 20F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(418.8445F, 15F);
             this.xrLabel2.StylePriority.UseBackColor = false;
             this.xrLabel2.StylePriority.UseBorderColor = false;
             this.xrLabel2.StylePriority.UseBorderDashStyle = false;
@@ -214,10 +214,10 @@
             this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel3.ForeColor = System.Drawing.Color.Black;
             this.xrLabel3.KeepTogether = true;
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(649.8034F, 0F);
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(649.8033F, 0F);
             this.xrLabel3.Name = "xrLabel3";
             this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(214.683F, 20F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(214.683F, 15F);
             this.xrLabel3.StylePriority.UseBackColor = false;
             this.xrLabel3.StylePriority.UseBorderColor = false;
             this.xrLabel3.StylePriority.UseBorderDashStyle = false;
@@ -237,14 +237,14 @@
             this.xrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel4.BorderWidth = 1F;
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TypicalBalance]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CreditAmount]")});
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel4.ForeColor = System.Drawing.Color.Black;
             this.xrLabel4.KeepTogether = true;
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(864.4861F, 0F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(962.2431F, 0F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel4.SizeF = new System.Drawing.SizeF(97.75696F, 20F);
+            this.xrLabel4.SizeF = new System.Drawing.SizeF(97.75696F, 15F);
             this.xrLabel4.StylePriority.UseBackColor = false;
             this.xrLabel4.StylePriority.UseBorderColor = false;
             this.xrLabel4.StylePriority.UseBorderDashStyle = false;
@@ -264,14 +264,14 @@
             this.xrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel5.BorderWidth = 1F;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CashFlowCategory]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DebitAmount]")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel5.ForeColor = System.Drawing.Color.Black;
             this.xrLabel5.KeepTogether = true;
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(962.2431F, 0F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(864.4861F, 0F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(97.7569F, 20F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(97.7569F, 15F);
             this.xrLabel5.StylePriority.UseBackColor = false;
             this.xrLabel5.StylePriority.UseBorderColor = false;
             this.xrLabel5.StylePriority.UseBorderDashStyle = false;
@@ -296,7 +296,7 @@
             this.Textbox17,
             this.Textbox14,
             this.Textbox4});
-            this.pageHeaderBand1.HeightF = 36.81F;
+            this.pageHeaderBand1.HeightF = 35F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -309,11 +309,11 @@
             this.Textbox20.BorderWidth = 1F;
             this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox20.KeepTogether = true;
-            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(864.4861F, 0F);
+            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(962.2431F, 0F);
             this.Textbox20.Multiline = true;
             this.Textbox20.Name = "Textbox20";
             this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Textbox20.SizeF = new System.Drawing.SizeF(97.7569F, 36.80999F);
+            this.Textbox20.SizeF = new System.Drawing.SizeF(97.7569F, 35F);
             this.Textbox20.StylePriority.UseBackColor = false;
             this.Textbox20.StylePriority.UseBorders = false;
             this.Textbox20.StylePriority.UseBorderWidth = false;
@@ -332,11 +332,11 @@
             this.Textbox19.BorderWidth = 1F;
             this.Textbox19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox19.KeepTogether = true;
-            this.Textbox19.LocationFloat = new DevExpress.Utils.PointFloat(649.8034F, 0F);
+            this.Textbox19.LocationFloat = new DevExpress.Utils.PointFloat(649.8033F, 0F);
             this.Textbox19.Multiline = true;
             this.Textbox19.Name = "Textbox19";
             this.Textbox19.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Textbox19.SizeF = new System.Drawing.SizeF(214.6827F, 36.80999F);
+            this.Textbox19.SizeF = new System.Drawing.SizeF(214.6827F, 35F);
             this.Textbox19.StylePriority.UseBackColor = false;
             this.Textbox19.StylePriority.UseBorders = false;
             this.Textbox19.StylePriority.UseBorderWidth = false;
@@ -354,11 +354,11 @@
             this.Textbox18.BorderWidth = 1F;
             this.Textbox18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox18.KeepTogether = true;
-            this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(962.2432F, 0F);
+            this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(864.4861F, 0F);
             this.Textbox18.Multiline = true;
             this.Textbox18.Name = "Textbox18";
             this.Textbox18.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Textbox18.SizeF = new System.Drawing.SizeF(97.7569F, 36.81F);
+            this.Textbox18.SizeF = new System.Drawing.SizeF(97.7569F, 34.99999F);
             this.Textbox18.StylePriority.UseBackColor = false;
             this.Textbox18.StylePriority.UseBorders = false;
             this.Textbox18.StylePriority.UseBorderWidth = false;
@@ -381,7 +381,7 @@
             this.Textbox17.Multiline = true;
             this.Textbox17.Name = "Textbox17";
             this.Textbox17.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Textbox17.SizeF = new System.Drawing.SizeF(117.6575F, 36.81F);
+            this.Textbox17.SizeF = new System.Drawing.SizeF(117.6575F, 34.99999F);
             this.Textbox17.StylePriority.UseBackColor = false;
             this.Textbox17.StylePriority.UseBorders = false;
             this.Textbox17.StylePriority.UseBorderWidth = false;
@@ -403,7 +403,7 @@
             this.Textbox14.Multiline = true;
             this.Textbox14.Name = "Textbox14";
             this.Textbox14.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Textbox14.SizeF = new System.Drawing.SizeF(418.8445F, 36.81F);
+            this.Textbox14.SizeF = new System.Drawing.SizeF(418.8445F, 34.99999F);
             this.Textbox14.StylePriority.UseBackColor = false;
             this.Textbox14.StylePriority.UseBorders = false;
             this.Textbox14.StylePriority.UseBorderWidth = false;
@@ -425,7 +425,7 @@
             this.Textbox4.Multiline = true;
             this.Textbox4.Name = "Textbox4";
             this.Textbox4.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Textbox4.SizeF = new System.Drawing.SizeF(113.3014F, 36.81F);
+            this.Textbox4.SizeF = new System.Drawing.SizeF(113.3F, 35F);
             this.Textbox4.StylePriority.UseBackColor = false;
             this.Textbox4.StylePriority.UseBorders = false;
             this.Textbox4.StylePriority.UseBorderWidth = false;
