@@ -508,7 +508,7 @@
             this.xrLabel17.StylePriority.UsePadding = false;
             this.xrLabel17.StylePriority.UseTextAlignment = false;
             this.xrLabel17.Text = "[AccountingCenterNumber]";
-            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel16
             // 
@@ -1013,14 +1013,14 @@
             this.Textbox23.LocationFloat = new DevExpress.Utils.PointFloat(110.7749F, 0F);
             this.Textbox23.Multiline = true;
             this.Textbox23.Name = "Textbox23";
-            this.Textbox23.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox23.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100F);
             this.Textbox23.SizeF = new System.Drawing.SizeF(55.12833F, 37.70835F);
             this.Textbox23.StylePriority.UseBackColor = false;
             this.Textbox23.StylePriority.UseBorderWidth = false;
             this.Textbox23.StylePriority.UsePadding = false;
             this.Textbox23.StylePriority.UseTextAlignment = false;
-            this.Textbox23.Text = "Acctg. Center";
-            this.Textbox23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.Textbox23.Text = "Acct. Center";
+            this.Textbox23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox3
             // 
@@ -1989,7 +1989,7 @@
             // 
             // pstrBeginningCostCenter
             // 
-            this.pstrBeginningCostCenter.Description = "Beginning Account Center";
+            this.pstrBeginningCostCenter.Description = "Beginning Acct. Center";
             this.pstrBeginningCostCenter.Name = "pstrBeginningCostCenter";
             this.pstrBeginningCostCenter.ValueInfo = "!";
             dynamicListLookUpSettings4.DataMember = "DSAccountCenterLookup";
@@ -2002,7 +2002,7 @@
             // 
             // pstrEndingCostCenter
             // 
-            this.pstrEndingCostCenter.Description = "Ending Cost Center";
+            this.pstrEndingCostCenter.Description = "Ending Acct. Center";
             this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
             this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
             dynamicListLookUpSettings5.DataMember = "DSAccountCenterLookup";

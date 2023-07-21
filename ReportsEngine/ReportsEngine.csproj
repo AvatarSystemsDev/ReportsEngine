@@ -423,6 +423,12 @@
     <Compile Include="Reports\FinancialReports\ExcelFiscalYearOpeningTrialBalance.Designer.cs">
       <DependentUpon>ExcelFiscalYearOpeningTrialBalance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelGLBudgets.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelGLBudgets.Designer.cs">
+      <DependentUpon>ExcelGLBudgets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\ExcelSummaryGeneralLedger.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -446,6 +452,12 @@
     </Compile>
     <Compile Include="Reports\FinancialReports\FiscalYearOpeningTrialBalance.Designer.cs">
       <DependentUpon>FiscalYearOpeningTrialBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\GLBudgets.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\GLBudgets.Designer.cs">
+      <DependentUpon>GLBudgets.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\SummaryGeneralLedger.cs">
       <SubType>Component</SubType>
@@ -526,6 +538,12 @@
     <Compile Include="Reports\FinancialReports\ExcelGeneralLedgerDetail.Designer.cs">
       <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Scripts\ExcelGLBudgets.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Scripts\ExcelGLBudgets.Designer.cs">
+      <DependentUpon>ExcelGLBudgets.cs</DependentUpon>
+    </Compile>
     <Compile Include="Services\DynamicConnectionHandler.cs" />
     <Compile Include="Services\ExcelAccountingCenterListing.cs">
       <SubType>Component</SubType>
@@ -550,6 +568,9 @@
     <EmbeddedResource Include="Reports\FinancialReports\ExcelFiscalYearOpeningTrialBalance.resx">
       <DependentUpon>ExcelFiscalYearOpeningTrialBalance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelGLBudgets.resx">
+      <DependentUpon>ExcelGLBudgets.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelSummaryGeneralLedger.resx">
       <DependentUpon>ExcelSummaryGeneralLedger.cs</DependentUpon>
     </EmbeddedResource>
@@ -561,6 +582,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\FiscalYearOpeningTrialBalance.resx">
       <DependentUpon>FiscalYearOpeningTrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\GLBudgets.resx">
+      <DependentUpon>GLBudgets.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\SummaryGeneralLedger.resx">
       <DependentUpon>SummaryGeneralLedger.cs</DependentUpon>
@@ -607,6 +631,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelGeneralLedgerDetail.resx">
       <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Scripts\ExcelGLBudgets.resx">
+      <DependentUpon>ExcelGLBudgets.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

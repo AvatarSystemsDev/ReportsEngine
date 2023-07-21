@@ -27,6 +27,9 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelSummaryGeneralLedger", () => new ExcelSummaryGeneralLedger());
             Reports.Add("TrialBalance", () => new TrialBalance());
             Reports.Add("ExcelTrialBalance", () => new ExcelTrialBalance());
+            Reports.Add("GLBudgets", () => new GLBudgets());
+            Reports.Add("ExcelGLBudgets", () => new ExcelGLBudgets());
+
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
