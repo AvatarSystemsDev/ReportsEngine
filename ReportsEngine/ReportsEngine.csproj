@@ -459,6 +459,18 @@
     <Compile Include="Reports\FinancialReports\GLBudgets.Designer.cs">
       <DependentUpon>GLBudgets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\GLBudgetsSemiannual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\GLBudgetsSemiannual.Designer.cs">
+      <DependentUpon>GLBudgetsSemiannual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\JournalRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\JournalRegister.Designer.cs">
+      <DependentUpon>JournalRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\SummaryGeneralLedger.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -585,6 +597,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\GLBudgets.resx">
       <DependentUpon>GLBudgets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\GLBudgetsSemiannual.resx">
+      <DependentUpon>GLBudgetsSemiannual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\JournalRegister.resx">
+      <DependentUpon>JournalRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\SummaryGeneralLedger.resx">
       <DependentUpon>SummaryGeneralLedger.cs</DependentUpon>

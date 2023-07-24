@@ -29,6 +29,9 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelTrialBalance", () => new ExcelTrialBalance());
             Reports.Add("GLBudgets", () => new GLBudgets());
             Reports.Add("ExcelGLBudgets", () => new ExcelGLBudgets());
+            Reports.Add("GLBudgetsSemiannual", () => new GLBudgetsSemiannual());
+            Reports.Add("ExcelGLBudgetsSemiannual", () => new ExcelGLBudgets()); // We can use the same Excel report becuase we are not crunched for space
+
 
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();

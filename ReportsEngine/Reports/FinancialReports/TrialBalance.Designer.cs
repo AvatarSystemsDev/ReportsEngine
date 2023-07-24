@@ -724,7 +724,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.Textbox17.StylePriority.UseBackColor = false;
             this.Textbox17.StylePriority.UseBorderWidth = false;
             this.Textbox17.StylePriority.UsePadding = false;
-            this.Textbox17.Text = "Acctg. Center";
+            this.Textbox17.Text = "Acct. Center";
             this.Textbox17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox14
@@ -1076,7 +1076,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pbooShowVolume.Description = "Show Volume";
             this.pbooShowVolume.Name = "pbooShowVolume";
             this.pbooShowVolume.Type = typeof(bool);
-            this.pbooShowVolume.ValueInfo = "True";
+            this.pbooShowVolume.ValueInfo = "False";
             // 
             // pdteEndDate
             // 
