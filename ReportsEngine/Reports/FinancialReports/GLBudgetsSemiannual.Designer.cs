@@ -181,6 +181,7 @@
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.plngYear = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowJulyToDecember = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteBeginningDate = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -475,7 +476,7 @@
             this.xrLabel14.StylePriority.UsePadding = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel14.TextFormatString = "{0:}";
+            this.xrLabel14.TextFormatString = "{0:N0}";
             // 
             // xrLabel13
             // 
@@ -499,7 +500,7 @@
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel13.TextFormatString = "{0:}";
+            this.xrLabel13.TextFormatString = "{0:N0}";
             // 
             // xrLabel12
             // 
@@ -523,7 +524,7 @@
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel12.TextFormatString = "{0:}";
+            this.xrLabel12.TextFormatString = "{0:N0}";
             // 
             // xrLabel11
             // 
@@ -547,7 +548,7 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel11.TextFormatString = "{0:}";
+            this.xrLabel11.TextFormatString = "{0:N0}";
             // 
             // xrLabel9
             // 
@@ -571,7 +572,7 @@
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel9.TextFormatString = "{0:}";
+            this.xrLabel9.TextFormatString = "{0:N0}";
             // 
             // xrLabel8
             // 
@@ -595,7 +596,7 @@
             this.xrLabel8.StylePriority.UsePadding = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel8.TextFormatString = "{0:}";
+            this.xrLabel8.TextFormatString = "{0:N0}";
             // 
             // xrLabel10
             // 
@@ -619,7 +620,7 @@
             this.xrLabel10.StylePriority.UsePadding = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel10.TextFormatString = "{0:}";
+            this.xrLabel10.TextFormatString = "{0:N0}";
             // 
             // pageHeaderBand1
             // 
@@ -1333,6 +1334,13 @@
             this.pbooShowJulyToDecember.Type = typeof(bool);
             this.pbooShowJulyToDecember.ValueInfo = "False";
             // 
+            // pdteBeginningDate
+            // 
+            this.pdteBeginningDate.Description = "Beginning Date";
+            this.pdteBeginningDate.Name = "pdteBeginningDate";
+            this.pdteBeginningDate.Type = typeof(System.DateTime);
+            this.pdteBeginningDate.ValueInfo = "1869-01-01";
+            // 
             // GLBudgetsSemiannual
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1381,7 +1389,8 @@
             this.Subtitle,
             this.plngCompanyID,
             this.plngBookCodeID,
-            this.pbooShowCriteria});
+            this.pbooShowCriteria,
+            this.pdteBeginningDate});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -1440,5 +1449,6 @@
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter plngYear;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowJulyToDecember;
+        private DevExpress.XtraReports.Parameters.Parameter pdteBeginningDate;
     }
 }
