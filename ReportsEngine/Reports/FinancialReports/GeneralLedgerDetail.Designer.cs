@@ -882,6 +882,7 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel11.TextFormatString = "{0:N0}";
             // 
             // xrLabel12
             // 
@@ -912,7 +913,7 @@
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel12.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel12.TextFormatString = "{0:N2}";
             // 
             // xrLabel13
             // 
@@ -943,7 +944,7 @@
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel13.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel13.TextFormatString = "{0:N2}";
             // 
             // Tablix1_GroupHeaderBand
             // 
@@ -1049,7 +1050,7 @@
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrGrandTotal.Summary = xrSummary1;
             this.xrGrandTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrGrandTotal.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrGrandTotal.TextFormatString = "{0:N2}";
             // 
             // xrLabel29
             // 
@@ -1077,7 +1078,7 @@
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel29.Summary = xrSummary2;
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel29.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel29.TextFormatString = "{0:N2}";
             // 
             // pageHeaderBand1
             // 
@@ -2077,7 +2078,7 @@
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel33.Summary = xrSummary3;
             this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel33.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel33.TextFormatString = "{0:N2}";
             // 
             // xrLabel32
             // 
@@ -2105,7 +2106,7 @@
             xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel32.Summary = xrSummary4;
             this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel32.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel32.TextFormatString = "{0:N2}";
             // 
             // xrLabel31
             // 
@@ -2156,7 +2157,7 @@
             xrSummary5.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel30.Summary = xrSummary5;
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel30.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel30.TextFormatString = "{0:N2}";
             // 
             // xrLabel24
             // 
@@ -2185,7 +2186,7 @@
             xrSummary6.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel24.Summary = xrSummary6;
             this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel24.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel24.TextFormatString = "{0:N2}";
             // 
             // xrLabel23
             // 

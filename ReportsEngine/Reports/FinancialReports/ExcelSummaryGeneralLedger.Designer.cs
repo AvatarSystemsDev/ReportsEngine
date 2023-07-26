@@ -429,7 +429,7 @@
             this.xrLabel14.StylePriority.UsePadding = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel14.TextFormatString = "{0:\'$\'#,0.00;-\'$\'#,0.00}";
+            this.xrLabel14.TextFormatString = "{0:N2}";
             // 
             // xrLabel10
             // 
@@ -459,7 +459,7 @@
             this.xrLabel10.StylePriority.UsePadding = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel10.TextFormatString = "{0:\'$\'#,0.00;-\'$\'#,0.00}";
+            this.xrLabel10.TextFormatString = "{0:N2}";
             // 
             // xrLabel11
             // 
@@ -489,7 +489,7 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel11.TextFormatString = "{0:\'$\'#,0.00;-\'$\'#,0.00}";
+            this.xrLabel11.TextFormatString = "{0:N2}";
             // 
             // pageHeaderBand1
             // 

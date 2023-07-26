@@ -494,6 +494,7 @@
             this.xrLabel30.StylePriority.UseTextAlignment = false;
             this.xrLabel30.Text = "[December]";
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel30.TextFormatString = "{0:}";
             // 
             // xrLabel1
             // 

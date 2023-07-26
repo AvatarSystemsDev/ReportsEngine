@@ -413,7 +413,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel10.StylePriority.UsePadding = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel10.TextFormatString = "{0:f}";
+            this.xrLabel10.TextFormatString = "{0:N2}";
             // 
             // xrLabel5
             // 
@@ -469,7 +469,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel1.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel1.TextFormatString = "{0:N2}";
             // 
             // xrLabel3
             // 
@@ -580,7 +580,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel9.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel9.TextFormatString = "{0:N2}";
             // 
             // pageHeaderBand1
             // 
@@ -996,7 +996,7 @@ namespace ReportsEngine.Reports.FinancialReports
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel11.Summary = xrSummary1;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel11.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel11.TextFormatString = "{0:N2}";
             // 
             // xrLabel12
             // 
@@ -1028,7 +1028,7 @@ namespace ReportsEngine.Reports.FinancialReports
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel12.Summary = xrSummary2;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel12.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
+            this.xrLabel12.TextFormatString = "{0:N2}";
             // 
             // xrLabel13
             // 
