@@ -180,6 +180,7 @@
             this.pstrEndingCostCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.plngYear = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowJulyToDecember = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -193,10 +194,10 @@
             queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             queryParameter2.Name = "@pdteBeginningDate";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("\'1/1/\'+?plngYear", typeof(System.DateTime));
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("\'1/1/\' + ?plngYear", typeof(System.DateTime));
             queryParameter3.Name = "@pdteEndingDate";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("\'12/31/\'+?plngYear", typeof(System.DateTime));
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("\'12/31/\' + ?plngYear", typeof(System.DateTime));
             queryParameter4.Name = "@pstrBeginningAccountNumber";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrBeginningAccountNumber", typeof(string));
@@ -474,7 +475,7 @@
             this.xrLabel14.StylePriority.UsePadding = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel14.TextFormatString = "{0:$0.00}";
+            this.xrLabel14.TextFormatString = "{0:}";
             // 
             // xrLabel13
             // 
@@ -498,7 +499,7 @@
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel13.TextFormatString = "{0:$0.00}";
+            this.xrLabel13.TextFormatString = "{0:}";
             // 
             // xrLabel12
             // 
@@ -522,7 +523,7 @@
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel12.TextFormatString = "{0:$0.00}";
+            this.xrLabel12.TextFormatString = "{0:}";
             // 
             // xrLabel11
             // 
@@ -546,7 +547,7 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel11.TextFormatString = "{0:$0.00}";
+            this.xrLabel11.TextFormatString = "{0:}";
             // 
             // xrLabel9
             // 
@@ -570,7 +571,7 @@
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel9.TextFormatString = "{0:$0.00}";
+            this.xrLabel9.TextFormatString = "{0:}";
             // 
             // xrLabel8
             // 
@@ -594,7 +595,7 @@
             this.xrLabel8.StylePriority.UsePadding = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel8.TextFormatString = "{0:$0.00}";
+            this.xrLabel8.TextFormatString = "{0:}";
             // 
             // xrLabel10
             // 
@@ -618,7 +619,7 @@
             this.xrLabel10.StylePriority.UsePadding = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel10.TextFormatString = "{0:$0.00}";
+            this.xrLabel10.TextFormatString = "{0:}";
             // 
             // pageHeaderBand1
             // 
@@ -1325,6 +1326,13 @@
             this.plngYear.Type = typeof(int);
             this.plngYear.ValueInfo = "2023";
             // 
+            // pbooShowJulyToDecember
+            // 
+            this.pbooShowJulyToDecember.Description = "Show July To December";
+            this.pbooShowJulyToDecember.Name = "pbooShowJulyToDecember";
+            this.pbooShowJulyToDecember.Type = typeof(bool);
+            this.pbooShowJulyToDecember.ValueInfo = "False";
+            // 
             // GLBudgetsSemiannual
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1341,13 +1349,14 @@
             this.xrCrossBandBox2});
             this.DataMember = "Dynamic_DSGeneralLedgerDetail";
             this.DataSource = this.federationDataSource1;
-            this.DisplayName = "GeneralLedgerDetail";
+            this.DisplayName = "GLBudgetsSemiannual";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 20F, 20F);
             this.PaperKind = System.Drawing.Printing.PaperKind.LetterRotated;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngYear, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowJulyToDecember, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenterNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1361,6 +1370,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.plngYear,
+            this.pbooShowJulyToDecember,
             this.pstrBeginningAccountNumber,
             this.pstrEndingAccountNumber,
             this.pstrBeginningCostCenterNumber,
@@ -1429,5 +1439,6 @@
         private DevExpress.DataAccess.Sql.SqlDataSource Pulse;
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter plngYear;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowJulyToDecember;
     }
 }

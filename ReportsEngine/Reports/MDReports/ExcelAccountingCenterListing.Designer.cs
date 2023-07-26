@@ -257,8 +257,9 @@
             this.Textbox20.StylePriority.UseBorderWidth = false;
             this.Textbox20.StylePriority.UseFont = false;
             this.Textbox20.StylePriority.UsePadding = false;
+            this.Textbox20.StylePriority.UseTextAlignment = false;
             this.Textbox20.Text = "Reference Number";
-            this.Textbox20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.Textbox20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox4
             // 
@@ -279,8 +280,9 @@
             this.Textbox4.StylePriority.UseBorderWidth = false;
             this.Textbox4.StylePriority.UseFont = false;
             this.Textbox4.StylePriority.UsePadding = false;
+            this.Textbox4.StylePriority.UseTextAlignment = false;
             this.Textbox4.Text = "Account Center Number";
-            this.Textbox4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.Textbox4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox14
             // 
@@ -301,8 +303,9 @@
             this.Textbox14.StylePriority.UseBorderWidth = false;
             this.Textbox14.StylePriority.UseFont = false;
             this.Textbox14.StylePriority.UsePadding = false;
+            this.Textbox14.StylePriority.UseTextAlignment = false;
             this.Textbox14.Text = "Accounting Center Name";
-            this.Textbox14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.Textbox14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox19
             // 
@@ -323,8 +326,9 @@
             this.Textbox19.StylePriority.UseBorderWidth = false;
             this.Textbox19.StylePriority.UseFont = false;
             this.Textbox19.StylePriority.UsePadding = false;
+            this.Textbox19.StylePriority.UseTextAlignment = false;
             this.Textbox19.Text = "Purpose";
-            this.Textbox19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.Textbox19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // pstrDatabaseName
             // 
@@ -397,7 +401,7 @@
             this.Dynamic});
             this.DataMember = "DataSet1";
             this.DataSource = this.Dynamic;
-            this.DisplayName = "ChartofAccountListing";
+            this.DisplayName = "ExcelAccountingCenterListing";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 20F, 28.50984F);

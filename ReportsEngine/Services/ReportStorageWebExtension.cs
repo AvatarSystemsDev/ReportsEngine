@@ -103,15 +103,15 @@ namespace ReportsEngine.Services
                     DateTime now = DateTime.Now;
                     var startDate = new DateTime(now.Year, now.Month, 1);
                     if (report.Parameters.Contains(report.Parameters["pdteBeginningPostDate"])) {
-                        report.Parameters["pdteBeginningPostDate"].Value = startDate;
+                       // report.Parameters["pdteBeginningPostDate"].Value = startDate;
                     }
                     if (report.Parameters.Contains(report.Parameters["pdteEndingPostDate"])) {
-                        report.Parameters["pdteEndingPostDate"].Value = startDate.AddMonths(1).AddDays(-1);
+                        //report.Parameters["pdteEndingPostDate"].Value = startDate.AddMonths(1).AddDays(-1); //This is easier to do in the default parameters in Xtra reports. Also Margie is iffy on whether we should have post dates this way
                     }
                     if (report.Parameters.Contains(report.Parameters["plngYear"]))
                     {
-                        int currentYear = DateTime.Now.Year;
-                        report.Parameters["plngYear"].Value = currentYear;
+                        //int currentYear = DateTime.Now.Year;
+                        //report.Parameters["plngYear"].Value = currentYear; // These should be particular to a report
                     }
 
                     // Assign parameters here

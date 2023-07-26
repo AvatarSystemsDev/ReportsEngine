@@ -1201,7 +1201,7 @@
             this.Textbox48.StylePriority.UseBorderWidth = false;
             this.Textbox48.StylePriority.UsePadding = false;
             this.Textbox48.StylePriority.UseTextAlignment = false;
-            this.Textbox48.Text = "Vendor";
+            this.Textbox48.Text = "Entity";
             this.Textbox48.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel35
@@ -1933,7 +1933,7 @@
             this.pdteBeginningPostDate.Description = "Beginning GL Date";
             this.pdteBeginningPostDate.Name = "pdteBeginningPostDate";
             this.pdteBeginningPostDate.Type = typeof(System.DateTime);
-            this.pdteBeginningPostDate.ValueInfo = "2023-07-01";
+            this.pdteBeginningPostDate.ValueInfo = "2023-07-25";
             // 
             // pdteEndingPostDate
             // 

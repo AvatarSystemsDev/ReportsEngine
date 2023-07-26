@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.FinancialReports
 {
-    public partial class JournalRegister : DevExpress.XtraReports.UI.XtraReport
+    public partial class ExcelJournalRegister : DevExpress.XtraReports.UI.XtraReport
     {
-        public JournalRegister()
+        public ExcelJournalRegister()
         {
             InitializeComponent();
         }

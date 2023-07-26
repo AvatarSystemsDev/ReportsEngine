@@ -429,6 +429,12 @@
     <Compile Include="Reports\FinancialReports\ExcelGLBudgets.Designer.cs">
       <DependentUpon>ExcelGLBudgets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelJournalRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelJournalRegister.Designer.cs">
+      <DependentUpon>ExcelJournalRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\ExcelSummaryGeneralLedger.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -582,6 +588,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelGLBudgets.resx">
       <DependentUpon>ExcelGLBudgets.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelJournalRegister.resx">
+      <DependentUpon>ExcelJournalRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelSummaryGeneralLedger.resx">
       <DependentUpon>ExcelSummaryGeneralLedger.cs</DependentUpon>

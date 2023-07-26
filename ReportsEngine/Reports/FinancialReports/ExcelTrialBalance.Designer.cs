@@ -591,7 +591,7 @@
             this.Dynamic});
             this.DataMember = "dsTrialBalance";
             this.DataSource = this.Dynamic;
-            this.DisplayName = "DOIbyOwner";
+            this.DisplayName = "ExcelTrialBalance";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 0F, 20F, 20F);

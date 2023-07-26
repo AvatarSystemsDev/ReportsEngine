@@ -988,7 +988,7 @@
             this.xrCrossBandBox2});
             this.DataMember = "Dynamic_DataSet1";
             this.DataSource = this.federationDataSource1;
-            this.DisplayName = "ChartofAccountListing";
+            this.DisplayName = "AccountingCenterListing";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI light", 8F);
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 20F, 20F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
