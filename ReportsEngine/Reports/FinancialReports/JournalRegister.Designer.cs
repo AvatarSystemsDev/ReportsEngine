@@ -1,4 +1,7 @@
-﻿namespace ReportsEngine.Reports.FinancialReports
+﻿using DevExpress.XtraReports.UI;
+using System;
+
+namespace ReportsEngine.Reports.FinancialReports
 {
     partial class JournalRegister
     {
@@ -269,6 +272,8 @@
             this.xrLabel38 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrGrandTotal = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel39 = new DevExpress.XtraReports.UI.XRLabel();
+            this.GroupHeader = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrGroupHeader1label = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -278,62 +283,62 @@
             this.Dynamic.Name = "Dynamic";
             storedProcQuery1.Name = "DSJournalRegister";
             queryParameter1.Name = "@plngCompanyID";
-            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter1.Type = typeof(int);
+            queryParameter1.ValueInfo = "1";
             queryParameter2.Name = "@pdteBeginningPostDate";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pdteBeginningPostDate", typeof(System.DateTime));
+            queryParameter2.Type = typeof(System.DateTime);
+            queryParameter2.ValueInfo = "1900-01-01";
             queryParameter3.Name = "@pdteEndingPostDate";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pdteEndingPostDate", typeof(System.DateTime));
+            queryParameter3.Type = typeof(System.DateTime);
+            queryParameter3.ValueInfo = "2023-07-24";
             queryParameter4.Name = "@pdteBeginningServiceDate";
-            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pdteBeginningServiceDate", typeof(System.DateTime));
+            queryParameter4.Type = typeof(System.DateTime);
+            queryParameter4.ValueInfo = "1900-01-01";
             queryParameter5.Name = "@pdteEndingServiceDate";
-            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pdteEndingServiceDate", typeof(System.DateTime));
+            queryParameter5.Type = typeof(System.DateTime);
+            queryParameter5.ValueInfo = "2023-07-24";
             queryParameter6.Name = "@pstrBeginningAccountNumber";
-            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrBeginningAccountNumber", typeof(string));
+            queryParameter6.Type = typeof(string);
+            queryParameter6.ValueInfo = "!";
             queryParameter7.Name = "@pstrEndingAccountNumber";
-            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pstrEndingAccountNumber", typeof(string));
+            queryParameter7.Type = typeof(string);
+            queryParameter7.ValueInfo = "ZZZZZZZZZZ-ZZZZ";
             queryParameter8.Name = "@pstrBeginningPropertyNumber";
-            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
+            queryParameter8.Type = typeof(string);
+            queryParameter8.ValueInfo = "!";
             queryParameter9.Name = "@pstrEndingPropertyNumber";
-            queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
+            queryParameter9.Type = typeof(string);
+            queryParameter9.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             queryParameter10.Name = "@pstrBeginningOwnerNumber";
-            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
+            queryParameter10.Type = typeof(string);
+            queryParameter10.ValueInfo = "!";
             queryParameter11.Name = "@pstrEndingOwnerNumber";
-            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter11.Type = typeof(string);
+            queryParameter11.ValueInfo = "ZZZZZZZZZZ";
             queryParameter12.Name = "@pstrBeginningVendorNumber";
-            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter12.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
+            queryParameter12.Type = typeof(string);
+            queryParameter12.ValueInfo = "!";
             queryParameter13.Name = "@pstrEndingVendorNumber";
-            queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter13.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
+            queryParameter13.Type = typeof(string);
+            queryParameter13.ValueInfo = "ZZZZZZZZZZ";
             queryParameter14.Name = "@plngBookCodeID";
-            queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngBookCodeID", typeof(int));
+            queryParameter14.Type = typeof(int);
+            queryParameter14.ValueInfo = "2";
             queryParameter15.Name = "@pstrBeginningCostCenter";
-            queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter15.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenterNumber", typeof(string));
+            queryParameter15.Type = typeof(string);
+            queryParameter15.ValueInfo = "!";
             queryParameter16.Name = "@pstrEndingCostCenter";
-            queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter16.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenterNumber", typeof(string));
+            queryParameter16.Type = typeof(string);
+            queryParameter16.ValueInfo = "ZZZZ";
             queryParameter17.Name = "@plngBeginningBatchID";
-            queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatchID", typeof(int));
+            queryParameter17.Type = typeof(int);
+            queryParameter17.ValueInfo = "-1";
             queryParameter18.Name = "@plngEndingBatchID";
-            queryParameter18.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngEndingBatchID", typeof(int));
+            queryParameter18.Type = typeof(int);
+            queryParameter18.ValueInfo = "999999999";
             queryParameter19.Name = "@plngSortBy";
-            queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngSortBy", typeof(int));
+            queryParameter19.Type = typeof(int);
+            queryParameter19.ValueInfo = "2";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -1182,7 +1187,7 @@
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.StylePriority.UseTextAlignment = false;
             this.xrLabel22.Text = "Acct Cntr";
-            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox23
             // 
@@ -1195,7 +1200,7 @@
             this.Textbox23.LocationFloat = new DevExpress.Utils.PointFloat(146.6572F, 105.9267F);
             this.Textbox23.Multiline = true;
             this.Textbox23.Name = "Textbox23";
-            this.Textbox23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.Textbox23.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox23.SizeF = new System.Drawing.SizeF(67.70567F, 38.00848F);
             this.Textbox23.StylePriority.UseBorderWidth = false;
             this.Textbox23.StylePriority.UsePadding = false;
@@ -2032,7 +2037,7 @@
             // 
             // pstrBeginningCostCenterNumber
             // 
-            this.pstrBeginningCostCenterNumber.Description = "Beginning Accounting Center";
+            this.pstrBeginningCostCenterNumber.Description = "Beginning Acct. Center";
             this.pstrBeginningCostCenterNumber.Name = "pstrBeginningCostCenterNumber";
             this.pstrBeginningCostCenterNumber.ValueInfo = "!";
             dynamicListLookUpSettings4.DataMember = "DSAccountingCenterLookup";
@@ -2045,7 +2050,7 @@
             // 
             this.pdteBeginningPostDate.Description = "Beginning Post Date";
             this.pdteBeginningPostDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "getDate(getMonth(Now())+\'/01/\'+GetYear(Now()))")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningPostDate.Name = "pdteBeginningPostDate";
             this.pdteBeginningPostDate.Type = typeof(System.DateTime);
             this.pdteBeginningPostDate.ValueInfo = "1900-01-01";
@@ -2099,6 +2104,8 @@
             // pdteBeginningServiceDate
             // 
             this.pdteBeginningServiceDate.Description = "Beginning Service Date";
+            this.pdteBeginningServiceDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningServiceDate.Name = "pdteBeginningServiceDate";
             this.pdteBeginningServiceDate.Type = typeof(System.DateTime);
             this.pdteBeginningServiceDate.ValueInfo = "1900-01-01";
@@ -2106,13 +2113,15 @@
             // pdteEndingServiceDate
             // 
             this.pdteEndingServiceDate.Description = "Ending Service Date";
+            this.pdteEndingServiceDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingServiceDate.Name = "pdteEndingServiceDate";
             this.pdteEndingServiceDate.Type = typeof(System.DateTime);
             this.pdteEndingServiceDate.ValueInfo = "2023-07-24";
             // 
             // pstrEndingCostCenterNumber
             // 
-            this.pstrEndingCostCenterNumber.Description = "Ending Accounting Center";
+            this.pstrEndingCostCenterNumber.Description = "Ending Acct. Center";
             this.pstrEndingCostCenterNumber.Name = "pstrEndingCostCenterNumber";
             this.pstrEndingCostCenterNumber.ValueInfo = "ZZZZ";
             dynamicListLookUpSettings7.DataMember = "DSAccountingCenterLookup";
@@ -2505,6 +2514,37 @@
             this.xrLabel39.Text = "Grand Total: ";
             this.xrLabel39.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
+            // GroupHeader
+            // 
+            this.GroupHeader.HeightF = 8.98145F;
+            this.GroupHeader.Name = "GroupHeader";
+            // 
+            // xrGroupHeader1label
+            // 
+            this.xrGroupHeader1label.BackColor = System.Drawing.Color.Transparent;
+            this.xrGroupHeader1label.BorderColor = System.Drawing.Color.Black;
+            this.xrGroupHeader1label.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrGroupHeader1label.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrGroupHeader1label.BorderWidth = 0F;
+            this.xrGroupHeader1label.CanGrow = false;
+            this.xrGroupHeader1label.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrGroupHeader1label.ForeColor = System.Drawing.Color.Black;
+            this.xrGroupHeader1label.KeepTogether = true;
+            this.xrGroupHeader1label.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrGroupHeader1label.Name = "xrGroupHeader1label";
+            this.xrGroupHeader1label.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrGroupHeader1label.SizeF = new System.Drawing.SizeF(1060F, 15.16668F);
+            this.xrGroupHeader1label.StylePriority.UseBackColor = false;
+            this.xrGroupHeader1label.StylePriority.UseBorderColor = false;
+            this.xrGroupHeader1label.StylePriority.UseBorderDashStyle = false;
+            this.xrGroupHeader1label.StylePriority.UseBorders = false;
+            this.xrGroupHeader1label.StylePriority.UseBorderWidth = false;
+            this.xrGroupHeader1label.StylePriority.UseFont = false;
+            this.xrGroupHeader1label.StylePriority.UseForeColor = false;
+            this.xrGroupHeader1label.StylePriority.UsePadding = false;
+            this.xrGroupHeader1label.StylePriority.UseTextAlignment = false;
+            this.xrGroupHeader1label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // JournalRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2513,7 +2553,8 @@
             this.Tablix1,
             this.pageHeaderBand1,
             this.pageFooterBand1,
-            this.ReportFooter});
+            this.ReportFooter,
+            this.GroupHeader});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -2683,5 +2724,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel38;
         private DevExpress.XtraReports.UI.XRLabel xrGrandTotal;
         private DevExpress.XtraReports.UI.XRLabel xrLabel39;
+        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrGroupHeader1label;
     }
 }
