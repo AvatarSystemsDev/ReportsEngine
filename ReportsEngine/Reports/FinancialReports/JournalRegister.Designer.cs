@@ -272,8 +272,8 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel38 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrGrandTotal = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel39 = new DevExpress.XtraReports.UI.XRLabel();
-            this.GroupHeader = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrGroupHeader1label = new DevExpress.XtraReports.UI.XRLabel();
+            this.GroupHeader = new DevExpress.XtraReports.UI.GroupHeaderBand();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -2514,11 +2514,6 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel39.Text = "Grand Total: ";
             this.xrLabel39.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
-            // GroupHeader
-            // 
-            this.GroupHeader.HeightF = 8.98145F;
-            this.GroupHeader.Name = "GroupHeader";
-            // 
             // xrGroupHeader1label
             // 
             this.xrGroupHeader1label.BackColor = System.Drawing.Color.Transparent;
@@ -2544,6 +2539,13 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrGroupHeader1label.StylePriority.UsePadding = false;
             this.xrGroupHeader1label.StylePriority.UseTextAlignment = false;
             this.xrGroupHeader1label.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // GroupHeader
+            // 
+            this.GroupHeader.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField(resources.GetString("GroupHeader.GroupFields"), DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.GroupHeader.HeightF = 46.48145F;
+            this.GroupHeader.Name = "GroupHeader";
             // 
             // JournalRegister
             // 
@@ -2628,7 +2630,53 @@ namespace ReportsEngine.Reports.FinancialReports
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
+        private string GetGroupFields(int sortByValue)
+        {
 
+            switch (sortByValue)
+            {
+                case 1:
+                    return "[Source]";
+                case 2:
+                    return "[DocumentVoucher]";
+                case 3:
+                    return "[PostDate]";
+                case 4:
+                    return "[Source]";
+                case 5:
+                    return "[Vendor]";
+                case 6:
+                    return "[Well]";
+                case 7:
+                    return "[Owner]";
+                default:
+                    return string.Empty;
+            }
+        }
+
+        // Method to determine the label text expression based on the plngSortBy parameter
+        private string GetLabelText(int sortByValue)
+        {
+            switch (sortByValue)
+            {
+                case 1:
+                    return "Source:";
+                case 2:
+                    return "Document Voucher:";
+                case 3:
+                    return "Post Date:";
+                case 4:
+                    return "Source:";
+                case 5:
+                    return "Entity:";
+                case 6:
+                    return "Well:";
+                case 7:
+                    return "Owner:";
+                default:
+                    return "Unknown Sorting:";
+            }
+        }
         #endregion
 
         private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
@@ -2724,7 +2772,7 @@ namespace ReportsEngine.Reports.FinancialReports
         private DevExpress.XtraReports.UI.XRLabel xrLabel38;
         private DevExpress.XtraReports.UI.XRLabel xrGrandTotal;
         private DevExpress.XtraReports.UI.XRLabel xrLabel39;
-        private DevExpress.XtraReports.UI.GroupHeaderBand GroupHeader;
         private DevExpress.XtraReports.UI.XRLabel xrGroupHeader1label;
+        private GroupHeaderBand GroupHeader;
     }
 }

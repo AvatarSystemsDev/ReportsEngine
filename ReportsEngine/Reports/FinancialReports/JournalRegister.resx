@@ -157,4 +157,7 @@
 
 </value>
   </data>
+  <data name="GroupHeader.GroupFields" xml:space="preserve">
+    <value>Iif(?plngSortBy = 1, "[Source]",Iif(?plngSortBy = 2, "[DocumentVoucher]",Iif(?plngSortBy = 3, "[PostDate]",Iif(?plngSortBy = 4, "[Source]",Iif(?plngSortBy = 5, "[Vendor]",Iif(?plngSortBy = 6, "[Well]",Iif(?plngSortBy = 7, "[Owner]", "")))))))</value>
+  </data>
 </root>
