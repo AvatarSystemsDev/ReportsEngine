@@ -384,7 +384,7 @@
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(2.890015F, 0F);
             this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(140.67F, 15F);
             this.xrLabel1.StylePriority.UseBackColor = false;
             this.xrLabel1.StylePriority.UseBorderColor = false;
@@ -410,7 +410,7 @@
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(143.5598F, 0F);
             this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(227.31F, 15F);
             this.xrLabel2.StylePriority.UseBorderColor = false;
             this.xrLabel2.StylePriority.UseBorderDashStyle = false;
@@ -436,7 +436,7 @@
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(694.4758F, 0F);
             this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100F);
             this.xrLabel3.SizeF = new System.Drawing.SizeF(115.52F, 15F);
             this.xrLabel3.StylePriority.UseBackColor = false;
             this.xrLabel3.StylePriority.UseBorderColor = false;
@@ -463,7 +463,7 @@
             this.xrLabel5.KeepTogether = true;
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(370.8747F, 0F);
             this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100F);
             this.xrLabel5.SizeF = new System.Drawing.SizeF(323.6F, 15F);
             this.xrLabel5.StylePriority.UseBackColor = false;
             this.xrLabel5.StylePriority.UseBorderColor = false;
@@ -641,7 +641,7 @@
             this.Textbox14.StylePriority.UseBackColor = false;
             this.Textbox14.StylePriority.UseBorderWidth = false;
             this.Textbox14.StylePriority.UsePadding = false;
-            this.Textbox14.Text = "Account Center Name";
+            this.Textbox14.Text = "Accounting Center Name";
             this.Textbox14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox19
@@ -656,7 +656,7 @@
             this.Textbox19.LocationFloat = new DevExpress.Utils.PointFloat(370.8747F, 50.83F);
             this.Textbox19.Multiline = true;
             this.Textbox19.Name = "Textbox19";
-            this.Textbox19.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox19.Padding = new DevExpress.XtraPrinting.PaddingInfo(5, 0, 0, 0, 100F);
             this.Textbox19.SizeF = new System.Drawing.SizeF(323.6009F, 36.81F);
             this.Textbox19.StylePriority.UseBackColor = false;
             this.Textbox19.StylePriority.UseBorderWidth = false;
@@ -676,7 +676,7 @@
             this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(694.4756F, 50.83F);
             this.Textbox20.Multiline = true;
             this.Textbox20.Name = "Textbox20";
-            this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100F);
             this.Textbox20.SizeF = new System.Drawing.SizeF(115.5244F, 36.81F);
             this.Textbox20.StylePriority.UseBackColor = false;
             this.Textbox20.StylePriority.UseBorderWidth = false;
@@ -856,7 +856,7 @@
             // 
             // pstrBeginningAccountCenterNumber
             // 
-            this.pstrBeginningAccountCenterNumber.Description = "Beginning Center Number";
+            this.pstrBeginningAccountCenterNumber.Description = "Beginning Acct. Center";
             this.pstrBeginningAccountCenterNumber.Name = "pstrBeginningAccountCenterNumber";
             this.pstrBeginningAccountCenterNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "LookupAccountingCenter";
@@ -869,7 +869,7 @@
             // 
             // pstrEndingAccountCenterNumber
             // 
-            this.pstrEndingAccountCenterNumber.Description = "Ending Center Number";
+            this.pstrEndingAccountCenterNumber.Description = "Ending Acct. Center";
             this.pstrEndingAccountCenterNumber.Name = "pstrEndingAccountCenterNumber";
             this.pstrEndingAccountCenterNumber.ValueInfo = "ZZZZ";
             dynamicListLookUpSettings3.DataMember = "LookupAccountingCenter";

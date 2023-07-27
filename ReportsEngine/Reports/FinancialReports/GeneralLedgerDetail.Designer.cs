@@ -882,7 +882,6 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel11.TextFormatString = "{0:N0}";
             // 
             // xrLabel12
             // 
@@ -1121,7 +1120,7 @@
             this.Textbox60.LocationFloat = new DevExpress.Utils.PointFloat(963.6184F, 61.99576F);
             this.Textbox60.Multiline = true;
             this.Textbox60.Name = "Textbox60";
-            this.Textbox60.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox60.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox60.SizeF = new System.Drawing.SizeF(95.34009F, 38.00639F);
             this.Textbox60.StylePriority.UseBorderWidth = false;
             this.Textbox60.StylePriority.UsePadding = false;
@@ -1140,7 +1139,7 @@
             this.Textbox54.LocationFloat = new DevExpress.Utils.PointFloat(867.2365F, 61.99576F);
             this.Textbox54.Multiline = true;
             this.Textbox54.Name = "Textbox54";
-            this.Textbox54.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox54.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox54.SizeF = new System.Drawing.SizeF(96.3819F, 38.00637F);
             this.Textbox54.StylePriority.UseBorderWidth = false;
             this.Textbox54.StylePriority.UsePadding = false;
@@ -1159,7 +1158,7 @@
             this.Textbox57.LocationFloat = new DevExpress.Utils.PointFloat(799.3741F, 61.99365F);
             this.Textbox57.Multiline = true;
             this.Textbox57.Name = "Textbox57";
-            this.Textbox57.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox57.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox57.SizeF = new System.Drawing.SizeF(67.86243F, 38.00846F);
             this.Textbox57.StylePriority.UseBorderWidth = false;
             this.Textbox57.StylePriority.UsePadding = false;
@@ -1178,7 +1177,7 @@
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(707.344F, 61.99487F);
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
-            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(92.03003F, 38.00729F);
             this.xrLabel10.StylePriority.UseBorderWidth = false;
             this.xrLabel10.StylePriority.UsePadding = false;
@@ -1197,7 +1196,7 @@
             this.Textbox48.LocationFloat = new DevExpress.Utils.PointFloat(618.389F, 61.99487F);
             this.Textbox48.Multiline = true;
             this.Textbox48.Name = "Textbox48";
-            this.Textbox48.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox48.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox48.SizeF = new System.Drawing.SizeF(88.95483F, 38.00729F);
             this.Textbox48.StylePriority.UseBorderWidth = false;
             this.Textbox48.StylePriority.UsePadding = false;
@@ -1216,7 +1215,7 @@
             this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(531.3931F, 61.99579F);
             this.xrLabel35.Multiline = true;
             this.xrLabel35.Name = "xrLabel35";
-            this.xrLabel35.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel35.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel35.SizeF = new System.Drawing.SizeF(86.99597F, 38.0064F);
             this.xrLabel35.StylePriority.UseBorderWidth = false;
             this.xrLabel35.StylePriority.UsePadding = false;
@@ -1235,7 +1234,7 @@
             this.Textbox13.LocationFloat = new DevExpress.Utils.PointFloat(420.5645F, 61.99365F);
             this.Textbox13.Multiline = true;
             this.Textbox13.Name = "Textbox13";
-            this.Textbox13.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox13.SizeF = new System.Drawing.SizeF(110.8287F, 38.00638F);
             this.Textbox13.StylePriority.UseBorderWidth = false;
             this.Textbox13.StylePriority.UsePadding = false;
@@ -1254,7 +1253,7 @@
             this.Textbox16.LocationFloat = new DevExpress.Utils.PointFloat(392.7944F, 61.99155F);
             this.Textbox16.Multiline = true;
             this.Textbox16.Name = "Textbox16";
-            this.Textbox16.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox16.SizeF = new System.Drawing.SizeF(27.76999F, 38.00848F);
             this.Textbox16.StylePriority.UseBorderWidth = false;
             this.Textbox16.StylePriority.UsePadding = false;
@@ -1275,7 +1274,7 @@
             this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(318.4016F, 61.99579F);
             this.Textbox20.Multiline = true;
             this.Textbox20.Name = "Textbox20";
-            this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox20.SizeF = new System.Drawing.SizeF(68.54001F, 38.00638F);
             this.Textbox20.StylePriority.UseBorderWidth = false;
             this.Textbox20.StylePriority.UsePadding = false;
@@ -1294,7 +1293,7 @@
             this.Textbox23.LocationFloat = new DevExpress.Utils.PointFloat(250.6959F, 61.99365F);
             this.Textbox23.Multiline = true;
             this.Textbox23.Name = "Textbox23";
-            this.Textbox23.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox23.SizeF = new System.Drawing.SizeF(67.70567F, 38.00848F);
             this.Textbox23.StylePriority.UseBorderWidth = false;
             this.Textbox23.StylePriority.UsePadding = false;
@@ -1313,13 +1312,13 @@
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(213.6842F, 61.99366F);
             this.xrLabel22.Multiline = true;
             this.xrLabel22.Name = "xrLabel22";
-            this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel22.SizeF = new System.Drawing.SizeF(36.71124F, 38.00848F);
             this.xrLabel22.StylePriority.UseBorderWidth = false;
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.StylePriority.UseTextAlignment = false;
             this.xrLabel22.Text = "Acct Cntr";
-            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox3
             // 
@@ -1332,7 +1331,7 @@
             this.Textbox3.LocationFloat = new DevExpress.Utils.PointFloat(1.88001F, 61.99465F);
             this.Textbox3.Multiline = true;
             this.Textbox3.Name = "Textbox3";
-            this.Textbox3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox3.SizeF = new System.Drawing.SizeF(211.8F, 38.0075F);
             this.Textbox3.StylePriority.UseBorderWidth = false;
             this.Textbox3.StylePriority.UsePadding = false;
@@ -1932,6 +1931,8 @@
             // pdteBeginningPostDate
             // 
             this.pdteBeginningPostDate.Description = "Beginning GL Date";
+            this.pdteBeginningPostDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "getDate(getMonth(today())+\'/01/\'+GetYear(Today()))")});
             this.pdteBeginningPostDate.Name = "pdteBeginningPostDate";
             this.pdteBeginningPostDate.Type = typeof(System.DateTime);
             this.pdteBeginningPostDate.ValueInfo = "2023-07-25";
@@ -1939,9 +1940,11 @@
             // pdteEndingPostDate
             // 
             this.pdteEndingPostDate.Description = "Ending GL Date";
+            this.pdteEndingPostDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingPostDate.Name = "pdteEndingPostDate";
             this.pdteEndingPostDate.Type = typeof(System.DateTime);
-            this.pdteEndingPostDate.ValueInfo = "9999-12-31";
+            this.pdteEndingPostDate.ValueInfo = "2023-07-27";
             // 
             // pstrBeginningAccountNumber
             // 
