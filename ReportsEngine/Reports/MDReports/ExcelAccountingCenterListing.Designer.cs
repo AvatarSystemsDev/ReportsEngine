@@ -33,8 +33,9 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelAccountingCenterListing));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
@@ -58,6 +59,7 @@
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningAccountCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingAccountCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowActive = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -74,17 +76,21 @@
             queryParameter3.Name = "@pstrEndingAccountCenterNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingAccountCenterNumber", typeof(string));
+            queryParameter4.Name = "@plngShowActive";
+            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pbooShowActive", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
-            queryParameter3});
+            queryParameter3,
+            queryParameter4});
             storedProcQuery1.StoredProcName = "Report_AccountingCenterListing";
             storedProcQuery2.Name = "LookupCompanies";
-            queryParameter4.Name = "@plngCompanyID";
-            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter5.Name = "@plngCompanyID";
+            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter4});
+            queryParameter5});
             storedProcQuery2.StoredProcName = "Companies_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -390,6 +396,12 @@
             this.pstrEndingAccountCenterNumber.ValueInfo = "ZZZZ";
             this.pstrEndingAccountCenterNumber.Visible = false;
             // 
+            // pbooShowActive
+            // 
+            this.pbooShowActive.Name = "pbooShowActive";
+            this.pbooShowActive.Type = typeof(int);
+            this.pbooShowActive.ValueInfo = "0";
+            // 
             // ExcelAccountingCenterListing
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -422,7 +434,8 @@
             this.Subtitle,
             this.pbooShowCriteria,
             this.pstrBeginningAccountCenterNumber,
-            this.pstrEndingAccountCenterNumber});
+            this.pstrEndingAccountCenterNumber,
+            this.pbooShowActive});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -451,5 +464,6 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox19;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningAccountCenterNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingAccountCenterNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowActive;
     }
 }
