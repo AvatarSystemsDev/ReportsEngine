@@ -423,6 +423,12 @@
     <Compile Include="Reports\FinancialReports\ExcelFiscalYearOpeningTrialBalance.Designer.cs">
       <DependentUpon>ExcelFiscalYearOpeningTrialBalance.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelGeneralLedgerbyProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelGeneralLedgerbyProperty.Designer.cs">
+      <DependentUpon>ExcelGeneralLedgerbyProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\ExcelGLBudgets.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -458,6 +464,12 @@
     </Compile>
     <Compile Include="Reports\FinancialReports\FiscalYearOpeningTrialBalance.Designer.cs">
       <DependentUpon>FiscalYearOpeningTrialBalance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\GeneralLedgerDetailByProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\GeneralLedgerDetailByProperty.Designer.cs">
+      <DependentUpon>GeneralLedgerDetailByProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\GLBudgets.cs">
       <SubType>Component</SubType>
@@ -586,6 +598,9 @@
     <EmbeddedResource Include="Reports\FinancialReports\ExcelFiscalYearOpeningTrialBalance.resx">
       <DependentUpon>ExcelFiscalYearOpeningTrialBalance.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelGeneralLedgerbyProperty.resx">
+      <DependentUpon>ExcelGeneralLedgerbyProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelGLBudgets.resx">
       <DependentUpon>ExcelGLBudgets.cs</DependentUpon>
     </EmbeddedResource>
@@ -603,6 +618,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\FiscalYearOpeningTrialBalance.resx">
       <DependentUpon>FiscalYearOpeningTrialBalance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\GeneralLedgerDetailByProperty.resx">
+      <DependentUpon>GeneralLedgerDetailByProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\GLBudgets.resx">
       <DependentUpon>GLBudgets.cs</DependentUpon>

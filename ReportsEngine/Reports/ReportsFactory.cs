@@ -33,7 +33,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelGLBudgetsSemiannual", () => new ExcelGLBudgets()); // We can use the same Excel report becuase we are not crunched for space
             Reports.Add("JournalRegister", () => new JournalRegister());
             Reports.Add("ExcelJournalRegister", () => new ExcelJournalRegister());
-
+            Reports.Add("GeneralLedgerDetailbyProperty", () => new GeneralLedgerDetailByProperty());
+            Reports.Add("ExcelGeneralLedgerDetailbyProperty", () => new ExcelGeneralLedgerDetailbyProperty());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
