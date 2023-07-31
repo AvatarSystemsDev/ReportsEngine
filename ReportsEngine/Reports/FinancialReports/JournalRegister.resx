@@ -155,11 +155,6 @@
 
 </value>
   </data>
-  <data name="xrLabel40.ExpressionBindings" xml:space="preserve">
-    <value>Iif([GroupValue1] ='' OR IsNull([GroupValue1]),'None' ,[GroupValue1] )+Iif(?plngSortBy = 2, '', ', '+Iif([GroupValue2] ='' OR IsNull([GroupValue2]),'None' ,[GroupValue2] )+ Iif(?plngSortBy = 1 OR ?plngSortBy = 3 OR ?plngSortBy = 4,', '+Iif([GroupValue3] ='' OR IsNull([GroupValue3]),'None' ,[GroupValue3] ),'' ))
-
-</value>
-  </data>
   <data name="GroupValue1.Expression" xml:space="preserve">
     <value>Iif(?plngSortBy = 1, [Source],
 Iif(?plngSortBy = 2, [DocumentVoucher],
@@ -178,7 +173,6 @@ Iif(?plngSortBy = 6, [AccountNumber],
 Iif(?plngSortBy = 7, [PostDate], ''))))))</value>
   </data>
   <data name="xrLabel21.ExpressionBindings" xml:space="preserve">
-    <value>Iif([GroupValue1] ='' OR IsNull([GroupValue1]),'None' ,[GroupValue1] )+Iif(?plngSortBy = 2, '', ', '+Iif([GroupValue2] ='' OR IsNull([GroupValue2]),'None' ,[GroupValue2] )+ Iif(?plngSortBy = 1 OR ?plngSortBy = 3 OR ?plngSortBy = 4,', '+Iif([GroupValue3] ='' OR IsNull([GroupValue3]),'None' ,[GroupValue3] ),'' ))
-+ ' Totals:'</value>
+    <value>Iif(?plngSortBy = 1, 'Source/GL Date/Account', Iif(?plngSortBy = 2, 'Voucher/Check/Deposit',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GL Date',Iif(?plngSortBy = 5, 'Vendor/Owner',Iif(?plngSortBy = 6, 'Well/Account',Iif(?plngSortBy = 7, 'Owner/GLDate','')))))))</value>
   </data>
 </root>

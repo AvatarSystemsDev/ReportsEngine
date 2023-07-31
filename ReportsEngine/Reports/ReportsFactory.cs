@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraReports.UI;
 using ReportsEngine.Reports.FinancialReports;
+using ReportsEngine.Reports.MDReports;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +36,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJournalRegister", () => new ExcelJournalRegister());
             Reports.Add("GeneralLedgerDetailbyProperty", () => new GeneralLedgerDetailByProperty());
             Reports.Add("ExcelGeneralLedgerDetailbyProperty", () => new ExcelGeneralLedgerDetailbyProperty());
+            Reports.Add("ChartOfAccountsAmounts", () => new ChartOfAccountsAmounts());
+            Reports.Add("ExcelChartOfAccountsAmounts", () => new ExcelChartOfAccountsAmounts());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
