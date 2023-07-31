@@ -887,6 +887,7 @@
             this.xrLabel10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel10.BorderWidth = 0F;
+            this.xrLabel10.CanGrow = false;
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel10.KeepTogether = true;
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(1027.221F, 0.3107071F);
@@ -907,6 +908,7 @@
             this.Textbox54.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox54.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox54.BorderWidth = 0F;
+            this.Textbox54.CanGrow = false;
             this.Textbox54.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox54.KeepTogether = true;
             this.Textbox54.LocationFloat = new DevExpress.Utils.PointFloat(802.7951F, 0.3106753F);
@@ -927,6 +929,7 @@
             this.Textbox57.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox57.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox57.BorderWidth = 0F;
+            this.Textbox57.CanGrow = false;
             this.Textbox57.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox57.KeepTogether = true;
             this.Textbox57.LocationFloat = new DevExpress.Utils.PointFloat(743.266F, 0.3085772F);
@@ -947,6 +950,7 @@
             this.xrLabel20.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel20.BorderWidth = 0F;
+            this.xrLabel20.CanGrow = false;
             this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel20.KeepTogether = true;
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(675.6818F, 0.3076553F);
@@ -958,7 +962,7 @@
             this.xrLabel20.StylePriority.UseFont = false;
             this.xrLabel20.StylePriority.UsePadding = false;
             this.xrLabel20.StylePriority.UseTextAlignment = false;
-            this.xrLabel20.Text = "AFE#";
+            this.xrLabel20.Text = "AFE";
             this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox48
@@ -967,6 +971,7 @@
             this.Textbox48.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox48.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox48.BorderWidth = 0F;
+            this.Textbox48.CanGrow = false;
             this.Textbox48.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox48.KeepTogether = true;
             this.Textbox48.LocationFloat = new DevExpress.Utils.PointFloat(586.7268F, 0.3076553F);
@@ -987,6 +992,7 @@
             this.xrLabel35.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel35.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel35.BorderWidth = 0F;
+            this.xrLabel35.CanGrow = false;
             this.xrLabel35.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel35.KeepTogether = true;
             this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(499.7309F, 0.3085454F);
@@ -1007,6 +1013,7 @@
             this.Textbox13.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox13.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox13.BorderWidth = 0F;
+            this.Textbox13.CanGrow = false;
             this.Textbox13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox13.KeepTogether = true;
             this.Textbox13.LocationFloat = new DevExpress.Utils.PointFloat(388.9023F, 0.3064474F);
@@ -1027,6 +1034,7 @@
             this.Textbox16.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox16.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox16.BorderWidth = 0F;
+            this.Textbox16.CanGrow = false;
             this.Textbox16.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox16.KeepTogether = true;
             this.Textbox16.LocationFloat = new DevExpress.Utils.PointFloat(354.9789F, 0.3043493F);
@@ -1047,6 +1055,7 @@
             this.Textbox20.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox20.BorderWidth = 0F;
+            this.Textbox20.CanGrow = false;
             this.Textbox20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Doc\'")});
             this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
@@ -1069,6 +1078,7 @@
             this.Textbox23.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox23.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox23.BorderWidth = 0F;
+            this.Textbox23.CanGrow = false;
             this.Textbox23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox23.KeepTogether = true;
             this.Textbox23.LocationFloat = new DevExpress.Utils.PointFloat(146.6572F, 0.3107071F);
@@ -1089,6 +1099,7 @@
             this.xrLabel22.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel22.BorderWidth = 0F;
+            this.xrLabel22.CanGrow = false;
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel22.KeepTogether = true;
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(112.165F, 0.3022512F);
@@ -1109,6 +1120,7 @@
             this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel1.BorderWidth = 0F;
+            this.xrLabel1.CanGrow = false;
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooIncludeState")});
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
@@ -1133,6 +1145,7 @@
             this.Textbox3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox3.BorderWidth = 0F;
+            this.Textbox3.CanGrow = false;
             this.Textbox3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox3.KeepTogether = true;
             this.Textbox3.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 0.3001531F);
@@ -1154,6 +1167,7 @@
             this.xrLabel25.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel25.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel25.BorderWidth = 0F;
+            this.xrLabel25.CanGrow = false;
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel25.KeepTogether = true;
             this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(930.839F, 0.3107071F);
@@ -1174,6 +1188,7 @@
             this.xrLabel30.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel30.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel30.BorderWidth = 0F;
+            this.xrLabel30.CanGrow = false;
             this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel30.KeepTogether = true;
             this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(282.9029F, 0.3107071F);
