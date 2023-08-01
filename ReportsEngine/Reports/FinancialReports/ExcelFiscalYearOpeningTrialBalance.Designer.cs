@@ -327,7 +327,7 @@
             this.Textbox20.StylePriority.UseFont = false;
             this.Textbox20.StylePriority.UsePadding = false;
             this.Textbox20.StylePriority.UseTextAlignment = false;
-            this.Textbox20.Text = "Credits";
+            this.Textbox20.Text = "Credit";
             this.Textbox20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox19
@@ -374,7 +374,7 @@
             this.Textbox18.StylePriority.UseFont = false;
             this.Textbox18.StylePriority.UsePadding = false;
             this.Textbox18.StylePriority.UseTextAlignment = false;
-            this.Textbox18.Text = "Debits";
+            this.Textbox18.Text = "Debit";
             this.Textbox18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox17
