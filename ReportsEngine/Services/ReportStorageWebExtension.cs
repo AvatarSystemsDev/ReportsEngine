@@ -14,6 +14,7 @@ using System.Net.Mail;
 using System.ServiceModel;
 using System.Web;
 using System.Web.UI;
+using Newtonsoft.Json;
 
 namespace ReportsEngine.Services
 {
@@ -235,6 +236,10 @@ namespace ReportsEngine.Services
                 {
                     AwaitParameterInputPassed = true;
                     report.RequestParameters = (parameters["pbooAwaitParameterInput"].ToString().ToLower() == "true");
+                }
+                else if (parameterName.Contains("pstrSelect"))
+                {
+                    //report.Parameters[parameterName].Value = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));
                 }
                 else
                 {

@@ -36,10 +36,14 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelChartOfAccountsAmounts));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -77,6 +81,7 @@
             this.pbooShowZeroAmounts = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccounts = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -96,30 +101,48 @@
             queryParameter4.Name = "@plngShowNormalBalance";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngShowNormalBalance", typeof(int));
-            queryParameter5.Name = "@pstrBeginningCostCenter";
+            queryParameter5.Name = "@pstrBeginningAccountNumber";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenter", typeof(string));
-            queryParameter6.Name = "@pstrEndingCostCenter";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrBeginningAccountNumber", typeof(string));
+            queryParameter6.Name = "@pstrEndingAccountNumber";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrEndingAccountNumber", typeof(string));
+            queryParameter7.Name = "@pstrBeginningCostCenter";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenter", typeof(string));
+            queryParameter8.Name = "@pstrEndingCostCenter";
+            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
             queryParameter5,
-            queryParameter6});
+            queryParameter6,
+            queryParameter7,
+            queryParameter8});
             storedProcQuery1.StoredProcName = "Report_ChartOfAccountsAmounts";
             storedProcQuery2.Name = "LookupCompanies";
+            queryParameter9.Name = "@plngCompanyID";
+            queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter9});
             storedProcQuery2.StoredProcName = "Companies_ReportLookup";
             storedProcQuery3.Name = "LookupAccounts";
+            queryParameter10.Name = "@plngCompanyID";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter10});
             storedProcQuery3.StoredProcName = "Accounts_ReportLookup";
             storedProcQuery4.Name = "LookupAccountingCenter";
-            queryParameter7.Name = "@plngCompanyID";
-            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter11.Name = "@plngCompanyID";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter7});
+            queryParameter11});
             storedProcQuery4.StoredProcName = "AccountingCenter_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -148,8 +171,8 @@
             this.xrLabel2,
             this.xrLabel7});
             this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif([DebitAmount] = 0 AND [CreditAmount] = 0 AND ?pbooShowZeroAmounts = FALSE, FA" +
-                    "LSE,TRUE )\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(([DebitAmount] = 0 AND [CreditAmount] = 0 AND ?pbooShowZeroAmounts = FALSE)||" +
+                    "Not ([AccountNumber] in (?pstrSelectAccounts)), FALSE,TRUE)\n\n")});
             this.Tablix1.HeightF = 15F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
@@ -241,7 +264,7 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.BackColor = System.Drawing.Color.White;
+            this.xrLabel1.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel1.BorderColor = System.Drawing.Color.Black;
             this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -255,7 +278,7 @@
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(111.0014F, 14.99998F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(107.63F, 14.99998F);
             this.xrLabel1.StylePriority.UseBackColor = false;
             this.xrLabel1.StylePriority.UseBorderColor = false;
             this.xrLabel1.StylePriority.UseBorderDashStyle = false;
@@ -280,10 +303,10 @@
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel2.ForeColor = System.Drawing.Color.Black;
             this.xrLabel2.KeepTogether = true;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(111.0014F, 0F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(107.63F, 0F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(325.5835F, 14.99998F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(328.955F, 14.99998F);
             this.xrLabel2.StylePriority.UseBackColor = false;
             this.xrLabel2.StylePriority.UseBorderColor = false;
             this.xrLabel2.StylePriority.UseBorderDashStyle = false;
@@ -489,6 +512,7 @@
             this.plngUserID.Description = "plngUserID";
             this.plngUserID.Name = "plngUserID";
             this.plngUserID.Type = typeof(int);
+            this.plngUserID.ValueInfo = "0";
             this.plngUserID.Visible = false;
             // 
             // plngCompanyID
@@ -526,11 +550,6 @@
             this.pstrEndingAccountNumber.Description = "Ending Account";
             this.pstrEndingAccountNumber.Name = "pstrEndingAccountNumber";
             this.pstrEndingAccountNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZ";
-            dynamicListLookUpSettings3.DataMember = "LookupAccounts";
-            dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "Description";
-            dynamicListLookUpSettings3.ValueMember = "Number";
-            this.pstrEndingAccountNumber.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
             // pbooShowNotes
             // 
@@ -579,19 +598,33 @@
             this.pstrBeginningCostCenter.Description = "pstrBeginningAccountingCenter";
             this.pstrBeginningCostCenter.Name = "pstrBeginningCostCenter";
             this.pstrBeginningCostCenter.ValueInfo = "!";
-            dynamicListLookUpSettings4.DataMember = "Query";
-            dynamicListLookUpSettings4.DataSource = this.Dynamic;
-            dynamicListLookUpSettings4.DisplayMember = "Name";
-            dynamicListLookUpSettings4.FilterString = null;
-            dynamicListLookUpSettings4.SortMember = null;
-            dynamicListLookUpSettings4.ValueMember = "Number";
-            this.pstrBeginningCostCenter.ValueSourceSettings = dynamicListLookUpSettings4;
+            dynamicListLookUpSettings3.DataMember = "Query";
+            dynamicListLookUpSettings3.DataSource = this.Dynamic;
+            dynamicListLookUpSettings3.DisplayMember = "Name";
+            dynamicListLookUpSettings3.FilterString = null;
+            dynamicListLookUpSettings3.SortMember = null;
+            dynamicListLookUpSettings3.ValueMember = "Number";
+            this.pstrBeginningCostCenter.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
             // pstrEndingCostCenter
             // 
             this.pstrEndingCostCenter.Description = "Ending Accounting Center";
             this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
             this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
+            // 
+            // pstrSelectAccounts
+            // 
+            this.pstrSelectAccounts.Description = "Select Accounts";
+            this.pstrSelectAccounts.MultiValue = true;
+            this.pstrSelectAccounts.Name = "pstrSelectAccounts";
+            this.pstrSelectAccounts.SelectAllValues = true;
+            dynamicListLookUpSettings4.DataMember = "LookupAccounts";
+            dynamicListLookUpSettings4.DataSource = this.Dynamic;
+            dynamicListLookUpSettings4.DisplayMember = "Description";
+            dynamicListLookUpSettings4.FilterString = null;
+            dynamicListLookUpSettings4.SortMember = null;
+            dynamicListLookUpSettings4.ValueMember = "Number";
+            this.pstrSelectAccounts.ValueSourceSettings = dynamicListLookUpSettings4;
             // 
             // ExcelChartOfAccountsAmounts
             // 
@@ -612,6 +645,7 @@
             this.PageWidth = 1100;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccounts, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -628,6 +662,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
+            this.pstrSelectAccounts,
             this.pstrServerName,
             this.plngUserID,
             this.plngCompanyID,
@@ -681,5 +716,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowZeroAmounts;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccounts;
     }
 }

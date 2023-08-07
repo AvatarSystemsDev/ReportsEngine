@@ -1378,7 +1378,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.Textbox7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox7.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox7.BorderWidth = 1F;
-            this.Textbox7.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox7.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox7.KeepTogether = true;
             this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 14.66667F);
             this.Textbox7.Multiline = true;
