@@ -85,6 +85,8 @@
             this.pbooShowVolume = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccounts = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -163,6 +165,8 @@
             this.xrLabel14,
             this.xrLabel10,
             this.xrLabel11});
+            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", resources.GetString("Tablix1.ExpressionBindings"))});
             this.Tablix1.HeightF = 15.00013F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
@@ -285,7 +289,6 @@
             this.xrLabel3.StylePriority.UsePadding = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel3.TextFormatString = "{0:\'$\'#,0.00;\'-$\'#,0.00}";
             // 
             // xrLabel4
             // 
@@ -399,7 +402,6 @@
             this.xrLabel7.StylePriority.UsePadding = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel7.TextFormatString = "{0:\'$\'#,0.00;-\'$\'#,0.00}";
             // 
             // xrLabel14
             // 
@@ -850,6 +852,19 @@
             this.pstrEndingCostCenter.Description = "Ending Cost Center";
             this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
             // 
+            // pstrSelectAccounts
+            // 
+            this.pstrSelectAccounts.Description = "Parameter1";
+            this.pstrSelectAccounts.MultiValue = true;
+            this.pstrSelectAccounts.Name = "pstrSelectAccounts";
+            // 
+            // pstrSelectAccountingCenter
+            // 
+            this.pstrSelectAccountingCenter.Description = "SelectAccountingCenter";
+            this.pstrSelectAccountingCenter.MultiValue = true;
+            this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
+            this.pstrSelectAccountingCenter.Type = typeof(int);
+            // 
             // ExcelSummaryGeneralLedger
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -891,7 +906,9 @@
             this.plngBookCodeID,
             this.pbooShowVolume,
             this.pstrBeginningCostCenter,
-            this.pstrEndingCostCenter});
+            this.pstrEndingCostCenter,
+            this.pstrSelectAccounts,
+            this.pstrSelectAccountingCenter});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -939,5 +956,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowVolume;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccounts;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountingCenter;
     }
 }

@@ -46,6 +46,7 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -100,6 +101,8 @@
             this.plngShowAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngSortBy = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowAFENumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccounts = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccount = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -184,6 +187,9 @@
             this.xrLabel1,
             this.xrLabel2,
             this.xrLabel5});
+            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(IsNull([AccountNumber]) OR [AccountNumber] = \'\' OR not [AccountNumber] in (?p" +
+                    "strSelectAccount), False,True)\n")});
             this.Tablix1.HeightF = 15.95411F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
@@ -1301,6 +1307,26 @@
             this.pbooShowAFENumber.Type = typeof(bool);
             this.pbooShowAFENumber.ValueInfo = "False";
             // 
+            // pstrSelectAccounts
+            // 
+            this.pstrSelectAccounts.Description = "Select Accounts";
+            this.pstrSelectAccounts.MultiValue = true;
+            this.pstrSelectAccounts.Name = "pstrSelectAccounts";
+            this.pstrSelectAccounts.SelectAllValues = true;
+            dynamicListLookUpSettings4.DataMember = "LookupAccounts";
+            dynamicListLookUpSettings4.DataSource = this.Dynamic;
+            dynamicListLookUpSettings4.DisplayMember = "Description";
+            dynamicListLookUpSettings4.FilterString = null;
+            dynamicListLookUpSettings4.SortMember = null;
+            dynamicListLookUpSettings4.ValueMember = "Number";
+            this.pstrSelectAccounts.ValueSourceSettings = dynamicListLookUpSettings4;
+            // 
+            // pstrSelectAccount
+            // 
+            this.pstrSelectAccount.Description = "Select Account";
+            this.pstrSelectAccount.MultiValue = true;
+            this.pstrSelectAccount.Name = "pstrSelectAccount";
+            // 
             // ExcelChartofAccountListing
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1346,7 +1372,9 @@
             this.plngShowInactives,
             this.plngShowAccountTypes,
             this.plngSortBy,
-            this.pbooShowAFENumber});
+            this.pbooShowAFENumber,
+            this.pstrSelectAccounts,
+            this.pstrSelectAccount});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1408,5 +1436,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel31;
         private DevExpress.XtraReports.UI.XRLabel xrLabel33;
         public DevExpress.XtraReports.UI.XRLabel xrLabel34;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccounts;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccount;
     }
 }

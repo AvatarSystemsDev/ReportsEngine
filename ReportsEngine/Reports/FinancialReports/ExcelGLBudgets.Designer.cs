@@ -104,6 +104,8 @@
             this.pstrEndingCostCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowJulyToDecember = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngYear = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccounts = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -226,6 +228,8 @@
             this.xrLabel27,
             this.xrLabel26,
             this.xrLabel25});
+            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", resources.GetString("Tablix1.ExpressionBindings"))});
             this.Tablix1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Tablix1.HeightF = 20.00001F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
@@ -1223,6 +1227,19 @@
             this.plngYear.Type = typeof(int);
             this.plngYear.ValueInfo = "0";
             // 
+            // pstrSelectAccounts
+            // 
+            this.pstrSelectAccounts.Description = "Select Accounts";
+            this.pstrSelectAccounts.Name = "pstrSelectAccounts";
+            this.pstrSelectAccounts.Type = typeof(int);
+            this.pstrSelectAccounts.ValueInfo = "0";
+            // 
+            // pstrSelectAccountingCenter
+            // 
+            this.pstrSelectAccountingCenter.Description = "Select Accounting Center";
+            this.pstrSelectAccountingCenter.MultiValue = true;
+            this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
+            // 
             // ExcelGLBudgets
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1269,7 +1286,9 @@
             this.pbooShowCriteria,
             this.plngBookCodeID,
             this.pbooShowJulyToDecember,
-            this.plngYear});
+            this.plngYear,
+            this.pstrSelectAccounts,
+            this.pstrSelectAccountingCenter});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1334,5 +1353,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel29;
         private DevExpress.XtraReports.UI.XRLabel xrLabel28;
         private DevExpress.XtraReports.UI.XRLabel xrLabel34;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccounts;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountingCenter;
     }
 }

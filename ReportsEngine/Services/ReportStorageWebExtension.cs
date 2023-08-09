@@ -239,7 +239,8 @@ namespace ReportsEngine.Services
                 }
                 else if (parameterName.Contains("pstrSelect"))
                 {
-                    //report.Parameters[parameterName].Value = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));
+                    string[] multivariateParameter = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));
+                    report.Parameters[parameterName].Value = multivariateParameter;
                 }
                 else
                 {

@@ -60,6 +60,7 @@
             this.pstrBeginningAccountCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingAccountCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowActive = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -114,6 +115,9 @@
             this.xrLabel5,
             this.xrLabel2,
             this.xrLabel1});
+            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif([Number] == \'!\' Or [Number] == \'ZZZZ\' OR not [Number] in (?pstrSelectAccounti" +
+                    "ngCenter), false, true)\n")});
             this.Tablix1.HeightF = 15F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
@@ -402,6 +406,12 @@
             this.pbooShowActive.Type = typeof(int);
             this.pbooShowActive.ValueInfo = "0";
             // 
+            // pstrSelectAccountingCenter
+            // 
+            this.pstrSelectAccountingCenter.Description = "Parameter1";
+            this.pstrSelectAccountingCenter.MultiValue = true;
+            this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
+            // 
             // ExcelAccountingCenterListing
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -435,7 +445,8 @@
             this.pbooShowCriteria,
             this.pstrBeginningAccountCenterNumber,
             this.pstrEndingAccountCenterNumber,
-            this.pbooShowActive});
+            this.pbooShowActive,
+            this.pstrSelectAccountingCenter});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -465,5 +476,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningAccountCenterNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingAccountCenterNumber;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowActive;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountingCenter;
     }
 }

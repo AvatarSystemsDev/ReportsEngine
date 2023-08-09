@@ -82,6 +82,7 @@
             this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectAccounts = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -171,8 +172,7 @@
             this.xrLabel2,
             this.xrLabel7});
             this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(([DebitAmount] = 0 AND [CreditAmount] = 0 AND ?pbooShowZeroAmounts = FALSE)||" +
-                    "Not ([AccountNumber] in (?pstrSelectAccounts)), FALSE,TRUE)\n\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", resources.GetString("Tablix1.ExpressionBindings"))});
             this.Tablix1.HeightF = 15F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
@@ -617,14 +617,19 @@
             this.pstrSelectAccounts.Description = "Select Accounts";
             this.pstrSelectAccounts.MultiValue = true;
             this.pstrSelectAccounts.Name = "pstrSelectAccounts";
-            this.pstrSelectAccounts.SelectAllValues = true;
-            dynamicListLookUpSettings4.DataMember = "LookupAccounts";
+            // 
+            // pstrSelectAccountingCenter
+            // 
+            this.pstrSelectAccountingCenter.Description = "Select Accounting Center";
+            this.pstrSelectAccountingCenter.MultiValue = true;
+            this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
+            dynamicListLookUpSettings4.DataMember = "LookupAccountingCenter";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
-            dynamicListLookUpSettings4.DisplayMember = "Description";
+            dynamicListLookUpSettings4.DisplayMember = "Name";
             dynamicListLookUpSettings4.FilterString = null;
             dynamicListLookUpSettings4.SortMember = null;
             dynamicListLookUpSettings4.ValueMember = "Number";
-            this.pstrSelectAccounts.ValueSourceSettings = dynamicListLookUpSettings4;
+            this.pstrSelectAccountingCenter.ValueSourceSettings = dynamicListLookUpSettings4;
             // 
             // ExcelChartOfAccountsAmounts
             // 
@@ -676,7 +681,8 @@
             this.plngShowNormalBalance,
             this.pbooShowZeroAmounts,
             this.pstrBeginningCostCenter,
-            this.pstrEndingCostCenter});
+            this.pstrEndingCostCenter,
+            this.pstrSelectAccountingCenter});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -717,5 +723,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccounts;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountingCenter;
     }
 }

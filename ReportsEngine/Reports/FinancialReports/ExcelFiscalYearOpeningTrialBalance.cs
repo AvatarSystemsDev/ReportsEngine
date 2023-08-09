@@ -13,5 +13,9 @@ namespace ReportsEngine.Reports.FinancialReports
             InitializeComponent();
         }
 
+        private void ExcelFiscalYearOpeningTrialBalance_BeforePrint(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }
