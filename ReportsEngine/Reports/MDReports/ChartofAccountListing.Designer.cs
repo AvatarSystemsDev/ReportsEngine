@@ -114,6 +114,7 @@
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings3 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.DataAccess.DataFederation.SelectNode selectNode1 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode1 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source1 = new DevExpress.DataAccess.DataFederation.Source();
@@ -126,7 +127,6 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode4 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode4 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source4 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -197,12 +197,12 @@
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.plngShowInactives = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngShowAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngSortBy = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
-            this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.pstrSelectAccount = new DevExpress.XtraReports.Parameters.Parameter();
+            this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -224,8 +224,8 @@
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngShowInactives", typeof(int));
             queryParameter5.Name = "@plngShowAccountTypes";
-            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngShowAccountTypes", typeof(int));
+            queryParameter5.Type = typeof(int);
+            queryParameter5.ValueInfo = "0";
             queryParameter6.Name = "@plngSortBy";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngSortBy", typeof(int));
@@ -247,8 +247,8 @@
             storedProcQuery3.MetaSerializable = "<Meta X=\"415\" Y=\"20\" Width=\"116\" Height=\"101\" />";
             storedProcQuery3.Name = "LookupAccounts";
             queryParameter8.Name = "@plngCompanyID";
-            queryParameter8.Type = typeof(int);
-            queryParameter8.ValueInfo = "0";
+            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter8});
             storedProcQuery3.StoredProcName = "Accounts_ReportLookup";
@@ -441,7 +441,8 @@
             this.xrLabel8});
             this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(IsNull([AccountNumber]) OR [AccountNumber] = \'\' OR not [AccountNumber] in (?p" +
-                    "strSelectAccount), False,True)")});
+                    "strSelectAccount), False,True)\nAnd\n([AccountClassificationDescription] in (?pstr" +
+                    "SelectAccountTypes))")});
             this.Tablix1.HeightF = 15.00012F;
             this.Tablix1.KeepTogether = true;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
@@ -1692,7 +1693,7 @@
             // 
             // pbooShowAFENumber
             // 
-            this.pbooShowAFENumber.Description = "Show AFE";
+            this.pbooShowAFENumber.Description = "Show AFE Def.";
             this.pbooShowAFENumber.Name = "pbooShowAFENumber";
             this.pbooShowAFENumber.Type = typeof(bool);
             this.pbooShowAFENumber.ValueInfo = "False";
@@ -1789,16 +1790,19 @@
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Inactive Only"));
             this.plngShowInactives.ValueSourceSettings = staticListLookUpSettings1;
             // 
-            // plngShowAccountTypes
+            // pstrSelectAccountTypes
             // 
-            this.plngShowAccountTypes.Description = "Show Account Types";
-            this.plngShowAccountTypes.Name = "plngShowAccountTypes";
-            this.plngShowAccountTypes.Type = typeof(int);
-            this.plngShowAccountTypes.ValueInfo = "0";
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "All"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "BS"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "PL"));
-            this.plngShowAccountTypes.ValueSourceSettings = staticListLookUpSettings2;
+            this.pstrSelectAccountTypes.Description = "Show Account Types";
+            this.pstrSelectAccountTypes.MultiValue = true;
+            this.pstrSelectAccountTypes.Name = "pstrSelectAccountTypes";
+            this.pstrSelectAccountTypes.SelectAllValues = true;
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("Asset", "Asset (A)"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("Liability", "Liability (L)"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("Expense", "Expense (EX)"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("Income", "Income (I)"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("Other Income", "Other Income (OI)"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("Other Expense", "Other Expense (OE)"));
+            this.pstrSelectAccountTypes.ValueSourceSettings = staticListLookUpSettings2;
             // 
             // plngSortBy
             // 
@@ -1818,12 +1822,37 @@
             this.pstrDatabaseName.Name = "pstrDatabaseName";
             this.pstrDatabaseName.Visible = false;
             // 
+            // xrCrossBandBox1
+            // 
+            this.xrCrossBandBox1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
+            this.xrCrossBandBox1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrCrossBandBox1.BorderWidth = 1F;
+            this.xrCrossBandBox1.EndBand = this.SubBand2;
+            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 9.000019F);
+            this.xrCrossBandBox1.Name = "xrCrossBandBox1";
+            this.xrCrossBandBox1.StartBand = this.SubBand2;
+            this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 5.000019F);
+            this.xrCrossBandBox1.WidthF = 1060F;
+            // 
+            // pstrSelectAccount
+            // 
+            this.pstrSelectAccount.Description = "Select Account";
+            this.pstrSelectAccount.MultiValue = true;
+            this.pstrSelectAccount.Name = "pstrSelectAccount";
+            this.pstrSelectAccount.SelectAllValues = true;
+            dynamicListLookUpSettings4.DataMember = "LookupAccounts";
+            dynamicListLookUpSettings4.DataSource = this.Dynamic;
+            dynamicListLookUpSettings4.DisplayMember = "Description";
+            dynamicListLookUpSettings4.FilterString = null;
+            dynamicListLookUpSettings4.SortMember = null;
+            dynamicListLookUpSettings4.ValueMember = "Number";
+            this.pstrSelectAccount.ValueSourceSettings = dynamicListLookUpSettings4;
+            // 
             // federationDataSource1
             // 
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DataSet1";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"517\" />";
             source1.DataMember = "DataSet1";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DataSet1";
@@ -1839,17 +1868,17 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "LOEClassification"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CashFlowCategory"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "The1099DestinationCodeDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsEntryAllowed"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsOwnerRequired"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsVendorRequired"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsPhaseWellRequired"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsActive"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DrillingType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BCPACP"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ExpenseWO"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ExpenseType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CapitalWO"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Notes"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsEntryAllowed")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DrillingType"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ExpenseWO"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CapitalWO"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BCPACP"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ExpenseType")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_LookupCompanies";
             sourceNode2.Alias = null;
@@ -1919,32 +1948,6 @@
             selectNode3,
             selectNode4});
             // 
-            // xrCrossBandBox1
-            // 
-            this.xrCrossBandBox1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrCrossBandBox1.BorderWidth = 1F;
-            this.xrCrossBandBox1.EndBand = this.SubBand2;
-            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 9.000019F);
-            this.xrCrossBandBox1.Name = "xrCrossBandBox1";
-            this.xrCrossBandBox1.StartBand = this.SubBand2;
-            this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 5.000019F);
-            this.xrCrossBandBox1.WidthF = 1060F;
-            // 
-            // pstrSelectAccount
-            // 
-            this.pstrSelectAccount.Description = "Select Account";
-            this.pstrSelectAccount.MultiValue = true;
-            this.pstrSelectAccount.Name = "pstrSelectAccount";
-            this.pstrSelectAccount.SelectAllValues = true;
-            dynamicListLookUpSettings4.DataMember = "LookupAccounts";
-            dynamicListLookUpSettings4.DataSource = this.Dynamic;
-            dynamicListLookUpSettings4.DisplayMember = "Description";
-            dynamicListLookUpSettings4.FilterString = null;
-            dynamicListLookUpSettings4.SortMember = null;
-            dynamicListLookUpSettings4.ValueMember = "Number";
-            this.pstrSelectAccount.ValueSourceSettings = dynamicListLookUpSettings4;
-            // 
             // ChartofAccountListing
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1978,7 +1981,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowNotes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowAFENumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowInactives, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowAccountTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccountTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortBy, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -1993,7 +1996,7 @@
             this.pbooShowNotes,
             this.pbooShowAFENumber,
             this.plngShowInactives,
-            this.plngShowAccountTypes,
+            this.pstrSelectAccountTypes,
             this.plngSortBy,
             this.pbooShowCriteria,
             this.pstrDatabaseName});
@@ -2049,7 +2052,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel22;
         private DevExpress.XtraReports.UI.SubBand SubBand1;
         private DevExpress.XtraReports.Parameters.Parameter plngShowInactives;
-        private DevExpress.XtraReports.Parameters.Parameter plngShowAccountTypes;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountTypes;
         private DevExpress.XtraReports.Parameters.Parameter plngSortBy;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
@@ -2065,7 +2068,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel32;
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;
         private DevExpress.XtraReports.UI.XRLabel xrLabel25;
-        private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.UI.SubBand SubBand2;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox1;
         private DevExpress.XtraReports.UI.XRPanel xrPanel1;
@@ -2081,5 +2083,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
         private DevExpress.XtraReports.UI.XRLabel xrLabel39;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccount;
+        private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
     }
 }

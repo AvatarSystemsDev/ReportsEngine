@@ -189,7 +189,8 @@
             this.xrLabel5});
             this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(IsNull([AccountNumber]) OR [AccountNumber] = \'\' OR not [AccountNumber] in (?p" +
-                    "strSelectAccount), False,True)\n")});
+                    "strSelectAccount), False,True) AND\n([AccountClassificationDescription] in (?pstr" +
+                    "SelectAccountTypes))\n")});
             this.Tablix1.HeightF = 15.95411F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";

@@ -123,6 +123,173 @@
   <data name="Pulse.ResultSchemaSerializable" xml:space="preserve">
     <value>PERhdGFTZXQgTmFtZT0iUHVsc2UiPjxWaWV3IE5hbWU9Ik1hc3Rlcl9Vc2VyUmVjb3JkIj48RmllbGQgTmFtZT0iSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJMYXN0QXBwbGljYXRpb25Vc2VkSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJMYXN0Q29tcGFueVVzZWRJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ikxhc3REYXRhYmFzZVVzZWRJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IklzU3VwcG9ydGluZ1VzZXIiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9Ik1pbWljVXNlcklEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVGVtcEZ1bGxBY2Nlc3NVc2VySUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJDb21wYW55SUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJFbWFpbEFkZHJlc3MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSXNJbmFjdGl2ZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNBY2NvdW50TG9ja2VkIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJMb2dpbkF0dGVtcHRDb3VudCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlF1aWNrRW50cnkiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzTG9nZ2VkSW4iIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzRGV2ZWxvcGVyIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc1N1cHBvcnRSZXByZXNlbnRhdGl2ZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNTeXN0ZW1BZG1pbmlzdHJhdG9yIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJMb2dpbkNvbXB1dGVyTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMYXN0TmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGaXJzdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSGFzaFBhc3N3b3JkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNhbHRQYXNzd29yZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQYXNzd29yZEV4cGlyYXRpb25EYXlzIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iUGFzc3dvcmRMYXN0Q2hhbmdlRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IklzRGVsZXRlZCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iQ3JlYXRlRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkNyZWF0ZVVzZXJJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik1vZGlmeURhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJNb2RpZnlVc2VySUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJQYXNzd29yZFJlc2V0VG9rZW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVGVsZXBob25lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkluaXRpYWxzIiBUeXBlPSJTdHJpbmciIC8+PC9WaWV3PjwvRGF0YVNldD4=</value>
   </data>
+  <data name="Tablix1.ExpressionBindings" xml:space="preserve">
+    <value>[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+</value>
+  </data>
+  <data name="Tablix1_GroupHeaderBand.ExpressionBindings" xml:space="preserve">
+    <value>[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+
+</value>
+  </data>
+  <data name="xrLabel41.ExpressionBindings" xml:space="preserve">
+    <value>iif(sumSum(
+Iif([AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+,
+[NetAmount] ,0 )
+)
+ &lt; 0, ABS(sumSum(
+Iif(
+[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+, 
+[NetAmount],0 )
+)), [Nothing])
+
+
+</value>
+  </data>
+  <data name="xrLabel40.ExpressionBindings" xml:space="preserve">
+    <value>iif(sumSum(
+Iif([AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+,
+[NetAmount] ,0 )
+)
+ &gt;= 0, ABS(sumSum(
+Iif(
+[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+, 
+[NetAmount],0 )
+)), [Nothing])
+
+
+</value>
+  </data>
   <data name="xrLabel5.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningCostCenter = '!', iif(?pstrEndingCostCenter = 'ZZZZ', 'All Accounting Centers', 'First Center to ' + ?pstrEndingCostCenter), iif(?pstrEndingCostCenter = 'ZZZZ', ?pstrBeginningCostCenter + ' to Last Center', ?pstrBeginningCostCenter + ' to ' + ?pstrEndingCostCenter))
 
@@ -149,5 +316,263 @@
   </data>
   <data name="xrLabel8.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningAccountNumber = '!', iif(?pstrEndingAccountNumber = 'ZZZZZZZZZZ-ZZZZ', 'All Accounts', 'First Account to ' + ?pstrEndingAccountNumber), iif(?pstrEndingAccountNumber = 'ZZZZZZZZZZ-ZZZZ', ?pstrBeginningAccountNumber + ' to Last Account', ?pstrBeginningAccountNumber + ' to ' + ?pstrEndingAccountNumber))</value>
+  </data>
+  <data name="GroupFooter.ExpressionBindings" xml:space="preserve">
+    <value>[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+
+</value>
+  </data>
+  <data name="xrLabel33.ExpressionBindings" xml:space="preserve">
+    <value>iif(sumSum(
+Iif([AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+,
+[NetAmount] ,0 )
+)
+&lt; 0, ABS(sumSum(
+Iif(
+[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+, 
+[NetAmount],0 )
+)), [Nothing])
+
+
+
+</value>
+  </data>
+  <data name="xrLabel32.ExpressionBindings" xml:space="preserve">
+    <value>iif(sumSum(
+Iif([AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+,
+[NetAmount] ,0 )
+)
+ &gt;= 0, ABS(sumSum(
+Iif(
+[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+, 
+[NetAmount],0 )
+)), [Nothing])
+
+
+</value>
+  </data>
+  <data name="xrLabel30.ExpressionBindings" xml:space="preserve">
+    <value>iif(sumSum(iif([IsBBF] = false,
+
+iif(
+[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+,[NetAmount],0)
+, [Nothing])) &lt; 0, ABS(sumSum(iif([IsBBF] = false,
+iif(
+[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+,[NetAmount],0)
+
+, [Nothing]))), [Nothing])
+
+
+</value>
+  </data>
+  <data name="xrLabel24.ExpressionBindings" xml:space="preserve">
+    <value>iif(sumSum(iif([IsBBF] = false,
+
+iif(
+[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+,[NetAmount],0)
+, [Nothing])) &gt;= 0, ABS(sumSum(iif([IsBBF] = false,
+iif(
+[AccountNumber] in (?pstrSelectAccount)
+AND
+    (
+        [PhaseWellNumber] in (?pstrSelectProperty) OR
+        ('!' in (?pstrSelectProperty) AND IsNullOrEmpty([PhaseWellNumber]))
+    )
+AND
+    (
+        [VendorNumber] in (?pstrSelectVendor) OR
+        ('!' in (?pstrSelectVendor) AND IsNullOrEmpty([VendorNumber]))
+    ) 
+AND
+    (
+        [OwnerNumber] in (?pstrSelectOwner) OR
+        ('!' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))
+    )
+AND
+    (
+        [Number] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
+    )
+
+,[NetAmount],0)
+
+, [Nothing]))), [Nothing])
+
+</value>
   </data>
 </root>
