@@ -878,11 +878,11 @@
                     "ZZZ\', \'All Accounts\', FormatString(?pstrBeginningAccountNumber) & \' to \' & Forma" +
                     "tString(?pstrEndingAccountNumber))\n")});
             this.xrLabel38.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(82.92961F, 3.814697E-06F);
+            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(88.13795F, 3.814697E-06F);
             this.xrLabel38.Multiline = true;
             this.xrLabel38.Name = "xrLabel38";
             this.xrLabel38.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel38.SizeF = new System.Drawing.SizeF(197.9165F, 20.41666F);
+            this.xrLabel38.SizeF = new System.Drawing.SizeF(192.7082F, 20.41666F);
             this.xrLabel38.StylePriority.UseBackColor = false;
             this.xrLabel38.StylePriority.UseFont = false;
             this.xrLabel38.StylePriority.UsePadding = false;
@@ -905,7 +905,7 @@
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(0F, 3.814697E-06F);
             this.xrLabel27.Name = "xrLabel27";
             this.xrLabel27.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel27.SizeF = new System.Drawing.SizeF(82.92961F, 20.41663F);
+            this.xrLabel27.SizeF = new System.Drawing.SizeF(88.13795F, 20.41663F);
             this.xrLabel27.StylePriority.UseBackColor = false;
             this.xrLabel27.StylePriority.UseFont = false;
             this.xrLabel27.StylePriority.UsePadding = false;
@@ -1198,7 +1198,7 @@
             this.xrLabel9.StylePriority.UseFont = false;
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
-            this.xrLabel9.Text = "Grand Total: ";
+            this.xrLabel9.Text = "Total: ";
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrGrandTotal
@@ -1374,7 +1374,7 @@
             // 
             // pstrSelectAccounts
             // 
-            this.pstrSelectAccounts.Description = "Select Accounts";
+            this.pstrSelectAccounts.Description = "Select Account List";
             this.pstrSelectAccounts.MultiValue = true;
             this.pstrSelectAccounts.Name = "pstrSelectAccounts";
             this.pstrSelectAccounts.SelectAllValues = true;
@@ -1388,7 +1388,7 @@
             // 
             // pstrSelectAccountingCenter
             // 
-            this.pstrSelectAccountingCenter.Description = "Select Accounting Center";
+            this.pstrSelectAccountingCenter.Description = "Select Acct. Center List";
             this.pstrSelectAccountingCenter.MultiValue = true;
             this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
             this.pstrSelectAccountingCenter.SelectAllValues = true;

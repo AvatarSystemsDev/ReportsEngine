@@ -2151,7 +2151,7 @@
             // 
             // pstrSelectAccounts
             // 
-            this.pstrSelectAccounts.Description = "Select Accounts";
+            this.pstrSelectAccounts.Description = "Select Account List";
             this.pstrSelectAccounts.MultiValue = true;
             this.pstrSelectAccounts.Name = "pstrSelectAccounts";
             this.pstrSelectAccounts.SelectAllValues = true;
@@ -2165,7 +2165,7 @@
             // 
             // pstrSelectAccountingCenter
             // 
-            this.pstrSelectAccountingCenter.Description = "Select Accounting Center";
+            this.pstrSelectAccountingCenter.Description = "Select Acct. Center List";
             this.pstrSelectAccountingCenter.MultiValue = true;
             this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
             this.pstrSelectAccountingCenter.SelectAllValues = true;

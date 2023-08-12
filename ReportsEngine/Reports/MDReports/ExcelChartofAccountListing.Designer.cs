@@ -45,8 +45,6 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
-            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -98,11 +96,10 @@
             this.pbooShowNotes = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngShowInactives = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngShowAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngSortBy = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowAFENumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrSelectAccounts = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectAccount = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -1283,17 +1280,6 @@
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Inactive Only"));
             this.plngShowInactives.ValueSourceSettings = staticListLookUpSettings1;
             // 
-            // plngShowAccountTypes
-            // 
-            this.plngShowAccountTypes.Description = "Show Account Types";
-            this.plngShowAccountTypes.Name = "plngShowAccountTypes";
-            this.plngShowAccountTypes.Type = typeof(int);
-            this.plngShowAccountTypes.ValueInfo = "0";
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "All"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "BS"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "PL"));
-            this.plngShowAccountTypes.ValueSourceSettings = staticListLookUpSettings2;
-            // 
             // plngSortBy
             // 
             this.plngSortBy.Description = "Sort By";
@@ -1308,25 +1294,17 @@
             this.pbooShowAFENumber.Type = typeof(bool);
             this.pbooShowAFENumber.ValueInfo = "False";
             // 
-            // pstrSelectAccounts
-            // 
-            this.pstrSelectAccounts.Description = "Select Accounts";
-            this.pstrSelectAccounts.MultiValue = true;
-            this.pstrSelectAccounts.Name = "pstrSelectAccounts";
-            this.pstrSelectAccounts.SelectAllValues = true;
-            dynamicListLookUpSettings4.DataMember = "LookupAccounts";
-            dynamicListLookUpSettings4.DataSource = this.Dynamic;
-            dynamicListLookUpSettings4.DisplayMember = "Description";
-            dynamicListLookUpSettings4.FilterString = null;
-            dynamicListLookUpSettings4.SortMember = null;
-            dynamicListLookUpSettings4.ValueMember = "Number";
-            this.pstrSelectAccounts.ValueSourceSettings = dynamicListLookUpSettings4;
-            // 
             // pstrSelectAccount
             // 
             this.pstrSelectAccount.Description = "Select Account";
             this.pstrSelectAccount.MultiValue = true;
             this.pstrSelectAccount.Name = "pstrSelectAccount";
+            // 
+            // pstrSelectAccountTypes
+            // 
+            this.pstrSelectAccountTypes.Description = "Parameter1";
+            this.pstrSelectAccountTypes.MultiValue = true;
+            this.pstrSelectAccountTypes.Name = "pstrSelectAccountTypes";
             // 
             // ExcelChartofAccountListing
             // 
@@ -1352,29 +1330,29 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccountTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowNotes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowInactives, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowAccountTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortBy, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowAFENumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowAFENumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccount, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
             this.plngUserID,
             this.plngCompanyID,
             this.Subtitle,
+            this.pstrSelectAccountTypes,
             this.pstrBeginningAccountNumber,
             this.pstrEndingAccountNumber,
             this.pbooShowNotes,
             this.pbooShowCriteria,
             this.plngShowInactives,
-            this.plngShowAccountTypes,
             this.plngSortBy,
             this.pbooShowAFENumber,
-            this.pstrSelectAccounts,
             this.pstrSelectAccount});
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -1422,7 +1400,6 @@
         public DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.Parameters.Parameter plngShowInactives;
-        private DevExpress.XtraReports.Parameters.Parameter plngShowAccountTypes;
         private DevExpress.XtraReports.Parameters.Parameter plngSortBy;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowAFENumber;
         private DevExpress.XtraReports.UI.XRLabel xrLabel32;
@@ -1437,7 +1414,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel31;
         private DevExpress.XtraReports.UI.XRLabel xrLabel33;
         public DevExpress.XtraReports.UI.XRLabel xrLabel34;
-        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccounts;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccount;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountTypes;
     }
 }

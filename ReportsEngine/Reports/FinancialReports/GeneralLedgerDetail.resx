@@ -199,7 +199,8 @@ AND
     )
 
 ,
-[NetAmount] ,0 )
+iif([NetAmount]&lt;0,[NetAmount],0)
+ ,0 )
 )
  &lt; 0, ABS(sumSum(
 Iif(
@@ -226,7 +227,8 @@ AND
     )
 
 , 
-[NetAmount],0 )
+iif([NetAmount]&lt;0,[NetAmount],0)
+,0 )
 )), [Nothing])
 
 
@@ -257,7 +259,8 @@ AND
     )
 
 ,
-[NetAmount] ,0 )
+iif([NetAmount]&gt;=0,[NetAmount],0)
+ ,0 )
 )
  &gt;= 0, ABS(sumSum(
 Iif(
@@ -284,7 +287,8 @@ AND
     )
 
 , 
-[NetAmount],0 )
+iif([NetAmount]&gt;=0,[NetAmount],0)
+,0 )
 )), [Nothing])
 
 
@@ -368,7 +372,8 @@ AND
     )
 
 ,
-[NetAmount] ,0 )
+[NetAmount]
+ ,0 )
 )
 &lt; 0, ABS(sumSum(
 Iif(
@@ -395,8 +400,9 @@ AND
     )
 
 , 
-[NetAmount],0 )
-)), [Nothing])
+[NetAmount]
+,0 )
+)), 0)
 
 
 
@@ -427,7 +433,8 @@ AND
     )
 
 ,
-[NetAmount] ,0 )
+[NetAmount]
+ ,0 )
 )
  &gt;= 0, ABS(sumSum(
 Iif(
@@ -454,8 +461,9 @@ AND
     )
 
 , 
-[NetAmount],0 )
-)), [Nothing])
+[NetAmount]
+,0 )
+)), 0)
 
 
 </value>
@@ -486,8 +494,10 @@ AND
         ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
     )
 
-,[NetAmount],0)
-, [Nothing])) &lt; 0, ABS(sumSum(iif([IsBBF] = false,
+,
+[NetAmount]
+,0)
+, 0)) &lt; 0, ABS(sumSum(iif([IsBBF] = false,
 iif(
 [AccountNumber] in (?pstrSelectAccount)
 AND
@@ -511,9 +521,11 @@ AND
         ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
     )
 
-,[NetAmount],0)
+,
+[NetAmount]
+,0)
 
-, [Nothing]))), [Nothing])
+, 0))), 0)
 
 
 </value>
@@ -544,8 +556,10 @@ AND
         ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
     )
 
-,[NetAmount],0)
-, [Nothing])) &gt;= 0, ABS(sumSum(iif([IsBBF] = false,
+,
+[NetAmount]
+,0)
+, 0)) &gt;= 0, ABS(sumSum(iif([IsBBF] = false,
 iif(
 [AccountNumber] in (?pstrSelectAccount)
 AND
@@ -569,9 +583,11 @@ AND
         ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
     )
 
-,[NetAmount],0)
+,
+[NetAmount]
+,0)
 
-, [Nothing]))), [Nothing])
+, 0))), 0)
 
 </value>
   </data>
