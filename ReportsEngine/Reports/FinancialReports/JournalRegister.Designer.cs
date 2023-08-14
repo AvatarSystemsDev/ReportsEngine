@@ -2272,6 +2272,8 @@ namespace ReportsEngine.Reports.FinancialReports
             // plngSortBy
             // 
             this.plngSortBy.Description = "Group By";
+            this.plngSortBy.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "1")});
             this.plngSortBy.Name = "plngSortBy";
             this.plngSortBy.Type = typeof(int);
             this.plngSortBy.ValueInfo = "1";

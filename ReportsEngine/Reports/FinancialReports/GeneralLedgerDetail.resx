@@ -373,7 +373,7 @@ AND
 
 ,
 [NetAmount]
- ,0 )
+ ,[Nothing] )
 )
 &lt; 0, ABS(sumSum(
 Iif(
@@ -401,8 +401,8 @@ AND
 
 , 
 [NetAmount]
-,0 )
-)), 0)
+,[Nothing] )
+)), [Nothing])
 
 
 
@@ -434,7 +434,7 @@ AND
 
 ,
 [NetAmount]
- ,0 )
+ ,[Nothing] )
 )
  &gt;= 0, ABS(sumSum(
 Iif(
@@ -462,8 +462,8 @@ AND
 
 , 
 [NetAmount]
-,0 )
-)), 0)
+,[Nothing] )
+)), [Nothing])
 
 
 </value>
@@ -496,8 +496,8 @@ AND
 
 ,
 [NetAmount]
-,0)
-, 0)) &lt; 0, ABS(sumSum(iif([IsBBF] = false,
+,[Nothing])
+, [Nothing])) &lt; 0, ABS(sumSum(iif([IsBBF] = false,
 iif(
 [AccountNumber] in (?pstrSelectAccount)
 AND
@@ -523,9 +523,9 @@ AND
 
 ,
 [NetAmount]
-,0)
+,[Nothing])
 
-, 0))), 0)
+, [Nothing]))), [Nothing])
 
 
 </value>
@@ -558,8 +558,8 @@ AND
 
 ,
 [NetAmount]
-,0)
-, 0)) &gt;= 0, ABS(sumSum(iif([IsBBF] = false,
+,[Nothing])
+, [Nothing])) &gt;= 0, ABS(sumSum(iif([IsBBF] = false,
 iif(
 [AccountNumber] in (?pstrSelectAccount)
 AND
@@ -585,9 +585,9 @@ AND
 
 ,
 [NetAmount]
-,0)
+,[Nothing])
 
-, 0))), 0)
+, [Nothing]))), [Nothing])
 
 </value>
   </data>

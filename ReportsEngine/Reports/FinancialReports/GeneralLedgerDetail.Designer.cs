@@ -274,6 +274,7 @@
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.calculatePeriodDebit = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -2598,6 +2599,12 @@
             dynamicListLookUpSettings16.ValueMember = "Number";
             this.pstrSelectVendor.ValueSourceSettings = dynamicListLookUpSettings16;
             // 
+            // calculatePeriodDebit
+            // 
+            this.calculatePeriodDebit.DataMember = "Dynamic_DSGeneralLedgerDetail";
+            this.calculatePeriodDebit.FieldType = DevExpress.XtraReports.UI.FieldType.Int32;
+            this.calculatePeriodDebit.Name = "calculatePeriodDebit";
+            // 
             // GeneralLedgerDetail
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2610,6 +2617,8 @@
             this.pageFooterBand1,
             this.GroupFooter});
             this.BorderWidth = 0F;
+            this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
+            this.calculatePeriodDebit});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Pulse,
             this.Dynamic,
@@ -2795,5 +2804,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
         private DevExpress.XtraReports.UI.XRLabel xrLabel41;
+        private DevExpress.XtraReports.UI.CalculatedField calculatePeriodDebit;
     }
 }
