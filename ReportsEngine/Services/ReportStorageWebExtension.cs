@@ -178,7 +178,9 @@ namespace ReportsEngine.Services
                     connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
                     report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
                     report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
-                    report.Parameters["plngCompanyID"].Value = companyid;
+                    if (report.Parameters["plngCompanyID"] != null) {
+                        report.Parameters["plngCompanyID"].Value = companyid;
+                    }
 
                     string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + ReportUser + ";Password=" + ReportUserPassword + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;TrustServerCertificate=true;";
                     string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;TrustServerCertificate=true;";

@@ -325,6 +325,7 @@
     <Content Include="Content\reporting.light.custom.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="Reports\RDReports\NonNegotiable.png" />
     <Content Include="Scripts\ace.js" />
     <Content Include="Scripts\cldr.event.js" />
     <Content Include="Scripts\cldr.js" />
@@ -346,6 +347,8 @@
     <Content Include="Scripts\knockout-3.3.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <None Include="packages.config" />
+    <Content Include="Reports\RDReports\RDCheckRemittanceSubreport.rdl" />
+    <Content Include="Reports\RDReports\RDCheckStubs.rdl" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -567,6 +570,12 @@
     <Compile Include="Reports\MDReports\ExcelChartOfAccountsAmounts.Designer.cs">
       <DependentUpon>ExcelChartOfAccountsAmounts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\RDCheckStubs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckStubs.Designer.cs">
+      <DependentUpon>RDCheckStubs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\Report1.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -687,6 +696,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelChartOfAccountsAmounts.resx">
       <DependentUpon>ExcelChartOfAccountsAmounts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDCheckStubs.resx">
+      <DependentUpon>RDCheckStubs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>
