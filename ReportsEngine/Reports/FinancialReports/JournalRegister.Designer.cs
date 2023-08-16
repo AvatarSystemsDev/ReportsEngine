@@ -2880,7 +2880,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 20F, 20F);
             this.PageHeight = 850;
             this.PageWidth = 1100;
-            this.PaperKind = System.Drawing.Printing.PaperKind.LetterRotated;
+            //this.PaperKind = System.Drawing.Printing.PaperKind.LetterRotated;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),

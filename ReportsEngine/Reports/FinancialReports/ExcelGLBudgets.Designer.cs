@@ -1232,7 +1232,7 @@
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 22F, 20F, 38.54141F);
             this.PageHeight = 850;
             this.PageWidth = 1100;
-            this.PaperKind = System.Drawing.Printing.PaperKind.LetterRotated;
+            //this.PaperKind = System.Drawing.Printing.PaperKind.LetterRotated;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),

@@ -4,8 +4,6 @@ using ReportsEngine.Reports.MDReports;
 using ReportsEngine.Reports.RDReports;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 
 namespace ReportsEngine.Reports
 {

@@ -1,19 +1,7 @@
-﻿using DevExpress.ClipboardSource.SpreadsheetML;
-using DevExpress.CodeParser;
-using DevExpress.DataAccess.ConnectionParameters;
-using DevExpress.DataAccess.Sql;
-using DevExpress.Security.Resources;
-using DevExpress.Utils.About;
-using DevExpress.XtraReports;
-using DevExpress.XtraReports.UI;
-using Microsoft.AspNet.Identity;
+﻿using DevExpress.XtraReports.UI;
 using System;
-using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
-using System.Text;
-using System.Web.UI.WebControls;
-using static System.Net.Mime.MediaTypeNames;
 
 
 namespace ReportsEngine.Reports
@@ -86,7 +74,7 @@ namespace ReportsEngine.Reports
         private void DOIbyOwner_DataSourceDemanded(object sender, EventArgs e)
         {
             var x = this;
-            
+
             //var dataSources = DataSourceManager.GetDataSources(this, true);
             //foreach (var dataSource in dataSources)
             //{
@@ -105,15 +93,15 @@ namespace ReportsEngine.Reports
             //        }
             //    }
             //}
-            
+
         }
 
         private void DOIbyOwner_BeforePrint(object sender, CancelEventArgs e)
-        {   
-            string path =  @"..\Styles\";
+        {
+            string path = @"..\Styles\";
             // Set the report's StyleSheetPath property to specify the report's style sheet.
             ((XtraReport)this).StyleSheetPath = path + "xr9ptBLStyle.repss";
-            
+
 
         }
         public XRCheckBox CreateXRCheckBox()
@@ -128,5 +116,5 @@ namespace ReportsEngine.Reports
 
 
 
-        
+
 }

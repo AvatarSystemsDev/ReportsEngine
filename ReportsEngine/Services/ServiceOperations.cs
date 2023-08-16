@@ -1,29 +1,17 @@
-﻿using WebApiODataServiceProject;
-using System;
-using System.IO;
-using System.Net;
-using System.Net.Mail;
-using System.Diagnostics;
-using DevExpress.Utils.MVVM.Services;
-using DevExpress.XtraEditors.CustomEditor;
-using DevExpress.XtraPrinting;
+﻿using DevExpress.XtraPrinting;
+using DevExpress.XtraReports.UI;
 using DevExpress.XtraReports.Web.WebDocumentViewer;
 using DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts;
-using System.Linq;
-using System.Collections.Generic;
-using System.Web.WebPages;
 using Newtonsoft.Json;
-using DevExpress.XtraReports.UI;
 using ReportsEngine.Reports;
-using DevExpress.XtraReports.Web.Native.ParametersPanel;
-using System.Text.RegularExpressions;
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.IO;
+using System.Linq;
+using System.Net.Mail;
 using System.Web;
-using System.Security.Policy;
-using DevExpress.XtraReports.Parameters;
-using DevExpress.DataAccess.ConnectionParameters;
-using DevExpress.XtraReports;
-using static DevExpress.Web.Internal.ColorPicker;
-using static DevExpress.XtraEditors.Mask.MaskSettings;
+using WebApiODataServiceProject;
 
 namespace ReportsEngine.Services
 {
@@ -118,7 +106,7 @@ namespace ReportsEngine.Services
             string message = "Message could not be sent to:";
             bool SentToEveryone = true;
             List<string> SendTo = recipients.Split(';').ToList();
-            foreach(string recipient in SendTo)
+            foreach (string recipient in SendTo)
             {
                 currentRecipient = recipient;
                 try
@@ -144,7 +132,7 @@ namespace ReportsEngine.Services
             {
                 Succeeded = false,
                 Message = message
-            };            
+            };
         }
 
         protected string RemoveNewLineSymbols(string value)

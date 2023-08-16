@@ -1,10 +1,4 @@
-﻿using DevExpress.XtraReports.UI;
-using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Drawing;
-
-namespace ReportsEngine.Services
+﻿namespace ReportsEngine.Services
 {
     public partial class ExcelAccountingCenterListing : DevExpress.XtraReports.UI.XtraReport
     {

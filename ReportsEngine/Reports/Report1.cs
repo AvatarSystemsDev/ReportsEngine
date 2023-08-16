@@ -1,14 +1,7 @@
-﻿using DevExpress.ClipboardSource.SpreadsheetML;
-using DevExpress.DataAccess.ConnectionParameters;
+﻿using DevExpress.DataAccess.ConnectionParameters;
 using DevExpress.DataAccess.Sql;
-using DevExpress.Utils.About;
-using DevExpress.Web.Internal.XmlProcessor;
 using DevExpress.XtraReports;
-using DevExpress.XtraReports.UI;
 using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Drawing;
 
 namespace ReportsEngine.Reports
 {

@@ -208,7 +208,7 @@
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrLabel5.TextTrimming = System.Drawing.StringTrimming.EllipsisPath;
+            //this.xrLabel5.TextTrimming = System.Drawing.StringTrimming.EllipsisPath;
             // 
             // xrLabel2
             // 

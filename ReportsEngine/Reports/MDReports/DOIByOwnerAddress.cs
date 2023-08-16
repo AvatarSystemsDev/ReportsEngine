@@ -1,16 +1,5 @@
-﻿using DevExpress.ClipboardSource.SpreadsheetML;
-using DevExpress.CodeParser;
-using DevExpress.DataAccess.ConnectionParameters;
-using DevExpress.DataAccess.Sql;
-using DevExpress.Utils.About;
-using DevExpress.XtraReports;
-using DevExpress.XtraReports.UI;
-using System;
-using System.Collections;
+﻿using System;
 using System.ComponentModel;
-using System.Drawing;
-using System.Text;
-using System.Web.UI.WebControls;
 
 namespace ReportsEngine.Reports
 {
@@ -82,7 +71,7 @@ namespace ReportsEngine.Reports
         private void DOIbyOwnerAddress_DataSourceDemanded(object sender, EventArgs e)
         {
             var x = this;
-            
+
             //var dataSources = DataSourceManager.GetDataSources(this, true);
             //foreach (var dataSource in dataSources)
             //{
@@ -101,16 +90,16 @@ namespace ReportsEngine.Reports
             //        }
             //    }
             //}
-            
+
         }
 
         private void DOIbyOwnerAddress_BeforePrint(object sender, CancelEventArgs e)
         {
-            
+
         }
     }
 
 
 
-        
+
 }

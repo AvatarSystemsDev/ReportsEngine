@@ -1,20 +1,15 @@
 ﻿using DevExpress.DataAccess.ConnectionParameters;
-using DevExpress.XtraPrinting;
 using DevExpress.XtraReports;
-using DevExpress.XtraReports.UI;
-using DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts;
 using DevExpress.XtraReports.Parameters;
-
+using DevExpress.XtraReports.UI;
+using Newtonsoft.Json;
 using ReportsEngine.Reports;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Mail;
 using System.ServiceModel;
 using System.Web;
-using System.Web.UI;
-using Newtonsoft.Json;
 
 namespace ReportsEngine.Services
 {
@@ -73,7 +68,7 @@ namespace ReportsEngine.Services
                 string[] parts = url.Split('?');
                 string reportName = parts[0];
                 string parametersString = parts.Length > 1 ? parts[1] : String.Empty;
-                int companyidindex = url.IndexOf("=",url.IndexOf("plngCompanyID"))+1; // Find equal sign after plngCompanyID
+                int companyidindex = url.IndexOf("=", url.IndexOf("plngCompanyID")) + 1; // Find equal sign after plngCompanyID
                 int companyid;
                 int indexQ = url.IndexOf("?", companyidindex);
                 int indexA = url.IndexOf("&", companyidindex);
@@ -103,10 +98,12 @@ namespace ReportsEngine.Services
                     //Set Date Ranges to current month 
                     DateTime now = DateTime.Now;
                     var startDate = new DateTime(now.Year, now.Month, 1);
-                    if (report.Parameters.Contains(report.Parameters["pdteBeginningPostDate"])) {
-                       // report.Parameters["pdteBeginningPostDate"].Value = startDate;
+                    if (report.Parameters.Contains(report.Parameters["pdteBeginningPostDate"]))
+                    {
+                        // report.Parameters["pdteBeginningPostDate"].Value = startDate;
                     }
-                    if (report.Parameters.Contains(report.Parameters["pdteEndingPostDate"])) {
+                    if (report.Parameters.Contains(report.Parameters["pdteEndingPostDate"]))
+                    {
                         //report.Parameters["pdteEndingPostDate"].Value = startDate.AddMonths(1).AddDays(-1); //This is easier to do in the default parameters in Xtra reports. Also Margie is iffy on whether we should have post dates this way
                     }
                     if (report.Parameters.Contains(report.Parameters["plngYear"]))
@@ -116,7 +113,7 @@ namespace ReportsEngine.Services
                     }
 
                     // Assign parameters here
-                    setReportParameters(report, HttpUtility.ParseQueryString(parametersString),companyid);
+                    setReportParameters(report, HttpUtility.ParseQueryString(parametersString), companyid);
 
                     using (MemoryStream ms = new MemoryStream())
                     {
@@ -178,13 +175,14 @@ namespace ReportsEngine.Services
                     connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
                     report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
                     report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
-                    if (report.Parameters["plngCompanyID"] != null) {
+                    if (report.Parameters["plngCompanyID"] != null)
+                    {
                         report.Parameters["plngCompanyID"].Value = companyid;
                     }
 
                     string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + ReportUser + ";Password=" + ReportUserPassword + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;TrustServerCertificate=true;";
                     string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;TrustServerCertificate=true;";
-                    
+
                     var dataSources = DataSourceManager.GetDataSources(report, true);
                     foreach (var dataSource in dataSources)
                     {

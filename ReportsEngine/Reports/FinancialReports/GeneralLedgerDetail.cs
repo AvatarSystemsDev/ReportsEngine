@@ -1,8 +1,4 @@
-﻿using DevExpress.XtraReports.UI;
-using System;
-using System.Collections;
-using System.ComponentModel;
-using System.Drawing;
+﻿using System.ComponentModel;
 
 namespace ReportsEngine.Reports
 {

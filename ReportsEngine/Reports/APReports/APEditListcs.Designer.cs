@@ -1966,7 +1966,7 @@
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 20F, 20F);
             this.PageHeight = 850;
             this.PageWidth = 1400;
-            this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
+            //this.PaperKind = System.Drawing.Printing.PaperKind.Custom;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrDatabaseName,
