@@ -57,6 +57,7 @@
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngRDCheckStubCodeID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -73,6 +74,7 @@
             // detailBand1
             // 
             this.detailBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel1,
             this.Textbox7,
             this.Textbox8,
             this.Textbox9,
@@ -81,6 +83,7 @@
             this.Textbox12,
             this.Textbox13,
             this.Line1});
+            this.detailBand1.HeightF = 29.16667F;
             this.detailBand1.MultiColumn.ColumnSpacing = 50F;
             this.detailBand1.Name = "detailBand1";
             // 
@@ -230,7 +233,7 @@
             // 
             this.Tablix1_Details_DetailBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.Details_table});
-            this.Tablix1_Details_DetailBand.HeightF = 25F;
+            this.Tablix1_Details_DetailBand.HeightF = 19.79167F;
             this.Tablix1_Details_DetailBand.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1_Details_DetailBand.Name = "Tablix1_Details_DetailBand";
             // 
@@ -240,7 +243,7 @@
             this.Details_table.Name = "Details_table";
             this.Details_table.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
-            this.Details_table.SizeF = new System.Drawing.SizeF(784.9F, 25F);
+            this.Details_table.SizeF = new System.Drawing.SizeF(784.9F, 19.79167F);
             // 
             // xrTableRow1
             // 
@@ -327,6 +330,23 @@
             this.plngRDCheckStubCodeID.Type = typeof(int);
             this.plngRDCheckStubCodeID.ValueInfo = "1";
             // 
+            // xrLabel1
+            // 
+            this.xrLabel1.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel1.BorderWidth = 1F;
+            this.xrLabel1.CanGrow = false;
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel1.KeepTogether = true;
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(100F, 0F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(63.02F, 25F);
+            this.xrLabel1.Text = "Decimal\r\n";
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // RDCheckRemittanceSubreport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -385,5 +405,6 @@
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
         private DevExpress.XtraReports.Parameters.Parameter plngID;
         private DevExpress.XtraReports.Parameters.Parameter plngRDCheckStubCodeID;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
     }
 }

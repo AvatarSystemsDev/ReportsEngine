@@ -38,6 +38,9 @@ namespace ReportsEngine.Reports.RDReports
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
@@ -52,7 +55,6 @@ namespace ReportsEngine.Reports.RDReports
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.CheckPanel = new DevExpress.XtraReports.UI.XRPanel();
-            this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.Rectangle3 = new DevExpress.XtraReports.UI.XRPanel();
             this.Textbox5 = new DevExpress.XtraReports.UI.XRRichText();
             this.Textbox6 = new DevExpress.XtraReports.UI.XRRichText();
@@ -91,9 +93,9 @@ namespace ReportsEngine.Reports.RDReports
             this.plngCheckFormat = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnElectronicPayments = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnPrintedChecks = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox9)).BeginInit();
@@ -118,7 +120,7 @@ namespace ReportsEngine.Reports.RDReports
             this.detailBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrSubreport1,
             this.Rectangle2});
-            this.detailBand1.HeightF = 978.95F;
+            this.detailBand1.HeightF = 1050.825F;
             this.detailBand1.MultiColumn.ColumnSpacing = 50F;
             this.detailBand1.Name = "detailBand1";
             // 
@@ -128,9 +130,9 @@ namespace ReportsEngine.Reports.RDReports
             this.Rectangle2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Rectangle2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Rectangle2.BorderWidth = 1.39F;
-            this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(0.75F, 0F);
+            this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Rectangle2.Name = "Rectangle2";
-            this.Rectangle2.SizeF = new System.Drawing.SizeF(793.34F, 953.95F);
+            this.Rectangle2.SizeF = new System.Drawing.SizeF(794.09F, 978.95F);
             // 
             // Tablix1
             // 
@@ -216,7 +218,6 @@ namespace ReportsEngine.Reports.RDReports
             this.CheckPanel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CheckPanel.BorderWidth = 1F;
             this.CheckPanel.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrRichText1,
             this.Rectangle3,
             this.Textbox24,
             this.CheckAmountLongString15,
@@ -234,24 +235,6 @@ namespace ReportsEngine.Reports.RDReports
             this.CheckPanel.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.CheckPanel.Name = "CheckPanel";
             this.CheckPanel.SizeF = new System.Drawing.SizeF(793.34F, 352.48F);
-            // 
-            // xrRichText1
-            // 
-            this.xrRichText1.BorderColor = System.Drawing.Color.Black;
-            this.xrRichText1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrRichText1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrRichText1.BorderWidth = 1F;
-            this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>AMOUNT" +
-                    ":</b><br>\' + FormatString(\'{0:c2}\', [CheckAmount]) + \'</span>\'\n")});
-            this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.xrRichText1.KeepTogether = true;
-            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(280.5017F, 87.89001F);
-            this.xrRichText1.Name = "xrRichText1";
-            this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
-            this.xrRichText1.SizeF = new System.Drawing.SizeF(122.78F, 25.48F);
-            this.xrRichText1.StylePriority.UseFont = false;
             // 
             // Rectangle3
             // 
@@ -280,8 +263,8 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox5.BorderWidth = 1F;
             this.Textbox5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>AMOUNT" +
-                    ":</b><br>\' + [CheckNumber] + \'</span>\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>CHECK " +
+                    "#:</b><br>\' + [CheckNumber] + \'</span>\'\n")});
             this.Textbox5.KeepTogether = true;
             this.Textbox5.LocationFloat = new DevExpress.Utils.PointFloat(131.19F, 2.45F);
             this.Textbox5.Name = "Textbox5";
@@ -296,8 +279,8 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox6.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox6.BorderWidth = 1F;
             this.Textbox6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>AMOUNT" +
-                    ":</b><br>\' + FormatString(\'{0:d}\', [CheckDate]) + \'</span>\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>DATE:<" +
+                    "/b><br>\' + FormatString(\'{0:d}\', [CheckDate]) + \'</span>\'\n")});
             this.Textbox6.KeepTogether = true;
             this.Textbox6.LocationFloat = new DevExpress.Utils.PointFloat(232.58F, 2.450012F);
             this.Textbox6.Name = "Textbox6";
@@ -312,8 +295,8 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox9.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox9.BorderWidth = 1F;
             this.Textbox9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>AMOUNT" +
-                    ":</b><br>\' + FormatString(\'{0:c2}\', [OwnerGross]) + \'</span>\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>GROSS:" +
+                    "</b><br>\' + FormatString(\'{0:c2}\', [OwnerGross]) + \'</span>\'")});
             this.Textbox9.KeepTogether = true;
             this.Textbox9.LocationFloat = new DevExpress.Utils.PointFloat(348.21F, 2.820068F);
             this.Textbox9.Name = "Textbox9";
@@ -328,8 +311,8 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox10.BorderWidth = 1F;
             this.Textbox10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>AMOUNT" +
-                    ":</b><br>\' + FormatString(\'{0:c2}\', [DeductionAmount]) + \'</span>\'\n\n\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>DEDUCT" +
+                    "S:</b><br>\' + FormatString(\'{0:c2}\', [DeductionAmount]) + \'</span>\'\n\n\n")});
             this.Textbox10.KeepTogether = true;
             this.Textbox10.LocationFloat = new DevExpress.Utils.PointFloat(468.83F, 2.82F);
             this.Textbox10.Name = "Textbox10";
@@ -344,14 +327,14 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox7.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox7.BorderWidth = 1F;
             this.Textbox7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>AMOUNT" +
-                    ":</b><br>\' + FormatString(\'{0:c2}\', [TaxAmount]) + \'</span>\'\n\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>TAX:</" +
+                    "b><br>\' + FormatString(\'{0:c2}\', [TaxAmount]) + \'</span>\'\n\n")});
             this.Textbox7.KeepTogether = true;
-            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(584.45F, 2.82F);
+            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(583.07F, 2.820068F);
             this.Textbox7.Name = "Textbox7";
             this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox7.SerializableRtfString = resources.GetString("Textbox7.SerializableRtfString");
-            this.Textbox7.SizeF = new System.Drawing.SizeF(86.11F, 25.48F);
+            this.Textbox7.SizeF = new System.Drawing.SizeF(87.48993F, 25.47998F);
             // 
             // Textbox8
             // 
@@ -378,8 +361,8 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox4.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox4.BorderWidth = 1F;
             this.Textbox4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>AMOUNT" +
-                    ":</b><br>\' + [OwnerNumber] + \'</span>\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>OWNER:" +
+                    "</b><br>\' + [OwnerNumber] + \'</span>\'\n")});
             this.Textbox4.KeepTogether = true;
             this.Textbox4.LocationFloat = new DevExpress.Utils.PointFloat(5.15F, 3.84F);
             this.Textbox4.Name = "Textbox4";
@@ -622,8 +605,20 @@ namespace ReportsEngine.Reports.RDReports
             queryParameter5,
             queryParameter6});
             storedProcQuery1.StoredProcName = "RDProcessing_CheckPrintingGetChecksToPayHeaders";
+            storedProcQuery2.Name = "CheckPrintingProcessTrackingDate";
+            queryParameter7.Name = "@plngCompanyID";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter8.Name = "@plngReportEnum";
+            queryParameter8.Type = typeof(int);
+            queryParameter8.ValueInfo = "7";
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter7,
+            queryParameter8});
+            storedProcQuery2.StoredProcName = "RDReprint_GetProcessDates";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1});
+            storedProcQuery1,
+            storedProcQuery2});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // pageHeaderBand1
@@ -713,7 +708,7 @@ namespace ReportsEngine.Reports.RDReports
             this.plngCheckPrintingProcessTrackingID.Description = "plngCheckPrintingProcessTrackingID";
             this.plngCheckPrintingProcessTrackingID.Name = "plngCheckPrintingProcessTrackingID";
             this.plngCheckPrintingProcessTrackingID.Type = typeof(int);
-            this.plngCheckPrintingProcessTrackingID.ValueInfo = "2";
+            this.plngCheckPrintingProcessTrackingID.ValueInfo = "0";
             this.plngCheckPrintingProcessTrackingID.Visible = false;
             // 
             // pstrStartingOwnerNumber
@@ -759,12 +754,25 @@ namespace ReportsEngine.Reports.RDReports
             this.pbooReturnPrintedChecks.Type = typeof(bool);
             this.pbooReturnPrintedChecks.ValueInfo = "True";
             // 
+            // plngCompanyID
+            // 
+            this.plngCompanyID.Description = "Company ID";
+            this.plngCompanyID.Name = "plngCompanyID";
+            this.plngCompanyID.Type = typeof(int);
+            this.plngCompanyID.ValueInfo = "1";
+            this.plngCompanyID.Visible = false;
+            // 
             // xrSubreport1
             // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0.7499695F, 0F);
+            this.xrSubreport1.GenerateOwnPages = true;
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
             this.xrSubreport1.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(779.2501F, 913.325F);
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(800F, 913.325F);
             // 
             // RDCheckStubs
             // 
@@ -795,7 +803,8 @@ namespace ReportsEngine.Reports.RDReports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSignPath, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormat, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnElectronicPayments, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnPrintedChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnPrintedChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -809,10 +818,10 @@ namespace ReportsEngine.Reports.RDReports
             this.pstrSignPath,
             this.plngCheckFormat,
             this.pbooReturnElectronicPayments,
-            this.pbooReturnPrintedChecks});
+            this.pbooReturnPrintedChecks,
+            this.plngCompanyID});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox9)).EndInit();
@@ -877,8 +886,8 @@ namespace ReportsEngine.Reports.RDReports
         private DevExpress.XtraReports.Parameters.Parameter plngCheckFormat;
         private DevExpress.XtraReports.Parameters.Parameter pbooReturnElectronicPayments;
         private DevExpress.XtraReports.Parameters.Parameter pbooReturnPrintedChecks;
-        private XRRichText xrRichText1;
         private XRPictureBox xrPictureBox1;
         private XRSubreport xrSubreport1;
+        private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
     }
 }

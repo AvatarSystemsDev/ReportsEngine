@@ -2670,10 +2670,10 @@
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "GeneralLedgerDetailbyProperty";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
+            this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 19F, 20F, 20F);
             this.PageHeight = 850;
             this.PageWidth = 1100;
-            //this.PaperKind = System.Drawing.Printing.PaperKind.LetterRotated;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -2724,7 +2724,7 @@
             this.parameter1,
             this.plngOperatorsToShow,
             this.pbooShowCriteria});
-            this.Version = "22.2";
+            this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

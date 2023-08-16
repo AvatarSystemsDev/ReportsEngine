@@ -208,7 +208,6 @@
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            //this.xrLabel5.TextTrimming = System.Drawing.StringTrimming.EllipsisPath;
             // 
             // xrLabel2
             // 
@@ -349,7 +348,7 @@
             this.Textbox4.StylePriority.UseFont = false;
             this.Textbox4.StylePriority.UsePadding = false;
             this.Textbox4.StylePriority.UseTextAlignment = false;
-            this.Textbox4.Text = "Account Center";
+            this.Textbox4.Text = "Accounting Center";
             this.Textbox4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox14
@@ -507,7 +506,7 @@
             this.pstrEndingAccountCenterNumber,
             this.pbooShowActive,
             this.pstrSelectAccountingCenter});
-            this.Version = "22.2";
+            this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
