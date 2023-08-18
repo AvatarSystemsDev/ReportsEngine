@@ -578,6 +578,18 @@
     <Compile Include="Reports\MDReports\ExcelChartOfAccountsAmounts.Designer.cs">
       <DependentUpon>ExcelChartOfAccountsAmounts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckRemittanceSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckRemittanceSubreport.Designer.cs">
+      <DependentUpon>ExcelRDCheckRemittanceSubreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckStubs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckStubs.Designer.cs">
+      <DependentUpon>ExcelRDCheckStubs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\RDCheckRemittanceSubreport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -715,6 +727,12 @@
     <EmbeddedResource Include="Reports\MDReports\ExcelChartOfAccountsAmounts.resx">
       <DependentUpon>ExcelChartOfAccountsAmounts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckRemittanceSubreport.resx">
+      <DependentUpon>ExcelRDCheckRemittanceSubreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckStubs.resx">
+      <DependentUpon>ExcelRDCheckStubs.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDCheckRemittanceSubreport.resx">
       <DependentUpon>RDCheckRemittanceSubreport.cs</DependentUpon>
     </EmbeddedResource>
@@ -775,14 +793,6 @@
   </ProjectExtensions>
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
   <Import Project="..\..\WebApiODataService\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets" Condition="Exists('..\..\WebApiODataService\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" />
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-    <Error Condition="!Exists('..\..\WebApiODataService\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\WebApiODataService\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.4.1.0\build\net472\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.targets'))" />
-    <Error Condition="!Exists('..\..\WebApiOdataService\packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\WebApiOdataService\packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
-    <Error Condition="!Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets'))" />
-  </Target>
   <Import Project="..\..\WebApiOdataService\packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\..\WebApiOdataService\packages\Microsoft.Data.SqlClient.SNI.5.1.0\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
   <Import Project="..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets" Condition="Exists('..\packages\Microsoft.Data.SqlClient.SNI.5.1.1\build\net462\Microsoft.Data.SqlClient.SNI.targets')" />
 </Project>

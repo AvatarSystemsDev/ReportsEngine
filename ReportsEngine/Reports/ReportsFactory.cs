@@ -38,7 +38,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ChartOfAccountsAmounts", () => new ChartOfAccountsAmounts());
             Reports.Add("ExcelChartOfAccountsAmounts", () => new ExcelChartOfAccountsAmounts());
             Reports.Add("RDCheckStubs", () => new RDCheckStubs()); // Will print RD Check Stubs. Might delete later. Just need to see what the report looks like.
-
+            Reports.Add("ExcelRDCheckStubs", () => new ExcelRDCheckStubs());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

@@ -79,11 +79,11 @@ namespace ReportsEngine.Services
                 }
                 else if (indexA > indexQ)
                 {
-                    companyid = Int32.Parse(url.Substring(companyidindex, indexQ));
+                    companyid = Int32.Parse(url.Substring(companyidindex, indexA - companyidindex));
                 }
                 else
                 {
-                    companyid = Int32.Parse(url.Substring(companyidindex, indexA));
+                    companyid = Int32.Parse(url.Substring(companyidindex, indexQ - companyidindex));
                 }
                 XtraReport report = null;
 

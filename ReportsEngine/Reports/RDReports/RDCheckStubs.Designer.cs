@@ -30,7 +30,6 @@ namespace ReportsEngine.Reports.RDReports
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDCheckStubs));
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
@@ -41,20 +40,21 @@ namespace ReportsEngine.Reports.RDReports
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDCheckStubs));
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
-            this.Rectangle2 = new DevExpress.XtraReports.UI.XRPanel();
+            this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Tablix1_Details_DetailBand = new DevExpress.XtraReports.UI.DetailBand();
-            this.Details_table = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.CheckAmountLongString10 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell2 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.CheckPanel = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
+            this.Rectangle5 = new DevExpress.XtraReports.UI.XRPanel();
             this.Rectangle3 = new DevExpress.XtraReports.UI.XRPanel();
             this.Textbox5 = new DevExpress.XtraReports.UI.XRRichText();
             this.Textbox6 = new DevExpress.XtraReports.UI.XRRichText();
@@ -76,26 +76,21 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox20 = new DevExpress.XtraReports.UI.XRLabel();
             this.CheckAmountLongString12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.OverallTotalPages = new DevExpress.XtraReports.UI.XRLabel();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbitMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbitSignature = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCheckPrintingProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrStartingOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSignPath = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckFormat = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnElectronicPayments = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCheckPrintingProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnPrintedChecks = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.OverallTotalPages = new DevExpress.XtraReports.UI.XRLabel();
+            this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
-            ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox9)).BeginInit();
@@ -104,6 +99,53 @@ namespace ReportsEngine.Reports.RDReports
             ((System.ComponentModel.ISupportInitialize)(this.Textbox8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Dynamic
+            // 
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
+            this.Dynamic.Name = "Dynamic";
+            storedProcQuery1.Name = "RDCheckHeader";
+            queryParameter1.Name = "@plngCheckPrintingProcessTrackingID";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(string));
+            queryParameter2.Name = "@pstrStartingOwnerNumber";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrStartingOwnerNumber", typeof(string));
+            queryParameter3.Name = "@pstrEndingOwnerNumber";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter4.Name = "@plngCheckFormat";
+            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCheckFormat", typeof(string));
+            queryParameter5.Name = "@pbooReturnElectronicPayments";
+            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(string));
+            queryParameter6.Name = "@pbooReturnPrintedChecks";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooReturnPrintedChecks", typeof(string));
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1,
+            queryParameter2,
+            queryParameter3,
+            queryParameter4,
+            queryParameter5,
+            queryParameter6});
+            storedProcQuery1.StoredProcName = "RDProcessing_CheckPrintingGetChecksToPayHeaders";
+            storedProcQuery2.Name = "CheckPrintingProcessTrackingDate";
+            queryParameter7.Name = "@plngCompanyID";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter8.Name = "@plngReportEnum";
+            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("7", typeof(int));
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter7,
+            queryParameter8});
+            storedProcQuery2.StoredProcName = "RDReprint_GetProcessDates";
+            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1,
+            storedProcQuery2});
+            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
             // 
@@ -117,22 +159,30 @@ namespace ReportsEngine.Reports.RDReports
             // 
             // detailBand1
             // 
-            this.detailBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrSubreport1,
-            this.Rectangle2});
-            this.detailBand1.HeightF = 1050.825F;
+            this.detailBand1.HeightF = 0F;
             this.detailBand1.MultiColumn.ColumnSpacing = 50F;
             this.detailBand1.Name = "detailBand1";
+            this.detailBand1.Visible = false;
             // 
-            // Rectangle2
+            // pstrDatabaseName
             // 
-            this.Rectangle2.BorderColor = System.Drawing.Color.Black;
-            this.Rectangle2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Rectangle2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Rectangle2.BorderWidth = 1.39F;
-            this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.Rectangle2.Name = "Rectangle2";
-            this.Rectangle2.SizeF = new System.Drawing.SizeF(794.09F, 978.95F);
+            this.pstrDatabaseName.Description = "pstrDatabaseName";
+            this.pstrDatabaseName.Name = "pstrDatabaseName";
+            this.pstrDatabaseName.Visible = false;
+            // 
+            // pstrServerName
+            // 
+            this.pstrServerName.Description = "pstrServerName";
+            this.pstrServerName.Name = "pstrServerName";
+            this.pstrServerName.Visible = false;
+            // 
+            // plngUserID
+            // 
+            this.plngUserID.Description = "plngUserID";
+            this.plngUserID.Name = "plngUserID";
+            this.plngUserID.Type = typeof(int);
+            this.plngUserID.ValueInfo = "1";
+            this.plngUserID.Visible = false;
             // 
             // Tablix1
             // 
@@ -140,84 +190,69 @@ namespace ReportsEngine.Reports.RDReports
             this.Tablix1_Details_DetailBand});
             this.Tablix1.DataMember = "RDCheckHeader";
             this.Tablix1.DataSource = this.Dynamic;
-            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooReturnPrintedChecks")});
             this.Tablix1.Level = 0;
             this.Tablix1.Name = "Tablix1";
             // 
             // Tablix1_Details_DetailBand
             // 
             this.Tablix1_Details_DetailBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Details_table});
-            this.Tablix1_Details_DetailBand.HeightF = 950.83F;
+            this.xrSubreport1,
+            this.xrLabel1,
+            this.xrLabel2,
+            this.xrPanel1});
+            this.Tablix1_Details_DetailBand.HeightF = 951.9049F;
             this.Tablix1_Details_DetailBand.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1_Details_DetailBand.Name = "Tablix1_Details_DetailBand";
             // 
-            // Details_table
+            // xrLabel1
             // 
-            this.Details_table.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.Details_table.Name = "Details_table";
-            this.Details_table.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
-            this.xrTableRow1,
-            this.xrTableRow2,
-            this.xrTableRow3});
-            this.Details_table.SizeF = new System.Drawing.SizeF(793.34F, 950.83F);
-            // 
-            // xrTableRow1
-            // 
-            this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.CheckAmountLongString10});
-            this.xrTableRow1.Name = "xrTableRow1";
-            this.xrTableRow1.Weight = 0.046096569358635632D;
-            // 
-            // CheckAmountLongString10
-            // 
-            this.CheckAmountLongString10.BorderColor = System.Drawing.Color.Black;
-            this.CheckAmountLongString10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.CheckAmountLongString10.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.CheckAmountLongString10.BorderWidth = 1F;
-            this.CheckAmountLongString10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.xrLabel1.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel1.BorderWidth = 1F;
+            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyAddressBlockShort]")});
-            this.CheckAmountLongString10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.CheckAmountLongString10.KeepTogether = true;
-            this.CheckAmountLongString10.Name = "CheckAmountLongString10";
-            this.CheckAmountLongString10.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.CheckAmountLongString10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.CheckAmountLongString10.Weight = 12998082D;
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel1.KeepTogether = true;
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(793.34F, 45.78027F);
+            this.xrLabel1.StylePriority.UseBorderColor = false;
+            this.xrLabel1.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel1.StylePriority.UseBorders = false;
+            this.xrLabel1.StylePriority.UseBorderWidth = false;
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UsePadding = false;
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // xrTableRow2
+            // xrLabel2
             // 
-            this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell1});
-            this.xrTableRow2.Name = "xrTableRow2";
-            this.xrTableRow2.Weight = 0.58319574431236487D;
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 45.78031F);
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(793.34F, 554.1939F);
+            this.xrLabel2.StylePriority.UseFont = false;
             // 
-            // xrTableCell1
+            // xrPanel1
             // 
-            this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Weight = 12998082D;
+            this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Rectangle5});
+            this.xrPanel1.KeepTogether = false;
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 599.9742F);
+            this.xrPanel1.Name = "xrPanel1";
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(793.34F, 351.9307F);
+            this.xrPanel1.StylePriority.UseFont = false;
             // 
-            // xrTableRow3
+            // Rectangle5
             // 
-            this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell2});
-            this.xrTableRow3.Name = "xrTableRow3";
-            this.xrTableRow3.Weight = 0.37070770237686168D;
-            // 
-            // xrTableCell2
-            // 
-            this.xrTableCell2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.CheckPanel});
-            this.xrTableCell2.Name = "xrTableCell2";
-            this.xrTableCell2.Weight = 12998082D;
-            // 
-            // CheckPanel
-            // 
-            this.CheckPanel.BorderColor = System.Drawing.Color.Black;
-            this.CheckPanel.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.CheckPanel.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.CheckPanel.BorderWidth = 1F;
-            this.CheckPanel.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Rectangle5.BorderColor = System.Drawing.Color.Black;
+            this.Rectangle5.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Rectangle5.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Rectangle5.BorderWidth = 1F;
+            this.Rectangle5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.Rectangle3,
             this.Textbox24,
             this.CheckAmountLongString15,
@@ -232,9 +267,9 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox20,
             this.CheckAmountLongString12,
             this.xrPictureBox1});
-            this.CheckPanel.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.CheckPanel.Name = "CheckPanel";
-            this.CheckPanel.SizeF = new System.Drawing.SizeF(793.34F, 352.48F);
+            this.Rectangle5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.Rectangle5.Name = "Rectangle5";
+            this.Rectangle5.SizeF = new System.Drawing.SizeF(794.09F, 343.1051F);
             // 
             // Rectangle3
             // 
@@ -254,7 +289,7 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox4});
             this.Rectangle3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Rectangle3.Name = "Rectangle3";
-            this.Rectangle3.SizeF = new System.Drawing.SizeF(793.34F, 32.47F);
+            this.Rectangle3.SizeF = new System.Drawing.SizeF(793.34F, 23.09503F);
             // 
             // Textbox5
             // 
@@ -282,11 +317,11 @@ namespace ReportsEngine.Reports.RDReports
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>DATE:<" +
                     "/b><br>\' + FormatString(\'{0:d}\', [CheckDate]) + \'</span>\'\n")});
             this.Textbox6.KeepTogether = true;
-            this.Textbox6.LocationFloat = new DevExpress.Utils.PointFloat(232.58F, 2.450012F);
+            this.Textbox6.LocationFloat = new DevExpress.Utils.PointFloat(231.84F, 2.45F);
             this.Textbox6.Name = "Textbox6";
             this.Textbox6.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox6.SerializableRtfString = resources.GetString("Textbox6.SerializableRtfString");
-            this.Textbox6.SizeF = new System.Drawing.SizeF(115.63F, 25.84998F);
+            this.Textbox6.SizeF = new System.Drawing.SizeF(116.37F, 25.85F);
             // 
             // Textbox9
             // 
@@ -296,13 +331,13 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox9.BorderWidth = 1F;
             this.Textbox9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>GROSS:" +
-                    "</b><br>\' + FormatString(\'{0:c2}\', [OwnerGross]) + \'</span>\'")});
+                    "</b><br>\' + FormatString(\'{0:c2}\', [OwnerGross]) + \'</span>\'\n")});
             this.Textbox9.KeepTogether = true;
-            this.Textbox9.LocationFloat = new DevExpress.Utils.PointFloat(348.21F, 2.820068F);
+            this.Textbox9.LocationFloat = new DevExpress.Utils.PointFloat(348.2F, 2.82F);
             this.Textbox9.Name = "Textbox9";
             this.Textbox9.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox9.SerializableRtfString = resources.GetString("Textbox9.SerializableRtfString");
-            this.Textbox9.SizeF = new System.Drawing.SizeF(120.6099F, 25.47998F);
+            this.Textbox9.SizeF = new System.Drawing.SizeF(120.62F, 25.48F);
             // 
             // Textbox10
             // 
@@ -312,7 +347,7 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox10.BorderWidth = 1F;
             this.Textbox10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>DEDUCT" +
-                    "S:</b><br>\' + FormatString(\'{0:c2}\', [DeductionAmount]) + \'</span>\'\n\n\n")});
+                    "S:</b><br>\' + FormatString(\'{0:c2}\', [DeductionAmount]) + \'</span>\'\n")});
             this.Textbox10.KeepTogether = true;
             this.Textbox10.LocationFloat = new DevExpress.Utils.PointFloat(468.83F, 2.82F);
             this.Textbox10.Name = "Textbox10";
@@ -328,13 +363,13 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox7.BorderWidth = 1F;
             this.Textbox7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>TAX:</" +
-                    "b><br>\' + FormatString(\'{0:c2}\', [TaxAmount]) + \'</span>\'\n\n")});
+                    "b><br>\' + FormatString(\'{0:c2}\', [TaxAmount]) + \'</span>\'\n")});
             this.Textbox7.KeepTogether = true;
-            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(583.07F, 2.820068F);
+            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(584.45F, 2.82F);
             this.Textbox7.Name = "Textbox7";
             this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox7.SerializableRtfString = resources.GetString("Textbox7.SerializableRtfString");
-            this.Textbox7.SizeF = new System.Drawing.SizeF(87.48993F, 25.47998F);
+            this.Textbox7.SizeF = new System.Drawing.SizeF(86.11F, 25.48F);
             // 
             // Textbox8
             // 
@@ -345,14 +380,12 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>AMOUNT" +
                     ":</b><br>\' + FormatString(\'{0:c2}\', [CheckAmount]) + \'</span>\'\n")});
-            this.Textbox8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox8.KeepTogether = true;
             this.Textbox8.LocationFloat = new DevExpress.Utils.PointFloat(670.56F, 2.82F);
             this.Textbox8.Name = "Textbox8";
             this.Textbox8.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox8.SerializableRtfString = resources.GetString("Textbox8.SerializableRtfString");
             this.Textbox8.SizeF = new System.Drawing.SizeF(122.78F, 25.48F);
-            this.Textbox8.StylePriority.UseFont = false;
             // 
             // Textbox4
             // 
@@ -361,8 +394,8 @@ namespace ReportsEngine.Reports.RDReports
             this.Textbox4.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox4.BorderWidth = 1F;
             this.Textbox4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>OWNER:" +
-                    "</b><br>\' + [OwnerNumber] + \'</span>\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>Owner:" +
+                    "</b><br>\' + [OwnerNumber] + \'</span>\'\n\n")});
             this.Textbox4.KeepTogether = true;
             this.Textbox4.LocationFloat = new DevExpress.Utils.PointFloat(5.15F, 3.84F);
             this.Textbox4.Name = "Textbox4";
@@ -569,69 +602,106 @@ namespace ReportsEngine.Reports.RDReports
             // xrPictureBox1
             // 
             this.xrPictureBox1.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(global::ReportsEngine.Properties.Resources.NonNegotiable, true);
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(5.149969F, 9.999939F);
+            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(15.15001F, 0F);
             this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(784.85F, 342.48F);
+            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(784.85F, 333.105F);
             this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
-            // Dynamic
+            // pageFooterBand1
             // 
-            this.Dynamic.ConnectionName = "Providence_Connection 1";
-            this.Dynamic.Name = "Dynamic";
-            storedProcQuery1.Name = "RDCheckHeader";
-            queryParameter1.Name = "@plngCheckPrintingProcessTrackingID";
-            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(string));
-            queryParameter2.Name = "@pstrStartingOwnerNumber";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrStartingOwnerNumber", typeof(string));
-            queryParameter3.Name = "@pstrEndingOwnerNumber";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
-            queryParameter4.Name = "@plngCheckFormat";
-            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCheckFormat", typeof(string));
-            queryParameter5.Name = "@pbooReturnElectronicPayments";
-            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(string));
-            queryParameter6.Name = "@pbooReturnPrintedChecks";
-            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooReturnPrintedChecks", typeof(string));
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1,
-            queryParameter2,
-            queryParameter3,
-            queryParameter4,
-            queryParameter5,
-            queryParameter6});
-            storedProcQuery1.StoredProcName = "RDProcessing_CheckPrintingGetChecksToPayHeaders";
-            storedProcQuery2.Name = "CheckPrintingProcessTrackingDate";
-            queryParameter7.Name = "@plngCompanyID";
-            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter8.Name = "@plngReportEnum";
-            queryParameter8.Type = typeof(int);
-            queryParameter8.ValueInfo = "7";
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter7,
-            queryParameter8});
-            storedProcQuery2.StoredProcName = "RDReprint_GetProcessDates";
-            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1,
-            storedProcQuery2});
-            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
+            this.pageFooterBand1.BorderColor = System.Drawing.Color.Black;
+            this.pageFooterBand1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.pageFooterBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.pageFooterBand1.BorderWidth = 1F;
+            this.pageFooterBand1.HeightF = 0F;
+            this.pageFooterBand1.Name = "pageFooterBand1";
+            this.pageFooterBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // pageHeaderBand1
+            // Subtitle
             // 
-            this.pageHeaderBand1.BorderColor = System.Drawing.Color.Black;
-            this.pageHeaderBand1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.pageHeaderBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.pageHeaderBand1.BorderWidth = 1F;
-            this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.OverallTotalPages});
-            this.pageHeaderBand1.HeightF = 25F;
-            this.pageHeaderBand1.Name = "pageHeaderBand1";
-            this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.Subtitle.Description = "Subtitle";
+            this.Subtitle.Name = "Subtitle";
+            this.Subtitle.Visible = false;
+            // 
+            // pbitMICR
+            // 
+            this.pbitMICR.Description = "pbitMICR";
+            this.pbitMICR.Name = "pbitMICR";
+            this.pbitMICR.Type = typeof(bool);
+            this.pbitMICR.ValueInfo = "False";
+            this.pbitMICR.Visible = false;
+            // 
+            // pbitSignature
+            // 
+            this.pbitSignature.Description = "pbitSignature";
+            this.pbitSignature.Name = "pbitSignature";
+            this.pbitSignature.Type = typeof(bool);
+            this.pbitSignature.ValueInfo = "False";
+            this.pbitSignature.Visible = false;
+            // 
+            // plngCompanyID
+            // 
+            this.plngCompanyID.Description = "plngCompanyID";
+            this.plngCompanyID.Name = "plngCompanyID";
+            this.plngCompanyID.Type = typeof(int);
+            this.plngCompanyID.ValueInfo = "1";
+            this.plngCompanyID.Visible = false;
+            // 
+            // pstrStartingOwnerNumber
+            // 
+            this.pstrStartingOwnerNumber.Description = "pstrStartingOwnerNumber";
+            this.pstrStartingOwnerNumber.Name = "pstrStartingOwnerNumber";
+            this.pstrStartingOwnerNumber.ValueInfo = "1";
+            this.pstrStartingOwnerNumber.Visible = false;
+            // 
+            // pstrEndingOwnerNumber
+            // 
+            this.pstrEndingOwnerNumber.Description = "pstrEndingOwnerNumber";
+            this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
+            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZ";
+            this.pstrEndingOwnerNumber.Visible = false;
+            // 
+            // pstrSignPath
+            // 
+            this.pstrSignPath.Description = "pstrSignPath";
+            this.pstrSignPath.Name = "pstrSignPath";
+            this.pstrSignPath.ValueInfo = "0";
+            this.pstrSignPath.Visible = false;
+            // 
+            // plngCheckFormat
+            // 
+            this.plngCheckFormat.Description = "plngCheckFormat";
+            this.plngCheckFormat.Name = "plngCheckFormat";
+            this.plngCheckFormat.Type = typeof(int);
+            this.plngCheckFormat.ValueInfo = "1";
+            this.plngCheckFormat.Visible = false;
+            // 
+            // pbooReturnElectronicPayments
+            // 
+            this.pbooReturnElectronicPayments.Description = "Return Electronic Payments";
+            this.pbooReturnElectronicPayments.Name = "pbooReturnElectronicPayments";
+            this.pbooReturnElectronicPayments.Type = typeof(bool);
+            this.pbooReturnElectronicPayments.ValueInfo = "True";
+            this.pbooReturnElectronicPayments.Visible = false;
+            // 
+            // plngCheckPrintingProcessTrackingID
+            // 
+            this.plngCheckPrintingProcessTrackingID.Description = "Processing Date";
+            this.plngCheckPrintingProcessTrackingID.Name = "plngCheckPrintingProcessTrackingID";
+            this.plngCheckPrintingProcessTrackingID.Type = typeof(int);
+            this.plngCheckPrintingProcessTrackingID.ValueInfo = "1";
+            dynamicListLookUpSettings1.DataMember = "CheckPrintingProcessTrackingDate";
+            dynamicListLookUpSettings1.DataSource = this.Dynamic;
+            dynamicListLookUpSettings1.DisplayMember = "ProcessingDate";
+            dynamicListLookUpSettings1.ValueMember = "ID";
+            this.plngCheckPrintingProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings1;
+            // 
+            // pbooReturnPrintedChecks
+            // 
+            this.pbooReturnPrintedChecks.Description = "Show Printed Checks";
+            this.pbooReturnPrintedChecks.Name = "pbooReturnPrintedChecks";
+            this.pbooReturnPrintedChecks.Type = typeof(bool);
+            this.pbooReturnPrintedChecks.ValueInfo = "True";
             // 
             // OverallTotalPages
             // 
@@ -645,134 +715,35 @@ namespace ReportsEngine.Reports.RDReports
             this.OverallTotalPages.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.OverallTotalPages.Multiline = true;
             this.OverallTotalPages.Name = "OverallTotalPages";
-            this.OverallTotalPages.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.OverallTotalPages.SizeF = new System.Drawing.SizeF(800F, 25F);
+            this.OverallTotalPages.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.OverallTotalPages.SizeF = new System.Drawing.SizeF(794.09F, 2F);
+            this.OverallTotalPages.StylePriority.UsePadding = false;
             this.OverallTotalPages.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.OverallTotalPages.Visible = false;
             // 
-            // pageFooterBand1
+            // pageHeaderBand1
             // 
-            this.pageFooterBand1.BorderColor = System.Drawing.Color.Black;
-            this.pageFooterBand1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.pageFooterBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.pageFooterBand1.BorderWidth = 1F;
-            this.pageFooterBand1.Expanded = false;
-            this.pageFooterBand1.HeightF = 1.04F;
-            this.pageFooterBand1.Name = "pageFooterBand1";
-            this.pageFooterBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // pstrDatabaseName
-            // 
-            this.pstrDatabaseName.Description = "pstrDatabaseName";
-            this.pstrDatabaseName.Name = "pstrDatabaseName";
-            this.pstrDatabaseName.Visible = false;
-            // 
-            // pstrServerName
-            // 
-            this.pstrServerName.Description = "pstrServerName";
-            this.pstrServerName.Name = "pstrServerName";
-            this.pstrServerName.Visible = false;
-            // 
-            // Subtitle
-            // 
-            this.Subtitle.Description = "Subtitle";
-            this.Subtitle.Name = "Subtitle";
-            this.Subtitle.Visible = false;
-            // 
-            // plngUserID
-            // 
-            this.plngUserID.Description = "plngUserID";
-            this.plngUserID.Name = "plngUserID";
-            this.plngUserID.Type = typeof(int);
-            this.plngUserID.ValueInfo = "1";
-            this.plngUserID.Visible = false;
-            // 
-            // pbitMICR
-            // 
-            this.pbitMICR.Description = "pbitMICR";
-            this.pbitMICR.Name = "pbitMICR";
-            this.pbitMICR.Type = typeof(bool);
-            this.pbitMICR.ValueInfo = "False";
-            this.pbitMICR.Visible = false;
-            // 
-            // pbitSignature
-            // 
-            this.pbitSignature.Description = "Signature";
-            this.pbitSignature.Name = "pbitSignature";
-            this.pbitSignature.Type = typeof(bool);
-            this.pbitSignature.ValueInfo = "False";
-            this.pbitSignature.Visible = false;
-            // 
-            // plngCheckPrintingProcessTrackingID
-            // 
-            this.plngCheckPrintingProcessTrackingID.Description = "plngCheckPrintingProcessTrackingID";
-            this.plngCheckPrintingProcessTrackingID.Name = "plngCheckPrintingProcessTrackingID";
-            this.plngCheckPrintingProcessTrackingID.Type = typeof(int);
-            this.plngCheckPrintingProcessTrackingID.ValueInfo = "0";
-            this.plngCheckPrintingProcessTrackingID.Visible = false;
-            // 
-            // pstrStartingOwnerNumber
-            // 
-            this.pstrStartingOwnerNumber.Description = "pstrStartingOwnerNumber";
-            this.pstrStartingOwnerNumber.Name = "pstrStartingOwnerNumber";
-            this.pstrStartingOwnerNumber.ValueInfo = "1";
-            this.pstrStartingOwnerNumber.Visible = false;
-            // 
-            // pstrEndingOwnerNumber
-            // 
-            this.pstrEndingOwnerNumber.Description = "pstrEndingOwnerNumber";
-            this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
-            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZ";
-            this.pstrEndingOwnerNumber.Visible = false;
-            // 
-            // pstrSignPath
-            // 
-            this.pstrSignPath.Description = "pstrSignPath";
-            this.pstrSignPath.Name = "pstrSignPath";
-            this.pstrSignPath.Visible = false;
-            // 
-            // plngCheckFormat
-            // 
-            this.plngCheckFormat.Description = "plngCheckFormat";
-            this.plngCheckFormat.Name = "plngCheckFormat";
-            this.plngCheckFormat.Type = typeof(int);
-            this.plngCheckFormat.ValueInfo = "1";
-            this.plngCheckFormat.Visible = false;
-            // 
-            // pbooReturnElectronicPayments
-            // 
-            this.pbooReturnElectronicPayments.Description = "pbooReturnElectronicPayments";
-            this.pbooReturnElectronicPayments.Name = "pbooReturnElectronicPayments";
-            this.pbooReturnElectronicPayments.Type = typeof(bool);
-            this.pbooReturnElectronicPayments.ValueInfo = "True";
-            this.pbooReturnElectronicPayments.Visible = false;
-            // 
-            // pbooReturnPrintedChecks
-            // 
-            this.pbooReturnPrintedChecks.Description = "Show Printed Checks";
-            this.pbooReturnPrintedChecks.Name = "pbooReturnPrintedChecks";
-            this.pbooReturnPrintedChecks.Type = typeof(bool);
-            this.pbooReturnPrintedChecks.ValueInfo = "True";
-            // 
-            // plngCompanyID
-            // 
-            this.plngCompanyID.Description = "Company ID";
-            this.plngCompanyID.Name = "plngCompanyID";
-            this.plngCompanyID.Type = typeof(int);
-            this.plngCompanyID.ValueInfo = "1";
-            this.plngCompanyID.Visible = false;
+            this.pageHeaderBand1.BorderColor = System.Drawing.Color.Black;
+            this.pageHeaderBand1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.pageHeaderBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.pageHeaderBand1.BorderWidth = 1F;
+            this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.OverallTotalPages});
+            this.pageHeaderBand1.HeightF = 2F;
+            this.pageHeaderBand1.Name = "pageHeaderBand1";
+            this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.pageHeaderBand1.Visible = false;
             // 
             // xrSubreport1
             // 
-            this.xrSubreport1.GenerateOwnPages = true;
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0.7499695F, 45.78028F);
             this.xrSubreport1.Name = "xrSubreport1";
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
             this.xrSubreport1.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(800F, 913.325F);
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(793.34F, 554.194F);
             // 
             // RDCheckStubs
             // 
@@ -797,14 +768,14 @@ namespace ReportsEngine.Reports.RDReports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbitMICR, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbitSignature, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrStartingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSignPath, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormat, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnElectronicPayments, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnPrintedChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnPrintedChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -812,16 +783,15 @@ namespace ReportsEngine.Reports.RDReports
             this.plngUserID,
             this.pbitMICR,
             this.pbitSignature,
-            this.plngCheckPrintingProcessTrackingID,
+            this.plngCompanyID,
             this.pstrStartingOwnerNumber,
             this.pstrEndingOwnerNumber,
             this.pstrSignPath,
             this.plngCheckFormat,
             this.pbooReturnElectronicPayments,
-            this.pbooReturnPrintedChecks,
-            this.plngCompanyID});
+            this.plngCheckPrintingProcessTrackingID,
+            this.pbooReturnPrintedChecks});
             this.Version = "23.1";
-            ((System.ComponentModel.ISupportInitialize)(this.Details_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox9)).EndInit();
@@ -835,59 +805,54 @@ namespace ReportsEngine.Reports.RDReports
 
         #endregion
 
-        private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
-        private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
-        private DevExpress.XtraReports.UI.DetailBand detailBand1;
-        private DevExpress.XtraReports.UI.XRPanel Rectangle2;
-        private DevExpress.XtraReports.UI.DetailReportBand Tablix1;
-        private DevExpress.XtraReports.UI.DetailBand Tablix1_Details_DetailBand;
-        private DevExpress.XtraReports.UI.XRTable Details_table;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
-        private DevExpress.XtraReports.UI.XRTableCell CheckAmountLongString10;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell2;
-        private DevExpress.XtraReports.UI.XRPanel CheckPanel;
-        private DevExpress.XtraReports.UI.XRPanel Rectangle3;
-        private DevExpress.XtraReports.UI.XRRichText Textbox5;
-        private DevExpress.XtraReports.UI.XRRichText Textbox6;
-        private DevExpress.XtraReports.UI.XRRichText Textbox9;
-        private DevExpress.XtraReports.UI.XRRichText Textbox10;
-        private DevExpress.XtraReports.UI.XRRichText Textbox7;
-        private DevExpress.XtraReports.UI.XRRichText Textbox8;
-        private DevExpress.XtraReports.UI.XRRichText Textbox4;
-        private DevExpress.XtraReports.UI.XRLabel Textbox24;
-        private DevExpress.XtraReports.UI.XRLabel CheckAmountLongString15;
-        private DevExpress.XtraReports.UI.XRLabel CheckAmountLongString14;
-        private DevExpress.XtraReports.UI.XRLabel Textbox18;
-        private DevExpress.XtraReports.UI.XRLabel CheckAmountLongString13;
-        private DevExpress.XtraReports.UI.XRLabel CheckAmountShortString4;
-        private DevExpress.XtraReports.UI.XRLabel Textbox14;
-        private DevExpress.XtraReports.UI.XRLabel Textbox16;
-        private DevExpress.XtraReports.UI.XRLabel CheckDate2;
-        private DevExpress.XtraReports.UI.XRLabel CheckAmountShortString3;
-        private DevExpress.XtraReports.UI.XRLabel Textbox20;
-        private DevExpress.XtraReports.UI.XRLabel CheckAmountLongString12;
+        private TopMarginBand topMarginBand1;
+        private BottomMarginBand bottomMarginBand1;
+        private DetailBand detailBand1;
+        private DetailReportBand Tablix1;
+        private DetailBand Tablix1_Details_DetailBand;
+        private XRPanel Rectangle5;
+        private XRPanel Rectangle3;
+        private XRRichText Textbox5;
+        private XRRichText Textbox6;
+        private XRRichText Textbox9;
+        private XRRichText Textbox10;
+        private XRRichText Textbox7;
+        private XRRichText Textbox8;
+        private XRRichText Textbox4;
+        private XRLabel Textbox24;
+        private XRLabel CheckAmountLongString15;
+        private XRLabel CheckAmountLongString14;
+        private XRLabel Textbox18;
+        private XRLabel CheckAmountLongString13;
+        private XRLabel CheckAmountShortString4;
+        private XRLabel Textbox14;
+        private XRLabel Textbox16;
+        private XRLabel CheckDate2;
+        private XRLabel CheckAmountShortString3;
+        private XRLabel Textbox20;
+        private XRLabel CheckAmountLongString12;
+        private XRPictureBox xrPictureBox1;
         private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
-        private DevExpress.XtraReports.UI.PageHeaderBand pageHeaderBand1;
-        private DevExpress.XtraReports.UI.XRLabel OverallTotalPages;
-        private DevExpress.XtraReports.UI.PageFooterBand pageFooterBand1;
+        private PageFooterBand pageFooterBand1;
         private DevExpress.XtraReports.Parameters.Parameter pstrDatabaseName;
         private DevExpress.XtraReports.Parameters.Parameter pstrServerName;
         private DevExpress.XtraReports.Parameters.Parameter Subtitle;
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
         private DevExpress.XtraReports.Parameters.Parameter pbitMICR;
         private DevExpress.XtraReports.Parameters.Parameter pbitSignature;
-        private DevExpress.XtraReports.Parameters.Parameter plngCheckPrintingProcessTrackingID;
+        private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
         private DevExpress.XtraReports.Parameters.Parameter pstrStartingOwnerNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingOwnerNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrSignPath;
         private DevExpress.XtraReports.Parameters.Parameter plngCheckFormat;
         private DevExpress.XtraReports.Parameters.Parameter pbooReturnElectronicPayments;
+        private DevExpress.XtraReports.Parameters.Parameter plngCheckPrintingProcessTrackingID;
         private DevExpress.XtraReports.Parameters.Parameter pbooReturnPrintedChecks;
-        private XRPictureBox xrPictureBox1;
         private XRSubreport xrSubreport1;
-        private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
+        private XRLabel xrLabel1;
+        private XRLabel xrLabel2;
+        private XRPanel xrPanel1;
+        private XRLabel OverallTotalPages;
+        private PageHeaderBand pageHeaderBand1;
     }
 }

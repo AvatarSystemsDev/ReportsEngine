@@ -229,6 +229,31 @@
         </Field>
       </Fields>
     </DataSet>
+    <DataSet Name="CheckPrintingProcessTrackingDate">
+      <Query>
+        <DataSourceName>Dynamic</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@plngCompanyID">
+            <Value>=Parameters!plngCompanyID.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@plngReportEnum">
+            <Value>7</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandType>StoredProcedure</CommandType>
+        <CommandText>RDReprint_GetProcessDates</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="ID">
+          <DataField>ID</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="ProcessingDate">
+          <DataField>ProcessingDate</DataField>
+          <rd:TypeName>System.DateTime</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
   </DataSets>
   <ReportSections>
     <ReportSection>
@@ -1324,9 +1349,9 @@
       <Prompt>pbitSignature</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
-    <ReportParameter Name="plngCheckPrintingProcessTrackingID">
+    <ReportParameter Name="plngCompanyID">
       <DataType>Integer</DataType>
-      <Prompt>plngCheckPrintingProcessTrackingID</Prompt>
+      <Prompt>plngCompanyID</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
     <ReportParameter Name="pstrStartingOwnerNumber">
@@ -1381,6 +1406,17 @@
       <Prompt>pbooReturnElectronicPayments</Prompt>
       <Hidden>true</Hidden>
     </ReportParameter>
+    <ReportParameter Name="plngCheckPrintingProcessTrackingID">
+      <DataType>Integer</DataType>
+      <Prompt>Processing Date</Prompt>
+      <ValidValues>
+        <DataSetReference>
+          <DataSetName>CheckPrintingProcessTrackingDate</DataSetName>
+          <ValueField>ID</ValueField>
+          <LabelField>ProcessingDate</LabelField>
+        </DataSetReference>
+      </ValidValues>
+    </ReportParameter>
     <ReportParameter Name="pbooReturnPrintedChecks">
       <DataType>Boolean</DataType>
       <DefaultValue>
@@ -1417,7 +1453,7 @@
           <ParameterName>pbooReturnElectronicPayments</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>0</ColumnIndex>
+          <ColumnIndex>1</ColumnIndex>
           <RowIndex>4</RowIndex>
           <ParameterName>pbooReturnPrintedChecks</ParameterName>
         </CellDefinition>
@@ -1437,8 +1473,8 @@
           <ParameterName>pstrSignPath</ParameterName>
         </CellDefinition>
         <CellDefinition>
-          <ColumnIndex>2</ColumnIndex>
-          <RowIndex>1</RowIndex>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>4</RowIndex>
           <ParameterName>plngCheckPrintingProcessTrackingID</ParameterName>
         </CellDefinition>
         <CellDefinition>
@@ -1460,6 +1496,11 @@
           <ColumnIndex>2</ColumnIndex>
           <RowIndex>0</RowIndex>
           <ParameterName>Subtitle</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>1</RowIndex>
+          <ParameterName>plngCompanyID</ParameterName>
         </CellDefinition>
       </CellDefinitions>
     </GridLayoutDefinition>
