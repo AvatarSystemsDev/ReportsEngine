@@ -124,4 +124,13 @@
     <value>Iif(?plngShowSemester = 0,[July] ,
 Iif(?plngShowSemester = 1,[January]+[February]+[March]+[April]+[May]+[June]+ [July]+[August]+[September]+[October]+[November]+[December] ,[January]+[February]+[March]+[April]+[May]+[June]+[July]+[August]+[September]+[October]+[November]+[December]))</value>
   </data>
+  <data name="Tablix1.ExpressionBindings" xml:space="preserve">
+    <value>[AccountNumber] in (?pstrSelectAccounts) 
+AND (
+        [AccountingCenterNumber] in (?pstrSelectAccountingCenter) OR
+        ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([AccountingCenterNumber]))
+    )
+
+</value>
+  </data>
 </root>

@@ -1039,7 +1039,7 @@
             this.xrLabel20});
             this.Tablix1_GroupFooterBand_5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Tablix1_GroupFooterBand_5.HeightF = 11.2504F;
-            this.Tablix1_GroupFooterBand_5.Level = 1;
+            this.Tablix1_GroupFooterBand_5.Level = 2;
             this.Tablix1_GroupFooterBand_5.Name = "Tablix1_GroupFooterBand_5";
             this.Tablix1_GroupFooterBand_5.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.Tablix1_GroupFooterBand_5.StylePriority.UseBorderDashStyle = false;
@@ -2284,6 +2284,7 @@
             this.SubBand2.HeightF = 3F;
             this.SubBand2.Name = "SubBand2";
             this.SubBand2.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.SubBand2.Visible = false;
             // 
             // pstrBeginningVendorNumber
             // 
@@ -2703,7 +2704,7 @@
             this.xrComapnyHeaderStyle,
             this.xrTablixRowStyle,
             this.xrCompanySubheaderStyle});
-            this.Version = "22.2";
+            this.Version = "23.1";
             this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.GeneralLedgerDetail_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

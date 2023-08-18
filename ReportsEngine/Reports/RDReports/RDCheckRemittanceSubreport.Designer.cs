@@ -313,7 +313,8 @@
             this.plngID.Description = "plng ID";
             this.plngID.Name = "plngID";
             this.plngID.Type = typeof(int);
-            this.plngID.ValueInfo = "1095";
+            this.plngID.ValueInfo = "694";
+            this.plngID.Visible = false;
             // 
             // plngRDCheckStubCodeID
             // 
@@ -321,6 +322,7 @@
             this.plngRDCheckStubCodeID.Name = "plngRDCheckStubCodeID";
             this.plngRDCheckStubCodeID.Type = typeof(int);
             this.plngRDCheckStubCodeID.ValueInfo = "1";
+            this.plngRDCheckStubCodeID.Visible = false;
             // 
             // RDCheckRemittanceSubreport
             // 
