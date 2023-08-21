@@ -37,11 +37,23 @@ namespace ReportsEngine.Reports.RDReports
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDCheckStubs));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -71,7 +83,6 @@ namespace ReportsEngine.Reports.RDReports
             this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -86,6 +97,11 @@ namespace ReportsEngine.Reports.RDReports
             this.pbooReturnElectronicPayments = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckPrintingProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnPrintedChecks = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectCheck = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
@@ -102,44 +118,68 @@ namespace ReportsEngine.Reports.RDReports
             storedProcQuery1.Name = "RDCheckHeader";
             queryParameter1.Name = "@plngCheckPrintingProcessTrackingID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(string));
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(int));
             queryParameter2.Name = "@pstrStartingOwnerNumber";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrStartingOwnerNumber", typeof(string));
             queryParameter3.Name = "@pstrEndingOwnerNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
-            queryParameter4.Name = "@plngCheckFormat";
+            queryParameter4.Name = "@pstrBeginningCheckNumber";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCheckFormat", typeof(string));
-            queryParameter5.Name = "@pbooReturnElectronicPayments";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCheckNumber", typeof(string));
+            queryParameter5.Name = "@pstrEndingCheckNumber";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(string));
-            queryParameter6.Name = "@pbooReturnPrintedChecks";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrEndingCheckNumber", typeof(string));
+            queryParameter6.Name = "@plngCheckFormat";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooReturnPrintedChecks", typeof(string));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngCheckFormat", typeof(int));
+            queryParameter7.Name = "@pbooReturnElectronicPayments";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(bool));
+            queryParameter8.Name = "@pbooReturnPrintedChecks";
+            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooReturnPrintedChecks", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
             queryParameter5,
-            queryParameter6});
-            storedProcQuery1.StoredProcName = "RDProcessing_CheckPrintingGetChecksToPayHeaders";
-            storedProcQuery2.Name = "CheckPrintingProcessTrackingDate";
-            queryParameter7.Name = "@plngCompanyID";
-            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter8.Name = "@plngReportEnum";
-            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("7", typeof(int));
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter6,
             queryParameter7,
             queryParameter8});
+            storedProcQuery1.StoredProcName = "RDProcessing_CheckPrintingGetChecksToPayHeaders";
+            storedProcQuery2.Name = "CheckPrintingProcessTrackingDate";
+            queryParameter9.Name = "@plngCompanyID";
+            queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter10.Name = "@plngReportEnum";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("7", typeof(int));
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter9,
+            queryParameter10});
             storedProcQuery2.StoredProcName = "RDReprint_GetProcessDates";
+            storedProcQuery3.Name = "Owner_ReportLookup";
+            queryParameter11.Name = "@plngCompanyID";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter11});
+            storedProcQuery3.StoredProcName = "Owners_ReportLookup";
+            storedProcQuery4.Name = "lookupChecks";
+            queryParameter12.Name = "@plngCompanyID";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter12});
+            storedProcQuery4.StoredProcName = "Checks_ReportLookupReprint";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
-            storedProcQuery2});
+            storedProcQuery2,
+            storedProcQuery3,
+            storedProcQuery4});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
@@ -159,6 +199,9 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel15,
             this.xrLabel16,
             this.xrSubreport2});
+            this.detailBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "(\n\t[OwnerNumber] in (?pstrSelectOwner) OR\n\t(\'!\' in (?pstrSelectOwner) AND IsNullO" +
+                    "rEmpty([OwnerNumber]))\n)\n\nAND [CheckNumber] in (?pstrSelectCheck)\n")});
             this.detailBand1.HeightF = 976.9049F;
             this.detailBand1.MultiColumn.ColumnSpacing = 50F;
             this.detailBand1.Name = "detailBand1";
@@ -566,17 +609,6 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel16.StylePriority.UseTextAlignment = false;
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0.7499695F, 45.78028F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
-            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(793.34F, 589.194F);
-            // 
             // pstrDatabaseName
             // 
             this.pstrDatabaseName.Description = "pstrDatabaseName";
@@ -629,17 +661,29 @@ namespace ReportsEngine.Reports.RDReports
             // 
             // pstrStartingOwnerNumber
             // 
-            this.pstrStartingOwnerNumber.Description = "pstrStartingOwnerNumber";
+            this.pstrStartingOwnerNumber.Description = "Starting Owner Number";
             this.pstrStartingOwnerNumber.Name = "pstrStartingOwnerNumber";
-            this.pstrStartingOwnerNumber.ValueInfo = "1";
-            this.pstrStartingOwnerNumber.Visible = false;
+            this.pstrStartingOwnerNumber.ValueInfo = "!";
+            dynamicListLookUpSettings1.DataMember = "Owner_ReportLookup";
+            dynamicListLookUpSettings1.DataSource = this.Dynamic;
+            dynamicListLookUpSettings1.DisplayMember = "Description";
+            dynamicListLookUpSettings1.FilterString = null;
+            dynamicListLookUpSettings1.SortMember = null;
+            dynamicListLookUpSettings1.ValueMember = "Number";
+            this.pstrStartingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings1;
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "pstrEndingOwnerNumber";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner Number";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
-            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZ";
-            this.pstrEndingOwnerNumber.Visible = false;
+            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
+            dynamicListLookUpSettings2.DataMember = "Owner_ReportLookup";
+            dynamicListLookUpSettings2.DataSource = this.Dynamic;
+            dynamicListLookUpSettings2.DisplayMember = "Description";
+            dynamicListLookUpSettings2.FilterString = null;
+            dynamicListLookUpSettings2.SortMember = null;
+            dynamicListLookUpSettings2.ValueMember = "Number";
+            this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
             // pstrSignPath
             // 
@@ -670,11 +714,11 @@ namespace ReportsEngine.Reports.RDReports
             this.plngCheckPrintingProcessTrackingID.Name = "plngCheckPrintingProcessTrackingID";
             this.plngCheckPrintingProcessTrackingID.Type = typeof(int);
             this.plngCheckPrintingProcessTrackingID.ValueInfo = "1";
-            dynamicListLookUpSettings1.DataMember = "CheckPrintingProcessTrackingDate";
-            dynamicListLookUpSettings1.DataSource = this.Dynamic;
-            dynamicListLookUpSettings1.DisplayMember = "ProcessingDate";
-            dynamicListLookUpSettings1.ValueMember = "ID";
-            this.plngCheckPrintingProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings1;
+            dynamicListLookUpSettings3.DataMember = "CheckPrintingProcessTrackingDate";
+            dynamicListLookUpSettings3.DataSource = this.Dynamic;
+            dynamicListLookUpSettings3.DisplayMember = "ProcessingDate";
+            dynamicListLookUpSettings3.ValueMember = "ID";
+            this.plngCheckPrintingProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
             // pbooReturnPrintedChecks
             // 
@@ -683,6 +727,71 @@ namespace ReportsEngine.Reports.RDReports
             this.pbooReturnPrintedChecks.Type = typeof(bool);
             this.pbooReturnPrintedChecks.ValueInfo = "True";
             this.pbooReturnPrintedChecks.Visible = false;
+            // 
+            // pstrSelectOwner
+            // 
+            this.pstrSelectOwner.Description = "Select Owner";
+            this.pstrSelectOwner.MultiValue = true;
+            this.pstrSelectOwner.Name = "pstrSelectOwner";
+            this.pstrSelectOwner.SelectAllValues = true;
+            dynamicListLookUpSettings4.DataMember = "Owner_ReportLookup";
+            dynamicListLookUpSettings4.DataSource = this.Dynamic;
+            dynamicListLookUpSettings4.DisplayMember = "Description";
+            dynamicListLookUpSettings4.FilterString = null;
+            dynamicListLookUpSettings4.SortMember = null;
+            dynamicListLookUpSettings4.ValueMember = "Number";
+            this.pstrSelectOwner.ValueSourceSettings = dynamicListLookUpSettings4;
+            // 
+            // pstrBeginningCheckNumber
+            // 
+            this.pstrBeginningCheckNumber.Description = "Beginning Check Number";
+            this.pstrBeginningCheckNumber.Name = "pstrBeginningCheckNumber";
+            this.pstrBeginningCheckNumber.ValueInfo = "-1";
+            dynamicListLookUpSettings5.DataMember = "lookupChecks";
+            dynamicListLookUpSettings5.DataSource = this.Dynamic;
+            dynamicListLookUpSettings5.DisplayMember = "Description";
+            dynamicListLookUpSettings5.FilterString = null;
+            dynamicListLookUpSettings5.SortMember = null;
+            dynamicListLookUpSettings5.ValueMember = "CheckNumber";
+            this.pstrBeginningCheckNumber.ValueSourceSettings = dynamicListLookUpSettings5;
+            // 
+            // pstrEndingCheckNumber
+            // 
+            this.pstrEndingCheckNumber.Description = "Ending Check Number";
+            this.pstrEndingCheckNumber.Name = "pstrEndingCheckNumber";
+            this.pstrEndingCheckNumber.ValueInfo = "ZZZZZZZZZ";
+            dynamicListLookUpSettings6.DataMember = "lookupChecks";
+            dynamicListLookUpSettings6.DataSource = this.Dynamic;
+            dynamicListLookUpSettings6.DisplayMember = "Description";
+            dynamicListLookUpSettings6.FilterString = null;
+            dynamicListLookUpSettings6.SortMember = null;
+            dynamicListLookUpSettings6.ValueMember = "CheckNumber";
+            this.pstrEndingCheckNumber.ValueSourceSettings = dynamicListLookUpSettings6;
+            // 
+            // pstrSelectCheck
+            // 
+            this.pstrSelectCheck.Description = "Select Check";
+            this.pstrSelectCheck.MultiValue = true;
+            this.pstrSelectCheck.Name = "pstrSelectCheck";
+            this.pstrSelectCheck.SelectAllValues = true;
+            dynamicListLookUpSettings7.DataMember = "lookupChecks";
+            dynamicListLookUpSettings7.DataSource = this.Dynamic;
+            dynamicListLookUpSettings7.DisplayMember = "Description";
+            dynamicListLookUpSettings7.FilterString = null;
+            dynamicListLookUpSettings7.SortMember = null;
+            dynamicListLookUpSettings7.ValueMember = "CheckNumber";
+            this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings7;
+            // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0.7499695F, 45.78028F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
+            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(793.34F, 589.194F);
             // 
             // RDCheckStubs
             // 
@@ -707,11 +816,15 @@ namespace ReportsEngine.Reports.RDReports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrStartingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSignPath, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormat, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnElectronicPayments, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnPrintedChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnPrintedChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -722,11 +835,15 @@ namespace ReportsEngine.Reports.RDReports
             this.plngCompanyID,
             this.pstrStartingOwnerNumber,
             this.pstrEndingOwnerNumber,
+            this.pstrSelectOwner,
             this.pstrSignPath,
             this.plngCheckFormat,
             this.pbooReturnElectronicPayments,
             this.plngCheckPrintingProcessTrackingID,
-            this.pbooReturnPrintedChecks});
+            this.pbooReturnPrintedChecks,
+            this.pstrBeginningCheckNumber,
+            this.pstrEndingCheckNumber,
+            this.pstrSelectCheck});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
@@ -785,5 +902,9 @@ namespace ReportsEngine.Reports.RDReports
         private XRLabel xrLabel15;
         private XRLabel xrLabel16;
         private XRSubreport xrSubreport2;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCheckNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCheckNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectCheck;
     }
 }

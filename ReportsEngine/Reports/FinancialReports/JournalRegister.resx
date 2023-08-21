@@ -145,13 +145,6 @@ AND
         [Number] in (?pstrSelectAccountingCenter) OR
         ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
     )
-AND
-    (
-        (''+[BatchNumber]) in (?pstrSelectBatch) OR
-        ('-1' in (?pstrSelectBatch) AND IsNullOrEmpty([BatchNumber]))
-    )
-
-
 
 </value>
   </data>
@@ -216,14 +209,6 @@ AND
         [Number] in (?pstrSelectAccountingCenter) OR
         ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
     )
-AND
-    (
-        (''+[BatchNumber]) in (?pstrSelectBatch) OR
-        ('-1' in (?pstrSelectBatch) AND IsNullOrEmpty([BatchNumber]))
-    )
-
-
-
 ,[NetAmount],0 )
 )
 </value>
@@ -272,11 +257,6 @@ AND
         [Number] in (?pstrSelectAccountingCenter) OR
         ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([Number]))
     )
-AND
-    (
-        (''+[BatchNumber]) in (?pstrSelectBatch) OR
-        ('-1' in (?pstrSelectBatch) AND IsNullOrEmpty([BatchNumber]))
-    )
 ,[NetAmount],0 )
 )</value>
   </data>
@@ -286,9 +266,6 @@ And
 Iif((?plngSortBy in (5,7) AND [OwnerNumber] in (?pstrSelectOwner)) OR ?plngSortBy in (1,2,3,4,6),true ,false )
 And
 Iif((?plngSortBy = 5 AND [VendorNumber] in (?pstrSelectVendor)) OR ?plngSortBy &lt;&gt; 5,true ,false )
-And
-Iif((?plngSortBy = 3 AND [BatchNumber] in (?pstrSelectBatch)) OR ?plngSortBy &lt;&gt; 3,true ,false )
-
 </value>
   </data>
 </root>

@@ -130,7 +130,7 @@
             this.xrLabel6.BorderWidth = 1F;
             this.xrLabel6.CanGrow = false;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountingCenterNumber]")});
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel6.ForeColor = System.Drawing.Color.Black;
             this.xrLabel6.KeepTogether = true;
@@ -566,7 +566,7 @@
             this.pbooShowNotes,
             this.pbooShowCriteria,
             this.plngYear});
-            this.Version = "22.2";
+            this.Version = "23.1";
             this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.ExcelFiscalYearOpeningTrialBalance_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

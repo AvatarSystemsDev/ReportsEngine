@@ -1501,9 +1501,6 @@
             this.ExportOptions.Xlsx.RawDataMode = true;
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 12.5F, 35.0001F);
-            this.PageHeight = 850;
-            this.PageWidth = 1100;
-            //this.PaperKind = System.Drawing.Printing.PaperKind.LetterRotated;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1556,7 +1553,7 @@
             this.pstrSelectVendor,
             this.pstrSelectProperty,
             this.pbooShowAFE});
-            this.Version = "22.2";
+            this.Version = "23.1";
             this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.ExcelGeneralLedgerDetail_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

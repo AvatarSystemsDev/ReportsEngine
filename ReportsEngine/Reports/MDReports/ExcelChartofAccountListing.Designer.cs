@@ -1354,7 +1354,7 @@
             this.plngSortBy,
             this.pbooShowAFENumber,
             this.pstrSelectAccount});
-            this.Version = "22.2";
+            this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
