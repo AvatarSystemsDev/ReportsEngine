@@ -154,7 +154,7 @@ AND
 </value>
   </data>
   <data name="xrLabel38.ExpressionBindings" xml:space="preserve">
-    <value>Iif(?plngSortBy = 1, 'Source/GLDate/Account',Iif(?plngSortBy = 2, 'Document Voucher/Check/Deposit',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GLDate',Iif(?plngSortBy = 5, 'Vendor/Owner',Iif(?plngSortBy = 6, 'Well/Account','Owner/GlDate'))))))</value>
+    <value>Iif(?plngSortBy = 1, 'Source/GLDate/Account',Iif(?plngSortBy = 2, 'Document Voucher/Check/Deposit',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GLDate',Iif(?plngSortBy = 5, 'Entity/Owner',Iif(?plngSortBy = 6, 'Well/Account','Owner/GLDate'))))))</value>
   </data>
   <data name="xrLabel32.ExpressionBindings" xml:space="preserve">
     <value>iif(?plngBeginningBatchID = -1, iif(?plngEndingBatchID = 999999999, 'All Batches', 'First Batch to ' + ?pstrEndingAccountNumber), iif(?plngEndingBatchID = 999999999, ?plngBeginningBatchID + ' to Last Batch', ?plngBeginningBatchID + ' to ' + ?plngEndingBatchID ))</value>
@@ -231,7 +231,8 @@ Iif(?plngSortBy = 6, [AccountNumber],
 Iif(?plngSortBy = 7, [PostDate], ''))))))</value>
   </data>
   <data name="xrLabel21.ExpressionBindings" xml:space="preserve">
-    <value>Iif(?plngSortBy = 1, 'Source/GL Date/Account', Iif(?plngSortBy = 2, 'Voucher/Check/Deposit',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GL Date',Iif(?plngSortBy = 5, 'Vendor/Owner',Iif(?plngSortBy = 6, 'Well/Account',Iif(?plngSortBy = 7, 'Owner/GLDate','')))))))</value>
+    <value>Iif(?plngSortBy = 1, 'Source/GL Date/Account', Iif(?plngSortBy = 2, 'Voucher/Check/Deposit',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GL Date',Iif(?plngSortBy = 5, 'Vendor/Owner',Iif(?plngSortBy = 6, 'Well/Account',Iif(?plngSortBy = 7, 'Owner/GLDate','')))))))
++ ' Total'</value>
   </data>
   <data name="xrLabel26.ExpressionBindings" xml:space="preserve">
     <value>sumSum(
@@ -261,11 +262,11 @@ AND
 )</value>
   </data>
   <data name="groupFooterBand1.ExpressionBindings" xml:space="preserve">
-    <value>Iif((?plngSortBy in (1,3,4,6) AND [AccountNumber] in (?pstrSelectAccount)) OR ?plngSortBy in (2,5,7), true , false)
+    <value>Iif((?plngSortBy in (1,3,4,6) AND (([AccountNumber] in (?pstrSelectAccount)) OR (IsNullOrEmpty([AccountNumber])))) OR ?plngSortBy in (2,5,7), true , false)
 And
-Iif((?plngSortBy in (5,7) AND [OwnerNumber] in (?pstrSelectOwner)) OR ?plngSortBy in (1,2,3,4,6),true ,false )
+Iif((?plngSortBy in (5,7) AND (([OwnerNumber] in (?pstrSelectOwner)) OR (IsNullOrEmpty([OwnerNumber])))) OR ?plngSortBy in (1,2,3,4,6),true ,false )
 And
-Iif((?plngSortBy = 5 AND [VendorNumber] in (?pstrSelectVendor)) OR ?plngSortBy &lt;&gt; 5,true ,false )
+Iif((?plngSortBy = 5 AND (([VendorNumber] in (?pstrSelectVendor)) OR (IsNullOrEmpty([VendorNumber])))) OR ?plngSortBy &lt;&gt; 5,true ,false )
 </value>
   </data>
 </root>

@@ -716,7 +716,7 @@ namespace ReportsEngine.Reports.RDReports
             this.plngCheckPrintingProcessTrackingID.ValueInfo = "1";
             dynamicListLookUpSettings3.DataMember = "CheckPrintingProcessTrackingDate";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "ProcessingDate";
+            dynamicListLookUpSettings3.DisplayMember = "FormattedDate";
             dynamicListLookUpSettings3.ValueMember = "ID";
             this.plngCheckPrintingProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
@@ -807,6 +807,7 @@ namespace ReportsEngine.Reports.RDReports
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(25F, 25F, 25F, 25F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -820,12 +821,12 @@ namespace ReportsEngine.Reports.RDReports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSignPath, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormat, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnElectronicPayments, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnPrintedChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+            this.plngCheckPrintingProcessTrackingID,
             this.pstrDatabaseName,
             this.pstrServerName,
             this.Subtitle,
@@ -839,7 +840,6 @@ namespace ReportsEngine.Reports.RDReports
             this.pstrSignPath,
             this.plngCheckFormat,
             this.pbooReturnElectronicPayments,
-            this.plngCheckPrintingProcessTrackingID,
             this.pbooReturnPrintedChecks,
             this.pstrBeginningCheckNumber,
             this.pstrEndingCheckNumber,
