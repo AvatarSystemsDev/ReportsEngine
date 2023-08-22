@@ -45,6 +45,27 @@ namespace ReportsEngine.Services
                     return SendEmail(emailAddress, emailSubject, emailMessage, attachment);
                 }
             }
+            else if (customData.action == "document archive")
+            {
+                using (var stream = new MemoryStream())
+                {
+                    printingSystemWithEditingFields.ExportToPdf(stream);
+                    stream.Position = 0;
+
+                    byte[] documentByteArray = stream.ToArray();
+                    String base64String = Convert.ToBase64String(documentByteArray);
+                    //var archived = SendToArchiveAsync(stream, systemID, userID);  //If call Providence webservice from here. 
+
+                    return new DocumentOperationResponse
+                    {
+                        Succeeded = true,
+                        Message = "Saved to Archive",
+                        CustomData = base64String,
+                    };
+
+                    //return SendEmail(emailAddress, emailSubject, emailMessage, attachment);
+                }
+            }
             else if (customData.action == "export to excel")
             {
                 try
@@ -134,6 +155,22 @@ namespace ReportsEngine.Services
                 Message = message
             };
         }
+
+        //Trying to call the providence webservice from this webservice.
+        //public async Task<HttpResponseMessage> SendToArchiveAsync(MemoryStream memoryStream, int systemID, int userID)
+        //{
+        //    HttpClient client = new HttpClient();
+        //    MultipartFormDataContent multipartContent = new MultipartFormDataContent();
+
+        //    byte[] buffer = memoryStream.ToArray();
+
+        //    multipartContent.Add(new ByteArrayContent(buffer));
+
+        //    HttpResponseMessage response = await client.PostAsync(
+        //"http://localhost:58170/PostFileToStorage?systemID=" + systemID + "&userID=" + userID, multipartContent).ConfigureAwait(continueOnCapturedContext: false);
+
+        //    return response;
+        //}
 
         protected string RemoveNewLineSymbols(string value)
         {
