@@ -406,7 +406,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel10.KeepTogether = true;
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(505.7412F, 0F);
             this.xrLabel10.Name = "xrLabel10";
-            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(78.1246F, 15.00001F);
             this.xrLabel10.StylePriority.UseBackColor = false;
             this.xrLabel10.StylePriority.UseBorderColor = false;
@@ -435,7 +435,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel5.KeepTogether = true;
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(366.6463F, 0F);
             this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 0, 0, 0, 100F);
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel5.SizeF = new System.Drawing.SizeF(139.0947F, 15.00004F);
             this.xrLabel5.StylePriority.UseBackColor = false;
             this.xrLabel5.StylePriority.UseBorderColor = false;
@@ -462,7 +462,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(583.8659F, 0F);
             this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(93.59058F, 15.00001F);
             this.xrLabel1.StylePriority.UseBackColor = false;
             this.xrLabel1.StylePriority.UseBorderColor = false;
@@ -490,7 +490,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(113.3014F, 0F);
             this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel3.SizeF = new System.Drawing.SizeF(62.39809F, 15.00004F);
             this.xrLabel3.StylePriority.UseBackColor = false;
             this.xrLabel3.StylePriority.UseBorderColor = false;
@@ -517,7 +517,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(175.6995F, 3.178914E-05F);
             this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(190.9417F, 15F);
             this.xrLabel2.StylePriority.UseBackColor = false;
             this.xrLabel2.StylePriority.UseBorderColor = false;
@@ -544,7 +544,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel6.KeepTogether = true;
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(113.3014F, 15.00004F);
             this.xrLabel6.StylePriority.UseBackColor = false;
             this.xrLabel6.StylePriority.UseBorderColor = false;
@@ -573,7 +573,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(677.4568F, 0F);
             this.xrLabel9.Multiline = true;
             this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel9.SizeF = new System.Drawing.SizeF(91.50677F, 15.00004F);
             this.xrLabel9.StylePriority.UseBackColor = false;
             this.xrLabel9.StylePriority.UseBorderColor = false;
@@ -641,7 +641,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(504.6991F, 70.20842F);
             this.xrLabel8.Multiline = true;
             this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 2, 0, 0, 100F);
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel8.SizeF = new System.Drawing.SizeF(78.125F, 36.81F);
             this.xrLabel8.StylePriority.UseBackColor = false;
             this.xrLabel8.StylePriority.UseBorderWidth = false;
@@ -662,7 +662,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(365.5994F, 70.20839F);
             this.xrLabel7.Multiline = true;
             this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 0, 0, 0, 100F);
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel7.SizeF = new System.Drawing.SizeF(139.0998F, 36.81F);
             this.xrLabel7.StylePriority.UseBackColor = false;
             this.xrLabel7.StylePriority.UseBorderWidth = false;
@@ -682,7 +682,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(676.4146F, 70.20845F);
             this.Textbox20.Multiline = true;
             this.Textbox20.Name = "Textbox20";
-            this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 5, 0, 0, 100F);
+            this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox20.SizeF = new System.Drawing.SizeF(92.54858F, 36.80999F);
             this.Textbox20.StylePriority.UseBackColor = false;
             this.Textbox20.StylePriority.UseBorderWidth = false;
@@ -703,7 +703,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(582.8241F, 70.20842F);
             this.Textbox18.Multiline = true;
             this.Textbox18.Name = "Textbox18";
-            this.Textbox18.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox18.SizeF = new System.Drawing.SizeF(93.59027F, 36.81F);
             this.Textbox18.StylePriority.UseBackColor = false;
             this.Textbox18.StylePriority.UseBorderWidth = false;
@@ -724,7 +724,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.Textbox17.LocationFloat = new DevExpress.Utils.PointFloat(113.3011F, 70.20842F);
             this.Textbox17.Multiline = true;
             this.Textbox17.Name = "Textbox17";
-            this.Textbox17.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox17.SizeF = new System.Drawing.SizeF(62.39835F, 36.81F);
             this.Textbox17.StylePriority.UseBackColor = false;
             this.Textbox17.StylePriority.UseBorderWidth = false;
@@ -744,7 +744,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(175.6994F, 70.20842F);
             this.Textbox14.Multiline = true;
             this.Textbox14.Name = "Textbox14";
-            this.Textbox14.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox14.SizeF = new System.Drawing.SizeF(189.9F, 36.81F);
             this.Textbox14.StylePriority.UseBackColor = false;
             this.Textbox14.StylePriority.UseBorderWidth = false;
@@ -765,14 +765,14 @@ namespace ReportsEngine.Reports.FinancialReports
             this.Textbox3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 70.20842F);
             this.Textbox3.Multiline = true;
             this.Textbox3.Name = "Textbox3";
-            this.Textbox3.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 0, 0, 0, 100F);
+            this.Textbox3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox3.SizeF = new System.Drawing.SizeF(113.3014F, 36.80999F);
             this.Textbox3.StylePriority.UseBackColor = false;
             this.Textbox3.StylePriority.UseBorderWidth = false;
             this.Textbox3.StylePriority.UsePadding = false;
             this.Textbox3.StylePriority.UseTextAlignment = false;
-            this.Textbox3.Text = " \r\nAccount";
-            this.Textbox3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.Textbox3.Text = "Account";
+            this.Textbox3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox1
             // 
@@ -1027,7 +1027,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(677.4563F, 6.357829E-05F);
             this.xrLabel12.Multiline = true;
             this.xrLabel12.Name = "xrLabel12";
-            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 3, 0, 0, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(91.5072F, 15.16671F);
             this.xrLabel12.StylePriority.UseBackColor = false;
             this.xrLabel12.StylePriority.UseBorderColor = false;
@@ -1100,6 +1100,8 @@ namespace ReportsEngine.Reports.FinancialReports
             // pdteEndDate
             // 
             this.pdteEndDate.Description = "End Date";
+            this.pdteEndDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndDate.Name = "pdteEndDate";
             this.pdteEndDate.Type = typeof(System.DateTime);
             this.pdteEndDate.ValueInfo = "2023-07-20";
@@ -1203,19 +1205,19 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrCrossBandBox2.Name = "xrCrossBandBox2";
             this.xrCrossBandBox2.StartBand = this.ReportFooter;
             this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(690.9987F, 0.0001907349F);
-            this.xrCrossBandBox2.WidthF = 79.00616F;
+            this.xrCrossBandBox2.WidthF = 76.92285F;
             // 
             // xrCrossBandBox4
             // 
             this.xrCrossBandBox4.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
             this.xrCrossBandBox4.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrCrossBandBox4.BorderWidth = 1F;
-            this.xrCrossBandBox4.EndBand = this.SubBand2;
-            this.xrCrossBandBox4.EndPointFloat = new DevExpress.Utils.PointFloat(583.4073F, 0F);
+            this.xrCrossBandBox4.EndBand = this.ReportFooter;
+            this.xrCrossBandBox4.EndPointFloat = new DevExpress.Utils.PointFloat(597.4087F, 8F);
             this.xrCrossBandBox4.Name = "xrCrossBandBox4";
             this.xrCrossBandBox4.StartBand = this.ReportFooter;
-            this.xrCrossBandBox4.StartPointFloat = new DevExpress.Utils.PointFloat(583.4073F, 0.0001271566F);
-            this.xrCrossBandBox4.WidthF = 94.04883F;
+            this.xrCrossBandBox4.StartPointFloat = new DevExpress.Utils.PointFloat(597.4087F, 0.0001271566F);
+            this.xrCrossBandBox4.WidthF = 80.04736F;
             // 
             // xrCrossBandBox3
             // 
@@ -1223,11 +1225,11 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrCrossBandBox3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrCrossBandBox3.BorderWidth = 1F;
             this.xrCrossBandBox3.EndBand = this.SubBand3;
-            this.xrCrossBandBox3.EndPointFloat = new DevExpress.Utils.PointFloat(584.4489F, 3.999996F);
+            this.xrCrossBandBox3.EndPointFloat = new DevExpress.Utils.PointFloat(597.4087F, 7.124996F);
             this.xrCrossBandBox3.Name = "xrCrossBandBox3";
             this.xrCrossBandBox3.StartBand = this.SubBand3;
-            this.xrCrossBandBox3.StartPointFloat = new DevExpress.Utils.PointFloat(584.4489F, 0F);
-            this.xrCrossBandBox3.WidthF = 93.00769F;
+            this.xrCrossBandBox3.StartPointFloat = new DevExpress.Utils.PointFloat(597.4087F, 3.125F);
+            this.xrCrossBandBox3.WidthF = 80.04785F;
             // 
             // xrCrossBandBox5
             // 
@@ -1235,11 +1237,11 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrCrossBandBox5.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrCrossBandBox5.BorderWidth = 1F;
             this.xrCrossBandBox5.EndBand = this.SubBand3;
-            this.xrCrossBandBox5.EndPointFloat = new DevExpress.Utils.PointFloat(692.0404F, 3.999996F);
+            this.xrCrossBandBox5.EndPointFloat = new DevExpress.Utils.PointFloat(690.9987F, 7.124996F);
             this.xrCrossBandBox5.Name = "xrCrossBandBox5";
             this.xrCrossBandBox5.StartBand = this.SubBand3;
-            this.xrCrossBandBox5.StartPointFloat = new DevExpress.Utils.PointFloat(692.0404F, 0F);
-            this.xrCrossBandBox5.WidthF = 77.9646F;
+            this.xrCrossBandBox5.StartPointFloat = new DevExpress.Utils.PointFloat(690.9987F, 3.125F);
+            this.xrCrossBandBox5.WidthF = 77.96454F;
             // 
             // TrialBalance
             // 

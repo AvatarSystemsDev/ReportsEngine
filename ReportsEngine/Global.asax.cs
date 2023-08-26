@@ -1,5 +1,6 @@
 ﻿using DevExpress.Security.Resources;
 using DevExpress.Web.Mvc;
+using DevExpress.XtraReports.Security;
 using DevExpress.XtraReports.Web.WebDocumentViewer;
 //using DocumentOperationServiceSample.Services;
 using ReportsEngine.Services;
@@ -40,7 +41,7 @@ namespace ReportsEngine
             ModelBinders.Binders.DefaultBinder = new DevExpress.Web.Mvc.DevExpressEditorsBinder();
 
             DevExpress.Web.ASPxWebControl.CallbackError += Application_Error;
-
+            ScriptPermissionManager.GlobalInstance = new ScriptPermissionManager(ExecutionMode.Unrestricted);
         }
 
         protected void Application_Error(object sender, EventArgs e)

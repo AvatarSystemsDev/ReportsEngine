@@ -319,7 +319,7 @@ namespace ReportsEngine.Reports.RDReports
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>DEDUCT" +
                     "S:</b><br>\' + FormatString(\'{0:c2}\', [DeductionAmount]) + \'</span>\'\n")});
             this.xrRichText4.KeepTogether = true;
-            this.xrRichText4.LocationFloat = new DevExpress.Utils.PointFloat(468.83F, 2.82F);
+            this.xrRichText4.LocationFloat = new DevExpress.Utils.PointFloat(556.3199F, 2.820007F);
             this.xrRichText4.Name = "xrRichText4";
             this.xrRichText4.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrRichText4.SerializableRtfString = resources.GetString("xrRichText4.SerializableRtfString");
@@ -332,14 +332,14 @@ namespace ReportsEngine.Reports.RDReports
             this.xrRichText5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText5.BorderWidth = 1F;
             this.xrRichText5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>TAX:</" +
-                    "b><br>\' + FormatString(\'{0:c2}\', [TaxAmount]) + \'</span>\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>TAXES:" +
+                    "</b><br>\' + FormatString(\'{0:c2}\', [TaxAmount]) + \'</span>\'\n")});
             this.xrRichText5.KeepTogether = true;
-            this.xrRichText5.LocationFloat = new DevExpress.Utils.PointFloat(584.45F, 2.82F);
+            this.xrRichText5.LocationFloat = new DevExpress.Utils.PointFloat(468.8199F, 2.820007F);
             this.xrRichText5.Name = "xrRichText5";
             this.xrRichText5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrRichText5.SerializableRtfString = resources.GetString("xrRichText5.SerializableRtfString");
-            this.xrRichText5.SizeF = new System.Drawing.SizeF(86.11F, 25.48F);
+            this.xrRichText5.SizeF = new System.Drawing.SizeF(87.5F, 25.47998F);
             // 
             // xrRichText6
             // 
@@ -367,11 +367,11 @@ namespace ReportsEngine.Reports.RDReports
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>OWNER:" +
                     "</b><br>\' + [OwnerNumber] + \'</span>\'\n\n")});
             this.xrRichText7.KeepTogether = true;
-            this.xrRichText7.LocationFloat = new DevExpress.Utils.PointFloat(5.15F, 3.84F);
+            this.xrRichText7.LocationFloat = new DevExpress.Utils.PointFloat(0.7499695F, 2.450012F);
             this.xrRichText7.Name = "xrRichText7";
             this.xrRichText7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrRichText7.SerializableRtfString = resources.GetString("xrRichText7.SerializableRtfString");
-            this.xrRichText7.SizeF = new System.Drawing.SizeF(126.04F, 25.85F);
+            this.xrRichText7.SizeF = new System.Drawing.SizeF(130.44F, 27.23999F);
             // 
             // xrLabel3
             // 
@@ -582,7 +582,7 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 45.78031F);
             this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(793.34F, 589.1939F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(556.3199F, 589.1939F);
             this.xrLabel15.StylePriority.UseFont = false;
             // 
             // xrLabel16
@@ -710,10 +710,13 @@ namespace ReportsEngine.Reports.RDReports
             // 
             // plngCheckPrintingProcessTrackingID
             // 
-            this.plngCheckPrintingProcessTrackingID.Description = "Processing Date";
+            this.plngCheckPrintingProcessTrackingID.AllowNull = true;
+            this.plngCheckPrintingProcessTrackingID.Description = "Check Date";
+            this.plngCheckPrintingProcessTrackingID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "asdfsdafasdfsadfasdfasdf")});
             this.plngCheckPrintingProcessTrackingID.Name = "plngCheckPrintingProcessTrackingID";
             this.plngCheckPrintingProcessTrackingID.Type = typeof(int);
-            this.plngCheckPrintingProcessTrackingID.ValueInfo = "1";
+            this.plngCheckPrintingProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings3.DataMember = "CheckPrintingProcessTrackingDate";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
             dynamicListLookUpSettings3.DisplayMember = "FormattedDate";
@@ -790,6 +793,7 @@ namespace ReportsEngine.Reports.RDReports
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "RDCheckHeader.ImbursementID"));
             this.xrSubreport2.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
             this.xrSubreport2.SizeF = new System.Drawing.SizeF(793.34F, 589.194F);
             // 
