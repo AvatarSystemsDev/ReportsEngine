@@ -200,8 +200,9 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel16,
             this.xrSubreport2});
             this.detailBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "(\n\t[OwnerNumber] in (?pstrSelectOwner) OR\n\t(\'!\' in (?pstrSelectOwner) AND IsNullO" +
-                    "rEmpty([OwnerNumber]))\n)\n\nAND [CheckNumber] in (?pstrSelectCheck)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[CheckNumber] in (?pstrSelectCheck)\nAND\n    (\n        [OwnerNumber] in (?pstrSele" +
+                    "ctOwner) OR\n        (\'!\' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))" +
+                    "\n    )\n")});
             this.detailBand1.HeightF = 976.9049F;
             this.detailBand1.MultiColumn.ColumnSpacing = 50F;
             this.detailBand1.Name = "detailBand1";
@@ -757,6 +758,7 @@ namespace ReportsEngine.Reports.RDReports
             dynamicListLookUpSettings5.SortMember = null;
             dynamicListLookUpSettings5.ValueMember = "CheckNumber";
             this.pstrBeginningCheckNumber.ValueSourceSettings = dynamicListLookUpSettings5;
+            this.pstrBeginningCheckNumber.Visible = false;
             // 
             // pstrEndingCheckNumber
             // 
@@ -770,6 +772,7 @@ namespace ReportsEngine.Reports.RDReports
             dynamicListLookUpSettings6.SortMember = null;
             dynamicListLookUpSettings6.ValueMember = "CheckNumber";
             this.pstrEndingCheckNumber.ValueSourceSettings = dynamicListLookUpSettings6;
+            this.pstrEndingCheckNumber.Visible = false;
             // 
             // pstrSelectCheck
             // 
@@ -809,7 +812,7 @@ namespace ReportsEngine.Reports.RDReports
             this.DataSource = this.Dynamic;
             this.DisplayName = "RDCheckStubs";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(25F, 25F, 25F, 25F);
+            this.Margins = new DevExpress.Drawing.DXMargins(25F, 26F, 25F, 25F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
