@@ -84,23 +84,19 @@ namespace ReportsEngine.WebServices
 
             if (reportParamsJson != null)
             {
-                //CustomReportStorageWebExtension.setReportParameters(report, HttpUtility.ParseQueryString(reportParamsJson), companyID);
                 foreach (var reportParameter in report.Parameters)
                 {
                     var userParameter = paramCollection.Where(parameter => parameter.Name == reportParameter.Description).FirstOrDefault();
                     if (userParameter != null)
                     {
-                        //reportParameter.Value = userParameter.Value;
                         if (reportParameter.MultiValue)
                         {
-                            //string[] multivariateParameter = JsonConvert.DeserializeObject<string[]>(userParameter.Value.ToString());
                             string[] multivariateParameter = userParameter.Value.ToString().Split();
                             reportParameter.Value = multivariateParameter;
                         }
                         else
                         {
                             reportParameter.Value = userParameter.Value;
-                            //reportParameter.Value = Convert.ChangeType(userParameter, reportParameter.Type);
                         }
                     }
                 }
