@@ -17,6 +17,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelChartofAccountListing", () => new ExcelChartofAccountListing());
             Reports.Add("DOIByOwnerAddress", () => new DOIbyOwnerAddress());
             Reports.Add("DOIbyOwner", () => new DOIbyOwner());
+            Reports.Add("ExcelDOIbyOwner", () => new DOIByOwnerExcel());
             Reports.Add("GeneralLedgerDetail", () => new GeneralLedgerDetail());
             Reports.Add("ExcelGeneralLedgerDetail", () => new ExcelGeneralLedgerDetail());
             Reports.Add("AccountingCenterListing", () => new AccountingCenterListing());
@@ -39,6 +40,14 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelChartOfAccountsAmounts", () => new ExcelChartOfAccountsAmounts());
             Reports.Add("RDCheckStubs", () => new RDCheckStubs()); // Will print RD Check Stubs. Might delete later. Just need to see what the report looks like.
             Reports.Add("ExcelRDCheckStubs", () => new ExcelRDCheckStubs());
+            Reports.Add("DOIbyOwnerDetail", () => new DOIbyOwnerDetail());
+            Reports.Add("ExcelDOIbyOwnerDetail", () => new ExcelDOIbyOwnerDetail());
+            Reports.Add("DOIbyProperty", () => new DOIbyProperty());
+            Reports.Add("ExcelDOIbyProperty", () => new ExcelDOIbyProperty());
+
+
+
+
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
