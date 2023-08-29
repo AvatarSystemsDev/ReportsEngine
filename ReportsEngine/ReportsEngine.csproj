@@ -328,6 +328,8 @@
     <Content Include="Content\reporting.light.custom.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Global.asax" />
+    <Content Include="WebServices\ReportOperations.asmx" />
+    <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
     <None Include="Reports\RDReports\NonNegotiable.png" />
     <Content Include="Scripts\ace.js" />
     <Content Include="Scripts\cldr.event.js" />
@@ -630,6 +632,10 @@
     </Compile>
     <Compile Include="Services\ReportStorageWebExtension.cs" />
     <Compile Include="Services\ServiceOperations.cs" />
+    <Compile Include="WebServices\ReportOperations.asmx.cs">
+      <DependentUpon>ReportOperations.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

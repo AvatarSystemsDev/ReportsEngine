@@ -213,7 +213,7 @@
             // 
             // Pulse
             // 
-            this.Pulse.ConnectionName = "localhost_AvatarPulse_Connection 3";
+            this.Pulse.ConnectionName = "localhost_AvatarPulse_Connection";
             this.Pulse.Name = "Pulse";
             columnExpression1.ColumnName = "ID";
             table1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"703\" />";
