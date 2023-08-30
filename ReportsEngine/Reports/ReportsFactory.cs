@@ -16,6 +16,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ChartofAccountListing", () => new ChartofAccountListing());
             Reports.Add("ExcelChartofAccountListing", () => new ExcelChartofAccountListing());
             Reports.Add("DOIByOwnerAddress", () => new DOIbyOwnerAddress());
+            Reports.Add("ExcelDOIByOwnerAddress", () => new ExcelDOIbyOwnerAddress());
             Reports.Add("DOIbyOwner", () => new DOIbyOwner());
             Reports.Add("ExcelDOIbyOwner", () => new DOIByOwnerExcel());
             Reports.Add("GeneralLedgerDetail", () => new GeneralLedgerDetail());
@@ -44,7 +45,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelDOIbyOwnerDetail", () => new ExcelDOIbyOwnerDetail());
             Reports.Add("DOIbyProperty", () => new DOIbyProperty());
             Reports.Add("ExcelDOIbyProperty", () => new ExcelDOIbyProperty());
-
+            Reports.Add("DOIDeckInformation", () => new DOIDeckInformation());
+            Reports.Add("ExcelDOIDeckInformation", () => new ExcelDOIDeckInformation());
 
 
 

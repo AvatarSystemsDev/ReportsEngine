@@ -550,11 +550,11 @@
     <Compile Include="Reports\MDReports\DOIbyOwner.Designer.cs">
       <DependentUpon>DOIbyOwner.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\DOIByOwnerAddress.cs">
+    <Compile Include="Reports\MDReports\DOIbyOwnerAddress.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\DOIByOwnerAddress.Designer.cs">
-      <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
+    <Compile Include="Reports\MDReports\DOIbyOwnerAddress.Designer.cs">
+      <DependentUpon>DOIbyOwnerAddress.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\DOIbyOwnerDetail.cs">
       <SubType>Component</SubType>
@@ -573,6 +573,12 @@
     </Compile>
     <Compile Include="Reports\MDReports\DOIbyProperty.Designer.cs">
       <DependentUpon>DOIbyProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\DOIDeckInformation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\DOIDeckInformation.Designer.cs">
+      <DependentUpon>DOIDeckInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\ExcelAccountingCenterListing.cs">
       <SubType>Component</SubType>
@@ -598,6 +604,12 @@
     <Compile Include="Reports\MDReports\ExcelChartOfAccountsAmounts.Designer.cs">
       <DependentUpon>ExcelChartOfAccountsAmounts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIbyOwnerAddress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIbyOwnerAddress.Designer.cs">
+      <DependentUpon>ExcelDOIbyOwnerAddress.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\ExcelDOIbyOwnerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -609,6 +621,12 @@
     </Compile>
     <Compile Include="Reports\MDReports\ExcelDOIbyProperty.Designer.cs">
       <DependentUpon>ExcelDOIbyProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIDeckInformation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIDeckInformation.Designer.cs">
+      <DependentUpon>ExcelDOIDeckInformation.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDCheckRemittanceSubreport.cs">
       <SubType>Component</SubType>
@@ -746,8 +764,8 @@
       <DependentUpon>DOIbyOwner.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\DOIByOwnerAddress.resx">
-      <DependentUpon>DOIByOwnerAddress.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\MDReports\DOIbyOwnerAddress.resx">
+      <DependentUpon>DOIbyOwnerAddress.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\DOIbyOwnerDetail.resx">
@@ -758,6 +776,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\DOIbyProperty.resx">
       <DependentUpon>DOIbyProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\DOIDeckInformation.resx">
+      <DependentUpon>DOIDeckInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelAccountingCenterListing.resx">
       <DependentUpon>ExcelAccountingCenterListing.cs</DependentUpon>
@@ -772,11 +793,17 @@
     <EmbeddedResource Include="Reports\MDReports\ExcelChartOfAccountsAmounts.resx">
       <DependentUpon>ExcelChartOfAccountsAmounts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelDOIbyOwnerAddress.resx">
+      <DependentUpon>ExcelDOIbyOwnerAddress.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelDOIbyOwnerDetail.resx">
       <DependentUpon>ExcelDOIbyOwnerDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelDOIbyProperty.resx">
       <DependentUpon>ExcelDOIbyProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelDOIDeckInformation.resx">
+      <DependentUpon>ExcelDOIDeckInformation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckRemittanceSubreport.resx">
       <DependentUpon>ExcelRDCheckRemittanceSubreport.cs</DependentUpon>
