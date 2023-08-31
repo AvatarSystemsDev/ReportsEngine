@@ -448,6 +448,18 @@
     <Compile Include="Reports\FinancialReports\ExcelGLBudgets.Designer.cs">
       <DependentUpon>ExcelGLBudgets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelGLBudgetsOverActual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelGLBudgetsOverActual.Designer.cs">
+      <DependentUpon>ExcelGLBudgetsOverActual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelGLPostRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelGLPostRegister.Designer.cs">
+      <DependentUpon>ExcelGLPostRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\ExcelJournalRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -490,11 +502,23 @@
     <Compile Include="Reports\FinancialReports\GLBudgets.Designer.cs">
       <DependentUpon>GLBudgets.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\GLBudgetsOverActual.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\GLBudgetsOverActual.Designer.cs">
+      <DependentUpon>GLBudgetsOverActual.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\GLBudgetsSemiannual.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\FinancialReports\GLBudgetsSemiannual.Designer.cs">
       <DependentUpon>GLBudgetsSemiannual.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\GLPostRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\GLPostRegister.Designer.cs">
+      <DependentUpon>GLPostRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\JournalRegister.cs">
       <SubType>Component</SubType>
@@ -709,6 +733,12 @@
     <EmbeddedResource Include="Reports\FinancialReports\ExcelGLBudgets.resx">
       <DependentUpon>ExcelGLBudgets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelGLBudgetsOverActual.resx">
+      <DependentUpon>ExcelGLBudgetsOverActual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelGLPostRegister.resx">
+      <DependentUpon>ExcelGLPostRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelJournalRegister.resx">
       <DependentUpon>ExcelJournalRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -730,8 +760,14 @@
     <EmbeddedResource Include="Reports\FinancialReports\GLBudgets.resx">
       <DependentUpon>GLBudgets.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\GLBudgetsOverActual.resx">
+      <DependentUpon>GLBudgetsOverActual.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\GLBudgetsSemiannual.resx">
       <DependentUpon>GLBudgetsSemiannual.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\GLPostRegister.resx">
+      <DependentUpon>GLPostRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\JournalRegister.resx">
       <DependentUpon>JournalRegister.cs</DependentUpon>

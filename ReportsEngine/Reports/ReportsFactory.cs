@@ -47,8 +47,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelDOIbyProperty", () => new ExcelDOIbyProperty());
             Reports.Add("DOIDeckInformation", () => new DOIDeckInformation());
             Reports.Add("ExcelDOIDeckInformation", () => new ExcelDOIDeckInformation());
-
-
+            Reports.Add("GLBudgetsOverActual", () => new GLBudgetsOverActual());
+            Reports.Add("ExcelGLBudgetsOverActual", () => new ExcelGLBudgetsOverActual());
+            Reports.Add("GLPostRegister", () => new GLPostRegister());
+            Reports.Add("ExcelGLPostRegister", () => new ExcelGLPostRegister());
 
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
