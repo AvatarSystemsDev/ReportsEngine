@@ -51,7 +51,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelGLBudgetsOverActual", () => new ExcelGLBudgetsOverActual());
             Reports.Add("GLPostRegister", () => new GLPostRegister());
             Reports.Add("ExcelGLPostRegister", () => new ExcelGLPostRegister());
-
+            Reports.Add("CheckHistory", () => new CheckHistory());
+            Reports.Add("ExcelCheckHistory", () => new ExcelCheckHistory());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

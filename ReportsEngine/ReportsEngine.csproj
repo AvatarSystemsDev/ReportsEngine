@@ -424,6 +424,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\CheckHistory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\CheckHistory.Designer.cs">
+      <DependentUpon>CheckHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelCheckHistory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelCheckHistory.Designer.cs">
+      <DependentUpon>ExcelCheckHistory.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\ExcelFinancialCodeListing.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -720,6 +732,12 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\CheckHistory.resx">
+      <DependentUpon>CheckHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelCheckHistory.resx">
+      <DependentUpon>ExcelCheckHistory.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelFinancialCodeListing.resx">
       <DependentUpon>ExcelFinancialCodeListing.cs</DependentUpon>

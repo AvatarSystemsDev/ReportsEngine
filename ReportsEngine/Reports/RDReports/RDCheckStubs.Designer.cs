@@ -713,14 +713,12 @@ namespace ReportsEngine.Reports.RDReports
             // 
             this.plngCheckPrintingProcessTrackingID.AllowNull = true;
             this.plngCheckPrintingProcessTrackingID.Description = "Check Date";
-            this.plngCheckPrintingProcessTrackingID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "asdfsdafasdfsadfasdfasdf")});
             this.plngCheckPrintingProcessTrackingID.Name = "plngCheckPrintingProcessTrackingID";
             this.plngCheckPrintingProcessTrackingID.Type = typeof(int);
             this.plngCheckPrintingProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings3.DataMember = "CheckPrintingProcessTrackingDate";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "FormattedDate";
+            dynamicListLookUpSettings3.DisplayMember = "ProcessingDate";
             dynamicListLookUpSettings3.ValueMember = "ID";
             this.plngCheckPrintingProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
