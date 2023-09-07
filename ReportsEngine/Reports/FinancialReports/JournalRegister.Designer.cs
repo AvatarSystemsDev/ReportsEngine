@@ -302,6 +302,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox3 = new DevExpress.XtraReports.UI.XRCrossBandBox();
+            this.First = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -631,8 +632,6 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel36,
             this.xrLabel9,
             this.xrLabel37});
-            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", resources.GetString("Tablix1.ExpressionBindings"))});
             this.Tablix1.HeightF = 15.17034F;
             this.Tablix1.KeepTogether = true;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
@@ -2596,7 +2595,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrGrandTotal.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrGrandTotal.BorderWidth = 0F;
             this.xrGrandTotal.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrGrandTotal.ExpressionBindings"))});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([NetAmount])\n")});
             this.xrGrandTotal.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrGrandTotal.KeepTogether = true;
             this.xrGrandTotal.LocationFloat = new DevExpress.Utils.PointFloat(866.5362F, 0F);
@@ -2709,8 +2708,6 @@ namespace ReportsEngine.Reports.FinancialReports
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel21,
             this.xrLabel26});
-            this.groupFooterBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", resources.GetString("groupFooterBand1.ExpressionBindings"))});
             this.groupFooterBand1.HeightF = 15.2091F;
             this.groupFooterBand1.Name = "groupFooterBand1";
             this.groupFooterBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
@@ -2750,7 +2747,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel26.BorderWidth = 0F;
             this.xrLabel26.CanShrink = true;
             this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrLabel26.ExpressionBindings"))});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum(Iif([NetAmount]))")});
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel26.KeepTogether = true;
             this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(866.5363F, 0F);
@@ -2899,6 +2896,13 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrCrossBandBox3.StartPointFloat = new DevExpress.Utils.PointFloat(866.5361F, 0F);
             this.xrCrossBandBox3.WidthF = 80.33856F;
             // 
+            // First
+            // 
+            this.First.DataMember = "Dynamic_DSJournalRegister";
+            this.First.Expression = "\'!\'";
+            this.First.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.First.Name = "First";
+            // 
             // JournalRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2913,7 +2917,8 @@ namespace ReportsEngine.Reports.FinancialReports
             this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
             this.GroupValue1,
             this.GroupValue2,
-            this.GroupValue3});
+            this.GroupValue3,
+            this.First});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -2926,6 +2931,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.DataMember = "Dynamic_DSJournalRegister";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "JournalRegister";
+            this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
@@ -3167,5 +3173,6 @@ namespace ReportsEngine.Reports.FinancialReports
         private SubBand SubBand5;
         private XRCrossBandBox xrCrossBandBox2;
         private XRCrossBandBox xrCrossBandBox3;
+        private CalculatedField First;
     }
 }

@@ -145,7 +145,7 @@ namespace ReportsEngine.Reports
         }
         private void xrReportPeriodSumCredit_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            if (GrandPeriodTotalDebitx <= 0)
+            if (GrandPeriodTotalCreditx <= 0)
             {
                 ((XRLabel)sender).Text = GrandPeriodTotalCreditx.ToString("N2");
             }

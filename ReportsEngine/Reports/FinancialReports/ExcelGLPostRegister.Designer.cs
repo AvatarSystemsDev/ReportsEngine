@@ -81,7 +81,7 @@
             // 
             // Dynamic
             // 
-            this.Dynamic.ConnectionName = "Connection";
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
             storedProcQuery1.Name = "DSGLRegisterReprint";
             queryParameter1.Name = "@plngBatchID";

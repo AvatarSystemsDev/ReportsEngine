@@ -156,4 +156,17 @@ sumSum(Iif([InterestTypeDescription] = 'Overriding Royalty',
 Iif([OwnerNumber] in (?pstrSelectOwner) AND [PhaseWellNumber] in (?pstrSelectProperty), [OilDecimal],0 )
 , [Nothing])))</value>
   </data>
+  <data name="xrLabel16.ExpressionBindings" xml:space="preserve">
+    <value>IIF(?plngInterestTypesToShow &lt;= 0, 'All Interest Types', Iif(?plngInterestTypesToShow = 1,'Working' , Iif(?plngInterestTypesToShow = 2,'Royalty' , Iif(?plngInterestTypesToShow = 3,'ORRI' ,Iif(?plngInterestTypesToShow = 4,'Royalty and ORRI' ,'Working and ORRI' ) ))))
+</value>
+  </data>
+  <data name="xrLabel13.ExpressionBindings" xml:space="preserve">
+    <value>iif(?pstrBeginningOwnerNumber = '!', iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', 'All Owners', 'First Owner to ' + ?pstrEndingOwnerNumber), iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', ?pstrBeginningOwnerNumber + ' to Last Owner', ?pstrBeginningOwnerNumber + ' to ' + ?pstrEndingOwnerNumber))
+
+</value>
+  </data>
+  <data name="xrLabel17.ExpressionBindings" xml:space="preserve">
+    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'All Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
+</value>
+  </data>
 </root>

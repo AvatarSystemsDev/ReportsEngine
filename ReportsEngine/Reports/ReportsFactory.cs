@@ -53,6 +53,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelGLPostRegister", () => new ExcelGLPostRegister());
             Reports.Add("CheckHistory", () => new CheckHistory());
             Reports.Add("ExcelCheckHistory", () => new ExcelCheckHistory());
+            Reports.Add("CashDepositSummary", () => new CashDepositSummary());
+            Reports.Add("ExcelCashDepositSummary", () => new ExcelCashDepositSummary());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
