@@ -133,16 +133,6 @@ Iif( [AccountingCenterNumber] in (?pstrSelectAccountingCenter), TRUE
 
 </value>
   </data>
-  <data name="xrLabel21.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningCostCenter = '!', iif(?pstrEndingCostCenter= 'ZZZZ', 'All Accounting Centers', 'First Accounting Center to ' + ?pstrEndingCostCenter), iif(?pstrEndingCostCenter= 'ZZZZ', ?pstrBeginningCostCenter + ' to Last Accounting Center', ?pstrBeginningCostCenter + ' to ' + ?pstrEndingCostCenter))
-
-</value>
-  </data>
-  <data name="xrLabel4.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningAccountNumber = '!', iif(?pstrEndingAccountNumber = 'ZZZZZZZZZZ-ZZZZ', 'All Accounts', 'First Account to ' + ?pstrEndingAccountNumber), iif(?pstrEndingAccountNumber = 'ZZZZZZZZZZ-ZZZZ', ?pstrBeginningAccountNumber + ' to Last Account', ?pstrBeginningAccountNumber + ' to ' + ?pstrEndingAccountNumber))
-
-</value>
-  </data>
   <data name="xrLabel29.ExpressionBindings" xml:space="preserve">
     <value>sumSum(
 Iif([AccountNumber] in (?pstrSelectAccounts), 
@@ -235,5 +225,15 @@ Iif( [AccountingCenterNumber] in (?pstrSelectAccountingCenter), [FiscalYearBegin
 , Iif('!'in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([AccountingCenterNumber]),[FiscalYearBeginningBalance],0))
 ,0)
 )</value>
+  </data>
+  <data name="xrLabel49.ExpressionBindings" xml:space="preserve">
+    <value>iif(?pstrBeginningCostCenter = '!', iif(?pstrEndingCostCenter= 'ZZZZ', 'All Accounting Centers', 'First Accounting Center to ' + ?pstrEndingCostCenter), iif(?pstrEndingCostCenter= 'ZZZZ', ?pstrBeginningCostCenter + ' to Last Accounting Center', ?pstrBeginningCostCenter + ' to ' + ?pstrEndingCostCenter))
+
+</value>
+  </data>
+  <data name="xrLabel52.ExpressionBindings" xml:space="preserve">
+    <value>iif(?pstrBeginningAccountNumber = '!', iif(?pstrEndingAccountNumber = 'ZZZZZZZZZZ-ZZZZ', 'All Accounts', 'First Account to ' + ?pstrEndingAccountNumber), iif(?pstrEndingAccountNumber = 'ZZZZZZZZZZ-ZZZZ', ?pstrBeginningAccountNumber + ' to Last Account', ?pstrBeginningAccountNumber + ' to ' + ?pstrEndingAccountNumber))
+
+</value>
   </data>
 </root>

@@ -430,6 +430,12 @@
     <Compile Include="Reports\FinancialReports\CheckHistory.Designer.cs">
       <DependentUpon>CheckHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelAFEMasterList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelAFEMasterList.Designer.cs">
+      <DependentUpon>ExcelAFEMasterList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\ExcelCheckHistory.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -753,6 +759,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\CheckHistory.resx">
       <DependentUpon>CheckHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelAFEMasterList.resx">
+      <DependentUpon>ExcelAFEMasterList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelCheckHistory.resx">
       <DependentUpon>ExcelCheckHistory.cs</DependentUpon>

@@ -132,9 +132,6 @@ Iif( [AccountingCenterNumber] in (?pstrSelectAccountingCenter), TRUE
 ,FALSE ))
 </value>
   </data>
-  <data name="xrLabel13.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningCostCenter = '!', iif(?pstrEndingCostCenter = 'ZZZZ', 'All Accounting Centers', 'First Accounting Center to ' + ?pstrEndingCostCenter ), iif(?pstrEndingCostCenter = 'ZZZZ', ?pstrBeginningCostCenter + ' to Last Accounting Center', ?pstrBeginningCostCenter + ' to ' + ?pstrEndingCostCenter ))</value>
-  </data>
   <data name="xrGrandTotal.ExpressionBindings" xml:space="preserve">
     <value>sumsum(Iif([DebitAmount] = 0 AND [CreditAmount] = 0 AND not ?pbooShowZeroAmounts,
 0,
@@ -144,5 +141,8 @@ Iif( [AccountingCenterNumber] in (?pstrSelectAccountingCenter), [DebitAmount]-[C
 ,0)))
 
 </value>
+  </data>
+  <data name="xrLabel18.ExpressionBindings" xml:space="preserve">
+    <value>iif(?pstrBeginningCostCenter = '!', iif(?pstrEndingCostCenter = 'ZZZZ', 'All Accounting Centers', 'First Accounting Center to ' + ?pstrEndingCostCenter ), iif(?pstrEndingCostCenter = 'ZZZZ', ?pstrBeginningCostCenter + ' to Last Accounting Center', ?pstrBeginningCostCenter + ' to ' + ?pstrEndingCostCenter ))</value>
   </data>
 </root>

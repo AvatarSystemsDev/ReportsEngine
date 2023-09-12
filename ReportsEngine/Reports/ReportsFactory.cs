@@ -13,6 +13,7 @@ namespace ReportsEngine.Reports
         {
             Reports.Add("APEditListcs", () => new APEditListcs());
             Reports.Add("AFEMasterList", () => new AFEMasterList());
+            Reports.Add("ExcelAFEMasterList", () => new ExcelAFEMasterList());
             Reports.Add("ChartofAccountListing", () => new ChartofAccountListing());
             Reports.Add("ExcelChartofAccountListing", () => new ExcelChartofAccountListing());
             Reports.Add("DOIByOwnerAddress", () => new DOIbyOwnerAddress());
