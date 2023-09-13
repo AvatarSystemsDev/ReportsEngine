@@ -219,7 +219,7 @@
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 29.79094F;
+            this.bottomMarginBand1.HeightF = 0F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // xrLabel12
@@ -1507,7 +1507,7 @@
             this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
-            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 29.79094F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

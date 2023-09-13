@@ -1,4 +1,5 @@
 ﻿using DevExpress.XtraReports.UI;
+using ReportsEngine.Reports.APReports;
 using ReportsEngine.Reports.FinancialReports;
 using ReportsEngine.Reports.MDReports;
 using ReportsEngine.Reports.RDReports;
@@ -11,7 +12,7 @@ namespace ReportsEngine.Reports
     {
         static ReportsFactory()
         {
-            Reports.Add("APEditListcs", () => new APEditListcs());
+            Reports.Add("APEditListcs", () => new APEditList());
             Reports.Add("AFEMasterList", () => new AFEMasterList());
             Reports.Add("ExcelAFEMasterList", () => new ExcelAFEMasterList());
             Reports.Add("ChartofAccountListing", () => new ChartofAccountListing());
@@ -56,6 +57,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelCheckHistory", () => new ExcelCheckHistory());
             Reports.Add("CashDepositSummary", () => new CashDepositSummary());
             Reports.Add("ExcelCashDepositSummary", () => new ExcelCashDepositSummary());
+            Reports.Add("APEditList", () => new APEditList());
+            Reports.Add("ExcelAPEditList", () => new ExcelAPEditList());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

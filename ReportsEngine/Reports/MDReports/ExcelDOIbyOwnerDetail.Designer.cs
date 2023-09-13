@@ -228,7 +228,7 @@
             this.xrLabel29,
             this.xrLabel8,
             this.xrLabel9});
-            this.Tablix1.HeightF = 15.00005F;
+            this.Tablix1.HeightF = 15F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
             this.Tablix1.SortFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
@@ -245,7 +245,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RDPayStatusDescription]")});
             this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel30.KeepTogether = true;
-            this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(1113.433F, 4.768372E-05F);
+            this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(1113.433F, 0F);
             this.xrLabel30.Name = "xrLabel30";
             this.xrLabel30.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel30.SizeF = new System.Drawing.SizeF(130.8926F, 14.99998F);
@@ -266,10 +266,11 @@
             this.xrLabel38.BorderWidth = 1F;
             this.xrLabel38.CanGrow = false;
             this.xrLabel38.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeReportingGroup]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeCode]\r\n")});
             this.xrLabel38.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel38.KeepTogether = true;
-            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(1624.955F, 4.768372E-05F);
+            this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(1624.955F, 0F);
+            this.xrLabel38.Multiline = true;
             this.xrLabel38.Name = "xrLabel38";
             this.xrLabel38.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel38.SizeF = new System.Drawing.SizeF(58.2283F, 14.99998F);
@@ -293,7 +294,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[IsCrossReferenceDOI]")});
             this.xrLabel36.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel36.KeepTogether = true;
-            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(1504.332F, 4.768372E-05F);
+            this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(1504.332F, 0F);
             this.xrLabel36.Name = "xrLabel36";
             this.xrLabel36.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel36.SizeF = new System.Drawing.SizeF(60.31161F, 14.99998F);
@@ -317,7 +318,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[HasCrossReferences]")});
             this.xrLabel34.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel34.KeepTogether = true;
-            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(1564.643F, 4.768372E-05F);
+            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(1564.643F, 0F);
             this.xrLabel34.Name = "xrLabel34";
             this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel34.SizeF = new System.Drawing.SizeF(60.31161F, 14.99998F);
@@ -341,7 +342,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ViewRDAddressNumber]")});
             this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel27.KeepTogether = true;
-            this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(1455.478F, 4.768372E-05F);
+            this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(1455.478F, 0F);
             this.xrLabel27.Name = "xrLabel27";
             this.xrLabel27.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel27.SizeF = new System.Drawing.SizeF(48.85332F, 14.99998F);
@@ -365,7 +366,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ViewJIBAddressNumber]")});
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel26.KeepTogether = true;
-            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(1405.583F, 4.768372E-05F);
+            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(1405.583F, 0F);
             this.xrLabel26.Name = "xrLabel26";
             this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel26.SizeF = new System.Drawing.SizeF(49.89503F, 14.99998F);
@@ -389,7 +390,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AcquisitionNumber]")});
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel25.KeepTogether = true;
-            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(1337.034F, 4.768372E-05F);
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(1337.034F, 0F);
             this.xrLabel25.Name = "xrLabel25";
             this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel25.SizeF = new System.Drawing.SizeF(68.54964F, 14.99998F);
@@ -413,7 +414,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountingCenterNumber]")});
             this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel24.KeepTogether = true;
-            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(1244.325F, 4.768372E-05F);
+            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(1244.325F, 0F);
             this.xrLabel24.Name = "xrLabel24";
             this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel24.SizeF = new System.Drawing.SizeF(92.70834F, 15F);
@@ -438,7 +439,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[IsDeductionExempt]")});
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel12.KeepTogether = true;
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(1842.453F, 4.768372E-05F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(1842.453F, 0F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(66.56165F, 14.99998F);
@@ -463,7 +464,7 @@
                     "TaxExemptionTypeCodeID] = 3,\'F\' ,\'\' ) ))")});
             this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel7.KeepTogether = true;
-            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(1775.891F, 4.768372E-05F);
+            this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(1775.891F, 0F);
             this.xrLabel7.Name = "xrLabel7";
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel7.SizeF = new System.Drawing.SizeF(66.56165F, 14.99998F);
@@ -487,7 +488,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OilDecimal]")});
             this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel33.KeepTogether = true;
-            this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(2014.118F, 4.768372E-05F);
+            this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(2014.118F, 0F);
             this.xrLabel33.Name = "xrLabel33";
             this.xrLabel33.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel33.SizeF = new System.Drawing.SizeF(105.1035F, 15F);
@@ -512,7 +513,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CostDecimal]")});
             this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel32.KeepTogether = true;
-            this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(1909.015F, 4.768372E-05F);
+            this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(1909.015F, 0F);
             this.xrLabel32.Name = "xrLabel32";
             this.xrLabel32.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel32.SizeF = new System.Drawing.SizeF(105.1035F, 14.99998F);
@@ -537,7 +538,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeDescription]")});
             this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel31.KeepTogether = true;
-            this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(1683.183F, 4.768372E-05F);
+            this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(1683.183F, 0F);
             this.xrLabel31.Name = "xrLabel31";
             this.xrLabel31.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel31.SizeF = new System.Drawing.SizeF(92.70831F, 14.99998F);
@@ -561,7 +562,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[JIBPayStatusDescription]")});
             this.xrLabel42.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel42.KeepTogether = true;
-            this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(982.5406F, 4.768372E-05F);
+            this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(982.5406F, 0F);
             this.xrLabel42.Name = "xrLabel42";
             this.xrLabel42.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrLabel42.SizeF = new System.Drawing.SizeF(130.8926F, 14.99998F);

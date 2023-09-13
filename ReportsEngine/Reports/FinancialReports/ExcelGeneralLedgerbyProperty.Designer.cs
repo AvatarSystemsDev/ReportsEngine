@@ -134,6 +134,9 @@
             this.pstrSelectAccount = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -1356,6 +1359,24 @@
             this.pstrSelectOwner.MultiValue = true;
             this.pstrSelectOwner.Name = "pstrSelectOwner";
             // 
+            // pstrBeginningCostCenter
+            // 
+            this.pstrBeginningCostCenter.Description = "Beginning Acct. Center";
+            this.pstrBeginningCostCenter.Name = "pstrBeginningCostCenter";
+            this.pstrBeginningCostCenter.ValueInfo = "!";
+            // 
+            // pstrEndingCostCenter
+            // 
+            this.pstrEndingCostCenter.Description = "Parameter2";
+            this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
+            this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
+            // 
+            // pstrSelectCostCenter
+            // 
+            this.pstrSelectCostCenter.Description = "Select Cost Center";
+            this.pstrSelectCostCenter.MultiValue = true;
+            this.pstrSelectCostCenter.Name = "pstrSelectCostCenter";
+            // 
             // ExcelGeneralLedgerDetailbyProperty
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1397,7 +1418,10 @@
             this.pstrSelectProperty,
             this.pstrSelectAccount,
             this.pstrSelectVendor,
-            this.pstrSelectOwner});
+            this.pstrSelectOwner,
+            this.pstrBeginningCostCenter,
+            this.pstrEndingCostCenter,
+            this.pstrSelectCostCenter});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1468,5 +1492,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
         private DevExpress.XtraReports.UI.XRLabel xrLabel22;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectCostCenter;
     }
 }

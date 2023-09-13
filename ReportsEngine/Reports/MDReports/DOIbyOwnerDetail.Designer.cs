@@ -690,7 +690,7 @@
             this.xrLabel8.BorderWidth = 1F;
             this.xrLabel8.CanGrow = false;
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeReportingGroup]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeCode]")});
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel8.ForeColor = System.Drawing.Color.Black;
             this.xrLabel8.KeepTogether = true;
@@ -1222,7 +1222,7 @@
             this.xrLabel53.BorderWidth = 1F;
             this.xrLabel53.CanGrow = false;
             this.xrLabel53.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeReportingGroup]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeCode]")});
             this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel53.ForeColor = System.Drawing.Color.Black;
             this.xrLabel53.KeepTogether = true;
@@ -2737,7 +2737,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DOIByOwnerDetail";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"777\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"797\" />";
             source1.DataMember = "DOIByOwnerDetail";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DOIByOwnerDetail";
@@ -2774,7 +2774,11 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ViewJIBAddressNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "UseDefaultJIBAddress"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "JIBPayStatusID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "JIBPayStatusDescription")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "JIBPayStatusDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsActive"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ViewRDAddressID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ViewJIBAddressID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InterestTypeCode")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_LookupProperties";
             sourceNode2.Alias = null;

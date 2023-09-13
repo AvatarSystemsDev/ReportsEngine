@@ -846,7 +846,7 @@
             this.xrLabel31.BorderWidth = 1F;
             this.xrLabel31.CanGrow = false;
             this.xrLabel31.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeReportingGroup]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeCode]")});
             this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel31.ForeColor = System.Drawing.Color.Black;
             this.xrLabel31.KeepTogether = true;
@@ -1120,9 +1120,9 @@
             this.xrLabel8});
             this.Rectangle3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)")});
-            this.Rectangle3.LocationFloat = new DevExpress.Utils.PointFloat(2.529971F, 62.95001F);
+            this.Rectangle3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 62.95001F);
             this.Rectangle3.Name = "Rectangle3";
-            this.Rectangle3.SizeF = new System.Drawing.SizeF(767.47F, 22.57F);
+            this.Rectangle3.SizeF = new System.Drawing.SizeF(771.0005F, 22.57F);
             // 
             // xrLabel16
             // 
@@ -2126,6 +2126,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_dsDOIbyProperty";
             sourceNode1.Alias = null;
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"837\" />";
             source1.DataMember = "dsDOIbyProperty";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_dsDOIbyProperty";
@@ -2167,7 +2168,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbreviation"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AcquisitionNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountingCenterNumber")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountingCenterNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InterestTypeCode")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_LookupProperties";
             sourceNode2.Alias = null;

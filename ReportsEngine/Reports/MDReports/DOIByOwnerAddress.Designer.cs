@@ -587,7 +587,7 @@
             this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel6.BorderWidth = 1F;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeReportingGroup]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InterestTypeCode]")});
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel6.KeepTogether = true;
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(421.8044F, 9.536743E-05F);
@@ -701,7 +701,7 @@
             this.SubBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel13});
             this.SubBand3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([Email])\nAND not ?pbooShowEmail\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([Email])\nAND ?pbooShowEmail\n")});
             this.SubBand3.HeightF = 16F;
             this.SubBand3.Name = "SubBand3";
             this.SubBand3.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -736,7 +736,7 @@
             this.SubBand4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel17});
             this.SubBand4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([phone1])\nAND [phone1] <> \'(   )    -\'\nAND not ?pbooShowPhone")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([phone1])\nAND [phone1] <> \'(   )    -\'\nAND ?pbooShowPhone")});
             this.SubBand4.HeightF = 16F;
             this.SubBand4.Name = "SubBand4";
             // 
@@ -1209,7 +1209,7 @@
             this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(716.1393F, 9.999974F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(93.26129F, 11.7084F);
+            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(53.26129F, 11.7084F);
             this.xrPageInfo1.StylePriority.UseBackColor = false;
             this.xrPageInfo1.StylePriority.UseBorderColor = false;
             this.xrPageInfo1.StylePriority.UsePadding = false;
@@ -1235,7 +1235,7 @@
             this.xrCopyright.Multiline = true;
             this.xrCopyright.Name = "xrCopyright";
             this.xrCopyright.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrCopyright.SizeF = new System.Drawing.SizeF(210.4532F, 8.583389F);
+            this.xrCopyright.SizeF = new System.Drawing.SizeF(170.4532F, 8.583389F);
             this.xrCopyright.StylePriority.UseBackColor = false;
             this.xrCopyright.StylePriority.UsePadding = false;
             this.xrCopyright.StylePriority.UseTextAlignment = false;
@@ -1372,7 +1372,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DOIWithOwnerAddress";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"457\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"577\" />";
             source1.DataMember = "DOIWithOwnerAddress";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DOIWithOwnerAddress";
@@ -1396,7 +1396,13 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerAddressBlock"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Email"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PhasewellActive"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "phone1")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "phone1"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CountyName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CountyID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbreviation"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InterestTypeCode")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_LookupProperties";
             sourceNode2.Alias = null;
@@ -1597,11 +1603,11 @@
             this.xrLabel25,
             this.xrLabel28,
             this.xrLabel29});
+            this.groupFooterBand2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "PageBreak", "Iif(?pbooPropertyOnNextPage, \'AfterBand\', \'None\')")});
             this.groupFooterBand2.HeightF = 16F;
             this.groupFooterBand2.Level = 1;
             this.groupFooterBand2.Name = "groupFooterBand2";
-            this.groupFooterBand2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "PageBreak", "Iif(?pbooPropertyOnNextPage, \'AfterBand\', \'None\')")});
             // 
             // xrLabel25
             // 
@@ -1763,7 +1769,7 @@
             // 
             // pbooShowPhone
             // 
-            this.pbooShowPhone.Description = "Parameter1";
+            this.pbooShowPhone.Description = "Show Phone";
             this.pbooShowPhone.Name = "pbooShowPhone";
             this.pbooShowPhone.Type = typeof(bool);
             this.pbooShowPhone.ValueInfo = "True";
@@ -1800,7 +1806,7 @@
             this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) And [PhaseWellNumber] In (?pstrSelectProperty" +
     ")";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(40F, 0F, 40F, 40F);
+            this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),

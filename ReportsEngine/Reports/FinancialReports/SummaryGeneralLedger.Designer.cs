@@ -2850,6 +2850,9 @@
             this.DisplayName = "SummaryGeneralLedger";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Landscape", "?pbooShowVolume == True")});
+            this.FilterString = "[AccountNumber] In (?pstrSelectAccounts) And ([AccountingCenterNumber] In (?pstrS" +
+    "electAccountingCenter) Or IsNullOrEmpty([AccountingCenterNumber]) And \'!\' In (?p" +
+    "strSelectAccountingCenter))";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);

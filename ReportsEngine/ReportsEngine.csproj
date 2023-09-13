@@ -424,6 +424,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\APReports\ExcelAPEditList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPEditList.Designer.cs">
+      <DependentUpon>ExcelAPEditList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\CheckHistory.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -568,11 +574,11 @@
     <Compile Include="Reports\MDReports\AFEMasterList.Designer.cs">
       <DependentUpon>AFEMasterList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APReports\APEditListcs.cs">
+    <Compile Include="Reports\APReports\APEditList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\APReports\APEditListcs.Designer.cs">
-      <DependentUpon>APEditListcs.cs</DependentUpon>
+    <Compile Include="Reports\APReports\APEditList.Designer.cs">
+      <DependentUpon>APEditList.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\CashDepositSummary.cs">
       <SubType>Component</SubType>
@@ -757,6 +763,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPEditList.resx">
+      <DependentUpon>ExcelAPEditList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\CheckHistory.resx">
       <DependentUpon>CheckHistory.cs</DependentUpon>
     </EmbeddedResource>
@@ -830,8 +839,8 @@
       <DependentUpon>AFEMasterList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\APEditListcs.resx">
-      <DependentUpon>APEditListcs.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\APReports\APEditList.resx">
+      <DependentUpon>APEditList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\CashDepositSummary.resx">

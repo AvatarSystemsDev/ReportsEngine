@@ -1,8 +1,8 @@
 ﻿namespace ReportsEngine.Reports
 {
-    public partial class APEditListcs : DevExpress.XtraReports.UI.XtraReport
+    public partial class APEditList : DevExpress.XtraReports.UI.XtraReport
     {
-        public APEditListcs()
+        public APEditList()
         {
             InitializeComponent();
         }
