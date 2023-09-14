@@ -59,6 +59,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelCashDepositSummary", () => new ExcelCashDepositSummary());
             Reports.Add("APEditList", () => new APEditList());
             Reports.Add("ExcelAPEditList", () => new ExcelAPEditList());
+            Reports.Add("APVoucherRegister", () => new APVoucherRegister());
+            Reports.Add("ExcelAPVoucherRegister", () => new ExcelAPVoucherRegister());
+            Reports.Add("RDProofList", () => new RDProofList());
+            Reports.Add("ExcelRDProofList", () => new ExcelRDProofList());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

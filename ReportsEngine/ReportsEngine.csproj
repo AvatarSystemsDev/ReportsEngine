@@ -354,6 +354,7 @@
     <None Include="packages.config" />
     <Content Include="Reports\RDReports\RDCheckRemittanceSubreport.rdl" />
     <Content Include="Reports\RDReports\RDCheckStubs.rdl" />
+    <Content Include="Reports\RDReports\RDProofList.rdl" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -429,6 +430,18 @@
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPEditList.Designer.cs">
       <DependentUpon>ExcelAPEditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APVoucherRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APVoucherRegister.Designer.cs">
+      <DependentUpon>APVoucherRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPVoucherRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPVoucherRegister.Designer.cs">
+      <DependentUpon>ExcelAPVoucherRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\CheckHistory.cs">
       <SubType>Component</SubType>
@@ -706,6 +719,12 @@
     <Compile Include="Reports\RDReports\ExcelRDCheckStubs.Designer.cs">
       <DependentUpon>ExcelRDCheckStubs.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDProofList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDProofList.Designer.cs">
+      <DependentUpon>ExcelRDProofList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\RDCheckRemittanceSubreport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -717,6 +736,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\RDCheckStubs.Designer.cs">
       <DependentUpon>RDCheckStubs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDProofList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDProofList.Designer.cs">
+      <DependentUpon>RDProofList.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\Report1.cs">
       <SubType>Component</SubType>
@@ -765,6 +790,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPEditList.resx">
       <DependentUpon>ExcelAPEditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APVoucherRegister.resx">
+      <DependentUpon>APVoucherRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPVoucherRegister.resx">
+      <DependentUpon>ExcelAPVoucherRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\CheckHistory.resx">
       <DependentUpon>CheckHistory.cs</DependentUpon>
@@ -910,11 +941,17 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckStubs.resx">
       <DependentUpon>ExcelRDCheckStubs.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDProofList.resx">
+      <DependentUpon>ExcelRDProofList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDCheckRemittanceSubreport.resx">
       <DependentUpon>RDCheckRemittanceSubreport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDCheckStubs.resx">
       <DependentUpon>RDCheckStubs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDProofList.resx">
+      <DependentUpon>RDProofList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\Report1.resx">
       <DependentUpon>Report1.cs</DependentUpon>
