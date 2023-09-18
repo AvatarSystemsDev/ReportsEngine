@@ -738,7 +738,7 @@
             // 
             // SubBand1
             // 
-            this.SubBand1.HeightF = 12.5F;
+            this.SubBand1.HeightF = 8.25F;
             this.SubBand1.Name = "SubBand1";
             this.SubBand1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             // 
@@ -1006,10 +1006,10 @@
             this.xrCrossBandBox1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrCrossBandBox1.BorderWidth = 1F;
             this.xrCrossBandBox1.EndBand = this.SubBand1;
-            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 8.999988F);
+            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(6.357829E-05F, 4F);
             this.xrCrossBandBox1.Name = "xrCrossBandBox1";
             this.xrCrossBandBox1.StartBand = this.SubBand1;
-            this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 4.999987F);
+            this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(6.357829E-05F, 0F);
             this.xrCrossBandBox1.WidthF = 770.0001F;
             // 
             // xrCrossBandBox2

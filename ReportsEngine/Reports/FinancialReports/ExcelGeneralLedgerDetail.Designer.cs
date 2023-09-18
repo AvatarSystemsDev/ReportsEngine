@@ -830,7 +830,7 @@
             this.xrLabel40.BorderWidth = 0.1F;
             this.xrLabel40.CanGrow = false;
             this.xrLabel40.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountingCenterNumber]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumberSuffix]")});
             this.xrLabel40.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel40.KeepTogether = true;
             this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(85.41666F, 0.0001907349F);

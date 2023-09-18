@@ -443,6 +443,30 @@
     <Compile Include="Reports\APReports\ExcelAPVoucherRegister.Designer.cs">
       <DependentUpon>ExcelAPVoucherRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\APReports\ExcelRDPreliminary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelRDPreliminary.Designer.cs">
+      <DependentUpon>ExcelRDPreliminary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelRDProductionTaxDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelRDProductionTaxDetail.Designer.cs">
+      <DependentUpon>ExcelRDProductionTaxDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\RDPreliminaryDistribution.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\RDPreliminaryDistribution.Designer.cs">
+      <DependentUpon>RDPreliminaryDistribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\RDProductionTaxDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\RDProductionTaxDetail.Designer.cs">
+      <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\CheckHistory.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -796,6 +820,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPVoucherRegister.resx">
       <DependentUpon>ExcelAPVoucherRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelRDPreliminary.resx">
+      <DependentUpon>ExcelRDPreliminary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelRDProductionTaxDetail.resx">
+      <DependentUpon>ExcelRDProductionTaxDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\RDPreliminaryDistribution.resx">
+      <DependentUpon>RDPreliminaryDistribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\RDProductionTaxDetail.resx">
+      <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\CheckHistory.resx">
       <DependentUpon>CheckHistory.cs</DependentUpon>

@@ -281,6 +281,8 @@
             this.xrLabel59 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel58 = new DevExpress.XtraReports.UI.XRLabel();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -864,6 +866,8 @@
             this.ReportTitle});
             this.pageHeaderBand1.HeightF = 87.98F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
+            this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
+            this.SubBand1});
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrPanel4
@@ -3653,6 +3657,24 @@
             selectNode3,
             selectNode4});
             // 
+            // SubBand1
+            // 
+            this.SubBand1.HeightF = 8.25F;
+            this.SubBand1.Name = "SubBand1";
+            this.SubBand1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            // 
+            // xrCrossBandBox1
+            // 
+            this.xrCrossBandBox1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
+            this.xrCrossBandBox1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrCrossBandBox1.BorderWidth = 1F;
+            this.xrCrossBandBox1.EndBand = this.SubBand1;
+            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(6.357829E-05F, 3.999996F);
+            this.xrCrossBandBox1.Name = "xrCrossBandBox1";
+            this.xrCrossBandBox1.StartBand = this.SubBand1;
+            this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(6.357829E-05F, 0F);
+            this.xrCrossBandBox1.WidthF = 770.0001F;
+            // 
             // RDProofList
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -3668,6 +3690,8 @@
             this.Dynamic,
             this.Pulse,
             this.federationDataSource1});
+            this.CrossBandControls.AddRange(new DevExpress.XtraReports.UI.XRCrossBandControl[] {
+            this.xrCrossBandBox1});
             this.DataMember = "Dynamic_ProofList";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "RDProofList";
@@ -3828,5 +3852,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel90;
         private DevExpress.XtraReports.UI.XRLabel xrLabel89;
         private DevExpress.XtraReports.UI.XRLabel xrLabel91;
+        private DevExpress.XtraReports.UI.SubBand SubBand1;
+        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox1;
     }
 }

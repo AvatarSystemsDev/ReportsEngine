@@ -871,7 +871,7 @@
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(86.37836F, 16.99665F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(87.42041F, 16.99665F);
             this.xrLabel13.StyleName = "xrTablixRowStyle";
             this.xrLabel13.StylePriority.UseBackColor = false;
             this.xrLabel13.StylePriority.UseBorderColor = false;
