@@ -67,6 +67,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDPreliminaryDistribution", () => new ExcelRDPreliminaryDistribution());
             Reports.Add("RDProductionTaxDetail", () => new RDProductionTaxDetail());
             Reports.Add("ExcelRDProductionTaxDetail", () => new ExcelRDProductionTaxDetail());
+            Reports.Add("CheckReconciliationDetail", () => new CheckReconciliationDetail());
+            Reports.Add("ExcelCheckReconciliationDetail", () => new ExcelCheckReconciliationDetail());
+            Reports.Add("CheckReconciliationSummary", () => new CheckReconciliationSummary());
+            Reports.Add("ExcelCheckReconciliationSummary", () => new ExcelCheckReconciliationSummary());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

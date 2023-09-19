@@ -151,6 +151,7 @@
             this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
             this.Rectangle3 = new DevExpress.XtraReports.UI.XRPanel();
+            this.Textbox65 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
@@ -185,9 +186,8 @@
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Textbox65 = new DevExpress.XtraReports.UI.XRRichText();
-            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox65)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -729,6 +729,23 @@
             this.Rectangle3.Name = "Rectangle3";
             this.Rectangle3.SizeF = new System.Drawing.SizeF(521.52F, 26.04F);
             // 
+            // Textbox65
+            // 
+            this.Textbox65.BorderColor = System.Drawing.Color.Black;
+            this.Textbox65.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Textbox65.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Textbox65.BorderWidth = 1F;
+            this.Textbox65.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
+                    "e: </b>\' + FormatString(\'{0:d}\', [ProcessingDate]) + \'</span>\'\n")});
+            this.Textbox65.KeepTogether = true;
+            this.Textbox65.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.040016F);
+            this.Textbox65.Name = "Textbox65";
+            this.Textbox65.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.Textbox65.SerializableRtfString = resources.GetString("Textbox65.SerializableRtfString");
+            this.Textbox65.SizeF = new System.Drawing.SizeF(419.54F, 25F);
+            this.Textbox65.StylePriority.UsePadding = false;
+            // 
             // xrLabel16
             // 
             this.xrLabel16.BorderColor = System.Drawing.Color.Black;
@@ -1261,11 +1278,11 @@
             this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel2.BorderWidth = 1.39F;
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(73.28835F, 0F);
             this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(111.9753F, 16F);
             this.xrLabel2.StylePriority.UseBorderColor = false;
             this.xrLabel2.StylePriority.UseBorderDashStyle = false;
@@ -1381,23 +1398,6 @@
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel9.TextFormatString = "{0:n2}";
             // 
-            // Textbox65
-            // 
-            this.Textbox65.BorderColor = System.Drawing.Color.Black;
-            this.Textbox65.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox65.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox65.BorderWidth = 1F;
-            this.Textbox65.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
-                    "e: </b>\' + FormatString(\'{0:d}\', [ProcessingDate]) + \'</span>\'\n")});
-            this.Textbox65.KeepTogether = true;
-            this.Textbox65.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.040016F);
-            this.Textbox65.Name = "Textbox65";
-            this.Textbox65.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox65.SerializableRtfString = resources.GetString("Textbox65.SerializableRtfString");
-            this.Textbox65.SizeF = new System.Drawing.SizeF(419.54F, 25F);
-            this.Textbox65.StylePriority.UsePadding = false;
-            // 
             // RDPreliminaryDistribution
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1444,8 +1444,8 @@
             this.plngUserID,
             this.pbooShowCriteria});
             this.Version = "23.1";
-            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox65)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

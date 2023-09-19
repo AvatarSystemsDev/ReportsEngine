@@ -352,9 +352,6 @@
     <Content Include="Scripts\knockout-3.3.0.js" />
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <None Include="packages.config" />
-    <Content Include="Reports\RDReports\RDCheckRemittanceSubreport.rdl" />
-    <Content Include="Reports\RDReports\RDCheckStubs.rdl" />
-    <Content Include="Reports\RDReports\RDProofList.rdl" />
     <None Include="Scripts\jquery.validate-vsdoc.js" />
     <Content Include="Scripts\jquery.validate.js" />
     <Content Include="Scripts\jquery.validate.min.js" />
@@ -473,6 +470,18 @@
     <Compile Include="Reports\FinancialReports\CheckHistory.Designer.cs">
       <DependentUpon>CheckHistory.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\CheckReconciliationDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\CheckReconciliationDetail.Designer.cs">
+      <DependentUpon>CheckReconciliationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\CheckReconciliationSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\CheckReconciliationSummary.Designer.cs">
+      <DependentUpon>CheckReconciliationSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\ExcelAFEMasterList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -484,6 +493,18 @@
     </Compile>
     <Compile Include="Reports\FinancialReports\ExcelCheckHistory.Designer.cs">
       <DependentUpon>ExcelCheckHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelCheckReconciliationDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelCheckReconciliationDetail.Designer.cs">
+      <DependentUpon>ExcelCheckReconciliationDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelCheckReconciliationSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelCheckReconciliationSummary.Designer.cs">
+      <DependentUpon>ExcelCheckReconciliationSummary.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\ExcelFinancialCodeListing.cs">
       <SubType>Component</SubType>
@@ -836,11 +857,23 @@
     <EmbeddedResource Include="Reports\FinancialReports\CheckHistory.resx">
       <DependentUpon>CheckHistory.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\CheckReconciliationDetail.resx">
+      <DependentUpon>CheckReconciliationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\CheckReconciliationSummary.resx">
+      <DependentUpon>CheckReconciliationSummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelAFEMasterList.resx">
       <DependentUpon>ExcelAFEMasterList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelCheckHistory.resx">
       <DependentUpon>ExcelCheckHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelCheckReconciliationDetail.resx">
+      <DependentUpon>ExcelCheckReconciliationDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelCheckReconciliationSummary.resx">
+      <DependentUpon>ExcelCheckReconciliationSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelFinancialCodeListing.resx">
       <DependentUpon>ExcelFinancialCodeListing.cs</DependentUpon>
