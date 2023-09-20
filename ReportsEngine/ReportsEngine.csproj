@@ -650,6 +650,12 @@
     <Compile Include="Reports\MDReports\CashDepositTicket.Designer.cs">
       <DependentUpon>CashDepositTicket.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\CashRequirements.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\CashRequirements.Designer.cs">
+      <DependentUpon>CashRequirements.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\ChartofAccountListing.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -709,6 +715,12 @@
     </Compile>
     <Compile Include="Reports\MDReports\ExcelCashDepositSummary.Designer.cs">
       <DependentUpon>ExcelCashDepositSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelCashRequirements.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelCashRequirements.Designer.cs">
+      <DependentUpon>ExcelCashRequirements.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\ExcelChartofAccountListing.cs">
       <SubType>Component</SubType>
@@ -949,6 +961,9 @@
     <EmbeddedResource Include="Reports\MDReports\CashDepositTicket.resx">
       <DependentUpon>CashDepositTicket.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\CashRequirements.resx">
+      <DependentUpon>CashRequirements.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ChartofAccountListing.resx">
       <DependentUpon>ChartofAccountListing.cs</DependentUpon>
       <SubType>Designer</SubType>
@@ -981,6 +996,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelCashDepositSummary.resx">
       <DependentUpon>ExcelCashDepositSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelCashRequirements.resx">
+      <DependentUpon>ExcelCashRequirements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelChartofAccountListing.resx">
       <DependentUpon>ExcelChartofAccountListing.cs</DependentUpon>
