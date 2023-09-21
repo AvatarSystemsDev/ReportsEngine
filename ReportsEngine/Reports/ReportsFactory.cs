@@ -75,6 +75,14 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelCashRequirements", () => new ExcelCashRequirements());
             Reports.Add("CashRequirementsSummary", () => new CashRequirementsSummary());
             Reports.Add("ExcelCashRequirementsSummary", () => new ExcelCashRequirementsSummary());
+            Reports.Add("APOpenItemsAgedSummary", () => new APOpenItemsAgedSummary());
+            Reports.Add("ExcelAPOpenItemsAgedSummary", () => new ExcelAPOpenItemsAgedSummary());
+            Reports.Add("APHistoryDetail", () => new APHistoryDetail());
+            Reports.Add("ExcelAPHistoryDetail", () => new ExcelAPHistoryDetail());
+            Reports.Add("APOpenItemsAgedDetail", () => new APOpenItemsAgedDetail());
+            Reports.Add("ExcelAPOpenItemsAgedDetail", () => new ExcelAPOpenItemsAgedDetail());
+            Reports.Add("APOpenByProperty", () => new APOpenByProperty());
+            Reports.Add("ExcelAPOpenByProperty", () => new ExcelAPOpenByProperty());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

@@ -1110,7 +1110,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteDeferralCutoffDate.Name = "pdteDeferralCutoffDate";
             this.pdteDeferralCutoffDate.Type = typeof(System.DateTime);
-            this.pdteDeferralCutoffDate.ValueInfo = "2023-09-20";
+            this.pdteDeferralCutoffDate.ValueInfo = "2023-09-21";
             // 
             // pdteForPaymentOnDate
             // 
@@ -1119,7 +1119,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteForPaymentOnDate.Name = "pdteForPaymentOnDate";
             this.pdteForPaymentOnDate.Type = typeof(System.DateTime);
-            this.pdteForPaymentOnDate.ValueInfo = "2023-09-20";
+            this.pdteForPaymentOnDate.ValueInfo = "2023-09-21";
             // 
             // pbooShowCriteria
             // 
