@@ -422,6 +422,12 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\APReports\CashRequirementsSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\CashRequirementsSummary.Designer.cs">
+      <DependentUpon>CashRequirementsSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\ExcelAPEditList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -439,6 +445,12 @@
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPVoucherRegister.Designer.cs">
       <DependentUpon>ExcelAPVoucherRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelCashRequirementsSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelCashRequirementsSummary.Designer.cs">
+      <DependentUpon>ExcelCashRequirementsSummary.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\ExcelRDPreliminary.cs">
       <SubType>Component</SubType>
@@ -650,10 +662,10 @@
     <Compile Include="Reports\MDReports\CashDepositTicket.Designer.cs">
       <DependentUpon>CashDepositTicket.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\CashRequirements.cs">
+    <Compile Include="Reports\APReports\CashRequirements.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\CashRequirements.Designer.cs">
+    <Compile Include="Reports\APReports\CashRequirements.Designer.cs">
       <DependentUpon>CashRequirements.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\ChartofAccountListing.cs">
@@ -716,10 +728,10 @@
     <Compile Include="Reports\MDReports\ExcelCashDepositSummary.Designer.cs">
       <DependentUpon>ExcelCashDepositSummary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\ExcelCashRequirements.cs">
+    <Compile Include="Reports\APReports\ExcelCashRequirements.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\ExcelCashRequirements.Designer.cs">
+    <Compile Include="Reports\APReports\ExcelCashRequirements.Designer.cs">
       <DependentUpon>ExcelCashRequirements.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\ExcelChartofAccountListing.cs">
@@ -845,6 +857,9 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\CashRequirementsSummary.resx">
+      <DependentUpon>CashRequirementsSummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPEditList.resx">
       <DependentUpon>ExcelAPEditList.cs</DependentUpon>
     </EmbeddedResource>
@@ -853,6 +868,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPVoucherRegister.resx">
       <DependentUpon>ExcelAPVoucherRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelCashRequirementsSummary.resx">
+      <DependentUpon>ExcelCashRequirementsSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelRDPreliminary.resx">
       <DependentUpon>ExcelRDPreliminary.cs</DependentUpon>
@@ -961,7 +979,7 @@
     <EmbeddedResource Include="Reports\MDReports\CashDepositTicket.resx">
       <DependentUpon>CashDepositTicket.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\CashRequirements.resx">
+    <EmbeddedResource Include="Reports\APReports\CashRequirements.resx">
       <DependentUpon>CashRequirements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ChartofAccountListing.resx">
@@ -997,7 +1015,7 @@
     <EmbeddedResource Include="Reports\MDReports\ExcelCashDepositSummary.resx">
       <DependentUpon>ExcelCashDepositSummary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\ExcelCashRequirements.resx">
+    <EmbeddedResource Include="Reports\APReports\ExcelCashRequirements.resx">
       <DependentUpon>ExcelCashRequirements.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelChartofAccountListing.resx">

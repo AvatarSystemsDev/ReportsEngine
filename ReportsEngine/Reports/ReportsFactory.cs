@@ -73,6 +73,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelCheckReconciliationSummary", () => new ExcelCheckReconciliationSummary());
             Reports.Add("CashRequirements", () => new CashRequirements());
             Reports.Add("ExcelCashRequirements", () => new ExcelCashRequirements());
+            Reports.Add("CashRequirementsSummary", () => new CashRequirementsSummary());
+            Reports.Add("ExcelCashRequirementsSummary", () => new ExcelCashRequirementsSummary());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

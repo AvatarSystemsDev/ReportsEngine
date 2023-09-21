@@ -4,11 +4,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace ReportsEngine.Reports.MDReports
+namespace ReportsEngine.Reports.APReports
 {
-    public partial class CashRequirements : DevExpress.XtraReports.UI.XtraReport
+    public partial class CashRequirementsSummary : DevExpress.XtraReports.UI.XtraReport
     {
-        public CashRequirements()
+        public CashRequirementsSummary()
         {
             InitializeComponent();
         }
