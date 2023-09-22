@@ -404,6 +404,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\APReports\APHistoryGLDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APHistoryGLDetail.Designer.cs">
+      <DependentUpon>APHistoryGLDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\APOpenByProperty.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -424,11 +430,23 @@
     <Compile Include="Controllers\ReportDesignerController.cs" />
     <Compile Include="Controllers\ReportEngineController.cs" />
     <Compile Include="Controllers\WebDocumentViewerController.cs" />
+    <Compile Include="Reports\APReports\APPaymentsHistoryRecap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APPaymentsHistoryRecap.Designer.cs">
+      <DependentUpon>APPaymentsHistoryRecap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\APPrepaidRegister.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\APReports\APPrepaidRegister.Designer.cs">
       <DependentUpon>APPrepaidRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPHistoryGLDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPHistoryGLDetail.Designer.cs">
+      <DependentUpon>ExcelAPHistoryGLDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPOpenByProperty.cs">
       <SubType>Component</SubType>
@@ -493,6 +511,12 @@
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPOpenItemsAgedDetail.Designer.cs">
       <DependentUpon>ExcelAPOpenItemsAgedDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPPaymentsHistoryRecap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPPaymentsHistoryRecap.Designer.cs">
+      <DependentUpon>ExcelAPPaymentsHistoryRecap.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPVoucherRegister.cs">
       <SubType>Component</SubType>
@@ -906,14 +930,23 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\APReports\APHistoryGLDetail.resx">
+      <DependentUpon>APHistoryGLDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APOpenByProperty.resx">
       <DependentUpon>APOpenByProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APOpenItemsAgedSummary.resx">
       <DependentUpon>APOpenItemsAgedSummary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APPaymentsHistoryRecap.resx">
+      <DependentUpon>APPaymentsHistoryRecap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APPrepaidRegister.resx">
       <DependentUpon>APPrepaidRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPHistoryGLDetail.resx">
+      <DependentUpon>ExcelAPHistoryGLDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPOpenByProperty.resx">
       <DependentUpon>ExcelAPOpenByProperty.cs</DependentUpon>
@@ -946,6 +979,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPOpenItemsAgedDetail.resx">
       <DependentUpon>ExcelAPOpenItemsAgedDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPPaymentsHistoryRecap.resx">
+      <DependentUpon>ExcelAPPaymentsHistoryRecap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPVoucherRegister.resx">
       <DependentUpon>ExcelAPVoucherRegister.cs</DependentUpon>

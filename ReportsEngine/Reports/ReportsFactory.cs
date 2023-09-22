@@ -83,6 +83,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAPOpenItemsAgedDetail", () => new ExcelAPOpenItemsAgedDetail());
             Reports.Add("APOpenByProperty", () => new APOpenByProperty());
             Reports.Add("ExcelAPOpenByProperty", () => new ExcelAPOpenByProperty());
+            Reports.Add("APPaymentsHistoryRecap", () => new APPaymentsHistoryRecap());
+            Reports.Add("ExcelAPPaymentsHistoryRecap", () => new ExcelAPPaymentsHistoryRecap());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

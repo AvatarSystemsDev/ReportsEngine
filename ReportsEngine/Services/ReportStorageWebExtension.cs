@@ -226,6 +226,9 @@ namespace ReportsEngine.Services
                         {
 
                         }
+                        else if (temp[x] == '&' || temp[x] == '?'){
+                            break;
+                        }
                         else
                         {
                             index += temp[x];
