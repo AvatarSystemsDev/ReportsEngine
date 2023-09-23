@@ -542,6 +542,12 @@
     <Compile Include="Reports\APReports\ExcelRDProductionTaxDetail.Designer.cs">
       <DependentUpon>ExcelRDProductionTaxDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\APReports\ExcelThe1099Form.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelThe1099Form.Designer.cs">
+      <DependentUpon>ExcelThe1099Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\RDPreliminaryDistribution.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -553,6 +559,12 @@
     </Compile>
     <Compile Include="Reports\APReports\RDProductionTaxDetail.Designer.cs">
       <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\The1099Form.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\The1099Form.Designer.cs">
+      <DependentUpon>The1099Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\CheckHistory.cs">
       <SubType>Component</SubType>
@@ -925,6 +937,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Reports\TaxReports\" />
     <Folder Include="Views\QueryBuilder\" />
     <Folder Include="Views\ReportDesigner\" />
     <Folder Include="Views\WebDocumentViewer\" />
@@ -995,11 +1008,17 @@
     <EmbeddedResource Include="Reports\APReports\ExcelRDProductionTaxDetail.resx">
       <DependentUpon>ExcelRDProductionTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelThe1099Form.resx">
+      <DependentUpon>ExcelThe1099Form.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\RDPreliminaryDistribution.resx">
       <DependentUpon>RDPreliminaryDistribution.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\RDProductionTaxDetail.resx">
       <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\The1099Form.resx">
+      <DependentUpon>The1099Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\CheckHistory.resx">
       <DependentUpon>CheckHistory.cs</DependentUpon>

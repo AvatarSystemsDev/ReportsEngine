@@ -85,6 +85,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAPOpenByProperty", () => new ExcelAPOpenByProperty());
             Reports.Add("APPaymentsHistoryRecap", () => new APPaymentsHistoryRecap());
             Reports.Add("ExcelAPPaymentsHistoryRecap", () => new ExcelAPPaymentsHistoryRecap());
+            Reports.Add("APHistoryGLDetail", () => new APHistoryGLDetail());
+            Reports.Add("ExcelAPHistoryGLDetail", () => new ExcelAPHistoryGLDetail());
+            Reports.Add("1099Form", () => new The1099Form());
+            Reports.Add("Excel1099Form", () => new ExcelThe1099Form());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
