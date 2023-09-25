@@ -578,10 +578,22 @@
     <Compile Include="Reports\APReports\ExcelRDProductionTaxDetail.Designer.cs">
       <DependentUpon>ExcelRDProductionTaxDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APReports\ExcelThe1099Form.cs">
+    <Compile Include="Reports\GLReports\CashReceiptsEditList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\APReports\ExcelThe1099Form.Designer.cs">
+    <Compile Include="Reports\GLReports\CashReceiptsEditList.Designer.cs">
+      <DependentUpon>CashReceiptsEditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\GLReports\ExcelCashReceiptsEditList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\GLReports\ExcelCashReceiptsEditList.Designer.cs">
+      <DependentUpon>ExcelCashReceiptsEditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TaxReports\ExcelThe1099Form.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TaxReports\ExcelThe1099Form.Designer.cs">
       <DependentUpon>ExcelThe1099Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\RDPreliminaryDistribution.cs">
@@ -596,10 +608,10 @@
     <Compile Include="Reports\APReports\RDProductionTaxDetail.Designer.cs">
       <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APReports\The1099Form.cs">
+    <Compile Include="Reports\TaxReports\The1099Form.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\APReports\The1099Form.Designer.cs">
+    <Compile Include="Reports\TaxReports\The1099Form.Designer.cs">
       <DependentUpon>The1099Form.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\CheckHistory.cs">
@@ -973,7 +985,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Reports\TaxReports\" />
     <Folder Include="Views\QueryBuilder\" />
     <Folder Include="Views\ReportDesigner\" />
     <Folder Include="Views\WebDocumentViewer\" />
@@ -1062,7 +1073,13 @@
     <EmbeddedResource Include="Reports\APReports\ExcelRDProductionTaxDetail.resx">
       <DependentUpon>ExcelRDProductionTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\ExcelThe1099Form.resx">
+    <EmbeddedResource Include="Reports\GLReports\CashReceiptsEditList.resx">
+      <DependentUpon>CashReceiptsEditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\GLReports\ExcelCashReceiptsEditList.resx">
+      <DependentUpon>ExcelCashReceiptsEditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TaxReports\ExcelThe1099Form.resx">
       <DependentUpon>ExcelThe1099Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\RDPreliminaryDistribution.resx">
@@ -1071,7 +1088,7 @@
     <EmbeddedResource Include="Reports\APReports\RDProductionTaxDetail.resx">
       <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\The1099Form.resx">
+    <EmbeddedResource Include="Reports\TaxReports\The1099Form.resx">
       <DependentUpon>The1099Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\CheckHistory.resx">

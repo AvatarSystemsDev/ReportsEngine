@@ -1,6 +1,7 @@
 ﻿using DevExpress.XtraReports.UI;
 using ReportsEngine.Reports.APReports;
 using ReportsEngine.Reports.FinancialReports;
+using ReportsEngine.Reports.GLReports;
 using ReportsEngine.Reports.MDReports;
 using ReportsEngine.Reports.RDReports;
 using System;
@@ -95,6 +96,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAPPreCheckWriting", () => new ExcelAPPreCheckWriting());
             Reports.Add("APGLPostRegister", () => new APGLPostRegister());
             Reports.Add("ExcelAPGLPostRegister", () => new ExcelAPGLPostRegister());
+            Reports.Add("CashReceiptsEditList", () => new CashReceiptsEditList());
+            Reports.Add("CashReceiptsEditList", () => new ExcelCashReceiptsEditList());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
