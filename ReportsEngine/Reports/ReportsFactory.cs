@@ -89,6 +89,12 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAPHistoryGLDetail", () => new ExcelAPHistoryGLDetail());
             Reports.Add("1099Form", () => new The1099Form());
             Reports.Add("Excel1099Form", () => new ExcelThe1099Form());
+            Reports.Add("APInvoicesWithProperty", () => new APInvoicesWithProperty());
+            Reports.Add("ExcelAPInvoicesWithProperty", () => new ExcelAPInvoicesWithProperty());
+            Reports.Add("APPreCheckWriting", () => new APPreCheckWriting());
+            Reports.Add("ExcelAPPreCheckWriting", () => new ExcelAPPreCheckWriting());
+            Reports.Add("APGLPostRegister", () => new APGLPostRegister());
+            Reports.Add("ExcelAPGLPostRegister", () => new ExcelAPGLPostRegister());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

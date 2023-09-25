@@ -404,11 +404,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="APPreCheckWriting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="APPreCheckWriting.Designer.cs">
+      <DependentUpon>APPreCheckWriting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ExcelAPPreCheckWriting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExcelAPPreCheckWriting.Designer.cs">
+      <DependentUpon>ExcelAPPreCheckWriting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APGLPostRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APGLPostRegister.Designer.cs">
+      <DependentUpon>APGLPostRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\APHistoryGLDetail.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\APReports\APHistoryGLDetail.Designer.cs">
       <DependentUpon>APHistoryGLDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APInvoicesWithProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APInvoicesWithProperty.Designer.cs">
+      <DependentUpon>APInvoicesWithProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\APOpenByProperty.cs">
       <SubType>Component</SubType>
@@ -442,11 +466,23 @@
     <Compile Include="Reports\APReports\APPrepaidRegister.Designer.cs">
       <DependentUpon>APPrepaidRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\APReports\ExcelAPGLPostRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPGLPostRegister.Designer.cs">
+      <DependentUpon>ExcelAPGLPostRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\ExcelAPHistoryGLDetail.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPHistoryGLDetail.Designer.cs">
       <DependentUpon>ExcelAPHistoryGLDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPInvoicesWithProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPInvoicesWithProperty.Designer.cs">
+      <DependentUpon>ExcelAPInvoicesWithProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPOpenByProperty.cs">
       <SubType>Component</SubType>
@@ -943,8 +979,20 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="APPreCheckWriting.resx">
+      <DependentUpon>APPreCheckWriting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ExcelAPPreCheckWriting.resx">
+      <DependentUpon>ExcelAPPreCheckWriting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APGLPostRegister.resx">
+      <DependentUpon>APGLPostRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APHistoryGLDetail.resx">
       <DependentUpon>APHistoryGLDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APInvoicesWithProperty.resx">
+      <DependentUpon>APInvoicesWithProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APOpenByProperty.resx">
       <DependentUpon>APOpenByProperty.cs</DependentUpon>
@@ -958,8 +1006,14 @@
     <EmbeddedResource Include="Reports\APReports\APPrepaidRegister.resx">
       <DependentUpon>APPrepaidRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPGLPostRegister.resx">
+      <DependentUpon>ExcelAPGLPostRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPHistoryGLDetail.resx">
       <DependentUpon>ExcelAPHistoryGLDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPInvoicesWithProperty.resx">
+      <DependentUpon>ExcelAPInvoicesWithProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPOpenByProperty.resx">
       <DependentUpon>ExcelAPOpenByProperty.cs</DependentUpon>

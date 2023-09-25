@@ -65,6 +65,7 @@ namespace ReportsEngine.Services
             // This method is called only for valid URLs after the IsValidUrl method is called.
             try
             {
+                url = url.Substring(0, url.IndexOf('?') + 1) + url.Substring(url.IndexOf('?') + 1).Replace("?", "&");
                 string[] parts = url.Split('?');
                 string reportName = parts[0];
                 string parametersString = parts.Length > 1 ? parts[1] : String.Empty;
@@ -98,19 +99,6 @@ namespace ReportsEngine.Services
                     //Set Date Ranges to current month 
                     DateTime now = DateTime.Now;
                     var startDate = new DateTime(now.Year, now.Month, 1);
-                    if (report.Parameters.Contains(report.Parameters["pdteBeginningPostDate"]))
-                    {
-                        // report.Parameters["pdteBeginningPostDate"].Value = startDate;
-                    }
-                    if (report.Parameters.Contains(report.Parameters["pdteEndingPostDate"]))
-                    {
-                        //report.Parameters["pdteEndingPostDate"].Value = startDate.AddMonths(1).AddDays(-1); //This is easier to do in the default parameters in Xtra reports. Also Margie is iffy on whether we should have post dates this way
-                    }
-                    if (report.Parameters.Contains(report.Parameters["plngYear"]))
-                    {
-                        //int currentYear = DateTime.Now.Year;
-                        //report.Parameters["plngYear"].Value = currentYear; // These should be particular to a report
-                    }
 
                     // Assign parameters here
                     setReportParameters(report, HttpUtility.ParseQueryString(parametersString), companyid);

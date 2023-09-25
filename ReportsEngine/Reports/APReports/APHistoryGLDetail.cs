@@ -21,7 +21,8 @@ namespace ReportsEngine.Reports.APReports
         private void xrDisplayDateUsed_BeforePrint(object sender, CancelEventArgs e)
         {
             Parameter p = this.Parameters["plngDateUsed"];
-            ((XRLabel)sender).Text = p.Description.ToString();
+            List<LookUpValue> staticValueCollection = (p.LookUpSettings as StaticListLookUpSettings).LookUpValues.ToList();
+            (sender as XRLabel).Text = staticValueCollection.FirstOrDefault(x => Object.Equals(x.Value, this.Parameters["plngDateUsed"].Value)).Description;
         }
 
         private void xrLabel1_BeforePrint(object sender, CancelEventArgs e)
