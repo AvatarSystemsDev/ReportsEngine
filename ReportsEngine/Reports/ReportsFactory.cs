@@ -98,6 +98,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAPGLPostRegister", () => new ExcelAPGLPostRegister());
             Reports.Add("CashReceiptsEditList", () => new CashReceiptsEditList());
             Reports.Add("ExcelCashReceiptsEditList", () => new ExcelCashReceiptsEditList());
+            Reports.Add("JEEditList", () => new JEEditList());
+            Reports.Add("ExcelJEEditList", () => new ExcelJEEditList());
+            Reports.Add("RDEntryEditList", () => new RDEntryEditList());
+            Reports.Add("ExcelRDEntryEditList", () => new ExcelRDEntryEditList());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

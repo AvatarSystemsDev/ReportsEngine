@@ -1676,7 +1676,7 @@
             this.xrLabel22.Multiline = true;
             this.xrLabel22.Name = "xrLabel22";
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel22.SizeF = new System.Drawing.SizeF(70.83533F, 42.77973F);
+            this.xrLabel22.SizeF = new System.Drawing.SizeF(70.83484F, 42.77973F);
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.Text = "\r\nDeck Code";
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;

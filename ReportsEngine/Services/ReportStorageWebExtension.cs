@@ -161,8 +161,8 @@ namespace ReportsEngine.Services
                     string currentDatabaseID = parameters["plngDatabaseID"];
                     //Get the Database ConnectionString based on plngDatabaseID
                     connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
-                    report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
-                    report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+                        report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
+                        report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
                     if (report.Parameters["plngCompanyID"] != null)
                     {
                         report.Parameters["plngCompanyID"].Value = companyid;
