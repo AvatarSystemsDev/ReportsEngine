@@ -97,7 +97,7 @@ namespace ReportsEngine.Reports
             Reports.Add("APGLPostRegister", () => new APGLPostRegister());
             Reports.Add("ExcelAPGLPostRegister", () => new ExcelAPGLPostRegister());
             Reports.Add("CashReceiptsEditList", () => new CashReceiptsEditList());
-            Reports.Add("CashReceiptsEditList", () => new ExcelCashReceiptsEditList());
+            Reports.Add("ExcelCashReceiptsEditList", () => new ExcelCashReceiptsEditList());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
