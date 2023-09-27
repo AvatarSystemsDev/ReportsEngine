@@ -102,6 +102,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJEEditList", () => new ExcelJEEditList());
             Reports.Add("RDEntryEditList", () => new RDEntryEditList());
             Reports.Add("ExcelRDEntryEditList", () => new ExcelRDEntryEditList());
+            Reports.Add("RDSuspenseActionReport", () => new RDSuspenseActionReport());
+            Reports.Add("ExcelRDSuspenseActionReport", () => new ExcelRDSuspenseActionReport());
+            Reports.Add("RDCheckStateWithholding", () => new RDCheckStateWithholding());
+            Reports.Add("ExcelRDCheckStateWithholding", () => new ExcelRDCheckStateWithholding());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

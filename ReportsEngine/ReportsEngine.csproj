@@ -602,17 +602,41 @@
     <Compile Include="Reports\GLReports\JEEditList.Designer.cs">
       <DependentUpon>JEEditList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckStateWithholding.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckStateWithholding.Designer.cs">
+      <DependentUpon>ExcelRDCheckStateWithholding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDEntryEditList.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDEntryEditList.Designer.cs">
       <DependentUpon>ExcelRDEntryEditList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDSuspenseActionReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDSuspenseActionReport.Designer.cs">
+      <DependentUpon>ExcelRDSuspenseActionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckStateWithholding.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckStateWithholding.Designer.cs">
+      <DependentUpon>RDCheckStateWithholding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\RDEntryEditList.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\RDReports\RDEntryEditList.Designer.cs">
       <DependentUpon>RDEntryEditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDSuspenseActionReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDSuspenseActionReport.Designer.cs">
+      <DependentUpon>RDSuspenseActionReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\TaxReports\ExcelThe1099Form.cs">
       <SubType>Component</SubType>
@@ -1109,11 +1133,23 @@
     <EmbeddedResource Include="Reports\GLReports\JEEditList.resx">
       <DependentUpon>JEEditList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckStateWithholding.resx">
+      <DependentUpon>ExcelRDCheckStateWithholding.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDEntryEditList.resx">
       <DependentUpon>ExcelRDEntryEditList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDSuspenseActionReport.resx">
+      <DependentUpon>ExcelRDSuspenseActionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDCheckStateWithholding.resx">
+      <DependentUpon>RDCheckStateWithholding.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDEntryEditList.resx">
       <DependentUpon>RDEntryEditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDSuspenseActionReport.resx">
+      <DependentUpon>RDSuspenseActionReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\TaxReports\ExcelThe1099Form.resx">
       <DependentUpon>ExcelThe1099Form.cs</DependentUpon>
