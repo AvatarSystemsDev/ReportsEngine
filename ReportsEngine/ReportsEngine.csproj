@@ -614,6 +614,12 @@
     <Compile Include="Reports\RDReports\ExcelRDEntryEditList.Designer.cs">
       <DependentUpon>ExcelRDEntryEditList.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDNettedRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDNettedRegister.Designer.cs">
+      <DependentUpon>ExcelRDNettedRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDSuspenseActionReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -631,6 +637,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\RDEntryEditList.Designer.cs">
       <DependentUpon>RDEntryEditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDNettedRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDNettedRegister.Designer.cs">
+      <DependentUpon>RDNettedRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDSuspenseActionReport.cs">
       <SubType>Component</SubType>
@@ -1139,6 +1151,9 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelRDEntryEditList.resx">
       <DependentUpon>ExcelRDEntryEditList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDNettedRegister.resx">
+      <DependentUpon>ExcelRDNettedRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDSuspenseActionReport.resx">
       <DependentUpon>ExcelRDSuspenseActionReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -1147,6 +1162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDEntryEditList.resx">
       <DependentUpon>RDEntryEditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDNettedRegister.resx">
+      <DependentUpon>RDNettedRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDSuspenseActionReport.resx">
       <DependentUpon>RDSuspenseActionReport.cs</DependentUpon>
