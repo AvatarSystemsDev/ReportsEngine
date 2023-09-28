@@ -143,6 +143,6 @@ Iif( [AccountingCenterNumber] in (?pstrSelectAccountingCenter), [DebitAmount]-[C
 </value>
   </data>
   <data name="xrLabel18.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningCostCenter = '!', iif(?pstrEndingCostCenter = 'ZZZZ', 'All Accounting Centers', 'First Accounting Center to ' + ?pstrEndingCostCenter ), iif(?pstrEndingCostCenter = 'ZZZZ', ?pstrBeginningCostCenter + ' to Last Accounting Center', ?pstrBeginningCostCenter + ' to ' + ?pstrEndingCostCenter ))</value>
+    <value>iif(?pstrBeginningCostCenter = '!', iif(?pstrEndingCostCenter = 'ZZZZ', 'Selected Accounting Centers', 'First Accounting Center to ' + ?pstrEndingCostCenter ), iif(?pstrEndingCostCenter = 'ZZZZ', ?pstrBeginningCostCenter + ' to Last Accounting Center', ?pstrBeginningCostCenter + ' to ' + ?pstrEndingCostCenter ))</value>
   </data>
 </root>

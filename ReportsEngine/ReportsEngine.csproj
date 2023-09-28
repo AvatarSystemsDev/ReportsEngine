@@ -411,6 +411,18 @@
     <Compile Include="ExcelRDCheckRegister.Designer.cs">
       <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\CheckReports\CheckPrintingGLPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CheckReports\CheckPrintingGLPostingRegister.Designer.cs">
+      <DependentUpon>CheckPrintingGLPostingRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CheckReports\ExcelCheckPrintingGLPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CheckReports\ExcelCheckPrintingGLPostingRegister.Designer.cs">
+      <DependentUpon>ExcelCheckPrintingGLPostingRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDCheckRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -422,6 +434,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDCheckRegisterOwnerSummary.Designer.cs">
       <DependentUpon>ExcelRDCheckRegisterOwnerSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDSummaryCheckRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDSummaryCheckRegister.Designer.cs">
+      <DependentUpon>ExcelRDSummaryCheckRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDCheckRegister.cs">
       <SubType>Component</SubType>
@@ -680,6 +698,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\RDNettedRegister.Designer.cs">
       <DependentUpon>RDNettedRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDSummaryCheckRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDSummaryCheckRegister.Designer.cs">
+      <DependentUpon>RDSummaryCheckRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDSuspenseActionReport.cs">
       <SubType>Component</SubType>
@@ -1090,11 +1114,20 @@
     <EmbeddedResource Include="ExcelRDCheckRegister.resx">
       <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CheckReports\CheckPrintingGLPostingRegister.resx">
+      <DependentUpon>CheckPrintingGLPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CheckReports\ExcelCheckPrintingGLPostingRegister.resx">
+      <DependentUpon>ExcelCheckPrintingGLPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckRegister.resx">
       <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckRegisterOwnerSummary.resx">
       <DependentUpon>ExcelRDCheckRegisterOwnerSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDSummaryCheckRegister.resx">
+      <DependentUpon>ExcelRDSummaryCheckRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDCheckRegister.resx">
       <DependentUpon>RDCheckRegister.cs</DependentUpon>
@@ -1221,6 +1254,9 @@
     <EmbeddedResource Include="Reports\RDReports\RDNettedRegister.resx">
       <DependentUpon>RDNettedRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDSummaryCheckRegister.resx">
+      <DependentUpon>RDSummaryCheckRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDSuspenseActionReport.resx">
       <DependentUpon>RDSuspenseActionReport.cs</DependentUpon>
     </EmbeddedResource>
@@ -1238,6 +1274,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\CheckHistory.resx">
       <DependentUpon>CheckHistory.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\CheckReconciliationDetail.resx">
       <DependentUpon>CheckReconciliationDetail.cs</DependentUpon>

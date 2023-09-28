@@ -128,11 +128,11 @@
 </value>
   </data>
   <data name="xrLabel13.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningOwnerNumber = '!', iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', 'All Owners', 'First Owner to ' + ?pstrEndingOwnerNumber), iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', ?pstrBeginningOwnerNumber + ' to Last Owner', ?pstrBeginningOwnerNumber + ' to ' + ?pstrEndingOwnerNumber))
+    <value>iif(?pstrBeginningOwnerNumber = '!', iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', 'Selected Owners', 'First Owner to ' + ?pstrEndingOwnerNumber), iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', ?pstrBeginningOwnerNumber + ' to Last Owner', ?pstrBeginningOwnerNumber + ' to ' + ?pstrEndingOwnerNumber))
 </value>
   </data>
   <data name="xrLabel7.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'All Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))</value>
+    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))</value>
   </data>
   <data name="xrLabel21.ExpressionBindings" xml:space="preserve">
     <value>IIF(sumSum(IIF([InterestTypeDescription] = 'Royalty' Or [InterestTypeDescription] = 'Production Payment',[CostDecimal], '')) = '', 0, sumSum(IIF([InterestTypeDescription] = 'Royalty' Or [InterestTypeDescription] = 'Production Payment',[CostDecimal], '')))</value>

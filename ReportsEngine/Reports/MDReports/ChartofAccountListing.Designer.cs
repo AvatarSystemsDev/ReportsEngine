@@ -1086,7 +1086,7 @@
             this.xrLabel38.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "\'Segoe UI\'"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pstrBeginningAccountNumber<= \'!\' AND ?pstrEndingAccountNumber= \'ZZZZZZZZZZ-Z" +
-                    "ZZZ\', \'All Accounts\', FormatString(?pstrBeginningAccountNumber) & \' to \' & Forma" +
+                    "ZZZ\', \'Selected Accounts\', FormatString(?pstrBeginningAccountNumber) & \' to \' & Forma" +
                     "tString(?pstrEndingAccountNumber))\n")});
             this.xrLabel38.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(82.92961F, 38.35357F);

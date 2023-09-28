@@ -324,6 +324,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel79 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
             this.xrCrossBandBox4 = new DevExpress.XtraReports.UI.XRCrossBandBox();
+            this.SelectAccountList = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -3299,6 +3300,13 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrCrossBandBox4.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrCrossBandBox4.WidthF = 1018.88F;
             // 
+            // SelectAccountList
+            // 
+            this.SelectAccountList.DataMember = "Dynamic_DSJournalRegister";
+            this.SelectAccountList.Expression = "[Parameters.pstrSelectProperty]\n";
+            this.SelectAccountList.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.SelectAccountList.Name = "SelectAccountList";
+            // 
             // JournalRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -3315,7 +3323,8 @@ namespace ReportsEngine.Reports.FinancialReports
             this.GroupValue1,
             this.GroupValue2,
             this.GroupValue3,
-            this.First});
+            this.First,
+            this.SelectAccountList});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -3593,5 +3602,6 @@ namespace ReportsEngine.Reports.FinancialReports
         private XRCrossBandBox xrCrossBandBox4;
         private SubBand SubBand7;
         private XRLabel xrLabel5;
+        private CalculatedField SelectAccountList;
     }
 }

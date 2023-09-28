@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraReports.UI;
 using ReportsEngine.Reports.APReports;
+using ReportsEngine.Reports.CheckReports;
 using ReportsEngine.Reports.FinancialReports;
 using ReportsEngine.Reports.GLReports;
 using ReportsEngine.Reports.MDReports;
@@ -109,7 +110,11 @@ namespace ReportsEngine.Reports
             Reports.Add("RDNettedRegister", () => new RDNettedRegister());
             Reports.Add("ExcelRDNettedRegister", () => new ExcelRDNettedRegister());
             Reports.Add("RDCheckRegister", () => new RDCheckRegister());
-            //Reports.Add("ExcelRDCheckRegister", () => new ExcelRDCheckRegister());
+            Reports.Add("ExcelRDCheckRegister", () => new ExcelRDCheckRegister());
+            Reports.Add("RDSummaryCheckRegister", () => new RDSummaryCheckRegister());
+            Reports.Add("ExcelRDSummaryCheckRegister", () => new ExcelRDSummaryCheckRegister());
+            Reports.Add("CheckPrintingGLPostingRegister", () => new CheckPrintingGLPostingRegister());
+            Reports.Add("ExcelCheckPrintingGLPostingRegister", () => new ExcelCheckPrintingGLPostingRegister());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
