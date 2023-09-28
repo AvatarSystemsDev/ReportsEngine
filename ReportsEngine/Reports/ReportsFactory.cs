@@ -108,6 +108,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDCheckStateWithholding", () => new ExcelRDCheckStateWithholding());
             Reports.Add("RDNettedRegister", () => new RDNettedRegister());
             Reports.Add("ExcelRDNettedRegister", () => new ExcelRDNettedRegister());
+            Reports.Add("RDCheckRegister", () => new RDCheckRegister());
+            //Reports.Add("ExcelRDCheckRegister", () => new ExcelRDCheckRegister());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

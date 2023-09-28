@@ -145,7 +145,7 @@ Iif(?plngSortBy = 6, [AccountNumber],
 Iif(?plngSortBy = 7, [PostDate], ''))))))</value>
   </data>
   <data name="xrLabel21.ExpressionBindings" xml:space="preserve">
-    <value>Iif(?plngSortBy = 1, 'Source/GL Date/Account', Iif(?plngSortBy = 2, 'Voucher/Check/Deposit',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GL Date',Iif(?plngSortBy = 5, 'Vendor/Owner',Iif(?plngSortBy = 6, 'Well/Account',Iif(?plngSortBy = 7, 'Owner/GLDate','')))))))
+    <value>Iif(?plngSortBy = 1, 'Source/GL Date/Account', Iif(?plngSortBy = 2, 'Doc',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GL Date',Iif(?plngSortBy = 5, 'Vendor/Owner',Iif(?plngSortBy = 6, 'Well/Account',Iif(?plngSortBy = 7, 'Owner/GLDate','')))))))
 + ' Total'</value>
   </data>
   <data name="xrLabel45.ExpressionBindings" xml:space="preserve">

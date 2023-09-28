@@ -48,6 +48,7 @@
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
@@ -90,7 +91,6 @@
             this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCheck = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -176,6 +176,19 @@
             this.detailBand1.HeightF = 3.973643E-06F;
             this.detailBand1.MultiColumn.ColumnSpacing = 50F;
             this.detailBand1.Name = "detailBand1";
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrOwnerNumber", null, "RDCheckHeader.OwnerNumber"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckNumber", null, "RDCheckHeader.CheckNumber"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteCheckDate", null, "RDCheckHeader.CheckDate"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblCheckAmount", null, "RDCheckHeader.CheckAmount"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "RDCheckHeader.ImbursementID"));
+            this.xrSubreport1.ReportSource = new ReportsEngine.Reports.RDReports.ExcelRDCheckRemittanceSubreport();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(1100F, 3.973643E-06F);
             // 
             // pageHeaderBand1
             // 
@@ -982,19 +995,6 @@
             this.pstrSelectCheck.Description = "Select Check";
             this.pstrSelectCheck.MultiValue = true;
             this.pstrSelectCheck.Name = "pstrSelectCheck";
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrOwnerNumber", null, "RDCheckHeader.OwnerNumber"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckNumber", null, "RDCheckHeader.CheckNumber"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteCheckDate", null, "RDCheckHeader.CheckDate"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblCheckAmount", null, "RDCheckHeader.CheckAmount"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "RDCheckHeader.ImbursementID"));
-            this.xrSubreport1.ReportSource = new ReportsEngine.Reports.RDReports.ExcelRDCheckRemittanceSubreport();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(1100F, 3.973643E-06F);
             // 
             // ExcelRDCheckStubs
             // 

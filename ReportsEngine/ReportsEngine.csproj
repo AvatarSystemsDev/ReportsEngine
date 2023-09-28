@@ -56,6 +56,7 @@
     <Reference Include="DevExpress.Spreadsheet.v23.1.Core, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.Utils.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraBars.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -404,6 +405,42 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelRDCheckRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExcelRDCheckRegister.Designer.cs">
+      <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckRegister.Designer.cs">
+      <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckRegisterOwnerSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckRegisterOwnerSummary.Designer.cs">
+      <DependentUpon>ExcelRDCheckRegisterOwnerSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckRegister.Designer.cs">
+      <DependentUpon>RDCheckRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckRegisterOwnerSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckRegisterOwnerSummary.Designer.cs">
+      <DependentUpon>RDCheckRegisterOwnerSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckRegisterRecap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckRegisterRecap.Designer.cs">
+      <DependentUpon>RDCheckRegisterRecap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\APPreCheckWriting.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1050,6 +1087,24 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ExcelRDCheckRegister.resx">
+      <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckRegister.resx">
+      <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckRegisterOwnerSummary.resx">
+      <DependentUpon>ExcelRDCheckRegisterOwnerSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDCheckRegister.resx">
+      <DependentUpon>RDCheckRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDCheckRegisterOwnerSummary.resx">
+      <DependentUpon>RDCheckRegisterOwnerSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDCheckRegisterRecap.resx">
+      <DependentUpon>RDCheckRegisterRecap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APPreCheckWriting.resx">
       <DependentUpon>APPreCheckWriting.cs</DependentUpon>
     </EmbeddedResource>
