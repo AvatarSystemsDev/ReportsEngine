@@ -115,6 +115,14 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDSummaryCheckRegister", () => new ExcelRDSummaryCheckRegister());
             Reports.Add("CheckPrintingGLPostingRegister", () => new CheckPrintingGLPostingRegister());
             Reports.Add("ExcelCheckPrintingGLPostingRegister", () => new ExcelCheckPrintingGLPostingRegister());
+            Reports.Add("RDAllocation", () => new RDAllocation());
+            Reports.Add("ExcelRDAllocation", () => new ExcelRDAllocation());
+            Reports.Add("RDCheckSuspenseActivity", () => new RDCheckSuspenseActivity());
+            Reports.Add("ExcelRDCheckSuspenseActivity", () => new ExcelRDCheckSuspenseActivity());
+            Reports.Add("RDChecks", () => new RDChecks());
+            Reports.Add("ExcelRDChecks", () => new ExcelRDCheckStubs()); //I'm thinking of using the same export for check stubs as checks. They pretty much show the same information.
+            Reports.Add("SuspenseByOwner", () => new SuspenseByOwner());
+            Reports.Add("ExcelSuspenseByOwner", () => new ExcelSuspenseByOwner());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

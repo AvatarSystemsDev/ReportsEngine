@@ -4,11 +4,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace ReportsEngine
+namespace ReportsEngine.Reports.RDReports
 {
-    public partial class ExcelRDCheckRegister : DevExpress.XtraReports.UI.XtraReport
+    public partial class ExcelRDCheckSuspenseActivity : DevExpress.XtraReports.UI.XtraReport
     {
-        public ExcelRDCheckRegister()
+        public ExcelRDCheckSuspenseActivity()
         {
             InitializeComponent();
         }

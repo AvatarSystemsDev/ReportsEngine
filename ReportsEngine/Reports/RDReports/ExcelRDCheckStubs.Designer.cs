@@ -91,6 +91,9 @@
             this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCheck = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngIsTwoSignaturesRequired = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrTwoSignaturesRequiredAmount = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -996,6 +999,26 @@
             this.pstrSelectCheck.MultiValue = true;
             this.pstrSelectCheck.Name = "pstrSelectCheck";
             // 
+            // plngCheckFormatIsMICR
+            // 
+            this.plngCheckFormatIsMICR.Description = "Parameter1";
+            this.plngCheckFormatIsMICR.Name = "plngCheckFormatIsMICR";
+            this.plngCheckFormatIsMICR.Type = typeof(bool);
+            this.plngCheckFormatIsMICR.ValueInfo = "False";
+            // 
+            // plngIsTwoSignaturesRequired
+            // 
+            this.plngIsTwoSignaturesRequired.Description = "Parameter1";
+            this.plngIsTwoSignaturesRequired.Name = "plngIsTwoSignaturesRequired";
+            this.plngIsTwoSignaturesRequired.Type = typeof(bool);
+            this.plngIsTwoSignaturesRequired.ValueInfo = "False";
+            this.plngIsTwoSignaturesRequired.Visible = false;
+            // 
+            // pstrTwoSignaturesRequiredAmount
+            // 
+            this.pstrTwoSignaturesRequiredAmount.Description = "Parameter1";
+            this.pstrTwoSignaturesRequiredAmount.Name = "pstrTwoSignaturesRequiredAmount";
+            // 
             // ExcelRDCheckStubs
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1008,6 +1031,8 @@
             this.DataMember = "RDCheckHeader";
             this.DataSource = this.Dynamic;
             this.DisplayName = "RDCheckStubs";
+            this.FilterString = "[CheckNumber] In (?pstrSelectCheck) And ([OwnerNumber] In (?pstrSelectOwner) Or \'" +
+    "!\' In (?pstrSelectOwner) And IsNullOrEmpty([OwnerNumber]))";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
@@ -1031,7 +1056,9 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormatIsMICR, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngIsTwoSignaturesRequired, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -1050,7 +1077,10 @@
             this.pstrSelectOwner,
             this.pstrBeginningCheckNumber,
             this.pstrEndingCheckNumber,
-            this.pstrSelectCheck});
+            this.pstrSelectCheck,
+            this.plngCheckFormatIsMICR,
+            this.plngIsTwoSignaturesRequired,
+            this.pstrTwoSignaturesRequiredAmount});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1105,5 +1135,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
+        private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
+        private DevExpress.XtraReports.Parameters.Parameter plngIsTwoSignaturesRequired;
+        private DevExpress.XtraReports.Parameters.Parameter pstrTwoSignaturesRequiredAmount;
     }
 }

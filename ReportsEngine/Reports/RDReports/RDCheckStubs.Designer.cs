@@ -199,10 +199,6 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel15,
             this.xrLabel16,
             this.xrSubreport2});
-            this.detailBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[CheckNumber] in (?pstrSelectCheck)\nAND\n    (\n        [OwnerNumber] in (?pstrSele" +
-                    "ctOwner) OR\n        (\'!\' in (?pstrSelectOwner) AND IsNullOrEmpty([OwnerNumber]))" +
-                    "\n    )\n")});
             this.detailBand1.HeightF = 976.9049F;
             this.detailBand1.MultiColumn.ColumnSpacing = 50F;
             this.detailBand1.Name = "detailBand1";
@@ -809,6 +805,8 @@ namespace ReportsEngine.Reports.RDReports
             this.DataMember = "RDCheckHeader";
             this.DataSource = this.Dynamic;
             this.DisplayName = "RDCheckStubs";
+            this.FilterString = "[CheckNumber] In (?pstrSelectCheck) And ([OwnerNumber] In (?pstrSelectOwner) Or \'" +
+    "!\' In (?pstrSelectOwner) And IsNullOrEmpty([OwnerNumber]))";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(25F, 26F, 25F, 25F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

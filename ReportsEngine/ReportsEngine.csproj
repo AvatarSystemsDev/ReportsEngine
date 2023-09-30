@@ -58,6 +58,7 @@
     <Reference Include="DevExpress.XtraBars.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraEditors.v22.2, Version=22.2.6.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
     <Reference Include="DevExpress.XtraEditors.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraLayout.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="DevExpress.XtraPrinting.v23.1, Version=23.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
@@ -405,12 +406,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcelRDCheckRegister.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="ExcelRDCheckRegister.Designer.cs">
-      <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\CheckReports\CheckPrintingGLPostingRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -422,6 +417,12 @@
     </Compile>
     <Compile Include="Reports\CheckReports\ExcelCheckPrintingGLPostingRegister.Designer.cs">
       <DependentUpon>ExcelCheckPrintingGLPostingRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDAllocation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDAllocation.Designer.cs">
+      <DependentUpon>ExcelRDAllocation.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDCheckRegister.cs">
       <SubType>Component</SubType>
@@ -435,11 +436,35 @@
     <Compile Include="Reports\RDReports\ExcelRDCheckRegisterOwnerSummary.Designer.cs">
       <DependentUpon>ExcelRDCheckRegisterOwnerSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDChecks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDChecks.Designer.cs">
+      <DependentUpon>ExcelRDChecks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckSuspenseActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDCheckSuspenseActivity.Designer.cs">
+      <DependentUpon>ExcelRDCheckSuspenseActivity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDSummaryCheckRegister.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDSummaryCheckRegister.Designer.cs">
       <DependentUpon>ExcelRDSummaryCheckRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByOwner.Designer.cs">
+      <DependentUpon>ExcelSuspenseByOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDAllocation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDAllocation.Designer.cs">
+      <DependentUpon>RDAllocation.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDCheckRegister.cs">
       <SubType>Component</SubType>
@@ -681,11 +706,23 @@
     <Compile Include="Reports\RDReports\ExcelRDSuspenseActionReport.Designer.cs">
       <DependentUpon>ExcelRDSuspenseActionReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\RDChecks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDChecks.Designer.cs">
+      <DependentUpon>RDChecks.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\RDCheckStateWithholding.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\RDReports\RDCheckStateWithholding.Designer.cs">
       <DependentUpon>RDCheckStateWithholding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckSuspenseActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDCheckSuspenseActivity.Designer.cs">
+      <DependentUpon>RDCheckSuspenseActivity.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDEntryEditList.cs">
       <SubType>Component</SubType>
@@ -710,6 +747,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\RDSuspenseActionReport.Designer.cs">
       <DependentUpon>RDSuspenseActionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByOwner.Designer.cs">
+      <DependentUpon>SuspenseByOwner.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\TaxReports\ExcelThe1099Form.cs">
       <SubType>Component</SubType>
@@ -1111,14 +1154,14 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ExcelRDCheckRegister.resx">
-      <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CheckReports\CheckPrintingGLPostingRegister.resx">
       <DependentUpon>CheckPrintingGLPostingRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\CheckReports\ExcelCheckPrintingGLPostingRegister.resx">
       <DependentUpon>ExcelCheckPrintingGLPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDAllocation.resx">
+      <DependentUpon>ExcelRDAllocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckRegister.resx">
       <DependentUpon>ExcelRDCheckRegister.cs</DependentUpon>
@@ -1126,8 +1169,20 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckRegisterOwnerSummary.resx">
       <DependentUpon>ExcelRDCheckRegisterOwnerSummary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDChecks.resx">
+      <DependentUpon>ExcelRDChecks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDCheckSuspenseActivity.resx">
+      <DependentUpon>ExcelRDCheckSuspenseActivity.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDSummaryCheckRegister.resx">
       <DependentUpon>ExcelRDSummaryCheckRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelSuspenseByOwner.resx">
+      <DependentUpon>ExcelSuspenseByOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDAllocation.resx">
+      <DependentUpon>RDAllocation.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDCheckRegister.resx">
       <DependentUpon>RDCheckRegister.cs</DependentUpon>
@@ -1245,8 +1300,14 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelRDSuspenseActionReport.resx">
       <DependentUpon>ExcelRDSuspenseActionReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDChecks.resx">
+      <DependentUpon>RDChecks.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDCheckStateWithholding.resx">
       <DependentUpon>RDCheckStateWithholding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDCheckSuspenseActivity.resx">
+      <DependentUpon>RDCheckSuspenseActivity.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDEntryEditList.resx">
       <DependentUpon>RDEntryEditList.cs</DependentUpon>
@@ -1259,6 +1320,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDSuspenseActionReport.resx">
       <DependentUpon>RDSuspenseActionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\SuspenseByOwner.resx">
+      <DependentUpon>SuspenseByOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\TaxReports\ExcelThe1099Form.resx">
       <DependentUpon>ExcelThe1099Form.cs</DependentUpon>

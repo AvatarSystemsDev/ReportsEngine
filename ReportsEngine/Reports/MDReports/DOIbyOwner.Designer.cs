@@ -618,9 +618,7 @@ namespace ReportsEngine.Reports
             this.xrLabel31.BorderWidth = 1F;
             this.xrLabel31.CanGrow = false;
             this.xrLabel31.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([InterestTypeDescription] = \'Working Interest\',\'WI\',Iif([InterestTypeDescript" +
-                    "ion] = \'Royalty\',\'R\' , Iif([InterestTypeDescription] = \'Overriding Royalty\',\'ORR" +
-                    "I\' ,\'\' )))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrLabel31.ExpressionBindings"))});
             this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel31.KeepTogether = true;
             this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(337.4999F, 3.178914E-05F);
