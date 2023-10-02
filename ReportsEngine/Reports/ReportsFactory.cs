@@ -123,6 +123,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDChecks", () => new ExcelRDCheckStubs()); //I'm thinking of using the same export for check stubs as checks. They pretty much show the same information.
             Reports.Add("SuspenseByOwner", () => new SuspenseByOwner());
             Reports.Add("ExcelSuspenseByOwner", () => new ExcelSuspenseByOwner());
+            Reports.Add("SuspenseByProperty", () => new SuspenseByProperty());
+            Reports.Add("ExcelSuspenseByProperty", () => new ExcelSuspenseByProperty());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

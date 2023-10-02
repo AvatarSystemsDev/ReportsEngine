@@ -63,6 +63,7 @@
             this.Details_table = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.CheckAmountLongString10 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.Rectangle5 = new DevExpress.XtraReports.UI.XRPanel();
             this.Rectangle3 = new DevExpress.XtraReports.UI.XRPanel();
             this.Textbox5 = new DevExpress.XtraReports.UI.XRRichText();
@@ -93,6 +94,7 @@
             this.SerialNumber4 = new DevExpress.XtraReports.UI.XRLabel();
             this.SerialNumber6 = new DevExpress.XtraReports.UI.XRLabel();
             this.SerialNumber5 = new DevExpress.XtraReports.UI.XRLabel();
+            this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbitMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbitSignature = new DevExpress.XtraReports.Parameters.Parameter();
@@ -111,8 +113,6 @@
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCheck = new DevExpress.XtraReports.Parameters.Parameter();
-            this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).BeginInit();
@@ -272,6 +272,15 @@
             this.CheckAmountLongString10.StylePriority.UsePadding = false;
             this.CheckAmountLongString10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.CheckAmountLongString10.Weight = 1D;
+            // 
+            // groupFooterBand1
+            // 
+            this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Rectangle5});
+            this.groupFooterBand1.HeightF = 358.1306F;
+            this.groupFooterBand1.Name = "groupFooterBand1";
+            this.groupFooterBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand;
+            this.groupFooterBand1.PrintAtBottom = true;
             // 
             // Rectangle5
             // 
@@ -819,6 +828,13 @@
             this.SerialNumber5.SizeF = new System.Drawing.SizeF(143.75F, 25F);
             this.SerialNumber5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // groupHeaderBand1
+            // 
+            this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("CheckID", DevExpress.XtraReports.UI.XRColumnSortOrder.None)});
+            this.groupHeaderBand1.HeightF = 0F;
+            this.groupHeaderBand1.Name = "groupHeaderBand1";
+            // 
             // Subtitle
             // 
             this.Subtitle.Description = "Subtitle";
@@ -990,22 +1006,6 @@
             dynamicListLookUpSettings6.SortMember = null;
             dynamicListLookUpSettings6.ValueMember = "CheckNumber";
             this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings6;
-            // 
-            // groupFooterBand1
-            // 
-            this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Rectangle5});
-            this.groupFooterBand1.HeightF = 358.1306F;
-            this.groupFooterBand1.Name = "groupFooterBand1";
-            this.groupFooterBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand;
-            this.groupFooterBand1.PrintAtBottom = true;
-            // 
-            // groupHeaderBand1
-            // 
-            this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("CheckID", DevExpress.XtraReports.UI.XRColumnSortOrder.None)});
-            this.groupHeaderBand1.HeightF = 0F;
-            this.groupHeaderBand1.Name = "groupHeaderBand1";
             // 
             // xrSubreport2
             // 

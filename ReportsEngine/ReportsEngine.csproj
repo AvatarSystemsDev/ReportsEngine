@@ -460,6 +460,12 @@
     <Compile Include="Reports\RDReports\ExcelSuspenseByOwner.Designer.cs">
       <DependentUpon>ExcelSuspenseByOwner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByProperty.Designer.cs">
+      <DependentUpon>ExcelSuspenseByProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\RDAllocation.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -646,16 +652,16 @@
     <Compile Include="Reports\APReports\ExcelCashRequirementsSummary.Designer.cs">
       <DependentUpon>ExcelCashRequirementsSummary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APReports\ExcelRDPreliminary.cs">
+    <Compile Include="Reports\RDReports\ExcelRDPreliminary.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\APReports\ExcelRDPreliminary.Designer.cs">
+    <Compile Include="Reports\RDReports\ExcelRDPreliminary.Designer.cs">
       <DependentUpon>ExcelRDPreliminary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APReports\ExcelRDProductionTaxDetail.cs">
+    <Compile Include="Reports\RDReports\ExcelRDProductionTaxDetail.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\APReports\ExcelRDProductionTaxDetail.Designer.cs">
+    <Compile Include="Reports\RDReports\ExcelRDProductionTaxDetail.Designer.cs">
       <DependentUpon>ExcelRDProductionTaxDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\GLReports\CashReceiptsEditList.cs">
@@ -754,22 +760,28 @@
     <Compile Include="Reports\RDReports\SuspenseByOwner.Designer.cs">
       <DependentUpon>SuspenseByOwner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByProperty.Designer.cs">
+      <DependentUpon>SuspenseByProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\TaxReports\ExcelThe1099Form.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\TaxReports\ExcelThe1099Form.Designer.cs">
       <DependentUpon>ExcelThe1099Form.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APReports\RDPreliminaryDistribution.cs">
+    <Compile Include="Reports\RDReports\RDPreliminaryDistribution.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\APReports\RDPreliminaryDistribution.Designer.cs">
+    <Compile Include="Reports\RDReports\RDPreliminaryDistribution.Designer.cs">
       <DependentUpon>RDPreliminaryDistribution.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APReports\RDProductionTaxDetail.cs">
+    <Compile Include="Reports\RDReports\RDProductionTaxDetail.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\APReports\RDProductionTaxDetail.Designer.cs">
+    <Compile Include="Reports\RDReports\RDProductionTaxDetail.Designer.cs">
       <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\TaxReports\The1099Form.cs">
@@ -1181,6 +1193,9 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelSuspenseByOwner.resx">
       <DependentUpon>ExcelSuspenseByOwner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelSuspenseByProperty.resx">
+      <DependentUpon>ExcelSuspenseByProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDAllocation.resx">
       <DependentUpon>RDAllocation.cs</DependentUpon>
     </EmbeddedResource>
@@ -1270,10 +1285,10 @@
     <EmbeddedResource Include="Reports\APReports\ExcelCashRequirementsSummary.resx">
       <DependentUpon>ExcelCashRequirementsSummary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\ExcelRDPreliminary.resx">
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDPreliminary.resx">
       <DependentUpon>ExcelRDPreliminary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\ExcelRDProductionTaxDetail.resx">
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDProductionTaxDetail.resx">
       <DependentUpon>ExcelRDProductionTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\GLReports\CashReceiptsEditList.resx">
@@ -1324,13 +1339,16 @@
     <EmbeddedResource Include="Reports\RDReports\SuspenseByOwner.resx">
       <DependentUpon>SuspenseByOwner.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\SuspenseByProperty.resx">
+      <DependentUpon>SuspenseByProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\TaxReports\ExcelThe1099Form.resx">
       <DependentUpon>ExcelThe1099Form.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\RDPreliminaryDistribution.resx">
+    <EmbeddedResource Include="Reports\RDReports\RDPreliminaryDistribution.resx">
       <DependentUpon>RDPreliminaryDistribution.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\RDProductionTaxDetail.resx">
+    <EmbeddedResource Include="Reports\RDReports\RDProductionTaxDetail.resx">
       <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\TaxReports\The1099Form.resx">
