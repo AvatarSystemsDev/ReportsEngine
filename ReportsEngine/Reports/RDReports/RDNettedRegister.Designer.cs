@@ -166,6 +166,7 @@
             this.Textbox164 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox180 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox183 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrUser = new DevExpress.XtraReports.UI.XRLabel();
@@ -210,7 +211,6 @@
             this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.xrLabel46 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel47 = new DevExpress.XtraReports.UI.XRLabel();
@@ -914,7 +914,7 @@
             this.xrLabel27.KeepTogether = true;
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(879.1691F, 17.00001F);
             this.xrLabel27.Name = "xrLabel27";
-            this.xrLabel27.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel27.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 2, 2, 2, 100F);
             this.xrLabel27.SizeF = new System.Drawing.SizeF(100F, 17F);
             this.xrLabel27.StylePriority.UseBorderColor = false;
             this.xrLabel27.StylePriority.UseBorderDashStyle = false;
@@ -943,7 +943,6 @@
             this.Textbox164,
             this.Textbox180,
             this.Textbox183});
-            this.pageHeaderBand1.HeightF = 100F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.PrintOn = DevExpress.XtraReports.UI.PrintOnPages.NotWithReportHeader;
             this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
@@ -1177,7 +1176,7 @@
             this.Textbox183.LocationFloat = new DevExpress.Utils.PointFloat(879.299F, 60.00001F);
             this.Textbox183.Multiline = true;
             this.Textbox183.Name = "Textbox183";
-            this.Textbox183.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.Textbox183.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 2, 2, 2, 100F);
             this.Textbox183.SizeF = new System.Drawing.SizeF(100F, 40F);
             this.Textbox183.StylePriority.UseBackColor = false;
             this.Textbox183.StylePriority.UseForeColor = false;
@@ -1185,6 +1184,12 @@
             this.Textbox183.StylePriority.UseTextAlignment = false;
             this.Textbox183.Text = "Status";
             this.Textbox183.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // SubBand1
+            // 
+            this.SubBand1.HeightF = 8.25F;
+            this.SubBand1.Name = "SubBand1";
+            this.SubBand1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             // 
             // pageFooterBand1
             // 
@@ -2104,12 +2109,6 @@
             dynamicListLookUpSettings5.ValueMember = "Number";
             this.pstrSelectOwner.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
-            // SubBand1
-            // 
-            this.SubBand1.HeightF = 8.25F;
-            this.SubBand1.Name = "SubBand1";
-            this.SubBand1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            // 
             // ReportHeader
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -2143,7 +2142,7 @@
             this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(879.299F, 80.89667F);
             this.xrLabel46.Multiline = true;
             this.xrLabel46.Name = "xrLabel46";
-            this.xrLabel46.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel46.Padding = new DevExpress.XtraPrinting.PaddingInfo(10, 2, 2, 2, 100F);
             this.xrLabel46.SizeF = new System.Drawing.SizeF(100F, 40F);
             this.xrLabel46.StylePriority.UseBackColor = false;
             this.xrLabel46.StylePriority.UseForeColor = false;
@@ -2327,8 +2326,8 @@
             this.xrRichText1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText1.BorderWidth = 1F;
             this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Genera" +
-                    "l Ledger Date: </b>\' +  FormatString(\'{0:d}\',[ProcessingDate]) + \'</span>\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
+                    "e: </b>\' +  FormatString(\'{0:d}\',[ProcessingDate]) + \'</span>\'")});
             this.xrRichText1.KeepTogether = true;
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0.1300176F, 0F);
             this.xrRichText1.Name = "xrRichText1";

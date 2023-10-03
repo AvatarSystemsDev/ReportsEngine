@@ -3,8 +3,10 @@ using ReportsEngine.Reports.APReports;
 using ReportsEngine.Reports.CheckReports;
 using ReportsEngine.Reports.FinancialReports;
 using ReportsEngine.Reports.GLReports;
+using ReportsEngine.Reports.JIBReports;
 using ReportsEngine.Reports.MDReports;
 using ReportsEngine.Reports.RDReports;
+using ReportsEngine.Reports.TaxReports;
 using System;
 using System.Collections.Generic;
 
@@ -125,6 +127,14 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelSuspenseByOwner", () => new ExcelSuspenseByOwner());
             Reports.Add("SuspenseByProperty", () => new SuspenseByProperty());
             Reports.Add("ExcelSuspenseByProperty", () => new ExcelSuspenseByProperty());
+            Reports.Add("JIBARDetailByOwner", () => new JIBARDetailByOwner());
+            Reports.Add("ExcelJIBARDetailByOwner", () => new ExcelJIBARDetailByOwner());
+            Reports.Add("JIBHistoryByOwner", () => new JIBHistoryByOwner());
+            Reports.Add("ExcelJIBHistoryByOwner", () => new ExcelJIBHistoryByOwner());
+            Reports.Add("JIBHistoryByProperty", () => new JIBHistoryByProperty());
+            Reports.Add("ExcelJIBHistoryByProperty", () => new ExcelJIBHistoryByOwner());
+
+
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

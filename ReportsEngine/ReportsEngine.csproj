@@ -418,6 +418,30 @@
     <Compile Include="Reports\CheckReports\ExcelCheckPrintingGLPostingRegister.Designer.cs">
       <DependentUpon>ExcelCheckPrintingGLPostingRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBARDetailByOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBARDetailByOwner.Designer.cs">
+      <DependentUpon>ExcelJIBARDetailByOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBHistoryByOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBHistoryByOwner.Designer.cs">
+      <DependentUpon>ExcelJIBHistoryByOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBHistoryByOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBHistoryByOwner.Designer.cs">
+      <DependentUpon>JIBHistoryByOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBHistoryByProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBHistoryByProperty.Designer.cs">
+      <DependentUpon>JIBHistoryByProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDAllocation.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -783,6 +807,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\RDProductionTaxDetail.Designer.cs">
       <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBARDetailByOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBARDetailByOwner.Designer.cs">
+      <DependentUpon>JIBARDetailByOwner.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\TaxReports\The1099Form.cs">
       <SubType>Component</SubType>
@@ -1172,6 +1202,18 @@
     <EmbeddedResource Include="Reports\CheckReports\ExcelCheckPrintingGLPostingRegister.resx">
       <DependentUpon>ExcelCheckPrintingGLPostingRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBARDetailByOwner.resx">
+      <DependentUpon>ExcelJIBARDetailByOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBHistoryByOwner.resx">
+      <DependentUpon>ExcelJIBHistoryByOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBHistoryByOwner.resx">
+      <DependentUpon>JIBHistoryByOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBHistoryByProperty.resx">
+      <DependentUpon>JIBHistoryByProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDAllocation.resx">
       <DependentUpon>ExcelRDAllocation.cs</DependentUpon>
     </EmbeddedResource>
@@ -1350,6 +1392,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDProductionTaxDetail.resx">
       <DependentUpon>RDProductionTaxDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBARDetailByOwner.resx">
+      <DependentUpon>JIBARDetailByOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\TaxReports\The1099Form.resx">
       <DependentUpon>The1099Form.cs</DependentUpon>
