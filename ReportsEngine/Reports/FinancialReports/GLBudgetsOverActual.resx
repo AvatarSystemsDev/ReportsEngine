@@ -130,10 +130,6 @@ AND (
         ('!' in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([AccountingCenterNumber]))
     )</value>
   </data>
-  <data name="xrLabel19.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pdteBeginningPostDate &lt;= #1900-01-01# &amp;&amp; ?pdteEndingPostDate &gt;= Today(), 'All Dates',FormatString('{0:MM/dd/yyyy}', ?pdteBeginningPostDate) + ' to ' + Iif(?pdteEndingPostDate = Today(),FormatString('{0:MM/dd/yyyy}', ?pdteEndingPostDate) ,FormatString('{0:MM/dd/yyyy}', ?pdteEndingPostDate)))
-</value>
-  </data>
   <data name="xrLabel26.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningCostCenterNumber = '!', iif(?pstrEndingCostCenterNumber = 'ZZZZ', 'Selected Accounting Centers', 'First Accounting Center to ' + ?pstrEndingCostCenterNumber ), iif(?pstrEndingCostCenterNumber = 'ZZZZ', ?pstrBeginningCostCenterNumber + ' to Last Accounting Center', ?pstrBeginningCostCenterNumber + ' to ' + ?pstrEndingCostCenterNumber ))</value>
   </data>

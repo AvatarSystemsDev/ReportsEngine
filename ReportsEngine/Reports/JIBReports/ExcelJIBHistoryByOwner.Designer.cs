@@ -79,6 +79,8 @@
             this.pstrBeginningOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -758,6 +760,18 @@
             this.pbooShowCriteria.Type = typeof(bool);
             this.pbooShowCriteria.ValueInfo = "True";
             // 
+            // pstrSelectOwner
+            // 
+            this.pstrSelectOwner.Description = "Parameter1";
+            this.pstrSelectOwner.MultiValue = true;
+            this.pstrSelectOwner.Name = "pstrSelectOwner";
+            // 
+            // pstrSelectProperty
+            // 
+            this.pstrSelectProperty.Description = "Parameter1";
+            this.pstrSelectProperty.MultiValue = true;
+            this.pstrSelectProperty.Name = "pstrSelectProperty";
+            // 
             // ExcelJIBHistoryByOwner
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -770,6 +784,7 @@
             this.DataMember = "JIBHistoryDataSource";
             this.DataSource = this.Dynamic;
             this.DisplayName = "JIBHistoryByOwner";
+            this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 20F, 20F, 20F);
             this.PageWidth = 1700;
@@ -801,7 +816,9 @@
             this.pstrEndingPropertyNumber,
             this.pstrBeginningOwnerNumber,
             this.pstrEndingOwnerNumber,
-            this.pbooShowCriteria});
+            this.pbooShowCriteria,
+            this.pstrSelectOwner,
+            this.pstrSelectProperty});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -847,5 +864,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectProperty;
     }
 }

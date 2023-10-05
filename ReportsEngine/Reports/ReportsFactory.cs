@@ -133,8 +133,12 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBHistoryByOwner", () => new ExcelJIBHistoryByOwner());
             Reports.Add("JIBHistoryByProperty", () => new JIBHistoryByProperty());
             Reports.Add("ExcelJIBHistoryByProperty", () => new ExcelJIBHistoryByOwner());
-
-
+            Reports.Add("RDOwnerYTDActivity", () => new RDOwnerYTDActivity());
+            Reports.Add("ExcelRDOwnerYTDActivity", () => new ExcelRDOwnerYTDActivity());
+            Reports.Add("RDImportEditList", () => new RDImportEditList());
+            Reports.Add("ExcelRDImportEditList", () => new ExcelRDImportEditList());
+            Reports.Add("RDGLPostingRegister", () => new RDGLPostingRegister());
+            Reports.Add("ExcelRDGLPostingRegister", () => new ExcelRDGLPostingRegister());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

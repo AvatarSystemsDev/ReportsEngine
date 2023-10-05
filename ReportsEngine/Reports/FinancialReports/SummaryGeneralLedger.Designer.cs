@@ -294,8 +294,8 @@
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
             queryParameter7.Name = "@pbooShowYearEndClosingEntries";
-            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooShowYearEndClose", typeof(bool));
+            queryParameter7.Type = typeof(bool);
+            queryParameter7.ValueInfo = "True";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -2897,7 +2897,8 @@
             this.pbooShowYearEndClose.Description = "Show Year End";
             this.pbooShowYearEndClose.Name = "pbooShowYearEndClose";
             this.pbooShowYearEndClose.Type = typeof(bool);
-            this.pbooShowYearEndClose.ValueInfo = "False";
+            this.pbooShowYearEndClose.ValueInfo = "True";
+            this.pbooShowYearEndClose.Visible = false;
             // 
             // SummaryGeneralLedger
             // 
@@ -2944,9 +2945,9 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccountingCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowVolume, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClose, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClose, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -2961,9 +2962,9 @@
             this.pstrBeginningCostCenter,
             this.pstrEndingCostCenter,
             this.pstrSelectAccountingCenter,
-            this.pbooShowCriteria,
             this.pbooShowVolume,
-            this.pbooShowYearEndClose});
+            this.pbooShowYearEndClose,
+            this.pbooShowCriteria});
             this.Version = "23.1";
             this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.SummaryGeneralLedger_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();

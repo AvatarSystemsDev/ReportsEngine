@@ -406,6 +406,48 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\RDReports\ExcelRDGLPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDGLPostingRegister.Designer.cs">
+      <DependentUpon>ExcelRDGLPostingRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDImportEditList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDImportEditList.Designer.cs">
+      <DependentUpon>ExcelRDImportEditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDOwnerYTDActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDOwnerYTDActivity.Designer.cs">
+      <DependentUpon>ExcelRDOwnerYTDActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDGLPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDGLPostingRegister.Designer.cs">
+      <DependentUpon>RDGLPostingRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDImportEditList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDImportEditList.Designer.cs">
+      <DependentUpon>RDImportEditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDOwnerYTDActivity.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDOwnerYTDActivity.Designer.cs">
+      <DependentUpon>RDOwnerYTDActivity.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDOwnerYTDInterestTypeTotals.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDOwnerYTDInterestTypeTotals.Designer.cs">
+      <DependentUpon>RDOwnerYTDInterestTypeTotals.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\CheckReports\CheckPrintingGLPostingRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1196,6 +1238,27 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDGLPostingRegister.resx">
+      <DependentUpon>ExcelRDGLPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDImportEditList.resx">
+      <DependentUpon>ExcelRDImportEditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDOwnerYTDActivity.resx">
+      <DependentUpon>ExcelRDOwnerYTDActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDGLPostingRegister.resx">
+      <DependentUpon>RDGLPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDImportEditList.resx">
+      <DependentUpon>RDImportEditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDOwnerYTDActivity.resx">
+      <DependentUpon>RDOwnerYTDActivity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDOwnerYTDInterestTypeTotals.resx">
+      <DependentUpon>RDOwnerYTDInterestTypeTotals.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CheckReports\CheckPrintingGLPostingRegister.resx">
       <DependentUpon>CheckPrintingGLPostingRegister.cs</DependentUpon>
     </EmbeddedResource>

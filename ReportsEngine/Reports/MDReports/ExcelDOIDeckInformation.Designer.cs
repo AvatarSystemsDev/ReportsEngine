@@ -35,7 +35,6 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelDOIDeckInformation));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -77,8 +76,7 @@
             this.pstrBeginningPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pdteStartDate = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pdteEndDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteDateToUse = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngShowActive = new DevExpress.XtraReports.Parameters.Parameter();
             this.GroupFooter1 = new DevExpress.XtraReports.UI.GroupFooterBand();
@@ -106,6 +104,8 @@
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowNotes = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowExemptDOITotals = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectState = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectCounty = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -116,28 +116,24 @@
             queryParameter1.Name = "@plngCompanyID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter2.Name = "@pdteStartDate";
+            queryParameter2.Name = "@pdteDateToUse";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pdteStartDate", typeof(System.DateTime));
-            queryParameter3.Name = "@pdteEndDate";
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pdteDateToUse", typeof(System.DateTime));
+            queryParameter3.Name = "@pstrBeginningPropertyNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pdteEndDate", typeof(System.DateTime));
-            queryParameter4.Name = "@pstrBeginningPropertyNumber";
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
+            queryParameter4.Name = "@pstrEndingPropertyNumber";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
-            queryParameter5.Name = "@pstrEndingPropertyNumber";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
+            queryParameter5.Name = "@plngShowActive";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
-            queryParameter6.Name = "@plngShowActive";
-            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
-            queryParameter5,
-            queryParameter6});
+            queryParameter5});
             storedProcQuery1.StoredProcName = "Report_DOIDeckInformation";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -456,7 +452,7 @@
             this.xrLabel33.Multiline = true;
             this.xrLabel33.Name = "xrLabel33";
             this.xrLabel33.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel33.SizeF = new System.Drawing.SizeF(89.58325F, 35F);
+            this.xrLabel33.SizeF = new System.Drawing.SizeF(89.58289F, 35F);
             this.xrLabel33.StylePriority.UseBorderColor = false;
             this.xrLabel33.StylePriority.UseBorderDashStyle = false;
             this.xrLabel33.StylePriority.UseBorders = false;
@@ -744,21 +740,14 @@
             this.Subtitle.Name = "Subtitle";
             this.Subtitle.Visible = false;
             // 
-            // pdteStartDate
+            // pdteDateToUse
             // 
-            this.pdteStartDate.Description = "Start Date";
-            this.pdteStartDate.Name = "pdteStartDate";
-            this.pdteStartDate.Type = typeof(System.DateTime);
-            this.pdteStartDate.ValueInfo = "2021-01-01";
-            // 
-            // pdteEndDate
-            // 
-            this.pdteEndDate.Description = "End Date";
-            this.pdteEndDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            this.pdteDateToUse.Description = "End Date";
+            this.pdteDateToUse.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
-            this.pdteEndDate.Name = "pdteEndDate";
-            this.pdteEndDate.Type = typeof(System.DateTime);
-            this.pdteEndDate.ValueInfo = "2023-09-12";
+            this.pdteDateToUse.Name = "pdteDateToUse";
+            this.pdteDateToUse.Type = typeof(System.DateTime);
+            this.pdteDateToUse.ValueInfo = "2023-09-12";
             // 
             // pbooShowCriteria
             // 
@@ -1054,7 +1043,7 @@
             this.xrLabel37.Multiline = true;
             this.xrLabel37.Name = "xrLabel37";
             this.xrLabel37.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel37.SizeF = new System.Drawing.SizeF(89.58325F, 15.00002F);
+            this.xrLabel37.SizeF = new System.Drawing.SizeF(89.58289F, 15.00002F);
             this.xrLabel37.StylePriority.UseBorderColor = false;
             this.xrLabel37.StylePriority.UseBorderDashStyle = false;
             this.xrLabel37.StylePriority.UseBorders = false;
@@ -1347,6 +1336,20 @@
             this.pbooShowExemptDOITotals.Type = typeof(bool);
             this.pbooShowExemptDOITotals.ValueInfo = "False";
             // 
+            // pstrSelectState
+            // 
+            this.pstrSelectState.Description = "Parameter1";
+            this.pstrSelectState.MultiValue = true;
+            this.pstrSelectState.Name = "pstrSelectState";
+            this.pstrSelectState.Type = typeof(int);
+            // 
+            // pstrSelectCounty
+            // 
+            this.pstrSelectCounty.Description = "Parameter1";
+            this.pstrSelectCounty.MultiValue = true;
+            this.pstrSelectCounty.Name = "pstrSelectCounty";
+            this.pstrSelectCounty.Type = typeof(int);
+            // 
             // ExcelDOIDeckInformation
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1361,7 +1364,8 @@
             this.DataMember = "JIBHistoryDataSet";
             this.DataSource = this.Dynamic;
             this.DisplayName = "DOIDeckInformation";
-            this.FilterString = "[PropertyWellNumber] In (?pstrSelectProperty)";
+            this.FilterString = "[PropertyWellNumber] In (?pstrSelectProperty) And [CountyMasterID] In (?pstrSelec" +
+    "tCounty) And [StateCodesID] In (?pstrSelectState)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
@@ -1377,12 +1381,13 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteStartDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowNotes, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowNotes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectState, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCounty, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.plngUserID,
             this.pbooShowExemptDOITotals,
@@ -1392,12 +1397,13 @@
             this.pstrBeginningPropertyNumber,
             this.pstrEndingPropertyNumber,
             this.Subtitle,
-            this.pdteStartDate,
-            this.pdteEndDate,
+            this.pdteDateToUse,
             this.pbooShowCriteria,
             this.plngShowActive,
             this.pstrSelectProperty,
-            this.pbooShowNotes});
+            this.pbooShowNotes,
+            this.pstrSelectState,
+            this.pstrSelectCounty});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1417,8 +1423,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter Subtitle;
-        private DevExpress.XtraReports.Parameters.Parameter pdteStartDate;
-        private DevExpress.XtraReports.Parameters.Parameter pdteEndDate;
+        private DevExpress.XtraReports.Parameters.Parameter pdteDateToUse;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
         private DevExpress.XtraReports.Parameters.Parameter plngShowActive;
         private DevExpress.XtraReports.UI.GroupFooterBand GroupFooter1;
@@ -1466,5 +1471,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel36;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowNotes;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowExemptDOITotals;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectState;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectCounty;
     }
 }
