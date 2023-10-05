@@ -139,6 +139,11 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDImportEditList", () => new ExcelRDImportEditList());
             Reports.Add("RDGLPostingRegister", () => new RDGLPostingRegister());
             Reports.Add("ExcelRDGLPostingRegister", () => new ExcelRDGLPostingRegister());
+            Reports.Add("RDSuspenseSelectedForEscheatRegister", () => new RDSuspenseSelectedForEscheatRegister());
+            Reports.Add("ExcelRDSuspenseSelectedForEscheatRegister", () => new ExcelRDSuspenseSelectedForEscheatRegister());
+            Reports.Add("APOpenSelectedForEscheatRegister", () => new APOpenSelectedForEscheatRegister());
+            Reports.Add("ExcelAPOpenSelectedForEscheatRegister", () => new ExcelAPOpenSelectedForEscheatRegister());
+            
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

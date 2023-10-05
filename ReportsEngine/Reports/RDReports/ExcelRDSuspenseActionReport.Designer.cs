@@ -361,7 +361,7 @@
             this.xrLabel6.StylePriority.UsePadding = false;
             this.xrLabel6.StylePriority.UseTextAlignment = false;
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel6.TextFormatString = "{0:n2}";
+            this.xrLabel6.TextFormatString = "{0:N2}";
             // 
             // xrLabel7
             // 

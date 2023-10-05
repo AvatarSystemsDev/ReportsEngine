@@ -406,6 +406,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelRDSuspenseSelectedForEscheatRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExcelRDSuspenseSelectedForEscheatRegister.Designer.cs">
+      <DependentUpon>ExcelRDSuspenseSelectedForEscheatRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APOpenSelectedForEscheatRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APOpenSelectedForEscheatRegister.Designer.cs">
+      <DependentUpon>APOpenSelectedForEscheatRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPOpenSelectedForEscheatRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPOpenSelectedForEscheatRegister.Designer.cs">
+      <DependentUpon>ExcelAPOpenSelectedForEscheatRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDGLPostingRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -819,6 +837,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\RDSuspenseActionReport.Designer.cs">
       <DependentUpon>RDSuspenseActionReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDSuspenseSelectedForEscheatRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDSuspenseSelectedForEscheatRegister.Designer.cs">
+      <DependentUpon>RDSuspenseSelectedForEscheatRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\SuspenseByOwner.cs">
       <SubType>Component</SubType>
@@ -1238,6 +1262,15 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ExcelRDSuspenseSelectedForEscheatRegister.resx">
+      <DependentUpon>ExcelRDSuspenseSelectedForEscheatRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APOpenSelectedForEscheatRegister.resx">
+      <DependentUpon>APOpenSelectedForEscheatRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPOpenSelectedForEscheatRegister.resx">
+      <DependentUpon>ExcelAPOpenSelectedForEscheatRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDGLPostingRegister.resx">
       <DependentUpon>ExcelRDGLPostingRegister.cs</DependentUpon>
     </EmbeddedResource>
@@ -1440,6 +1473,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDSuspenseActionReport.resx">
       <DependentUpon>RDSuspenseActionReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDSuspenseSelectedForEscheatRegister.resx">
+      <DependentUpon>RDSuspenseSelectedForEscheatRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\SuspenseByOwner.resx">
       <DependentUpon>SuspenseByOwner.cs</DependentUpon>

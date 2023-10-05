@@ -73,6 +73,7 @@
             this.pstrEndingCostCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectAccounts = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowMonthly = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -607,6 +608,13 @@
             this.pstrSelectAccountingCenter.MultiValue = true;
             this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
             // 
+            // pbooShowMonthly
+            // 
+            this.pbooShowMonthly.Description = "Parameter1";
+            this.pbooShowMonthly.Name = "pbooShowMonthly";
+            this.pbooShowMonthly.Type = typeof(bool);
+            this.pbooShowMonthly.ValueInfo = "False";
+            // 
             // ExcelGLBudgetsOverActual
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -655,7 +663,8 @@
             this.pstrBeginningAccountNumber,
             this.pstrEndingAccountNumber,
             this.pbooShowCriteria,
-            this.plngBookCodeID});
+            this.plngBookCodeID,
+            this.pbooShowMonthly});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -697,5 +706,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenterNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccounts;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountingCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowMonthly;
     }
 }
