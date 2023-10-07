@@ -5,6 +5,7 @@ using ReportsEngine.Reports.FinancialReports;
 using ReportsEngine.Reports.GLReports;
 using ReportsEngine.Reports.JIBReports;
 using ReportsEngine.Reports.MDReports;
+using ReportsEngine.Reports.ProcessReports;
 using ReportsEngine.Reports.RDReports;
 using ReportsEngine.Reports.TaxReports;
 using System;
@@ -143,7 +144,12 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDSuspenseSelectedForEscheatRegister", () => new ExcelRDSuspenseSelectedForEscheatRegister());
             Reports.Add("APOpenSelectedForEscheatRegister", () => new APOpenSelectedForEscheatRegister());
             Reports.Add("ExcelAPOpenSelectedForEscheatRegister", () => new ExcelAPOpenSelectedForEscheatRegister());
-            
+            Reports.Add("APChecks", () => new APChecks());
+            Reports.Add("ExcelAPChecks", () => new ExcelAPChecks());
+            Reports.Add("GeneralLedgerPostingRegister", () => new GLProcessPostRegister());
+            Reports.Add("ExcelGeneralLedgerPostingRegister", () => new ExcelGLProcessPostRegister());
+            Reports.Add("APCheckRegister", () => new APCheckRegister());
+            Reports.Add("ExcelAPCheckRegister", () => new ExcelAPCheckRegister());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

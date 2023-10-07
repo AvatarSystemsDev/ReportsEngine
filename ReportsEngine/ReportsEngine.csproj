@@ -406,11 +406,29 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcelRDSuspenseSelectedForEscheatRegister.cs">
+    <Compile Include="Reports\RDReports\ExcelRDSuspenseSelectedForEscheatRegister.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExcelRDSuspenseSelectedForEscheatRegister.Designer.cs">
+    <Compile Include="Reports\RDReports\ExcelRDSuspenseSelectedForEscheatRegister.Designer.cs">
       <DependentUpon>ExcelRDSuspenseSelectedForEscheatRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APCheckRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APCheckRegister.Designer.cs">
+      <DependentUpon>APCheckRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APCheckRemittanceSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APCheckRemittanceSubreport.Designer.cs">
+      <DependentUpon>APCheckRemittanceSubreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APChecks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APChecks.Designer.cs">
+      <DependentUpon>APChecks.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\APOpenSelectedForEscheatRegister.cs">
       <SubType>Component</SubType>
@@ -418,11 +436,41 @@
     <Compile Include="Reports\APReports\APOpenSelectedForEscheatRegister.Designer.cs">
       <DependentUpon>APOpenSelectedForEscheatRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\APReports\ExcelAPCheckRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPCheckRegister.Designer.cs">
+      <DependentUpon>ExcelAPCheckRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\ExcelAPOpenSelectedForEscheatRegister.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPOpenSelectedForEscheatRegister.Designer.cs">
       <DependentUpon>ExcelAPOpenSelectedForEscheatRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPCheckRemittanceSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPCheckRemittanceSubreport.Designer.cs">
+      <DependentUpon>ExcelAPCheckRemittanceSubreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPChecks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPChecks.Designer.cs">
+      <DependentUpon>ExcelAPChecks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelGLProcessPostRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelGLProcessPostRegister.Designer.cs">
+      <DependentUpon>ExcelGLProcessPostRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\GLProcessPostRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\GLProcessPostRegister.Designer.cs">
+      <DependentUpon>GLProcessPostRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDGLPostingRegister.cs">
       <SubType>Component</SubType>
@@ -1262,14 +1310,38 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ExcelRDSuspenseSelectedForEscheatRegister.resx">
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDSuspenseSelectedForEscheatRegister.resx">
       <DependentUpon>ExcelRDSuspenseSelectedForEscheatRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APCheckRegister.resx">
+      <DependentUpon>APCheckRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APCheckRemittanceSubreport.resx">
+      <DependentUpon>APCheckRemittanceSubreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APChecks.resx">
+      <DependentUpon>APChecks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APOpenSelectedForEscheatRegister.resx">
       <DependentUpon>APOpenSelectedForEscheatRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPCheckRegister.resx">
+      <DependentUpon>ExcelAPCheckRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPOpenSelectedForEscheatRegister.resx">
       <DependentUpon>ExcelAPOpenSelectedForEscheatRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPCheckRemittanceSubreport.resx">
+      <DependentUpon>ExcelAPCheckRemittanceSubreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPChecks.resx">
+      <DependentUpon>ExcelAPChecks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\ExcelGLProcessPostRegister.resx">
+      <DependentUpon>ExcelGLProcessPostRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\GLProcessPostRegister.resx">
+      <DependentUpon>GLProcessPostRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDGLPostingRegister.resx">
       <DependentUpon>ExcelRDGLPostingRegister.cs</DependentUpon>
