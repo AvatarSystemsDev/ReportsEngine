@@ -70,6 +70,12 @@
             this.strVendorName = new DevExpress.XtraReports.Parameters.Parameter();
             this.strCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.dblCheckAmount = new DevExpress.XtraReports.Parameters.Parameter();
+            this.groupHeaderBand2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
+            this.dteCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -93,7 +99,10 @@
             this.Tablix1.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.Tablix1_Details_DetailBand,
             this.groupHeaderBand1,
-            this.groupFooterBand1});
+            this.groupFooterBand1,
+            this.groupHeaderBand2,
+            this.groupHeaderBand3,
+            this.groupFooterBand2});
             this.Tablix1.DataMember = "DSAPGetRawDataForExcel";
             this.Tablix1.DataSource = this.Dynamic;
             this.Tablix1.Level = 0;
@@ -101,19 +110,7 @@
             // 
             // Tablix1_Details_DetailBand
             // 
-            this.Tablix1_Details_DetailBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel22,
-            this.xrLabel2,
-            this.xrLabel6,
-            this.xrLabel11,
-            this.xrLabel5,
-            this.xrLabel1,
-            this.xrLabel7,
-            this.xrLabel20,
-            this.xrLabel24,
-            this.xrLabel42,
-            this.xrLabel41});
-            this.Tablix1_Details_DetailBand.HeightF = 15F;
+            this.Tablix1_Details_DetailBand.HeightF = 0F;
             this.Tablix1_Details_DetailBand.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1_Details_DetailBand.Name = "Tablix1_Details_DetailBand";
             // 
@@ -126,7 +123,7 @@
             this.xrLabel22.BorderWidth = 1F;
             this.xrLabel22.CanGrow = false;
             this.xrLabel22.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrVendorName")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?strVendorName")});
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel22.ForeColor = System.Drawing.Color.Black;
             this.xrLabel22.KeepTogether = true;
@@ -154,7 +151,7 @@
             this.xrLabel2.BorderWidth = 1F;
             this.xrLabel2.CanGrow = false;
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrVendorNumber")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?strVendorNumber")});
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel2.ForeColor = System.Drawing.Color.Black;
             this.xrLabel2.KeepTogether = true;
@@ -182,7 +179,7 @@
             this.xrLabel6.BorderWidth = 1F;
             this.xrLabel6.CanGrow = false;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?plngCheckNumber")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?strCheckNumber")});
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel6.ForeColor = System.Drawing.Color.Black;
             this.xrLabel6.KeepTogether = true;
@@ -211,7 +208,7 @@
             this.xrLabel11.BorderWidth = 1F;
             this.xrLabel11.CanGrow = false;
             this.xrLabel11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pdteCheckDate")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?dteCheckDate")});
             this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel11.ForeColor = System.Drawing.Color.Black;
             this.xrLabel11.KeepTogether = true;
@@ -240,7 +237,7 @@
             this.xrLabel5.BorderWidth = 1F;
             this.xrLabel5.CanGrow = false;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pdblCheckAmount")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?dblCheckAmount")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel5.ForeColor = System.Drawing.Color.Black;
             this.xrLabel5.KeepTogether = true;
@@ -390,7 +387,7 @@
             this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(1044.141F, 0F);
             this.xrLabel42.Name = "xrLabel42";
             this.xrLabel42.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel42.SizeF = new System.Drawing.SizeF(89.58321F, 15F);
+            this.xrLabel42.SizeF = new System.Drawing.SizeF(89.58289F, 15F);
             this.xrLabel42.StylePriority.UseBackColor = false;
             this.xrLabel42.StylePriority.UseBorderColor = false;
             this.xrLabel42.StylePriority.UseBorderDashStyle = false;
@@ -438,6 +435,7 @@
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("ImbursementType", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBand1.HeightF = 0F;
+            this.groupHeaderBand1.Level = 2;
             this.groupHeaderBand1.Name = "groupHeaderBand1";
             // 
             // groupFooterBand1
@@ -451,6 +449,7 @@
             this.xrLabel28,
             this.xrLabel29});
             this.groupFooterBand1.HeightF = 15F;
+            this.groupFooterBand1.Level = 2;
             this.groupFooterBand1.Name = "groupFooterBand1";
             // 
             // xrLabel36
@@ -519,7 +518,7 @@
             this.xrLabel25.BorderWidth = 1F;
             this.xrLabel25.CanGrow = false;
             this.xrLabel25.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pdblCheckAmount")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?dblCheckAmount")});
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel25.ForeColor = System.Drawing.Color.Black;
             this.xrLabel25.KeepTogether = true;
@@ -547,7 +546,7 @@
             this.xrLabel26.BorderWidth = 1F;
             this.xrLabel26.CanGrow = false;
             this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pdteCheckDate")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?dteCheckDate")});
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel26.ForeColor = System.Drawing.Color.Black;
             this.xrLabel26.KeepTogether = true;
@@ -576,7 +575,7 @@
             this.xrLabel27.BorderWidth = 1F;
             this.xrLabel27.CanGrow = false;
             this.xrLabel27.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?plngCheckNumber")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?strCheckNumber")});
             this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel27.ForeColor = System.Drawing.Color.Black;
             this.xrLabel27.KeepTogether = true;
@@ -605,7 +604,7 @@
             this.xrLabel28.BorderWidth = 1F;
             this.xrLabel28.CanGrow = false;
             this.xrLabel28.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrVendorNumber")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?strVendorNumber")});
             this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel28.ForeColor = System.Drawing.Color.Black;
             this.xrLabel28.KeepTogether = true;
@@ -633,7 +632,7 @@
             this.xrLabel29.BorderWidth = 1F;
             this.xrLabel29.CanGrow = false;
             this.xrLabel29.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrVendorName")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?strVendorName")});
             this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel29.ForeColor = System.Drawing.Color.Black;
             this.xrLabel29.KeepTogether = true;
@@ -738,6 +737,59 @@
             this.dblCheckAmount.Type = typeof(decimal);
             this.dblCheckAmount.ValueInfo = "0";
             // 
+            // groupHeaderBand2
+            // 
+            this.groupHeaderBand2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("InvoiceNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.groupHeaderBand2.HeightF = 0F;
+            this.groupHeaderBand2.Level = 1;
+            this.groupHeaderBand2.Name = "groupHeaderBand2";
+            // 
+            // groupHeaderBand3
+            // 
+            this.groupHeaderBand3.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("BottomHalf", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.groupHeaderBand3.HeightF = 0F;
+            this.groupHeaderBand3.Name = "groupHeaderBand3";
+            // 
+            // groupFooterBand2
+            // 
+            this.groupFooterBand2.HeightF = 0F;
+            this.groupFooterBand2.Level = 1;
+            this.groupFooterBand2.Name = "groupFooterBand2";
+            this.groupFooterBand2.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
+            this.SubBand1,
+            this.SubBand2});
+            // 
+            // SubBand1
+            // 
+            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel22,
+            this.xrLabel41,
+            this.xrLabel6,
+            this.xrLabel11,
+            this.xrLabel5,
+            this.xrLabel1,
+            this.xrLabel7,
+            this.xrLabel20,
+            this.xrLabel24,
+            this.xrLabel42,
+            this.xrLabel2});
+            this.SubBand1.HeightF = 15F;
+            this.SubBand1.Name = "SubBand1";
+            // 
+            // SubBand2
+            // 
+            this.SubBand2.HeightF = 0F;
+            this.SubBand2.Name = "SubBand2";
+            // 
+            // dteCheckDate
+            // 
+            this.dteCheckDate.Description = "Check Date";
+            this.dteCheckDate.Name = "dteCheckDate";
+            this.dteCheckDate.Type = typeof(System.DateTime);
+            this.dteCheckDate.ValueInfo = "2023-10-09";
+            // 
             // ExcelAPCheckRemittanceSubreport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -774,7 +826,8 @@
             this.strVendorNumber,
             this.strVendorName,
             this.strCheckNumber,
-            this.dblCheckAmount});
+            this.dblCheckAmount,
+            this.dteCheckDate});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -818,5 +871,11 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel27;
         private DevExpress.XtraReports.UI.XRLabel xrLabel28;
         private DevExpress.XtraReports.UI.XRLabel xrLabel29;
+        private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand2;
+        private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand3;
+        private DevExpress.XtraReports.UI.GroupFooterBand groupFooterBand2;
+        private DevExpress.XtraReports.UI.SubBand SubBand1;
+        private DevExpress.XtraReports.UI.SubBand SubBand2;
+        private DevExpress.XtraReports.Parameters.Parameter dteCheckDate;
     }
 }

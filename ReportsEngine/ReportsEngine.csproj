@@ -406,6 +406,78 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\APReports\APCheckRegisterwithGLRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APCheckRegisterwithGLRegister.Designer.cs">
+      <DependentUpon>APCheckRegisterwithGLRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APCheckStubs.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APCheckStubs.Designer.cs">
+      <DependentUpon>APCheckStubs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APManualCheck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APManualCheck.Designer.cs">
+      <DependentUpon>APManualCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APManualCheckEditList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APManualCheckEditList.Designer.cs">
+      <DependentUpon>APManualCheckEditList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPManualCheck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPManualCheck.Designer.cs">
+      <DependentUpon>ExcelAPManualCheck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPPrepaidRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPPrepaidRegister.Designer.cs">
+      <DependentUpon>ExcelAPPrepaidRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDNoCrossRefList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDNoCrossRefList.Designer.cs">
+      <DependentUpon>ExcelRDNoCrossRefList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDSuspenseReleaseChecks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDSuspenseReleaseChecks.Designer.cs">
+      <DependentUpon>ExcelRDSuspenseReleaseChecks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDNoCrossRefList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDNoCrossRefList.Designer.cs">
+      <DependentUpon>RDNoCrossRefList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDSuspenseReleaseChecks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDSuspenseReleaseChecks.Designer.cs">
+      <DependentUpon>RDSuspenseReleaseChecks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDImmediatePostRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDImmediatePostRegister.Designer.cs">
+      <DependentUpon>ExcelRDImmediatePostRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDImmediatePostRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDImmediatePostRegister.Designer.cs">
+      <DependentUpon>RDImmediatePostRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDSuspenseSelectedForEscheatRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1310,6 +1382,42 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\APReports\APCheckRegisterwithGLRegister.resx">
+      <DependentUpon>APCheckRegisterwithGLRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APCheckStubs.resx">
+      <DependentUpon>APCheckStubs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APManualCheck.resx">
+      <DependentUpon>APManualCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APManualCheckEditList.resx">
+      <DependentUpon>APManualCheckEditList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPManualCheck.resx">
+      <DependentUpon>ExcelAPManualCheck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPPrepaidRegister.resx">
+      <DependentUpon>ExcelAPPrepaidRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDNoCrossRefList.resx">
+      <DependentUpon>ExcelRDNoCrossRefList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDSuspenseReleaseChecks.resx">
+      <DependentUpon>ExcelRDSuspenseReleaseChecks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDNoCrossRefList.resx">
+      <DependentUpon>RDNoCrossRefList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDSuspenseReleaseChecks.resx">
+      <DependentUpon>RDSuspenseReleaseChecks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDImmediatePostRegister.resx">
+      <DependentUpon>ExcelRDImmediatePostRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDImmediatePostRegister.resx">
+      <DependentUpon>RDImmediatePostRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDSuspenseSelectedForEscheatRegister.resx">
       <DependentUpon>ExcelRDSuspenseSelectedForEscheatRegister.cs</DependentUpon>
     </EmbeddedResource>

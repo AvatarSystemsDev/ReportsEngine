@@ -150,6 +150,20 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelGeneralLedgerPostingRegister", () => new ExcelGLProcessPostRegister());
             Reports.Add("APCheckRegister", () => new APCheckRegister());
             Reports.Add("ExcelAPCheckRegister", () => new ExcelAPCheckRegister());
+            Reports.Add("APCheckStubs", () => new APCheckStubs());
+            Reports.Add("ExcelAPCheckStubs", () => new ExcelAPChecks());
+            Reports.Add("APPrepaidRegister", () => new APPrepaidRegister());
+            Reports.Add("ExcelAPPrepaidRegister", () => new ExcelAPPrepaidRegister());
+            Reports.Add("RDImmediatePostRegister", () => new RDImmediatePostRegister());
+            Reports.Add("ExcelRDImmediatePostRegister", () => new ExcelRDImmediatePostRegister());
+            Reports.Add("APManualCheck", () => new APManualCheck());
+            Reports.Add("ExcelAPManualCheck", () => new ExcelAPManualCheck());
+            Reports.Add("RDNoCrossRefList", () => new RDNoCrossRefList());
+            Reports.Add("ExcelRDNoCrossRefList", () => new ExcelRDNoCrossRefList());
+            Reports.Add("RDSuspenseReleaseChecks", () => new RDSuspenseReleaseChecks());
+            Reports.Add("ExcelRDSuspenseReleaseChecks", () => new ExcelRDSuspenseReleaseChecks());
+
+            
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
