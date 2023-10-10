@@ -406,12 +406,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Reports\APReports\APCheckRegisterwithGLRegister.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\APReports\APCheckRegisterwithGLRegister.Designer.cs">
-      <DependentUpon>APCheckRegisterwithGLRegister.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\APReports\APCheckStubs.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -441,6 +435,30 @@
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPPrepaidRegister.Designer.cs">
       <DependentUpon>ExcelAPPrepaidRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelPropertyCashFlow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelPropertyCashFlow.Designer.cs">
+      <DependentUpon>ExcelPropertyCashFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelPropertyCashFlowbyInterestType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelPropertyCashFlowbyInterestType.Designer.cs">
+      <DependentUpon>ExcelPropertyCashFlowbyInterestType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\PropertyCashFlow.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\PropertyCashFlow.Designer.cs">
+      <DependentUpon>PropertyCashFlow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\PropertyCashFlowbyInterestType.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\PropertyCashFlowbyInterestType.Designer.cs">
+      <DependentUpon>PropertyCashFlowbyInterestType.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDNoCrossRefList.cs">
       <SubType>Component</SubType>
@@ -1382,9 +1400,6 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reports\APReports\APCheckRegisterwithGLRegister.resx">
-      <DependentUpon>APCheckRegisterwithGLRegister.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APCheckStubs.resx">
       <DependentUpon>APCheckStubs.cs</DependentUpon>
     </EmbeddedResource>
@@ -1399,6 +1414,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPPrepaidRegister.resx">
       <DependentUpon>ExcelAPPrepaidRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelPropertyCashFlow.resx">
+      <DependentUpon>ExcelPropertyCashFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelPropertyCashFlowbyInterestType.resx">
+      <DependentUpon>ExcelPropertyCashFlowbyInterestType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\PropertyCashFlow.resx">
+      <DependentUpon>PropertyCashFlow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\PropertyCashFlowbyInterestType.resx">
+      <DependentUpon>PropertyCashFlowbyInterestType.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDNoCrossRefList.resx">
       <DependentUpon>ExcelRDNoCrossRefList.cs</DependentUpon>

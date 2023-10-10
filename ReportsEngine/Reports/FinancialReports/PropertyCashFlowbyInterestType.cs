@@ -5,18 +5,15 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
-using System.Linq;
 
-namespace ReportsEngine.Reports.MDReports
+namespace ReportsEngine.Reports.FinancialReports
 {
-    public partial class DOIDeckInformation : DevExpress.XtraReports.UI.XtraReport
+    public partial class PropertyCashFlowbyInterestType : DevExpress.XtraReports.UI.XtraReport
     {
-        public DOIDeckInformation()
+        public PropertyCashFlowbyInterestType()
         {
             InitializeComponent();
-            xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
         }
-
         private void xrPropertiesSelected_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
@@ -44,9 +41,9 @@ namespace ReportsEngine.Reports.MDReports
                     }
                     else
                     {
-                        label.Text = start.Value.ToString() +" to ";
+                        label.Text = start.Value.ToString() + " to ";
                     }
-                    if(end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
+                    if (end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
                     {
                         label.Text += "Last Property";
                     }
@@ -58,7 +55,7 @@ namespace ReportsEngine.Reports.MDReports
             }
             else if ((p.Value as Array).Length == 0)
             {
-                label.Text = "No Values Are Selected";
+                label.Text = "No Values Selected";
             }
             else
             {
@@ -89,4 +86,3 @@ namespace ReportsEngine.Reports.MDReports
         }
     }
 }
-//xrPropertiesSelected

@@ -162,8 +162,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDNoCrossRefList", () => new ExcelRDNoCrossRefList());
             Reports.Add("RDSuspenseReleaseChecks", () => new RDSuspenseReleaseChecks());
             Reports.Add("ExcelRDSuspenseReleaseChecks", () => new ExcelRDSuspenseReleaseChecks());
-
-            
+            Reports.Add("PropertyCashFlow", () => new PropertyCashFlow());
+            Reports.Add("ExcelPropertyCashFlow", () => new ExcelPropertyCashFlow());
+            Reports.Add("PropertyCashFlowbyInterestType", () => new PropertyCashFlowbyInterestType());
+            Reports.Add("ExcelPropertyCashFlowbyInterestType", () => new ExcelPropertyCashFlowbyInterestType());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

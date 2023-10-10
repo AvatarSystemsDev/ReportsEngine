@@ -131,10 +131,10 @@ AND (
     )</value>
   </data>
   <data name="xrLabel17.ExpressionBindings" xml:space="preserve">
-    <value>'Total Amount Planned: '+[AmountPlannedTotalAnnual]+' Total Actual Amount: '+[ActualAmount] +' Total Variance: '+([AmountPlannedTotalAnnual]- [ActualAmount]
-)+' Percent of Planned of Amount: '+ Iif([AmountPlannedTotalAnnual] &lt;&gt; 0
-, [ActualAmount]/ [AmountPlannedTotalAnnual]
-,0 )
+    <value>'Total Amount Planned: '+ FormatString('{0:N2}', [AmountPlannedTotalAnnual]) + '      Total Actual Amount: '+ FormatString('{0:N2}', [ActualAmount]) +' &amp;emsp&amp;emspTotal Variance: '+ FormatString('{0:N2}', ([AmountPlannedTotalAnnual]- [ActualAmount]
+))+'       Percent of Planned of Amount: '+ Iif([AmountPlannedTotalAnnual] &lt;&gt; 0
+, FormatString('{0:0.00%}', [ActualAmount]/ [AmountPlannedTotalAnnual])
+,0.00 )
 </value>
   </data>
   <data name="xrLabel26.ExpressionBindings" xml:space="preserve">

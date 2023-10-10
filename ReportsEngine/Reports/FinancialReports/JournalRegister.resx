@@ -148,7 +148,7 @@ Iif(?plngSortBy = 7, [PostDate], ''))))))</value>
     <value>Iif(?plngSortBy = 1, 'Source/GL Date/Account', Iif(?plngSortBy = 2, 'Doc',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GL Date',Iif(?plngSortBy = 5, 'Vendor/Owner',Iif(?plngSortBy = 6, 'Well/Account',Iif(?plngSortBy = 7, 'Owner/GLDate','')))))))
 + ' Total'</value>
   </data>
-  <data name="xrLabel45.ExpressionBindings" xml:space="preserve">
+  <data name="xrPropertiesSelected.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'All Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
 
 </value>
@@ -156,19 +156,19 @@ Iif(?plngSortBy = 7, [PostDate], ''))))))</value>
   <data name="xrLabel47.ExpressionBindings" xml:space="preserve">
     <value>Iif(?plngSortBy = 1, 'Source/GLDate/Account',Iif(?plngSortBy = 2, 'Document Voucher/Check/Deposit',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GLDate',Iif(?plngSortBy = 5, 'Entity/Owner',Iif(?plngSortBy = 6, 'Well/Account','Owner/GLDate'))))))</value>
   </data>
-  <data name="xrLabel49.ExpressionBindings" xml:space="preserve">
+  <data name="xrBatchesSelected.ExpressionBindings" xml:space="preserve">
     <value>iif(?plngBeginningBatchID = -1, iif(?plngEndingBatchID = 999999999, 'All Batches', 'First Batch to ' + ?pstrEndingAccountNumber), iif(?plngEndingBatchID = 999999999, ?plngBeginningBatchID + ' to Last Batch', ?plngBeginningBatchID + ' to ' + ?plngEndingBatchID ))</value>
   </data>
   <data name="xrLabel51.ExpressionBindings" xml:space="preserve">
     <value>iif(?pdteBeginningServiceDate &lt;= #1900-01-01# &amp;&amp; ?pdteEndingServiceDate &gt;= Today(), 'All Dates',FormatString('{0:MM/dd/yyyy}', ?pdteBeginningServiceDate ) + ' to ' + Iif(?pdteEndingServiceDate = Today(),FormatString('{0:MM/dd/yyyy}', ?pdteEndingServiceDate ) ,FormatString('{0:MM/dd/yyyy}', ?pdteEndingServiceDate)))
 </value>
   </data>
-  <data name="xrLabel53.ExpressionBindings" xml:space="preserve">
+  <data name="xrAccountingCentersSelected.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningCostCenterNumber = '!', iif(?pstrEndingCostCenterNumber= 'ZZZZ', 'All Accounting Centers', 'First Center to ' + ?pstrEndingCostCenterNumber), iif(?pstrEndingCostCenterNumber= 'ZZZZ', ?pstrBeginningCostCenterNumber + ' to Last Center', ?pstrBeginningCostCenterNumber + ' to ' + ?pstrEndingCostCenterNumber))
 
 </value>
   </data>
-  <data name="xrLabel55.ExpressionBindings" xml:space="preserve">
+  <data name="xrEntitiesSelected.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningVendorNumber = '!', iif(?pstrEndingVendorNumber = 'ZZZZZZZZZZ', 'All Entities', 'First Entity to ' + ?pstrEndingVendorNumber), iif(?pstrEndingVendorNumber = 'ZZZZZZZZZZ', ?pstrBeginningVendorNumber + ' to Last Entity', ?pstrBeginningVendorNumber + ' to ' + ?pstrEndingVendorNumber))
 
 </value>
@@ -177,10 +177,10 @@ Iif(?plngSortBy = 7, [PostDate], ''))))))</value>
     <value>iif(?pdteBeginningPostDate &lt;= #1900-01-01# &amp;&amp; ?pdteEndingPostDate &gt;= Today(), 'All Dates',FormatString('{0:MM/dd/yyyy}', ?pdteBeginningPostDate) + ' to ' + Iif(?pdteEndingPostDate = Today(),FormatString('{0:MM/dd/yyyy}', ?pdteEndingPostDate) ,FormatString('{0:MM/dd/yyyy}', ?pdteEndingPostDate)))
 </value>
   </data>
-  <data name="xrLabel58.ExpressionBindings" xml:space="preserve">
+  <data name="xrAccountsSelected.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningAccountNumber = '!', iif(?pstrEndingAccountNumber = 'ZZZZZZZZZZ-ZZZZ', 'All Accounts', 'First Account to ' + ?pstrEndingAccountNumber), iif(?pstrEndingAccountNumber = 'ZZZZZZZZZZ-ZZZZ', ?pstrBeginningAccountNumber + ' to Last Account', ?pstrBeginningAccountNumber + ' to ' + ?pstrEndingAccountNumber))</value>
   </data>
-  <data name="xrLabel61.ExpressionBindings" xml:space="preserve">
+  <data name="xrOwnersSelected.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningOwnerNumber = '!', iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', 'All Owners', 'First Owner to ' + ?pstrEndingOwnerNumber), iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', ?pstrBeginningOwnerNumber + ' to Last Owner', ?pstrBeginningOwnerNumber + ' to ' + ?pstrEndingOwnerNumber))
 
 </value>

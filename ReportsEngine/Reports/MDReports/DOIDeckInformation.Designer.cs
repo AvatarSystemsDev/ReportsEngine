@@ -163,6 +163,7 @@
             this.Textbox6 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox8 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableCell5 = new DevExpress.XtraReports.UI.XRTableCell();
             this.StartEffectiveDate = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox39 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -256,7 +257,7 @@
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPropertiesSelected = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
@@ -269,7 +270,6 @@
             this.pstrSelectState = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCounty = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
-            this.xrTableCell7 = new DevExpress.XtraReports.UI.XRTableCell();
             ((System.ComponentModel.ISupportInitialize)(this.PropertyWellNumber_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
@@ -698,6 +698,20 @@
             this.xrTableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrTableCell1.StylePriority.UsePadding = false;
             this.xrTableCell1.Weight = 0.091356671692311514D;
+            // 
+            // xrTableCell7
+            // 
+            this.xrTableCell7.CanGrow = false;
+            this.xrTableCell7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrTableCell7.Multiline = true;
+            this.xrTableCell7.Name = "xrTableCell7";
+            this.xrTableCell7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell7.StylePriority.UseFont = false;
+            this.xrTableCell7.StylePriority.UsePadding = false;
+            this.xrTableCell7.StylePriority.UseTextAlignment = false;
+            this.xrTableCell7.Text = "Start Effective Date:";
+            this.xrTableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrTableCell7.Weight = 0.16507625654575142D;
             // 
             // xrTableCell5
             // 
@@ -2037,7 +2051,7 @@
             this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel7,
             this.xrLabel8,
-            this.xrLabel9,
+            this.xrPropertiesSelected,
             this.xrLabel10});
             this.xrPanel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)")});
@@ -2072,22 +2086,17 @@
             this.xrLabel8.StylePriority.UseFont = false;
             this.xrLabel8.Text = "For Interest Type: ";
             // 
-            // xrLabel9
+            // xrPropertiesSelected
             // 
-            this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pstrBeginningPropertyNumber <= \'!\'  And ?pstrEndingPropertyNumber == \'ZZZZZZ" +
-                    "ZZZZ-ZZZZZZZZZZ\', \'Selected Properties\', ?pstrBeginningPropertyNumber + \' to \' +" +
-                    " ?pstrEndingPropertyNumber)")});
-            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(91.66673F, 0.2099681F);
-            this.xrLabel9.Multiline = true;
-            this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(146.7007F, 22.00999F);
-            this.xrLabel9.StylePriority.UseFont = false;
-            this.xrLabel9.StylePriority.UseTextAlignment = false;
-            this.xrLabel9.Text = "xrLabel7";
-            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrPropertiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(91.66673F, 0.2099681F);
+            this.xrPropertiesSelected.Multiline = true;
+            this.xrPropertiesSelected.Name = "xrPropertiesSelected";
+            this.xrPropertiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(146.7007F, 22.00999F);
+            this.xrPropertiesSelected.StylePriority.UseFont = false;
+            this.xrPropertiesSelected.StylePriority.UseTextAlignment = false;
+            this.xrPropertiesSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel10
             // 
@@ -2405,20 +2414,6 @@
             selectNode6,
             selectNode7});
             // 
-            // xrTableCell7
-            // 
-            this.xrTableCell7.CanGrow = false;
-            this.xrTableCell7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrTableCell7.Multiline = true;
-            this.xrTableCell7.Name = "xrTableCell7";
-            this.xrTableCell7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrTableCell7.StylePriority.UseFont = false;
-            this.xrTableCell7.StylePriority.UsePadding = false;
-            this.xrTableCell7.StylePriority.UseTextAlignment = false;
-            this.xrTableCell7.Text = "Start Effective Date:";
-            this.xrTableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrTableCell7.Weight = 0.16507625654575142D;
-            // 
             // DOIDeckInformation
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2588,7 +2583,7 @@
         private DevExpress.XtraReports.UI.XRPanel xrPanel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel9;
+        private DevExpress.XtraReports.UI.XRLabel xrPropertiesSelected;
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;

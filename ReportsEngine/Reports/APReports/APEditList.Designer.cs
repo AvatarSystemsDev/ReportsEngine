@@ -1046,7 +1046,7 @@
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(1156.586F, 0F);
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(83.33093F, 15.99997F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(81.76746F, 15.99997F);
             this.xrLabel11.StylePriority.UseBorderColor = false;
             this.xrLabel11.StylePriority.UseBorderDashStyle = false;
             this.xrLabel11.StylePriority.UseBorders = false;
@@ -2660,10 +2660,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([The88Amount])")});
             this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel32.KeepTogether = true;
-            this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(1156.586F, 8.999982F);
+            this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(1156.586F, 8.999951F);
             this.xrLabel32.Name = "xrLabel32";
             this.xrLabel32.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel32.SizeF = new System.Drawing.SizeF(83.33081F, 14F);
+            this.xrLabel32.SizeF = new System.Drawing.SizeF(81.76746F, 14F);
             this.xrLabel32.StylePriority.UseBorderColor = false;
             this.xrLabel32.StylePriority.UseBorderDashStyle = false;
             this.xrLabel32.StylePriority.UseBorders = false;
@@ -2749,10 +2749,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([The88Amount])")});
             this.xrLabel44.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel44.KeepTogether = true;
-            this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(1156.586F, 3.999964F);
+            this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(1156.586F, 3.999901F);
             this.xrLabel44.Name = "xrLabel44";
             this.xrLabel44.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel44.SizeF = new System.Drawing.SizeF(83.32996F, 13.00004F);
+            this.xrLabel44.SizeF = new System.Drawing.SizeF(81.76746F, 13.00004F);
             this.xrLabel44.StylePriority.UseBorderColor = false;
             this.xrLabel44.StylePriority.UseBorderDashStyle = false;
             this.xrLabel44.StylePriority.UseBorders = false;

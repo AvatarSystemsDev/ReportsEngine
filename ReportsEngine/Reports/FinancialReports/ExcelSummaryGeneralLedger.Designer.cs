@@ -88,7 +88,7 @@
             this.pbooShowVolume = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrSelectAccounts = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccount = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowYearEndClose = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -809,6 +809,8 @@
             // 
             this.pstrDatabaseName.Description = "pstrDatabaseName";
             this.pstrDatabaseName.Name = "pstrDatabaseName";
+            this.pstrDatabaseName.Type = typeof(bool);
+            this.pstrDatabaseName.ValueInfo = "False";
             this.pstrDatabaseName.Visible = false;
             // 
             // pstrServerName
@@ -913,11 +915,12 @@
             this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
             this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
             // 
-            // pstrSelectAccounts
+            // pstrSelectAccount
             // 
-            this.pstrSelectAccounts.Description = "Parameter1";
-            this.pstrSelectAccounts.MultiValue = true;
-            this.pstrSelectAccounts.Name = "pstrSelectAccounts";
+            this.pstrSelectAccount.Description = "Parameter1";
+            this.pstrSelectAccount.MultiValue = true;
+            this.pstrSelectAccount.Name = "pstrSelectAccount";
+            this.pstrSelectAccount.Visible = false;
             // 
             // pstrSelectAccountingCenter
             // 
@@ -965,7 +968,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowVolume, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccounts, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccount, DevExpress.XtraReports.Parameters.Orientation.Vertical),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccountingCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClose, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
@@ -982,7 +985,7 @@
             this.pbooShowVolume,
             this.pstrBeginningCostCenter,
             this.pstrEndingCostCenter,
-            this.pstrSelectAccounts,
+            this.pstrSelectAccount,
             this.pstrSelectAccountingCenter,
             this.pbooShowYearEndClose});
             this.Version = "23.1";
@@ -1032,7 +1035,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowVolume;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
-        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccounts;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccount;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountingCenter;
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
