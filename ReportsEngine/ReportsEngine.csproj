@@ -406,6 +406,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\FinancialReports\ExcelOutstandingCheck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelOutstandingCheck.Designer.cs">
+      <DependentUpon>ExcelOutstandingCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\APCheckStubs.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -448,6 +454,24 @@
     <Compile Include="Reports\FinancialReports\ExcelPropertyCashFlowbyInterestType.Designer.cs">
       <DependentUpon>ExcelPropertyCashFlowbyInterestType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelPropertyCashFlowbyState.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelPropertyCashFlowbyState.Designer.cs">
+      <DependentUpon>ExcelPropertyCashFlowbyState.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\NetComparativeOperatingStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\NetComparativeOperatingStatement.Designer.cs">
+      <DependentUpon>NetComparativeOperatingStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\OutstandingCheck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\OutstandingCheck.Designer.cs">
+      <DependentUpon>OutstandingCheck.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\PropertyCashFlow.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -459,6 +483,12 @@
     </Compile>
     <Compile Include="Reports\FinancialReports\PropertyCashFlowbyInterestType.Designer.cs">
       <DependentUpon>PropertyCashFlowbyInterestType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\PropertyCashFlowbyState.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\PropertyCashFlowbyState.Designer.cs">
+      <DependentUpon>PropertyCashFlowbyState.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDNoCrossRefList.cs">
       <SubType>Component</SubType>
@@ -1400,6 +1430,9 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelOutstandingCheck.resx">
+      <DependentUpon>ExcelOutstandingCheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APCheckStubs.resx">
       <DependentUpon>APCheckStubs.cs</DependentUpon>
     </EmbeddedResource>
@@ -1421,11 +1454,23 @@
     <EmbeddedResource Include="Reports\FinancialReports\ExcelPropertyCashFlowbyInterestType.resx">
       <DependentUpon>ExcelPropertyCashFlowbyInterestType.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelPropertyCashFlowbyState.resx">
+      <DependentUpon>ExcelPropertyCashFlowbyState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\NetComparativeOperatingStatement.resx">
+      <DependentUpon>NetComparativeOperatingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\OutstandingCheck.resx">
+      <DependentUpon>OutstandingCheck.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\PropertyCashFlow.resx">
       <DependentUpon>PropertyCashFlow.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\PropertyCashFlowbyInterestType.resx">
       <DependentUpon>PropertyCashFlowbyInterestType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\PropertyCashFlowbyState.resx">
+      <DependentUpon>PropertyCashFlowbyState.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDNoCrossRefList.resx">
       <DependentUpon>ExcelRDNoCrossRefList.cs</DependentUpon>

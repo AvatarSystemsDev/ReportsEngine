@@ -8,20 +8,19 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.FinancialReports
 {
-    public partial class PropertyCashFlowbyInterestType : DevExpress.XtraReports.UI.XtraReport
+    public partial class OutstandingCheck : DevExpress.XtraReports.UI.XtraReport
     {
-        public PropertyCashFlowbyInterestType()
+        public OutstandingCheck()
         {
             InitializeComponent();
-            xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
-
+            xrAccountsSelected.BeforePrint += xrAccountsSelected_BeforePrint;
         }
-        private void xrPropertiesSelected_BeforePrint(object sender, CancelEventArgs e)
+        private void xrAccountsSelected_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            Parameter p = this.Parameters["pstrSelectProperty"];
-            Parameter start = this.Parameters["pstrBeginningPropertyNumber"];
-            Parameter end = this.Parameters["pstrEndingPropertyNumber"];
+            Parameter p = this.Parameters["pstrSelectAccount"];
+            Parameter start = this.Parameters["pstrBeginningAccountNumber"];
+            Parameter end = this.Parameters["pstrEndingAccountNumber"];
 
             if (p.MultiValue == false || p.LookUpSettings == null)
             {
@@ -31,23 +30,23 @@ namespace ReportsEngine.Reports.FinancialReports
             LookUpValueCollection col = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext);
             if (col.Count == (p.Value as Array).Length)
             {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
+                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ-ZZZZ")
                 {
-                    label.Text = "All Properties";
+                    label.Text = "All Accounts";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Property to ";
+                        label.Text = "First Account to ";
                     }
                     else
                     {
                         label.Text = start.Value.ToString() + " to ";
                     }
-                    if (end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
+                    if (end.Value.ToString() == "ZZZZZZZZZZ-ZZZZ")
                     {
-                        label.Text += "Last Property";
+                        label.Text += "Last Account";
                     }
                     else
                     {
@@ -61,23 +60,23 @@ namespace ReportsEngine.Reports.FinancialReports
             }
             else
             {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
+                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ-ZZZZ")
                 {
-                    label.Text = "Selected Properties";
+                    label.Text = "Selected Accounts";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Property to ";
+                        label.Text = "First Account to ";
                     }
                     else
                     {
                         label.Text = start.Value.ToString() + " to ";
                     }
-                    if (end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
+                    if (end.Value.ToString() == "ZZZZZZZZZZ-ZZZZ")
                     {
-                        label.Text += "Last Property";
+                        label.Text += "Last Account";
                     }
                     else
                     {

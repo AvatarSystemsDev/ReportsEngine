@@ -8,13 +8,12 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.FinancialReports
 {
-    public partial class PropertyCashFlowbyInterestType : DevExpress.XtraReports.UI.XtraReport
+    public partial class PropertyCashFlowbyState : DevExpress.XtraReports.UI.XtraReport
     {
-        public PropertyCashFlowbyInterestType()
+        public PropertyCashFlowbyState()
         {
             InitializeComponent();
             xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
-
         }
         private void xrPropertiesSelected_BeforePrint(object sender, CancelEventArgs e)
         {

@@ -166,6 +166,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPropertyCashFlow", () => new ExcelPropertyCashFlow());
             Reports.Add("PropertyCashFlowbyInterestType", () => new PropertyCashFlowbyInterestType());
             Reports.Add("ExcelPropertyCashFlowbyInterestType", () => new ExcelPropertyCashFlowbyInterestType());
+            Reports.Add("PropertyCashFlowbyState", () => new PropertyCashFlowbyState());
+            Reports.Add("ExcelPropertyCashFlowbyState", () => new ExcelPropertyCashFlowbyState());
+            Reports.Add("OutstandingCheck", () => new OutstandingCheck());
+            Reports.Add("ExcelOutstandingCheck", () => new ExcelOutstandingCheck());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
