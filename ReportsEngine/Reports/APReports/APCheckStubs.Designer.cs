@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APCheckStubs));
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
@@ -36,34 +37,21 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APCheckStubs));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Tablix1_Details_DetailBand = new DevExpress.XtraReports.UI.DetailBand();
-            this.Details_table = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.CheckAmountLongString10 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrBeginningVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrEndingVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooSignature = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrSignaturePath = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooReturnElectronicPayments = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCheckFormat = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooReturnACH = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooMICR = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooReturnChecks = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Details_table = new DevExpress.XtraReports.UI.XRTable();
+            this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
+            this.CheckAmountLongString10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.CheckAmountLongString15 = new DevExpress.XtraReports.UI.XRLabel();
@@ -77,12 +65,25 @@
             this.Textbox20 = new DevExpress.XtraReports.UI.XRLabel();
             this.CheckAmountLongString12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel4 = new DevExpress.XtraReports.UI.XRPanel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText4 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText5 = new DevExpress.XtraReports.UI.XRRichText();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.pstrBeginningVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooSignature = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSignaturePath = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooReturnElectronicPayments = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCheckFormat = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooReturnACH = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooMICR = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooReturnChecks = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
@@ -126,6 +127,47 @@
             this.Tablix1_Details_DetailBand.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1_Details_DetailBand.Name = "Tablix1_Details_DetailBand";
             // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 43.83001F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSAPCheckHeader.CheckID"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorNumber", null, "DSAPCheckHeader.VendorNumber"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorName", null, "DSAPCheckHeader.VendorName"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strCheckNumber", null, "DSAPCheckHeader.CheckNumber"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("dblCheckAmount", null, "DSAPCheckHeader.CheckAmount"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("dteCheckDate", null, "DSAPCheckHeader.CheckDate"));
+            this.xrSubreport1.ReportSource = new ReportsEngine.Reports.RDReports.ExcelAPCheckRemittanceSubreport();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(787.8499F, 3.814697E-06F);
+            // 
+            // Subtitle
+            // 
+            this.Subtitle.Description = "Subtitle";
+            this.Subtitle.Name = "Subtitle";
+            this.Subtitle.Visible = false;
+            // 
+            // pstrDatabaseName
+            // 
+            this.pstrDatabaseName.Description = "pstrDatabaseName";
+            this.pstrDatabaseName.Name = "pstrDatabaseName";
+            this.pstrDatabaseName.Visible = false;
+            // 
+            // pstrServerName
+            // 
+            this.pstrServerName.Description = "pstrServerName";
+            this.pstrServerName.Name = "pstrServerName";
+            this.pstrServerName.Visible = false;
+            // 
+            // plngUserID
+            // 
+            this.plngUserID.Description = "plngUserID";
+            this.plngUserID.Name = "plngUserID";
+            this.plngUserID.Visible = false;
+            // 
             // Details_table
             // 
             this.Details_table.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -156,140 +198,6 @@
             this.CheckAmountLongString10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.CheckAmountLongString10.Weight = 1D;
             // 
-            // Dynamic
-            // 
-            this.Dynamic.ConnectionName = "Providence_Connection 1";
-            this.Dynamic.Name = "Dynamic";
-            storedProcQuery1.Name = "DSAPCheckHeader";
-            queryParameter1.Name = "@plngProcessTrackingID";
-            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngProcessTrackingID", typeof(string));
-            queryParameter2.Name = "@pstrBeginningVendorNumber";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
-            queryParameter3.Name = "@pstrEndingVendorNumber";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
-            queryParameter4.Name = "@pbooReturnElectronicPayments";
-            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(string));
-            queryParameter5.Name = "@pbooReturnChecks";
-            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooReturnChecks", typeof(string));
-            queryParameter6.Name = "@pbooReturnACH";
-            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooReturnACH", typeof(string));
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1,
-            queryParameter2,
-            queryParameter3,
-            queryParameter4,
-            queryParameter5,
-            queryParameter6});
-            storedProcQuery1.StoredProcName = "APCheckPrinting_GetChecksToPayHeaders";
-            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1});
-            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
-            // 
-            // pstrDatabaseName
-            // 
-            this.pstrDatabaseName.Description = "pstrDatabaseName";
-            this.pstrDatabaseName.Name = "pstrDatabaseName";
-            this.pstrDatabaseName.Visible = false;
-            // 
-            // pstrServerName
-            // 
-            this.pstrServerName.Description = "pstrServerName";
-            this.pstrServerName.Name = "pstrServerName";
-            this.pstrServerName.Visible = false;
-            // 
-            // plngUserID
-            // 
-            this.plngUserID.Description = "plngUserID";
-            this.plngUserID.Name = "plngUserID";
-            this.plngUserID.Visible = false;
-            // 
-            // Subtitle
-            // 
-            this.Subtitle.Description = "Subtitle";
-            this.Subtitle.Name = "Subtitle";
-            this.Subtitle.Visible = false;
-            // 
-            // pstrBeginningVendorNumber
-            // 
-            this.pstrBeginningVendorNumber.Description = "Beginning Vendor";
-            this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
-            // 
-            // pstrEndingVendorNumber
-            // 
-            this.pstrEndingVendorNumber.Description = "Ending Vendor";
-            this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
-            this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZ";
-            // 
-            // pbooSignature
-            // 
-            this.pbooSignature.Description = "pbooSignature";
-            this.pbooSignature.Name = "pbooSignature";
-            this.pbooSignature.Type = typeof(bool);
-            this.pbooSignature.ValueInfo = "True";
-            this.pbooSignature.Visible = false;
-            // 
-            // pstrSignaturePath
-            // 
-            this.pstrSignaturePath.Description = "pstrSignaturePath";
-            this.pstrSignaturePath.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Iif(?pbooSignature = True, \'/ProvidenceReports/Signatures/TestSig.png\', \'\')")});
-            this.pstrSignaturePath.Name = "pstrSignaturePath";
-            this.pstrSignaturePath.Visible = false;
-            // 
-            // pbooReturnElectronicPayments
-            // 
-            this.pbooReturnElectronicPayments.Description = "pbooReturnElectronicPayments";
-            this.pbooReturnElectronicPayments.Name = "pbooReturnElectronicPayments";
-            this.pbooReturnElectronicPayments.Type = typeof(bool);
-            this.pbooReturnElectronicPayments.ValueInfo = "False";
-            this.pbooReturnElectronicPayments.Visible = false;
-            // 
-            // plngCheckFormat
-            // 
-            this.plngCheckFormat.Description = "plngCheckFormat";
-            this.plngCheckFormat.Name = "plngCheckFormat";
-            this.plngCheckFormat.Type = typeof(int);
-            this.plngCheckFormat.ValueInfo = "1";
-            this.plngCheckFormat.Visible = false;
-            // 
-            // pbooReturnACH
-            // 
-            this.pbooReturnACH.Description = "pbooReturnACH";
-            this.pbooReturnACH.Name = "pbooReturnACH";
-            this.pbooReturnACH.Type = typeof(bool);
-            this.pbooReturnACH.ValueInfo = "True";
-            this.pbooReturnACH.Visible = false;
-            // 
-            // plngProcessTrackingID
-            // 
-            this.plngProcessTrackingID.Description = "plngProcessTrackingID";
-            this.plngProcessTrackingID.Name = "plngProcessTrackingID";
-            this.plngProcessTrackingID.Type = typeof(int);
-            this.plngProcessTrackingID.ValueInfo = "3159";
-            this.plngProcessTrackingID.Visible = false;
-            // 
-            // pbooMICR
-            // 
-            this.pbooMICR.Description = "pbooMICR";
-            this.pbooMICR.Name = "pbooMICR";
-            this.pbooMICR.Type = typeof(bool);
-            this.pbooMICR.ValueInfo = "True";
-            this.pbooMICR.Visible = false;
-            // 
-            // pbooReturnChecks
-            // 
-            this.pbooReturnChecks.Description = "pbooReturnChecks";
-            this.pbooReturnChecks.Name = "pbooReturnChecks";
-            this.pbooReturnChecks.Type = typeof(bool);
-            this.pbooReturnChecks.ValueInfo = "True";
-            this.pbooReturnChecks.Visible = false;
-            // 
             // groupHeaderBand1
             // 
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
@@ -306,31 +214,6 @@
             this.groupFooterBand1.Name = "groupFooterBand1";
             this.groupFooterBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
             this.groupFooterBand1.PrintAtBottom = true;
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 43.83001F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSAPCheckHeader.CheckID"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorNumber", null, "DSAPCheckHeader.VendorNumber"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorName", null, "DSAPCheckHeader.VendorName"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strCheckNumber", null, "DSAPCheckHeader.CheckNumber"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("dblCheckAmount", null, "DSAPCheckHeader.CheckAmount"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("dteCheckDate", null, "DSAPCheckHeader.CheckDate"));
-            this.xrSubreport1.ReportSource = new ReportsEngine.Reports.RDReports.ExcelAPCheckRemittanceSubreport();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(787.8499F, 3.814697E-06F);
-            // 
-            // xrPictureBox2
-            // 
-            this.xrPictureBox2.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(((System.Drawing.Image)(resources.GetObject("xrPictureBox2.ImageSource"))), true);
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(0.7499695F, 0F);
-            this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(799.25F, 358.1306F);
-            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // xrPanel3
             // 
@@ -566,22 +449,6 @@
             this.xrPanel4.Name = "xrPanel4";
             this.xrPanel4.SizeF = new System.Drawing.SizeF(793.34F, 23.09503F);
             // 
-            // xrLabel3
-            // 
-            this.xrLabel3.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel3.BorderWidth = 1F;
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel3.KeepTogether = true;
-            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 23.09504F);
-            this.xrLabel3.Multiline = true;
-            this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel3.SizeF = new System.Drawing.SizeF(780.21F, 20.83F);
-            this.xrLabel3.Text = "PLEASE DETACH THIS REMITTANCE ADVICE BEFORE DEPOSITING CHECK";
-            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
             // xrPanel2
             // 
             this.xrPanel2.BorderColor = System.Drawing.Color.Black;
@@ -664,6 +531,148 @@
             this.xrRichText5.SerializableRtfString = resources.GetString("xrRichText5.SerializableRtfString");
             this.xrRichText5.SizeF = new System.Drawing.SizeF(199.65F, 26.22007F);
             // 
+            // xrLabel3
+            // 
+            this.xrLabel3.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel3.BorderWidth = 1F;
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel3.KeepTogether = true;
+            this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 23.09504F);
+            this.xrLabel3.Multiline = true;
+            this.xrLabel3.Name = "xrLabel3";
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel3.SizeF = new System.Drawing.SizeF(780.21F, 20.83F);
+            this.xrLabel3.Text = "PLEASE DETACH THIS REMITTANCE ADVICE BEFORE DEPOSITING CHECK";
+            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrPictureBox2
+            // 
+            this.xrPictureBox2.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(((System.Drawing.Image)(resources.GetObject("xrPictureBox2.ImageSource"))), true);
+            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(0.7499695F, 0F);
+            this.xrPictureBox2.Name = "xrPictureBox2";
+            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(799.25F, 358.1306F);
+            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
+            // Dynamic
+            // 
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
+            this.Dynamic.Name = "Dynamic";
+            storedProcQuery1.Name = "DSAPCheckHeader";
+            queryParameter1.Name = "@plngProcessTrackingID";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngProcessTrackingID", typeof(string));
+            queryParameter2.Name = "@pstrBeginningVendorNumber";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
+            queryParameter3.Name = "@pstrEndingVendorNumber";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
+            queryParameter4.Name = "@pbooReturnElectronicPayments";
+            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(string));
+            queryParameter5.Name = "@pbooReturnChecks";
+            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooReturnChecks", typeof(string));
+            queryParameter6.Name = "@pbooReturnACH";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooReturnACH", typeof(string));
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1,
+            queryParameter2,
+            queryParameter3,
+            queryParameter4,
+            queryParameter5,
+            queryParameter6});
+            storedProcQuery1.StoredProcName = "APCheckPrinting_GetChecksToPayHeaders";
+            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1});
+            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
+            // 
+            // pstrBeginningVendorNumber
+            // 
+            this.pstrBeginningVendorNumber.Description = "Beginning Vendor";
+            this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
+            // 
+            // pstrEndingVendorNumber
+            // 
+            this.pstrEndingVendorNumber.Description = "Ending Vendor";
+            this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
+            this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZ";
+            // 
+            // pbooSignature
+            // 
+            this.pbooSignature.Description = "pbooSignature";
+            this.pbooSignature.Name = "pbooSignature";
+            this.pbooSignature.Type = typeof(bool);
+            this.pbooSignature.ValueInfo = "True";
+            this.pbooSignature.Visible = false;
+            // 
+            // pstrSignaturePath
+            // 
+            this.pstrSignaturePath.Description = "pstrSignaturePath";
+            this.pstrSignaturePath.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Iif(?pbooSignature = True, \'/ProvidenceReports/Signatures/TestSig.png\', \'\')")});
+            this.pstrSignaturePath.Name = "pstrSignaturePath";
+            this.pstrSignaturePath.Visible = false;
+            // 
+            // pbooReturnElectronicPayments
+            // 
+            this.pbooReturnElectronicPayments.Description = "pbooReturnElectronicPayments";
+            this.pbooReturnElectronicPayments.Name = "pbooReturnElectronicPayments";
+            this.pbooReturnElectronicPayments.Type = typeof(bool);
+            this.pbooReturnElectronicPayments.ValueInfo = "False";
+            this.pbooReturnElectronicPayments.Visible = false;
+            // 
+            // plngCheckFormat
+            // 
+            this.plngCheckFormat.Description = "plngCheckFormat";
+            this.plngCheckFormat.Name = "plngCheckFormat";
+            this.plngCheckFormat.Type = typeof(int);
+            this.plngCheckFormat.ValueInfo = "1";
+            this.plngCheckFormat.Visible = false;
+            // 
+            // pbooReturnACH
+            // 
+            this.pbooReturnACH.Description = "pbooReturnACH";
+            this.pbooReturnACH.Name = "pbooReturnACH";
+            this.pbooReturnACH.Type = typeof(bool);
+            this.pbooReturnACH.ValueInfo = "True";
+            this.pbooReturnACH.Visible = false;
+            // 
+            // plngProcessTrackingID
+            // 
+            this.plngProcessTrackingID.Description = "plngProcessTrackingID";
+            this.plngProcessTrackingID.Name = "plngProcessTrackingID";
+            this.plngProcessTrackingID.Type = typeof(int);
+            this.plngProcessTrackingID.ValueInfo = "3159";
+            this.plngProcessTrackingID.Visible = false;
+            // 
+            // pbooMICR
+            // 
+            this.pbooMICR.Description = "pbooMICR";
+            this.pbooMICR.Name = "pbooMICR";
+            this.pbooMICR.Type = typeof(bool);
+            this.pbooMICR.ValueInfo = "True";
+            this.pbooMICR.Visible = false;
+            // 
+            // pbooReturnChecks
+            // 
+            this.pbooReturnChecks.Description = "pbooReturnChecks";
+            this.pbooReturnChecks.Name = "pbooReturnChecks";
+            this.pbooReturnChecks.Type = typeof(bool);
+            this.pbooReturnChecks.ValueInfo = "True";
+            this.pbooReturnChecks.Visible = false;
+            // 
+            // plngCompanyID
+            // 
+            this.plngCompanyID.Description = "Company ID";
+            this.plngCompanyID.Name = "plngCompanyID";
+            this.plngCompanyID.Type = typeof(int);
+            this.plngCompanyID.ValueInfo = "0";
+            this.plngCompanyID.Visible = false;
+            // 
             // APCheckStubs
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -690,7 +699,8 @@
             this.pbooReturnACH,
             this.plngProcessTrackingID,
             this.pbooMICR,
-            this.pbooReturnChecks});
+            this.pbooReturnChecks,
+            this.plngCompanyID});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
@@ -749,5 +759,6 @@
         private DevExpress.XtraReports.UI.XRRichText xrRichText2;
         private DevExpress.XtraReports.UI.XRRichText xrRichText4;
         private DevExpress.XtraReports.UI.XRRichText xrRichText5;
+        private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
     }
 }

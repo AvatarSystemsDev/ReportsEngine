@@ -170,6 +170,16 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPropertyCashFlowbyState", () => new ExcelPropertyCashFlowbyState());
             Reports.Add("OutstandingCheck", () => new OutstandingCheck());
             Reports.Add("ExcelOutstandingCheck", () => new ExcelOutstandingCheck());
+            Reports.Add("OwnerNameAddress", () => new OwnerNameAddress());
+            Reports.Add("ExcelOwnerNameAddress", () => new ExcelOwnerNameAddress());
+            Reports.Add("VendorNameAddress", () => new VendorNameAddress());
+            Reports.Add("ExcelVendorNameAddress", () => new ExcelVendorNameAddress());
+            Reports.Add("VendorOptionsListing", () => new VendorOptionsListing());
+            Reports.Add("ExcelVendorOptionsListing", () => new ExcelVendorOptionsListing());
+            Reports.Add("OwnerOptions", () => new OwnerOptions());
+            Reports.Add("ExcelOwnerOptions", () => new ExcelOwnerOptions());
+            Reports.Add("DOIDeck", () => new DOIDeck());
+            Reports.Add("ExcelDOIDeck", () => new ExcelDOIDeck());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

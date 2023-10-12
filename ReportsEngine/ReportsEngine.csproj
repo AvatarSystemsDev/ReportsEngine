@@ -490,6 +490,66 @@
     <Compile Include="Reports\FinancialReports\PropertyCashFlowbyState.Designer.cs">
       <DependentUpon>PropertyCashFlowbyState.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\DOIDeck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\DOIDeck.Designer.cs">
+      <DependentUpon>DOIDeck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIDeck.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIDeck.Designer.cs">
+      <DependentUpon>ExcelDOIDeck.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelOwnerNameAddress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelOwnerNameAddress.Designer.cs">
+      <DependentUpon>ExcelOwnerNameAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelOwnerOptions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelOwnerOptions.Designer.cs">
+      <DependentUpon>ExcelOwnerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelVendorNameAddress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelVendorNameAddress.Designer.cs">
+      <DependentUpon>ExcelVendorNameAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelVendorOptionsListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelVendorOptionsListing.Designer.cs">
+      <DependentUpon>ExcelVendorOptionsListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\OwnerNameAddress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\OwnerNameAddress.Designer.cs">
+      <DependentUpon>OwnerNameAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\OwnerOptions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\OwnerOptions.Designer.cs">
+      <DependentUpon>OwnerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\VendorNameAddress.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\VendorNameAddress.Designer.cs">
+      <DependentUpon>VendorNameAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\VendorOptionsListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\VendorOptionsListing.Designer.cs">
+      <DependentUpon>VendorOptionsListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDNoCrossRefList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1471,6 +1531,36 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\PropertyCashFlowbyState.resx">
       <DependentUpon>PropertyCashFlowbyState.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\DOIDeck.resx">
+      <DependentUpon>DOIDeck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelDOIDeck.resx">
+      <DependentUpon>ExcelDOIDeck.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelOwnerNameAddress.resx">
+      <DependentUpon>ExcelOwnerNameAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelOwnerOptions.resx">
+      <DependentUpon>ExcelOwnerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelVendorNameAddress.resx">
+      <DependentUpon>ExcelVendorNameAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelVendorOptionsListing.resx">
+      <DependentUpon>ExcelVendorOptionsListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\OwnerNameAddress.resx">
+      <DependentUpon>OwnerNameAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\OwnerOptions.resx">
+      <DependentUpon>OwnerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\VendorNameAddress.resx">
+      <DependentUpon>VendorNameAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\VendorOptionsListing.resx">
+      <DependentUpon>VendorOptionsListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDNoCrossRefList.resx">
       <DependentUpon>ExcelRDNoCrossRefList.cs</DependentUpon>
