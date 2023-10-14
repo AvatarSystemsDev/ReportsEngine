@@ -502,6 +502,12 @@
     <Compile Include="Reports\MDReports\ExcelDOIDeck.Designer.cs">
       <DependentUpon>ExcelDOIDeck.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\ExcelOwnerLabels.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelOwnerLabels.Designer.cs">
+      <DependentUpon>ExcelOwnerLabels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\ExcelOwnerNameAddress.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -513,6 +519,12 @@
     </Compile>
     <Compile Include="Reports\MDReports\ExcelOwnerOptions.Designer.cs">
       <DependentUpon>ExcelOwnerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelVendorLabels.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelVendorLabels.Designer.cs">
+      <DependentUpon>ExcelVendorLabels.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\ExcelVendorNameAddress.cs">
       <SubType>Component</SubType>
@@ -526,6 +538,12 @@
     <Compile Include="Reports\MDReports\ExcelVendorOptionsListing.Designer.cs">
       <DependentUpon>ExcelVendorOptionsListing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\OwnerLabels.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\OwnerLabels.Designer.cs">
+      <DependentUpon>OwnerLabels.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\OwnerNameAddress.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -537,6 +555,12 @@
     </Compile>
     <Compile Include="Reports\MDReports\OwnerOptions.Designer.cs">
       <DependentUpon>OwnerOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\VendorLabels.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\VendorLabels.Designer.cs">
+      <DependentUpon>VendorLabels.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\VendorNameAddress.cs">
       <SubType>Component</SubType>
@@ -1538,11 +1562,17 @@
     <EmbeddedResource Include="Reports\MDReports\ExcelDOIDeck.resx">
       <DependentUpon>ExcelDOIDeck.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelOwnerLabels.resx">
+      <DependentUpon>ExcelOwnerLabels.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelOwnerNameAddress.resx">
       <DependentUpon>ExcelOwnerNameAddress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelOwnerOptions.resx">
       <DependentUpon>ExcelOwnerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelVendorLabels.resx">
+      <DependentUpon>ExcelVendorLabels.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelVendorNameAddress.resx">
       <DependentUpon>ExcelVendorNameAddress.cs</DependentUpon>
@@ -1550,11 +1580,17 @@
     <EmbeddedResource Include="Reports\MDReports\ExcelVendorOptionsListing.resx">
       <DependentUpon>ExcelVendorOptionsListing.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\OwnerLabels.resx">
+      <DependentUpon>OwnerLabels.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\OwnerNameAddress.resx">
       <DependentUpon>OwnerNameAddress.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\OwnerOptions.resx">
       <DependentUpon>OwnerOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\VendorLabels.resx">
+      <DependentUpon>VendorLabels.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\VendorNameAddress.resx">
       <DependentUpon>VendorNameAddress.cs</DependentUpon>

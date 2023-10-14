@@ -180,6 +180,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelOwnerOptions", () => new ExcelOwnerOptions());
             Reports.Add("DOIDeck", () => new DOIDeck());
             Reports.Add("ExcelDOIDeck", () => new ExcelDOIDeck());
+            Reports.Add("VendorLabels", () => new VendorLabels());
+            Reports.Add("ExcelVendorLabels", () => new ExcelVendorLabels());
+            Reports.Add("OwnerLabels", () => new OwnerLabels());
+            Reports.Add("ExcelOwnerLabels", () => new ExcelOwnerLabels());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
