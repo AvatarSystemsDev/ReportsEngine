@@ -141,7 +141,7 @@
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrSelectCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngBeginningBatch = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngEndingBatch = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowYearEndClosingEntries = new DevExpress.XtraReports.Parameters.Parameter();
@@ -1400,11 +1400,11 @@
             this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
             this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
             // 
-            // pstrSelectCostCenter
+            // pstrSelectAccountingCenter
             // 
-            this.pstrSelectCostCenter.Description = "Select Cost Center";
-            this.pstrSelectCostCenter.MultiValue = true;
-            this.pstrSelectCostCenter.Name = "pstrSelectCostCenter";
+            this.pstrSelectAccountingCenter.Description = "Select Cost Center";
+            this.pstrSelectAccountingCenter.MultiValue = true;
+            this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
             // 
             // plngBeginningBatch
             // 
@@ -1479,7 +1479,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccountingCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1511,7 +1511,7 @@
             this.pstrSelectOwner,
             this.pstrBeginningCostCenter,
             this.pstrEndingCostCenter,
-            this.pstrSelectCostCenter,
+            this.pstrSelectAccountingCenter,
             this.plngBeginningBatch,
             this.plngEndingBatch,
             this.pstrSelectBatch,
@@ -1588,7 +1588,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
-        private DevExpress.XtraReports.Parameters.Parameter pstrSelectCostCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountingCenter;
         private DevExpress.XtraReports.Parameters.Parameter plngBeginningBatch;
         private DevExpress.XtraReports.Parameters.Parameter plngEndingBatch;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEndClosingEntries;

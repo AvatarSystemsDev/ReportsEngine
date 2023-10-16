@@ -406,6 +406,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PA_LAR5D.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PA_LAR5D.Designer.cs">
+      <DependentUpon>PA_LAR5D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PA_LAR5D_ACQ_Subreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PA_LAR5D_ACQ_Subreport.Designer.cs">
+      <DependentUpon>PA_LAR5D_ACQ_Subreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PA_LAR5D_DSP_Subreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PA_LAR5D_DSP_Subreport.Designer.cs">
+      <DependentUpon>PA_LAR5D_DSP_Subreport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\ExcelOutstandingCheck.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -508,6 +526,12 @@
     <Compile Include="Reports\MDReports\ExcelOwnerLabels.Designer.cs">
       <DependentUpon>ExcelOwnerLabels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\ExcelOwnerLabelsByProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelOwnerLabelsByProperty.Designer.cs">
+      <DependentUpon>ExcelOwnerLabelsByProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\ExcelOwnerNameAddress.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -544,6 +568,12 @@
     <Compile Include="Reports\MDReports\OwnerLabels.Designer.cs">
       <DependentUpon>OwnerLabels.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\OwnerLabelsByProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\OwnerLabelsByProperty.Designer.cs">
+      <DependentUpon>OwnerLabelsByProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\OwnerNameAddress.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -573,6 +603,36 @@
     </Compile>
     <Compile Include="Reports\MDReports\VendorOptionsListing.Designer.cs">
       <DependentUpon>VendorOptionsListing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_LAOGP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_LAOGP.Designer.cs">
+      <DependentUpon>ExcelPA_LAOGP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_FedOGOR_PartA_Subreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_FedOGOR_PartA_Subreport.Designer.cs">
+      <DependentUpon>PA_FedOGOR_PartA_Subreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_LAOGP.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_LAOGP.Designer.cs">
+      <DependentUpon>PA_LAOGP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelDSGLPostingRegisterByProcess.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelDSGLPostingRegisterByProcess.Designer.cs">
+      <DependentUpon>ExcelDSGLPostingRegisterByProcess.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\GLPostingRegisterByProcess.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\GLPostingRegisterByProcess.Designer.cs">
+      <DependentUpon>GLPostingRegisterByProcess.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDNoCrossRefList.cs">
       <SubType>Component</SubType>
@@ -1514,6 +1574,15 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PA_LAR5D.resx">
+      <DependentUpon>PA_LAR5D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA_LAR5D_ACQ_Subreport.resx">
+      <DependentUpon>PA_LAR5D_ACQ_Subreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PA_LAR5D_DSP_Subreport.resx">
+      <DependentUpon>PA_LAR5D_DSP_Subreport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelOutstandingCheck.resx">
       <DependentUpon>ExcelOutstandingCheck.cs</DependentUpon>
     </EmbeddedResource>
@@ -1565,6 +1634,9 @@
     <EmbeddedResource Include="Reports\MDReports\ExcelOwnerLabels.resx">
       <DependentUpon>ExcelOwnerLabels.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelOwnerLabelsByProperty.resx">
+      <DependentUpon>ExcelOwnerLabelsByProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelOwnerNameAddress.resx">
       <DependentUpon>ExcelOwnerNameAddress.cs</DependentUpon>
     </EmbeddedResource>
@@ -1583,6 +1655,9 @@
     <EmbeddedResource Include="Reports\MDReports\OwnerLabels.resx">
       <DependentUpon>OwnerLabels.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\OwnerLabelsByProperty.resx">
+      <DependentUpon>OwnerLabelsByProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\OwnerNameAddress.resx">
       <DependentUpon>OwnerNameAddress.cs</DependentUpon>
     </EmbeddedResource>
@@ -1597,6 +1672,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\VendorOptionsListing.resx">
       <DependentUpon>VendorOptionsListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\ExcelPA_LAOGP.resx">
+      <DependentUpon>ExcelPA_LAOGP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\PA_FedOGOR_PartA_Subreport.resx">
+      <DependentUpon>PA_FedOGOR_PartA_Subreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\PA_LAOGP.resx">
+      <DependentUpon>PA_LAOGP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\ExcelDSGLPostingRegisterByProcess.resx">
+      <DependentUpon>ExcelDSGLPostingRegisterByProcess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\GLPostingRegisterByProcess.resx">
+      <DependentUpon>GLPostingRegisterByProcess.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDNoCrossRefList.resx">
       <DependentUpon>ExcelRDNoCrossRefList.cs</DependentUpon>

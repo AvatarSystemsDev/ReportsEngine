@@ -174,8 +174,6 @@
             this.xrLabel5,
             this.xrLabel19,
             this.xrLabel4});
-            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", resources.GetString("Tablix1.ExpressionBindings"))});
             this.Tablix1.HeightF = 15.00013F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
@@ -949,6 +947,9 @@
             this.DataMember = "DSGeneralLedgerDetail";
             this.DataSource = this.Dynamic;
             this.DisplayName = "ExcelSummaryGeneralLedger";
+            this.FilterString = "[AccountNumber] In (?pstrSelectAccount) And ([AccountingCenterNumber] In (?pstrSe" +
+    "lectAccountingCenter) Or IsNullOrEmpty([AccountingCenterNumber]) And \'!\' In (?ps" +
+    "trSelectAccountingCenter))";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 20F, 17.29126F);

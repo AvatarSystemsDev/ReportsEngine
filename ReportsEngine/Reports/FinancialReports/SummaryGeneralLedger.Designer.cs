@@ -506,7 +506,8 @@
             this.xrLabel2,
             this.xrLabel18});
             this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", resources.GetString("Tablix1.ExpressionBindings"))});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif([DebitAmount] = 0 AND [CreditAmount] = 0 AND not ?pbooShowZeroAmounts,\nFALSE," +
+                    "TRUE)")});
             this.Tablix1.HeightF = 14.79333F;
             this.Tablix1.KeepTogether = true;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
@@ -2928,9 +2929,9 @@
             this.DisplayName = "SummaryGeneralLedger";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Landscape", "?pbooShowVolume == True")});
-            this.FilterString = "[AccountNumber] In (?pstrSelectAccounts) And ([AccountingCenterNumber] In (?pstrS" +
-    "electAccountingCenter) Or IsNullOrEmpty([AccountingCenterNumber]) And \'!\' In (?p" +
-    "strSelectAccountingCenter))";
+            this.FilterString = "[AccountNumber] In (?pstrSelectAccount) And ([AccountingCenterNumber] In (?pstrSe" +
+    "lectAccountingCenter) Or IsNullOrEmpty([AccountingCenterNumber]) And \'!\' In (?ps" +
+    "trSelectAccountingCenter))";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

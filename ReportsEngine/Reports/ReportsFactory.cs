@@ -5,6 +5,7 @@ using ReportsEngine.Reports.FinancialReports;
 using ReportsEngine.Reports.GLReports;
 using ReportsEngine.Reports.JIBReports;
 using ReportsEngine.Reports.MDReports;
+using ReportsEngine.Reports.PAReports;
 using ReportsEngine.Reports.ProcessReports;
 using ReportsEngine.Reports.RDReports;
 using ReportsEngine.Reports.TaxReports;
@@ -184,6 +185,12 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelVendorLabels", () => new ExcelVendorLabels());
             Reports.Add("OwnerLabels", () => new OwnerLabels());
             Reports.Add("ExcelOwnerLabels", () => new ExcelOwnerLabels());
+            Reports.Add("GLPostingRegisterByProcess", () => new GLPostingRegisterByProcess());
+            Reports.Add("ExcelGLPostingRegisterByProcess", () => new ExcelGLPostingRegisterByProcess());
+            Reports.Add("OwnerLabelsByProperty", () => new OwnerLabelsByProperty());
+            Reports.Add("ExcelOwnerLabelsByProperty", () => new ExcelOwnerLabelsByProperty());
+            Reports.Add("PA_LAOGP", () => new PA_LAOGP());
+            Reports.Add("ExcelPA_LAOGP", () => new ExcelPA_LAOGP());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
