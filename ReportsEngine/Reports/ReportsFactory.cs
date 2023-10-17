@@ -191,6 +191,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelOwnerLabelsByProperty", () => new ExcelOwnerLabelsByProperty());
             Reports.Add("PA_LAOGP", () => new PA_LAOGP());
             Reports.Add("ExcelPA_LAOGP", () => new ExcelPA_LAOGP());
+            Reports.Add("PA_LAR5D", () => new PA_LAR5D());
+            Reports.Add("ExcelPA_LAR5D", () => new ExcelPA_LAR5D());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

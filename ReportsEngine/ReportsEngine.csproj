@@ -406,22 +406,40 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PA_LAR5D.cs">
+    <Compile Include="Reports\PAReports\ExcelPA_LAR5D.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PA_LAR5D.Designer.cs">
+    <Compile Include="Reports\PAReports\ExcelPA_LAR5D.Designer.cs">
+      <DependentUpon>ExcelPA_LAR5D.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_LAR5D_ACQ_Subreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_LAR5D_ACQ_Subreport.Designer.cs">
+      <DependentUpon>ExcelPA_LAR5D_ACQ_Subreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_LAR5D_DSP_Subreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_LAR5D_DSP_Subreport.Designer.cs">
+      <DependentUpon>ExcelPA_LAR5D_DSP_Subreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_LAR5D.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_LAR5D.Designer.cs">
       <DependentUpon>PA_LAR5D.cs</DependentUpon>
     </Compile>
-    <Compile Include="PA_LAR5D_ACQ_Subreport.cs">
+    <Compile Include="Reports\PAReports\PA_LAR5D_ACQ_Subreport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PA_LAR5D_ACQ_Subreport.Designer.cs">
+    <Compile Include="Reports\PAReports\PA_LAR5D_ACQ_Subreport.Designer.cs">
       <DependentUpon>PA_LAR5D_ACQ_Subreport.cs</DependentUpon>
     </Compile>
-    <Compile Include="PA_LAR5D_DSP_Subreport.cs">
+    <Compile Include="Reports\PAReports\PA_LAR5D_DSP_Subreport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PA_LAR5D_DSP_Subreport.Designer.cs">
+    <Compile Include="Reports\PAReports\PA_LAR5D_DSP_Subreport.Designer.cs">
       <DependentUpon>PA_LAR5D_DSP_Subreport.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\ExcelOutstandingCheck.cs">
@@ -1574,13 +1592,22 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PA_LAR5D.resx">
+    <EmbeddedResource Include="Reports\PAReports\ExcelPA_LAR5D.resx">
+      <DependentUpon>ExcelPA_LAR5D.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\ExcelPA_LAR5D_ACQ_Subreport.resx">
+      <DependentUpon>ExcelPA_LAR5D_ACQ_Subreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\ExcelPA_LAR5D_DSP_Subreport.resx">
+      <DependentUpon>ExcelPA_LAR5D_DSP_Subreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\PA_LAR5D.resx">
       <DependentUpon>PA_LAR5D.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PA_LAR5D_ACQ_Subreport.resx">
+    <EmbeddedResource Include="Reports\PAReports\PA_LAR5D_ACQ_Subreport.resx">
       <DependentUpon>PA_LAR5D_ACQ_Subreport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PA_LAR5D_DSP_Subreport.resx">
+    <EmbeddedResource Include="Reports\PAReports\PA_LAR5D_DSP_Subreport.resx">
       <DependentUpon>PA_LAR5D_DSP_Subreport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelOutstandingCheck.resx">

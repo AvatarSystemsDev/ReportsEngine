@@ -327,8 +327,8 @@
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowYearEndClosingEntries = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrBeginningBatch = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrEndingBatch = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngBeginningBatch = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngEndingBatch = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectBatch = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
@@ -406,10 +406,10 @@
             queryParameter14.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
             queryParameter15.Name = "@plngBeginningBatch";
             queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter15.Value = new DevExpress.DataAccess.Expression("?pstrBeginningBatch", typeof(int));
+            queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatch", typeof(int));
             queryParameter16.Name = "@plngEndingBatch";
             queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter16.Value = new DevExpress.DataAccess.Expression("?pstrEndingBatch", typeof(int));
+            queryParameter16.Value = new DevExpress.DataAccess.Expression("?plngEndingBatch", typeof(int));
             queryParameter17.Name = "@pbooShowYearEndClosingEntries";
             queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter17.Value = new DevExpress.DataAccess.Expression("?pbooShowYearEndClosingEntries", typeof(bool));
@@ -3306,33 +3306,33 @@
             this.pbooShowYearEndClosingEntries.Type = typeof(bool);
             this.pbooShowYearEndClosingEntries.ValueInfo = "False";
             // 
-            // pstrBeginningBatch
+            // plngBeginningBatch
             // 
-            this.pstrBeginningBatch.Description = "Beginning Batch";
-            this.pstrBeginningBatch.Name = "pstrBeginningBatch";
-            this.pstrBeginningBatch.Type = typeof(int);
-            this.pstrBeginningBatch.ValueInfo = "-1";
+            this.plngBeginningBatch.Description = "Beginning Batch";
+            this.plngBeginningBatch.Name = "plngBeginningBatch";
+            this.plngBeginningBatch.Type = typeof(int);
+            this.plngBeginningBatch.ValueInfo = "-1";
             dynamicListLookUpSettings17.DataMember = "DSBatchReportLookup";
             dynamicListLookUpSettings17.DataSource = this.Dynamic;
             dynamicListLookUpSettings17.DisplayMember = "Description";
             dynamicListLookUpSettings17.FilterString = null;
             dynamicListLookUpSettings17.SortMember = null;
             dynamicListLookUpSettings17.ValueMember = "Number";
-            this.pstrBeginningBatch.ValueSourceSettings = dynamicListLookUpSettings17;
+            this.plngBeginningBatch.ValueSourceSettings = dynamicListLookUpSettings17;
             // 
-            // pstrEndingBatch
+            // plngEndingBatch
             // 
-            this.pstrEndingBatch.Description = "Ending Batch";
-            this.pstrEndingBatch.Name = "pstrEndingBatch";
-            this.pstrEndingBatch.Type = typeof(int);
-            this.pstrEndingBatch.ValueInfo = "999999999";
+            this.plngEndingBatch.Description = "Ending Batch";
+            this.plngEndingBatch.Name = "plngEndingBatch";
+            this.plngEndingBatch.Type = typeof(int);
+            this.plngEndingBatch.ValueInfo = "999999999";
             dynamicListLookUpSettings18.DataMember = "DSBatchReportLookup";
             dynamicListLookUpSettings18.DataSource = this.Dynamic;
             dynamicListLookUpSettings18.DisplayMember = "Description";
             dynamicListLookUpSettings18.FilterString = null;
             dynamicListLookUpSettings18.SortMember = null;
             dynamicListLookUpSettings18.ValueMember = "Number";
-            this.pstrEndingBatch.ValueSourceSettings = dynamicListLookUpSettings18;
+            this.plngEndingBatch.ValueSourceSettings = dynamicListLookUpSettings18;
             // 
             // pstrSelectBatch
             // 
@@ -3965,8 +3965,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClosingEntries, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowZeroBalance, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -3997,8 +3997,8 @@
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
             this.pstrSelectVendor,
-            this.pstrBeginningBatch,
-            this.pstrEndingBatch,
+            this.plngBeginningBatch,
+            this.plngEndingBatch,
             this.pstrSelectBatch,
             this.pbooShowYearEndClosingEntries,
             this.plngShowZeroBalance,
@@ -4113,8 +4113,8 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEndClosingEntries;
         private DevExpress.XtraReports.UI.XRLabel xrBatchesSelected;
         private DevExpress.XtraReports.UI.XRLabel xrLabel32;
-        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningBatch;
-        private DevExpress.XtraReports.Parameters.Parameter pstrEndingBatch;
+        private DevExpress.XtraReports.Parameters.Parameter plngBeginningBatch;
+        private DevExpress.XtraReports.Parameters.Parameter plngEndingBatch;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectBatch;
         private DevExpress.XtraReports.UI.XRLabel xrLabel39;
         private DevExpress.XtraReports.UI.XRLabel xrLabel37;
