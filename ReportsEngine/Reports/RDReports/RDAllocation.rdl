@@ -563,7 +563,7 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Sale Date</Value>
+                                  <Value>Prod Date</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -637,7 +637,6 @@
                                 <TextRun>
                                   <Value>Gross</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -674,7 +673,6 @@
                                 <TextRun>
                                   <Value>Taxes</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -711,7 +709,6 @@
                                 <TextRun>
                                   <Value>Deductions</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -748,7 +745,6 @@
                                 <TextRun>
                                   <Value>Net</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -783,9 +779,8 @@
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>State With</Value>
+                                  <Value>State WH</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1461,7 +1456,6 @@
                                   <Value>Allocation
 Percentage</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1498,7 +1492,6 @@ Percentage</Value>
                                 <TextRun>
                                   <Value>Gross</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1535,7 +1528,6 @@ Percentage</Value>
                                 <TextRun>
                                   <Value>Taxes</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1572,7 +1564,6 @@ Percentage</Value>
                                 <TextRun>
                                   <Value>Deductions</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1609,7 +1600,6 @@ Percentage</Value>
                                 <TextRun>
                                   <Value>Net</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -1646,7 +1636,6 @@ Percentage</Value>
                                 <TextRun>
                                   <Value>State With</Value>
                                   <Style>
-                                    <FontStyle>Italic</FontStyle>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
                                   </Style>
@@ -2196,7 +2185,7 @@ Percentage</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Allocation Group Totals:</Value>
+                                  <Value>Allocation Group Totals</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>
@@ -2721,7 +2710,7 @@ Percentage</Value>
                             <Paragraph>
                               <TextRuns>
                                 <TextRun>
-                                  <Value>Check Totals:</Value>
+                                  <Value>Check Totals</Value>
                                   <Style>
                                     <FontSize>9pt</FontSize>
                                     <FontWeight>Bold</FontWeight>

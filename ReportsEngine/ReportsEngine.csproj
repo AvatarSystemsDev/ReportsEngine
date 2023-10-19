@@ -406,28 +406,40 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Reports\MDReports\ExcelPA_AllocationDecimalList.cs">
+    <Compile Include="ExcelRDAllocation.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\ExcelPA_AllocationDecimalList.Designer.cs">
+    <Compile Include="ExcelRDAllocation.Designer.cs">
+      <DependentUpon>ExcelRDAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RDAllocation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="RDAllocation.Designer.cs">
+      <DependentUpon>RDAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_AllocationDecimalList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_AllocationDecimalList.Designer.cs">
       <DependentUpon>ExcelPA_AllocationDecimalList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\ExcelPA_AllocationRegisterFinalized.cs">
+    <Compile Include="Reports\PAReports\ExcelPA_AllocationRegisterFinalized.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\ExcelPA_AllocationRegisterFinalized.Designer.cs">
+    <Compile Include="Reports\PAReports\ExcelPA_AllocationRegisterFinalized.Designer.cs">
       <DependentUpon>ExcelPA_AllocationRegisterFinalized.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\PA_AllocationDecimalList.cs">
+    <Compile Include="Reports\PAReports\PA_AllocationDecimalList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\PA_AllocationDecimalList.Designer.cs">
+    <Compile Include="Reports\PAReports\PA_AllocationDecimalList.Designer.cs">
       <DependentUpon>PA_AllocationDecimalList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\PA_AllocationRegisterFinalized.cs">
+    <Compile Include="Reports\PAReports\PA_AllocationRegisterFinalized.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\PA_AllocationRegisterFinalized.Designer.cs">
+    <Compile Include="Reports\PAReports\PA_AllocationRegisterFinalized.Designer.cs">
       <DependentUpon>PA_AllocationRegisterFinalized.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\PAReports\ExcelPA_LAR5D.cs">
@@ -610,10 +622,10 @@
     <Compile Include="Reports\MDReports\OwnerLabels.Designer.cs">
       <DependentUpon>OwnerLabels.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\OwnerLabelsByProperty.cs">
+    <Compile Include="Reports\PAReports\OwnerLabelsByProperty.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\OwnerLabelsByProperty.Designer.cs">
+    <Compile Include="Reports\PAReports\OwnerLabelsByProperty.Designer.cs">
       <DependentUpon>OwnerLabelsByProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\OwnerNameAddress.cs">
@@ -1616,16 +1628,22 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reports\MDReports\ExcelPA_AllocationDecimalList.resx">
+    <EmbeddedResource Include="ExcelRDAllocation.resx">
+      <DependentUpon>ExcelRDAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RDAllocation.resx">
+      <DependentUpon>RDAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\ExcelPA_AllocationDecimalList.resx">
       <DependentUpon>ExcelPA_AllocationDecimalList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\ExcelPA_AllocationRegisterFinalized.resx">
+    <EmbeddedResource Include="Reports\PAReports\ExcelPA_AllocationRegisterFinalized.resx">
       <DependentUpon>ExcelPA_AllocationRegisterFinalized.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\PA_AllocationDecimalList.resx">
+    <EmbeddedResource Include="Reports\PAReports\PA_AllocationDecimalList.resx">
       <DependentUpon>PA_AllocationDecimalList.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\PA_AllocationRegisterFinalized.resx">
+    <EmbeddedResource Include="Reports\PAReports\PA_AllocationRegisterFinalized.resx">
       <DependentUpon>PA_AllocationRegisterFinalized.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\ExcelPA_LAR5D.resx">
@@ -1718,7 +1736,7 @@
     <EmbeddedResource Include="Reports\MDReports\OwnerLabels.resx">
       <DependentUpon>OwnerLabels.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\OwnerLabelsByProperty.resx">
+    <EmbeddedResource Include="Reports\PAReports\OwnerLabelsByProperty.resx">
       <DependentUpon>OwnerLabelsByProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\OwnerNameAddress.resx">
