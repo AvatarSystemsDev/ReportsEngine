@@ -193,6 +193,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPA_LAOGP", () => new ExcelPA_LAOGP());
             Reports.Add("PA_LAR5D", () => new PA_LAR5D());
             Reports.Add("ExcelPA_LAR5D", () => new ExcelPA_LAR5D());
+            Reports.Add("PA_AllocationRegisterFinalized", () => new PA_AllocationRegisterFinalized());
+            Reports.Add("ExcelPA_AllocationRegisterFinalized", () => new ExcelPA_AllocationRegisterFinalized());
+            Reports.Add("PA_AllocationDecimalList", () => new PA_AllocationDecimalList());
+            Reports.Add("ExcelPA_AllocationDecimalList", () => new ExcelPA_AllocationDecimalList());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

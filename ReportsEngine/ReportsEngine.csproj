@@ -406,6 +406,30 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\MDReports\ExcelPA_AllocationDecimalList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelPA_AllocationDecimalList.Designer.cs">
+      <DependentUpon>ExcelPA_AllocationDecimalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelPA_AllocationRegisterFinalized.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelPA_AllocationRegisterFinalized.Designer.cs">
+      <DependentUpon>ExcelPA_AllocationRegisterFinalized.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\PA_AllocationDecimalList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\PA_AllocationDecimalList.Designer.cs">
+      <DependentUpon>PA_AllocationDecimalList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\PA_AllocationRegisterFinalized.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\PA_AllocationRegisterFinalized.Designer.cs">
+      <DependentUpon>PA_AllocationRegisterFinalized.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PAReports\ExcelPA_LAR5D.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1592,6 +1616,18 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\MDReports\ExcelPA_AllocationDecimalList.resx">
+      <DependentUpon>ExcelPA_AllocationDecimalList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelPA_AllocationRegisterFinalized.resx">
+      <DependentUpon>ExcelPA_AllocationRegisterFinalized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\PA_AllocationDecimalList.resx">
+      <DependentUpon>PA_AllocationDecimalList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\PA_AllocationRegisterFinalized.resx">
+      <DependentUpon>PA_AllocationRegisterFinalized.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\ExcelPA_LAR5D.resx">
       <DependentUpon>ExcelPA_LAR5D.cs</DependentUpon>
     </EmbeddedResource>
