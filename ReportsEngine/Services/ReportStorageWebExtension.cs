@@ -3,6 +3,7 @@ using DevExpress.XtraReports;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 using ReportsEngine.Reports;
 using System;
 using System.Collections.Generic;
@@ -155,7 +156,7 @@ namespace ReportsEngine.Services
 
             foreach (string parameterName in parameters.AllKeys)
             {
-                if (parameterName == "plngDatabaseID")
+                 if (parameterName == "plngDatabaseID")
                 {
                     DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();
                     string currentDatabaseID = parameters["plngDatabaseID"];
@@ -230,8 +231,19 @@ namespace ReportsEngine.Services
                 }
                 else if (parameterName.Contains("pstrSelect"))
                 {
-                    string[] multivariateParameter = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));
-                    report.Parameters[parameterName].Value = multivariateParameter;
+                    //string[] multivariateParameter = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));
+                    // report.Parameters[parameterName].Value = multivariateParameter;
+                    JToken token = JToken.Parse(parameters.Get(parameterName));
+                    if (token.Type == JTokenType.Array)
+                    {
+                        report.Parameters[parameterName].Value = token.ToObject<string[]>();
+                    }
+                    else
+                    {
+                        // Handle the single token value (whether it's a string, int, or any other simple type)
+                        report.Parameters[parameterName].Value = new string[] { token.ToString() };
+                    }
+
                 }
                 else
                 {

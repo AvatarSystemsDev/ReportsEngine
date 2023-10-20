@@ -676,6 +676,12 @@
     <Compile Include="Reports\PAReports\PA_LAOGP.Designer.cs">
       <DependentUpon>PA_LAOGP.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PAReports\PA_NMC115.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_NMC115.Designer.cs">
+      <DependentUpon>PA_NMC115.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\ProcessReports\ExcelDSGLPostingRegisterByProcess.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1762,6 +1768,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\PA_LAOGP.resx">
       <DependentUpon>PA_LAOGP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\PA_NMC115.resx">
+      <DependentUpon>PA_NMC115.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ProcessReports\ExcelDSGLPostingRegisterByProcess.resx">
       <DependentUpon>ExcelDSGLPostingRegisterByProcess.cs</DependentUpon>
