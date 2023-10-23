@@ -1090,8 +1090,9 @@
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(621.365F, 60.08002F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel4.SizeF = new System.Drawing.SizeF(148.6351F, 41.11835F);
+            this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
             this.xrLabel4.Text = "State\r\nCounty";
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -1107,8 +1108,9 @@
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(586.9175F, 60.08005F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel3.SizeF = new System.Drawing.SizeF(34.44745F, 41.11835F);
+            this.xrLabel3.StylePriority.UsePadding = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
             this.xrLabel3.Text = "Has\r\nRef.";
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -1124,8 +1126,9 @@
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(552.47F, 60.08002F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(34.44745F, 41.11835F);
+            this.xrLabel2.StylePriority.UsePadding = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
             this.xrLabel2.Text = "Is\r\nRef.";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -1141,8 +1144,9 @@
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(477.3244F, 60.08008F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(75.14548F, 41.11835F);
+            this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.Text = "Deck\r\nCode";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -1193,8 +1197,9 @@
             this.Textbox15.LocationFloat = new DevExpress.Utils.PointFloat(278.467F, 60.08002F);
             this.Textbox15.Multiline = true;
             this.Textbox15.Name = "Textbox15";
-            this.Textbox15.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox15.SizeF = new System.Drawing.SizeF(198.8572F, 41.11835F);
+            this.Textbox15.StylePriority.UsePadding = false;
             this.Textbox15.StylePriority.UseTextAlignment = false;
             this.Textbox15.Text = "Deck\r\nDescription";
             this.Textbox15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -1210,8 +1215,9 @@
             this.Textbox5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60.08002F);
             this.Textbox5.Multiline = true;
             this.Textbox5.Name = "Textbox5";
-            this.Textbox5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox5.SizeF = new System.Drawing.SizeF(278.4669F, 41.11835F);
+            this.Textbox5.StylePriority.UsePadding = false;
             this.Textbox5.StylePriority.UseTextAlignment = false;
             this.Textbox5.Text = "Property ";
             this.Textbox5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -2019,8 +2025,9 @@
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 88.75838F);
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel5.SizeF = new System.Drawing.SizeF(278.467F, 41.11835F);
+            this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.Text = "Property ";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -2036,8 +2043,9 @@
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(278.4668F, 88.75838F);
             this.xrLabel6.Multiline = true;
             this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(205.1072F, 41.11835F);
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(198.8574F, 41.11835F);
+            this.xrLabel6.StylePriority.UsePadding = false;
             this.xrLabel6.StylePriority.UseTextAlignment = false;
             this.xrLabel6.Text = "Deck\r\nDescription";
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -2074,6 +2082,7 @@
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             this.xrLabel7.Text = "xrLabel7";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel7.Visible = false;
             // 
             // xrLabel8
             // 
@@ -2085,6 +2094,7 @@
             this.xrLabel8.SizeF = new System.Drawing.SizeF(113.8608F, 22.00996F);
             this.xrLabel8.StylePriority.UseFont = false;
             this.xrLabel8.Text = "For Interest Type: ";
+            this.xrLabel8.Visible = false;
             // 
             // xrPropertiesSelected
             // 
@@ -2120,9 +2130,10 @@
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30.08F);
             this.xrLabel11.Multiline = true;
             this.xrLabel11.Name = "xrLabel11";
-            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel11.SizeF = new System.Drawing.SizeF(768.9604F, 30.00001F);
             this.xrLabel11.StylePriority.UseFont = false;
+            this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.Text = "DOI Deck Information";
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -2139,9 +2150,10 @@
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel12.Multiline = true;
             this.xrLabel12.Name = "xrLabel12";
-            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(768.9604F, 30F);
             this.xrLabel12.StylePriority.UseFont = false;
+            this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel13
@@ -2152,11 +2164,12 @@
             this.xrLabel13.BorderWidth = 1F;
             this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel13.KeepTogether = true;
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(483.574F, 88.75838F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(477.3243F, 88.75838F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
-            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(68.89575F, 41.11835F);
+            this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(75.14548F, 41.11835F);
+            this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.Text = "Deck\r\nCode";
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -2172,8 +2185,9 @@
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(552.4698F, 88.75838F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
-            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel15.SizeF = new System.Drawing.SizeF(34.44745F, 41.11835F);
+            this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             this.xrLabel15.Text = "Is\r\nRef.";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -2189,8 +2203,9 @@
             this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(586.9175F, 88.75838F);
             this.xrLabel19.Multiline = true;
             this.xrLabel19.Name = "xrLabel19";
-            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel19.SizeF = new System.Drawing.SizeF(34.44745F, 41.11835F);
+            this.xrLabel19.StylePriority.UsePadding = false;
             this.xrLabel19.StylePriority.UseTextAlignment = false;
             this.xrLabel19.Text = "Has\r\nRef.";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -2206,8 +2221,9 @@
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(621.365F, 88.75838F);
             this.xrLabel20.Multiline = true;
             this.xrLabel20.Name = "xrLabel20";
-            this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel20.SizeF = new System.Drawing.SizeF(148.6351F, 41.11835F);
+            this.xrLabel20.StylePriority.UsePadding = false;
             this.xrLabel20.StylePriority.UseTextAlignment = false;
             this.xrLabel20.Text = "State\r\nCounty";
             this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
@@ -2254,8 +2270,8 @@
             this.pstrSelectCounty.Type = typeof(int);
             dynamicListLookUpSettings5.DataMember = "CountyLookup";
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
-            dynamicListLookUpSettings5.DisplayMember = "Description";
-            dynamicListLookUpSettings5.FilterString = null;
+            dynamicListLookUpSettings5.DisplayMember = "CountyStateAbbrev";
+            dynamicListLookUpSettings5.FilterString = "[StateID] In (?pstrSelectState)";
             dynamicListLookUpSettings5.SortMember = null;
             dynamicListLookUpSettings5.ValueMember = "ID";
             this.pstrSelectCounty.ValueSourceSettings = dynamicListLookUpSettings5;
@@ -2353,6 +2369,7 @@
             selectNode5.Root = sourceNode5;
             selectNode6.Alias = "Dynamic_CountyLookup";
             sourceNode6.Alias = null;
+            sourceNode6.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"217\" />";
             source6.DataMember = "CountyLookup";
             source6.DataSource = this.Dynamic;
             source6.Name = "Dynamic_CountyLookup";
@@ -2363,7 +2380,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "Description"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "StateID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "State"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "StateName")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "StateName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CountyStateAbbrev")});
             selectNode6.Root = sourceNode6;
             selectNode7.Alias = "Pulse_Master_UserRecord";
             sourceNode7.Alias = null;
@@ -2448,8 +2466,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCounty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectState, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCounty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowExemptDOITotals, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -2464,8 +2482,8 @@
             this.pstrBeginningPropertyNumber,
             this.pstrEndingPropertyNumber,
             this.pstrSelectProperty,
-            this.pstrSelectCounty,
             this.pstrSelectState,
+            this.pstrSelectCounty,
             this.Subtitle,
             this.plngShowActive,
             this.pbooShowExemptDOITotals,

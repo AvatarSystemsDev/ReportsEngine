@@ -430,6 +430,12 @@
     <Compile Include="Reports\PAReports\ExcelPA_AllocationRegisterFinalized.Designer.cs">
       <DependentUpon>ExcelPA_AllocationRegisterFinalized.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_NMC115.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_NMC115.Designer.cs">
+      <DependentUpon>ExcelPA_NMC115.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PAReports\PA_AllocationDecimalList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1645,6 +1651,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\ExcelPA_AllocationRegisterFinalized.resx">
       <DependentUpon>ExcelPA_AllocationRegisterFinalized.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\ExcelPA_NMC115.resx">
+      <DependentUpon>ExcelPA_NMC115.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\PA_AllocationDecimalList.resx">
       <DependentUpon>PA_AllocationDecimalList.cs</DependentUpon>

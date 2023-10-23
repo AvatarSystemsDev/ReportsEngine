@@ -197,6 +197,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPA_AllocationRegisterFinalized", () => new ExcelPA_AllocationRegisterFinalized());
             Reports.Add("PA_AllocationDecimalList", () => new PA_AllocationDecimalList());
             Reports.Add("ExcelPA_AllocationDecimalList", () => new ExcelPA_AllocationDecimalList());
+            Reports.Add("PA_NMC115", () => new PA_NMC115());
+            Reports.Add("ExcelPA_NMC115", () => new ExcelPA_NMC115());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

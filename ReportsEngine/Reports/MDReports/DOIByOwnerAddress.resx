@@ -127,12 +127,12 @@
     <value>Iif([InterestTypeCode]='W','WI' ,Iif([InterestTypeCode] = 'R','RI' ,Iif([InterestTypeCode] = 'O','OR' , Iif([InterestTypeCode] = 'S','SR' , Iif([InterestTypeCode] = 'F','FR' ,Iif([InterestTypeCode] = 'X','OT' , ''))))))
 </value>
   </data>
-  <data name="xrLabel14.ExpressionBindings" xml:space="preserve">
+  <data name="xrOwnersSelected.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningOwnerNumber = '!', iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', 'Selected Owners', 'First Owner to ' + ?pstrEndingOwnerNumber), iif(?pstrEndingOwnerNumber = 'ZZZZZZZZZZ', ?pstrBeginningOwnerNumber + ' to Last Owner', ?pstrBeginningOwnerNumber + ' to ' + ?pstrEndingOwnerNumber))
 
 </value>
   </data>
-  <data name="xrLabel11.ExpressionBindings" xml:space="preserve">
+  <data name="xrPropertiesSelected.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
 
 </value>
