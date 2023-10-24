@@ -199,6 +199,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPA_AllocationDecimalList", () => new ExcelPA_AllocationDecimalList());
             Reports.Add("PA_NMC115", () => new PA_NMC115());
             Reports.Add("ExcelPA_NMC115", () => new ExcelPA_NMC115());
+            Reports.Add("JIBInvoices", () => new JIBInvoices());
+            Reports.Add("ExcelJIBInvoices", () => new ExcelJIBInvoices());
+            Reports.Add("JIBStatement", () => new JIBStatement());
+            Reports.Add("ExcelJIBStatement", () => new ExcelJIBStatement());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

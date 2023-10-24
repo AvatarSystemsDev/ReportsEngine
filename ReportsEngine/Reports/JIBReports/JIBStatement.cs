@@ -4,11 +4,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace ReportsEngine
+namespace ReportsEngine.Reports.JIBReports
 {
-    public partial class ExcelRDAllocation : DevExpress.XtraReports.UI.XtraReport
+    public partial class JIBStatement : DevExpress.XtraReports.UI.XtraReport
     {
-        public ExcelRDAllocation()
+        public JIBStatement()
         {
             InitializeComponent();
         }

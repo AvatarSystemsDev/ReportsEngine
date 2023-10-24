@@ -406,17 +406,35 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcelRDAllocation.cs">
+    <Compile Include="Reports\JIBReports\ExcelJIBInvoices.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExcelRDAllocation.Designer.cs">
-      <DependentUpon>ExcelRDAllocation.cs</DependentUpon>
+    <Compile Include="Reports\JIBReports\ExcelJIBInvoices.Designer.cs">
+      <DependentUpon>ExcelJIBInvoices.cs</DependentUpon>
     </Compile>
-    <Compile Include="RDAllocation.cs">
+    <Compile Include="Reports\JIBReports\ExcelJIBStatement.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="RDAllocation.Designer.cs">
-      <DependentUpon>RDAllocation.cs</DependentUpon>
+    <Compile Include="Reports\JIBReports\ExcelJIBStatement.Designer.cs">
+      <DependentUpon>ExcelJIBStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBInvoices.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBInvoices.Designer.cs">
+      <DependentUpon>JIBInvoices.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBStatement.Designer.cs">
+      <DependentUpon>JIBStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBStatementDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBStatementDetail.Designer.cs">
+      <DependentUpon>JIBStatementDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\PAReports\ExcelPA_AllocationDecimalList.cs">
       <SubType>Component</SubType>
@@ -1640,11 +1658,20 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ExcelRDAllocation.resx">
-      <DependentUpon>ExcelRDAllocation.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBInvoices.resx">
+      <DependentUpon>ExcelJIBInvoices.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RDAllocation.resx">
-      <DependentUpon>RDAllocation.cs</DependentUpon>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBStatement.resx">
+      <DependentUpon>ExcelJIBStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBInvoices.resx">
+      <DependentUpon>JIBInvoices.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBStatement.resx">
+      <DependentUpon>JIBStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBStatementDetail.resx">
+      <DependentUpon>JIBStatementDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\ExcelPA_AllocationDecimalList.resx">
       <DependentUpon>ExcelPA_AllocationDecimalList.cs</DependentUpon>
