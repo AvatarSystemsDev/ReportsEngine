@@ -203,6 +203,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBInvoices", () => new ExcelJIBInvoices());
             Reports.Add("JIBStatement", () => new JIBStatement());
             Reports.Add("ExcelJIBStatement", () => new ExcelJIBStatement());
+            Reports.Add("JIBGLPostingRegister", () => new JIBGLPostingRegister());
+            Reports.Add("ExcelJIBGLPostingRegister", () => new ExcelJIBGLPostingRegister());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

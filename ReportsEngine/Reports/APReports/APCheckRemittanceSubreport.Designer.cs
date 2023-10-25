@@ -396,7 +396,7 @@
             this.Line1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
             this.Line1.ForeColor = System.Drawing.Color.Black;
-            this.Line1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 29.03999F);
+            this.Line1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 26.03999F);
             this.Line1.Name = "Line1";
             this.Line1.Shape = shapeLine1;
             this.Line1.SizeF = new System.Drawing.SizeF(784.9F, 2F);
@@ -476,7 +476,7 @@
             this.Textbox10,
             this.Textbox11,
             this.Textbox7});
-            this.PageHeader.HeightF = 34.16667F;
+            this.PageHeader.HeightF = 29.58334F;
             this.PageHeader.Name = "PageHeader";
             // 
             // groupHeaderBand1

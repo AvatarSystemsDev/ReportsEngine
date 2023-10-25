@@ -436,6 +436,12 @@
     <Compile Include="Reports\JIBReports\JIBStatementDetail.Designer.cs">
       <DependentUpon>JIBStatementDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\JIBReports\JIBStatementFooter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBStatementFooter.Designer.cs">
+      <DependentUpon>JIBStatementFooter.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PAReports\ExcelPA_AllocationDecimalList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -718,6 +724,12 @@
     <Compile Include="Reports\ProcessReports\GLPostingRegisterByProcess.Designer.cs">
       <DependentUpon>GLPostingRegisterByProcess.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelJIBGLPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelJIBGLPostingRegister.Designer.cs">
+      <DependentUpon>ExcelJIBGLPostingRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDNoCrossRefList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -729,6 +741,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDSuspenseReleaseChecks.Designer.cs">
       <DependentUpon>ExcelRDSuspenseReleaseChecks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\JIBGLPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\JIBGLPostingRegister.Designer.cs">
+      <DependentUpon>JIBGLPostingRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDNoCrossRefList.cs">
       <SubType>Component</SubType>
@@ -1673,6 +1691,9 @@
     <EmbeddedResource Include="Reports\JIBReports\JIBStatementDetail.resx">
       <DependentUpon>JIBStatementDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBStatementFooter.resx">
+      <DependentUpon>JIBStatementFooter.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\ExcelPA_AllocationDecimalList.resx">
       <DependentUpon>ExcelPA_AllocationDecimalList.cs</DependentUpon>
     </EmbeddedResource>
@@ -1814,11 +1835,17 @@
     <EmbeddedResource Include="Reports\ProcessReports\GLPostingRegisterByProcess.resx">
       <DependentUpon>GLPostingRegisterByProcess.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelJIBGLPostingRegister.resx">
+      <DependentUpon>ExcelJIBGLPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDNoCrossRefList.resx">
       <DependentUpon>ExcelRDNoCrossRefList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDSuspenseReleaseChecks.resx">
       <DependentUpon>ExcelRDSuspenseReleaseChecks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\JIBGLPostingRegister.resx">
+      <DependentUpon>JIBGLPostingRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDNoCrossRefList.resx">
       <DependentUpon>RDNoCrossRefList.cs</DependentUpon>

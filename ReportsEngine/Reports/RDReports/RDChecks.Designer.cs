@@ -343,8 +343,8 @@
             this.Textbox5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox5.BorderWidth = 1F;
             this.Textbox5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>CHECK " +
-                    "#:</b><br>\' + [CheckNumber] + \'</span>\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>CHECK:" +
+                    "</b><br>\' + [CheckNumber] + \'</span>\'")});
             this.Textbox5.KeepTogether = true;
             this.Textbox5.LocationFloat = new DevExpress.Utils.PointFloat(127.43F, 3.490003F);
             this.Textbox5.Name = "Textbox5";
