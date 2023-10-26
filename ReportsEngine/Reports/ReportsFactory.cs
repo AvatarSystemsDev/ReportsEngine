@@ -205,6 +205,11 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBStatement", () => new ExcelJIBStatement());
             Reports.Add("JIBGLPostingRegister", () => new JIBGLPostingRegister());
             Reports.Add("ExcelJIBGLPostingRegister", () => new ExcelJIBGLPostingRegister());
+            Reports.Add("JIBCompanyRecap", () => new JIBCompanyRecap());
+            Reports.Add("ExcelJIBCompanyRecap", () => new ExcelJIBCompanyRecap());
+            Reports.Add("JIBPropertyExpenseDistribution", () => new JIBPropertyExpenseDistribution());
+            Reports.Add("ExcelJIBPropertyExpenseDistribution", () => new ExcelJIBPropertyExpenseDistribution());
+            
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

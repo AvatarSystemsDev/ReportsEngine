@@ -412,6 +412,12 @@
     <Compile Include="Reports\JIBReports\ExcelJIBInvoices.Designer.cs">
       <DependentUpon>ExcelJIBInvoices.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBPropertyExpenseDistributionSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBPropertyExpenseDistributionSubreport.Designer.cs">
+      <DependentUpon>ExcelJIBPropertyExpenseDistributionSubreport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBStatement.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -724,11 +730,23 @@
     <Compile Include="Reports\ProcessReports\GLPostingRegisterByProcess.Designer.cs">
       <DependentUpon>GLPostingRegisterByProcess.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\RDReports\ExcelJIBGLPostingRegister.cs">
+    <Compile Include="Reports\JIBReports\ExcelJIBCompanyRecap.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\RDReports\ExcelJIBGLPostingRegister.Designer.cs">
+    <Compile Include="Reports\JIBReports\ExcelJIBCompanyRecap.Designer.cs">
+      <DependentUpon>ExcelJIBCompanyRecap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBGLPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBGLPostingRegister.Designer.cs">
       <DependentUpon>ExcelJIBGLPostingRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBPropertyExpenseDistribution.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBPropertyExpenseDistribution.Designer.cs">
+      <DependentUpon>ExcelJIBPropertyExpenseDistribution.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDNoCrossRefList.cs">
       <SubType>Component</SubType>
@@ -742,11 +760,29 @@
     <Compile Include="Reports\RDReports\ExcelRDSuspenseReleaseChecks.Designer.cs">
       <DependentUpon>ExcelRDSuspenseReleaseChecks.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\RDReports\JIBGLPostingRegister.cs">
+    <Compile Include="Reports\JIBReports\JIBCompanyRecap.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\RDReports\JIBGLPostingRegister.Designer.cs">
+    <Compile Include="Reports\JIBReports\JIBCompanyRecap.Designer.cs">
+      <DependentUpon>JIBCompanyRecap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBGLPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBGLPostingRegister.Designer.cs">
       <DependentUpon>JIBGLPostingRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBPropertyExpenseDistribution.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBPropertyExpenseDistribution.Designer.cs">
+      <DependentUpon>JIBPropertyExpenseDistribution.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\PropertyExpenseDistEnding.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\PropertyExpenseDistEnding.Designer.cs">
+      <DependentUpon>PropertyExpenseDistEnding.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDNoCrossRefList.cs">
       <SubType>Component</SubType>
@@ -1679,6 +1715,9 @@
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBInvoices.resx">
       <DependentUpon>ExcelJIBInvoices.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBPropertyExpenseDistributionSubreport.resx">
+      <DependentUpon>ExcelJIBPropertyExpenseDistributionSubreport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBStatement.resx">
       <DependentUpon>ExcelJIBStatement.cs</DependentUpon>
     </EmbeddedResource>
@@ -1835,8 +1874,14 @@
     <EmbeddedResource Include="Reports\ProcessReports\GLPostingRegisterByProcess.resx">
       <DependentUpon>GLPostingRegisterByProcess.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RDReports\ExcelJIBGLPostingRegister.resx">
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBCompanyRecap.resx">
+      <DependentUpon>ExcelJIBCompanyRecap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBGLPostingRegister.resx">
       <DependentUpon>ExcelJIBGLPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBPropertyExpenseDistribution.resx">
+      <DependentUpon>ExcelJIBPropertyExpenseDistribution.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDNoCrossRefList.resx">
       <DependentUpon>ExcelRDNoCrossRefList.cs</DependentUpon>
@@ -1844,8 +1889,17 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelRDSuspenseReleaseChecks.resx">
       <DependentUpon>ExcelRDSuspenseReleaseChecks.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RDReports\JIBGLPostingRegister.resx">
+    <EmbeddedResource Include="Reports\JIBReports\JIBCompanyRecap.resx">
+      <DependentUpon>JIBCompanyRecap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBGLPostingRegister.resx">
       <DependentUpon>JIBGLPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBPropertyExpenseDistribution.resx">
+      <DependentUpon>JIBPropertyExpenseDistribution.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\PropertyExpenseDistEnding.resx">
+      <DependentUpon>PropertyExpenseDistEnding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDNoCrossRefList.resx">
       <DependentUpon>RDNoCrossRefList.cs</DependentUpon>

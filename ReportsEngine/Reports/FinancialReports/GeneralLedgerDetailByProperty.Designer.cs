@@ -358,7 +358,7 @@
             this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooShowYearEnd = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowYearEndClosingEntries = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngBeginningBatch = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngEndingBatch = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
@@ -430,7 +430,7 @@
             queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngEndingBatch", typeof(int));
             queryParameter20.Name = "@pbooShowYearEndClosingEntries";
             queryParameter20.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter20.Value = new DevExpress.DataAccess.Expression("?pbooShowYearEnd", typeof(bool));
+            queryParameter20.Value = new DevExpress.DataAccess.Expression("?pbooShowYearEndClosingEntries", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -723,7 +723,7 @@
             this.xrLabel6.CanGrow = false;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not [IsBBF]\n"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BatchNumber]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BatchID]")});
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel6.ForeColor = System.Drawing.Color.Black;
             this.xrLabel6.KeepTogether = true;
@@ -3781,12 +3781,12 @@
             dynamicListLookUpSettings17.ValueMember = "Number";
             this.pstrSelectAccountingCenter.ValueSourceSettings = dynamicListLookUpSettings17;
             // 
-            // pbooShowYearEnd
+            // pbooShowYearEndClosingEntries
             // 
-            this.pbooShowYearEnd.Description = "Show Year End";
-            this.pbooShowYearEnd.Name = "pbooShowYearEnd";
-            this.pbooShowYearEnd.Type = typeof(bool);
-            this.pbooShowYearEnd.ValueInfo = "False";
+            this.pbooShowYearEndClosingEntries.Description = "Show Year End";
+            this.pbooShowYearEndClosingEntries.Name = "pbooShowYearEndClosingEntries";
+            this.pbooShowYearEndClosingEntries.Type = typeof(bool);
+            this.pbooShowYearEndClosingEntries.ValueInfo = "False";
             // 
             // plngBeginningBatch
             // 
@@ -4082,7 +4082,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter1, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngOperatorsToShow, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEnd, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClosingEntries, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
@@ -4114,7 +4114,7 @@
             this.pstrSelectBatch,
             this.parameter1,
             this.plngOperatorsToShow,
-            this.pbooShowYearEnd,
+            this.pbooShowYearEndClosingEntries,
             this.pbooShowCriteria});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
@@ -4255,7 +4255,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
         private DevExpress.XtraReports.UI.XRLabel xrLabel42;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
-        private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEnd;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEndClosingEntries;
         private DevExpress.XtraReports.Parameters.Parameter plngBeginningBatch;
         private DevExpress.XtraReports.Parameters.Parameter plngEndingBatch;
         private DevExpress.XtraReports.UI.XRLabel xrBatchesSelected;
