@@ -2134,7 +2134,7 @@
             this.xrLabel11.SizeF = new System.Drawing.SizeF(768.9604F, 30.00001F);
             this.xrLabel11.StylePriority.UseFont = false;
             this.xrLabel11.StylePriority.UsePadding = false;
-            this.xrLabel11.Text = "DOI Deck Information";
+            this.xrLabel11.Text = "DOI Information";
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel12

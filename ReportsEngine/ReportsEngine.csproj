@@ -406,6 +406,24 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\FinancialReports\ComparativeOperatingStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ComparativeOperatingStatement.Designer.cs">
+      <DependentUpon>ComparativeOperatingStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelComparativeOperatingStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelComparativeOperatingStatement.Designer.cs">
+      <DependentUpon>ExcelComparativeOperatingStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBClearedItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBClearedItems.Designer.cs">
+      <DependentUpon>ExcelJIBClearedItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBInvoices.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -423,6 +441,12 @@
     </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBStatement.Designer.cs">
       <DependentUpon>ExcelJIBStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBClearedItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBClearedItems.Designer.cs">
+      <DependentUpon>JIBClearedItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\JIBReports\JIBInvoices.cs">
       <SubType>Component</SubType>
@@ -1712,6 +1736,15 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\FinancialReports\ComparativeOperatingStatement.resx">
+      <DependentUpon>ComparativeOperatingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelComparativeOperatingStatement.resx">
+      <DependentUpon>ExcelComparativeOperatingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBClearedItems.resx">
+      <DependentUpon>ExcelJIBClearedItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBInvoices.resx">
       <DependentUpon>ExcelJIBInvoices.cs</DependentUpon>
     </EmbeddedResource>
@@ -1720,6 +1753,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBStatement.resx">
       <DependentUpon>ExcelJIBStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBClearedItems.resx">
+      <DependentUpon>JIBClearedItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\JIBInvoices.resx">
       <DependentUpon>JIBInvoices.cs</DependentUpon>

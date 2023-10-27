@@ -209,7 +209,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBCompanyRecap", () => new ExcelJIBCompanyRecap());
             Reports.Add("JIBPropertyExpenseDistribution", () => new JIBPropertyExpenseDistribution());
             Reports.Add("ExcelJIBPropertyExpenseDistribution", () => new ExcelJIBPropertyExpenseDistribution());
-            
+            Reports.Add("JIBClearedItems", () => new JIBClearedItems());
+            Reports.Add("ExcelJIBClearedItems", () => new ExcelJIBClearedItems());
+            Reports.Add("ComparativeOperatingStatement", () => new ComparativeOperatingStatement());
+            Reports.Add("ExcelComparativeOperatingStatement", () => new ExcelComparativeOperatingStatement());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
