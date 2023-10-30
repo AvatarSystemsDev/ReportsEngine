@@ -213,6 +213,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBClearedItems", () => new ExcelJIBClearedItems());
             Reports.Add("ComparativeOperatingStatement", () => new ComparativeOperatingStatement());
             Reports.Add("ExcelComparativeOperatingStatement", () => new ExcelComparativeOperatingStatement());
+            Reports.Add("NetComparativeOperatingStatement", () => new NetComparativeOperatingStatement());
+            Reports.Add("ExcelNetComparativeOperatingStatement", () => new ExcelNetComparativeOperatingStatement());
+            Reports.Add("RDOwnerLevelEntry", () => new RDOwnerLevelEntry());
+            Reports.Add("ExcelRDOwnerLevelEntry", () => new ExcelRDOwnerLevelEntry());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

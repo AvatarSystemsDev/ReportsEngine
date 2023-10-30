@@ -418,6 +418,24 @@
     <Compile Include="Reports\FinancialReports\ExcelComparativeOperatingStatement.Designer.cs">
       <DependentUpon>ExcelComparativeOperatingStatement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelNetComparativeOperatingStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelNetComparativeOperatingStatement.Designer.cs">
+      <DependentUpon>ExcelNetComparativeOperatingStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelRDOwnerLevelEntry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelRDOwnerLevelEntry.Designer.cs">
+      <DependentUpon>ExcelRDOwnerLevelEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\RDOwnerLevelEntry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\RDOwnerLevelEntry.Designer.cs">
+      <DependentUpon>RDOwnerLevelEntry.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBClearedItems.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1741,6 +1759,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelComparativeOperatingStatement.resx">
       <DependentUpon>ExcelComparativeOperatingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelNetComparativeOperatingStatement.resx">
+      <DependentUpon>ExcelNetComparativeOperatingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelRDOwnerLevelEntry.resx">
+      <DependentUpon>ExcelRDOwnerLevelEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\RDOwnerLevelEntry.resx">
+      <DependentUpon>RDOwnerLevelEntry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBClearedItems.resx">
       <DependentUpon>ExcelJIBClearedItems.cs</DependentUpon>

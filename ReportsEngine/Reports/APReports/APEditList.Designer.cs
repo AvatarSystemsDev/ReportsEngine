@@ -1672,11 +1672,11 @@
             this.xrLabel22.BorderWidth = 1F;
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel22.KeepTogether = true;
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(1010.309F, 0.0003814697F);
+            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(1010.31F, 0.0003814697F);
             this.xrLabel22.Multiline = true;
             this.xrLabel22.Name = "xrLabel22";
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel22.SizeF = new System.Drawing.SizeF(70.83484F, 42.77973F);
+            this.xrLabel22.SizeF = new System.Drawing.SizeF(70.8338F, 42.77973F);
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.Text = "\r\nDeck Code";
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -1710,7 +1710,7 @@
             this.xrLabel25.Multiline = true;
             this.xrLabel25.Name = "xrLabel25";
             this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel25.SizeF = new System.Drawing.SizeF(65.61603F, 42.77973F);
+            this.xrLabel25.SizeF = new System.Drawing.SizeF(65.61633F, 42.77973F);
             this.xrLabel25.StylePriority.UsePadding = false;
             this.xrLabel25.Text = "\r\nDOI Date";
             this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
