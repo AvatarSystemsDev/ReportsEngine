@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>SELECT --ExemptAmounts.*,
+		RDEntryItem.ID AS RDEntryItemID,
+		ROW_NUMBER() OVER(PARTITION BY RDEntryItem.ID ORDER BY RDEntryItem.ID) AS RowNumber, -- I need to only sum the first row 
+		ISNULL(RDEntryItemDeduct.TaxTypeCodeID, 1) AS TaxTypeCodeID,
+		Product.Code AS ProductType, 
+		Product.UseMCFVolume, 
+		RDEntryItem.The88Barrels, 
+		RDEntryItem.The88MCF, 
+		RDEntryItem.The88Gross, 
+		RDEntryItem.The88Net,
+		RDEntryItem.EnteredBarrels, 
+		RDEntryItem.EnteredMCF, 
+		RDEntryItem.EnteredGross, 
+		RDEntryItem.EnteredNet,
+		ISNULL(TaxTypeCode.Description, RDEntryItemDeduct.Description) AS TaxDescription, 
+		RDEntryItemDeduct.The88Amount AS The88Taxes, 
+		RDEntryItemDeduct.EnteredAmount AS EnteredTaxes,
+		CountyView.CountyName AS PhaseWellCounty, 
+		CountyView.State AS PhaseWellState, 
+		CountyView.StateName AS PhaseWellStateName, 
+		DOIDeckCode.Number AS DOIDeckCodeNumber,
+		DOIDeckCode.Description AS DOIDeckCodeDescription,
+		ISNULL(TaxDistrict.Number, '') AS TaxDistrictNumber,
+
+		ISNULL(ExemptOtherCharges.OtherChargeExempt88Amount, 0) AS OtherChargeExempt88Amount,
+		ISNULL(ExemptOtherCharges.OtherChargeExemptNetAmount, 0) AS OtherChargeExemptNetAmount,
+
+		ISNULL(ExemptAmounts.StateExempt88Amount, 0) AS StateExempt88Amount,
+		ISNULL(ExemptAmounts.StateExemptNetAmount, 0) AS StateExemptNetAmount,
+		ISNULL(ExemptAmounts.FederalExempt88Amount, 0) AS FederalExempt88Amount,
+		ISNULL(ExemptAmounts.FederalExemptNetAmount, 0) AS FederalExemptNetAmount,
+		ISNULL(ExemptAmounts.TaxFree88Amount, 0) AS TaxFree88Amount,
+		ISNULL(ExemptAmounts.TaxFreeNetAmount, 0) AS TaxFreeNetAmount,
+
+		--TODO: Return zero for these exemption amounts until we are able to calculate.
+		0 AS ScalingFactorExempt88Amount,
+		0 AS ScalingFactorExemptNetAmount
+
+	FROM RDEntryItem
+	INNER JOIN RDEntry
+	ON RDEntryItem.RDEntryID = RDEntry.ID
+	INNER JOIN RDProcessTracking
+	ON RDEntryItem.RDProcessTrackingID = RDProcessTracking.ID
+
+	INNER JOIN PhaseWell
+	ON RDEntryItem.PhaseWellID = PhaseWell.ID
+	INNER JOIN Property
+	ON PhaseWell.PropertyID = Property.ID
+
+	INNER JOIN CountyView
+	ON PhaseWell.CountyMasterID = CountyView.ID
+
+	INNER JOIN Product
+	ON RDEntryItem.ProductID = Product.ID
+
+	LEFT JOIN RDEntryItemDeduct
+	ON RDEntryItem.ID = RDEntryItemDeduct.RDEntryItemID
+	LEFT JOIN RevenueDeductionCode
+	ON RDEntryItemDeduct.RevenueDeductionCodeID = RevenueDeductionCode.ID
+	LEFT JOIN TaxTypeCode
+	ON RDEntryItemDeduct.TaxTypeCodeID = TaxTypeCode.ID
+
+	LEFT JOIN NameBase AS Purchasers
+	ON RDEntry.PurchaserID = Purchasers.ID
+
+	LEFT JOIN DOIHeader
+	ON RDEntryItem.DOIHeaderID = DOIHeader.ID
+	LEFT JOIN DOIDeckCode
+	ON DOIHeader.DOIDeckCodeID = DOIDeckCode.ID
+
+	LEFT JOIN PhaseWellStatus
+	ON PhaseWell.ID = PhaseWellStatus.PhaseWellID
+		AND RDProcessTracking.CompanyID = PhaseWellStatus.CompanyID
+	LEFT JOIN TaxDistrict
+	ON PhaseWellStatus.TaxDistrictID = TaxDistrict.ID
+
+	LEFT JOIN (
+		SELECT RDEntryItemDeduct.RDEntryItemID,
+			SUM(RDEntryItemDeduct.The88Amount) AS OtherChargeExempt88Amount,
+			SUM(RDEntryItemDeduct.EnteredAmount) AS OtherChargeExemptNetAmount
+		FROM RDEntryItemDeduct
+		INNER JOIN RevenueDeductionCode
+		ON RDEntryItemDeduct.RevenueDeductionCodeID = RevenueDeductionCode.ID
+		WHERE RDEntryItemDeduct.IsTaxExempt &lt;&gt; 0
+			AND RevenueDeductionCode.RDDeductionTypeCodeID = 2
+		GROUP BY RDEntryItemDeduct.RDEntryItemID
+	) AS ExemptOtherCharges
+	ON RDEntryItem.ID = ExemptOtherCharges.RDEntryItemID
+
+	LEFT JOIN (
+		SELECT RDDistributionItem.RDEntryItemID,
+			SUM(CASE WHEN RDDistributionItem.IsTaxFree &lt;&gt; 0 AND RDDistributionItem.InterestTypeID NOT IN (12, 13) THEN RDDistributionItem.OwnerTaxableValue ELSE 0 END) AS TaxFree88Amount,
+			SUM(CASE WHEN RDDistributionItem.IsTaxFree &lt;&gt; 0 AND RDDistributionItem.InterestTypeID NOT IN (12, 13) AND RDDistributionItem.IsDeletedInterest = 0 THEN RDDistributionItem.OwnerTaxableValue ELSE 0 END) AS TaxFreeNetAmount,
+			--State Exempt.
+			SUM(CASE WHEN RDDistributionItem.InterestTypeID = 12 THEN RDDistributionItem.OwnerTaxableValue ELSE 0 END) AS StateExempt88Amount,
+			SUM(CASE WHEN RDDistributionItem.InterestTypeID = 12 AND RDDistributionItem.IsDeletedInterest = 0 THEN RDDistributionItem.OwnerTaxableValue ELSE 0 END) AS StateExemptNetAmount, 
+			--Federal Exempt.
+			SUM(CASE WHEN RDDistributionItem.InterestTypeID = 13 THEN RDDistributionItem.OwnerTaxableValue ELSE 0 END) AS FederalExempt88Amount,
+			SUM(CASE WHEN RDDistributionItem.InterestTypeID = 13 AND RDDistributionItem.IsDeletedInterest = 0 THEN RDDistributionItem.OwnerTaxableValue ELSE 0 END) AS FederalExemptNetAmount 
+		FROM RDDistributionItem
+		GROUP BY RDDistributionItem.RDEntryItemID
+	) AS ExemptAmounts
+	ON RDEntryItem.ID = ExemptAmounts.RDEntryItemID
+	
+	WHERE RDEntryItem.WillCalculateProductionTax &lt;&gt; 0
+		AND RDEntryItemDeduct.IsCalculatedEntry &lt;&gt; 0
+		AND RevenueDeductionCode.RDDeductionTypeCodeID = 1
+		AND RDEntryItem.RDProcessTrackingID = @plngRDProcessTrackingID
+		AND PhaseWell.PropertyAndWellNumber BETWEEN @pstrBeginningPropertyNumber AND @pstrEndingPropertyNumber
+		AND ((RDEntryItem.ID = @plngRDEntryItem) OR @plngRDEntryItem = 0)
+ORDER BY CountyView.StateName, Property.Number, PhaseWell.Number, RDEntryItem.SaleDate, Product.Description</value>
+  </data>
+  <data name="Dynamic.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iRHluYW1pYyI+PFZpZXcgTmFtZT0iRFNSRFByb2R1Y3Rpb25UYXhEZXRhaWwiPjxGaWVsZCBOYW1lPSJSREVudHJ5SXRlbUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iUm93TnVtYmVyIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iVGF4VHlwZUNvZGVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlByb2Nlc3NpbmdEYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iUGhhc2VXZWxsSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJQaGFzZVdlbGxOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUGhhc2VXZWxsTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQdXJjaGFzZXJOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHVyY2hhc2VyTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQcm9kdWN0VHlwZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJVc2VNQ0ZWb2x1bWUiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IlNhbGVEYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iVGhlODhCYXJyZWxzIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJUaGU4OE1DRiIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVGhlODhHcm9zcyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVGhlODhOZXQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkVudGVyZWRCYXJyZWxzIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJFbnRlcmVkTUNGIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJFbnRlcmVkR3Jvc3MiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkVudGVyZWROZXQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlRheERlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRoZTg4VGF4ZXMiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkVudGVyZWRUYXhlcyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUGhhc2VXZWxsQ291bnR5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBoYXNlV2VsbFN0YXRlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBoYXNlV2VsbFN0YXRlTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJET0lEZWNrQ29kZU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJET0lEZWNrQ29kZURlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRheERpc3RyaWN0TnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik90aGVyQ2hhcmdlRXhlbXB0ODhBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik90aGVyQ2hhcmdlRXhlbXB0TmV0QW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTdGF0ZUV4ZW1wdDg4QW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTdGF0ZUV4ZW1wdE5ldEFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRmVkZXJhbEV4ZW1wdDg4QW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJGZWRlcmFsRXhlbXB0TmV0QW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJUYXhGcmVlODhBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlRheEZyZWVOZXRBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlNjYWxpbmdGYWN0b3JFeGVtcHQ4OEFtb3VudCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlNjYWxpbmdGYWN0b3JFeGVtcHROZXRBbW91bnQiIFR5cGU9IkludDMyIiAvPjwvVmlldz48VmlldyBOYW1lPSJUYXhEZXRhaWxWYWx1ZXMiPjxGaWVsZCBOYW1lPSJSREVudHJ5SXRlbUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iUm93TnVtYmVyIiBUeXBlPSJJbnQ2NCIgLz48RmllbGQgTmFtZT0iVGF4VHlwZUNvZGVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlByb2R1Y3RUeXBlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlVzZU1DRlZvbHVtZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iVGhlODhCYXJyZWxzIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJUaGU4OE1DRiIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVGhlODhHcm9zcyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iVGhlODhOZXQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkVudGVyZWRCYXJyZWxzIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJFbnRlcmVkTUNGIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJFbnRlcmVkR3Jvc3MiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkVudGVyZWROZXQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlRheERlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRoZTg4VGF4ZXMiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkVudGVyZWRUYXhlcyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUGhhc2VXZWxsQ291bnR5IiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBoYXNlV2VsbFN0YXRlIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlBoYXNlV2VsbFN0YXRlTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJET0lEZWNrQ29kZU51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJET0lEZWNrQ29kZURlc2NyaXB0aW9uIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlRheERpc3RyaWN0TnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik90aGVyQ2hhcmdlRXhlbXB0ODhBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik90aGVyQ2hhcmdlRXhlbXB0TmV0QW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTdGF0ZUV4ZW1wdDg4QW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTdGF0ZUV4ZW1wdE5ldEFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRmVkZXJhbEV4ZW1wdDg4QW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJGZWRlcmFsRXhlbXB0TmV0QW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJUYXhGcmVlODhBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlRheEZyZWVOZXRBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlNjYWxpbmdGYWN0b3JFeGVtcHQ4OEFtb3VudCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlNjYWxpbmdGYWN0b3JFeGVtcHROZXRBbW91bnQiIFR5cGU9IkludDMyIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
+</root>

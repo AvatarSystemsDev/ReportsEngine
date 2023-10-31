@@ -217,6 +217,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelNetComparativeOperatingStatement", () => new ExcelNetComparativeOperatingStatement());
             Reports.Add("RDOwnerLevelEntry", () => new RDOwnerLevelEntry());
             Reports.Add("ExcelRDOwnerLevelEntry", () => new ExcelRDOwnerLevelEntry());
+            Reports.Add("LeaseOperatingStatement", () => new LeaseOperatingStatement());
+            Reports.Add("ExcelLeaseOperatingStatement", () => new ExcelLeaseOperatingStatement());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
