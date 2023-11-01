@@ -42,6 +42,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JIBInvoices));
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
@@ -53,6 +55,9 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -192,11 +197,19 @@
             queryParameter8,
             queryParameter9});
             storedProcQuery4.StoredProcName = "Report_JIBInvoices";
+            storedProcQuery5.Name = "DSInvoiceNumberLookup";
+            queryParameter10.Name = "@plngJIBProcessTrackingID";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngJIBProcessTrackingID", typeof(int));
+            storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter10});
+            storedProcQuery5.StoredProcName = "JIBInvoiceNumbers_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
             storedProcQuery2,
             storedProcQuery3,
-            storedProcQuery4});
+            storedProcQuery4,
+            storedProcQuery5});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
@@ -469,7 +482,6 @@
             this.Textbox15.StylePriority.UseFont = false;
             this.Textbox15.Text = "    Property/Well";
             this.Textbox15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.Textbox15.Visible = false;
             // 
             // Textbox17
             // 
@@ -513,7 +525,7 @@
             this.PropertyNumber.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.PropertyNumber.BorderWidth = 1F;
             this.PropertyNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyNumber] + \' : \' + [PropertyDescription]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyAndWellNumber] + \' : \' + [PhaseWellDescription]")});
             this.PropertyNumber.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.PropertyNumber.KeepTogether = true;
             this.PropertyNumber.LocationFloat = new DevExpress.Utils.PointFloat(34.4F, 29.56F);
@@ -523,7 +535,6 @@
             this.PropertyNumber.SizeF = new System.Drawing.SizeF(311.81F, 25F);
             this.PropertyNumber.StylePriority.UseFont = false;
             this.PropertyNumber.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.PropertyNumber.Visible = false;
             // 
             // ProcessingDate
             // 
@@ -552,7 +563,7 @@
             this.JIBInvoiceNumber1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.JIBInvoiceNumber1.BorderWidth = 1F;
             this.JIBInvoiceNumber1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[JIBInvoiceNumber]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Number]")});
             this.JIBInvoiceNumber1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.JIBInvoiceNumber1.KeepTogether = true;
             this.JIBInvoiceNumber1.LocationFloat = new DevExpress.Utils.PointFloat(599.51F, 29.56F);
@@ -574,7 +585,7 @@
             this.Textbox112,
             this.OwnerName4});
             this.Rectangle2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?boolPrintRemit = True, False, True)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?boolPrintRemit")});
             this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(378.47F, 54.55999F);
             this.Rectangle2.Name = "Rectangle2";
             this.Rectangle2.SizeF = new System.Drawing.SizeF(403.36F, 77.38F);
@@ -873,7 +884,7 @@
             this.xrLabel32.StylePriority.UseFont = false;
             this.xrLabel32.StylePriority.UsePadding = false;
             this.xrLabel32.StylePriority.UseTextAlignment = false;
-            this.xrLabel32.Text = "Invoice";
+            this.xrLabel32.Text = "Invoice Ref.";
             this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel33
@@ -1251,13 +1262,13 @@
             // 
             // plngJIBProcessTrackingID
             // 
+            this.plngJIBProcessTrackingID.AllowNull = true;
             this.plngJIBProcessTrackingID.Description = "Processing Date";
             this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
             this.plngJIBProcessTrackingID.Type = typeof(int);
-            this.plngJIBProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings2.DataMember = "DSJIBProcessDatesLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
-            dynamicListLookUpSettings2.DisplayMember = "ProcessingDate";
+            dynamicListLookUpSettings2.DisplayMember = "FormattedDate";
             dynamicListLookUpSettings2.ValueMember = "ID";
             this.plngJIBProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
@@ -1268,6 +1279,13 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "\'\'")});
             this.pstrInvoiceNumber.Name = "pstrInvoiceNumber";
             this.pstrInvoiceNumber.ValueInfo = "0";
+            dynamicListLookUpSettings3.DataMember = "DSInvoiceNumberLookup";
+            dynamicListLookUpSettings3.DataSource = this.Dynamic;
+            dynamicListLookUpSettings3.DisplayMember = "Description";
+            dynamicListLookUpSettings3.FilterString = "[JIBProcessTrackingID] = ?plngJIBProcessTrackingID Or [JIBProcessTrackingID] = 0";
+            dynamicListLookUpSettings3.SortMember = null;
+            dynamicListLookUpSettings3.ValueMember = "Number";
+            this.pstrInvoiceNumber.ValueSourceSettings = dynamicListLookUpSettings3;
             this.pstrInvoiceNumber.Visible = false;
             // 
             // pbooPrintAccountDescription
@@ -1282,22 +1300,22 @@
             this.pstrBeginningOwnerNumber.Description = "Beginning Owner";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
-            dynamicListLookUpSettings3.DataMember = "DSOwnersLookup";
-            dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "Description";
-            dynamicListLookUpSettings3.ValueMember = "Number";
-            this.pstrBeginningOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings3;
+            dynamicListLookUpSettings4.DataMember = "DSOwnersLookup";
+            dynamicListLookUpSettings4.DataSource = this.Dynamic;
+            dynamicListLookUpSettings4.DisplayMember = "Description";
+            dynamicListLookUpSettings4.ValueMember = "Number";
+            this.pstrBeginningOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings4;
             // 
             // pstrEndingOwnerNumber
             // 
             this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
-            dynamicListLookUpSettings4.DataMember = "DSOwnersLookup";
-            dynamicListLookUpSettings4.DataSource = this.Dynamic;
-            dynamicListLookUpSettings4.DisplayMember = "Description";
-            dynamicListLookUpSettings4.ValueMember = "Number";
-            this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings4;
+            dynamicListLookUpSettings5.DataMember = "DSOwnersLookup";
+            dynamicListLookUpSettings5.DataSource = this.Dynamic;
+            dynamicListLookUpSettings5.DisplayMember = "Description";
+            dynamicListLookUpSettings5.ValueMember = "Number";
+            this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
             // boolPrintRemit
             // 
@@ -1336,6 +1354,7 @@
             new DevExpress.XtraReports.UI.GroupField("ReportID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBand7.HeightF = 18.00005F;
             this.groupHeaderBand7.Name = "groupHeaderBand7";
+            this.groupHeaderBand7.Visible = false;
             // 
             // groupFooterBand4
             // 
@@ -1486,6 +1505,7 @@
             this.groupFooterBand5.HeightF = 18F;
             this.groupFooterBand5.Level = 1;
             this.groupFooterBand5.Name = "groupFooterBand5";
+            this.groupFooterBand5.Visible = false;
             // 
             // groupFooterBand6
             // 
@@ -1495,6 +1515,7 @@
             this.xrLabel1});
             this.groupFooterBand6.HeightF = 18.00003F;
             this.groupFooterBand6.Name = "groupFooterBand6";
+            this.groupFooterBand6.Visible = false;
             // 
             // groupHeaderBand2
             // 
@@ -1566,12 +1587,26 @@
             this.pstrBeginningInvoiceNumber.Description = "Beginning Invoice Number";
             this.pstrBeginningInvoiceNumber.Name = "pstrBeginningInvoiceNumber";
             this.pstrBeginningInvoiceNumber.ValueInfo = "!";
+            dynamicListLookUpSettings6.DataMember = "DSInvoiceNumberLookup";
+            dynamicListLookUpSettings6.DataSource = this.Dynamic;
+            dynamicListLookUpSettings6.DisplayMember = "Description";
+            dynamicListLookUpSettings6.FilterString = "[JIBProcessTrackingID] = ?plngJIBProcessTrackingID Or [JIBProcessTrackingID] = 0";
+            dynamicListLookUpSettings6.SortMember = null;
+            dynamicListLookUpSettings6.ValueMember = "Number";
+            this.pstrBeginningInvoiceNumber.ValueSourceSettings = dynamicListLookUpSettings6;
             // 
             // pstrEndingInvoiceNumber
             // 
             this.pstrEndingInvoiceNumber.Description = "Ending Invoice Number";
             this.pstrEndingInvoiceNumber.Name = "pstrEndingInvoiceNumber";
-            this.pstrEndingInvoiceNumber.ValueInfo = "9999999999";
+            this.pstrEndingInvoiceNumber.ValueInfo = "ZZZZZZZZZZZZZZZZZZZZ";
+            dynamicListLookUpSettings7.DataMember = "DSInvoiceNumberLookup";
+            dynamicListLookUpSettings7.DataSource = this.Dynamic;
+            dynamicListLookUpSettings7.DisplayMember = "Description";
+            dynamicListLookUpSettings7.FilterString = "[JIBProcessTrackingID] = ?plngJIBProcessTrackingID Or [JIBProcessTrackingID] = 0";
+            dynamicListLookUpSettings7.SortMember = null;
+            dynamicListLookUpSettings7.ValueMember = "Number";
+            this.pstrEndingInvoiceNumber.ValueSourceSettings = dynamicListLookUpSettings7;
             // 
             // JIBInvoices
             // 

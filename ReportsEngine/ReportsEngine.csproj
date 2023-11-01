@@ -424,11 +424,23 @@
     <Compile Include="Reports\FinancialReports\ExcelNetComparativeOperatingStatement.Designer.cs">
       <DependentUpon>ExcelNetComparativeOperatingStatement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelPropertyListAllCompanies.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelPropertyListAllCompanies.Designer.cs">
+      <DependentUpon>ExcelPropertyListAllCompanies.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDOwnerLevelEntry.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDOwnerLevelEntry.Designer.cs">
       <DependentUpon>ExcelRDOwnerLevelEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\PropertyListAllCompanies.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\PropertyListAllCompanies.Designer.cs">
+      <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDOwnerLevelEntry.cs">
       <SubType>Component</SubType>
@@ -1781,8 +1793,14 @@
     <EmbeddedResource Include="Reports\FinancialReports\ExcelNetComparativeOperatingStatement.resx">
       <DependentUpon>ExcelNetComparativeOperatingStatement.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelPropertyListAllCompanies.resx">
+      <DependentUpon>ExcelPropertyListAllCompanies.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDOwnerLevelEntry.resx">
       <DependentUpon>ExcelRDOwnerLevelEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\PropertyListAllCompanies.resx">
+      <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDOwnerLevelEntry.resx">
       <DependentUpon>RDOwnerLevelEntry.cs</DependentUpon>

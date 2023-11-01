@@ -2416,7 +2416,7 @@
             this.xrLabel30.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel30.BorderWidth = 1F;
             this.xrLabel30.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([PA_LAO_DISPVOLUME])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round(sumSum( [PA_LAO_DISPVOLUMEval]))")});
             this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Underline);
             this.xrLabel30.ForeColor = System.Drawing.Color.Black;
             this.xrLabel30.KeepTogether = true;
@@ -2771,7 +2771,7 @@
             this.xrLabel3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrLabel3.BorderWidth = 1F;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumsum(Iif([PA_LAO_EREC] = 1, [PA_LAO_GPROD], \'\'))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round(sumsum(Iif([PA_LAO_EREC] = 1, [PA_LAO_GPRODval], \'\')))")});
             this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrLabel3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel3.KeepTogether = true;
@@ -2800,7 +2800,7 @@
             this.xrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel4.BorderWidth = 1F;
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumsum(Iif([PA_LAO_EREC] = 1, [PA_LAO_OEINV], \'\'))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round(sumsum(Iif([PA_LAO_EREC] = 1, [PA_LAO_OEINVval], \'\')))")});
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrLabel4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel4.KeepTogether = true;
@@ -2829,7 +2829,7 @@
             this.xrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel5.BorderWidth = 1F;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([PA_LAO_DISPVOLUME])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round(sumSum([PA_LAO_DISPVOLUMEval]))\n")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrLabel5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel5.KeepTogether = true;
@@ -2941,7 +2941,7 @@
             this.xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel9.BorderWidth = 1F;
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "SumSum(Iif([PA_LAO_EREC] = 1, [PA_LAO_OILBINV], \'\'))\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round(SumSum(Iif([PA_LAO_EREC] = 1, [PA_LAO_OILBINVval], \'\')))\n")});
             this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrLabel9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel9.KeepTogether = true;
@@ -2997,7 +2997,7 @@
             this.xrLabel11.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel11.BorderWidth = 1F;
             this.xrLabel11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumsum(Iif([PA_LAO_EREC] = 1, [PA_LAO_PRODUCING], \'\'))\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round(sumsum(Iif([PA_LAO_EREC] = 1, [PA_LAO_PRODUCINGval], \'\')))\n")});
             this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel11.KeepTogether = true;
