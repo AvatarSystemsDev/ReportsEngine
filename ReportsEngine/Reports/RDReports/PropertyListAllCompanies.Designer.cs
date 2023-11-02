@@ -950,6 +950,7 @@
             this.pbooUseGroupTypes.Description = "pbooUseGroupTypes";
             this.pbooUseGroupTypes.Name = "pbooUseGroupTypes";
             this.pbooUseGroupTypes.Type = typeof(bool);
+            this.pbooUseGroupTypes.ValueInfo = "False";
             this.pbooUseGroupTypes.Visible = false;
             // 
             // pstrBeginningPropertyNumber
@@ -993,6 +994,7 @@
             this.pbooPrintPropertiesOnly.Name = "pbooPrintPropertiesOnly";
             this.pbooPrintPropertiesOnly.Type = typeof(bool);
             this.pbooPrintPropertiesOnly.ValueInfo = "False";
+            this.pbooPrintPropertiesOnly.Visible = false;
             // 
             // pstrOperatorNumber
             // 

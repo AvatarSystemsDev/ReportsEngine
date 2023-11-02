@@ -966,6 +966,7 @@
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_LA_OGP";
             sourceNode3.Alias = null;
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"877\" />";
             source3.DataMember = "LA_OGP";
             source3.DataSource = this.Dynamic;
             source3.Name = "Dynamic_LA_OGP";
@@ -1004,7 +1005,13 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PA_LAO_FILENAME"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CompanyID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CreateDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "UserID")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "UserID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PA_LAO_PRODUCINGval"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PA_LAO_OILBINVval"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PA_LAO_OEINVval"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PA_LAO_GPRODval"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PA_LAO_DISPVOLUMEval"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PA_LAO_OPRODval")});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Pulse_Master_UserRecord";
             sourceNode4.Alias = null;
@@ -2912,7 +2919,7 @@
             this.xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel8.BorderWidth = 1F;
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumsum(Iif([PA_LAO_EREC] = 1, [PA_LAO_OPROD], \'\'))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "ROUND(sumsum(Iif([PA_LAO_EREC] = 1, [PA_LAO_OPRODval], \'\')))")});
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.xrLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel8.KeepTogether = true;

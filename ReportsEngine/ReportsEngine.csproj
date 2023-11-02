@@ -424,6 +424,24 @@
     <Compile Include="Reports\FinancialReports\ExcelNetComparativeOperatingStatement.Designer.cs">
       <DependentUpon>ExcelNetComparativeOperatingStatement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\AFEBudgetList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\AFEBudgetList.Designer.cs">
+      <DependentUpon>AFEBudgetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelAFEBudgetList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelAFEBudgetList.Designer.cs">
+      <DependentUpon>ExcelAFEBudgetList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CheckReports\ManualCheckList.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CheckReports\ManualCheckList.Designer.cs">
+      <DependentUpon>ManualCheckList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelPropertyListAllCompanies.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1792,6 +1810,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelNetComparativeOperatingStatement.resx">
       <DependentUpon>ExcelNetComparativeOperatingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\AFEBudgetList.resx">
+      <DependentUpon>AFEBudgetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelAFEBudgetList.resx">
+      <DependentUpon>ExcelAFEBudgetList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CheckReports\ManualCheckList.resx">
+      <DependentUpon>ManualCheckList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelPropertyListAllCompanies.resx">
       <DependentUpon>ExcelPropertyListAllCompanies.cs</DependentUpon>
