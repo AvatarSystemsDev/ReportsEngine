@@ -446,7 +446,6 @@
             this.Tablix2.Name = "Tablix2";
             this.Tablix2.SortFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("PA_LAO_EREC", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-            this.Tablix2.Visible = false;
             // 
             // xrLabel19
             // 
@@ -2423,7 +2422,7 @@
             this.xrLabel30.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel30.BorderWidth = 1F;
             this.xrLabel30.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round(sumSum( [PA_LAO_DISPVOLUMEval]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round(sumSum( [PA_LAO_DISPVOLUME]))")});
             this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Underline);
             this.xrLabel30.ForeColor = System.Drawing.Color.Black;
             this.xrLabel30.KeepTogether = true;
@@ -2716,9 +2715,10 @@
             this.xrLabel14,
             this.xrLabel15});
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("PA_LAO_LUWCODE", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            new DevExpress.XtraReports.UI.GroupField("PA_LAO_LUWCODE", DevExpress.XtraReports.UI.XRColumnSortOrder.None)});
             this.groupHeaderBand1.HeightF = 25F;
             this.groupHeaderBand1.Name = "groupHeaderBand1";
+            this.groupHeaderBand1.Visible = false;
             // 
             // xrLabel1
             // 

@@ -1121,8 +1121,6 @@
             this.SubBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel32,
             this.xrLabel31});
-            this.SubBand2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngRunType = 3, True, False)\n")});
             this.SubBand2.HeightF = 17F;
             this.SubBand2.Name = "SubBand2";
             // 

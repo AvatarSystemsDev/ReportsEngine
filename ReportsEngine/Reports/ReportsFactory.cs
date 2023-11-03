@@ -223,6 +223,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPropertyListAllCompanies", () => new ExcelPropertyListAllCompanies());
             Reports.Add("AFEBudgetList", () => new AFEBudgetList());
             Reports.Add("ExcelAFEBudgetList", () => new ExcelAFEBudgetList());
+            Reports.Add("ManualCheckList", () => new ManualCheckList());
+            Reports.Add("ExcelManualCheckList", () => new ExcelManualCheckList());            
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

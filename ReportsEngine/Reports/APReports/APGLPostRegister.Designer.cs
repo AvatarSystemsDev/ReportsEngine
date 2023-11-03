@@ -931,8 +931,9 @@
             this.Textbox56.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox56.SizeF = new System.Drawing.SizeF(76.39886F, 20F);
             this.Textbox56.StylePriority.UsePadding = false;
-            this.Textbox56.Text = "Debit Amt";
-            this.Textbox56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.Textbox56.StylePriority.UseTextAlignment = false;
+            this.Textbox56.Text = "Debit";
+            this.Textbox56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox57
             // 
@@ -965,8 +966,9 @@
             this.Textbox58.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox58.SizeF = new System.Drawing.SizeF(74.43005F, 20F);
             this.Textbox58.StylePriority.UsePadding = false;
-            this.Textbox58.Text = "Credit Amt";
-            this.Textbox58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.Textbox58.StylePriority.UseTextAlignment = false;
+            this.Textbox58.Text = "Credit";
+            this.Textbox58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // SubBand1
             // 
@@ -1165,8 +1167,9 @@
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(74.43005F, 20F);
             this.xrLabel12.StylePriority.UsePadding = false;
-            this.xrLabel12.Text = "Credit Amt";
-            this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrLabel12.StylePriority.UseTextAlignment = false;
+            this.xrLabel12.Text = "Credit";
+            this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel13
             // 
@@ -1199,8 +1202,9 @@
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel14.SizeF = new System.Drawing.SizeF(76.39886F, 20F);
             this.xrLabel14.StylePriority.UsePadding = false;
-            this.xrLabel14.Text = "Debit Amt";
-            this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.xrLabel14.StylePriority.UseTextAlignment = false;
+            this.xrLabel14.Text = "Debit";
+            this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel15
             // 

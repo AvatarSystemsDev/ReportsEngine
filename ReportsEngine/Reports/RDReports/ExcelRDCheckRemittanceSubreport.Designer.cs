@@ -128,7 +128,8 @@
             this.xrLabel2});
             this.Tablix1_Details_DetailBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PropertyNumber]+[PhaseWellDescription]+[SaleDate]+[DeductionAm" +
-                    "ount]+[ProductDescription]) And\n[ImbursementDeductionTypeCodeID] = [LineType]")});
+                    "ount]+[ProductDescription]) And\n[ImbursementDeductionTypeCodeID] = [LineType]\nAN" +
+                    "D [FirstState] = [StateName]")});
             this.Tablix1_Details_DetailBand.HeightF = 15F;
             this.Tablix1_Details_DetailBand.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1_Details_DetailBand.Name = "Tablix1_Details_DetailBand";

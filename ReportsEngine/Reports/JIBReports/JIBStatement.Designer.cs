@@ -89,9 +89,9 @@
             this.xrRichText4 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.AlsoID = new DevExpress.XtraReports.UI.CalculatedField();
             this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
             this.SubBand4 = new DevExpress.XtraReports.UI.SubBand();
+            this.AlsoID = new DevExpress.XtraReports.UI.CalculatedField();
             this.LiterallyJustFalse = new DevExpress.XtraReports.UI.CalculatedField();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
@@ -165,12 +165,12 @@
             // 
             // topMarginBand1
             // 
-            this.topMarginBand1.HeightF = 40F;
+            this.topMarginBand1.HeightF = 20F;
             this.topMarginBand1.Name = "topMarginBand1";
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 40F;
+            this.bottomMarginBand1.HeightF = 20F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // Tablix12
@@ -488,7 +488,7 @@
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "DSOwnersLookup";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "Number";
+            dynamicListLookUpSettings3.DisplayMember = "Description";
             dynamicListLookUpSettings3.ValueMember = "Number";
             this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
@@ -552,9 +552,10 @@
             this.xrRichText4,
             this.xrLabel1});
             this.groupHeaderBand2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("OwnerNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
             new DevExpress.XtraReports.UI.GroupField("JIBStatementID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
             new DevExpress.XtraReports.UI.GroupField("ID", DevExpress.XtraReports.UI.XRColumnSortOrder.None)});
-            this.groupHeaderBand2.HeightF = 110.21F;
+            this.groupHeaderBand2.HeightF = 140.21F;
             this.groupHeaderBand2.Name = "groupHeaderBand2";
             // 
             // xrRichText5
@@ -668,13 +669,6 @@
             this.SubBand3,
             this.SubBand4});
             // 
-            // AlsoID
-            // 
-            this.AlsoID.DataMember = "AlsoJIB_StatementHeader";
-            this.AlsoID.Expression = "[ID]";
-            this.AlsoID.FieldType = DevExpress.XtraReports.UI.FieldType.Int32;
-            this.AlsoID.Name = "AlsoID";
-            // 
             // SubBand3
             // 
             this.SubBand3.HeightF = 0F;
@@ -688,6 +682,13 @@
             this.SubBand4.HeightF = 24.61065F;
             this.SubBand4.Name = "SubBand4";
             this.SubBand4.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
+            // 
+            // AlsoID
+            // 
+            this.AlsoID.DataMember = "AlsoJIB_StatementHeader";
+            this.AlsoID.Expression = "[ID]";
+            this.AlsoID.FieldType = DevExpress.XtraReports.UI.FieldType.Int32;
+            this.AlsoID.Name = "AlsoID";
             // 
             // LiterallyJustFalse
             // 
@@ -759,7 +760,7 @@
             this.DataSource = this.Dynamic;
             this.DisplayName = "JIBStatement";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
+            this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 20F, 20F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
