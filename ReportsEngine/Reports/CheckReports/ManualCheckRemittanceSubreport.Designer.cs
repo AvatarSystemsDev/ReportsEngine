@@ -36,9 +36,9 @@
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
-            this.Tablix1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
             this.Line1 = new DevExpress.XtraReports.UI.XRShape();
+            this.Tablix1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Tablix1_Details_DetailBand = new DevExpress.XtraReports.UI.DetailBand();
             this.Details_table = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
@@ -72,15 +72,6 @@
             this.detailBand1.MultiColumn.ColumnSpacing = 50F;
             this.detailBand1.Name = "detailBand1";
             // 
-            // Tablix1
-            // 
-            this.Tablix1.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
-            this.Tablix1_Details_DetailBand});
-            this.Tablix1.DataMember = "DSCheckRemittanceInformation";
-            this.Tablix1.DataSource = this.Dynamic;
-            this.Tablix1.Level = 0;
-            this.Tablix1.Name = "Tablix1";
-            // 
             // Textbox7
             // 
             this.Textbox7.BorderColor = System.Drawing.Color.Black;
@@ -110,6 +101,15 @@
             this.Line1.Shape = shapeLine1;
             this.Line1.SizeF = new System.Drawing.SizeF(749.48F, 2F);
             this.Line1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // Tablix1
+            // 
+            this.Tablix1.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
+            this.Tablix1_Details_DetailBand});
+            this.Tablix1.DataMember = "DSCheckRemittanceInformation";
+            this.Tablix1.DataSource = this.Dynamic;
+            this.Tablix1.Level = 0;
+            this.Tablix1.Name = "Tablix1";
             // 
             // Tablix1_Details_DetailBand
             // 

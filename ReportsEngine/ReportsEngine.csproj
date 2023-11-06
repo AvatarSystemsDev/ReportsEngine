@@ -413,6 +413,12 @@
     <Compile Include="Reports\CheckReports\ExcelManualChecks.Designer.cs">
       <DependentUpon>ExcelManualChecks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\CheckReports\ExcelReplacementCheckRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CheckReports\ExcelReplacementCheckRegister.Designer.cs">
+      <DependentUpon>ExcelReplacementCheckRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\CheckReports\ManualCheckRemittanceSubreport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -430,6 +436,12 @@
     </Compile>
     <Compile Include="Reports\CheckReports\ExcelManualCheckList.Designer.cs">
       <DependentUpon>ExcelManualCheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\CheckReports\ReplacementCheckRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CheckReports\ReplacementCheckRegister.Designer.cs">
+      <DependentUpon>ReplacementCheckRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\ComparativeOperatingStatement.cs">
       <SubType>Component</SubType>
@@ -478,6 +490,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDOwnerLevelEntry.Designer.cs">
       <DependentUpon>ExcelRDOwnerLevelEntry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDStateWithholding.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDStateWithholding.Designer.cs">
+      <DependentUpon>ExcelRDStateWithholding.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\PropertyListAllCompanies.cs">
       <SubType>Component</SubType>
@@ -904,6 +922,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\RDProductionTaxDetail88TaxNetTax.Designer.cs">
       <DependentUpon>RDProductionTaxDetail88TaxNetTax.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDStateWithholding.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDStateWithholding.Designer.cs">
+      <DependentUpon>RDStateWithholding.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDSuspenseReleaseChecks.cs">
       <SubType>Component</SubType>
@@ -1830,6 +1854,9 @@
     <EmbeddedResource Include="Reports\CheckReports\ExcelManualChecks.resx">
       <DependentUpon>ExcelManualChecks.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CheckReports\ExcelReplacementCheckRegister.resx">
+      <DependentUpon>ExcelReplacementCheckRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CheckReports\ManualCheckRemittanceSubreport.resx">
       <DependentUpon>ManualCheckRemittanceSubreport.cs</DependentUpon>
     </EmbeddedResource>
@@ -1838,6 +1865,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\CheckReports\ExcelManualCheckList.resx">
       <DependentUpon>ExcelManualCheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CheckReports\ReplacementCheckRegister.resx">
+      <DependentUpon>ReplacementCheckRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ComparativeOperatingStatement.resx">
       <DependentUpon>ComparativeOperatingStatement.cs</DependentUpon>
@@ -1862,6 +1892,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDOwnerLevelEntry.resx">
       <DependentUpon>ExcelRDOwnerLevelEntry.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDStateWithholding.resx">
+      <DependentUpon>ExcelRDStateWithholding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\PropertyListAllCompanies.resx">
       <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
@@ -2075,6 +2108,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDProductionTaxDetail88TaxNetTax.resx">
       <DependentUpon>RDProductionTaxDetail88TaxNetTax.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDStateWithholding.resx">
+      <DependentUpon>RDStateWithholding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDSuspenseReleaseChecks.resx">
       <DependentUpon>RDSuspenseReleaseChecks.cs</DependentUpon>

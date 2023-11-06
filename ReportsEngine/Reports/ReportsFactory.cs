@@ -224,7 +224,13 @@ namespace ReportsEngine.Reports
             Reports.Add("AFEBudgetList", () => new AFEBudgetList());
             Reports.Add("ExcelAFEBudgetList", () => new ExcelAFEBudgetList());
             Reports.Add("ManualCheckList", () => new ManualCheckList());
-            Reports.Add("ExcelManualCheckList", () => new ExcelManualCheckList());            
+            Reports.Add("ExcelManualCheckList", () => new ExcelManualCheckList());
+            Reports.Add("ManualChecks", () => new ManualChecks());
+            Reports.Add("ExcelManualCheck", () => new ExcelManualChecks());
+            Reports.Add("RDStateWithholding", () => new RDStateWithholding());
+            Reports.Add("ExcelRDStateWithholding", () => new ExcelRDStateWithholding());
+            Reports.Add("ReplacementCheckRegister", () => new ReplacementCheckRegister());
+            Reports.Add("ExcelReplacementCheckRegister", () => new ExcelReplacementCheckRegister());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

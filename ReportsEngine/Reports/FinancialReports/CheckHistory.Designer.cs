@@ -188,6 +188,7 @@
             this.Textbox33 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox34 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox35 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrCopyright = new DevExpress.XtraReports.UI.XRLabel();
@@ -221,7 +222,6 @@
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox8)).BeginInit();
@@ -728,7 +728,7 @@
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel12.Summary = xrSummary1;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel12.TextFormatString = "{0:\'$\'#,0.00;\'$\'-#,0.00}";
+            this.xrLabel12.TextFormatString = "{0:N2}";
             // 
             // Tablix3_GroupFooterBand
             // 
@@ -1039,6 +1039,12 @@
             this.Textbox35.StylePriority.UseTextAlignment = false;
             this.Textbox35.Text = "Check Amount";
             this.Textbox35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            // 
+            // SubBand1
+            // 
+            this.SubBand1.HeightF = 8.25F;
+            this.SubBand1.Name = "SubBand1";
+            this.SubBand1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             // 
             // pageFooterBand1
             // 
@@ -1514,7 +1520,7 @@
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel8.Summary = xrSummary2;
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel8.TextFormatString = "{0:\'$\'#,0.00;\'$\'-#,0.00}";
+            this.xrLabel8.TextFormatString = "{0:N2}";
             // 
             // xrLabel7
             // 
@@ -1596,12 +1602,6 @@
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.Text = "Report Total:";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // SubBand1
-            // 
-            this.SubBand1.HeightF = 8.25F;
-            this.SubBand1.Name = "SubBand1";
-            this.SubBand1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             // 
             // xrCrossBandBox2
             // 

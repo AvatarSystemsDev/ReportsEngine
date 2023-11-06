@@ -11,7 +11,8 @@ namespace ReportsEngine.Reports
         public DOIbyOwnerAddress()
         {
             InitializeComponent();
-
+            xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
+            xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
         }
 
         private void DOIbyOwnerAddress_DataSourceDemanded(object sender, EventArgs e)

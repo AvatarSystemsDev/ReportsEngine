@@ -66,6 +66,9 @@
             this.CheckAmountLongString10 = new DevExpress.XtraReports.UI.XRTableCell();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.Rectangle5 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.Rectangle3 = new DevExpress.XtraReports.UI.XRPanel();
             this.Textbox5 = new DevExpress.XtraReports.UI.XRRichText();
             this.Textbox6 = new DevExpress.XtraReports.UI.XRRichText();
@@ -92,9 +95,6 @@
             this.Image2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.Line2 = new DevExpress.XtraReports.UI.XRShape();
             this.Textbox22 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SerialNumber4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SerialNumber6 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SerialNumber5 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbitMICR = new DevExpress.XtraReports.Parameters.Parameter();
@@ -289,7 +289,7 @@
             // 
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.Rectangle5});
-            this.groupFooterBand1.HeightF = 358.1306F;
+            this.groupFooterBand1.HeightF = 354.5633F;
             this.groupFooterBand1.Name = "groupFooterBand1";
             this.groupFooterBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBand;
             this.groupFooterBand1.PrintAtBottom = true;
@@ -301,6 +301,9 @@
             this.Rectangle5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Rectangle5.BorderWidth = 1F;
             this.Rectangle5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel16,
+            this.xrLabel17,
+            this.xrLabel18,
             this.Rectangle3,
             this.Textbox31,
             this.Textbox24,
@@ -319,13 +322,70 @@
             this.Line3,
             this.Image2,
             this.Line2,
-            this.Textbox22,
-            this.SerialNumber4,
-            this.SerialNumber6,
-            this.SerialNumber5});
+            this.Textbox22});
             this.Rectangle5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Rectangle5.Name = "Rectangle5";
             this.Rectangle5.SizeF = new System.Drawing.SizeF(794.0999F, 354.5633F);
+            // 
+            // xrLabel16
+            // 
+            this.xrLabel16.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel16.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel16.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel16.BorderWidth = 1F;
+            this.xrLabel16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "Iif(?pbitMICR = True, \'MICRE13B\', \'Segoe UI\')"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑈\'+[SerialNumber]+\'⑈\'")});
+            this.xrLabel16.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel16.KeepTogether = true;
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(27.43F, 327.67F);
+            this.xrLabel16.Multiline = true;
+            this.xrLabel16.Name = "xrLabel16";
+            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel16.SizeF = new System.Drawing.SizeF(185.42F, 25F);
+            this.xrLabel16.StylePriority.UseFont = false;
+            this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // xrLabel17
+            // 
+            this.xrLabel17.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel17.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel17.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel17.BorderWidth = 1F;
+            this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "Iif(?pbitMICR = True, \'MICRE13B\', \'Segoe UI\')"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\'⑈\'")});
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel17.KeepTogether = true;
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(388.49F, 327.67F);
+            this.xrLabel17.Multiline = true;
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(202.48F, 25F);
+            this.xrLabel17.StylePriority.UseFont = false;
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel18
+            // 
+            this.xrLabel18.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel18.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel18.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel18.BorderWidth = 1F;
+            this.xrLabel18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "Iif(?pbitMICR = True, \'MICRE13B\', \'Segoe UI\')"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑆\'+[TransitNumber]+\'⑆\'")});
+            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel18.KeepTogether = true;
+            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 328.23F);
+            this.xrLabel18.Multiline = true;
+            this.xrLabel18.Name = "xrLabel18";
+            this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel18.SizeF = new System.Drawing.SizeF(143.75F, 25F);
+            this.xrLabel18.StylePriority.UseFont = false;
+            this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Rectangle3
             // 
@@ -469,7 +529,7 @@
             this.Textbox31.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, False, True)")});
             this.Textbox31.KeepTogether = true;
-            this.Textbox31.LocationFloat = new DevExpress.Utils.PointFloat(5.35F, 36.63F);
+            this.Textbox31.LocationFloat = new DevExpress.Utils.PointFloat(6.590017F, 131.13F);
             this.Textbox31.Multiline = true;
             this.Textbox31.Name = "Textbox31";
             this.Textbox31.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -783,63 +843,6 @@
             this.Textbox22.Text = "VOID IF NOT CASHED WITHIN 60 DAYS";
             this.Textbox22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // SerialNumber4
-            // 
-            this.SerialNumber4.BorderColor = System.Drawing.Color.Black;
-            this.SerialNumber4.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.SerialNumber4.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.SerialNumber4.BorderWidth = 1F;
-            this.SerialNumber4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "Iif(?pbitMICR = True, \'MICRE13B\', \'Segoe UI\')"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SerialNumber]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
-            this.SerialNumber4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 12F);
-            this.SerialNumber4.KeepTogether = true;
-            this.SerialNumber4.LocationFloat = new DevExpress.Utils.PointFloat(27.43F, 327.67F);
-            this.SerialNumber4.Multiline = true;
-            this.SerialNumber4.Name = "SerialNumber4";
-            this.SerialNumber4.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.SerialNumber4.SizeF = new System.Drawing.SizeF(185.42F, 25F);
-            this.SerialNumber4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // SerialNumber6
-            // 
-            this.SerialNumber6.BorderColor = System.Drawing.Color.Black;
-            this.SerialNumber6.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.SerialNumber6.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.SerialNumber6.BorderWidth = 1F;
-            this.SerialNumber6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "Iif(?pbitMICR = True, \'MICRE13B\', \'Segoe UI\')"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
-            this.SerialNumber6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 12F);
-            this.SerialNumber6.KeepTogether = true;
-            this.SerialNumber6.LocationFloat = new DevExpress.Utils.PointFloat(388.49F, 327.67F);
-            this.SerialNumber6.Multiline = true;
-            this.SerialNumber6.Name = "SerialNumber6";
-            this.SerialNumber6.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.SerialNumber6.SizeF = new System.Drawing.SizeF(202.48F, 25F);
-            this.SerialNumber6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // SerialNumber5
-            // 
-            this.SerialNumber5.BorderColor = System.Drawing.Color.Black;
-            this.SerialNumber5.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.SerialNumber5.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.SerialNumber5.BorderWidth = 1F;
-            this.SerialNumber5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "Iif(?pbitMICR = True, \'MICRE13B\', \'Segoe UI\')"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TransitNumber]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
-            this.SerialNumber5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 12F);
-            this.SerialNumber5.KeepTogether = true;
-            this.SerialNumber5.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 328.23F);
-            this.SerialNumber5.Multiline = true;
-            this.SerialNumber5.Name = "SerialNumber5";
-            this.SerialNumber5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.SerialNumber5.SizeF = new System.Drawing.SizeF(143.75F, 25F);
-            this.SerialNumber5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
             // groupHeaderBand1
             // 
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
@@ -1125,9 +1128,6 @@
         private DevExpress.XtraReports.UI.XRPictureBox Image2;
         private DevExpress.XtraReports.UI.XRShape Line2;
         private DevExpress.XtraReports.UI.XRLabel Textbox22;
-        private DevExpress.XtraReports.UI.XRLabel SerialNumber4;
-        private DevExpress.XtraReports.UI.XRLabel SerialNumber6;
-        private DevExpress.XtraReports.UI.XRLabel SerialNumber5;
         private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
         private DevExpress.XtraReports.Parameters.Parameter pstrDatabaseName;
         private DevExpress.XtraReports.Parameters.Parameter pstrServerName;
@@ -1153,5 +1153,8 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectCheck;
         private DevExpress.XtraReports.UI.GroupFooterBand groupFooterBand1;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand1;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel16;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel17;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel18;
     }
 }
