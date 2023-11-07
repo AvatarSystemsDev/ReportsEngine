@@ -461,6 +461,30 @@
     <Compile Include="Reports\FinancialReports\ExcelNetComparativeOperatingStatement.Designer.cs">
       <DependentUpon>ExcelNetComparativeOperatingStatement.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelPaymentByCheckHistory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelPaymentByCheckHistory.Designer.cs">
+      <DependentUpon>ExcelPaymentByCheckHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelSummaryWithholding.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelSummaryWithholding.Designer.cs">
+      <DependentUpon>ExcelSummaryWithholding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\PaymentByCheckHistory.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\PaymentByCheckHistory.Designer.cs">
+      <DependentUpon>PaymentByCheckHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\SummaryWithholding.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\SummaryWithholding.Designer.cs">
+      <DependentUpon>SummaryWithholding.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\AFEBudgetList.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1877,6 +1901,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelNetComparativeOperatingStatement.resx">
       <DependentUpon>ExcelNetComparativeOperatingStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelPaymentByCheckHistory.resx">
+      <DependentUpon>ExcelPaymentByCheckHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelSummaryWithholding.resx">
+      <DependentUpon>ExcelSummaryWithholding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\PaymentByCheckHistory.resx">
+      <DependentUpon>PaymentByCheckHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\SummaryWithholding.resx">
+      <DependentUpon>SummaryWithholding.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEBudgetList.resx">
       <DependentUpon>AFEBudgetList.cs</DependentUpon>

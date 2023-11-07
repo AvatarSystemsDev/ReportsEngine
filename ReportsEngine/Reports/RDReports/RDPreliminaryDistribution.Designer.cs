@@ -1188,6 +1188,7 @@
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Dynamic_DSRDPreliminaryDistribution";
             sourceNode4.Alias = null;
+            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"497\" />";
             source4.DataMember = "DSRDPreliminaryDistribution";
             source4.DataSource = this.Dynamic;
             source4.Name = "Dynamic_DSRDPreliminaryDistribution";
@@ -1212,7 +1213,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "NonDeletedInterest"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredTaxes"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredDeductions"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredNet")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredNet"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RDTransactionTypeCodeDescription")});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Pulse_Master_UserRecord";
             sourceNode5.Alias = null;

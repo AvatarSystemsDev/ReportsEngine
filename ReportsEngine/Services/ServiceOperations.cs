@@ -45,7 +45,7 @@ namespace ReportsEngine.Services
                     return SendEmail(emailAddress, emailSubject, emailMessage, attachment);
                 }
             }
-            else if (customData.action == "document archive")
+            else if (customData.action == "document archive" || customData.action == "export to pdf")
             {
                 using (var stream = new MemoryStream())
                 {
@@ -55,11 +55,19 @@ namespace ReportsEngine.Services
                     byte[] documentByteArray = stream.ToArray();
                     String base64String = Convert.ToBase64String(documentByteArray);
                     //var archived = SendToArchiveAsync(stream, systemID, userID);  //If call Providence webservice from here. 
-
+                    string message = "";
+                    if (customData.action == "export to pdf")
+                    {
+                        message = "Saved as PDF";
+                    }
+                    else if (customData.action == "document archive")
+                    {
+                        message = "Saved to Archive";
+                    }
                     return new DocumentOperationResponse
                     {
                         Succeeded = true,
-                        Message = "Saved to Archive",
+                        Message = message,
                         CustomData = base64String,
                     };
 

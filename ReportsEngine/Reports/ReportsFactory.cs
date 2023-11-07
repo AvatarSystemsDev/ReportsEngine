@@ -231,6 +231,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDStateWithholding", () => new ExcelRDStateWithholding());
             Reports.Add("ReplacementCheckRegister", () => new ReplacementCheckRegister());
             Reports.Add("ExcelReplacementCheckRegister", () => new ExcelReplacementCheckRegister());
+            Reports.Add("PaymentByCheckHistory", () => new PaymentByCheckHistory());
+            Reports.Add("ExcelPaymentByCheckHistory", () => new ExcelPaymentByCheckHistory());
+            Reports.Add("SummaryWithholding", () => new SummaryWithholding());
+            Reports.Add("ExcelSummaryWithholding", () => new ExcelSummaryWithholding());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
