@@ -195,6 +195,7 @@
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
@@ -221,7 +222,6 @@
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
-            this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.groupHeaderBand2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.OwnerNumber = new DevExpress.XtraReports.UI.XRRichText();
@@ -233,9 +233,12 @@
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel37 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pbooUseProcessingDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteBeginningDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteEndingDate = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox137)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OwnerNumber)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1894,6 +1897,24 @@
             this.PageHeader.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand2});
             // 
+            // xrRichText1
+            // 
+            this.xrRichText1.BorderColor = System.Drawing.Color.Black;
+            this.xrRichText1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrRichText1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrRichText1.BorderWidth = 1F;
+            this.xrRichText1.CanGrow = false;
+            this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowCriteria"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>For Ch" +
+                    "ecks Dated: </b>\' + FormatString(\'{0:d}\', [CheckDate]) + \'</span>\'\n\n")});
+            this.xrRichText1.KeepTogether = true;
+            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 59.99997F);
+            this.xrRichText1.Name = "xrRichText1";
+            this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(770.0003F, 20F);
+            // 
             // xrLabel2
             // 
             this.xrLabel2.BackColor = System.Drawing.Color.Transparent;
@@ -2624,24 +2645,6 @@
             selectNode4,
             selectNode5});
             // 
-            // xrRichText1
-            // 
-            this.xrRichText1.BorderColor = System.Drawing.Color.Black;
-            this.xrRichText1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrRichText1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrRichText1.BorderWidth = 1F;
-            this.xrRichText1.CanGrow = false;
-            this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowCriteria"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>For Ch" +
-                    "ecks Dated: </b>\' + FormatString(\'{0:d}\', [CheckDate]) + \'</span>\'\n\n")});
-            this.xrRichText1.KeepTogether = true;
-            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 59.99997F);
-            this.xrRichText1.Name = "xrRichText1";
-            this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
-            this.xrRichText1.SizeF = new System.Drawing.SizeF(770.0003F, 20F);
-            // 
             // groupHeaderBand2
             // 
             this.groupHeaderBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -2919,6 +2922,33 @@
             this.xrLabel37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel37.TextFormatString = "{0:n2}";
             // 
+            // pbooUseProcessingDate
+            // 
+            this.pbooUseProcessingDate.Description = "Use Processing Date";
+            this.pbooUseProcessingDate.Name = "pbooUseProcessingDate";
+            this.pbooUseProcessingDate.Type = typeof(bool);
+            this.pbooUseProcessingDate.ValueInfo = "False";
+            // 
+            // pdteBeginningDate
+            // 
+            this.pdteBeginningDate.Description = "Beginning Date";
+            this.pdteBeginningDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "GetDate(\'01/01/\'+GetYear(Today()))"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooUseProcessingDate")});
+            this.pdteBeginningDate.Name = "pdteBeginningDate";
+            this.pdteBeginningDate.Type = typeof(System.DateTime);
+            this.pdteBeginningDate.ValueInfo = "2023-11-09";
+            // 
+            // pdteEndingDate
+            // 
+            this.pdteEndingDate.Description = "Ending Date";
+            this.pdteEndingDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "GetDate(\'01/01/\'+GetYear(Today()))"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooUseProcessingDate")});
+            this.pdteEndingDate.Name = "pdteEndingDate";
+            this.pdteEndingDate.Type = typeof(System.DateTime);
+            this.pdteEndingDate.ValueInfo = "2023-11-09";
+            // 
             // RDCheckStateWithholding
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2952,6 +2982,9 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooUseProcessingDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
@@ -2962,11 +2995,14 @@
             this.pstrBeginOwner,
             this.pstrEndingOwner,
             this.plngCheckPrintingProcessTrackingID,
+            this.pbooUseProcessingDate,
+            this.pdteBeginningDate,
+            this.pdteEndingDate,
             this.pbooShowCriteria});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.Textbox137)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OwnerNumber)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -3079,5 +3115,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel31;
         private DevExpress.XtraReports.UI.XRLabel xrLabel30;
         private DevExpress.XtraReports.UI.XRLabel xrLabel37;
+        private DevExpress.XtraReports.Parameters.Parameter pbooUseProcessingDate;
+        private DevExpress.XtraReports.Parameters.Parameter pdteBeginningDate;
+        private DevExpress.XtraReports.Parameters.Parameter pdteEndingDate;
     }
 }

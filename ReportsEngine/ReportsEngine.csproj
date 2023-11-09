@@ -407,6 +407,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\LTMReports\LTM_LeaseDataSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\LTMReports\LTM_LeaseDataSheet.Designer.cs">
+      <DependentUpon>LTM_LeaseDataSheet.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\CheckReports\ExcelManualChecks.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1893,6 +1899,9 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\LTMReports\LTM_LeaseDataSheet.resx">
+      <DependentUpon>LTM_LeaseDataSheet.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CheckReports\ExcelManualChecks.resx">
       <DependentUpon>ExcelManualChecks.cs</DependentUpon>
     </EmbeddedResource>

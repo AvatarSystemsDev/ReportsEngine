@@ -107,6 +107,7 @@
             this.pbooShowEmail = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowPhone = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooPropertyOnNextPage = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngMaskFederalID = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -353,7 +354,8 @@
             this.xrLabel28.BorderWidth = 1F;
             this.xrLabel28.CanGrow = false;
             this.xrLabel28.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FederalIDNumber]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngMaskFederalID = 0, [FederalIDNumber],?plngMaskFederalID = 1,Substring([F" +
+                    "ederalIDNumber],7 ),\'\' )\n")});
             this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel28.KeepTogether = true;
             this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(1060.869F, 9.536743E-05F);
@@ -1179,6 +1181,13 @@
             this.pbooPropertyOnNextPage.Type = typeof(bool);
             this.pbooPropertyOnNextPage.ValueInfo = "False";
             // 
+            // plngMaskFederalID
+            // 
+            this.plngMaskFederalID.Description = "Parameter1";
+            this.plngMaskFederalID.Name = "plngMaskFederalID";
+            this.plngMaskFederalID.Type = typeof(int);
+            this.plngMaskFederalID.ValueInfo = "0";
+            // 
             // ExcelDOIbyOwnerAddress
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1237,7 +1246,8 @@
             this.pstrSelectOwner,
             this.pbooShowEmail,
             this.pbooShowPhone,
-            this.pbooPropertyOnNextPage});
+            this.pbooPropertyOnNextPage,
+            this.plngMaskFederalID});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1301,5 +1311,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooPropertyOnNextPage;
         private DevExpress.XtraReports.UI.XRLabel xrLabel30;
         private DevExpress.XtraReports.UI.XRLabel xrLabel29;
+        private DevExpress.XtraReports.Parameters.Parameter plngMaskFederalID;
     }
 }

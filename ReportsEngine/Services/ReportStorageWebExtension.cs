@@ -245,6 +245,17 @@ namespace ReportsEngine.Services
                     }
 
                 }
+                else if (parameterName == "plngUserID")
+                {
+                    try
+                    {
+                        report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type); // Run Report button passes in User ID parameter but that is not usually necessary on the report. Many reports do not have user ID and that causes an error.
+                    }
+                    catch
+                    {
+
+                    }
+                }
                 else
                 {
                     report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);

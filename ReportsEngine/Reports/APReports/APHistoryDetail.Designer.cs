@@ -767,7 +767,7 @@
             this.Textbox1,
             this.ReportTitle,
             this.Rectangle2});
-            this.pageHeaderBand1.HeightF = 103.8483F;
+            this.pageHeaderBand1.HeightF = 103.47F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.PrintOn = DevExpress.XtraReports.UI.PrintOnPages.NotWithReportHeader;
             this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
@@ -830,7 +830,7 @@
             this.Textbox35,
             this.Textbox40,
             this.Textbox37});
-            this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 60.37834F);
+            this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 60.00004F);
             this.Rectangle2.Name = "Rectangle2";
             this.Rectangle2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Rectangle2.SizeF = new System.Drawing.SizeF(768.6101F, 43.47F);
@@ -1371,7 +1371,7 @@
             this.xrPanel2,
             this.xrLabel27,
             this.xrLabel28});
-            this.ReportHeader.HeightF = 128.75F;
+            this.ReportHeader.HeightF = 123.265F;
             this.ReportHeader.Name = "ReportHeader";
             this.ReportHeader.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand2});
@@ -1394,10 +1394,10 @@
             this.xrLabel23,
             this.xrLabel25,
             this.xrLabel26});
-            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 83.37834F);
+            this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 80.83671F);
             this.xrPanel1.Name = "xrPanel1";
             this.xrPanel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(768.6101F, 43.47F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(768.6101F, 42.42833F);
             this.xrPanel1.StylePriority.UsePadding = false;
             // 
             // xrLabel14
@@ -1627,10 +1627,10 @@
             this.xrRichText3});
             this.xrPanel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)")});
-            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60.00001F);
+            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60.00004F);
             this.xrPanel2.Name = "xrPanel2";
             this.xrPanel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPanel2.SizeF = new System.Drawing.SizeF(767.5685F, 22.92F);
+            this.xrPanel2.SizeF = new System.Drawing.SizeF(767.5685F, 20.83667F);
             this.xrPanel2.StylePriority.UsePadding = false;
             // 
             // xrRichText1

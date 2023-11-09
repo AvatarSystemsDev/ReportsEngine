@@ -47,6 +47,7 @@
             this.Details_table = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.CheckAmountLongString10 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -95,7 +96,6 @@
             this.plngIsTwoSignaturesRequired = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrTwoSignaturesRequiredAmount = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
@@ -105,12 +105,12 @@
             // 
             // topMarginBand1
             // 
-            this.topMarginBand1.HeightF = 25F;
+            this.topMarginBand1.HeightF = 18F;
             this.topMarginBand1.Name = "topMarginBand1";
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 25F;
+            this.bottomMarginBand1.HeightF = 18F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // detailBand1
@@ -171,6 +171,19 @@
             this.CheckAmountLongString10.StylePriority.UsePadding = false;
             this.CheckAmountLongString10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.CheckAmountLongString10.Weight = 1D;
+            // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 46.82214F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSAPCheckHeader.CheckID"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", null, null));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
+            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.APReports.APCheckRemittanceSubreport();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(794.0999F, 24.61065F);
             // 
             // pstrDatabaseName
             // 
@@ -667,10 +680,12 @@
             this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(27.43F, 327.67F);
             this.xrLabel16.Multiline = true;
             this.xrLabel16.Name = "xrLabel16";
-            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel16.SizeF = new System.Drawing.SizeF(185.42F, 25F);
             this.xrLabel16.StylePriority.UseFont = false;
-            this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel16.StylePriority.UsePadding = false;
+            this.xrLabel16.StylePriority.UseTextAlignment = false;
+            this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel17
             // 
@@ -687,10 +702,12 @@
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(388.49F, 327.67F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
-            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel17.SizeF = new System.Drawing.SizeF(202.48F, 25F);
             this.xrLabel17.StylePriority.UseFont = false;
-            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel17.StylePriority.UsePadding = false;
+            this.xrLabel17.StylePriority.UseTextAlignment = false;
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel18
             // 
@@ -707,10 +724,12 @@
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 328.23F);
             this.xrLabel18.Multiline = true;
             this.xrLabel18.Name = "xrLabel18";
-            this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel18.SizeF = new System.Drawing.SizeF(143.75F, 25F);
             this.xrLabel18.StylePriority.UseFont = false;
-            this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel18.StylePriority.UsePadding = false;
+            this.xrLabel18.StylePriority.UseTextAlignment = false;
+            this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Dynamic
             // 
@@ -852,19 +871,6 @@
             this.plngCompanyID.ValueInfo = "0";
             this.plngCompanyID.Visible = false;
             // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 46.82214F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSAPCheckHeader.CheckID"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", null, null));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
-            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.APReports.APCheckRemittanceSubreport();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(794.0999F, 24.61065F);
-            // 
             // APChecks
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -876,7 +882,7 @@
             this.Dynamic});
             this.DisplayName = "APChecks";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(25F, 25F, 25F, 25F);
+            this.Margins = new DevExpress.Drawing.DXMargins(25F, 25F, 18F, 18F);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,

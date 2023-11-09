@@ -37,6 +37,11 @@
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
@@ -46,11 +51,6 @@
             this.plngFIELDCODE = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowBorder = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox3 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox4 = new DevExpress.XtraReports.UI.XRCrossBandBox();
@@ -78,93 +78,6 @@
             this.Tablix1.HeightF = 25F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
-            // 
-            // Dynamic
-            // 
-            this.Dynamic.ConnectionName = "Providence_Connection 1";
-            this.Dynamic.Name = "Dynamic";
-            customSqlQuery1.Name = "PALAR5DDSP";
-            queryParameter1.Name = "plngCompanyID";
-            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter2.Name = "plngDISTNO";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngDISTNO", typeof(int));
-            queryParameter3.Name = "plngFIELDCODE";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngFIELDCODE", typeof(string));
-            customSqlQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1,
-            queryParameter2,
-            queryParameter3});
-            customSqlQuery1.Sql = "SELECT\n*\nFROM PALAR5DDSP\nWHERE CompanyID = @plngCompanyID AND PA_LAR_DISTNO = @pl" +
-    "ngDISTNO AND PA_LAR_FIELDCODE = @plngFIELDCODE";
-            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            customSqlQuery1});
-            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
-            // 
-            // pstrServerName
-            // 
-            this.pstrServerName.Description = "pstrServerName";
-            this.pstrServerName.Name = "pstrServerName";
-            this.pstrServerName.Visible = false;
-            // 
-            // pstrDatabaseName
-            // 
-            this.pstrDatabaseName.Description = "pstrDatabaseName";
-            this.pstrDatabaseName.Name = "pstrDatabaseName";
-            this.pstrDatabaseName.Visible = false;
-            // 
-            // plngUserID
-            // 
-            this.plngUserID.Description = "plngUserID";
-            this.plngUserID.Name = "plngUserID";
-            this.plngUserID.Type = typeof(int);
-            this.plngUserID.Visible = false;
-            // 
-            // plngCompanyID
-            // 
-            this.plngCompanyID.Description = "plngCompanyID";
-            this.plngCompanyID.Name = "plngCompanyID";
-            this.plngCompanyID.Type = typeof(int);
-            this.plngCompanyID.ValueInfo = "0";
-            this.plngCompanyID.Visible = false;
-            // 
-            // plngDISTNO
-            // 
-            this.plngDISTNO.Description = "plngDISTNO";
-            this.plngDISTNO.Name = "plngDISTNO";
-            this.plngDISTNO.Type = typeof(int);
-            this.plngDISTNO.ValueInfo = "0";
-            this.plngDISTNO.Visible = false;
-            // 
-            // plngFIELDCODE
-            // 
-            this.plngFIELDCODE.Description = "plngFIELDCODE";
-            this.plngFIELDCODE.Name = "plngFIELDCODE";
-            this.plngFIELDCODE.Visible = false;
-            // 
-            // pbooShowBorder
-            // 
-            this.pbooShowBorder.Description = "Show Internal Borders DSP";
-            this.pbooShowBorder.Name = "pbooShowBorder";
-            this.pbooShowBorder.Type = typeof(bool);
-            this.pbooShowBorder.ValueInfo = "True";
-            this.pbooShowBorder.Visible = false;
-            // 
-            // xrCrossBandBox1
-            // 
-            this.xrCrossBandBox1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
-            this.xrCrossBandBox1.BorderWidth = 1.39F;
-            this.xrCrossBandBox1.EndBand = this.bottomMarginBand1;
-            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(560F, 0.40625F);
-            this.xrCrossBandBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "BorderWidth", "Iif(?pbooShowBorder,1.39 ,0 )\n")});
-            this.xrCrossBandBox1.Name = "xrCrossBandBox1";
-            this.xrCrossBandBox1.StartBand = this.Tablix1;
-            this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(560F, 0F);
-            this.xrCrossBandBox1.WidthF = 109.9998F;
             // 
             // xrLabel1
             // 
@@ -285,6 +198,93 @@
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // Dynamic
+            // 
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
+            this.Dynamic.Name = "Dynamic";
+            customSqlQuery1.Name = "PALAR5DDSP";
+            queryParameter1.Name = "plngCompanyID";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter2.Name = "plngDISTNO";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngDISTNO", typeof(int));
+            queryParameter3.Name = "plngFIELDCODE";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngFIELDCODE", typeof(string));
+            customSqlQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1,
+            queryParameter2,
+            queryParameter3});
+            customSqlQuery1.Sql = "SELECT\n*\nFROM PALAR5DDSP\nWHERE CompanyID = @plngCompanyID AND PA_LAR_DISTNO = @pl" +
+    "ngDISTNO AND PA_LAR_FIELDCODE = @plngFIELDCODE";
+            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            customSqlQuery1});
+            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
+            // 
+            // pstrServerName
+            // 
+            this.pstrServerName.Description = "pstrServerName";
+            this.pstrServerName.Name = "pstrServerName";
+            this.pstrServerName.Visible = false;
+            // 
+            // pstrDatabaseName
+            // 
+            this.pstrDatabaseName.Description = "pstrDatabaseName";
+            this.pstrDatabaseName.Name = "pstrDatabaseName";
+            this.pstrDatabaseName.Visible = false;
+            // 
+            // plngUserID
+            // 
+            this.plngUserID.Description = "plngUserID";
+            this.plngUserID.Name = "plngUserID";
+            this.plngUserID.Type = typeof(int);
+            this.plngUserID.Visible = false;
+            // 
+            // plngCompanyID
+            // 
+            this.plngCompanyID.Description = "plngCompanyID";
+            this.plngCompanyID.Name = "plngCompanyID";
+            this.plngCompanyID.Type = typeof(int);
+            this.plngCompanyID.ValueInfo = "0";
+            this.plngCompanyID.Visible = false;
+            // 
+            // plngDISTNO
+            // 
+            this.plngDISTNO.Description = "plngDISTNO";
+            this.plngDISTNO.Name = "plngDISTNO";
+            this.plngDISTNO.Type = typeof(int);
+            this.plngDISTNO.ValueInfo = "0";
+            this.plngDISTNO.Visible = false;
+            // 
+            // plngFIELDCODE
+            // 
+            this.plngFIELDCODE.Description = "plngFIELDCODE";
+            this.plngFIELDCODE.Name = "plngFIELDCODE";
+            this.plngFIELDCODE.Visible = false;
+            // 
+            // pbooShowBorder
+            // 
+            this.pbooShowBorder.Description = "Show Internal Borders DSP";
+            this.pbooShowBorder.Name = "pbooShowBorder";
+            this.pbooShowBorder.Type = typeof(bool);
+            this.pbooShowBorder.ValueInfo = "True";
+            this.pbooShowBorder.Visible = false;
+            // 
+            // xrCrossBandBox1
+            // 
+            this.xrCrossBandBox1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
+            this.xrCrossBandBox1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
+            this.xrCrossBandBox1.BorderWidth = 1.39F;
+            this.xrCrossBandBox1.EndBand = this.bottomMarginBand1;
+            this.xrCrossBandBox1.EndPointFloat = new DevExpress.Utils.PointFloat(560F, 0.40625F);
+            this.xrCrossBandBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "BorderWidth", "Iif(?pbooShowBorder,1.39 ,0 )\n")});
+            this.xrCrossBandBox1.Name = "xrCrossBandBox1";
+            this.xrCrossBandBox1.StartBand = this.Tablix1;
+            this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(560F, 0F);
+            this.xrCrossBandBox1.WidthF = 109.9998F;
             // 
             // xrCrossBandBox2
             // 

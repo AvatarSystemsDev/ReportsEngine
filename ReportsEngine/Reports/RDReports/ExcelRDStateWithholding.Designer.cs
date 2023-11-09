@@ -100,6 +100,9 @@
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pbooUseProcessingDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteBeginningDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteEndingDate = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -1703,6 +1706,27 @@
             this.xrLabel17.StylePriority.UseTextAlignment = false;
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // pbooUseProcessingDate
+            // 
+            this.pbooUseProcessingDate.Description = "Parameter1";
+            this.pbooUseProcessingDate.Name = "pbooUseProcessingDate";
+            this.pbooUseProcessingDate.Type = typeof(bool);
+            this.pbooUseProcessingDate.ValueInfo = "False";
+            // 
+            // pdteBeginningDate
+            // 
+            this.pdteBeginningDate.Description = "Parameter1";
+            this.pdteBeginningDate.Name = "pdteBeginningDate";
+            this.pdteBeginningDate.Type = typeof(System.DateTime);
+            this.pdteBeginningDate.ValueInfo = "2023-11-09";
+            // 
+            // pdteEndingDate
+            // 
+            this.pdteEndingDate.Description = "Parameter1";
+            this.pdteEndingDate.Name = "pdteEndingDate";
+            this.pdteEndingDate.Type = typeof(System.DateTime);
+            this.pdteEndingDate.ValueInfo = "2023-11-09";
+            // 
             // ExcelRDStateWithholding
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1738,7 +1762,10 @@
             this.pstrEndingPropertyNumber,
             this.plngPrintOrder,
             this.plngRDProcessTrackingID,
-            this.Subtitle});
+            this.Subtitle,
+            this.pbooUseProcessingDate,
+            this.pdteBeginningDate,
+            this.pdteEndingDate});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1810,5 +1837,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel36;
         private DevExpress.XtraReports.UI.XRLabel xrLabel41;
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
+        private DevExpress.XtraReports.Parameters.Parameter pbooUseProcessingDate;
+        private DevExpress.XtraReports.Parameters.Parameter pdteBeginningDate;
+        private DevExpress.XtraReports.Parameters.Parameter pdteEndingDate;
     }
 }

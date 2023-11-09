@@ -82,6 +82,9 @@
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pbooUseProcessingDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteBeginningDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteEndingDate = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -1171,6 +1174,27 @@
             this.xrLabel10.Text = "Withheld";
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
+            // pbooUseProcessingDate
+            // 
+            this.pbooUseProcessingDate.Description = "Parameter1";
+            this.pbooUseProcessingDate.Name = "pbooUseProcessingDate";
+            this.pbooUseProcessingDate.Type = typeof(bool);
+            this.pbooUseProcessingDate.ValueInfo = "False";
+            // 
+            // pdteBeginningDate
+            // 
+            this.pdteBeginningDate.Description = "Parameter1";
+            this.pdteBeginningDate.Name = "pdteBeginningDate";
+            this.pdteBeginningDate.Type = typeof(System.DateTime);
+            this.pdteBeginningDate.ValueInfo = "2023-11-09";
+            // 
+            // pdteEndingDate
+            // 
+            this.pdteEndingDate.Description = "Parameter1";
+            this.pdteEndingDate.Name = "pdteEndingDate";
+            this.pdteEndingDate.Type = typeof(System.DateTime);
+            this.pdteEndingDate.ValueInfo = "2023-11-09";
+            // 
             // ExcelRDCheckStateWithholding
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1189,6 +1213,7 @@
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Ledger;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooUseProcessingDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1196,9 +1221,11 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
+            this.pbooUseProcessingDate,
             this.pstrDatabaseName,
             this.plngCompanyID,
             this.plngUserID,
@@ -1206,7 +1233,9 @@
             this.pstrBeginOwner,
             this.pstrEndingOwner,
             this.plngCheckPrintingProcessTrackingID,
-            this.pbooShowCriteria});
+            this.pbooShowCriteria,
+            this.pdteBeginningDate,
+            this.pdteEndingDate});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1262,5 +1291,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
+        private DevExpress.XtraReports.Parameters.Parameter pbooUseProcessingDate;
+        private DevExpress.XtraReports.Parameters.Parameter pdteBeginningDate;
+        private DevExpress.XtraReports.Parameters.Parameter pdteEndingDate;
     }
 }
