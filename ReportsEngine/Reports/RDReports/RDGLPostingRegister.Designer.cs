@@ -934,7 +934,7 @@
             this.Textbox67.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date: </b>\' + FormatString(\'{0:d}\', [PostingDate]) + \'</span>\'\n")});
+                    "g Date:  </b>\' + FormatString(\'{0:d}\', [PostingDate]) + \'</span>\'\n")});
             this.Textbox67.KeepTogether = true;
             this.Textbox67.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60.00001F);
             this.Textbox67.Name = "Textbox67";

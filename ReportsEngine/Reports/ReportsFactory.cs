@@ -235,6 +235,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPaymentByCheckHistory", () => new ExcelPaymentByCheckHistory());
             Reports.Add("SummaryWithholding", () => new SummaryWithholding());
             Reports.Add("ExcelSummaryWithholding", () => new ExcelSummaryWithholding());
+            Reports.Add("CloseProfitAndLossPostingRegister", () => new CloseProfitAndLossPostingRegister());
+            Reports.Add("ExcelCloseProfitAndLossPostingRegister", () => new ExcelCloseProfitAndLossPostingRegister());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

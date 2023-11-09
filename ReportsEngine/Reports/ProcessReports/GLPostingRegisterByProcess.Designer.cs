@@ -760,7 +760,7 @@
             this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Batch:" +
-                    " </b>\' +[BatchDescription] + \'</span>\'\n")});
+                    "  </b>\' +[BatchDescription] + \'</span>\'\n")});
             this.xrRichText1.KeepTogether = true;
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 27.07999F);
             this.xrRichText1.Name = "xrRichText1";
@@ -794,7 +794,7 @@
             this.xrRichText6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date: </b>\' + FormatString(\'{0:d}\', [PostDate]) + \'</span>\'\n")});
+                    "g Date:  </b>\' + FormatString(\'{0:d}\', [PostDate]) + \'</span>\'\n")});
             this.xrRichText6.KeepTogether = true;
             this.xrRichText6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2.079994F);
             this.xrRichText6.Name = "xrRichText6";
@@ -1122,7 +1122,7 @@
             this.xrLabel15.StylePriority.UseForeColor = false;
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
-            this.xrLabel15.Text = "Debit Amt";
+            this.xrLabel15.Text = "Debit";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel16
@@ -1148,7 +1148,7 @@
             this.xrLabel16.StylePriority.UseForeColor = false;
             this.xrLabel16.StylePriority.UsePadding = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
-            this.xrLabel16.Text = "Credit Amt";
+            this.xrLabel16.Text = "Credit";
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // SubBand2
@@ -1349,7 +1349,7 @@
             this.xrLabel44.StylePriority.UseForeColor = false;
             this.xrLabel44.StylePriority.UsePadding = false;
             this.xrLabel44.StylePriority.UseTextAlignment = false;
-            this.xrLabel44.Text = "Credit Amt";
+            this.xrLabel44.Text = "Credit";
             this.xrLabel44.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel43
@@ -1375,7 +1375,7 @@
             this.xrLabel43.StylePriority.UseForeColor = false;
             this.xrLabel43.StylePriority.UsePadding = false;
             this.xrLabel43.StylePriority.UseTextAlignment = false;
-            this.xrLabel43.Text = "Debit Amt";
+            this.xrLabel43.Text = "Debit";
             this.xrLabel43.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel42
@@ -1736,7 +1736,7 @@
             this.xrRichText5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date: </b>\' + FormatString(\'{0:d}\', [PostDate]) + \'</span>\'\n")});
+                    "g Date:  </b>\' + FormatString(\'{0:d}\', [PostDate]) + \'</span>\'\n")});
             this.xrRichText5.KeepTogether = true;
             this.xrRichText5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2.079994F);
             this.xrRichText5.Name = "xrRichText5";

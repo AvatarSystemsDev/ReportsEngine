@@ -913,7 +913,6 @@
             this.Textbox47,
             this.Textbox45,
             this.Textbox64});
-            this.pageHeaderBand1.HeightF = 100F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand1});

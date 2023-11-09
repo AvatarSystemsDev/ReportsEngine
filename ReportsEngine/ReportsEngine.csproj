@@ -443,6 +443,18 @@
     <Compile Include="Reports\CheckReports\ReplacementCheckRegister.Designer.cs">
       <DependentUpon>ReplacementCheckRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ProcessReports\CloseProfitAndLossPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\CloseProfitAndLossPostingRegister.Designer.cs">
+      <DependentUpon>CloseProfitAndLossPostingRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelCloseProfitAndLossPostingRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelCloseProfitAndLossPostingRegister.Designer.cs">
+      <DependentUpon>ExcelCloseProfitAndLossPostingRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\FinancialReports\ComparativeOperatingStatement.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -502,6 +514,12 @@
     </Compile>
     <Compile Include="Reports\CheckReports\ManualCheckList.Designer.cs">
       <DependentUpon>ManualCheckList.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\SplitOwnerDOIByOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\SplitOwnerDOIByOwner.Designer.cs">
+      <DependentUpon>SplitOwnerDOIByOwner.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelPropertyListAllCompanies.cs">
       <SubType>Component</SubType>
@@ -1893,6 +1911,12 @@
     <EmbeddedResource Include="Reports\CheckReports\ReplacementCheckRegister.resx">
       <DependentUpon>ReplacementCheckRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\CloseProfitAndLossPostingRegister.resx">
+      <DependentUpon>CloseProfitAndLossPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\ExcelCloseProfitAndLossPostingRegister.resx">
+      <DependentUpon>ExcelCloseProfitAndLossPostingRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ComparativeOperatingStatement.resx">
       <DependentUpon>ComparativeOperatingStatement.cs</DependentUpon>
     </EmbeddedResource>
@@ -1922,6 +1946,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\CheckReports\ManualCheckList.resx">
       <DependentUpon>ManualCheckList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\SplitOwnerDOIByOwner.resx">
+      <DependentUpon>SplitOwnerDOIByOwner.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelPropertyListAllCompanies.resx">
       <DependentUpon>ExcelPropertyListAllCompanies.cs</DependentUpon>
