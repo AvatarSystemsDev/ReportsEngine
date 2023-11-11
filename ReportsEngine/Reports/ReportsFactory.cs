@@ -4,6 +4,7 @@ using ReportsEngine.Reports.CheckReports;
 using ReportsEngine.Reports.FinancialReports;
 using ReportsEngine.Reports.GLReports;
 using ReportsEngine.Reports.JIBReports;
+using ReportsEngine.Reports.LTMReports;
 using ReportsEngine.Reports.MDReports;
 using ReportsEngine.Reports.PAReports;
 using ReportsEngine.Reports.ProcessReports;
@@ -237,6 +238,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelSummaryWithholding", () => new ExcelSummaryWithholding());
             Reports.Add("CloseProfitAndLossPostingRegister", () => new CloseProfitAndLossPostingRegister());
             Reports.Add("ExcelCloseProfitAndLossPostingRegister", () => new ExcelCloseProfitAndLossPostingRegister());
+            Reports.Add("LTM_LeaseDataSheet", () => new LTM_LeaseDataSheet());
+            Reports.Add("ExcelLTM_LeaseDataSheet", () => new ExcelLTM_LeaseDataSheet());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
