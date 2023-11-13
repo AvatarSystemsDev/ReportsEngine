@@ -407,6 +407,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\ExcelTexasTaxProducerDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ExcelTexasTaxProducerDetail.Designer.cs">
+      <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\LTMReports\ExcelLTM_LeaseDataSheet.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1878,6 +1884,12 @@
     <Compile Include="Reports\FinancialReports\ExcelGeneralLedgerDetail.Designer.cs">
       <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\TexasTaxProducerDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TexasTaxProducerDetail.Designer.cs">
+      <DependentUpon>TexasTaxProducerDetail.cs</DependentUpon>
+    </Compile>
     <Compile Include="Scripts\ExcelGLBudgets.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1905,6 +1917,9 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\ExcelTexasTaxProducerDetail.resx">
+      <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\LTMReports\ExcelLTM_LeaseDataSheet.resx">
       <DependentUpon>ExcelLTM_LeaseDataSheet.cs</DependentUpon>
     </EmbeddedResource>
@@ -2643,6 +2658,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelGeneralLedgerDetail.resx">
       <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TexasTaxProducerDetail.resx">
+      <DependentUpon>TexasTaxProducerDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scripts\ExcelGLBudgets.resx">
       <DependentUpon>ExcelGLBudgets.cs</DependentUpon>

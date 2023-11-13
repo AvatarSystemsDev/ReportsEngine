@@ -240,6 +240,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelCloseProfitAndLossPostingRegister", () => new ExcelCloseProfitAndLossPostingRegister());
             Reports.Add("LTM_LeaseDataSheet", () => new LTM_LeaseDataSheet());
             Reports.Add("ExcelLTM_LeaseDataSheet", () => new ExcelLTM_LeaseDataSheet());
+            Reports.Add("TexasTaxProducerDetail", () => new TexasTaxProducerDetail());
+            Reports.Add("ExcelTexasTaxProducerDetail", () => new ExcelTexasTaxProducerDetail());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

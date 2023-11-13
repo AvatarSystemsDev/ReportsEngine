@@ -228,6 +228,27 @@ namespace ReportsEngine.Services
                 {
                     AwaitParameterInputPassed = true;
                     report.RequestParameters = (parameters["pbooAwaitParameterInput"].ToString().ToLower() == "true");
+                    bool parameterExists = false;
+                    foreach (var param in report.Parameters)
+                    {
+                        if (param.Name == "pbooAwaitParameterInput")
+                        {
+                            parameterExists = true;
+                            break;
+                        }
+                    }
+
+                    if (parameterExists)
+                    {
+                        try
+                        {
+                            report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                        }
+                        catch (Exception ex)
+                        {
+
+                        }
+                    }
                 }
                 else if (parameterName.Contains("pstrSelect"))
                 {

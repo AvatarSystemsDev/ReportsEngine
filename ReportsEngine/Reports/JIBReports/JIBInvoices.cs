@@ -15,10 +15,10 @@ namespace ReportsEngine.Reports.FinancialReports
             InitializeComponent();
             xrPageCounter.BeforePrint += xrPageCounter_BeforePrint;
             pageHeaderBand1.BeforePrint += PageHeaderBand_BeforePrint;
-            groupFooterBand3.BeforePrint += GroupFooterBand1_BeforePrint;
+            OwnerGroup.BeforePrint += OwnerGroup_BeforePrint;
         }
 
-        private void GroupFooterBand1_BeforePrint(object sender, CancelEventArgs e)
+        private void OwnerGroup_BeforePrint(object sender, CancelEventArgs e)
         {
             pageIndex = 1;
         }
@@ -31,7 +31,7 @@ namespace ReportsEngine.Reports.FinancialReports
         private void xrPageCounter_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Text = "Page " + pageIndex;
+            label.Text = ""+pageIndex;
             pageIndex++;
         }
 

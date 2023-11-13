@@ -12,56 +12,88 @@ namespace ReportsEngine.Reports.JIBReports
 {
     public partial class JIBStatement : DevExpress.XtraReports.UI.XtraReport
     {
-        private int pageIndex = 0;
+        private int pageIndexStatement;
+        private bool isSubreport;
+        private bool didOnce;
+        private bool didAnotherThingBefore;
+        private bool didAnotherThingBeforeThat;
+
+
+        private int totalPages;
         public JIBStatement()
         {
             InitializeComponent();
             xrPageCounter.BeforePrint += xrPageCounter_BeforePrint;
-            pageHeaderBand.BeforePrint += PageHeaderBand_PrintOnPage;
-            groupFooterBand1.BeforePrint  += GroupFooterBand1_BeforePrint;
-            GroupHeaderPageBreak.BeforePrint += GroupHeaderPageBreak_PrintOnPage;
+            //pageHeaderBand.BeforePrint += PageHeaderBand_PrintOnPage;
+            //groupFooterBand1.BeforePrint  += GroupFooterBand1_BeforePrint;
+            //GroupHeaderPageBreak.BeforePrint += GroupHeaderPageBreak_PrintOnPage;
+            //JIBInvoiceSubBand.BeforePrint += JIBInvoiceSubBand_BeforePrint;
+            //JIBInvoiceSubBand.AfterPrint += JIBInvoiceSubBand_AfterPrint;
+            //StartInvoicesBand.BeforePrint += StartInvoicesBand_BeforePrint;
+            //AfterJIBInvoiceSubBand.BeforePrint += AfterJIBInvoiceSubBand_BeforePrint;
+            PageFooterStatement.BeforePrint += PageFooter_BeforePrint;
+            this.BeforePrint += JIBStatement_BeforePrint;
+            InvoiceSubreport.BeforePrint += InvoiceSubreport_BeforePrint;
+            InvoiceSubreport.AfterPrint += InvoiceSubreport_AfterPrint;
+
         }
 
-        private void GroupHeaderPageBreak_PrintOnPage(object sender, CancelEventArgs e)
+        private void InvoiceSubreport_AfterPrint(object sender, EventArgs e)
         {
-
+            pageIndexStatement = -1;
+            isSubreport = false;
         }
 
-        private void GroupFooterBand1_BeforePrint(object sender, CancelEventArgs e)
+        private void InvoiceSubreport_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageIndex = 0;
+            pageIndexStatement = 0;
+            isSubreport = true;
         }
 
-        private void PageHeaderBand_PrintOnPage(object sender, CancelEventArgs e)
+        private void PageFooter_BeforePrint(object sender, CancelEventArgs e)
         {
-            // Access the report's PrintingSystem
-            //PrintingSystemBase printingSystem = this.PrintingSystem;
-            //// Get the current page number
-            //int pageNumber = printingSystem.PageCount;
-
-            //// Set visibility based on whether the page number is even or odd
-            //// For example, to only show the group header on odd pages:
-            //GroupHeaderPageBreak.Visible = (pageNumber % 2 != 0);
-
-
-
-            //XRLabel label = sender as XRLabel;
-            //if (label != null)
-            //{
-            //    int pageNumber = e.PageIndex + 1; // Adding 1 because PageIndex is zero-based
-            //    if (pageNumber%2==0)
-            //    {
-            //        pageBreak
-            //    }
-            //}
+            if (isSubreport == false && !didOnce && didAnotherThingBefore && didAnotherThingBeforeThat)
+            {
+                pageIndexStatement+=1;
+            }
+            else if (isSubreport)
+            {
+                pageIndexStatement = 1;
+            }
+            if (didAnotherThingBefore)
+            {
+                didAnotherThingBeforeThat = true;
+            }
+            didAnotherThingBefore = true;
+            didOnce = !didOnce;
+            totalPages += 1;
         }
 
         private void xrPageCounter_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Text = "Page " + pageIndex;
-            pageIndex++;
+            if (pageIndexStatement == 0 || isSubreport)
+            {
+                label.Text = "";
+            }
+            else if (pageIndexStatement == -1)
+            {
+                label.Text = "Page 1";
+            }
+            else
+            {
+                label.Text = "Page " + pageIndexStatement;
+            }
         }
 
+        private void JIBStatement_BeforePrint(object sender, CancelEventArgs e)
+        {
+            pageIndexStatement = -1;
+            totalPages = 1;
+            isSubreport = false;
+            didOnce = false;
+            didAnotherThingBefore = false;
+            didAnotherThingBeforeThat = false;
+        }
     }
 }

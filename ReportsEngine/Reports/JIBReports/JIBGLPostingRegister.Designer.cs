@@ -1416,7 +1416,7 @@
             this.plngJIBProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings2.DataMember = "DSJIBProcessDatesLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
-            dynamicListLookUpSettings2.DisplayMember = "ProcessingDate";
+            dynamicListLookUpSettings2.DisplayMember = "FormattedDate";
             dynamicListLookUpSettings2.ValueMember = "ID";
             this.plngJIBProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
