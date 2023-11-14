@@ -721,7 +721,7 @@ namespace ReportsEngine.Reports.RDReports
             this.plngCheckPrintingProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings3.DataMember = "CheckPrintingProcessTrackingDate";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "ProcessingDate";
+            dynamicListLookUpSettings3.DisplayMember = "FormattedDate";
             dynamicListLookUpSettings3.ValueMember = "ID";
             this.plngCheckPrintingProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings3;
             // 

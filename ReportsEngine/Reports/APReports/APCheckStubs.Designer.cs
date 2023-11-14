@@ -42,6 +42,7 @@
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Tablix1_Details_DetailBand = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
@@ -83,7 +84,6 @@
             this.pbooMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
@@ -126,6 +126,23 @@
             this.Tablix1_Details_DetailBand.HeightF = 43.83002F;
             this.Tablix1_Details_DetailBand.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1_Details_DetailBand.Name = "Tablix1_Details_DetailBand";
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 43.83001F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSAPCheckHeader.CheckID"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorNumber", null, "DSAPCheckHeader.VendorNumber"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorName", null, "DSAPCheckHeader.VendorName"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strCheckNumber", null, "DSAPCheckHeader.CheckNumber"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("dblCheckAmount", null, "DSAPCheckHeader.CheckAmount"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("dteCheckDate", null, "DSAPCheckHeader.CheckDate"));
+            this.xrSubreport1.ReportSource = new ReportsEngine.Reports.RDReports.ExcelAPCheckRemittanceSubreport();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(787.8499F, 3.814697E-06F);
             // 
             // Subtitle
             // 
@@ -655,23 +672,6 @@
             this.plngCompanyID.Type = typeof(int);
             this.plngCompanyID.ValueInfo = "0";
             this.plngCompanyID.Visible = false;
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 43.83001F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSAPCheckHeader.CheckID"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorNumber", null, "DSAPCheckHeader.VendorNumber"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorName", null, "DSAPCheckHeader.VendorName"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strCheckNumber", null, "DSAPCheckHeader.CheckNumber"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("dblCheckAmount", null, "DSAPCheckHeader.CheckAmount"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("dteCheckDate", null, "DSAPCheckHeader.CheckDate"));
-            this.xrSubreport1.ReportSource = new ReportsEngine.Reports.RDReports.ExcelAPCheckRemittanceSubreport();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(787.8499F, 3.814697E-06F);
             // 
             // APCheckStubs
             // 

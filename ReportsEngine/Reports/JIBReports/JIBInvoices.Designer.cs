@@ -42,8 +42,10 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JIBInvoices));
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
@@ -178,17 +180,17 @@
             storedProcQuery3.Name = "DSOwnersLookup";
             queryParameter4.Name = "@plngCompanyID";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter4});
-            storedProcQuery3.StoredProcName = "Owners_ReportLookup";
+            storedProcQuery3.StoredProcName = "JIBStatementOwner_ReportLookup";
             storedProcQuery4.Name = "DSJIB_Invoices";
             queryParameter5.Name = "@plngJIBProcessTrackingID";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngJIBProcessTrackingID", typeof(int));
             queryParameter6.Name = "@plngJIBPrintedStatementID";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("iif(?plngJIBProcessTrackingID<1,?plngJIBStatementID,0)", typeof(int));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngJIBStatementID", typeof(int));
             queryParameter7.Name = "@pbooPrintAccountDescription";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooPrintAccountDescription", typeof(bool));
@@ -198,19 +200,27 @@
             queryParameter9.Name = "@pstrEndingInvoiceNumber";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter9.Value = new DevExpress.DataAccess.Expression("?pstrEndingInvoiceNumber", typeof(string));
+            queryParameter10.Name = "@pstrBeginningOwnerNumber";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
+            queryParameter11.Name = "@pstrEndingOwnerNumber";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
             storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter5,
             queryParameter6,
             queryParameter7,
             queryParameter8,
-            queryParameter9});
+            queryParameter9,
+            queryParameter10,
+            queryParameter11});
             storedProcQuery4.StoredProcName = "Report_JIBInvoices";
             storedProcQuery5.Name = "DSInvoiceNumberLookup";
-            queryParameter10.Name = "@plngJIBProcessTrackingID";
-            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngJIBProcessTrackingID", typeof(int));
+            queryParameter12.Name = "@plngJIBProcessTrackingID";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngJIBProcessTrackingID", typeof(int));
             storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter10});
+            queryParameter12});
             storedProcQuery5.StoredProcName = "JIBInvoiceNumbers_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -582,11 +592,11 @@
             this.xrLabel15.CanGrow = false;
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel15.KeepTogether = true;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(401.7299F, 44.99998F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(401.7298F, 44.00002F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(76.53F, 17F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(76.53F, 17.99997F);
             this.xrLabel15.StylePriority.UseFont = false;
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
@@ -619,11 +629,11 @@
             this.Textbox17.CanGrow = false;
             this.Textbox17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox17.KeepTogether = true;
-            this.Textbox17.LocationFloat = new DevExpress.Utils.PointFloat(401.7299F, 27.00003F);
+            this.Textbox17.LocationFloat = new DevExpress.Utils.PointFloat(401.7298F, 27.00001F);
             this.Textbox17.Multiline = true;
             this.Textbox17.Name = "Textbox17";
             this.Textbox17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox17.SizeF = new System.Drawing.SizeF(76.52994F, 16.99997F);
+            this.Textbox17.SizeF = new System.Drawing.SizeF(76.52994F, 17.00001F);
             this.Textbox17.StylePriority.UseFont = false;
             this.Textbox17.StylePriority.UsePadding = false;
             this.Textbox17.StylePriority.UseTextAlignment = false;
@@ -1242,7 +1252,7 @@
             this.xrLabel28,
             this.CompanyName,
             this.CompanyName2});
-            this.pageHeaderBand1.HeightF = 73.95833F;
+            this.pageHeaderBand1.HeightF = 68.95833F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -1255,7 +1265,7 @@
             this.xrLabel28.CanGrow = false;
             this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Segoe UI", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel28.KeepTogether = true;
-            this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(0F, 50F);
+            this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(0F, 45F);
             this.xrLabel28.Multiline = true;
             this.xrLabel28.Name = "xrLabel28";
             this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -1273,7 +1283,7 @@
             this.CompanyName.BorderWidth = 1F;
             this.CompanyName.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DSCompaniesLookup].[Description]")});
-            this.CompanyName.Font = new DevExpress.Drawing.DXFont("Segoe UI", 12F);
+            this.CompanyName.Font = new DevExpress.Drawing.DXFont("Segoe UI", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.CompanyName.KeepTogether = true;
             this.CompanyName.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.CompanyName.Multiline = true;
@@ -1298,7 +1308,7 @@
             this.CompanyName2.Multiline = true;
             this.CompanyName2.Name = "CompanyName2";
             this.CompanyName2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.CompanyName2.SizeF = new System.Drawing.SizeF(770.0001F, 25F);
+            this.CompanyName2.SizeF = new System.Drawing.SizeF(770F, 20F);
             this.CompanyName2.StylePriority.UsePadding = false;
             this.CompanyName2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -1390,10 +1400,9 @@
             // pbooPrintAccountDescription
             // 
             this.pbooPrintAccountDescription.Description = "Print Account Description";
-            this.pbooPrintAccountDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooAwaitParameterInput")});
             this.pbooPrintAccountDescription.Name = "pbooPrintAccountDescription";
             this.pbooPrintAccountDescription.Type = typeof(bool);
+            this.pbooPrintAccountDescription.ValueInfo = "False";
             // 
             // pstrBeginningOwnerNumber
             // 
@@ -1403,9 +1412,10 @@
             dynamicListLookUpSettings4.DataMember = "DSOwnersLookup";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "Description";
+            dynamicListLookUpSettings4.FilterString = "[JIBProcessTrackingID] = ?plngJIBProcessTrackingID Or [JIBProcessTrackingID] = 0 " +
+    "Or [JIBStatementID] = ?plngJIBStatementID";
             dynamicListLookUpSettings4.ValueMember = "Number";
             this.pstrBeginningOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings4;
-            this.pstrBeginningOwnerNumber.Visible = false;
             // 
             // pstrEndingOwnerNumber
             // 
@@ -1415,15 +1425,14 @@
             dynamicListLookUpSettings5.DataMember = "DSOwnersLookup";
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
             dynamicListLookUpSettings5.DisplayMember = "Description";
+            dynamicListLookUpSettings5.FilterString = "[JIBProcessTrackingID] = ?plngJIBProcessTrackingID Or [JIBProcessTrackingID] = 0 " +
+    "Or [JIBStatementID] = ?plngJIBStatementID";
             dynamicListLookUpSettings5.ValueMember = "Number";
             this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings5;
-            this.pstrEndingOwnerNumber.Visible = false;
             // 
             // boolPrintRemit
             // 
             this.boolPrintRemit.Description = "Print Remit";
-            this.boolPrintRemit.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooAwaitParameterInput")});
             this.boolPrintRemit.Name = "boolPrintRemit";
             this.boolPrintRemit.Type = typeof(bool);
             this.boolPrintRemit.ValueInfo = "True";

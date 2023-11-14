@@ -1799,6 +1799,7 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_DSJEBatchEditList";
             sourceNode2.Alias = null;
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"517\" />";
             source2.DataMember = "DSJEBatchEditList";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_DSJEBatchEditList";
@@ -1824,7 +1825,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "VendorNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CreditAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DebitAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchNumberName")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchNumberName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PostDate")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_DSEditListBatchesLookup";
             sourceNode3.Alias = null;

@@ -566,7 +566,7 @@
             this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel18.SizeF = new System.Drawing.SizeF(89.9996F, 25F);
             this.xrLabel18.StylePriority.UseTextAlignment = false;
-            this.xrLabel18.Text = "Ded. Amount";
+            this.xrLabel18.Text = "Deducts";
             this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel17
@@ -581,9 +581,10 @@
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel17.SizeF = new System.Drawing.SizeF(74.47845F, 25F);
-            this.xrLabel17.Text = "Vol/ Price";
-            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(111.8102F, 25F);
+            this.xrLabel17.StylePriority.UseTextAlignment = false;
+            this.xrLabel17.Text = "Vol/Unit Price";
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox7
             // 
@@ -615,7 +616,7 @@
             this.Textbox11.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox11.SizeF = new System.Drawing.SizeF(89.9996F, 25F);
             this.Textbox11.StylePriority.UseTextAlignment = false;
-            this.Textbox11.Text = "Tax Amount";
+            this.Textbox11.Text = "Taxes";
             this.Textbox11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox10
@@ -631,7 +632,7 @@
             this.Textbox10.Name = "Textbox10";
             this.Textbox10.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox10.SizeF = new System.Drawing.SizeF(90.00003F, 25F);
-            this.Textbox10.Text = "Gross Amt.";
+            this.Textbox10.Text = "Gross";
             this.Textbox10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox9
@@ -646,7 +647,7 @@
             this.Textbox9.Multiline = true;
             this.Textbox9.Name = "Textbox9";
             this.Textbox9.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox9.SizeF = new System.Drawing.SizeF(167.1449F, 25F);
+            this.Textbox9.SizeF = new System.Drawing.SizeF(134.8532F, 25F);
             this.Textbox9.Text = "Invoice Description";
             this.Textbox9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -658,13 +659,14 @@
             this.Textbox8.BorderWidth = 1F;
             this.Textbox8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox8.KeepTogether = true;
-            this.Textbox8.LocationFloat = new DevExpress.Utils.PointFloat(257.7698F, 0F);
+            this.Textbox8.LocationFloat = new DevExpress.Utils.PointFloat(225.4782F, 0F);
             this.Textbox8.Multiline = true;
             this.Textbox8.Name = "Textbox8";
             this.Textbox8.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox8.SizeF = new System.Drawing.SizeF(47.39511F, 25F);
-            this.Textbox8.Text = "Date";
-            this.Textbox8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.Textbox8.SizeF = new System.Drawing.SizeF(79.68668F, 25F);
+            this.Textbox8.StylePriority.UseTextAlignment = false;
+            this.Textbox8.Text = "Prod/Date";
+            this.Textbox8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Line1
             // 
@@ -696,7 +698,7 @@
             this.Textbox12.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox12.SizeF = new System.Drawing.SizeF(109.8997F, 25F);
             this.Textbox12.StylePriority.UseTextAlignment = false;
-            this.Textbox12.Text = "Net Amt.";
+            this.Textbox12.Text = "Owner Net";
             this.Textbox12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // groupHeaderBand1

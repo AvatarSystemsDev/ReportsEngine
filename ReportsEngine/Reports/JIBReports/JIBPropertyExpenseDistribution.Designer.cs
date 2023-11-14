@@ -911,7 +911,7 @@
             this.xrLabel24.StylePriority.UseFont = false;
             this.xrLabel24.StylePriority.UsePadding = false;
             this.xrLabel24.StylePriority.UseTextAlignment = false;
-            this.xrLabel24.Text = "DOI Date:";
+            this.xrLabel24.Text = "DOI Date";
             this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel25
@@ -981,7 +981,7 @@
             this.xrLabel27.StylePriority.UseFont = false;
             this.xrLabel27.StylePriority.UsePadding = false;
             this.xrLabel27.StylePriority.UseTextAlignment = false;
-            this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel28
             // 

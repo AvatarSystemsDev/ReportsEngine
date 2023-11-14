@@ -42,6 +42,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelJIBInvoices));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -153,12 +155,20 @@
             queryParameter9.Name = "@pstrEndingInvoiceNumber";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter9.Value = new DevExpress.DataAccess.Expression("?pstrEndingInvoiceNumber", typeof(string));
+            queryParameter10.Name = "@pstrBeginningOwnerNumber";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
+            queryParameter11.Name = "@pstrEndingOwnerNumber";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
             storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter5,
             queryParameter6,
             queryParameter7,
             queryParameter8,
-            queryParameter9});
+            queryParameter9,
+            queryParameter10,
+            queryParameter11});
             storedProcQuery4.StoredProcName = "Report_JIBInvoices";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,

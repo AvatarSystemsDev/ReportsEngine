@@ -407,10 +407,10 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Reports\ExcelTexasTaxProducerDetail.cs">
+    <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\ExcelTexasTaxProducerDetail.Designer.cs">
+    <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.Designer.cs">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\LTMReports\ExcelLTM_LeaseDataSheet.cs">
@@ -556,6 +556,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\ExcelRDStateWithholding.Designer.cs">
       <DependentUpon>ExcelRDStateWithholding.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelTexasTaxProducerSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelTexasTaxProducerSummary.Designer.cs">
+      <DependentUpon>ExcelTexasTaxProducerSummary.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\PropertyListAllCompanies.cs">
       <SubType>Component</SubType>
@@ -1505,6 +1511,12 @@
     <Compile Include="Reports\RDReports\SuspenseByProperty.Designer.cs">
       <DependentUpon>SuspenseByProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\TexasTaxProducerSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\TexasTaxProducerSummary.Designer.cs">
+      <DependentUpon>TexasTaxProducerSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\TaxReports\ExcelThe1099Form.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1884,10 +1896,10 @@
     <Compile Include="Reports\FinancialReports\ExcelGeneralLedgerDetail.Designer.cs">
       <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\TexasTaxProducerDetail.cs">
+    <Compile Include="Reports\RDReports\TexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\TexasTaxProducerDetail.Designer.cs">
+    <Compile Include="Reports\RDReports\TexasTaxProducerDetail.Designer.cs">
       <DependentUpon>TexasTaxProducerDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Scripts\ExcelGLBudgets.cs">
@@ -1917,7 +1929,7 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Reports\ExcelTexasTaxProducerDetail.resx">
+    <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\LTMReports\ExcelLTM_LeaseDataSheet.resx">
@@ -1991,6 +2003,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDStateWithholding.resx">
       <DependentUpon>ExcelRDStateWithholding.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerSummary.resx">
+      <DependentUpon>ExcelTexasTaxProducerSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\PropertyListAllCompanies.resx">
       <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
@@ -2462,6 +2477,9 @@
     <EmbeddedResource Include="Reports\RDReports\SuspenseByProperty.resx">
       <DependentUpon>SuspenseByProperty.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\TexasTaxProducerSummary.resx">
+      <DependentUpon>TexasTaxProducerSummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\TaxReports\ExcelThe1099Form.resx">
       <DependentUpon>ExcelThe1099Form.cs</DependentUpon>
     </EmbeddedResource>
@@ -2659,7 +2677,7 @@
     <EmbeddedResource Include="Reports\FinancialReports\ExcelGeneralLedgerDetail.resx">
       <DependentUpon>ExcelGeneralLedgerDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\TexasTaxProducerDetail.resx">
+    <EmbeddedResource Include="Reports\RDReports\TexasTaxProducerDetail.resx">
       <DependentUpon>TexasTaxProducerDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Scripts\ExcelGLBudgets.resx">

@@ -99,6 +99,8 @@
             this.pstrBeginningInvoiceNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingInvoiceNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooAwaitParameterInput = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooPrintReportInDuplex = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowInvoice = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -961,6 +963,20 @@
             this.pbooAwaitParameterInput.Type = typeof(bool);
             this.pbooAwaitParameterInput.ValueInfo = "False";
             // 
+            // pbooPrintReportInDuplex
+            // 
+            this.pbooPrintReportInDuplex.Description = "Print Report in Duplex";
+            this.pbooPrintReportInDuplex.Name = "pbooPrintReportInDuplex";
+            this.pbooPrintReportInDuplex.Type = typeof(bool);
+            this.pbooPrintReportInDuplex.ValueInfo = "False";
+            // 
+            // pbooShowInvoice
+            // 
+            this.pbooShowInvoice.Description = "Show Invoices";
+            this.pbooShowInvoice.Name = "pbooShowInvoice";
+            this.pbooShowInvoice.Type = typeof(bool);
+            this.pbooShowInvoice.ValueInfo = "False";
+            // 
             // ExcelJIBStatement
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1013,7 +1029,9 @@
             this.boolPrintRemit,
             this.pstrBeginningInvoiceNumber,
             this.pstrEndingInvoiceNumber,
-            this.pbooAwaitParameterInput});
+            this.pbooAwaitParameterInput,
+            this.pbooPrintReportInDuplex,
+            this.pbooShowInvoice});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1075,5 +1093,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel29;
         private DevExpress.XtraReports.UI.XRLabel xrLabel27;
         private DevExpress.XtraReports.Parameters.Parameter pbooAwaitParameterInput;
+        private DevExpress.XtraReports.Parameters.Parameter pbooPrintReportInDuplex;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowInvoice;
     }
 }

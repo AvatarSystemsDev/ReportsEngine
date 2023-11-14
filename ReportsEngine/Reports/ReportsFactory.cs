@@ -242,6 +242,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelLTM_LeaseDataSheet", () => new ExcelLTM_LeaseDataSheet());
             Reports.Add("TexasTaxProducerDetail", () => new TexasTaxProducerDetail());
             Reports.Add("ExcelTexasTaxProducerDetail", () => new ExcelTexasTaxProducerDetail());
+            Reports.Add("TexasTaxProducerSummary", () => new TexasTaxProducerSummary());
+            Reports.Add("ExcelTexasTaxProducerSummary", () => new ExcelTexasTaxProducerSummary());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

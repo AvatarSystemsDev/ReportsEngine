@@ -793,8 +793,8 @@
             this.xrRichText6.BorderWidth = 1F;
             this.xrRichText6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date:  </b>\' + FormatString(\'{0:d}\', [PostDate]) + \'</span>\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
+                    "e:  </b>\' + FormatString(\'{0:d}\', [PostDate]) + \'</span>\'\n")});
             this.xrRichText6.KeepTogether = true;
             this.xrRichText6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2.079994F);
             this.xrRichText6.Name = "xrRichText6";
@@ -1735,8 +1735,8 @@
             this.xrRichText5.BorderWidth = 1F;
             this.xrRichText5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date:  </b>\' + FormatString(\'{0:d}\', [PostDate]) + \'</span>\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
+                    "e:  </b>\' + FormatString(\'{0:d}\', [PostDate]) + \'</span>\'\n")});
             this.xrRichText5.KeepTogether = true;
             this.xrRichText5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2.079994F);
             this.xrRichText5.Name = "xrRichText5";

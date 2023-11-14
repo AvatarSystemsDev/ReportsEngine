@@ -1619,6 +1619,7 @@
             this.groupFooterBand2.HeightF = 17.00001F;
             this.groupFooterBand2.Level = 1;
             this.groupFooterBand2.Name = "groupFooterBand2";
+            this.groupFooterBand2.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
             // 
             // RDGLPostingRegister
             // 

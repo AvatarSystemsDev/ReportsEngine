@@ -633,7 +633,7 @@
             this.xrLabel95,
             this.xrLabel96,
             this.xrLabel97});
-            this.Tablix4.HeightF = 34.00001F;
+            this.Tablix4.HeightF = 39.13205F;
             this.Tablix4.MultiColumn.ColumnSpacing = 50F;
             this.Tablix4.Name = "Tablix4";
             this.Tablix4.SortFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
