@@ -408,6 +408,30 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\APReports\APOutstandingAccountsPayableDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APOutstandingAccountsPayableDetail.Designer.cs">
+      <DependentUpon>APOutstandingAccountsPayableDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\APOutstandingAccountsPayableDetailWithProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APOutstandingAccountsPayableDetailWithProperty.Designer.cs">
+      <DependentUpon>APOutstandingAccountsPayableDetailWithProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetail.Designer.cs">
+      <DependentUpon>ExcelAPOutstandingAccountsPayableDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetailWithProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetailWithProperty.Designer.cs">
+      <DependentUpon>ExcelAPOutstandingAccountsPayableDetailWithProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1930,6 +1954,18 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\APReports\APOutstandingAccountsPayableDetail.resx">
+      <DependentUpon>APOutstandingAccountsPayableDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APOutstandingAccountsPayableDetailWithProperty.resx">
+      <DependentUpon>APOutstandingAccountsPayableDetailWithProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetail.resx">
+      <DependentUpon>ExcelAPOutstandingAccountsPayableDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetailWithProperty.resx">
+      <DependentUpon>ExcelAPOutstandingAccountsPayableDetailWithProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
     </EmbeddedResource>

@@ -245,7 +245,9 @@ namespace ReportsEngine.Reports
             Reports.Add("TexasTaxProducerSummary", () => new TexasTaxProducerSummary());
             Reports.Add("ExcelTexasTaxProducerSummary", () => new ExcelTexasTaxProducerSummary());
             Reports.Add("APOutstandingAccountsPayableDetailWithProperty", () => new APOutstandingAccountsPayableDetailWithProperty());
-            Reports.Add("ExcelAPOutstandingAccountsPayableDetailWithProperty", () => new ExcelAPOutstandingAccountsPayableDetailWithProperty());    
+            Reports.Add("ExcelAPOutstandingAccountsPayableDetailWithProperty", () => new ExcelAPOutstandingAccountsPayableDetailWithProperty());
+            Reports.Add("APPayablesDetail", () => new APPayablesDetail());
+            Reports.Add("ExcelAPPayablesDetail", () => new ExcelAPPayablesDetail());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
+using System.Drawing.Text;
 
 namespace ReportsEngine
 {
@@ -12,8 +13,10 @@ namespace ReportsEngine
         public RDChecks()
         {
             InitializeComponent();
+
             xrPages.BeforePrint += XrPages_BeforePrint;
             RemittanceDetailBand.BeforePrint += RemittanceDetailBand_BeforePrint;
+            CheckBegin.BeforePrint += CheckBegin_BeforePrint;
             CheckEnd.BeforePrint += CheckEnd_BeforePrint;
             xrNonNegotiablePicture.BeforePrint += XrNonNegotiablePicture_BeforePrint;
             xrMICRAccountNumber.BeforePrint += XrMICRAccountNumber_BeforePrint;
@@ -21,27 +24,32 @@ namespace ReportsEngine
             xrCheckNumber.BeforePrint += XrCheckNumber_BeforePrint;
         }
 
+        private void CheckBegin_BeforePrint(object sender, CancelEventArgs e)
+        {
+            pageCounter = 1;
+        }
+
         private void XrCheckNumber_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter > 1;
+            label.Visible = pageCounter <= 2;
         }
 
         private void XrMICRTransitNumber_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter > 1;
+            label.Visible = pageCounter <= 2;
         }
 
         private void XrMICRAccountNumber_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter > 1;
+            label.Visible = pageCounter <= 2;
         }
 
         private void CheckEnd_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            //pageCounter = 1;
         }
 
 
@@ -53,7 +61,6 @@ namespace ReportsEngine
 
         private void RemittanceDetailBand_BeforePrint(object sender, CancelEventArgs e)
         {
-            xrNonNegotiablePicture.Visible = true;
         }
 
         private void XrPages_BeforePrint(object sender, CancelEventArgs e)
@@ -76,7 +83,7 @@ namespace ReportsEngine
         private void XrNonNegotiablePicture_BeforePrint(object sender, CancelEventArgs e)
         {
             XRPictureBox picture = sender as XRPictureBox;
-            picture.Visible = pageCounter <= 1;
+            picture.Visible = pageCounter > 2;
         }
 
     }

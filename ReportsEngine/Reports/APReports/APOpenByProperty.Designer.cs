@@ -1148,6 +1148,8 @@
             // pdteBeginningPostDate
             // 
             this.pdteBeginningPostDate.Description = "Beginning Post Date";
+            this.pdteBeginningPostDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteBeginningPostDate.Name = "pdteBeginningPostDate";
             this.pdteBeginningPostDate.Type = typeof(System.DateTime);
             this.pdteBeginningPostDate.ValueInfo = "1900-01-01";
@@ -1155,9 +1157,11 @@
             // pdteEndingPostDate
             // 
             this.pdteEndingPostDate.Description = "Ending Post Date";
+            this.pdteEndingPostDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteEndingPostDate.Name = "pdteEndingPostDate";
             this.pdteEndingPostDate.Type = typeof(System.DateTime);
-            this.pdteEndingPostDate.ValueInfo = "9999-12-31";
+            this.pdteEndingPostDate.ValueInfo = "2023-11-16";
             // 
             // plngReportType
             // 
@@ -1556,7 +1560,7 @@
             this.xrRichText1.BorderWidth = 1F;
             this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", resources.GetString("xrRichText1.ExpressionBindings"))});
-            this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrRichText1.KeepTogether = true;
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrRichText1.Name = "xrRichText1";

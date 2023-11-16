@@ -32,6 +32,8 @@ namespace ReportsEngine
             DefaultWebDocumentViewerContainer.Register<DocumentOperationService, ServiceOperations>();
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
             MVCxReportDesigner.StaticInitialize();
+            System.Drawing.Text.PrivateFontCollection privateFonts = new System.Drawing.Text.PrivateFontCollection();
+            privateFonts.AddFontFile(Server.MapPath("~/Views/MICRE13B.TTF"));
             AreaRegistration.RegisterAllAreas();
 
             GlobalConfiguration.Configure(WebApiConfig.Register);

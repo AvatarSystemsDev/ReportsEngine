@@ -1006,7 +1006,7 @@
             this.ReportTitle.SizeF = new System.Drawing.SizeF(1018.826F, 30F);
             this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.StylePriority.UsePadding = false;
-            this.ReportTitle.Text = "Netted Revenue Distribution Report";
+            this.ReportTitle.Text = "Combined Revenue Distribution Report";
             this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox158
@@ -2352,7 +2352,7 @@
             this.xrLabel54.SizeF = new System.Drawing.SizeF(1018.826F, 30F);
             this.xrLabel54.StylePriority.UseFont = false;
             this.xrLabel54.StylePriority.UsePadding = false;
-            this.xrLabel54.Text = "Netted Revenue Distribution Report";
+            this.xrLabel54.Text = "Combined Revenue Distribution Report";
             this.xrLabel54.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel55

@@ -69,13 +69,13 @@
             this.Textbox10 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox9 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Line1 = new DevExpress.XtraReports.UI.XRShape();
             this.Textbox12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.Line1 = new DevExpress.XtraReports.UI.XRShape();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -670,20 +670,6 @@
             this.Textbox8.Text = "Prod/Date";
             this.Textbox8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
-            // Line1
-            // 
-            this.Line1.Angle = 90;
-            this.Line1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Line1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.Line1.ForeColor = System.Drawing.Color.Black;
-            this.Line1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.Line1.Name = "Line1";
-            this.Line1.Shape = shapeLine1;
-            this.Line1.SizeF = new System.Drawing.SizeF(784.9F, 2F);
-            this.Line1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
             // Textbox12
             // 
             this.Textbox12.BorderColor = System.Drawing.Color.Black;
@@ -700,6 +686,27 @@
             this.Textbox12.StylePriority.UseTextAlignment = false;
             this.Textbox12.Text = "Owner Net";
             this.Textbox12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // SubBand1
+            // 
+            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Line1});
+            this.SubBand1.HeightF = 4F;
+            this.SubBand1.Name = "SubBand1";
+            // 
+            // Line1
+            // 
+            this.Line1.Angle = 90;
+            this.Line1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Line1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.Line1.ForeColor = System.Drawing.Color.Black;
+            this.Line1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.Line1.Name = "Line1";
+            this.Line1.Shape = shapeLine1;
+            this.Line1.SizeF = new System.Drawing.SizeF(796.8746F, 2F);
+            this.Line1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // groupHeaderBand1
             // 
@@ -764,13 +771,6 @@
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // SubBand1
-            // 
-            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Line1});
-            this.SubBand1.HeightF = 4F;
-            this.SubBand1.Name = "SubBand1";
             // 
             // RDCheckRemittanceSubreport
             // 

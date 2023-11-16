@@ -971,7 +971,7 @@
             this.Textbox33.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox33.SizeF = new System.Drawing.SizeF(49.30122F, 39.99998F);
             this.Textbox33.StylePriority.UsePadding = false;
-            this.Textbox33.Text = "Edit Rq. \r\nSRC";
+            this.Textbox33.Text = "Edit Rq. \r\nSrc";
             this.Textbox33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox35
@@ -1095,7 +1095,7 @@
             this.Textbox47.SizeF = new System.Drawing.SizeF(100F, 40.00001F);
             this.Textbox47.StylePriority.UsePadding = false;
             this.Textbox47.StylePriority.UseTextAlignment = false;
-            this.Textbox47.Text = "Debit";
+            this.Textbox47.Text = "\r\nDebit";
             this.Textbox47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox45
@@ -1113,7 +1113,7 @@
             this.Textbox45.SizeF = new System.Drawing.SizeF(96.88F, 40.00004F);
             this.Textbox45.StylePriority.UsePadding = false;
             this.Textbox45.StylePriority.UseTextAlignment = false;
-            this.Textbox45.Text = "Credit";
+            this.Textbox45.Text = "\r\nCredit";
             this.Textbox45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox64

@@ -58,8 +58,6 @@ namespace ReportsEngine.Reports.RDReports
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
-            this.xrCompanyHeader = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -100,8 +98,13 @@ namespace ReportsEngine.Reports.RDReports
             this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCheck = new DevExpress.XtraReports.Parameters.Parameter();
-            this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.CheckBeginningHeader = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.CheckBegin = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.CheckEnd = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.xrCompanyHeader = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPages = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
@@ -195,47 +198,10 @@ namespace ReportsEngine.Reports.RDReports
             // detailBand1
             // 
             this.detailBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrCompanyHeader,
             this.xrSubreport2});
-            this.detailBand1.HeightF = 92.26586F;
+            this.detailBand1.HeightF = 46.48558F;
             this.detailBand1.MultiColumn.ColumnSpacing = 50F;
             this.detailBand1.Name = "detailBand1";
-            // 
-            // xrCompanyHeader
-            // 
-            this.xrCompanyHeader.BorderColor = System.Drawing.Color.Black;
-            this.xrCompanyHeader.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrCompanyHeader.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrCompanyHeader.BorderWidth = 1F;
-            this.xrCompanyHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyAddressBlockShort]")});
-            this.xrCompanyHeader.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrCompanyHeader.KeepTogether = true;
-            this.xrCompanyHeader.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrCompanyHeader.Multiline = true;
-            this.xrCompanyHeader.Name = "xrCompanyHeader";
-            this.xrCompanyHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrCompanyHeader.SizeF = new System.Drawing.SizeF(793.34F, 45.78027F);
-            this.xrCompanyHeader.StylePriority.UseBorderColor = false;
-            this.xrCompanyHeader.StylePriority.UseBorderDashStyle = false;
-            this.xrCompanyHeader.StylePriority.UseBorders = false;
-            this.xrCompanyHeader.StylePriority.UseBorderWidth = false;
-            this.xrCompanyHeader.StylePriority.UseFont = false;
-            this.xrCompanyHeader.StylePriority.UsePadding = false;
-            this.xrCompanyHeader.StylePriority.UseTextAlignment = false;
-            this.xrCompanyHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0.7499695F, 45.78028F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "RDCheckHeader.ImbursementID"));
-            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(793.34F, 46.48558F);
             // 
             // pstrDatabaseName
             // 
@@ -326,11 +292,11 @@ namespace ReportsEngine.Reports.RDReports
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyAddressBlockLong]")});
             this.CheckAmountLongString14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.CheckAmountLongString14.KeepTogether = true;
-            this.CheckAmountLongString14.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 62.22501F);
+            this.CheckAmountLongString14.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 58.22503F);
             this.CheckAmountLongString14.Multiline = true;
             this.CheckAmountLongString14.Name = "CheckAmountLongString14";
             this.CheckAmountLongString14.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.CheckAmountLongString14.SizeF = new System.Drawing.SizeF(178.1284F, 65.62002F);
+            this.CheckAmountLongString14.SizeF = new System.Drawing.SizeF(222.58F, 89.10993F);
             this.CheckAmountLongString14.StylePriority.UseFont = false;
             this.CheckAmountLongString14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -789,12 +755,15 @@ namespace ReportsEngine.Reports.RDReports
             dynamicListLookUpSettings7.ValueMember = "CheckNumber";
             this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings7;
             // 
-            // groupHeaderBand1
+            // CheckBeginningHeader
             // 
-            this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            this.CheckBeginningHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrCompanyHeader,
+            this.xrPages});
+            this.CheckBeginningHeader.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("CheckID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-            this.groupHeaderBand1.HeightF = 0F;
-            this.groupHeaderBand1.Name = "groupHeaderBand1";
+            this.CheckBeginningHeader.HeightF = 46.82214F;
+            this.CheckBeginningHeader.Name = "CheckBeginningHeader";
             // 
             // groupFooterBand1
             // 
@@ -807,14 +776,88 @@ namespace ReportsEngine.Reports.RDReports
             this.groupFooterBand1.PrintAtBottom = true;
             this.groupFooterBand1.RepeatEveryPage = true;
             // 
+            // CheckBegin
+            // 
+            this.CheckBegin.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("CheckID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.CheckBegin.HeightF = 0F;
+            this.CheckBegin.Level = 1;
+            this.CheckBegin.Name = "CheckBegin";
+            // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "RDCheckHeader.ImbursementID"));
+            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(793.34F, 46.48558F);
+            // 
+            // CheckEnd
+            // 
+            this.CheckEnd.HeightF = 0F;
+            this.CheckEnd.Level = 1;
+            this.CheckEnd.Name = "CheckEnd";
+            // 
+            // xrCompanyHeader
+            // 
+            this.xrCompanyHeader.BorderColor = System.Drawing.Color.Black;
+            this.xrCompanyHeader.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrCompanyHeader.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrCompanyHeader.BorderWidth = 1F;
+            this.xrCompanyHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyAddressBlockLong]")});
+            this.xrCompanyHeader.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrCompanyHeader.KeepTogether = true;
+            this.xrCompanyHeader.LocationFloat = new DevExpress.Utils.PointFloat(83.99996F, 0F);
+            this.xrCompanyHeader.Multiline = true;
+            this.xrCompanyHeader.Name = "xrCompanyHeader";
+            this.xrCompanyHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrCompanyHeader.SizeF = new System.Drawing.SizeF(630F, 46.82214F);
+            this.xrCompanyHeader.StylePriority.UseBorderColor = false;
+            this.xrCompanyHeader.StylePriority.UseBorderDashStyle = false;
+            this.xrCompanyHeader.StylePriority.UseBorders = false;
+            this.xrCompanyHeader.StylePriority.UseBorderWidth = false;
+            this.xrCompanyHeader.StylePriority.UseFont = false;
+            this.xrCompanyHeader.StylePriority.UsePadding = false;
+            this.xrCompanyHeader.StylePriority.UseTextAlignment = false;
+            this.xrCompanyHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrPages
+            // 
+            this.xrPages.BorderColor = System.Drawing.Color.Black;
+            this.xrPages.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPages.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPages.BorderWidth = 1F;
+            this.xrPages.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrPages.KeepTogether = true;
+            this.xrPages.LocationFloat = new DevExpress.Utils.PointFloat(714F, 0F);
+            this.xrPages.Multiline = true;
+            this.xrPages.Name = "xrPages";
+            this.xrPages.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrPages.SizeF = new System.Drawing.SizeF(85F, 15F);
+            this.xrPages.StylePriority.UseBorderColor = false;
+            this.xrPages.StylePriority.UseBorderDashStyle = false;
+            this.xrPages.StylePriority.UseBorders = false;
+            this.xrPages.StylePriority.UseBorderWidth = false;
+            this.xrPages.StylePriority.UseFont = false;
+            this.xrPages.StylePriority.UsePadding = false;
+            this.xrPages.StylePriority.UseTextAlignment = false;
+            this.xrPages.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // RDCheckStubs
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.topMarginBand1,
             this.bottomMarginBand1,
             this.detailBand1,
-            this.groupHeaderBand1,
-            this.groupFooterBand1});
+            this.CheckBeginningHeader,
+            this.groupFooterBand1,
+            this.CheckBegin,
+            this.CheckEnd});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
             this.DataMember = "RDCheckHeader";
@@ -898,13 +941,12 @@ namespace ReportsEngine.Reports.RDReports
         private XRPanel xrPanel4;
         private XRLabel xrLabel3;
         private XRPictureBox xrNonNegotiablePicture;
-        private XRLabel xrCompanyHeader;
         private XRSubreport xrSubreport2;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCheckNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingCheckNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectCheck;
-        private GroupHeaderBand groupHeaderBand1;
+        private GroupHeaderBand CheckBeginningHeader;
         private GroupFooterBand groupFooterBand1;
         private XRLabel xrLabel7;
         private XRLabel CheckAmountLongString15;
@@ -924,5 +966,9 @@ namespace ReportsEngine.Reports.RDReports
         private XRRichText xrRichText5;
         private XRRichText xrRichText6;
         private XRRichText xrRichText7;
+        private GroupHeaderBand CheckBegin;
+        private XRLabel xrCompanyHeader;
+        private XRLabel xrPages;
+        private GroupFooterBand CheckEnd;
     }
 }
