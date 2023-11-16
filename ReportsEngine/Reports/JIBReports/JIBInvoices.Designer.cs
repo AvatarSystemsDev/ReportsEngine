@@ -504,11 +504,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?boolPrintRemit = True, True, False)")});
             this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel20.KeepTogether = true;
-            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(401.9816F, 124.4366F);
+            this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(401.7298F, 124.4366F);
             this.xrLabel20.Multiline = true;
             this.xrLabel20.Name = "xrLabel20";
             this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel20.SizeF = new System.Drawing.SizeF(76.53F, 17F);
+            this.xrLabel20.SizeF = new System.Drawing.SizeF(76.52985F, 17.00001F);
             this.xrLabel20.StylePriority.UseFont = false;
             this.xrLabel20.StylePriority.UsePadding = false;
             this.xrLabel20.StylePriority.UseTextAlignment = false;
@@ -547,11 +547,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?boolPrintRemit = True, True, False)")});
             this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel16.KeepTogether = true;
-            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(401.9816F, 107.4366F);
+            this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(401.7298F, 107.4366F);
             this.xrLabel16.Multiline = true;
             this.xrLabel16.Name = "xrLabel16";
             this.xrLabel16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel16.SizeF = new System.Drawing.SizeF(76.53F, 17F);
+            this.xrLabel16.SizeF = new System.Drawing.SizeF(76.52985F, 16.99998F);
             this.xrLabel16.StylePriority.UseFont = false;
             this.xrLabel16.StylePriority.UsePadding = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
@@ -732,10 +732,10 @@
             this.OwnerName4});
             this.Rectangle2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?boolPrintRemit")});
-            this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(361.0935F, 61.99998F);
+            this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(401.73F, 61.99998F);
             this.Rectangle2.Name = "Rectangle2";
             this.Rectangle2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Rectangle2.SizeF = new System.Drawing.SizeF(407.6982F, 45.43667F);
+            this.Rectangle2.SizeF = new System.Drawing.SizeF(367.0617F, 45.43666F);
             this.Rectangle2.StylePriority.UsePadding = false;
             // 
             // OwnerName3
@@ -749,11 +749,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?boolPrintRemit = True, True, False)")});
             this.OwnerName3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.OwnerName3.KeepTogether = true;
-            this.OwnerName3.LocationFloat = new DevExpress.Utils.PointFloat(135.4282F, 17F);
+            this.OwnerName3.LocationFloat = new DevExpress.Utils.PointFloat(94.78995F, 17F);
             this.OwnerName3.Multiline = true;
             this.OwnerName3.Name = "OwnerName3";
             this.OwnerName3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 0, 3, 100F);
-            this.OwnerName3.SizeF = new System.Drawing.SizeF(238.5184F, 28.43665F);
+            this.OwnerName3.SizeF = new System.Drawing.SizeF(267.9333F, 28.43665F);
             this.OwnerName3.StylePriority.UseFont = false;
             this.OwnerName3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -768,7 +768,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?boolPrintRemit = True, True, False)")});
             this.Textbox112.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox112.KeepTogether = true;
-            this.Textbox112.LocationFloat = new DevExpress.Utils.PointFloat(40.63647F, 0F);
+            this.Textbox112.LocationFloat = new DevExpress.Utils.PointFloat(0F, 10F);
             this.Textbox112.Multiline = true;
             this.Textbox112.Name = "Textbox112";
             this.Textbox112.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 0, 100F);
@@ -789,11 +789,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?boolPrintRemit = True, True, False)")});
             this.OwnerName4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.OwnerName4.KeepTogether = true;
-            this.OwnerName4.LocationFloat = new DevExpress.Utils.PointFloat(135.4265F, 0F);
+            this.OwnerName4.LocationFloat = new DevExpress.Utils.PointFloat(94.78818F, 0F);
             this.OwnerName4.Multiline = true;
             this.OwnerName4.Name = "OwnerName4";
             this.OwnerName4.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 0, 100F);
-            this.OwnerName4.SizeF = new System.Drawing.SizeF(238.52F, 17F);
+            this.OwnerName4.SizeF = new System.Drawing.SizeF(267.9351F, 17F);
             this.OwnerName4.StylePriority.UseFont = false;
             this.OwnerName4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
@@ -1249,9 +1249,9 @@
             this.pageHeaderBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pageHeaderBand1.BorderWidth = 1F;
             this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel28,
+            this.CompanyName2,
             this.CompanyName,
-            this.CompanyName2});
+            this.xrLabel28});
             this.pageHeaderBand1.HeightF = 68.95833F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -1281,15 +1281,16 @@
             this.CompanyName.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.CompanyName.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CompanyName.BorderWidth = 1F;
+            this.CompanyName.CanGrow = false;
             this.CompanyName.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DSCompaniesLookup].[Description]")});
             this.CompanyName.Font = new DevExpress.Drawing.DXFont("Segoe UI", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.CompanyName.KeepTogether = true;
-            this.CompanyName.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.CompanyName.LocationFloat = new DevExpress.Utils.PointFloat(0.0001467191F, 0F);
             this.CompanyName.Multiline = true;
             this.CompanyName.Name = "CompanyName";
-            this.CompanyName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.CompanyName.SizeF = new System.Drawing.SizeF(770.0001F, 25F);
+            this.CompanyName.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 5, 100F);
+            this.CompanyName.SizeF = new System.Drawing.SizeF(770F, 23F);
             this.CompanyName.StylePriority.UseFont = false;
             this.CompanyName.StylePriority.UsePadding = false;
             this.CompanyName.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
@@ -1304,11 +1305,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PrimaryAddress]")});
             this.CompanyName2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.CompanyName2.KeepTogether = true;
-            this.CompanyName2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 25F);
+            this.CompanyName2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 23.00001F);
             this.CompanyName2.Multiline = true;
             this.CompanyName2.Name = "CompanyName2";
             this.CompanyName2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.CompanyName2.SizeF = new System.Drawing.SizeF(770F, 20F);
+            this.CompanyName2.SizeF = new System.Drawing.SizeF(770F, 21.99999F);
             this.CompanyName2.StylePriority.UsePadding = false;
             this.CompanyName2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 

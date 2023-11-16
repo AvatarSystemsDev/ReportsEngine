@@ -94,6 +94,7 @@
             this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngIsTwoSignaturesRequired = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrTwoSignaturesRequiredAmount = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngPrintRemittance = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -1019,6 +1020,13 @@
             this.pstrTwoSignaturesRequiredAmount.Description = "Parameter1";
             this.pstrTwoSignaturesRequiredAmount.Name = "pstrTwoSignaturesRequiredAmount";
             // 
+            // plngPrintRemittance
+            // 
+            this.plngPrintRemittance.Description = "Print Remittance";
+            this.plngPrintRemittance.Name = "plngPrintRemittance";
+            this.plngPrintRemittance.Type = typeof(int);
+            this.plngPrintRemittance.ValueInfo = "0";
+            // 
             // ExcelRDCheckStubs
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1080,7 +1088,8 @@
             this.pstrSelectCheck,
             this.plngCheckFormatIsMICR,
             this.plngIsTwoSignaturesRequired,
-            this.pstrTwoSignaturesRequiredAmount});
+            this.pstrTwoSignaturesRequiredAmount,
+            this.plngPrintRemittance});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1138,5 +1147,6 @@
         private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
         private DevExpress.XtraReports.Parameters.Parameter plngIsTwoSignaturesRequired;
         private DevExpress.XtraReports.Parameters.Parameter pstrTwoSignaturesRequiredAmount;
+        private DevExpress.XtraReports.Parameters.Parameter plngPrintRemittance;
     }
 }

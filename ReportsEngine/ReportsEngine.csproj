@@ -399,6 +399,7 @@
     <Content Include="Views\Home\Designer.cshtml" />
     <Content Include="Views\Home\Viewer.cshtml" />
     <Content Include="Styles\xr9ptBLStyle.repss" />
+    <Content Include="Views\MICRE13B.TTF" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

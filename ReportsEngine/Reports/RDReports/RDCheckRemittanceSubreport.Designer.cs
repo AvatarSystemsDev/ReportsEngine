@@ -75,6 +75,7 @@
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -547,10 +548,11 @@
             this.Textbox10,
             this.Textbox9,
             this.Textbox8,
-            this.Line1,
             this.Textbox12});
-            this.PageHeader.HeightF = 29.79167F;
+            this.PageHeader.HeightF = 25F;
             this.PageHeader.Name = "PageHeader";
+            this.PageHeader.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
+            this.SubBand1});
             // 
             // xrLabel18
             // 
@@ -648,7 +650,7 @@
             this.Textbox9.Name = "Textbox9";
             this.Textbox9.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox9.SizeF = new System.Drawing.SizeF(134.8532F, 25F);
-            this.Textbox9.Text = "Invoice Description";
+            this.Textbox9.Text = "Description";
             this.Textbox9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox8
@@ -675,10 +677,8 @@
             this.Line1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.Line1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
             this.Line1.ForeColor = System.Drawing.Color.Black;
-            this.Line1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 26.03999F);
+            this.Line1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Line1.Name = "Line1";
             this.Line1.Shape = shapeLine1;
             this.Line1.SizeF = new System.Drawing.SizeF(784.9F, 2F);
@@ -765,6 +765,13 @@
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // SubBand1
+            // 
+            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Line1});
+            this.SubBand1.HeightF = 4F;
+            this.SubBand1.Name = "SubBand1";
+            // 
             // RDCheckRemittanceSubreport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -841,5 +848,6 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox12;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
+        private DevExpress.XtraReports.UI.SubBand SubBand1;
     }
 }

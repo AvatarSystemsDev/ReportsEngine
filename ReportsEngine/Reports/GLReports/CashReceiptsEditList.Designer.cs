@@ -911,9 +911,9 @@
             this.Textbox2.Multiline = true;
             this.Textbox2.Name = "Textbox2";
             this.Textbox2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox2.SizeF = new System.Drawing.SizeF(47.4497F, 20F);
+            this.Textbox2.SizeF = new System.Drawing.SizeF(47.4497F, 39.99995F);
             this.Textbox2.StylePriority.UsePadding = false;
-            this.Textbox2.Text = "Sus";
+            this.Textbox2.Text = "Edit\r\nReq.";
             this.Textbox2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox3

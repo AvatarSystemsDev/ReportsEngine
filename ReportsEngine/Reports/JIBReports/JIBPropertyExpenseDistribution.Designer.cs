@@ -802,6 +802,7 @@
             this.pbooShowOwnerBreakdown.Name = "pbooShowOwnerBreakdown";
             this.pbooShowOwnerBreakdown.Type = typeof(bool);
             this.pbooShowOwnerBreakdown.ValueInfo = "True";
+            this.pbooShowOwnerBreakdown.Visible = false;
             // 
             // pbooShowCriteria
             // 
