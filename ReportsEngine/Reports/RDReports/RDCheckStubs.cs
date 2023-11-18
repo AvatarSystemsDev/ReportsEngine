@@ -14,7 +14,7 @@ namespace ReportsEngine.Reports.RDReports
             xrPages.BeforePrint += XrPages_BeforePrint;
             CheckBegin.BeforePrint += CheckBegin_BeforePrint;
             CheckEnd.BeforePrint += CheckEnd_BeforePrint;
-            xrNonNegotiablePicture.BeforePrint += XrNonNegotiablePicture_BeforePrint;
+            //xrNonNegotiablePicture.BeforePrint += XrNonNegotiablePicture_BeforePrint;
         }
 
         private void CheckBegin_BeforePrint(object sender, CancelEventArgs e)
@@ -57,11 +57,11 @@ namespace ReportsEngine.Reports.RDReports
             pageCounter++;
         }
 
-        private void XrNonNegotiablePicture_BeforePrint(object sender, CancelEventArgs e)
-        {
-            XRPictureBox picture = sender as XRPictureBox;
-            picture.Visible = pageCounter > 2;
-        }
+        //private void XrNonNegotiablePicture_BeforePrint(object sender, CancelEventArgs e)
+        //{
+        //    XRPictureBox picture = sender as XRPictureBox;
+        //    picture.Visible = pageCounter > 2;
+        //}
 
     }
 }

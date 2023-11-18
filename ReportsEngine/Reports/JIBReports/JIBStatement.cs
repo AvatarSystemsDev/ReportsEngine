@@ -78,11 +78,11 @@ namespace ReportsEngine.Reports.JIBReports
             }
             else if (pageIndexStatement == -1)
             {
-                label.Text = "Page 1";
+                label.Text = "1";
             }
             else
             {
-                label.Text = "Page " + pageIndexStatement;
+                label.Text = "" + pageIndexStatement;
             }
         }
 

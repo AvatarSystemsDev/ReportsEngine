@@ -1293,6 +1293,7 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_DSCashReceiptsEditList";
             sourceNode2.Alias = null;
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"497\" />";
             source2.DataMember = "DSCashReceiptsEditList";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_DSCashReceiptsEditList";
@@ -1315,7 +1316,10 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CheckNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DOIDateToUse"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchNumberName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchCashAccount")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchCashAccount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PostDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CustomerNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CustomerName")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_DSEditListBatchesLookup";
             sourceNode3.Alias = null;
@@ -1478,7 +1482,9 @@
             this.BatchCashAccount.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.BatchCashAccount.BorderWidth = 1F;
             this.BatchCashAccount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", resources.GetString("BatchCashAccount.ExpressionBindings"))});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>CashAc" +
+                    "count: </b>\' +  [BatchCashAccount] +\'&emsp\'+\'&emsp\'+\'&emsp\'+ \'<b>   GL Date: </b" +
+                    ">\' +\'</span>\'")});
             this.BatchCashAccount.KeepTogether = true;
             this.BatchCashAccount.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.BatchCashAccount.Name = "BatchCashAccount";

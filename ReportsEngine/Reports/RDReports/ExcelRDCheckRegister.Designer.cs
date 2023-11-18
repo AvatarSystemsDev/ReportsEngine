@@ -89,7 +89,7 @@
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrEndingOwner = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckPrintingProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
@@ -98,8 +98,8 @@
             this.xrLabel61 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel62 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel83 = new DevExpress.XtraReports.UI.XRLabel();
-            this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrSubreport3 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -1386,7 +1386,7 @@
             queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
             queryParameter3.Name = "@pstrEndingOwner";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("pstrEndingOwnerNumber", typeof(string));
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("[pstrEndingOwnerNumber]", typeof(string));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -1438,11 +1438,11 @@
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             // 
-            // pstrEndingOwner
+            // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwner.Description = "Ending Owner";
-            this.pstrEndingOwner.Name = "pstrEndingOwner";
-            this.pstrEndingOwner.ValueInfo = "ZZZZZZZZZZ";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner";
+            this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
+            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             // 
             // plngCheckPrintingProcessTrackingID
             // 
@@ -1590,12 +1590,6 @@
             this.xrLabel83.StylePriority.UseTextAlignment = false;
             this.xrLabel83.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // pstrSelectOwner
-            // 
-            this.pstrSelectOwner.Description = "Select Owner";
-            this.pstrSelectOwner.MultiValue = true;
-            this.pstrSelectOwner.Name = "pstrSelectOwner";
-            // 
             // xrSubreport3
             // 
             this.xrSubreport3.LocationFloat = new DevExpress.Utils.PointFloat(2088.042F, 0F);
@@ -1606,6 +1600,12 @@
             this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "Dynamic_RDCheckRegister.ImbursementID"));
             this.xrSubreport3.ReportSource = new ReportsEngine.Reports.RDReports.ExcelRDCheckRegisterOwnerSummary();
             this.xrSubreport3.SizeF = new System.Drawing.SizeF(423.4744F, 15.00001F);
+            // 
+            // pstrSelectOwner
+            // 
+            this.pstrSelectOwner.Description = "Select Owner";
+            this.pstrSelectOwner.MultiValue = true;
+            this.pstrSelectOwner.Name = "pstrSelectOwner";
             // 
             // ExcelRDCheckRegister
             // 
@@ -1637,7 +1637,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -1648,7 +1648,7 @@
             this.plngUserID,
             this.Subtitle,
             this.pstrBeginningOwnerNumber,
-            this.pstrEndingOwner,
+            this.pstrEndingOwnerNumber,
             this.plngCheckPrintingProcessTrackingID,
             this.pstrSelectOwner,
             this.pbooShowCriteria});
@@ -1672,7 +1672,7 @@
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
         private DevExpress.XtraReports.Parameters.Parameter Subtitle;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningOwnerNumber;
-        private DevExpress.XtraReports.Parameters.Parameter pstrEndingOwner;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingOwnerNumber;
         private DevExpress.XtraReports.Parameters.Parameter plngCheckPrintingProcessTrackingID;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand1;
