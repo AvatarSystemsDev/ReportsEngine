@@ -40,7 +40,7 @@ namespace ReportsEngine.Reports.JIBReports
 
         private void InvoiceSubreport_AfterPrint(object sender, EventArgs e)
         {
-            pageIndexStatement = -1;
+            pageIndexStatement = 0;
             isSubreport = false;
         }
 
@@ -72,11 +72,11 @@ namespace ReportsEngine.Reports.JIBReports
         private void xrPageCounter_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            if (pageIndexStatement == 0 || isSubreport)
+            if ( isSubreport)
             {
                 label.Text = "";
             }
-            else if (pageIndexStatement == -1)
+            else if (pageIndexStatement == -1 || pageIndexStatement == 0)
             {
                 label.Text = "1";
             }
@@ -88,7 +88,7 @@ namespace ReportsEngine.Reports.JIBReports
 
         private void JIBStatement_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageIndexStatement = -1;
+            pageIndexStatement = 0;
             totalPages = 1;
             isSubreport = false;
             didOnce = false;

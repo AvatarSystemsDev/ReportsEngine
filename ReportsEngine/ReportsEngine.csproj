@@ -420,6 +420,12 @@
     <Compile Include="Reports\APReports\APOutstandingAccountsPayableDetailWithProperty.Designer.cs">
       <DependentUpon>APOutstandingAccountsPayableDetailWithProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\APReports\APPayables.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APPayables.Designer.cs">
+      <DependentUpon>APPayables.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -431,6 +437,18 @@
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetailWithProperty.Designer.cs">
       <DependentUpon>ExcelAPOutstandingAccountsPayableDetailWithProperty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPPayables.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\ExcelAPPayables.Designer.cs">
+      <DependentUpon>ExcelAPPayables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\PropertyExpenseDistributionOwnerBreakdown.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\PropertyExpenseDistributionOwnerBreakdown.Designer.cs">
+      <DependentUpon>PropertyExpenseDistributionOwnerBreakdown.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
@@ -1960,11 +1978,20 @@
     <EmbeddedResource Include="Reports\APReports\APOutstandingAccountsPayableDetailWithProperty.resx">
       <DependentUpon>APOutstandingAccountsPayableDetailWithProperty.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\APPayables.resx">
+      <DependentUpon>APPayables.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetail.resx">
       <DependentUpon>ExcelAPOutstandingAccountsPayableDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPOutstandingAccountsPayableDetailWithProperty.resx">
       <DependentUpon>ExcelAPOutstandingAccountsPayableDetailWithProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\APReports\ExcelAPPayables.resx">
+      <DependentUpon>ExcelAPPayables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\PropertyExpenseDistributionOwnerBreakdown.resx">
+      <DependentUpon>PropertyExpenseDistributionOwnerBreakdown.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>

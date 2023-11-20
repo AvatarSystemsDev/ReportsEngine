@@ -35,6 +35,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelJIBPropertyExpenseDistributionSubreport));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -77,6 +79,7 @@
             this.pstrDirectBillOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDOIDeckCodeNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDOIDeckCodeDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngBottomHalfID = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -119,7 +122,7 @@
             this.xrLabel27.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel27.BorderWidth = 1F;
             this.xrLabel27.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pdblAmount")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NetAmount]")});
             this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel27.KeepTogether = true;
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(1526.91F, 1.589457E-05F);
@@ -143,7 +146,7 @@
             this.xrLabel26.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel26.BorderWidth = 1F;
             this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrVendorName")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[VendorName]")});
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel26.KeepTogether = true;
             this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(1439.676F, 1.589457E-05F);
@@ -166,7 +169,7 @@
             this.xrLabel25.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel25.BorderWidth = 1F;
             this.xrLabel25.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrVendorNumber")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[VendorNumber]")});
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel25.KeepTogether = true;
             this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(1336.945F, 1.589457E-05F);
@@ -485,26 +488,34 @@
             storedProcQuery1.Name = "DS_JIB_PEDPartTwo";
             queryParameter1.Name = "@plngJIBProcessTrackingID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngJIBProcessTrackingID", typeof(string));
-            queryParameter2.Name = "@plngPhaseWellID";
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngJIBProcessTrackingID", typeof(int));
+            queryParameter2.Name = "@plngBottomHalfID";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngPhaseWellID", typeof(string));
-            queryParameter3.Name = "@plngCompanyID";
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngBottomHalfID", typeof(int));
+            queryParameter3.Name = "@plngPhaseWellID";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            queryParameter4.Name = "@plngDOIDeckCodeID";
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngPhaseWellID", typeof(int));
+            queryParameter4.Name = "@plngCompanyID";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngDOIDeckCodeID", typeof(string));
-            queryParameter5.Name = "@plngDirectBillOwnerID";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter5.Name = "@plngDOIDeckCodeID";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngDirectBillOwnerID", typeof(string));
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngDOIDeckCodeID", typeof(int));
+            queryParameter6.Name = "@plngDirectBillOwnerID";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngDirectBillOwnerID", typeof(int));
+            queryParameter7.Name = "@pbooPrintAccountDescription";
+            queryParameter7.Type = typeof(bool);
+            queryParameter7.ValueInfo = "True";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
-            queryParameter5});
-            storedProcQuery1.StoredProcName = "Report_JIB_PEDPartTwo";
+            queryParameter5,
+            queryParameter6,
+            queryParameter7});
+            storedProcQuery1.StoredProcName = "Report_JIB_PEDOwnerDetail";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
@@ -632,6 +643,13 @@
             this.pstrDOIDeckCodeDescription.Description = "Parameter1";
             this.pstrDOIDeckCodeDescription.Name = "pstrDOIDeckCodeDescription";
             // 
+            // plngBottomHalfID
+            // 
+            this.plngBottomHalfID.Description = "Parameter1";
+            this.plngBottomHalfID.Name = "plngBottomHalfID";
+            this.plngBottomHalfID.Type = typeof(int);
+            this.plngBottomHalfID.ValueInfo = "0";
+            // 
             // ExcelJIBPropertyExpenseDistributionSubreport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -645,8 +663,8 @@
             this.DisplayName = "PropertyExpenseDistEnding";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
-            this.PageWidth = 1700;
-            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Ledger;
+            this.PageWidth = 2646;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Custom;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -690,7 +708,8 @@
             this.pstrVendorName,
             this.pstrDirectBillOwnerNumber,
             this.pstrDOIDeckCodeNumber,
-            this.pstrDOIDeckCodeDescription});
+            this.pstrDOIDeckCodeDescription,
+            this.plngBottomHalfID});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -739,5 +758,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrDirectBillOwnerNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrDOIDeckCodeNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrDOIDeckCodeDescription;
+        private DevExpress.XtraReports.Parameters.Parameter plngBottomHalfID;
     }
 }

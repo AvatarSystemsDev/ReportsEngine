@@ -248,6 +248,9 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAPOutstandingAccountsPayableDetailWithProperty", () => new ExcelAPOutstandingAccountsPayableDetailWithProperty());
             Reports.Add("APPayablesDetail", () => new APPayablesDetail());
             Reports.Add("ExcelAPPayablesDetail", () => new ExcelAPPayablesDetail());
+            Reports.Add("APPayables", () => new APPayables());
+            Reports.Add("ExcelAPPayables", () => new ExcelAPPayables());
+            
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

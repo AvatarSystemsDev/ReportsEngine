@@ -40,19 +40,13 @@
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailBand();
-            this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
-            this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngJIBProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrBeginningPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrEndingPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooPrintAccountDescription = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooIncludeDirectBillItems = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooShowOwnerBreakdown = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
@@ -69,6 +63,13 @@
             this.Textbox41 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox71 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pstrBeginningPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooPrintAccountDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooIncludeDirectBillItems = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowOwnerBreakdown = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowOwnerTotals = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -121,6 +122,46 @@
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
             // 
+            // pstrDatabaseName
+            // 
+            this.pstrDatabaseName.Description = "pstrDatabaseName";
+            this.pstrDatabaseName.Name = "pstrDatabaseName";
+            this.pstrDatabaseName.Visible = false;
+            // 
+            // pstrServerName
+            // 
+            this.pstrServerName.Description = "pstrServerName";
+            this.pstrServerName.Name = "pstrServerName";
+            this.pstrServerName.Visible = false;
+            // 
+            // plngUserID
+            // 
+            this.plngUserID.Description = "plngUserID";
+            this.plngUserID.Name = "plngUserID";
+            this.plngUserID.Type = typeof(int);
+            this.plngUserID.Visible = false;
+            // 
+            // plngJIBProcessTrackingID
+            // 
+            this.plngJIBProcessTrackingID.Description = "Processing Date";
+            this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
+            this.plngJIBProcessTrackingID.Type = typeof(int);
+            this.plngJIBProcessTrackingID.ValueInfo = "37";
+            // 
+            // Subtitle
+            // 
+            this.Subtitle.Description = "Subtitle";
+            this.Subtitle.Name = "Subtitle";
+            this.Subtitle.Visible = false;
+            // 
+            // plngCompanyID
+            // 
+            this.plngCompanyID.Description = "plngCompanyID";
+            this.plngCompanyID.Name = "plngCompanyID";
+            this.plngCompanyID.Type = typeof(int);
+            this.plngCompanyID.ValueInfo = "1";
+            this.plngCompanyID.Visible = false;
+            // 
             // pageHeaderBand1
             // 
             this.pageHeaderBand1.BorderColor = System.Drawing.Color.Black;
@@ -147,86 +188,6 @@
             this.pageHeaderBand1.HeightF = 35.00001F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // pstrServerName
-            // 
-            this.pstrServerName.Description = "pstrServerName";
-            this.pstrServerName.Name = "pstrServerName";
-            this.pstrServerName.Visible = false;
-            // 
-            // pstrDatabaseName
-            // 
-            this.pstrDatabaseName.Description = "pstrDatabaseName";
-            this.pstrDatabaseName.Name = "pstrDatabaseName";
-            this.pstrDatabaseName.Visible = false;
-            // 
-            // Subtitle
-            // 
-            this.Subtitle.Description = "Subtitle";
-            this.Subtitle.Name = "Subtitle";
-            this.Subtitle.Visible = false;
-            // 
-            // plngUserID
-            // 
-            this.plngUserID.Description = "plngUserID";
-            this.plngUserID.Name = "plngUserID";
-            this.plngUserID.Type = typeof(int);
-            this.plngUserID.Visible = false;
-            // 
-            // plngCompanyID
-            // 
-            this.plngCompanyID.Description = "plngCompanyID";
-            this.plngCompanyID.Name = "plngCompanyID";
-            this.plngCompanyID.Type = typeof(int);
-            this.plngCompanyID.ValueInfo = "1";
-            this.plngCompanyID.Visible = false;
-            // 
-            // plngJIBProcessTrackingID
-            // 
-            this.plngJIBProcessTrackingID.Description = "Processing Date";
-            this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
-            this.plngJIBProcessTrackingID.Type = typeof(int);
-            this.plngJIBProcessTrackingID.ValueInfo = "37";
-            // 
-            // pstrBeginningPropertyNumber
-            // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
-            this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
-            this.pstrBeginningPropertyNumber.ValueInfo = "!";
-            // 
-            // pstrEndingPropertyNumber
-            // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
-            this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
-            this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
-            // 
-            // pbooPrintAccountDescription
-            // 
-            this.pbooPrintAccountDescription.Description = "Print Account Description";
-            this.pbooPrintAccountDescription.Name = "pbooPrintAccountDescription";
-            this.pbooPrintAccountDescription.Type = typeof(bool);
-            this.pbooPrintAccountDescription.ValueInfo = "True";
-            // 
-            // pbooIncludeDirectBillItems
-            // 
-            this.pbooIncludeDirectBillItems.Description = "Include Direct Bill Items";
-            this.pbooIncludeDirectBillItems.Name = "pbooIncludeDirectBillItems";
-            this.pbooIncludeDirectBillItems.Type = typeof(bool);
-            this.pbooIncludeDirectBillItems.ValueInfo = "False";
-            // 
-            // pbooShowOwnerBreakdown
-            // 
-            this.pbooShowOwnerBreakdown.Description = "Show Owner Breakdown";
-            this.pbooShowOwnerBreakdown.Name = "pbooShowOwnerBreakdown";
-            this.pbooShowOwnerBreakdown.Type = typeof(bool);
-            this.pbooShowOwnerBreakdown.ValueInfo = "True";
-            // 
-            // pbooShowCriteria
-            // 
-            this.pbooShowCriteria.Description = "Show Criteria";
-            this.pbooShowCriteria.Name = "pbooShowCriteria";
-            this.pbooShowCriteria.Type = typeof(bool);
-            this.pbooShowCriteria.ValueInfo = "True";
             // 
             // xrLabel5
             // 
@@ -573,6 +534,53 @@
             this.xrLabel19.Text = "Vendor Name";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // pstrBeginningPropertyNumber
+            // 
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
+            this.pstrBeginningPropertyNumber.ValueInfo = "!";
+            // 
+            // pstrEndingPropertyNumber
+            // 
+            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
+            this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
+            // 
+            // pbooPrintAccountDescription
+            // 
+            this.pbooPrintAccountDescription.Description = "Print Account Description";
+            this.pbooPrintAccountDescription.Name = "pbooPrintAccountDescription";
+            this.pbooPrintAccountDescription.Type = typeof(bool);
+            this.pbooPrintAccountDescription.ValueInfo = "True";
+            // 
+            // pbooIncludeDirectBillItems
+            // 
+            this.pbooIncludeDirectBillItems.Description = "Include Direct Bill Items";
+            this.pbooIncludeDirectBillItems.Name = "pbooIncludeDirectBillItems";
+            this.pbooIncludeDirectBillItems.Type = typeof(bool);
+            this.pbooIncludeDirectBillItems.ValueInfo = "False";
+            // 
+            // pbooShowOwnerBreakdown
+            // 
+            this.pbooShowOwnerBreakdown.Description = "Show Owner Breakdown";
+            this.pbooShowOwnerBreakdown.Name = "pbooShowOwnerBreakdown";
+            this.pbooShowOwnerBreakdown.Type = typeof(bool);
+            this.pbooShowOwnerBreakdown.ValueInfo = "True";
+            // 
+            // pbooShowCriteria
+            // 
+            this.pbooShowCriteria.Description = "Show Criteria";
+            this.pbooShowCriteria.Name = "pbooShowCriteria";
+            this.pbooShowCriteria.Type = typeof(bool);
+            this.pbooShowCriteria.ValueInfo = "True";
+            // 
+            // pbooShowOwnerTotals
+            // 
+            this.pbooShowOwnerTotals.Description = "Parameter1";
+            this.pbooShowOwnerTotals.Name = "pbooShowOwnerTotals";
+            this.pbooShowOwnerTotals.Type = typeof(bool);
+            this.pbooShowOwnerTotals.ValueInfo = "False";
+            // 
             // xrSubreport2
             // 
             this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -598,6 +606,7 @@
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDirectBillOwnerNumber", null, "DSJIB_PEDPartOne.DirectBillOwnerNumber"));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDOIDeckCodeNumber", null, "DSJIB_PEDPartOne.DOIDeckCodeNumber"));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDOIDeckCodeDescription", null, "DSJIB_PEDPartOne.DOIDeckCodeDescription"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBottomHalfID", null, "DSJIB_PEDPartOne.BottomHalfID"));
             this.xrSubreport2.ReportSource = new ReportsEngine.Reports.JIBReports.ExcelJIBPropertyExpenseDistributionSubreport();
             this.xrSubreport2.SizeF = new System.Drawing.SizeF(2426.392F, 1.986821E-06F);
             // 
@@ -615,8 +624,8 @@
             this.DisplayName = "JIBPropertyExpenseDistribution";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 20F, 20F);
-            this.PageWidth = 1700;
-            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Ledger;
+            this.PageWidth = 3050;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Custom;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -642,7 +651,8 @@
             this.pbooPrintAccountDescription,
             this.pbooIncludeDirectBillItems,
             this.pbooShowOwnerBreakdown,
-            this.pbooShowCriteria});
+            this.pbooShowCriteria,
+            this.pbooShowOwnerTotals});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -684,5 +694,6 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox71;
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport2;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowOwnerTotals;
     }
 }

@@ -788,8 +788,6 @@
             // 
             this.JIBInvoiceSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.InvoiceSubreport});
-            this.JIBInvoiceSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowInvoice\n")});
             this.JIBInvoiceSubBand.HeightF = 24.61065F;
             this.JIBInvoiceSubBand.Name = "JIBInvoiceSubBand";
             // 
@@ -925,6 +923,8 @@
             // 
             // InvoiceSubreport
             // 
+            this.InvoiceSubreport.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowInvoice\n")});
             this.InvoiceSubreport.GenerateOwnPages = true;
             this.InvoiceSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.InvoiceSubreport.Name = "InvoiceSubreport";
