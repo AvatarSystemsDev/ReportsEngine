@@ -140,13 +140,13 @@
             this.Textbox94 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox70 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox65 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Textbox92 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox95 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox85 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox75 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox74 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox81 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox96 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrCopyright = new DevExpress.XtraReports.UI.XRLabel();
@@ -160,7 +160,6 @@
             this.plngID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngImbursementID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable1)).BeginInit();
@@ -1264,8 +1263,7 @@
             this.Textbox1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox1.BorderWidth = 1F;
             this.Textbox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(True, \'#NOT_SUPPORTED#\', \'Lookup(?plngCompanyID, [ID], [Description], \'\'DSCom" +
-                    "paniesLookup\'\')\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DSCompaniesLookup.Description]")});
             this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
             this.Textbox1.KeepTogether = true;
             this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(1.040014F, 0F);
@@ -1359,7 +1357,6 @@
             this.Textbox94,
             this.Textbox70,
             this.Textbox65,
-            this.Textbox92,
             this.Textbox95,
             this.Textbox85,
             this.Textbox75,
@@ -1465,9 +1462,9 @@
             this.Textbox22.Multiline = true;
             this.Textbox22.Name = "Textbox22";
             this.Textbox22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox22.SizeF = new System.Drawing.SizeF(55.18772F, 20F);
+            this.Textbox22.SizeF = new System.Drawing.SizeF(55.18772F, 40.00002F);
             this.Textbox22.StylePriority.UsePadding = false;
-            this.Textbox22.Text = "Sus";
+            this.Textbox22.Text = "Edit Req.";
             this.Textbox22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox7
@@ -1641,22 +1638,6 @@
             this.Textbox65.Text = "Pur Prop #";
             this.Textbox65.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // Textbox92
-            // 
-            this.Textbox92.BorderColor = System.Drawing.Color.Black;
-            this.Textbox92.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox92.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox92.BorderWidth = 1F;
-            this.Textbox92.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox92.KeepTogether = true;
-            this.Textbox92.LocationFloat = new DevExpress.Utils.PointFloat(0F, 20.00001F);
-            this.Textbox92.Multiline = true;
-            this.Textbox92.Name = "Textbox92";
-            this.Textbox92.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox92.SizeF = new System.Drawing.SizeF(55.18772F, 20F);
-            this.Textbox92.StylePriority.UsePadding = false;
-            this.Textbox92.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
             // Textbox95
             // 
             this.Textbox95.BorderColor = System.Drawing.Color.Black;
@@ -1758,6 +1739,11 @@
             this.Textbox96.StylePriority.UsePadding = false;
             this.Textbox96.Text = "DOI";
             this.Textbox96.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // SubBand1
+            // 
+            this.SubBand1.HeightF = 8.25F;
+            this.SubBand1.Name = "SubBand1";
             // 
             // pageFooterBand1
             // 
@@ -1912,11 +1898,6 @@
             this.plngImbursementID.Type = typeof(int);
             this.plngImbursementID.ValueInfo = "0";
             this.plngImbursementID.Visible = false;
-            // 
-            // SubBand1
-            // 
-            this.SubBand1.HeightF = 8.25F;
-            this.SubBand1.Name = "SubBand1";
             // 
             // xrCrossBandBox1
             // 
@@ -2079,7 +2060,6 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox94;
         private DevExpress.XtraReports.UI.XRLabel Textbox70;
         private DevExpress.XtraReports.UI.XRLabel Textbox65;
-        private DevExpress.XtraReports.UI.XRLabel Textbox92;
         private DevExpress.XtraReports.UI.XRLabel Textbox95;
         private DevExpress.XtraReports.UI.XRLabel Textbox85;
         private DevExpress.XtraReports.UI.XRLabel Textbox75;

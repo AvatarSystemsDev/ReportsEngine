@@ -450,6 +450,30 @@
     <Compile Include="Reports\JIBReports\PropertyExpenseDistributionOwnerBreakdown.Designer.cs">
       <DependentUpon>PropertyExpenseDistributionOwnerBreakdown.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\DOIDivisionOrderNADOA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\DOIDivisionOrderNADOA.Designer.cs">
+      <DependentUpon>DOIDivisionOrderNADOA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\DOIDivisionOrderTx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\DOIDivisionOrderTx.Designer.cs">
+      <DependentUpon>DOIDivisionOrderTx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIDivisionOrderNADOA.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIDivisionOrderNADOA.Designer.cs">
+      <DependentUpon>ExcelDOIDivisionOrderNADOA.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIDivisionOrderTx.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelDOIDivisionOrderTx.Designer.cs">
+      <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1992,6 +2016,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\PropertyExpenseDistributionOwnerBreakdown.resx">
       <DependentUpon>PropertyExpenseDistributionOwnerBreakdown.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\DOIDivisionOrderNADOA.resx">
+      <DependentUpon>DOIDivisionOrderNADOA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\DOIDivisionOrderTx.resx">
+      <DependentUpon>DOIDivisionOrderTx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelDOIDivisionOrderNADOA.resx">
+      <DependentUpon>ExcelDOIDivisionOrderNADOA.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelDOIDivisionOrderTx.resx">
+      <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>

@@ -250,7 +250,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAPPayablesDetail", () => new ExcelAPPayablesDetail());
             Reports.Add("APPayables", () => new APPayables());
             Reports.Add("ExcelAPPayables", () => new ExcelAPPayables());
-            
+            Reports.Add("DOIDivisionOrderNADOA", () => new DOIDivisionOrderNADOA());
+            Reports.Add("ExcelDOIDivisionOrderNADOA", () => new ExcelDOIDivisionOrderNADOA());
+            Reports.Add("DOIDivisionOrderTx", () => new DOIDivisionOrderTx());
+            Reports.Add("ExcelDOIDivisionOrderTx", () => new ExcelDOIDivisionOrderTx());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
