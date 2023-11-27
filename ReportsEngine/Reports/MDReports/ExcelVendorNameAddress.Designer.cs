@@ -35,6 +35,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelVendorNameAddress));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -66,6 +67,7 @@
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngEntityCodeID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngUseSortName = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -404,7 +406,7 @@
             storedProcQuery1.Name = "NamebaseNameAddress";
             queryParameter1.Name = "@plngEntityCodeID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngEntityCodeID", typeof(string));
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngEntityCodeID", typeof(int));
             queryParameter2.Name = "@pstrBeginningEntityNumber";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
@@ -413,16 +415,20 @@
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
             queryParameter4.Name = "@plngSortOrder";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(string));
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
             queryParameter5.Name = "@pbooPrintInactives";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooPrintInactives", typeof(string));
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooPrintInactives", typeof(bool));
+            queryParameter6.Name = "@plngUseSortName";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
-            queryParameter5});
+            queryParameter5,
+            queryParameter6});
             storedProcQuery1.StoredProcName = "Report_NamebaseNameAddress";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -514,6 +520,13 @@
             this.plngUserID.Name = "plngUserID";
             this.plngUserID.Visible = false;
             // 
+            // plngUseSortName
+            // 
+            this.plngUseSortName.Description = "Parameter1";
+            this.plngUseSortName.Name = "plngUseSortName";
+            this.plngUseSortName.Type = typeof(int);
+            this.plngUseSortName.ValueInfo = "0";
+            // 
             // ExcelVendorNameAddress
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -553,7 +566,8 @@
             this.pbooPrintNotes,
             this.pbooShowCriteria,
             this.plngEntityCodeID,
-            this.plngUserID});
+            this.plngUserID,
+            this.plngUseSortName});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -590,5 +604,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.Parameters.Parameter plngUseSortName;
     }
 }

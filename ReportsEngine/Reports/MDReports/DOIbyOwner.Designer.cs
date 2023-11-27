@@ -887,7 +887,7 @@ namespace ReportsEngine.Reports
             this.Textbox9.StylePriority.UseBorders = false;
             this.Textbox9.StylePriority.UsePadding = false;
             this.Textbox9.StylePriority.UseTextAlignment = false;
-            this.Textbox9.Text = "Pay Status";
+            this.Textbox9.Text = "Pay\r\nStatus";
             this.Textbox9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox3
@@ -1705,7 +1705,7 @@ namespace ReportsEngine.Reports
             this.xrLabel4.CanGrow = false;
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OwnerNumber] +\'  \' + [OwnerName]")});
-            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(1.041667F, 0F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";

@@ -1085,9 +1085,7 @@
             this.xrLabel38.CanGrow = false;
             this.xrLabel38.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "\'Segoe UI\'"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pstrBeginningAccountNumber<= \'!\' AND ?pstrEndingAccountNumber= \'ZZZZZZZZZZ-Z" +
-                    "ZZZ\', \'Selected Accounts\', FormatString(?pstrBeginningAccountNumber) & \' to \' & Forma" +
-                    "tString(?pstrEndingAccountNumber))\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrLabel38.ExpressionBindings"))});
             this.xrLabel38.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(82.92961F, 38.35357F);
             this.xrLabel38.Multiline = true;

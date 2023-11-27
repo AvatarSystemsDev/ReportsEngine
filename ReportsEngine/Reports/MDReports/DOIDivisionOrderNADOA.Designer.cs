@@ -482,7 +482,7 @@
             this.xrLabel43.Multiline = true;
             this.xrLabel43.Name = "xrLabel43";
             this.xrLabel43.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel43.SizeF = new System.Drawing.SizeF(735.4252F, 20F);
+            this.xrLabel43.SizeF = new System.Drawing.SizeF(638.5364F, 20F);
             this.xrLabel43.StylePriority.UseBackColor = false;
             this.xrLabel43.StylePriority.UseBorderColor = false;
             this.xrLabel43.StylePriority.UseBorderDashStyle = false;
@@ -538,7 +538,7 @@
             this.xrLabel103.Multiline = true;
             this.xrLabel103.Name = "xrLabel103";
             this.xrLabel103.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel103.SizeF = new System.Drawing.SizeF(50.87091F, 20F);
+            this.xrLabel103.SizeF = new System.Drawing.SizeF(50.87091F, 40.00002F);
             this.xrLabel103.StylePriority.UseBackColor = false;
             this.xrLabel103.StylePriority.UseBorderColor = false;
             this.xrLabel103.StylePriority.UseBorderDashStyle = false;

@@ -478,7 +478,7 @@
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel9.SizeF = new System.Drawing.SizeF(90.54245F, 24.99998F);
             this.xrLabel9.StylePriority.UsePadding = false;
-            this.xrLabel9.Text = "Over 120 Days";
+            this.xrLabel9.Text = "Over 120\r\nDays";
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // Textbox1
@@ -569,7 +569,7 @@
             this.Textbox57.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox57.SizeF = new System.Drawing.SizeF(88.75169F, 24.99997F);
             this.Textbox57.StylePriority.UsePadding = false;
-            this.Textbox57.Text = "Current";
+            this.Textbox57.Text = "0-30\r\nDays";
             this.Textbox57.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // Textbox59
@@ -586,7 +586,7 @@
             this.Textbox59.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox59.SizeF = new System.Drawing.SizeF(84.59814F, 24.99998F);
             this.Textbox59.StylePriority.UsePadding = false;
-            this.Textbox59.Text = "31-60 Days";
+            this.Textbox59.Text = "31-60\r\nDays";
             this.Textbox59.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // Textbox61
@@ -603,7 +603,7 @@
             this.Textbox61.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox61.SizeF = new System.Drawing.SizeF(84.58496F, 24.99998F);
             this.Textbox61.StylePriority.UsePadding = false;
-            this.Textbox61.Text = "61-90 Days";
+            this.Textbox61.Text = "61-90\r\nDays";
             this.Textbox61.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // Textbox72
@@ -620,7 +620,7 @@
             this.Textbox72.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox72.SizeF = new System.Drawing.SizeF(84.60818F, 24.99998F);
             this.Textbox72.StylePriority.UsePadding = false;
-            this.Textbox72.Text = "91-120 Days";
+            this.Textbox72.Text = "91-120\r\nDays";
             this.Textbox72.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // Textbox79
@@ -637,7 +637,7 @@
             this.Textbox79.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox79.SizeF = new System.Drawing.SizeF(84.59802F, 24.99998F);
             this.Textbox79.StylePriority.UsePadding = false;
-            this.Textbox79.Text = "Vendor Total";
+            this.Textbox79.Text = "Vendor\r\nTotal";
             this.Textbox79.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // Textbox75
@@ -1148,7 +1148,7 @@
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel11.SizeF = new System.Drawing.SizeF(84.59802F, 24.99998F);
             this.xrLabel11.StylePriority.UsePadding = false;
-            this.xrLabel11.Text = "Vendor Total";
+            this.xrLabel11.Text = "Vendor\r\nTotal";
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel12
@@ -1165,7 +1165,7 @@
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(84.60818F, 24.99998F);
             this.xrLabel12.StylePriority.UsePadding = false;
-            this.xrLabel12.Text = "91-120 Days";
+            this.xrLabel12.Text = "91-120\r\nDays";
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel13
@@ -1182,7 +1182,7 @@
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel13.SizeF = new System.Drawing.SizeF(84.58496F, 24.99998F);
             this.xrLabel13.StylePriority.UsePadding = false;
-            this.xrLabel13.Text = "61-90 Days";
+            this.xrLabel13.Text = "61-90\r\nDays";
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel14
@@ -1199,7 +1199,7 @@
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel14.SizeF = new System.Drawing.SizeF(84.59814F, 24.99998F);
             this.xrLabel14.StylePriority.UsePadding = false;
-            this.xrLabel14.Text = "31-60 Days";
+            this.xrLabel14.Text = "31-60\r\nDays";
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel15
@@ -1216,7 +1216,7 @@
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel15.SizeF = new System.Drawing.SizeF(88.75169F, 24.99997F);
             this.xrLabel15.StylePriority.UsePadding = false;
-            this.xrLabel15.Text = "Current";
+            this.xrLabel15.Text = "0-30\r\nDays";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel25
@@ -1268,7 +1268,7 @@
             this.xrLabel29.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel29.SizeF = new System.Drawing.SizeF(90.54245F, 24.99998F);
             this.xrLabel29.StylePriority.UsePadding = false;
-            this.xrLabel29.Text = "Over 120 Days";
+            this.xrLabel29.Text = "Over 120\r\nDays";
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // Rectangle1

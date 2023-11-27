@@ -255,9 +255,26 @@ namespace ReportsEngine.Services
                     //string[] multivariateParameter = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));
                     // report.Parameters[parameterName].Value = multivariateParameter;
                     JToken token = JToken.Parse(parameters.Get(parameterName));
+                    string jsonInput = parameters.Get(parameterName);
+
                     if (token.Type == JTokenType.Array)
                     {
                         report.Parameters[parameterName].Value = token.ToObject<string[]>();
+                    }
+                    else if(token.Type == JTokenType.Object)
+                    {
+                        JObject jsonObject = JObject.Parse(jsonInput);
+                        List<string> values = new List<string>();
+
+                        // Iterate through the properties of the object
+                        foreach (var prop in jsonObject.Properties())
+                        {
+                            // Add the property value to the list
+                            values.Add(prop.Value.ToString());
+                        }
+
+                        // Set the parameter value as an array of strings
+                        report.Parameters[parameterName].Value = values.ToArray();
                     }
                     else
                     {

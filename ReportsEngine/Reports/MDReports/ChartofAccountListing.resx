@@ -127,4 +127,8 @@
     <value>Iif([AccountClassificationDescription] = 'Equity', 'EQ' , Iif([AccountClassificationDescription] = 'Asset', 'A',Iif([AccountClassificationDescription] = 'Liability', 'L',iif([AccountClassificationDescription] = 'Expense','EX',iif([AccountClassificationDescription] ='Income','I',iif([AccountClassificationDescription] ='Other Income','OI','OE'))))))
 </value>
   </data>
+  <data name="xrLabel38.ExpressionBindings" xml:space="preserve">
+    <value>Iif(?pstrBeginningAccountNumber&lt;= '!' AND ?pstrEndingAccountNumber= 'ZZZZZZZZZZ-ZZZZ', 'Selected Accounts', FormatString(?pstrBeginningAccountNumber) &amp; ' to ' &amp; FormatString(?pstrEndingAccountNumber))
+</value>
+  </data>
 </root>

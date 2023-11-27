@@ -1057,7 +1057,7 @@
             this.xrLabel57.SizeF = new System.Drawing.SizeF(122.075F, 34.58001F);
             this.xrLabel57.StylePriority.UsePadding = false;
             this.xrLabel57.StylePriority.UseTextAlignment = false;
-            this.xrLabel57.Text = "Invoice Number";
+            this.xrLabel57.Text = "Invoice\r\nNumber";
             this.xrLabel57.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel58
@@ -1092,7 +1092,7 @@
             this.xrLabel59.SizeF = new System.Drawing.SizeF(64.01608F, 34.58001F);
             this.xrLabel59.StylePriority.UsePadding = false;
             this.xrLabel59.StylePriority.UseTextAlignment = false;
-            this.xrLabel59.Text = "G/L Date";
+            this.xrLabel59.Text = "G/L\r\nDate";
             this.xrLabel59.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
             // xrLabel60
@@ -1110,7 +1110,7 @@
             this.xrLabel60.SizeF = new System.Drawing.SizeF(64.01639F, 34.58001F);
             this.xrLabel60.StylePriority.UsePadding = false;
             this.xrLabel60.StylePriority.UseTextAlignment = false;
-            this.xrLabel60.Text = "Due Date";
+            this.xrLabel60.Text = "Due\r\nDate";
             this.xrLabel60.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
             // xrLabel61
@@ -1145,7 +1145,7 @@
             this.xrLabel62.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel62.SizeF = new System.Drawing.SizeF(88.52209F, 34.58F);
             this.xrLabel62.StylePriority.UsePadding = false;
-            this.xrLabel62.Text = "Current";
+            this.xrLabel62.Text = "0-30\r\nDays";
             this.xrLabel62.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel63

@@ -42,6 +42,9 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDChecks));
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine1 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine2 = new DevExpress.XtraPrinting.Shape.ShapeLine();
@@ -58,6 +61,7 @@
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.RemittanceDetailBand = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -119,7 +123,6 @@
             this.pstrSelectCheck = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngPrintRemittance = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox6)).BeginInit();
@@ -183,10 +186,22 @@
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter10});
             storedProcQuery3.StoredProcName = "Owners_ReportLookup";
+            storedProcQuery4.Name = "CompanyFormatSettings";
+            queryParameter11.Name = "@plngID";
+            queryParameter11.Type = typeof(int);
+            queryParameter11.ValueInfo = "0";
+            queryParameter12.Name = "@plngCompanyID";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter11,
+            queryParameter12});
+            storedProcQuery4.StoredProcName = "CompanyCheckPrintingFormat_Select";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
             storedProcQuery2,
-            storedProcQuery3});
+            storedProcQuery3,
+            storedProcQuery4});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
@@ -227,6 +242,20 @@
             this.RemittanceDetailBand.HeightF = 24.61065F;
             this.RemittanceDetailBand.MultiColumn.ColumnSpacing = 50F;
             this.RemittanceDetailBand.Name = "RemittanceDetailBand";
+            // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2")});
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "RDCheckHeader.ImbursementID"));
+            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(800F, 24.61065F);
             // 
             // pstrDatabaseName
             // 
@@ -1105,20 +1134,6 @@
             // 
             this.PageHeader.HeightF = 0F;
             this.PageHeader.Name = "PageHeader";
-            // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2")});
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "RDCheckHeader.ImbursementID"));
-            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(800F, 24.61065F);
             // 
             // RDChecks
             // 

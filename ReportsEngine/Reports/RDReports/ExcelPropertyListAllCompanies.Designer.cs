@@ -36,6 +36,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelPropertyListAllCompanies));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -70,6 +71,7 @@
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngOperatorsToShow = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOperator = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngShowActive = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -438,13 +440,17 @@
             queryParameter6.Name = "@pbooUseGroupTypes";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooUseGroupTypes", typeof(bool));
+            queryParameter7.Name = "@plngShowActive";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
             queryParameter5,
-            queryParameter6});
+            queryParameter6,
+            queryParameter7});
             storedProcQuery1.StoredProcName = "Report_PropertyListAllCompanies";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -553,6 +559,13 @@
             this.pstrSelectOperator.MultiValue = true;
             this.pstrSelectOperator.Name = "pstrSelectOperator";
             // 
+            // plngShowActive
+            // 
+            this.plngShowActive.Description = "Show Active";
+            this.plngShowActive.Name = "plngShowActive";
+            this.plngShowActive.Type = typeof(int);
+            this.plngShowActive.ValueInfo = "0";
+            // 
             // ExcelPropertyListAllCompanies
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -599,7 +612,8 @@
             this.plngUserID,
             this.Subtitle,
             this.plngOperatorsToShow,
-            this.pstrSelectOperator});
+            this.pstrSelectOperator,
+            this.plngShowActive});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -640,5 +654,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel Textbox26;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectOperator;
+        private DevExpress.XtraReports.Parameters.Parameter plngShowActive;
     }
 }
