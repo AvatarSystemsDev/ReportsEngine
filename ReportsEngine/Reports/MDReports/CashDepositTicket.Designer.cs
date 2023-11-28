@@ -32,66 +32,62 @@
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashDepositTicket));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailReportBand();
-            this.detailReportBand1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Tablix1_Details_DetailBand = new DevExpress.XtraReports.UI.DetailBand();
             this.Details_table = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableRow7 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableRow8 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableRow9 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Textbox2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox41 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountSeven = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountFourteen = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Textbox29 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountOne = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountEight = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountFifteen = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Textbox25 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountTwo = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountNine = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountSixteen = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Textbox21 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountThree = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountTen = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountSeventeen = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
             this.DepositDate = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountFour = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountEleven = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountEighteen = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Textbox13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountFive = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountTwelve = new DevExpress.XtraReports.UI.XRTableCell();
             this.DepositSubTotal = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow7 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Textbox9 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountSix = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountThirteen = new DevExpress.XtraReports.UI.XRTableCell();
             this.CashBackAmount1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow8 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Textbox33 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox34 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox35 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox36 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableRow9 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Textbox37 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox38 = new DevExpress.XtraReports.UI.XRTableCell();
             this.DepositedItemCount = new DevExpress.XtraReports.UI.XRTableCell();
             this.TotalDepositAmount = new DevExpress.XtraReports.UI.XRTableCell();
-            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.detailBand2 = new DevExpress.XtraReports.UI.DetailBand();
-            this.Subreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.plngBatchID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
@@ -105,8 +101,33 @@
             this.parameter4 = new DevExpress.XtraReports.Parameters.Parameter();
             this.parameter5 = new DevExpress.XtraReports.Parameters.Parameter();
             this.parameter6 = new DevExpress.XtraReports.Parameters.Parameter();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.CashDepositSummary = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Dynamic
+            // 
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
+            this.Dynamic.Name = "Dynamic";
+            storedProcQuery1.Name = "DSCashDepositTicket";
+            queryParameter1.Name = "@plngBatchID";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngBatchID", typeof(string));
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1});
+            storedProcQuery1.StoredProcName = "CashDepositPrinting_GetDepositTicket";
+            storedProcQuery2.Name = "DSCashDepositBatchesLookup";
+            queryParameter2.Name = "@plngCompanyID";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter2});
+            storedProcQuery2.StoredProcName = "ReportWizard_PopulateCashDepositBatches";
+            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1,
+            storedProcQuery2});
+            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
             // 
@@ -133,13 +154,6 @@
             this.Tablix1.Level = 0;
             this.Tablix1.Name = "Tablix1";
             // 
-            // detailReportBand1
-            // 
-            this.detailReportBand1.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
-            this.detailBand2});
-            this.detailReportBand1.Level = 1;
-            this.detailReportBand1.Name = "detailReportBand1";
-            // 
             // Tablix1_Details_DetailBand
             // 
             this.Tablix1_Details_DetailBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -147,6 +161,8 @@
             this.Tablix1_Details_DetailBand.HeightF = 264F;
             this.Tablix1_Details_DetailBand.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1_Details_DetailBand.Name = "Tablix1_Details_DetailBand";
+            this.Tablix1_Details_DetailBand.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
+            this.SubBand1});
             // 
             // Details_table
             // 
@@ -173,86 +189,6 @@
             this.PaymentAmountFourteen});
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 0.10227272727272728D;
-            // 
-            // xrTableRow2
-            // 
-            this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox29,
-            this.PaymentAmountOne,
-            this.PaymentAmountEight,
-            this.PaymentAmountFifteen});
-            this.xrTableRow2.Name = "xrTableRow2";
-            this.xrTableRow2.Weight = 0.10227272727272728D;
-            // 
-            // xrTableRow3
-            // 
-            this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox25,
-            this.PaymentAmountTwo,
-            this.PaymentAmountNine,
-            this.PaymentAmountSixteen});
-            this.xrTableRow3.Name = "xrTableRow3";
-            this.xrTableRow3.Weight = 0.10227272727272728D;
-            // 
-            // xrTableRow4
-            // 
-            this.xrTableRow4.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox21,
-            this.PaymentAmountThree,
-            this.PaymentAmountTen,
-            this.PaymentAmountSeventeen});
-            this.xrTableRow4.Name = "xrTableRow4";
-            this.xrTableRow4.Weight = 0.10227272727272728D;
-            // 
-            // xrTableRow5
-            // 
-            this.xrTableRow5.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.DepositDate,
-            this.PaymentAmountFour,
-            this.PaymentAmountEleven,
-            this.PaymentAmountEighteen});
-            this.xrTableRow5.Name = "xrTableRow5";
-            this.xrTableRow5.Weight = 0.10227272727272728D;
-            // 
-            // xrTableRow6
-            // 
-            this.xrTableRow6.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox13,
-            this.PaymentAmountFive,
-            this.PaymentAmountTwelve,
-            this.DepositSubTotal});
-            this.xrTableRow6.Name = "xrTableRow6";
-            this.xrTableRow6.Weight = 0.10227272727272728D;
-            // 
-            // xrTableRow7
-            // 
-            this.xrTableRow7.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox9,
-            this.PaymentAmountSix,
-            this.PaymentAmountThirteen,
-            this.CashBackAmount1});
-            this.xrTableRow7.Name = "xrTableRow7";
-            this.xrTableRow7.Weight = 0.10227272727272728D;
-            // 
-            // xrTableRow8
-            // 
-            this.xrTableRow8.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox33,
-            this.Textbox34,
-            this.Textbox35,
-            this.Textbox36});
-            this.xrTableRow8.Name = "xrTableRow8";
-            this.xrTableRow8.Weight = 0.18939393939393939D;
-            // 
-            // xrTableRow9
-            // 
-            this.xrTableRow9.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox37,
-            this.Textbox38,
-            this.DepositedItemCount,
-            this.TotalDepositAmount});
-            this.xrTableRow9.Name = "xrTableRow9";
-            this.xrTableRow9.Weight = 0.0946969696969697D;
             // 
             // Textbox2
             // 
@@ -311,6 +247,16 @@
             this.PaymentAmountFourteen.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountFourteen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountFourteen.Weight = 0.2538747706600783D;
+            // 
+            // xrTableRow2
+            // 
+            this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.Textbox29,
+            this.PaymentAmountOne,
+            this.PaymentAmountEight,
+            this.PaymentAmountFifteen});
+            this.xrTableRow2.Name = "xrTableRow2";
+            this.xrTableRow2.Weight = 0.10227272727272728D;
             // 
             // Textbox29
             // 
@@ -373,6 +319,16 @@
             this.PaymentAmountFifteen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountFifteen.Weight = 0.2538747706600783D;
             // 
+            // xrTableRow3
+            // 
+            this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.Textbox25,
+            this.PaymentAmountTwo,
+            this.PaymentAmountNine,
+            this.PaymentAmountSixteen});
+            this.xrTableRow3.Name = "xrTableRow3";
+            this.xrTableRow3.Weight = 0.10227272727272728D;
+            // 
             // Textbox25
             // 
             this.Textbox25.BorderColor = System.Drawing.Color.Black;
@@ -434,6 +390,16 @@
             this.PaymentAmountSixteen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountSixteen.Weight = 0.2538747706600783D;
             // 
+            // xrTableRow4
+            // 
+            this.xrTableRow4.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.Textbox21,
+            this.PaymentAmountThree,
+            this.PaymentAmountTen,
+            this.PaymentAmountSeventeen});
+            this.xrTableRow4.Name = "xrTableRow4";
+            this.xrTableRow4.Weight = 0.10227272727272728D;
+            // 
             // Textbox21
             // 
             this.Textbox21.BorderColor = System.Drawing.Color.Black;
@@ -494,6 +460,16 @@
             this.PaymentAmountSeventeen.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountSeventeen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountSeventeen.Weight = 0.2538747706600783D;
+            // 
+            // xrTableRow5
+            // 
+            this.xrTableRow5.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.DepositDate,
+            this.PaymentAmountFour,
+            this.PaymentAmountEleven,
+            this.PaymentAmountEighteen});
+            this.xrTableRow5.Name = "xrTableRow5";
+            this.xrTableRow5.Weight = 0.10227272727272728D;
             // 
             // DepositDate
             // 
@@ -559,6 +535,16 @@
             this.PaymentAmountEighteen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountEighteen.Weight = 0.2538747706600783D;
             // 
+            // xrTableRow6
+            // 
+            this.xrTableRow6.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.Textbox13,
+            this.PaymentAmountFive,
+            this.PaymentAmountTwelve,
+            this.DepositSubTotal});
+            this.xrTableRow6.Name = "xrTableRow6";
+            this.xrTableRow6.Weight = 0.10227272727272728D;
+            // 
             // Textbox13
             // 
             this.Textbox13.BorderColor = System.Drawing.Color.Black;
@@ -619,6 +605,16 @@
             this.DepositSubTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.DepositSubTotal.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.DepositSubTotal.Weight = 0.2538747706600783D;
+            // 
+            // xrTableRow7
+            // 
+            this.xrTableRow7.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.Textbox9,
+            this.PaymentAmountSix,
+            this.PaymentAmountThirteen,
+            this.CashBackAmount1});
+            this.xrTableRow7.Name = "xrTableRow7";
+            this.xrTableRow7.Weight = 0.10227272727272728D;
             // 
             // Textbox9
             // 
@@ -681,6 +677,16 @@
             this.CashBackAmount1.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.CashBackAmount1.Weight = 0.2538747706600783D;
             // 
+            // xrTableRow8
+            // 
+            this.xrTableRow8.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.Textbox33,
+            this.Textbox34,
+            this.Textbox35,
+            this.Textbox36});
+            this.xrTableRow8.Name = "xrTableRow8";
+            this.xrTableRow8.Weight = 0.18939393939393939D;
+            // 
             // Textbox33
             // 
             this.Textbox33.BorderColor = System.Drawing.Color.Black;
@@ -732,6 +738,16 @@
             this.Textbox36.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox36.Weight = 0.2538747706600783D;
+            // 
+            // xrTableRow9
+            // 
+            this.xrTableRow9.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
+            this.Textbox37,
+            this.Textbox38,
+            this.DepositedItemCount,
+            this.TotalDepositAmount});
+            this.xrTableRow9.Name = "xrTableRow9";
+            this.xrTableRow9.Weight = 0.0946969696969697D;
             // 
             // Textbox37
             // 
@@ -790,58 +806,13 @@
             this.TotalDepositAmount.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.TotalDepositAmount.Weight = 0.2538747706600783D;
             // 
-            // Dynamic
-            // 
-            this.Dynamic.ConnectionName = "Connection";
-            this.Dynamic.Name = "Dynamic";
-            storedProcQuery1.Name = "DSCashDepositTicket";
-            queryParameter1.Name = "@plngBatchID";
-            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngBatchID", typeof(string));
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1});
-            storedProcQuery1.StoredProcName = "CashDepositPrinting_GetDepositTicket";
-            storedProcQuery2.Name = "DSCompaniesLookup";
-            storedProcQuery2.StoredProcName = "Companies_ReportLookup";
-            storedProcQuery3.Name = "DSCashDepositBatchesLookup";
-            queryParameter2.Name = "@plngCompanyID";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter2});
-            storedProcQuery3.StoredProcName = "ReportWizard_PopulateCashDepositBatches";
-            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1,
-            storedProcQuery2,
-            storedProcQuery3});
-            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
-            // 
-            // detailBand2
-            // 
-            this.detailBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Subreport1});
-            this.detailBand2.HeightF = 346.42F;
-            this.detailBand2.MultiColumn.ColumnSpacing = 50F;
-            this.detailBand2.Name = "detailBand2";
-            // 
-            // Subreport1
-            // 
-            this.Subreport1.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 0F);
-            this.Subreport1.Name = "Subreport1";
-            this.Subreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.plngBatchID));
-            this.Subreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.Subreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.Subreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.Subreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.Subreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
-            this.Subreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.Subreport1.SizeF = new System.Drawing.SizeF(829.9999F, 346.42F);
-            // 
             // plngBatchID
             // 
             this.plngBatchID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "?plngBatchID")});
             this.plngBatchID.Name = "plngBatchID";
+            this.plngBatchID.Type = typeof(int);
+            this.plngBatchID.ValueInfo = "0";
             this.plngBatchID.Visible = false;
             // 
             // plngCompanyID
@@ -849,6 +820,8 @@
             this.plngCompanyID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "?plngCompanyID")});
             this.plngCompanyID.Name = "plngCompanyID";
+            this.plngCompanyID.Type = typeof(int);
+            this.plngCompanyID.ValueInfo = "0";
             this.plngCompanyID.Visible = false;
             // 
             // pstrDatabaseName
@@ -934,19 +907,55 @@
             dynamicListLookUpSettings2.ValueMember = "ItemData";
             this.parameter6.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
+            // SubBand1
+            // 
+            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CashDepositSummary});
+            this.SubBand1.Expanded = false;
+            this.SubBand1.HeightF = 0F;
+            this.SubBand1.Name = "SubBand1";
+            this.SubBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
+            // 
+            // CashDepositSummary
+            // 
+            this.CashDepositSummary.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.CashDepositSummary.Name = "CashDepositSummary";
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.plngBatchID));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.CashDepositSummary.ReportSource = new ReportsEngine.Reports.MDReports.CashDepositSummary();
+            this.CashDepositSummary.SizeF = new System.Drawing.SizeF(850F, 0F);
+            // 
             // CashDepositTicket
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.topMarginBand1,
             this.bottomMarginBand1,
             this.detailBand1,
-            this.Tablix1,
-            this.detailReportBand1});
+            this.Tablix1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
             this.DisplayName = "CashDepositTicket";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
+            this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBatchID, DevExpress.XtraReports.Parameters.Orientation.Vertical),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter1, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter2, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter3, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter4, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter5, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter6, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.plngBatchID,
             this.plngCompanyID,
@@ -1021,9 +1030,6 @@
         private DevExpress.XtraReports.UI.XRTableCell DepositedItemCount;
         private DevExpress.XtraReports.UI.XRTableCell TotalDepositAmount;
         private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
-        private DevExpress.XtraReports.UI.DetailReportBand detailReportBand1;
-        private DevExpress.XtraReports.UI.DetailBand detailBand2;
-        private DevExpress.XtraReports.UI.XRSubreport Subreport1;
         private DevExpress.XtraReports.Parameters.Parameter plngBatchID;
         private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
         private DevExpress.XtraReports.Parameters.Parameter pstrDatabaseName;
@@ -1037,5 +1043,7 @@
         private DevExpress.XtraReports.Parameters.Parameter parameter4;
         private DevExpress.XtraReports.Parameters.Parameter parameter5;
         private DevExpress.XtraReports.Parameters.Parameter parameter6;
+        private DevExpress.XtraReports.UI.SubBand SubBand1;
+        private DevExpress.XtraReports.UI.XRSubreport CashDepositSummary;
     }
 }

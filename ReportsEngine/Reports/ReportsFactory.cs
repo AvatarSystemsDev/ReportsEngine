@@ -254,6 +254,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelDOIDivisionOrderNADOA", () => new ExcelDOIDivisionOrderNADOA());
             Reports.Add("DOIDivisionOrderTx", () => new DOIDivisionOrderTx());
             Reports.Add("ExcelDOIDivisionOrderTx", () => new ExcelDOIDivisionOrderTx());
+            Reports.Add("CashDepositTicket", () => new CashDepositTicket());
+            Reports.Add("ExcelCashDepositTicket", () => new ExcelCashDepositTicket());
+            Reports.Add("NewMexicoStateTaxDetail", () => new NewMexicoStateTaxDetail());
+            Reports.Add("ExcelNewMexicoStateTaxDetail", () => new ExcelNewMexicoStateTaxDetail());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

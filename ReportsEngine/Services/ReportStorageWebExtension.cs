@@ -153,9 +153,12 @@ namespace ReportsEngine.Services
         public static void setReportParameters(XtraReport report, System.Collections.Specialized.NameValueCollection parameters, int companyid)
         {
             bool AwaitParameterInputPassed = false;
-
             foreach (string parameterName in parameters.AllKeys)
             {
+                if (parameterName == null)
+                {
+                    continue;
+                }
                  if (parameterName == "plngDatabaseID")
                 {
                     DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();

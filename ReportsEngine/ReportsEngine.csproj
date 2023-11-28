@@ -462,6 +462,12 @@
     <Compile Include="Reports\MDReports\DOIDivisionOrderTx.Designer.cs">
       <DependentUpon>DOIDivisionOrderTx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\ExcelCashDepositTicket.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelCashDepositTicket.Designer.cs">
+      <DependentUpon>ExcelCashDepositTicket.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\ExcelDOIDivisionOrderNADOA.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -473,6 +479,12 @@
     </Compile>
     <Compile Include="Reports\MDReports\ExcelDOIDivisionOrderTx.Designer.cs">
       <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelNewMexicoStateTaxDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelNewMexicoStateTaxDetail.Designer.cs">
+      <DependentUpon>ExcelNewMexicoStateTaxDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
@@ -629,6 +641,18 @@
     </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerSummary.Designer.cs">
       <DependentUpon>ExcelTexasTaxProducerSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\NewMexicoStateTaxDetailReportTotals.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\NewMexicoStateTaxDetailReportTotals.Designer.cs">
+      <DependentUpon>NewMexicoStateTaxDetailReportTotals.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\NewMexicoTaxDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\NewMexicoTaxDetail.Designer.cs">
+      <DependentUpon>NewMexicoTaxDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\PropertyListAllCompanies.cs">
       <SubType>Component</SubType>
@@ -2023,11 +2047,17 @@
     <EmbeddedResource Include="Reports\MDReports\DOIDivisionOrderTx.resx">
       <DependentUpon>DOIDivisionOrderTx.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelCashDepositTicket.resx">
+      <DependentUpon>ExcelCashDepositTicket.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelDOIDivisionOrderNADOA.resx">
       <DependentUpon>ExcelDOIDivisionOrderNADOA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelDOIDivisionOrderTx.resx">
       <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelNewMexicoStateTaxDetail.resx">
+      <DependentUpon>ExcelNewMexicoStateTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
@@ -2106,6 +2136,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerSummary.resx">
       <DependentUpon>ExcelTexasTaxProducerSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\NewMexicoStateTaxDetailReportTotals.resx">
+      <DependentUpon>NewMexicoStateTaxDetailReportTotals.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\NewMexicoTaxDetail.resx">
+      <DependentUpon>NewMexicoTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\PropertyListAllCompanies.resx">
       <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
