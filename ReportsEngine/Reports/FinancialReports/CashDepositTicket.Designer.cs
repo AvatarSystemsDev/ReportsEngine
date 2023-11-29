@@ -33,6 +33,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CashDepositTicket));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -44,50 +46,42 @@
             this.Tablix1_Details_DetailBand = new DevExpress.XtraReports.UI.DetailBand();
             this.Details_table = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.Textbox2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox41 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountSeven = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountFourteen = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow2 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.Textbox29 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountOne = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountEight = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountFifteen = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow3 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.Textbox25 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountTwo = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountNine = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountSixteen = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow4 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.Textbox21 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountThree = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountTen = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountSeventeen = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow5 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.DepositDate = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountFour = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountEleven = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountEighteen = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow6 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.Textbox13 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountFive = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountTwelve = new DevExpress.XtraReports.UI.XRTableCell();
             this.DepositSubTotal = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow7 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.Textbox9 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountSix = new DevExpress.XtraReports.UI.XRTableCell();
             this.PaymentAmountThirteen = new DevExpress.XtraReports.UI.XRTableCell();
             this.CashBackAmount1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow8 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.Textbox33 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox34 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox35 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox36 = new DevExpress.XtraReports.UI.XRTableCell();
             this.xrTableRow9 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.Textbox37 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox38 = new DevExpress.XtraReports.UI.XRTableCell();
             this.DepositedItemCount = new DevExpress.XtraReports.UI.XRTableCell();
             this.TotalDepositAmount = new DevExpress.XtraReports.UI.XRTableCell();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.plngBatchID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
@@ -95,13 +89,9 @@
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.parameter1 = new DevExpress.XtraReports.Parameters.Parameter();
-            this.parameter2 = new DevExpress.XtraReports.Parameters.Parameter();
-            this.parameter3 = new DevExpress.XtraReports.Parameters.Parameter();
-            this.parameter4 = new DevExpress.XtraReports.Parameters.Parameter();
-            this.parameter5 = new DevExpress.XtraReports.Parameters.Parameter();
             this.parameter6 = new DevExpress.XtraReports.Parameters.Parameter();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.False = new DevExpress.XtraReports.UI.CalculatedField();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.CashDepositSummary = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -124,14 +114,22 @@
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter2});
             storedProcQuery2.StoredProcName = "ReportWizard_PopulateCashDepositBatches";
+            storedProcQuery3.Name = "DSCompaniesLookup";
+            queryParameter3.Name = "@plngCompanyID";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter3});
+            storedProcQuery3.StoredProcName = "Companies_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
-            storedProcQuery2});
+            storedProcQuery2,
+            storedProcQuery3});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
             // 
-            this.topMarginBand1.HeightF = 0F;
+            this.topMarginBand1.HeightF = 2F;
             this.topMarginBand1.Name = "topMarginBand1";
             // 
             // bottomMarginBand1
@@ -157,8 +155,9 @@
             // Tablix1_Details_DetailBand
             // 
             this.Tablix1_Details_DetailBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel1,
             this.Details_table});
-            this.Tablix1_Details_DetailBand.HeightF = 264F;
+            this.Tablix1_Details_DetailBand.HeightF = 280F;
             this.Tablix1_Details_DetailBand.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1_Details_DetailBand.Name = "Tablix1_Details_DetailBand";
             this.Tablix1_Details_DetailBand.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
@@ -166,7 +165,7 @@
             // 
             // Details_table
             // 
-            this.Details_table.LocationFloat = new DevExpress.Utils.PointFloat(37.5F, 0F);
+            this.Details_table.LocationFloat = new DevExpress.Utils.PointFloat(225.29F, 0F);
             this.Details_table.Name = "Details_table";
             this.Details_table.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1,
@@ -178,30 +177,16 @@
             this.xrTableRow7,
             this.xrTableRow8,
             this.xrTableRow9});
-            this.Details_table.SizeF = new System.Drawing.SizeF(787.79F, 264F);
+            this.Details_table.SizeF = new System.Drawing.SizeF(600F, 280F);
             // 
             // xrTableRow1
             // 
             this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox2,
             this.Textbox41,
             this.PaymentAmountSeven,
             this.PaymentAmountFourteen});
             this.xrTableRow1.Name = "xrTableRow1";
             this.xrTableRow1.Weight = 0.10227272727272728D;
-            // 
-            // Textbox2
-            // 
-            this.Textbox2.BorderColor = System.Drawing.Color.Black;
-            this.Textbox2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox2.BorderWidth = 1F;
-            this.Textbox2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.Textbox2.KeepTogether = true;
-            this.Textbox2.Name = "Textbox2";
-            this.Textbox2.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.Textbox2.Weight = 0.23837570738887304D;
             // 
             // Textbox41
             // 
@@ -227,7 +212,8 @@
             this.PaymentAmountSeven.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountSeven.KeepTogether = true;
             this.PaymentAmountSeven.Name = "PaymentAmountSeven";
-            this.PaymentAmountSeven.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountSeven.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountSeven.StylePriority.UsePadding = false;
             this.PaymentAmountSeven.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountSeven.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountSeven.Weight = 0.2538747706600783D;
@@ -243,7 +229,8 @@
             this.PaymentAmountFourteen.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountFourteen.KeepTogether = true;
             this.PaymentAmountFourteen.Name = "PaymentAmountFourteen";
-            this.PaymentAmountFourteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountFourteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountFourteen.StylePriority.UsePadding = false;
             this.PaymentAmountFourteen.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountFourteen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountFourteen.Weight = 0.2538747706600783D;
@@ -251,25 +238,11 @@
             // xrTableRow2
             // 
             this.xrTableRow2.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox29,
             this.PaymentAmountOne,
             this.PaymentAmountEight,
             this.PaymentAmountFifteen});
             this.xrTableRow2.Name = "xrTableRow2";
             this.xrTableRow2.Weight = 0.10227272727272728D;
-            // 
-            // Textbox29
-            // 
-            this.Textbox29.BorderColor = System.Drawing.Color.Black;
-            this.Textbox29.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox29.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox29.BorderWidth = 1F;
-            this.Textbox29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.Textbox29.KeepTogether = true;
-            this.Textbox29.Name = "Textbox29";
-            this.Textbox29.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.Textbox29.Weight = 0.23837570738887304D;
             // 
             // PaymentAmountOne
             // 
@@ -282,7 +255,8 @@
             this.PaymentAmountOne.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountOne.KeepTogether = true;
             this.PaymentAmountOne.Name = "PaymentAmountOne";
-            this.PaymentAmountOne.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountOne.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountOne.StylePriority.UsePadding = false;
             this.PaymentAmountOne.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountOne.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountOne.Weight = 0.2538747706600783D;
@@ -298,7 +272,8 @@
             this.PaymentAmountEight.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountEight.KeepTogether = true;
             this.PaymentAmountEight.Name = "PaymentAmountEight";
-            this.PaymentAmountEight.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountEight.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountEight.StylePriority.UsePadding = false;
             this.PaymentAmountEight.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountEight.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountEight.Weight = 0.2538747706600783D;
@@ -314,7 +289,8 @@
             this.PaymentAmountFifteen.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountFifteen.KeepTogether = true;
             this.PaymentAmountFifteen.Name = "PaymentAmountFifteen";
-            this.PaymentAmountFifteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountFifteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountFifteen.StylePriority.UsePadding = false;
             this.PaymentAmountFifteen.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountFifteen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountFifteen.Weight = 0.2538747706600783D;
@@ -322,25 +298,11 @@
             // xrTableRow3
             // 
             this.xrTableRow3.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox25,
             this.PaymentAmountTwo,
             this.PaymentAmountNine,
             this.PaymentAmountSixteen});
             this.xrTableRow3.Name = "xrTableRow3";
             this.xrTableRow3.Weight = 0.10227272727272728D;
-            // 
-            // Textbox25
-            // 
-            this.Textbox25.BorderColor = System.Drawing.Color.Black;
-            this.Textbox25.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox25.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox25.BorderWidth = 1F;
-            this.Textbox25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.Textbox25.KeepTogether = true;
-            this.Textbox25.Name = "Textbox25";
-            this.Textbox25.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.Textbox25.Weight = 0.23837570738887304D;
             // 
             // PaymentAmountTwo
             // 
@@ -353,7 +315,8 @@
             this.PaymentAmountTwo.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountTwo.KeepTogether = true;
             this.PaymentAmountTwo.Name = "PaymentAmountTwo";
-            this.PaymentAmountTwo.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountTwo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountTwo.StylePriority.UsePadding = false;
             this.PaymentAmountTwo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountTwo.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountTwo.Weight = 0.2538747706600783D;
@@ -369,7 +332,8 @@
             this.PaymentAmountNine.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountNine.KeepTogether = true;
             this.PaymentAmountNine.Name = "PaymentAmountNine";
-            this.PaymentAmountNine.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountNine.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountNine.StylePriority.UsePadding = false;
             this.PaymentAmountNine.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountNine.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountNine.Weight = 0.2538747706600783D;
@@ -385,7 +349,8 @@
             this.PaymentAmountSixteen.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountSixteen.KeepTogether = true;
             this.PaymentAmountSixteen.Name = "PaymentAmountSixteen";
-            this.PaymentAmountSixteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountSixteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountSixteen.StylePriority.UsePadding = false;
             this.PaymentAmountSixteen.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountSixteen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountSixteen.Weight = 0.2538747706600783D;
@@ -393,25 +358,11 @@
             // xrTableRow4
             // 
             this.xrTableRow4.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox21,
             this.PaymentAmountThree,
             this.PaymentAmountTen,
             this.PaymentAmountSeventeen});
             this.xrTableRow4.Name = "xrTableRow4";
             this.xrTableRow4.Weight = 0.10227272727272728D;
-            // 
-            // Textbox21
-            // 
-            this.Textbox21.BorderColor = System.Drawing.Color.Black;
-            this.Textbox21.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox21.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox21.BorderWidth = 1F;
-            this.Textbox21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.Textbox21.KeepTogether = true;
-            this.Textbox21.Name = "Textbox21";
-            this.Textbox21.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.Textbox21.Weight = 0.23837570738887304D;
             // 
             // PaymentAmountThree
             // 
@@ -424,7 +375,8 @@
             this.PaymentAmountThree.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountThree.KeepTogether = true;
             this.PaymentAmountThree.Name = "PaymentAmountThree";
-            this.PaymentAmountThree.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountThree.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountThree.StylePriority.UsePadding = false;
             this.PaymentAmountThree.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountThree.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountThree.Weight = 0.2538747706600783D;
@@ -440,7 +392,8 @@
             this.PaymentAmountTen.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountTen.KeepTogether = true;
             this.PaymentAmountTen.Name = "PaymentAmountTen";
-            this.PaymentAmountTen.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountTen.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountTen.StylePriority.UsePadding = false;
             this.PaymentAmountTen.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountTen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountTen.Weight = 0.2538747706600783D;
@@ -456,7 +409,8 @@
             this.PaymentAmountSeventeen.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountSeventeen.KeepTogether = true;
             this.PaymentAmountSeventeen.Name = "PaymentAmountSeventeen";
-            this.PaymentAmountSeventeen.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountSeventeen.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountSeventeen.StylePriority.UsePadding = false;
             this.PaymentAmountSeventeen.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountSeventeen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountSeventeen.Weight = 0.2538747706600783D;
@@ -464,28 +418,11 @@
             // xrTableRow5
             // 
             this.xrTableRow5.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.DepositDate,
             this.PaymentAmountFour,
             this.PaymentAmountEleven,
             this.PaymentAmountEighteen});
             this.xrTableRow5.Name = "xrTableRow5";
             this.xrTableRow5.Weight = 0.10227272727272728D;
-            // 
-            // DepositDate
-            // 
-            this.DepositDate.BorderColor = System.Drawing.Color.Black;
-            this.DepositDate.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.DepositDate.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.DepositDate.BorderWidth = 1F;
-            this.DepositDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DepositDate]")});
-            this.DepositDate.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.DepositDate.KeepTogether = true;
-            this.DepositDate.Name = "DepositDate";
-            this.DepositDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.DepositDate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.DepositDate.TextFormatString = "{0:MM/dd/yyyy}";
-            this.DepositDate.Weight = 0.23837570738887304D;
             // 
             // PaymentAmountFour
             // 
@@ -498,7 +435,8 @@
             this.PaymentAmountFour.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountFour.KeepTogether = true;
             this.PaymentAmountFour.Name = "PaymentAmountFour";
-            this.PaymentAmountFour.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountFour.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountFour.StylePriority.UsePadding = false;
             this.PaymentAmountFour.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountFour.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountFour.Weight = 0.2538747706600783D;
@@ -514,7 +452,8 @@
             this.PaymentAmountEleven.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountEleven.KeepTogether = true;
             this.PaymentAmountEleven.Name = "PaymentAmountEleven";
-            this.PaymentAmountEleven.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountEleven.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountEleven.StylePriority.UsePadding = false;
             this.PaymentAmountEleven.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountEleven.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountEleven.Weight = 0.2538747706600783D;
@@ -530,7 +469,8 @@
             this.PaymentAmountEighteen.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountEighteen.KeepTogether = true;
             this.PaymentAmountEighteen.Name = "PaymentAmountEighteen";
-            this.PaymentAmountEighteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountEighteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountEighteen.StylePriority.UsePadding = false;
             this.PaymentAmountEighteen.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountEighteen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountEighteen.Weight = 0.2538747706600783D;
@@ -538,25 +478,11 @@
             // xrTableRow6
             // 
             this.xrTableRow6.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox13,
             this.PaymentAmountFive,
             this.PaymentAmountTwelve,
             this.DepositSubTotal});
             this.xrTableRow6.Name = "xrTableRow6";
             this.xrTableRow6.Weight = 0.10227272727272728D;
-            // 
-            // Textbox13
-            // 
-            this.Textbox13.BorderColor = System.Drawing.Color.Black;
-            this.Textbox13.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox13.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox13.BorderWidth = 1F;
-            this.Textbox13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.Textbox13.KeepTogether = true;
-            this.Textbox13.Name = "Textbox13";
-            this.Textbox13.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.Textbox13.Weight = 0.23837570738887304D;
             // 
             // PaymentAmountFive
             // 
@@ -569,7 +495,8 @@
             this.PaymentAmountFive.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountFive.KeepTogether = true;
             this.PaymentAmountFive.Name = "PaymentAmountFive";
-            this.PaymentAmountFive.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountFive.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountFive.StylePriority.UsePadding = false;
             this.PaymentAmountFive.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountFive.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountFive.Weight = 0.2538747706600783D;
@@ -585,7 +512,8 @@
             this.PaymentAmountTwelve.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountTwelve.KeepTogether = true;
             this.PaymentAmountTwelve.Name = "PaymentAmountTwelve";
-            this.PaymentAmountTwelve.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountTwelve.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountTwelve.StylePriority.UsePadding = false;
             this.PaymentAmountTwelve.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountTwelve.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountTwelve.Weight = 0.2538747706600783D;
@@ -601,7 +529,8 @@
             this.DepositSubTotal.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.DepositSubTotal.KeepTogether = true;
             this.DepositSubTotal.Name = "DepositSubTotal";
-            this.DepositSubTotal.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.DepositSubTotal.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.DepositSubTotal.StylePriority.UsePadding = false;
             this.DepositSubTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.DepositSubTotal.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.DepositSubTotal.Weight = 0.2538747706600783D;
@@ -609,25 +538,11 @@
             // xrTableRow7
             // 
             this.xrTableRow7.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox9,
             this.PaymentAmountSix,
             this.PaymentAmountThirteen,
             this.CashBackAmount1});
             this.xrTableRow7.Name = "xrTableRow7";
             this.xrTableRow7.Weight = 0.10227272727272728D;
-            // 
-            // Textbox9
-            // 
-            this.Textbox9.BorderColor = System.Drawing.Color.Black;
-            this.Textbox9.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox9.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox9.BorderWidth = 1F;
-            this.Textbox9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.Textbox9.KeepTogether = true;
-            this.Textbox9.Name = "Textbox9";
-            this.Textbox9.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.Textbox9.Weight = 0.23837570738887304D;
             // 
             // PaymentAmountSix
             // 
@@ -640,7 +555,8 @@
             this.PaymentAmountSix.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountSix.KeepTogether = true;
             this.PaymentAmountSix.Name = "PaymentAmountSix";
-            this.PaymentAmountSix.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountSix.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountSix.StylePriority.UsePadding = false;
             this.PaymentAmountSix.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountSix.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountSix.Weight = 0.2538747706600783D;
@@ -656,7 +572,8 @@
             this.PaymentAmountThirteen.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.PaymentAmountThirteen.KeepTogether = true;
             this.PaymentAmountThirteen.Name = "PaymentAmountThirteen";
-            this.PaymentAmountThirteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.PaymentAmountThirteen.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.PaymentAmountThirteen.StylePriority.UsePadding = false;
             this.PaymentAmountThirteen.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.PaymentAmountThirteen.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.PaymentAmountThirteen.Weight = 0.2538747706600783D;
@@ -672,7 +589,8 @@
             this.CashBackAmount1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.CashBackAmount1.KeepTogether = true;
             this.CashBackAmount1.Name = "CashBackAmount1";
-            this.CashBackAmount1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.CashBackAmount1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.CashBackAmount1.StylePriority.UsePadding = false;
             this.CashBackAmount1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.CashBackAmount1.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.CashBackAmount1.Weight = 0.2538747706600783D;
@@ -680,25 +598,11 @@
             // xrTableRow8
             // 
             this.xrTableRow8.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox33,
             this.Textbox34,
             this.Textbox35,
             this.Textbox36});
             this.xrTableRow8.Name = "xrTableRow8";
             this.xrTableRow8.Weight = 0.18939393939393939D;
-            // 
-            // Textbox33
-            // 
-            this.Textbox33.BorderColor = System.Drawing.Color.Black;
-            this.Textbox33.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox33.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox33.BorderWidth = 1F;
-            this.Textbox33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.Textbox33.KeepTogether = true;
-            this.Textbox33.Name = "Textbox33";
-            this.Textbox33.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.Textbox33.Weight = 0.23837570738887304D;
             // 
             // Textbox34
             // 
@@ -742,25 +646,11 @@
             // xrTableRow9
             // 
             this.xrTableRow9.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox37,
             this.Textbox38,
             this.DepositedItemCount,
             this.TotalDepositAmount});
             this.xrTableRow9.Name = "xrTableRow9";
             this.xrTableRow9.Weight = 0.0946969696969697D;
-            // 
-            // Textbox37
-            // 
-            this.Textbox37.BorderColor = System.Drawing.Color.Black;
-            this.Textbox37.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox37.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox37.BorderWidth = 1F;
-            this.Textbox37.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.Textbox37.KeepTogether = true;
-            this.Textbox37.Name = "Textbox37";
-            this.Textbox37.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            this.Textbox37.Weight = 0.23837570738887304D;
             // 
             // Textbox38
             // 
@@ -786,8 +676,10 @@
             this.DepositedItemCount.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.DepositedItemCount.KeepTogether = true;
             this.DepositedItemCount.Name = "DepositedItemCount";
-            this.DepositedItemCount.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.DepositedItemCount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.DepositedItemCount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 35, 2, 2, 100F);
+            this.DepositedItemCount.StylePriority.UsePadding = false;
+            this.DepositedItemCount.StylePriority.UseTextAlignment = false;
+            this.DepositedItemCount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.DepositedItemCount.Weight = 0.2538747706600783D;
             // 
             // TotalDepositAmount
@@ -801,15 +693,22 @@
             this.TotalDepositAmount.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.TotalDepositAmount.KeepTogether = true;
             this.TotalDepositAmount.Name = "TotalDepositAmount";
-            this.TotalDepositAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.TotalDepositAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.TotalDepositAmount.StylePriority.UsePadding = false;
             this.TotalDepositAmount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             this.TotalDepositAmount.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             this.TotalDepositAmount.Weight = 0.2538747706600783D;
             // 
+            // SubBand1
+            // 
+            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CashDepositSummary});
+            this.SubBand1.HeightF = 99.66663F;
+            this.SubBand1.Name = "SubBand1";
+            this.SubBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
+            // 
             // plngBatchID
             // 
-            this.plngBatchID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "?plngBatchID")});
             this.plngBatchID.Name = "plngBatchID";
             this.plngBatchID.Type = typeof(int);
             this.plngBatchID.ValueInfo = "0";
@@ -817,83 +716,47 @@
             // 
             // plngCompanyID
             // 
-            this.plngCompanyID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "?plngCompanyID")});
             this.plngCompanyID.Name = "plngCompanyID";
             this.plngCompanyID.Type = typeof(int);
-            this.plngCompanyID.ValueInfo = "0";
+            this.plngCompanyID.ValueInfo = "1";
+            dynamicListLookUpSettings1.DataMember = "DSCompaniesLookup";
+            dynamicListLookUpSettings1.DataSource = this.Dynamic;
+            dynamicListLookUpSettings1.DisplayMember = "Description";
+            dynamicListLookUpSettings1.FilterString = null;
+            dynamicListLookUpSettings1.SortMember = null;
+            dynamicListLookUpSettings1.ValueMember = "Number";
+            this.plngCompanyID.ValueSourceSettings = dynamicListLookUpSettings1;
             this.plngCompanyID.Visible = false;
             // 
             // pstrDatabaseName
             // 
-            this.pstrDatabaseName.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "?pstrDatabaseName")});
             this.pstrDatabaseName.Name = "pstrDatabaseName";
+            this.pstrDatabaseName.ValueInfo = "0";
             this.pstrDatabaseName.Visible = false;
             // 
             // pstrServerName
             // 
-            this.pstrServerName.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "?pstrServerName")});
             this.pstrServerName.Name = "pstrServerName";
             this.pstrServerName.Visible = false;
             // 
             // Subtitle
             // 
-            this.Subtitle.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "?Subtitle")});
             this.Subtitle.Name = "Subtitle";
             this.Subtitle.Visible = false;
             // 
             // pbooShowCriteria
             // 
             this.pbooShowCriteria.Name = "pbooShowCriteria";
-            this.pbooShowCriteria.ValueInfo = "true";
+            this.pbooShowCriteria.Type = typeof(bool);
+            this.pbooShowCriteria.ValueInfo = "False";
             this.pbooShowCriteria.Visible = false;
             // 
             // plngUserID
             // 
-            this.plngUserID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "?plngUserID")});
             this.plngUserID.Name = "plngUserID";
+            this.plngUserID.Type = typeof(int);
+            this.plngUserID.ValueInfo = "0";
             this.plngUserID.Visible = false;
-            // 
-            // parameter1
-            // 
-            this.parameter1.Description = "pstrServerName";
-            this.parameter1.Name = "parameter1";
-            this.parameter1.Visible = false;
-            // 
-            // parameter2
-            // 
-            this.parameter2.Description = "pstrDatabaseName";
-            this.parameter2.Name = "parameter2";
-            this.parameter2.Visible = false;
-            // 
-            // parameter3
-            // 
-            this.parameter3.Description = "plngUserID";
-            this.parameter3.Name = "parameter3";
-            this.parameter3.Visible = false;
-            // 
-            // parameter4
-            // 
-            this.parameter4.Description = "Subtitle";
-            this.parameter4.Name = "parameter4";
-            this.parameter4.Visible = false;
-            // 
-            // parameter5
-            // 
-            this.parameter5.Description = "plngCompanyID";
-            this.parameter5.Name = "parameter5";
-            this.parameter5.Type = typeof(int);
-            this.parameter5.ValueInfo = "0";
-            dynamicListLookUpSettings1.DataMember = "DSCompaniesLookup";
-            dynamicListLookUpSettings1.DataSource = this.Dynamic;
-            dynamicListLookUpSettings1.DisplayMember = "Description";
-            dynamicListLookUpSettings1.ValueMember = "ID";
-            this.parameter5.ValueSourceSettings = dynamicListLookUpSettings1;
-            this.parameter5.Visible = false;
             // 
             // parameter6
             // 
@@ -906,19 +769,33 @@
             dynamicListLookUpSettings2.DisplayMember = "Item";
             dynamicListLookUpSettings2.ValueMember = "ItemData";
             this.parameter6.ValueSourceSettings = dynamicListLookUpSettings2;
+            this.parameter6.Visible = false;
             // 
-            // SubBand1
+            // False
             // 
-            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.CashDepositSummary});
-            this.SubBand1.Expanded = false;
-            this.SubBand1.HeightF = 0F;
-            this.SubBand1.Name = "SubBand1";
-            this.SubBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
+            this.False.DataMember = "DSCashDepositTicket";
+            this.False.DataSource = this.Dynamic;
+            this.False.Expression = "false";
+            this.False.FieldType = DevExpress.XtraReports.UI.FieldType.Boolean;
+            this.False.Name = "False";
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DepositDate]")});
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(40F, 134.6174F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(105.2083F, 20.76784F);
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.Text = "xrLabel1";
+            this.xrLabel1.TextFormatString = "{0:MM/dd/yyyy}";
             // 
             // CashDepositSummary
             // 
-            this.CashDepositSummary.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.CashDepositSummary.LocationFloat = new DevExpress.Utils.PointFloat(40F, 79.66663F);
             this.CashDepositSummary.Name = "CashDepositSummary";
             this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.plngBatchID));
             this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
@@ -927,8 +804,9 @@
             this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
             this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
             this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowHeader", null, "DSCashDepositTicket.False"));
             this.CashDepositSummary.ReportSource = new ReportsEngine.Reports.MDReports.CashDepositSummary();
-            this.CashDepositSummary.SizeF = new System.Drawing.SizeF(850F, 0F);
+            this.CashDepositSummary.SizeF = new System.Drawing.SizeF(770F, 20F);
             // 
             // CashDepositTicket
             // 
@@ -937,11 +815,13 @@
             this.bottomMarginBand1,
             this.detailBand1,
             this.Tablix1});
+            this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
+            this.False});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
             this.DisplayName = "CashDepositTicket";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 2F, 0F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBatchID, DevExpress.XtraReports.Parameters.Orientation.Vertical),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -950,11 +830,6 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter1, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter2, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter3, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter4, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter5, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter6, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.plngBatchID,
@@ -964,11 +839,6 @@
             this.Subtitle,
             this.pbooShowCriteria,
             this.plngUserID,
-            this.parameter1,
-            this.parameter2,
-            this.parameter3,
-            this.parameter4,
-            this.parameter5,
             this.parameter6});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).EndInit();
@@ -985,47 +855,38 @@
         private DevExpress.XtraReports.UI.DetailBand Tablix1_Details_DetailBand;
         private DevExpress.XtraReports.UI.XRTable Details_table;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
-        private DevExpress.XtraReports.UI.XRTableCell Textbox2;
         private DevExpress.XtraReports.UI.XRTableCell Textbox41;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountSeven;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountFourteen;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow2;
-        private DevExpress.XtraReports.UI.XRTableCell Textbox29;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountOne;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountEight;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountFifteen;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow3;
-        private DevExpress.XtraReports.UI.XRTableCell Textbox25;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountTwo;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountNine;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountSixteen;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow4;
-        private DevExpress.XtraReports.UI.XRTableCell Textbox21;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountThree;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountTen;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountSeventeen;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow5;
-        private DevExpress.XtraReports.UI.XRTableCell DepositDate;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountFour;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountEleven;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountEighteen;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow6;
-        private DevExpress.XtraReports.UI.XRTableCell Textbox13;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountFive;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountTwelve;
         private DevExpress.XtraReports.UI.XRTableCell DepositSubTotal;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow7;
-        private DevExpress.XtraReports.UI.XRTableCell Textbox9;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountSix;
         private DevExpress.XtraReports.UI.XRTableCell PaymentAmountThirteen;
         private DevExpress.XtraReports.UI.XRTableCell CashBackAmount1;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow8;
-        private DevExpress.XtraReports.UI.XRTableCell Textbox33;
         private DevExpress.XtraReports.UI.XRTableCell Textbox34;
         private DevExpress.XtraReports.UI.XRTableCell Textbox35;
         private DevExpress.XtraReports.UI.XRTableCell Textbox36;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow9;
-        private DevExpress.XtraReports.UI.XRTableCell Textbox37;
         private DevExpress.XtraReports.UI.XRTableCell Textbox38;
         private DevExpress.XtraReports.UI.XRTableCell DepositedItemCount;
         private DevExpress.XtraReports.UI.XRTableCell TotalDepositAmount;
@@ -1037,13 +898,10 @@
         private DevExpress.XtraReports.Parameters.Parameter Subtitle;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
-        private DevExpress.XtraReports.Parameters.Parameter parameter1;
-        private DevExpress.XtraReports.Parameters.Parameter parameter2;
-        private DevExpress.XtraReports.Parameters.Parameter parameter3;
-        private DevExpress.XtraReports.Parameters.Parameter parameter4;
-        private DevExpress.XtraReports.Parameters.Parameter parameter5;
         private DevExpress.XtraReports.Parameters.Parameter parameter6;
         private DevExpress.XtraReports.UI.SubBand SubBand1;
         private DevExpress.XtraReports.UI.XRSubreport CashDepositSummary;
+        private DevExpress.XtraReports.UI.CalculatedField False;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel1;
     }
 }

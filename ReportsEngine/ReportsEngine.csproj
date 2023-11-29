@@ -450,6 +450,12 @@
     <Compile Include="Reports\JIBReports\PropertyExpenseDistributionOwnerBreakdown.Designer.cs">
       <DependentUpon>PropertyExpenseDistributionOwnerBreakdown.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\CashDepositSummarybyDate.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\CashDepositSummarybyDate.Designer.cs">
+      <DependentUpon>CashDepositSummarybyDate.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\DOIDivisionOrderNADOA.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -461,6 +467,12 @@
     </Compile>
     <Compile Include="Reports\MDReports\DOIDivisionOrderTx.Designer.cs">
       <DependentUpon>DOIDivisionOrderTx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelCashDepositSummaryInquiry.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelCashDepositSummaryInquiry.Designer.cs">
+      <DependentUpon>ExcelCashDepositSummaryInquiry.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\ExcelCashDepositTicket.cs">
       <SubType>Component</SubType>
@@ -479,6 +491,12 @@
     </Compile>
     <Compile Include="Reports\MDReports\ExcelDOIDivisionOrderTx.Designer.cs">
       <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.Designer.cs">
+      <DependentUpon>ExcelNewMexicoStateRoyaltyDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelNewMexicoStateTaxDetail.cs">
       <SubType>Component</SubType>
@@ -641,6 +659,18 @@
     </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerSummary.Designer.cs">
       <DependentUpon>ExcelTexasTaxProducerSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\NewMexicoStateRoyaltyDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\NewMexicoStateRoyaltyDetail.Designer.cs">
+      <DependentUpon>NewMexicoStateRoyaltyDetail.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\NewMexicoStateRoyaltyDetailReportFooter.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\NewMexicoStateRoyaltyDetailReportFooter.Designer.cs">
+      <DependentUpon>NewMexicoStateRoyaltyDetailReportFooter.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\NewMexicoStateTaxDetailReportTotals.cs">
       <SubType>Component</SubType>
@@ -1812,16 +1842,16 @@
     <Compile Include="Reports\APReports\APEditList.Designer.cs">
       <DependentUpon>APEditList.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\CashDepositSummary.cs">
+    <Compile Include="Reports\FinancialReports\CashDepositSummary.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\CashDepositSummary.Designer.cs">
+    <Compile Include="Reports\FinancialReports\CashDepositSummary.Designer.cs">
       <DependentUpon>CashDepositSummary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\CashDepositTicket.cs">
+    <Compile Include="Reports\FinancialReports\CashDepositTicket.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\CashDepositTicket.Designer.cs">
+    <Compile Include="Reports\FinancialReports\CashDepositTicket.Designer.cs">
       <DependentUpon>CashDepositTicket.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\CashRequirements.cs">
@@ -1884,10 +1914,10 @@
     <Compile Include="Reports\MDReports\ExcelAccountingCenterListing.Designer.cs">
       <DependentUpon>ExcelAccountingCenterListing.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\ExcelCashDepositSummary.cs">
+    <Compile Include="Reports\FinancialReports\ExcelCashDepositSummary.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\MDReports\ExcelCashDepositSummary.Designer.cs">
+    <Compile Include="Reports\FinancialReports\ExcelCashDepositSummary.Designer.cs">
       <DependentUpon>ExcelCashDepositSummary.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\ExcelCashRequirements.cs">
@@ -2041,11 +2071,17 @@
     <EmbeddedResource Include="Reports\JIBReports\PropertyExpenseDistributionOwnerBreakdown.resx">
       <DependentUpon>PropertyExpenseDistributionOwnerBreakdown.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\CashDepositSummarybyDate.resx">
+      <DependentUpon>CashDepositSummarybyDate.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\DOIDivisionOrderNADOA.resx">
       <DependentUpon>DOIDivisionOrderNADOA.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\DOIDivisionOrderTx.resx">
       <DependentUpon>DOIDivisionOrderTx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelCashDepositSummaryInquiry.resx">
+      <DependentUpon>ExcelCashDepositSummaryInquiry.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelCashDepositTicket.resx">
       <DependentUpon>ExcelCashDepositTicket.cs</DependentUpon>
@@ -2055,6 +2091,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelDOIDivisionOrderTx.resx">
       <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.resx">
+      <DependentUpon>ExcelNewMexicoStateRoyaltyDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelNewMexicoStateTaxDetail.resx">
       <DependentUpon>ExcelNewMexicoStateTaxDetail.cs</DependentUpon>
@@ -2136,6 +2175,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerSummary.resx">
       <DependentUpon>ExcelTexasTaxProducerSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\NewMexicoStateRoyaltyDetail.resx">
+      <DependentUpon>NewMexicoStateRoyaltyDetail.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\NewMexicoStateRoyaltyDetailReportFooter.resx">
+      <DependentUpon>NewMexicoStateRoyaltyDetailReportFooter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\NewMexicoStateTaxDetailReportTotals.resx">
       <DependentUpon>NewMexicoStateTaxDetailReportTotals.cs</DependentUpon>
@@ -2721,10 +2766,10 @@
       <DependentUpon>APEditList.cs</DependentUpon>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\CashDepositSummary.resx">
+    <EmbeddedResource Include="Reports\FinancialReports\CashDepositSummary.resx">
       <DependentUpon>CashDepositSummary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\CashDepositTicket.resx">
+    <EmbeddedResource Include="Reports\FinancialReports\CashDepositTicket.resx">
       <DependentUpon>CashDepositTicket.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\CashRequirements.resx">
@@ -2760,7 +2805,7 @@
     <EmbeddedResource Include="Reports\MDReports\ExcelAccountingCenterListing.resx">
       <DependentUpon>ExcelAccountingCenterListing.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\ExcelCashDepositSummary.resx">
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelCashDepositSummary.resx">
       <DependentUpon>ExcelCashDepositSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelCashRequirements.resx">

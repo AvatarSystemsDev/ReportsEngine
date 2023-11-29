@@ -258,6 +258,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelCashDepositTicket", () => new ExcelCashDepositTicket());
             Reports.Add("NewMexicoStateTaxDetail", () => new NewMexicoStateTaxDetail());
             Reports.Add("ExcelNewMexicoStateTaxDetail", () => new ExcelNewMexicoStateTaxDetail());
+            Reports.Add("CashDepositSummaryInquiry", () => new CashDepositSummaryInquiry());
+            Reports.Add("ExcelCashDepositSummaryInquiry", () => new ExcelCashDepositSummaryInquiry());
+            Reports.Add("NewMexicoStateRoyaltyDetail", () => new NewMexicoStateRoyaltyDetail());
+            Reports.Add("ExcelNewMexicoStateRoyaltyDetail", () => new ExcelNewMexicoStateRoyaltyDetail());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
