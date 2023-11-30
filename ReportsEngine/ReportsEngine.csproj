@@ -492,6 +492,18 @@
     <Compile Include="Reports\MDReports\ExcelDOIDivisionOrderTx.Designer.cs">
       <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PAReports\ExcelTexas_PR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelTexas_PR.Designer.cs">
+      <DependentUpon>ExcelTexas_PR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\Texas_PR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\Texas_PR.Designer.cs">
+      <DependentUpon>Texas_PR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2091,6 +2103,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelDOIDivisionOrderTx.resx">
       <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\ExcelTexas_PR.resx">
+      <DependentUpon>ExcelTexas_PR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\Texas_PR.resx">
+      <DependentUpon>Texas_PR.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.resx">
       <DependentUpon>ExcelNewMexicoStateRoyaltyDetail.cs</DependentUpon>

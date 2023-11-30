@@ -32,13 +32,13 @@ namespace ReportsEngine.Reports.MDReports
             {
                 if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
                 {
-                    label.Text = "All Entities";
+                    label.Text = "All Vendors";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Entity to ";
+                        label.Text = "First Vendor to ";
                     }
                     else
                     {
@@ -46,7 +46,7 @@ namespace ReportsEngine.Reports.MDReports
                     }
                     if (end.Value.ToString() == "ZZZZZZZZZZ")
                     {
-                        label.Text += "Last Entity";
+                        label.Text += "Last Vendor";
                     }
                     else
                     {
@@ -62,13 +62,13 @@ namespace ReportsEngine.Reports.MDReports
             {
                 if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
                 {
-                    label.Text = "Selected Entities";
+                    label.Text = "Selected Vendors";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Entity to ";
+                        label.Text = "First Vendor to ";
                     }
                     else
                     {
@@ -76,7 +76,7 @@ namespace ReportsEngine.Reports.MDReports
                     }
                     if (end.Value.ToString() == "ZZZZZZZZZZ")
                     {
-                        label.Text += "Last Entity";
+                        label.Text += "Last Vendor";
                     }
                     else
                     {

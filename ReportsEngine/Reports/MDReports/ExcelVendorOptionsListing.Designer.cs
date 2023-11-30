@@ -74,6 +74,7 @@
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowContactName = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -783,6 +784,13 @@
             this.pstrSelectVendor.MultiValue = true;
             this.pstrSelectVendor.Name = "pstrSelectVendor";
             // 
+            // pbooShowContactName
+            // 
+            this.pbooShowContactName.Description = "Show Contact Name";
+            this.pbooShowContactName.Name = "pbooShowContactName";
+            this.pbooShowContactName.Type = typeof(bool);
+            this.pbooShowContactName.ValueInfo = "False";
+            // 
             // ExcelVendorOptionsListing
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -821,7 +829,8 @@
             this.pbooPrintInactives,
             this.plngUserID,
             this.pbooShowCriteria,
-            this.pstrSelectVendor});
+            this.pstrSelectVendor,
+            this.pbooShowContactName});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -868,5 +877,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowContactName;
     }
 }

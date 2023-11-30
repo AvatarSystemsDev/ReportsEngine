@@ -507,7 +507,7 @@
             this.ReportTitle.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.ReportTitle.BorderWidth = 1F;
             this.ReportTitle.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 1, \'Accounts Payable Open Items Aged Summary\', \'Accounts Pa" +
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 2, \'Accounts Payable Aged Open Items Summary\', \'Accounts Pa" +
                     "yable History Aged Summary\')")});
             this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.ReportTitle.KeepTogether = true;
@@ -819,8 +819,8 @@
             this.plngReportType.Name = "plngReportType";
             this.plngReportType.Type = typeof(int);
             this.plngReportType.ValueInfo = "1";
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "AP Open Items Aged Summary"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "AP History Aged Summary"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "AP History Aged Summary"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "AP Open Items Aged Summary"));
             this.plngReportType.ValueSourceSettings = staticListLookUpSettings1;
             // 
             // pdteAsOfDate
@@ -1395,7 +1395,7 @@
             this.xrLabel31.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel31.BorderWidth = 1F;
             this.xrLabel31.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 1, \'Accounts Payable Open Items Aged Summary\', \'Accounts Pa" +
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 2, \'Accounts Payable Aged Open Items Summary\', \'Accounts Pa" +
                     "yable History Aged Summary\')")});
             this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel31.KeepTogether = true;

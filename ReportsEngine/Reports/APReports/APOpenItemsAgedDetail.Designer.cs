@@ -994,8 +994,8 @@
             this.xrLabel54.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel54.BorderWidth = 1F;
             this.xrLabel54.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 2, \'Accounts Payable Open Items Aged Detail\', \'Accounts Pay" +
-                    "able Aged Trial Balance\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 2, \'Accounts Payable Aged Open Items\', \'Accounts Payable Ag" +
+                    "ed Trial Balance\')")});
             this.xrLabel54.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel54.KeepTogether = true;
             this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30F);
