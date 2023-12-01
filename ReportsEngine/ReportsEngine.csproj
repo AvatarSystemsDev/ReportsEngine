@@ -444,6 +444,18 @@
     <Compile Include="Reports\APReports\ExcelAPPayables.Designer.cs">
       <DependentUpon>ExcelAPPayables.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBProvisionalEntries.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBProvisionalEntries.Designer.cs">
+      <DependentUpon>ExcelJIBProvisionalEntries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBProvisionalEntries.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBProvisionalEntries.Designer.cs">
+      <DependentUpon>JIBProvisionalEntries.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\PropertyExpenseDistributionOwnerBreakdown.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2079,6 +2091,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPPayables.resx">
       <DependentUpon>ExcelAPPayables.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBProvisionalEntries.resx">
+      <DependentUpon>ExcelJIBProvisionalEntries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBProvisionalEntries.resx">
+      <DependentUpon>JIBProvisionalEntries.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\PropertyExpenseDistributionOwnerBreakdown.resx">
       <DependentUpon>PropertyExpenseDistributionOwnerBreakdown.cs</DependentUpon>

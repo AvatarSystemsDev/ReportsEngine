@@ -230,7 +230,8 @@ namespace ReportsEngine.Services
                 else if (parameterName == "pbooAwaitParameterInput")
                 {
                     AwaitParameterInputPassed = true;
-                    report.RequestParameters = (parameters["pbooAwaitParameterInput"].ToString().ToLower() == "true");
+                    var RequestParametersAwait = parameters["pbooAwaitParameterInput"].ToString().ToLower();
+                    report.RequestParameters = RequestParametersAwait == "true";
                     bool parameterExists = false;
                     foreach (var param in report.Parameters)
                     {

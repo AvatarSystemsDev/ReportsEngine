@@ -264,6 +264,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelNewMexicoStateRoyaltyDetail", () => new ExcelNewMexicoStateRoyaltyDetail());
             Reports.Add("PA_TexasPR", () => new Texas_PR());
             Reports.Add("ExcelPA_TexasPR", () => new ExcelTexas_PR());
+            Reports.Add("JIBProvisionalEntries", () => new JIBProvisionalEntries());
+            Reports.Add("ExcelJIBProvisionalEntries", () => new ExcelJIBProvisionalEntries());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }
