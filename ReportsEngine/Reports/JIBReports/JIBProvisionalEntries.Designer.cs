@@ -971,6 +971,7 @@
             this.pbooShowCriteria.Name = "pbooShowCriteria";
             this.pbooShowCriteria.Type = typeof(bool);
             this.pbooShowCriteria.ValueInfo = "True";
+            this.pbooShowCriteria.Visible = false;
             // 
             // xrCrossBandBox1
             // 
