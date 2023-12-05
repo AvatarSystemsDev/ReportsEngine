@@ -810,7 +810,7 @@
             this.xrLabel30.StylePriority.UseBorderWidth = false;
             this.xrLabel30.StylePriority.UsePadding = false;
             this.xrLabel30.StylePriority.UseTextAlignment = false;
-            this.xrLabel30.Text = "Property";
+            this.xrLabel30.Text = "Property/Well";
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel9
@@ -829,7 +829,7 @@
             this.xrLabel9.StylePriority.UseBorderWidth = false;
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
-            this.xrLabel9.Text = "Property Description";
+            this.xrLabel9.Text = "Description";
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // SubBand2
