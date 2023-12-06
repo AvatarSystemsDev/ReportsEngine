@@ -1074,8 +1074,8 @@
             this.xrLabel23.BorderWidth = 0F;
             this.xrLabel23.CanGrow = false;
             this.xrLabel23.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Property: \'+ [PhaseWellNumber]+\' \' +[PhaseWellDescription]+ \'Type\'+ [PhaseWellTy" +
-                    "peCode]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Property:  \'+ [PhaseWellNumber]+\'  \' +[PhaseWellDescription]+ \'Type\'+ [PhaseWell" +
+                    "TypeCode]")});
             this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel23.KeepTogether = true;
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);

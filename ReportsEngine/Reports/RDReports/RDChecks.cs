@@ -4,6 +4,8 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 using System.Drawing.Text;
+using System.Linq;
+using System.Web;
 
 namespace ReportsEngine
 {
@@ -13,6 +15,9 @@ namespace ReportsEngine
         public RDChecks()
         {
             InitializeComponent();
+            xrMICRAccountNumber.Font = new Font(CustomFontsHelper.GetFamily("MICRE13B"), 12F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            xrMICRTransitNumber.Font = new Font(CustomFontsHelper.GetFamily("MICRE13B"), 12F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
+            xrCheckNumber.Font = new Font(CustomFontsHelper.GetFamily("MICRE13B"), 12F, FontStyle.Regular, GraphicsUnit.Point, ((0)));
 
             xrPages.BeforePrint += XrPages_BeforePrint;
             RemittanceDetailBand.BeforePrint += RemittanceDetailBand_BeforePrint;
@@ -23,7 +28,27 @@ namespace ReportsEngine
             xrMICRTransitNumber.BeforePrint += XrMICRTransitNumber_BeforePrint;
             xrCheckNumber.BeforePrint += XrCheckNumber_BeforePrint;
         }
+        private class CustomFontsHelper
+        {
+            static PrivateFontCollection fontCollection;
+            public static FontCollection FontCollection
+            {
+                get
+                {
+                    if (fontCollection == null)
+                    {
+                        fontCollection = new PrivateFontCollection();
+                        fontCollection.AddFontFile(HttpContext.Current.Server.MapPath("~/Views/MICRE13B.TTF"));
+                    }
+                    return fontCollection;
+                }
+            }
 
+            public static FontFamily GetFamily(string familyName)
+            {
+                return FontCollection.Families.FirstOrDefault(ff => ff.Name == familyName);
+            }
+        }
         private void CheckBegin_BeforePrint(object sender, CancelEventArgs e)
         {
             pageCounter = 1;

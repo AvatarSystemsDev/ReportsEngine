@@ -1108,7 +1108,8 @@
             this.xrLabel33,
             this.xrLabel25});
             this.Tablix1_GroupHeaderBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT ([AccountTotal] = 0 AND ?plngShowZeroBalance <> 1)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngShowZeroBalance = 2, [AccountTotal] <> 0 AND not IsNullOrEmpty([AccountT" +
+                    "otal]), ?plngShowZeroBalance = 1,not IsNullOrEmpty([AccountID]), true)\n")});
             this.Tablix1_GroupHeaderBand.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Tablix1_GroupHeaderBand.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("AccountNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
@@ -3312,7 +3313,8 @@
             this.SubBand4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel51});
             this.SubBand4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "([AccountTotal] <> 0 OR ?plngShowZeroBalance <> 2)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngShowZeroBalance = 2, [AccountTotal] <> 0 AND not IsNullOrEmpty([AccountT" +
+                    "otal]), ?plngShowZeroBalance = 1,not IsNullOrEmpty([AccountID]), true)\n")});
             this.SubBand4.HeightF = 15F;
             this.SubBand4.Name = "SubBand4";
             // 
