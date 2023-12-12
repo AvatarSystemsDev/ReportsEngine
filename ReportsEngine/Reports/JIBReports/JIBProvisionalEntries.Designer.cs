@@ -1052,7 +1052,7 @@
             this.xrCopyright,
             this.xrRunDate});
             this.pageFooterBand1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 6F);
-            this.pageFooterBand1.HeightF = 32.5908F;
+            this.pageFooterBand1.HeightF = 29.99999F;
             this.pageFooterBand1.Name = "pageFooterBand1";
             this.pageFooterBand1.StylePriority.UseFont = false;
             this.pageFooterBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -1205,8 +1205,8 @@
             this.xrLabel23.BorderWidth = 0F;
             this.xrLabel23.CanGrow = false;
             this.xrLabel23.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Property: \'+ [PropertyAndWellNumber]+\'   \' +[PhaseWellDescription]+ \'   Type: \'+" +
-                    " [PhaseWellShortRecordType]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Type: \'+ [PhaseWellShortRecordType]+\'   Property: \'+ [PropertyAndWellNumber]+\'  " +
+                    " \' +[PhaseWellDescription]")});
             this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel23.KeepTogether = true;
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -1239,13 +1239,14 @@
             this.xrLabel33.BorderWidth = 0F;
             this.xrLabel33.CanGrow = false;
             this.xrLabel33.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyAndWellNumber] + \' Total\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhaseWellShortRecordType]+\'   Property: \'+ [PropertyAndWellNumber]+\'   \' +[Phase" +
+                    "WellDescription] + \' Total\'")});
             this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel33.KeepTogether = true;
-            this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(395.8762F, 0F);
+            this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 0F);
             this.xrLabel33.Name = "xrLabel33";
             this.xrLabel33.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel33.SizeF = new System.Drawing.SizeF(278.3703F, 17.00001F);
+            this.xrLabel33.SizeF = new System.Drawing.SizeF(664.2465F, 17.00001F);
             this.xrLabel33.StylePriority.UseBorderColor = false;
             this.xrLabel33.StylePriority.UseBorderDashStyle = false;
             this.xrLabel33.StylePriority.UseBorders = false;
@@ -1541,10 +1542,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Report Total\'")});
             this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel14.KeepTogether = true;
-            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(395.8762F, 12.99999F);
+            this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 12.99998F);
             this.xrLabel14.Name = "xrLabel14";
             this.xrLabel14.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel14.SizeF = new System.Drawing.SizeF(278.3703F, 17.00001F);
+            this.xrLabel14.SizeF = new System.Drawing.SizeF(664.2465F, 17.00001F);
             this.xrLabel14.StylePriority.UseBorderColor = false;
             this.xrLabel14.StylePriority.UseBorderDashStyle = false;
             this.xrLabel14.StylePriority.UseBorders = false;

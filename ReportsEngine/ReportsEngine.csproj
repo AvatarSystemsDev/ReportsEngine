@@ -504,11 +504,35 @@
     <Compile Include="Reports\MDReports\ExcelDOIDivisionOrderTx.Designer.cs">
       <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_FedOGOR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\ExcelPA_FedOGOR.Designer.cs">
+      <DependentUpon>ExcelPA_FedOGOR.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PAReports\ExcelTexas_PR.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\PAReports\ExcelTexas_PR.Designer.cs">
       <DependentUpon>ExcelTexas_PR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_FedOGOR.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_FedOGOR.Designer.cs">
+      <DependentUpon>PA_FedOGOR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_FedOGOR_PartB_Subreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_FedOGOR_PartB_Subreport.Designer.cs">
+      <DependentUpon>PA_FedOGOR_PartB_Subreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_FedOGOR_PartC_Subreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_FedOGOR_PartC_Subreport.Designer.cs">
+      <DependentUpon>PA_FedOGOR_PartC_Subreport.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\PAReports\Texas_PR.cs">
       <SubType>Component</SubType>
@@ -2122,8 +2146,20 @@
     <EmbeddedResource Include="Reports\MDReports\ExcelDOIDivisionOrderTx.resx">
       <DependentUpon>ExcelDOIDivisionOrderTx.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\ExcelPA_FedOGOR.resx">
+      <DependentUpon>ExcelPA_FedOGOR.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\ExcelTexas_PR.resx">
       <DependentUpon>ExcelTexas_PR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\PA_FedOGOR.resx">
+      <DependentUpon>PA_FedOGOR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\PA_FedOGOR_PartB_Subreport.resx">
+      <DependentUpon>PA_FedOGOR_PartB_Subreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\PA_FedOGOR_PartC_Subreport.resx">
+      <DependentUpon>PA_FedOGOR_PartC_Subreport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\Texas_PR.resx">
       <DependentUpon>Texas_PR.cs</DependentUpon>

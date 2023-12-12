@@ -209,6 +209,7 @@
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.pbooAwaitParameterInput = new DevExpress.XtraReports.Parameters.Parameter();
+            this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
@@ -2148,6 +2149,14 @@
             this.pbooAwaitParameterInput.ValueInfo = "True";
             this.pbooAwaitParameterInput.Visible = false;
             // 
+            // groupHeaderBand3
+            // 
+            this.groupHeaderBand3.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("BatchID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.groupHeaderBand3.HeightF = 0F;
+            this.groupHeaderBand3.Level = 2;
+            this.groupHeaderBand3.Name = "groupHeaderBand3";
+            // 
             // GLProcessPostRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2160,7 +2169,8 @@
             this.groupHeaderBand1,
             this.ReportFooter,
             this.groupHeaderBand2,
-            this.groupFooterBand1});
+            this.groupFooterBand1,
+            this.groupHeaderBand3});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -2297,5 +2307,6 @@
         private DevExpress.XtraReports.UI.XRRichText xrRichText6;
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter pbooAwaitParameterInput;
+        private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand3;
     }
 }

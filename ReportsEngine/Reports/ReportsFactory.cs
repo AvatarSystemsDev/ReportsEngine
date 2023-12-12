@@ -266,6 +266,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPA_TexasPR", () => new ExcelTexas_PR());
             Reports.Add("JIBProvisionalEntries", () => new JIBProvisionalEntries());
             Reports.Add("ExcelJIBProvisionalEntries", () => new ExcelJIBProvisionalEntries());
+            Reports.Add("PA_FedOGOR", () => new PA_FedOGOR());
+            Reports.Add("ExcelPA_FedOGOR", () => new ExcelPA_FedOGOR());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

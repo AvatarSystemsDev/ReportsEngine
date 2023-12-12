@@ -195,6 +195,7 @@
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
+            this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText6)).BeginInit();
@@ -2066,6 +2067,14 @@
             selectNode2,
             selectNode3});
             // 
+            // groupHeaderBand3
+            // 
+            this.groupHeaderBand3.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("BatchID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.groupHeaderBand3.HeightF = 0F;
+            this.groupHeaderBand3.Level = 2;
+            this.groupHeaderBand3.Name = "groupHeaderBand3";
+            // 
             // GLPostingRegisterByProcess
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2078,7 +2087,8 @@
             this.groupHeaderBand1,
             this.ReportFooter,
             this.groupHeaderBand2,
-            this.groupFooterBand1});
+            this.groupFooterBand1,
+            this.groupHeaderBand3});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -2196,5 +2206,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
+        private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand3;
     }
 }
