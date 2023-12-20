@@ -667,8 +667,8 @@
             this.Textbox62.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox62.BorderWidth = 1F;
             this.Textbox62.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date: </b>\' + FormatString(\'{0:d}\', [PostingDate]) + \'</span>\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
+                    "e: </b>\' + FormatString(\'{0:d}\', [PostingDate]) + \'</span>\'\n")});
             this.Textbox62.KeepTogether = true;
             this.Textbox62.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox62.Name = "Textbox62";
@@ -1692,8 +1692,8 @@
             this.xrRichText1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText1.BorderWidth = 1F;
             this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date: </b>\' + FormatString(\'{0:d}\', [PostingDate]) + \'</span>\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
+                    "e: </b>\' + FormatString(\'{0:d}\', [PostingDate]) + \'</span>\'\n")});
             this.xrRichText1.KeepTogether = true;
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrRichText1.Name = "xrRichText1";

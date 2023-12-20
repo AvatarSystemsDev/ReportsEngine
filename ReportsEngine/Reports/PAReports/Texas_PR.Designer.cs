@@ -541,7 +541,8 @@
             this.PA_TXP_COMMPERM.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.PA_TXP_COMMPERM.BorderWidth = 1.39F;
             this.PA_TXP_COMMPERM.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([RowNumber] > 1, \'\', [PA_TXP_COMMPERM])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([RowNumber] > 1, \'\', Iif([PA_TXP_COMMPERM] = \'\',[PA_TXP_COMMREMARK] ,[PA_TXP_" +
+                    "COMMPERM]))")});
             this.PA_TXP_COMMPERM.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
             this.PA_TXP_COMMPERM.KeepTogether = true;
             this.PA_TXP_COMMPERM.Name = "PA_TXP_COMMPERM";
@@ -958,7 +959,7 @@
             this.xrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel5.BorderWidth = 1F;
             this.xrLabel5.CanGrow = false;
-            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Arial", 45F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Arial", 40F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel5.ForeColor = System.Drawing.Color.Black;
             this.xrLabel5.KeepTogether = true;
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(6.357829E-05F, 0F);
@@ -1065,7 +1066,7 @@
             this.xrLabel30.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel30.BorderWidth = 1F;
             this.xrLabel30.CanGrow = false;
-            this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Arial", 45F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Arial", 40F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel30.ForeColor = System.Drawing.Color.Black;
             this.xrLabel30.KeepTogether = true;
             this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(980.4128F, 0F);

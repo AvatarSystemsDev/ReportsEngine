@@ -170,6 +170,10 @@
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
+            this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
@@ -181,10 +185,6 @@
             this.xrLabel39 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel42 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
-            this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -1303,6 +1303,48 @@
             this.xrLabel17.StylePriority.UseTextAlignment = false;
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
+            // xrRichText1
+            // 
+            this.xrRichText1.BorderColor = System.Drawing.Color.Black;
+            this.xrRichText1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrRichText1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrRichText1.BorderWidth = 1F;
+            this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
+                    "e:  </b>\' + FormatString(\'{0:d}\', [PostingDate]) + \'</span>\'\n")});
+            this.xrRichText1.KeepTogether = true;
+            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60.00001F);
+            this.xrRichText1.Name = "xrRichText1";
+            this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(238.8952F, 25F);
+            // 
+            // SubBand2
+            // 
+            this.SubBand2.HeightF = 8.25F;
+            this.SubBand2.Name = "SubBand2";
+            // 
+            // xrCrossBandBox2
+            // 
+            this.xrCrossBandBox2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
+            this.xrCrossBandBox2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrCrossBandBox2.BorderWidth = 1F;
+            this.xrCrossBandBox2.EndBand = this.SubBand2;
+            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 3.999996F);
+            this.xrCrossBandBox2.Name = "xrCrossBandBox2";
+            this.xrCrossBandBox2.StartBand = this.SubBand2;
+            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrCrossBandBox2.WidthF = 770.0003F;
+            // 
+            // groupHeaderBand3
+            // 
+            this.groupHeaderBand3.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("BatchNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.groupHeaderBand3.HeightF = 0F;
+            this.groupHeaderBand3.Level = 2;
+            this.groupHeaderBand3.Name = "groupHeaderBand3";
+            // 
             // xrLabel18
             // 
             this.xrLabel18.BackColor = System.Drawing.Color.Transparent;
@@ -1588,48 +1630,6 @@
             this.xrLabel42.Text = "Credit";
             this.xrLabel42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
-            // xrRichText1
-            // 
-            this.xrRichText1.BorderColor = System.Drawing.Color.Black;
-            this.xrRichText1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrRichText1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrRichText1.BorderWidth = 1F;
-            this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date:  </b>\' + FormatString(\'{0:d}\', [PostingDate]) + \'</span>\'\n")});
-            this.xrRichText1.KeepTogether = true;
-            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60.00001F);
-            this.xrRichText1.Name = "xrRichText1";
-            this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
-            this.xrRichText1.SizeF = new System.Drawing.SizeF(238.8952F, 25F);
-            // 
-            // SubBand2
-            // 
-            this.SubBand2.HeightF = 8.25F;
-            this.SubBand2.Name = "SubBand2";
-            // 
-            // xrCrossBandBox2
-            // 
-            this.xrCrossBandBox2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrCrossBandBox2.BorderWidth = 1F;
-            this.xrCrossBandBox2.EndBand = this.SubBand2;
-            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 3.999996F);
-            this.xrCrossBandBox2.Name = "xrCrossBandBox2";
-            this.xrCrossBandBox2.StartBand = this.SubBand2;
-            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrCrossBandBox2.WidthF = 770.0003F;
-            // 
-            // groupHeaderBand3
-            // 
-            this.groupHeaderBand3.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("BatchNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-            this.groupHeaderBand3.HeightF = 0F;
-            this.groupHeaderBand3.Level = 2;
-            this.groupHeaderBand3.Name = "groupHeaderBand3";
-            // 
             // RDGLPostingRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1727,6 +1727,10 @@
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
+        private DevExpress.XtraReports.UI.XRRichText xrRichText1;
+        private DevExpress.XtraReports.UI.SubBand SubBand2;
+        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox2;
+        private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.UI.XRLabel xrLabel29;
         private DevExpress.XtraReports.UI.XRLabel xrLabel30;
@@ -1738,9 +1742,5 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel39;
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
         private DevExpress.XtraReports.UI.XRLabel xrLabel42;
-        private DevExpress.XtraReports.UI.XRRichText xrRichText1;
-        private DevExpress.XtraReports.UI.SubBand SubBand2;
-        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox2;
-        private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand3;
     }
 }

@@ -52,23 +52,21 @@
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.Details_table = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.xrTableCell3 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.BandPartA = new DevExpress.XtraReports.UI.SubBand();
-            this.BandPartB = new DevExpress.XtraReports.UI.SubBand();
-            this.BandPartC = new DevExpress.XtraReports.UI.SubBand();
-            this.NextWellBand = new DevExpress.XtraReports.UI.SubBand();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngWellIDB = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngWellIDA = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngWellIDC = new DevExpress.XtraReports.Parameters.Parameter();
-            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageInfo1 = new DevExpress.XtraReports.UI.XRPageInfo();
+            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
+            this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
+            this.SubBand4 = new DevExpress.XtraReports.UI.SubBand();
             this.PartA = new DevExpress.XtraReports.UI.XRSubreport();
             this.PartB = new DevExpress.XtraReports.UI.XRSubreport();
             this.PartC = new DevExpress.XtraReports.UI.XRSubreport();
-            ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -130,18 +128,12 @@
             // 
             // Tablix1
             // 
-            this.Tablix1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.PartA,
-            this.Details_table});
-            this.Tablix1.HeightF = 25F;
+            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "true")});
+            this.Tablix1.HeightF = 0F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
             this.Tablix1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Tablix1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
-            this.BandPartA,
-            this.BandPartB,
-            this.BandPartC,
-            this.NextWellBand});
             // 
             // pstrDatabaseName
             // 
@@ -174,54 +166,6 @@
             dynamicListLookUpSettings1.ValueMember = "ID";
             this.plngCompanyID.ValueSourceSettings = dynamicListLookUpSettings1;
             this.plngCompanyID.Visible = false;
-            // 
-            // Details_table
-            // 
-            this.Details_table.LocationFloat = new DevExpress.Utils.PointFloat(2700F, 0F);
-            this.Details_table.Name = "Details_table";
-            this.Details_table.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
-            this.xrTableRow1});
-            this.Details_table.SizeF = new System.Drawing.SizeF(1350F, 25F);
-            // 
-            // xrTableRow1
-            // 
-            this.xrTableRow1.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.xrTableCell3});
-            this.xrTableRow1.Name = "xrTableRow1";
-            this.xrTableRow1.Weight = 1D;
-            // 
-            // xrTableCell3
-            // 
-            this.xrTableCell3.Name = "xrTableCell3";
-            this.xrTableCell3.Text = "Tablix control \'Subreport\' is not supported inside the table cell.";
-            this.xrTableCell3.Weight = 1D;
-            // 
-            // BandPartA
-            // 
-            this.BandPartA.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WellID_H] in (?plngWellIDA)")});
-            this.BandPartA.HeightF = 0F;
-            this.BandPartA.Name = "BandPartA";
-            // 
-            // BandPartB
-            // 
-            this.BandPartB.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.PartB});
-            this.BandPartB.HeightF = 24.61065F;
-            this.BandPartB.Name = "BandPartB";
-            // 
-            // BandPartC
-            // 
-            this.BandPartC.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.PartC});
-            this.BandPartC.HeightF = 24.61065F;
-            this.BandPartC.Name = "BandPartC";
-            // 
-            // NextWellBand
-            // 
-            this.NextWellBand.HeightF = 0F;
-            this.NextWellBand.Name = "NextWellBand";
-            this.NextWellBand.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
             // 
             // Subtitle
             // 
@@ -274,33 +218,81 @@
             this.plngWellIDC.ValueSourceSettings = dynamicListLookUpSettings4;
             this.plngWellIDC.Visible = false;
             // 
-            // PageFooter
-            // 
-            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPageInfo1});
-            this.PageFooter.HeightF = 18.00566F;
-            this.PageFooter.Name = "PageFooter";
-            // 
             // xrPageInfo1
             // 
             this.xrPageInfo1.BackColor = System.Drawing.Color.Transparent;
             this.xrPageInfo1.BorderColor = System.Drawing.Color.Transparent;
-            this.xrPageInfo1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(1229.9F, 0F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(1255.109F, 0F);
             this.xrPageInfo1.Name = "xrPageInfo1";
-            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(120.1F, 18.00566F);
+            this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
+            this.xrPageInfo1.SizeF = new System.Drawing.SizeF(84.89124F, 25.21F);
             this.xrPageInfo1.StylePriority.UseBackColor = false;
             this.xrPageInfo1.StylePriority.UseBorderColor = false;
-            this.xrPageInfo1.StylePriority.UseFont = false;
             this.xrPageInfo1.StylePriority.UsePadding = false;
             this.xrPageInfo1.StylePriority.UseTextAlignment = false;
             this.xrPageInfo1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrPageInfo1.TextFormatString = "Page {0} of {1}";
             // 
+            // PageFooter
+            // 
+            this.PageFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPageInfo1});
+            this.PageFooter.HeightF = 25.21F;
+            this.PageFooter.Name = "PageFooter";
+            // 
+            // groupHeaderBand1
+            // 
+            this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("WellID_H", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            this.groupHeaderBand1.HeightF = 0F;
+            this.groupHeaderBand1.Name = "groupHeaderBand1";
+            // 
+            // groupFooterBand1
+            // 
+            this.groupFooterBand1.HeightF = 0F;
+            this.groupFooterBand1.Name = "groupFooterBand1";
+            this.groupFooterBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
+            this.SubBand1,
+            this.SubBand2,
+            this.SubBand3,
+            this.SubBand4});
+            // 
+            // SubBand1
+            // 
+            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.PartA});
+            this.SubBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WellID_H] in (?plngWellIDA)")});
+            this.SubBand1.HeightF = 24.61065F;
+            this.SubBand1.Name = "SubBand1";
+            // 
+            // SubBand2
+            // 
+            this.SubBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.PartB});
+            this.SubBand2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WellID_H] in (?plngWellIDB)\n")});
+            this.SubBand2.HeightF = 24.61065F;
+            this.SubBand2.Name = "SubBand2";
+            // 
+            // SubBand3
+            // 
+            this.SubBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.PartC});
+            this.SubBand3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WellID_H] in (?plngWellIDC)\n")});
+            this.SubBand3.HeightF = 24.61065F;
+            this.SubBand3.Name = "SubBand3";
+            // 
+            // SubBand4
+            // 
+            this.SubBand4.HeightF = 0F;
+            this.SubBand4.Name = "SubBand4";
+            this.SubBand4.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
+            // 
             // PartA
             // 
-            this.PartA.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.PartA.LocationFloat = new DevExpress.Utils.PointFloat(6.357829E-05F, 0F);
             this.PartA.Name = "PartA";
             this.PartA.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
             this.PartA.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
@@ -312,7 +304,7 @@
             // 
             // PartB
             // 
-            this.PartB.LocationFloat = new DevExpress.Utils.PointFloat(6.357829E-05F, 0F);
+            this.PartB.LocationFloat = new DevExpress.Utils.PointFloat(0.0001907349F, 0F);
             this.PartB.Name = "PartB";
             this.PartB.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
             this.PartB.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
@@ -324,7 +316,7 @@
             // 
             // PartC
             // 
-            this.PartC.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.PartC.LocationFloat = new DevExpress.Utils.PointFloat(0.0002543131F, 0F);
             this.PartC.Name = "PartC";
             this.PartC.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
             this.PartC.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
@@ -340,7 +332,9 @@
             this.topMarginBand1,
             this.bottomMarginBand1,
             this.Tablix1,
-            this.PageFooter});
+            this.PageFooter,
+            this.groupHeaderBand1,
+            this.groupFooterBand1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
             this.DataMember = "OGOR_H1";
@@ -370,7 +364,6 @@
             this.plngWellIDB,
             this.plngWellIDC});
             this.Version = "23.1";
-            ((System.ComponentModel.ISupportInitialize)(this.Details_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -380,9 +373,6 @@
         private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
         private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
         private DevExpress.XtraReports.UI.DetailBand Tablix1;
-        private DevExpress.XtraReports.UI.XRTable Details_table;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell3;
         private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
         private DevExpress.XtraReports.Parameters.Parameter pstrServerName;
         private DevExpress.XtraReports.Parameters.Parameter pstrDatabaseName;
@@ -393,13 +383,15 @@
         private DevExpress.XtraReports.Parameters.Parameter plngWellIDA;
         private DevExpress.XtraReports.Parameters.Parameter plngWellIDC;
         private DevExpress.XtraReports.UI.XRSubreport PartA;
-        private DevExpress.XtraReports.UI.SubBand BandPartA;
-        private DevExpress.XtraReports.UI.SubBand BandPartB;
         private DevExpress.XtraReports.UI.XRSubreport PartB;
-        private DevExpress.XtraReports.UI.SubBand BandPartC;
         private DevExpress.XtraReports.UI.XRSubreport PartC;
-        private DevExpress.XtraReports.UI.SubBand NextWellBand;
-        private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
+        private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
+        private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand1;
+        private DevExpress.XtraReports.UI.GroupFooterBand groupFooterBand1;
+        private DevExpress.XtraReports.UI.SubBand SubBand1;
+        private DevExpress.XtraReports.UI.SubBand SubBand2;
+        private DevExpress.XtraReports.UI.SubBand SubBand3;
+        private DevExpress.XtraReports.UI.SubBand SubBand4;
     }
 }

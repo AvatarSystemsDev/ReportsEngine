@@ -70,8 +70,6 @@
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel76 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCheckBox4 = new DevExpress.XtraReports.UI.XRCheckBox();
@@ -113,6 +111,8 @@
             this.xrCrossBandBox10 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox11 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -738,32 +738,6 @@
             new DevExpress.XtraReports.UI.GroupField("PA_LAR_FIELDCODE", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBand1.HeightF = 215.1984F;
             this.groupHeaderBand1.Name = "groupHeaderBand1";
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(676.2449F, 190.1984F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", null, "LA_R5D.CompanyID"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngDISTNO", null, "LA_R5D.PA_LAR_DISTNO"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngFIELDCODE", null, "LA_R5D.PA_LAR_FIELDCODE"));
-            this.xrSubreport1.ReportSource = new ReportsEngine.Reports.MDReports.PA_AllocationDecimalList();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(670.0048F, 25.00002F);
-            // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(6.239804F, 190.1984F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngDISTNO", null, "LA_R5D.PA_LAR_DISTNO"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngFIELDCODE", null, "LA_R5D.PA_LAR_FIELDCODE"));
-            this.xrSubreport2.ReportSource = new ReportsEngine.PA_LAR5D_ACQ_Subreport();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(670.0056F, 25F);
             // 
             // xrLabel12
             // 
@@ -1657,6 +1631,32 @@
             this.xrCrossBandBox1.StartBand = this.groupHeaderBand1;
             this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(906.2464F, 189.7315F);
             this.xrCrossBandBox1.WidthF = 331.4505F;
+            // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(676.2449F, 190.1984F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", null, "LA_R5D.CompanyID"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngDISTNO", null, "LA_R5D.PA_LAR_DISTNO"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngFIELDCODE", null, "LA_R5D.PA_LAR_FIELDCODE"));
+            this.xrSubreport1.ReportSource = new ReportsEngine.PA_LAR5D_DSP_Subreport();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(670.0048F, 25.00002F);
+            // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(6.239804F, 190.1984F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngDISTNO", null, "LA_R5D.PA_LAR_DISTNO"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngFIELDCODE", null, "LA_R5D.PA_LAR_FIELDCODE"));
+            this.xrSubreport2.ReportSource = new ReportsEngine.PA_LAR5D_ACQ_Subreport();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(670.0056F, 25F);
             // 
             // PA_LAR5D
             // 
