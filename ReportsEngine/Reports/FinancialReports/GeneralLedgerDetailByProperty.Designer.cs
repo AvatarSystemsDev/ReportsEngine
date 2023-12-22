@@ -1266,8 +1266,8 @@
             this.xrPeriodTotalDebit.BorderWidth = 0F;
             this.xrPeriodTotalDebit.CanGrow = false;
             this.xrPeriodTotalDebit.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif(sumSum(iif([IsBBF] = false,\n[NetAmount]\n, 0)) >= 0, ABS(sumSum(iif([IsBBF] = " +
-                    "false,\n[NetAmount]\n, 0))), 0)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([AccountID]),0,\niif(sumSum(iif([isBBF] = false AND [NetAmount]>" +
+                    "=0,[NetAmount],0\n)\n)))\n")});
             this.xrPeriodTotalDebit.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrPeriodTotalDebit.KeepTogether = true;
             this.xrPeriodTotalDebit.LocationFloat = new DevExpress.Utils.PointFloat(854.6876F, 0F);

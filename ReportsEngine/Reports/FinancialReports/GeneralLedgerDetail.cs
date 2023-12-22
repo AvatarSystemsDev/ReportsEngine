@@ -15,6 +15,12 @@ namespace ReportsEngine.Reports
         private double GrandAccountTotalCreditx;
         private double GrandPeriodTotalDebitx;
         private double GrandPeriodTotalCreditx;
+        private double GrandPeriodTotalBalance;
+        private double GrandAccountTotalBalance;
+
+        private double RunningBalance;
+        private double BalanceForwardAmount;
+
         public GeneralLedgerDetail()
         {
             InitializeComponent();
@@ -38,8 +44,166 @@ namespace ReportsEngine.Reports
             xrBatchesSelected.BeforePrint += xrBatchesSelected_BeforePrint;
             xrEntitiesSelected.BeforePrint += xrEntitiesSelected_BeforePrint;
             xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
-
+            xrDebitLine.PrintOnPage += XrDebitLine_BeforePrint;
+            xrCreditLine.PrintOnPage += XrCreditLine_BeforePrint;
+            xrDebitForward.PrintOnPage += XrDebitForward_BeforePrint;
+            xrCreditForward.PrintOnPage += XrCreditForward_BeforePrint;
+            xrRunningBalance.PrintOnPage += XrRunningBalance_BeforePrint;
+            xrPeriodRunningBalance.PrintOnPage += XrPeriodRunningBalance_BeforePrint;
+            xrAccountRunningBalance.PrintOnPage += XrAccountRunningBalance_BeforePrint;
+            xrReportPeriodSumBalance.PrintOnPage += XrReportPeriodSumBalance_BeforePrint;
+            xrReportAccountSumBalance.PrintOnPage += XrReportAccountSumBalance_BeforePrint;
+            xrBalanceForward.PrintOnPage += XrBalanceForward_PrintOnPage;
         }
+
+        private void XrBalanceForward_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            if (BalanceForwardAmount < 0)
+            {
+                ((XRLabel)sender).Text = '(' + BalanceForwardAmount.ToString("N2").Replace("-", "") + ')';
+            }
+            else
+            {
+                ((XRLabel)sender).Text = BalanceForwardAmount.ToString("N2");
+            }
+        }
+
+        private void XrReportAccountSumBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            if (GrandAccountTotalBalance < 0)
+            {
+                ((XRLabel)sender).Text = '(' + GrandAccountTotalBalance.ToString("N2").Replace("-", "") + ')';
+            }
+            else
+            {
+                ((XRLabel)sender).Text = GrandAccountTotalBalance.ToString("N2");
+            }
+            GrandAccountTotalBalance = 0;
+        }
+
+        private void XrReportPeriodSumBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            if (GrandPeriodTotalBalance < 0)
+            {
+                ((XRLabel)sender).Text = '(' + GrandPeriodTotalBalance.ToString("N2").Replace("-", "") + ')';
+            }
+            else
+            {
+                ((XRLabel)sender).Text = GrandPeriodTotalBalance.ToString("N2");
+            }
+            GrandPeriodTotalBalance = 0;
+        }
+
+        private void XrAccountRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            if (GrandAccountTotalBalance < 0)
+            {
+                ((XRLabel)sender).Text = '('+ GrandAccountTotalBalance.ToString("N2").Replace("-", "") +')';
+                GrandAccountTotalBalance += RunningBalance;
+
+            }
+            else
+            {
+                ((XRLabel)sender).Text = GrandAccountTotalBalance.ToString("N2");
+                GrandAccountTotalBalance += RunningBalance;
+            }
+        }
+
+        private void XrPeriodRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            if (RunningBalance < 0)
+            {
+                ((XRLabel)sender).Text = '(' + (RunningBalance - BalanceForwardAmount).ToString("N2").Replace("-", "") + ')';
+
+            }
+            else
+            {
+                ((XRLabel)sender).Text = (RunningBalance - BalanceForwardAmount).ToString("N2");
+            }
+            GrandPeriodTotalBalance += (RunningBalance - BalanceForwardAmount);
+            RunningBalance = 0;
+        }
+
+
+        private void XrRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            if (RunningBalance < 0)
+            {
+                ((XRLabel)sender).Text = '(' + RunningBalance.ToString("N2").Replace("-", "") + ')';
+            }
+            else
+            {
+                ((XRLabel)sender).Text = RunningBalance.ToString("N2");
+            }
+        }
+
+        private void XrCreditForward_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            XRLabel label = sender as XRLabel;
+            if (((XRLabel)sender).Text != "")
+            {
+                try
+                {
+                    RunningBalance -= Double.Parse(((XRLabel)sender).Text.Replace(",", ""));
+                    BalanceForwardAmount -= Double.Parse(((XRLabel)sender).Text.Replace(",", ""));
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void XrDebitForward_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            XRLabel label = sender as XRLabel;
+            BalanceForwardAmount = 0;
+            if (((XRLabel)sender).Text != "")
+            {
+                try
+                {
+                    RunningBalance += Double.Parse(((XRLabel)sender).Text.Replace(",", ""));
+                    BalanceForwardAmount += Double.Parse(((XRLabel)sender).Text.Replace(",", ""));
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void XrCreditLine_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            XRLabel label = sender as XRLabel;
+            if (((XRLabel)sender).Text != "")
+            {
+                try
+                {
+                    RunningBalance -= Double.Parse(((XRLabel)sender).Text.Replace(",", ""));
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
+        private void XrDebitLine_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            XRLabel label = sender as XRLabel;
+            if (((XRLabel)sender).Text != "")
+            {
+                try
+                {
+                    RunningBalance += Double.Parse(((XRLabel)sender).Text.Replace(",", ""));
+                }
+                catch
+                {
+
+                }
+            }
+        }
+
         private void xrAccountsSelected_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
@@ -467,7 +631,11 @@ namespace ReportsEngine.Reports
             GrandAccountTotalCreditx = 0;
             GrandPeriodTotalDebitx = 0;
             GrandPeriodTotalCreditx = 0;
-        }
+            GrandPeriodTotalBalance = 0;
+            RunningBalance = 0;
+            GrandAccountTotalBalance = 0;
+            BalanceForwardAmount = 0;
+    }
         private void xrAccountTotalDebit_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
