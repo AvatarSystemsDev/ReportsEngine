@@ -2192,7 +2192,7 @@
             this.xrLabel12.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel12.BorderWidth = 1F;
             this.xrLabel12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Property:  \'+[PhaseWellNumber]+\' \' + [PhaseWellName]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Property:  \'+[PhaseWellNumber]+\' \' + [PhaseWellDescription]")});
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel12.ForeColor = System.Drawing.Color.Black;
             this.xrLabel12.KeepTogether = true;
@@ -3629,7 +3629,7 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_ProofList";
             sourceNode2.Alias = null;
-            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1057\" />";
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1077\" />";
             source2.DataMember = "ProofList";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_ProofList";
@@ -3639,7 +3639,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PurchaserCheckDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PurchaserNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PurchaserName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProductType"),
@@ -3683,10 +3682,12 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DOIDeckCodeDescription"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "TaxExemptionStatus"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "The88Cash"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "RDTransactionTypeCodeDescription")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "RDTransactionTypeCodeDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellDescription")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_Property";
             sourceNode3.Alias = null;
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source3.DataMember = "Property";
             source3.DataSource = this.Dynamic;
             source3.Name = "Dynamic_Property";
@@ -3694,7 +3695,8 @@
             selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PropertyAndWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "RecordType")});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Pulse_Master_UserRecord";
             sourceNode4.Alias = null;

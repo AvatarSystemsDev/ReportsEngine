@@ -251,6 +251,7 @@
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrLabel63 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.SumTaxTypeCodeID1 = new DevExpress.XtraReports.UI.CalculatedField();
             this.SumTaxTypeCodeID2 = new DevExpress.XtraReports.UI.CalculatedField();
@@ -261,7 +262,6 @@
             this.SumTaxTypeCodeID7 = new DevExpress.XtraReports.UI.CalculatedField();
             this.LiterallyTheNumberZero = new DevExpress.XtraReports.UI.CalculatedField();
             this.LitterallyJustTheTrueValue = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrLabel63 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox65)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -2721,6 +2721,7 @@
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_Property";
             sourceNode3.Alias = null;
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source3.DataMember = "Property";
             source3.DataSource = this.Dynamic;
             source3.Name = "Dynamic_Property";
@@ -2728,11 +2729,12 @@
             selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PropertyAndWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "RecordType")});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Dynamic_DSRDProductionTaxDetail";
             sourceNode4.Alias = null;
-            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"917\" />";
+            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"937\" />";
             source4.DataMember = "DSRDProductionTaxDetail";
             source4.DataSource = this.Dynamic;
             source4.Name = "Dynamic_DSRDProductionTaxDetail";
@@ -2741,7 +2743,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ProcessingDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PurchaserNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PurchaserName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ProductType"),
@@ -2779,7 +2780,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "TaxDistrictNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CalculatedVolume"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CalculatedNetVolume"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RDTransactionTypeCodeDescription")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RDTransactionTypeCodeDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellDescription")});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Pulse_Master_UserRecord";
             sourceNode5.Alias = null;
@@ -2854,6 +2856,33 @@
             new DevExpress.XtraReports.UI.GroupField("RDEntryItemID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBand3.HeightF = 34.00002F;
             this.groupHeaderBand3.Name = "groupHeaderBand3";
+            // 
+            // xrLabel63
+            // 
+            this.xrLabel63.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel63.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel63.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel63.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel63.BorderWidth = 1F;
+            this.xrLabel63.CanGrow = false;
+            this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel63.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel63.KeepTogether = true;
+            this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(0F, 17.00001F);
+            this.xrLabel63.Name = "xrLabel63";
+            this.xrLabel63.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel63.SizeF = new System.Drawing.SizeF(63.99988F, 16.99999F);
+            this.xrLabel63.StylePriority.UseBackColor = false;
+            this.xrLabel63.StylePriority.UseBorderColor = false;
+            this.xrLabel63.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel63.StylePriority.UseBorders = false;
+            this.xrLabel63.StylePriority.UseBorderWidth = false;
+            this.xrLabel63.StylePriority.UseFont = false;
+            this.xrLabel63.StylePriority.UseForeColor = false;
+            this.xrLabel63.StylePriority.UsePadding = false;
+            this.xrLabel63.StylePriority.UseTextAlignment = false;
+            this.xrLabel63.Text = "[RDTransactionTypeCodeDescription]";
+            this.xrLabel63.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrSubreport2
             // 
@@ -2936,33 +2965,6 @@
             this.LitterallyJustTheTrueValue.Expression = "true";
             this.LitterallyJustTheTrueValue.FieldType = DevExpress.XtraReports.UI.FieldType.Boolean;
             this.LitterallyJustTheTrueValue.Name = "LitterallyJustTheTrueValue";
-            // 
-            // xrLabel63
-            // 
-            this.xrLabel63.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel63.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel63.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel63.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel63.BorderWidth = 1F;
-            this.xrLabel63.CanGrow = false;
-            this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel63.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel63.KeepTogether = true;
-            this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(0F, 17.00001F);
-            this.xrLabel63.Name = "xrLabel63";
-            this.xrLabel63.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel63.SizeF = new System.Drawing.SizeF(63.99988F, 16.99999F);
-            this.xrLabel63.StylePriority.UseBackColor = false;
-            this.xrLabel63.StylePriority.UseBorderColor = false;
-            this.xrLabel63.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel63.StylePriority.UseBorders = false;
-            this.xrLabel63.StylePriority.UseBorderWidth = false;
-            this.xrLabel63.StylePriority.UseFont = false;
-            this.xrLabel63.StylePriority.UseForeColor = false;
-            this.xrLabel63.StylePriority.UsePadding = false;
-            this.xrLabel63.StylePriority.UseTextAlignment = false;
-            this.xrLabel63.Text = "[RDTransactionTypeCodeDescription]";
-            this.xrLabel63.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // RDProductionTaxDetail
             // 

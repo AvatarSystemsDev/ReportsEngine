@@ -183,8 +183,8 @@
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
-            this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.NewMexicoReportTotals = new DevExpress.XtraReports.UI.XRSubreport();
+            this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -628,7 +628,7 @@
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel13.BorderWidth = 1F;
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhaseWellName]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhaseWellDescription]")});
             this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel13.ForeColor = System.Drawing.Color.Black;
             this.xrLabel13.KeepTogether = true;
@@ -1078,6 +1078,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteDistributionDate.Name = "pdteDistributionDate";
             this.pdteDistributionDate.Type = typeof(System.DateTime);
+            this.pdteDistributionDate.ValueInfo = "2023-12-21";
             // 
             // pbooShowCriteria
             // 
@@ -1584,6 +1585,22 @@
             this.ReportFooter.HeightF = 13.17215F;
             this.ReportFooter.Name = "ReportFooter";
             // 
+            // NewMexicoReportTotals
+            // 
+            this.NewMexicoReportTotals.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2")});
+            this.NewMexicoReportTotals.LocationFloat = new DevExpress.Utils.PointFloat(0F, 13.17215F);
+            this.NewMexicoReportTotals.Name = "NewMexicoReportTotals";
+            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteDistributionDate", this.pdteDistributionDate));
+            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
+            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.NewMexicoReportTotals.ReportSource = new ReportsEngine.Reports.RDReports.NewMexicoStateRoyaltyDetailReportFooter();
+            this.NewMexicoReportTotals.SizeF = new System.Drawing.SizeF(1020F, 1.986821E-06F);
+            // 
             // federationDataSource1
             // 
             this.federationDataSource1.Name = "federationDataSource1";
@@ -1600,6 +1617,7 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_DSNewMexicoStateRoyaltyDetail";
             sourceNode2.Alias = null;
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"577\" />";
             source2.DataMember = "DSNewMexicoStateRoyaltyDetail";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_DSNewMexicoStateRoyaltyDetail";
@@ -1608,7 +1626,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProductID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProcessingDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "APINumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProductionUnitNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CountyCode"),
@@ -1628,7 +1645,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "The88Gallons"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "StatePropertyNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "TransactionCode"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsARMSLength")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsARMSLength"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellDescription")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Pulse_Master_UserRecord";
             sourceNode3.Alias = null;
@@ -1674,22 +1692,6 @@
             selectNode1,
             selectNode2,
             selectNode3});
-            // 
-            // NewMexicoReportTotals
-            // 
-            this.NewMexicoReportTotals.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2")});
-            this.NewMexicoReportTotals.LocationFloat = new DevExpress.Utils.PointFloat(0F, 13.17215F);
-            this.NewMexicoReportTotals.Name = "NewMexicoReportTotals";
-            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteDistributionDate", this.pdteDistributionDate));
-            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
-            this.NewMexicoReportTotals.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.NewMexicoReportTotals.ReportSource = new ReportsEngine.Reports.RDReports.NewMexicoStateRoyaltyDetailReportFooter();
-            this.NewMexicoReportTotals.SizeF = new System.Drawing.SizeF(1020F, 1.986821E-06F);
             // 
             // NewMexicoStateRoyaltyDetail
             // 

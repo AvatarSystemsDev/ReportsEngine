@@ -142,34 +142,34 @@
             this.groupHeaderBand2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.SubBand9 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand10 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand11 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand12 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand13 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand14 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand15 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand16 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand10 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand11 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand12 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand13 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand14 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel27 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand15 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand16 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel33 = new DevExpress.XtraReports.UI.XRLabel();
@@ -1322,83 +1322,6 @@
             this.SubBand9.HeightF = 17F;
             this.SubBand9.Name = "SubBand9";
             // 
-            // SubBand10
-            // 
-            this.SubBand10.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel13,
-            this.xrLabel14,
-            this.xrLabel15});
-            this.SubBand10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID2]<>0 AND not IsNullOrEmpty([SumTaxTypeCodeID2])")});
-            this.SubBand10.HeightF = 17F;
-            this.SubBand10.Name = "SubBand10";
-            // 
-            // SubBand11
-            // 
-            this.SubBand11.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel16,
-            this.xrLabel17,
-            this.xrLabel18});
-            this.SubBand11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID3]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID3])")});
-            this.SubBand11.HeightF = 17F;
-            this.SubBand11.Name = "SubBand11";
-            // 
-            // SubBand12
-            // 
-            this.SubBand12.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel19,
-            this.xrLabel20,
-            this.xrLabel21});
-            this.SubBand12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID4]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID4])")});
-            this.SubBand12.HeightF = 17F;
-            this.SubBand12.Name = "SubBand12";
-            // 
-            // SubBand13
-            // 
-            this.SubBand13.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel22,
-            this.xrLabel23,
-            this.xrLabel24});
-            this.SubBand13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID5]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID5])")});
-            this.SubBand13.HeightF = 17F;
-            this.SubBand13.Name = "SubBand13";
-            // 
-            // SubBand14
-            // 
-            this.SubBand14.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel25,
-            this.xrLabel26,
-            this.xrLabel27});
-            this.SubBand14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID6]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID6])")});
-            this.SubBand14.HeightF = 17F;
-            this.SubBand14.Name = "SubBand14";
-            // 
-            // SubBand15
-            // 
-            this.SubBand15.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel28,
-            this.xrLabel29,
-            this.xrLabel30});
-            this.SubBand15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID7]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID7])")});
-            this.SubBand15.HeightF = 17F;
-            this.SubBand15.Name = "SubBand15";
-            // 
-            // SubBand16
-            // 
-            this.SubBand16.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel31,
-            this.xrLabel32,
-            this.xrLabel33});
-            this.SubBand16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([EnteredTaxes])\n")});
-            this.SubBand16.HeightF = 17F;
-            this.SubBand16.Name = "SubBand16";
-            // 
             // xrLabel10
             // 
             this.xrLabel10.BackColor = System.Drawing.Color.Transparent;
@@ -1488,6 +1411,17 @@
             this.xrLabel12.Summary = xrSummary20;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel12.TextFormatString = "{0:N2}";
+            // 
+            // SubBand10
+            // 
+            this.SubBand10.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel13,
+            this.xrLabel14,
+            this.xrLabel15});
+            this.SubBand10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID2]<>0 AND not IsNullOrEmpty([SumTaxTypeCodeID2])")});
+            this.SubBand10.HeightF = 17F;
+            this.SubBand10.Name = "SubBand10";
             // 
             // xrLabel13
             // 
@@ -1579,6 +1513,17 @@
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel15.TextFormatString = "{0:N2}";
             // 
+            // SubBand11
+            // 
+            this.SubBand11.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel16,
+            this.xrLabel17,
+            this.xrLabel18});
+            this.SubBand11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID3]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID3])")});
+            this.SubBand11.HeightF = 17F;
+            this.SubBand11.Name = "SubBand11";
+            // 
             // xrLabel16
             // 
             this.xrLabel16.BackColor = System.Drawing.Color.Transparent;
@@ -1668,6 +1613,17 @@
             this.xrLabel18.Summary = xrSummary24;
             this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel18.TextFormatString = "{0:N2}";
+            // 
+            // SubBand12
+            // 
+            this.SubBand12.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel19,
+            this.xrLabel20,
+            this.xrLabel21});
+            this.SubBand12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID4]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID4])")});
+            this.SubBand12.HeightF = 17F;
+            this.SubBand12.Name = "SubBand12";
             // 
             // xrLabel19
             // 
@@ -1759,6 +1715,17 @@
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel21.TextFormatString = "{0:N2}";
             // 
+            // SubBand13
+            // 
+            this.SubBand13.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel22,
+            this.xrLabel23,
+            this.xrLabel24});
+            this.SubBand13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID5]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID5])")});
+            this.SubBand13.HeightF = 17F;
+            this.SubBand13.Name = "SubBand13";
+            // 
             // xrLabel22
             // 
             this.xrLabel22.BackColor = System.Drawing.Color.Transparent;
@@ -1848,6 +1815,17 @@
             this.xrLabel24.Summary = xrSummary28;
             this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel24.TextFormatString = "{0:N2}";
+            // 
+            // SubBand14
+            // 
+            this.SubBand14.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel25,
+            this.xrLabel26,
+            this.xrLabel27});
+            this.SubBand14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID6]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID6])")});
+            this.SubBand14.HeightF = 17F;
+            this.SubBand14.Name = "SubBand14";
             // 
             // xrLabel25
             // 
@@ -1939,6 +1917,17 @@
             this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel27.TextFormatString = "{0:N2}";
             // 
+            // SubBand15
+            // 
+            this.SubBand15.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel28,
+            this.xrLabel29,
+            this.xrLabel30});
+            this.SubBand15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[SumTaxTypeCodeID7]<>0  AND not IsNullOrEmpty([SumTaxTypeCodeID7])")});
+            this.SubBand15.HeightF = 17F;
+            this.SubBand15.Name = "SubBand15";
+            // 
             // xrLabel28
             // 
             this.xrLabel28.BackColor = System.Drawing.Color.Transparent;
@@ -2028,6 +2017,17 @@
             this.xrLabel30.Summary = xrSummary32;
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel30.TextFormatString = "{0:N2}";
+            // 
+            // SubBand16
+            // 
+            this.SubBand16.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel31,
+            this.xrLabel32,
+            this.xrLabel33});
+            this.SubBand16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([EnteredTaxes])\n")});
+            this.SubBand16.HeightF = 17F;
+            this.SubBand16.Name = "SubBand16";
             // 
             // xrLabel31
             // 

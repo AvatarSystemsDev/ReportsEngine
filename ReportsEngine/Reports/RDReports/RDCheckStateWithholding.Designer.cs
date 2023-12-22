@@ -524,7 +524,7 @@
             this.xrLabel39.BorderWidth = 1F;
             this.xrLabel39.CanGrow = false;
             this.xrLabel39.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhaseWellName]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhaseWellDescription]")});
             this.xrLabel39.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel39.ForeColor = System.Drawing.Color.Black;
             this.xrLabel39.KeepTogether = true;
@@ -2581,6 +2581,7 @@
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_Owners";
             sourceNode3.Alias = null;
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source3.DataMember = "Owners";
             source3.DataSource = this.Dynamic;
             source3.Name = "Dynamic_Owners";
@@ -2588,10 +2589,12 @@
             selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "RecordType")});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Dynamic_DSRDCheckStateWithholding";
             sourceNode4.Alias = null;
+            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"497\" />";
             source4.DataMember = "DSRDCheckStateWithholding";
             source4.DataSource = this.Dynamic;
             source4.Name = "Dynamic_DSRDCheckStateWithholding";
@@ -2608,7 +2611,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckWithholdingAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellCounty"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SaleDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Product"),
@@ -2616,7 +2618,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerDOI"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerGross"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerNet"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RevenueWithholdingAmount")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RevenueWithholdingAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellDescription")});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Pulse_Master_UserRecord";
             sourceNode5.Alias = null;

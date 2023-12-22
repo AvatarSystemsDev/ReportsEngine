@@ -2164,6 +2164,7 @@
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_Property";
             sourceNode3.Alias = null;
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source3.DataMember = "Property";
             source3.DataSource = this.Dynamic;
             source3.Name = "Dynamic_Property";
@@ -2171,10 +2172,12 @@
             selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PropertyAndWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "RecordType")});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Dynamic_DSStateWithholding";
             sourceNode4.Alias = null;
+            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"717\" />";
             source4.DataMember = "DSStateWithholding";
             source4.DataSource = this.Dynamic;
             source4.Name = "Dynamic_DSStateWithholding";
@@ -2182,7 +2185,6 @@
             selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RDEntryItemID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellState"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellStateName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PurchaserNumber"),
@@ -2210,7 +2212,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ExemptFromWithholding"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "StateWithholding"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ProcessingDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SortField")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SortField"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellDescription")});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Pulse_Master_UserRecord";
             sourceNode5.Alias = null;

@@ -137,7 +137,7 @@
 	RecordCount,
 	Line as Line_C,
 	ProdCode,
-	CAST(API_Grav AS Decimal(3,2)) as API_Grav_C,
+	API_Grav as API_Grav_C,
 	BeginInv,
 	OilProd as OilProd_C,
 	OilSales,

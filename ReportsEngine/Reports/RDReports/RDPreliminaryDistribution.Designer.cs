@@ -1203,6 +1203,7 @@
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_Property";
             sourceNode3.Alias = null;
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source3.DataMember = "Property";
             source3.DataSource = this.Dynamic;
             source3.Name = "Dynamic_Property";
@@ -1210,11 +1211,12 @@
             selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PropertyAndWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "RecordType")});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Dynamic_DSRDPreliminaryDistribution";
             sourceNode4.Alias = null;
-            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"497\" />";
+            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"517\" />";
             source4.DataMember = "DSRDPreliminaryDistribution";
             source4.DataSource = this.Dynamic;
             source4.Name = "Dynamic_DSRDPreliminaryDistribution";
@@ -1224,7 +1226,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PurchaserName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ProcessingDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ProductType"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "UseMCFVolume"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SaleDate"),
@@ -1240,7 +1241,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredTaxes"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredDeductions"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredNet"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RDTransactionTypeCodeDescription")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RDTransactionTypeCodeDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellDescription")});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Pulse_Master_UserRecord";
             sourceNode5.Alias = null;
