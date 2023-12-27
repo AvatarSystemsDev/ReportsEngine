@@ -96,17 +96,18 @@ namespace ReportsEngine.Reports
 
         private void XrAccountRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
-            if (GrandAccountTotalBalance < 0)
+            if (RunningBalance < 0)
             {
-                ((XRLabel)sender).Text = '('+ GrandAccountTotalBalance.ToString("N2").Replace("-", "") +')';
+                ((XRLabel)sender).Text = '('+ RunningBalance.ToString("N2").Replace("-", "") +')';
                 GrandAccountTotalBalance += RunningBalance;
 
             }
             else
             {
-                ((XRLabel)sender).Text = GrandAccountTotalBalance.ToString("N2");
+                ((XRLabel)sender).Text = RunningBalance.ToString("N2");
                 GrandAccountTotalBalance += RunningBalance;
             }
+            RunningBalance = 0;
         }
 
         private void XrPeriodRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
@@ -121,19 +122,19 @@ namespace ReportsEngine.Reports
                 ((XRLabel)sender).Text = (RunningBalance - BalanceForwardAmount).ToString("N2");
             }
             GrandPeriodTotalBalance += (RunningBalance - BalanceForwardAmount);
-            RunningBalance = 0;
         }
 
 
         private void XrRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
-            if (RunningBalance < 0)
+            double netAmountCurrent =  Double.Parse(((XRLabel)sender).Text.Replace(",", ""));
+            if (RunningBalance + netAmountCurrent < 0)
             {
-                ((XRLabel)sender).Text = '(' + RunningBalance.ToString("N2").Replace("-", "") + ')';
+                ((XRLabel)sender).Text = '(' + (RunningBalance + netAmountCurrent).ToString("N2").Replace("-", "") + ')';
             }
             else
             {
-                ((XRLabel)sender).Text = RunningBalance.ToString("N2");
+                ((XRLabel)sender).Text = (RunningBalance + netAmountCurrent).ToString("N2");
             }
         }
 

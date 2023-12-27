@@ -729,6 +729,8 @@
             this.xrRunningBalance.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRunningBalance.BorderWidth = 0F;
             this.xrRunningBalance.CanGrow = false;
+            this.xrRunningBalance.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NetAmount]")});
             this.xrRunningBalance.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRunningBalance.KeepTogether = true;
             this.xrRunningBalance.LocationFloat = new DevExpress.Utils.PointFloat(942.6052F, 0F);
@@ -1092,7 +1094,7 @@
             this.xrDebitLine.BorderWidth = 0F;
             this.xrDebitLine.CanGrow = false;
             this.xrDebitLine.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([NetAmount]>=0, [NetAmount], \'\')\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([NetAmount]>=0, [NetAmountVisible], \'\')\n")});
             this.xrDebitLine.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrDebitLine.ForeColor = System.Drawing.Color.Black;
             this.xrDebitLine.KeepTogether = true;
