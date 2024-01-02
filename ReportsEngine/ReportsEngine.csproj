@@ -408,6 +408,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PA_OSAGE101.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PA_OSAGE101.Designer.cs">
+      <DependentUpon>PA_OSAGE101.cs</DependentUpon>
+    </Compile>
     <Compile Include="PA_TexasH10.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2104,6 +2110,9 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PA_OSAGE101.resx">
+      <DependentUpon>PA_OSAGE101.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="PA_TexasH10.resx">
       <DependentUpon>PA_TexasH10.cs</DependentUpon>
     </EmbeddedResource>

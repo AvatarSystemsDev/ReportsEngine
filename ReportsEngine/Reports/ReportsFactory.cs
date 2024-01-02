@@ -269,6 +269,7 @@ namespace ReportsEngine.Reports
             Reports.Add("PA_FedOGOR", () => new PA_FedOGOR());
             Reports.Add("ExcelPA_FedOGOR", () => new ExcelPA_FedOGOR());
             Reports.Add("PA_TexasH10", () => new PA_TexasH10());
+            Reports.Add("PA_OSAGE101", () => new PA_OSAGE101());
 
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
