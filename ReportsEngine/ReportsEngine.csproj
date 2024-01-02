@@ -408,6 +408,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PA_TexasH10.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PA_TexasH10.Designer.cs">
+      <DependentUpon>PA_TexasH10.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\APOutstandingAccountsPayableDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2098,6 +2104,9 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="PA_TexasH10.resx">
+      <DependentUpon>PA_TexasH10.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APOutstandingAccountsPayableDetail.resx">
       <DependentUpon>APOutstandingAccountsPayableDetail.cs</DependentUpon>
     </EmbeddedResource>
