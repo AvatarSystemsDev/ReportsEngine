@@ -2,7 +2,6 @@
 using DevExpress.XtraReports;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
-using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using ReportsEngine.Reports;
 using System;
@@ -10,6 +9,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.ServiceModel;
+using System.Text.RegularExpressions;
 using System.Web;
 
 namespace ReportsEngine.Services
@@ -159,7 +159,7 @@ namespace ReportsEngine.Services
                 {
                     continue;
                 }
-                 if (parameterName == "plngDatabaseID")
+                if (parameterName == "plngDatabaseID")
                 {
                     DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();
                     string currentDatabaseID = parameters["plngDatabaseID"];
@@ -200,30 +200,30 @@ namespace ReportsEngine.Services
                     report.Parameters["Subtitle"].Value = parameters["pstrSubtitle"].ToString();
                 }
                 else if (parameterName == "pstrParamVisibility")
-                {
-                    List<Parameter> para = report.Parameters.Cast<Parameter>().ToList();
-                    string temp = parameters.ToString().Substring(parameters.ToString().IndexOf("pstrParamVisibility") + 20);
-                    string index = "";
-                    for (int x = 0; x < temp.Length; x++)
+                {                 
+                    List<Parameter> reportParameters = report.Parameters.Cast<Parameter>().ToList(); //The unsorted parameters from the report
+                    string[] hiddenIndexes = Regex.Split(parameters["pstrParamVisibility"], "-");
+                    if (hiddenIndexes.Length > 0)
                     {
-                        if (temp[x] == 'T' || temp[x] == 't')
+                        for (int i = 0; i < hiddenIndexes.Length; i++) //for each index seperated by -
                         {
-                            para[Int32.Parse(index)].Visible = true;
-                        }
-                        else if (temp[x] == 'F' || temp[x] == 'f')
-                        {
-                            para[Int32.Parse(index)].Visible = false;
-                        }
-                        else if (temp[x] == '-')
-                        {
+                            string indexWithBool = hiddenIndexes[i]; //get the string
+                            string strIndexOnly = indexWithBool.Substring(0, indexWithBool.Length - 1); //get just the index part of the string
+                            int indexOnly = Int32.Parse(strIndexOnly); //convert the index to an int
+                            string visiBoolChar = indexWithBool.Substring(indexWithBool.Length - 1, 1); //get the T or F at the end of the string.
+                            bool visiBool = true; //default visible value. If visiBoolChar is not defined, it will always be visible.
+                            if (visiBoolChar.ToUpper() == "T")
+                                visiBool = true;
+                            else if (visiBoolChar.ToUpper() == "F")
+                                visiBool = false;
 
-                        }
-                        else if (temp[x] == '&' || temp[x] == '?'){
-                            break;
-                        }
-                        else
-                        {
-                            index += temp[x];
+                            //NOTE indexOnly is incremented by the 3 hardcoded parameters always passed to reports
+                            string parameterKey = parameters.GetKey(indexOnly + 3);
+                            var foundParameter = reportParameters.Find(param => param.Name == parameterKey);
+                            if (foundParameter != null)
+                            {
+                                foundParameter.Visible = visiBool;
+                            }
                         }
                     }
                 }
