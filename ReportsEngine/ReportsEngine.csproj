@@ -394,16 +394,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="PA_OSAGE101.cs">
+    <Compile Include="Reports\PAReports\PA_OSAGE101.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PA_OSAGE101.Designer.cs">
+    <Compile Include="Reports\PAReports\PA_OSAGE101.Designer.cs">
       <DependentUpon>PA_OSAGE101.cs</DependentUpon>
     </Compile>
-    <Compile Include="PA_OSAGE133.cs">
+    <Compile Include="Reports\PAReports\PA_OSAGE133.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PA_OSAGE133.Designer.cs">
+    <Compile Include="Reports\PAReports\PA_OSAGE133.Designer.cs">
       <DependentUpon>PA_OSAGE133.cs</DependentUpon>
     </Compile>
     <Compile Include="PA_TexasH10.cs">
@@ -537,6 +537,12 @@
     </Compile>
     <Compile Include="Reports\PAReports\PA_FedOGOR_PartC_Subreport.Designer.cs">
       <DependentUpon>PA_FedOGOR_PartC_Subreport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_OSAGE157.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_OSAGE157.Designer.cs">
+      <DependentUpon>PA_OSAGE157.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\PAReports\Texas_PR.cs">
       <SubType>Component</SubType>
@@ -2102,10 +2108,10 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="PA_OSAGE101.resx">
+    <EmbeddedResource Include="Reports\PAReports\PA_OSAGE101.resx">
       <DependentUpon>PA_OSAGE101.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PA_OSAGE133.resx">
+    <EmbeddedResource Include="Reports\PAReports\PA_OSAGE133.resx">
       <DependentUpon>PA_OSAGE133.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PA_TexasH10.resx">
@@ -2173,6 +2179,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\PA_FedOGOR_PartC_Subreport.resx">
       <DependentUpon>PA_FedOGOR_PartC_Subreport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\PA_OSAGE157.resx">
+      <DependentUpon>PA_OSAGE157.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\Texas_PR.resx">
       <DependentUpon>Texas_PR.cs</DependentUpon>
