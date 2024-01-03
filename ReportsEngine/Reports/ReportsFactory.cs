@@ -271,6 +271,7 @@ namespace ReportsEngine.Reports
             Reports.Add("PA_TexasH10", () => new PA_TexasH10());
             Reports.Add("PA_OSAGE101", () => new PA_OSAGE101());
             Reports.Add("PA_OSAGE133", () => new PA_OSAGE133());
+            Reports.Add("PA_OSAGE157", () => new PA_OSAGE157());
 
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
