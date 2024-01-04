@@ -513,11 +513,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
             this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
             this.Textbox1.KeepTogether = true;
-            this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(1.600011F, 0F);
+            this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox1.Multiline = true;
             this.Textbox1.Name = "Textbox1";
             this.Textbox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox1.SizeF = new System.Drawing.SizeF(768.4F, 30F);
+            this.Textbox1.SizeF = new System.Drawing.SizeF(770.0001F, 30F);
             this.Textbox1.StylePriority.UseFont = false;
             this.Textbox1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -529,11 +529,11 @@
             this.ReportTitle.BorderWidth = 1F;
             this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.ReportTitle.KeepTogether = true;
-            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(1.600011F, 31.39F);
+            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 31.39F);
             this.ReportTitle.Multiline = true;
             this.ReportTitle.Name = "ReportTitle";
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.ReportTitle.SizeF = new System.Drawing.SizeF(768.4F, 30F);
+            this.ReportTitle.SizeF = new System.Drawing.SizeF(770.0001F, 30F);
             this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.Text = "JIB Service Charges";
             this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;

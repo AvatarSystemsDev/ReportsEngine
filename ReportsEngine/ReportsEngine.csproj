@@ -513,6 +513,12 @@
     <Compile Include="Reports\PAReports\PA_OSAGE101.Designer.cs">
       <DependentUpon>PA_OSAGE101.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PAReports\PA_OSAGE101A.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PAReports\PA_OSAGE101A.Designer.cs">
+      <DependentUpon>PA_OSAGE101A.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PAReports\PA_OSAGE133.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2238,6 +2244,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\PA_OSAGE101.resx">
       <DependentUpon>PA_OSAGE101.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PAReports\PA_OSAGE101A.resx">
+      <DependentUpon>PA_OSAGE101A.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\PA_OSAGE133.resx">
       <DependentUpon>PA_OSAGE133.cs</DependentUpon>

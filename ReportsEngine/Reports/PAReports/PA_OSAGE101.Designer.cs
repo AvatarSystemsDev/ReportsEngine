@@ -1872,7 +1872,7 @@
             this.xrLabel40.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel40.BorderWidth = 1F;
             this.xrLabel40.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'GAS PURCHASER: \' + [PUR_NAME]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'NGL PURCHASER: \' + [PUR_NAME]")});
             this.xrLabel40.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel40.ForeColor = System.Drawing.Color.Black;
             this.xrLabel40.KeepTogether = true;

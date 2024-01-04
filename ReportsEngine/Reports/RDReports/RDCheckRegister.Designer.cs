@@ -2150,7 +2150,7 @@ namespace ReportsEngine
             this.xrLabel51.BorderWidth = 1.39F;
             this.xrLabel51.CanGrow = false;
             this.xrLabel51.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([OwnerNet]-[OwnerStateWithholding])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CheckAmount]")});
             this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel51.KeepTogether = true;
             this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(682.2391F, 1.69398F);
