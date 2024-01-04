@@ -1152,7 +1152,7 @@
             this.Textbox136.StylePriority.UseFont = false;
             this.Textbox136.StylePriority.UsePadding = false;
             this.Textbox136.StylePriority.UseTextAlignment = false;
-            this.Textbox136.Text = "Vcher";
+            this.Textbox136.Text = "Voucher";
             this.Textbox136.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox105

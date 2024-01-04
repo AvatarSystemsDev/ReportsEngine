@@ -994,7 +994,7 @@
             this.BankName2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Proper" +
                     "ty: </b>\' + [PropertyNumber] + \'   \' + [PropertyName]+\'</span>\'")});
-            this.BankName2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
+            this.BankName2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.BankName2.KeepTogether = true;
             this.BankName2.LocationFloat = new DevExpress.Utils.PointFloat(1.041667F, 0F);
             this.BankName2.Name = "BankName2";
@@ -1014,7 +1014,7 @@
             this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Operat" +
                     "or: </b>\' + [OperatorNumber] +\'   \' + [OperatorName]+\'</span>\'")});
-            this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
+            this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText1.KeepTogether = true;
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(401.0417F, 0F);
             this.xrRichText1.Name = "xrRichText1";
@@ -1034,7 +1034,7 @@
             this.xrRichText2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Locati" +
                     "on: </b>\' + [County] +\', \' + [StateAbbrev]+\'</span>\'")});
-            this.xrRichText2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
+            this.xrRichText2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText2.KeepTogether = true;
             this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(801.0417F, 0F);
             this.xrRichText2.Name = "xrRichText2";
@@ -2959,7 +2959,7 @@
             this.xrLabel17.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel17.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel17.BorderWidth = 1F;
-            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Arial", 10F);
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.xrLabel17.ForeColor = System.Drawing.Color.Black;
             this.xrLabel17.KeepTogether = true;
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(525F, 0F);

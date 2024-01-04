@@ -1288,7 +1288,7 @@
             this.Textbox4.StylePriority.UseFont = false;
             this.Textbox4.StylePriority.UsePadding = false;
             this.Textbox4.StylePriority.UseTextAlignment = false;
-            this.Textbox4.Text = "Prop Code";
+            this.Textbox4.Text = "Property/Well";
             this.Textbox4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox14
@@ -1312,7 +1312,7 @@
             this.Textbox14.StylePriority.UseFont = false;
             this.Textbox14.StylePriority.UsePadding = false;
             this.Textbox14.StylePriority.UseTextAlignment = false;
-            this.Textbox14.Text = "Property";
+            this.Textbox14.Text = "Property/Well Description";
             this.Textbox14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel5

@@ -816,7 +816,7 @@
             this.Textbox16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox16.SizeF = new System.Drawing.SizeF(65.61975F, 20F);
             this.Textbox16.StylePriority.UsePadding = false;
-            this.Textbox16.Text = "Prop Well";
+            this.Textbox16.Text = "Prop/Well";
             this.Textbox16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox17
@@ -1326,7 +1326,7 @@
             this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel26.SizeF = new System.Drawing.SizeF(65.61975F, 20F);
             this.xrLabel26.StylePriority.UsePadding = false;
-            this.xrLabel26.Text = "Prop Well";
+            this.xrLabel26.Text = "Prop/Well";
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel27

@@ -506,7 +506,7 @@
             this.xrLabel93.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel93.BorderWidth = 1F;
             this.xrLabel93.CanGrow = false;
-            this.xrLabel93.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel93.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel93.ForeColor = System.Drawing.Color.Black;
             this.xrLabel93.KeepTogether = true;
             this.xrLabel93.LocationFloat = new DevExpress.Utils.PointFloat(6.239764F, 0F);
@@ -534,7 +534,7 @@
             this.xrLabel59.CanGrow = false;
             this.xrLabel59.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Code3]")});
-            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel59.ForeColor = System.Drawing.Color.Black;
             this.xrLabel59.KeepTogether = true;
             this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(626.1198F, 0F);
@@ -562,7 +562,7 @@
             this.xrLabel70.CanGrow = false;
             this.xrLabel70.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[POD]")});
-            this.xrLabel70.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel70.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel70.ForeColor = System.Drawing.Color.Black;
             this.xrLabel70.KeepTogether = true;
             this.xrLabel70.LocationFloat = new DevExpress.Utils.PointFloat(649.6404F, 0F);
@@ -590,7 +590,7 @@
             this.xrLabel79.CanGrow = false;
             this.xrLabel79.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([Code3] = \'O\', [OilAPI], [Code3] = \'G\', [GBTU], [Code3] = \'W\', 0, null)")});
-            this.xrLabel79.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel79.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel79.ForeColor = System.Drawing.Color.Black;
             this.xrLabel79.KeepTogether = true;
             this.xrLabel79.LocationFloat = new DevExpress.Utils.PointFloat(718.0898F, 0F);
@@ -618,7 +618,7 @@
             this.xrLabel80.CanGrow = false;
             this.xrLabel80.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OilBInv]")});
-            this.xrLabel80.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel80.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel80.ForeColor = System.Drawing.Color.Black;
             this.xrLabel80.KeepTogether = true;
             this.xrLabel80.LocationFloat = new DevExpress.Utils.PointFloat(776.7299F, 0F);
@@ -646,7 +646,7 @@
             this.xrLabel81.CanGrow = false;
             this.xrLabel81.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Volume]")});
-            this.xrLabel81.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel81.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel81.ForeColor = System.Drawing.Color.Black;
             this.xrLabel81.KeepTogether = true;
             this.xrLabel81.LocationFloat = new DevExpress.Utils.PointFloat(839.8796F, 0F);
@@ -674,7 +674,7 @@
             this.xrLabel82.CanGrow = false;
             this.xrLabel82.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OGRID]")});
-            this.xrLabel82.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel82.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel82.ForeColor = System.Drawing.Color.Black;
             this.xrLabel82.KeepTogether = true;
             this.xrLabel82.LocationFloat = new DevExpress.Utils.PointFloat(902.3298F, 0F);
@@ -702,7 +702,7 @@
             this.xrLabel83.CanGrow = false;
             this.xrLabel83.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Code4]")});
-            this.xrLabel83.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel83.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel83.ForeColor = System.Drawing.Color.Black;
             this.xrLabel83.KeepTogether = true;
             this.xrLabel83.LocationFloat = new DevExpress.Utils.PointFloat(974.0997F, 0F);
@@ -730,7 +730,7 @@
             this.xrLabel84.CanGrow = false;
             this.xrLabel84.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([OEInv] = 0, \'\', [OEInv])")});
-            this.xrLabel84.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel84.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel84.ForeColor = System.Drawing.Color.Black;
             this.xrLabel84.KeepTogether = true;
             this.xrLabel84.LocationFloat = new DevExpress.Utils.PointFloat(994.7698F, 0F);
@@ -756,7 +756,7 @@
             this.xrLabel85.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel85.BorderWidth = 1F;
             this.xrLabel85.CanGrow = false;
-            this.xrLabel85.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel85.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel85.ForeColor = System.Drawing.Color.Black;
             this.xrLabel85.KeepTogether = true;
             this.xrLabel85.LocationFloat = new DevExpress.Utils.PointFloat(516.6715F, 0F);
@@ -782,7 +782,7 @@
             this.xrLabel86.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel86.BorderWidth = 1F;
             this.xrLabel86.CanGrow = false;
-            this.xrLabel86.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel86.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel86.ForeColor = System.Drawing.Color.Black;
             this.xrLabel86.KeepTogether = true;
             this.xrLabel86.LocationFloat = new DevExpress.Utils.PointFloat(582.9514F, 0F);
@@ -808,7 +808,7 @@
             this.xrLabel87.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel87.BorderWidth = 1F;
             this.xrLabel87.CanGrow = false;
-            this.xrLabel87.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel87.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel87.ForeColor = System.Drawing.Color.Black;
             this.xrLabel87.KeepTogether = true;
             this.xrLabel87.LocationFloat = new DevExpress.Utils.PointFloat(453.104F, 0F);
@@ -834,7 +834,7 @@
             this.xrLabel88.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel88.BorderWidth = 1F;
             this.xrLabel88.CanGrow = false;
-            this.xrLabel88.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel88.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel88.ForeColor = System.Drawing.Color.Black;
             this.xrLabel88.KeepTogether = true;
             this.xrLabel88.LocationFloat = new DevExpress.Utils.PointFloat(376.1236F, 0F);
@@ -860,7 +860,7 @@
             this.xrLabel89.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel89.BorderWidth = 1F;
             this.xrLabel89.CanGrow = false;
-            this.xrLabel89.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel89.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel89.ForeColor = System.Drawing.Color.Black;
             this.xrLabel89.KeepTogether = true;
             this.xrLabel89.LocationFloat = new DevExpress.Utils.PointFloat(350.6595F, 0F);
@@ -886,7 +886,7 @@
             this.xrLabel90.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel90.BorderWidth = 1F;
             this.xrLabel90.CanGrow = false;
-            this.xrLabel90.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel90.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel90.ForeColor = System.Drawing.Color.Black;
             this.xrLabel90.KeepTogether = true;
             this.xrLabel90.LocationFloat = new DevExpress.Utils.PointFloat(287.1152F, 0F);
@@ -912,7 +912,7 @@
             this.xrLabel91.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel91.BorderWidth = 1F;
             this.xrLabel91.CanGrow = false;
-            this.xrLabel91.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel91.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel91.ForeColor = System.Drawing.Color.Black;
             this.xrLabel91.KeepTogether = true;
             this.xrLabel91.LocationFloat = new DevExpress.Utils.PointFloat(227.8561F, 0F);
@@ -938,7 +938,7 @@
             this.xrLabel92.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel92.BorderWidth = 1F;
             this.xrLabel92.CanGrow = false;
-            this.xrLabel92.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel92.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel92.ForeColor = System.Drawing.Color.Black;
             this.xrLabel92.KeepTogether = true;
             this.xrLabel92.LocationFloat = new DevExpress.Utils.PointFloat(201.1164F, 0F);
@@ -998,7 +998,7 @@
             this.xrLabel94.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel94.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel94.BorderWidth = 1F;
-            this.xrLabel94.Font = new DevExpress.Drawing.DXFont("Arial", 11F);
+            this.xrLabel94.Font = new DevExpress.Drawing.DXFont("Segoe UI", 11F);
             this.xrLabel94.KeepTogether = true;
             this.xrLabel94.LocationFloat = new DevExpress.Utils.PointFloat(352.7601F, 74.94002F);
             this.xrLabel94.Multiline = true;
@@ -1016,7 +1016,7 @@
             this.Textbox29.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox29.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox29.BorderWidth = 1F;
-            this.Textbox29.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox29.KeepTogether = true;
             this.Textbox29.LocationFloat = new DevExpress.Utils.PointFloat(352.76F, 7.17F);
             this.Textbox29.Multiline = true;
@@ -1033,7 +1033,7 @@
             this.Textbox33.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox33.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox33.BorderWidth = 1F;
-            this.Textbox33.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Underline);
+            this.Textbox33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Underline);
             this.Textbox33.KeepTogether = true;
             this.Textbox33.LocationFloat = new DevExpress.Utils.PointFloat(16.1F, 23.14F);
             this.Textbox33.Multiline = true;
@@ -1050,7 +1050,7 @@
             this.Textbox40.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox40.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox40.BorderWidth = 1F;
-            this.Textbox40.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox40.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox40.KeepTogether = true;
             this.Textbox40.LocationFloat = new DevExpress.Utils.PointFloat(966.67F, 23.14F);
             this.Textbox40.Multiline = true;
@@ -1067,7 +1067,7 @@
             this.Textbox30.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox30.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox30.BorderWidth = 1F;
-            this.Textbox30.Font = new DevExpress.Drawing.DXFont("Arial", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox30.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox30.KeepTogether = true;
             this.Textbox30.LocationFloat = new DevExpress.Utils.PointFloat(352.76F, 32.17F);
             this.Textbox30.Multiline = true;
@@ -1084,7 +1084,7 @@
             this.Textbox34.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox34.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox34.BorderWidth = 1F;
-            this.Textbox34.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.Textbox34.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox34.KeepTogether = true;
             this.Textbox34.LocationFloat = new DevExpress.Utils.PointFloat(16.1F, 41.19F);
             this.Textbox34.Multiline = true;
@@ -1101,7 +1101,7 @@
             this.Textbox41.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox41.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox41.BorderWidth = 1F;
-            this.Textbox41.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox41.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox41.KeepTogether = true;
             this.Textbox41.LocationFloat = new DevExpress.Utils.PointFloat(889.58F, 43.97F);
             this.Textbox41.Multiline = true;
@@ -1118,7 +1118,7 @@
             this.Textbox31.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox31.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox31.BorderWidth = 1F;
-            this.Textbox31.Font = new DevExpress.Drawing.DXFont("Arial", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox31.Font = new DevExpress.Drawing.DXFont("Segoe UI", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox31.KeepTogether = true;
             this.Textbox31.LocationFloat = new DevExpress.Utils.PointFloat(352.76F, 50.22F);
             this.Textbox31.Multiline = true;
@@ -1135,7 +1135,7 @@
             this.Textbox35.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox35.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox35.BorderWidth = 1F;
-            this.Textbox35.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Underline);
+            this.Textbox35.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Underline);
             this.Textbox35.KeepTogether = true;
             this.Textbox35.LocationFloat = new DevExpress.Utils.PointFloat(16.1F, 61.19F);
             this.Textbox35.Multiline = true;
@@ -1152,7 +1152,7 @@
             this.Textbox42.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox42.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox42.BorderWidth = 1F;
-            this.Textbox42.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox42.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox42.KeepTogether = true;
             this.Textbox42.LocationFloat = new DevExpress.Utils.PointFloat(876.04F, 64.8F);
             this.Textbox42.Multiline = true;
@@ -1184,7 +1184,7 @@
             this.Textbox36.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox36.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox36.BorderWidth = 1F;
-            this.Textbox36.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.Textbox36.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox36.ForeColor = System.Drawing.Color.Black;
             this.Textbox36.KeepTogether = true;
             this.Textbox36.LocationFloat = new DevExpress.Utils.PointFloat(16.1F, 79.94F);
@@ -1203,7 +1203,7 @@
             this.Textbox43.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox43.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox43.BorderWidth = 1F;
-            this.Textbox43.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox43.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox43.KeepTogether = true;
             this.Textbox43.LocationFloat = new DevExpress.Utils.PointFloat(938.48F, 87.03F);
             this.Textbox43.Multiline = true;
@@ -1224,7 +1224,7 @@
             this.Textbox44.BorderWidth = 1F;
             this.Textbox44.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([Amended] = True, \'X\', \'\')")});
-            this.Textbox44.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox44.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox44.KeepTogether = true;
             this.Textbox44.LocationFloat = new DevExpress.Utils.PointFloat(919.59F, 87.03F);
             this.Textbox44.Multiline = true;
@@ -1240,7 +1240,7 @@
             this.Textbox37.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox37.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox37.BorderWidth = 1F;
-            this.Textbox37.Font = new DevExpress.Drawing.DXFont("Arial", 10F, DevExpress.Drawing.DXFontStyle.Underline);
+            this.Textbox37.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Underline);
             this.Textbox37.KeepTogether = true;
             this.Textbox37.LocationFloat = new DevExpress.Utils.PointFloat(16.1F, 99.94F);
             this.Textbox37.Multiline = true;
@@ -1257,7 +1257,7 @@
             this.Textbox38.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox38.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox38.BorderWidth = 1F;
-            this.Textbox38.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.Textbox38.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox38.ForeColor = System.Drawing.Color.Black;
             this.Textbox38.KeepTogether = true;
             this.Textbox38.LocationFloat = new DevExpress.Utils.PointFloat(16.1F, 117.72F);
@@ -1311,7 +1311,7 @@
             this.xrLabel3.BorderWidth = 1F;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Operator:     \' + [OperatorName]")});
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel3.ForeColor = System.Drawing.Color.Black;
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(6.240062F, 0F);
@@ -1392,7 +1392,7 @@
             this.xrLabel9.BorderWidth = 1F;
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Address:      \' + [Address]")});
-            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel9.ForeColor = System.Drawing.Color.Black;
             this.xrLabel9.KeepTogether = true;
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(6.240062F, 25.00001F);
@@ -1418,7 +1418,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel11.BorderWidth = 1F;
-            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel11.KeepTogether = true;
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(626.12F, 25F);
@@ -1464,7 +1464,7 @@
             this.xrLabel15.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel15.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel15.BorderWidth = 1F;
-            this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel15.ForeColor = System.Drawing.Color.Black;
             this.xrLabel15.KeepTogether = true;
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(227.8537F, 50F);
@@ -1490,7 +1490,7 @@
             this.xrLabel16.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel16.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel16.BorderWidth = 1F;
-            this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel16.ForeColor = System.Drawing.Color.Black;
             this.xrLabel16.KeepTogether = true;
             this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(376.116F, 49.99999F);
@@ -1517,7 +1517,7 @@
             this.xrLabel18.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel18.BorderWidth = 1F;
-            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel18.ForeColor = System.Drawing.Color.Black;
             this.xrLabel18.KeepTogether = true;
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(626.12F, 50F);
@@ -1579,7 +1579,7 @@
             this.xrLabel21.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel21.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel21.BorderWidth = 1F;
-            this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel21.ForeColor = System.Drawing.Color.Black;
             this.xrLabel21.KeepTogether = true;
             this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(201.1168F, 75F);
@@ -1606,7 +1606,7 @@
             this.xrLabel22.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel22.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel22.BorderWidth = 1F;
-            this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel22.ForeColor = System.Drawing.Color.Black;
             this.xrLabel22.KeepTogether = true;
             this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(227.8564F, 75F);
@@ -1632,7 +1632,7 @@
             this.xrLabel23.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel23.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel23.BorderWidth = 1F;
-            this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel23.ForeColor = System.Drawing.Color.Black;
             this.xrLabel23.KeepTogether = true;
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(287.1154F, 75F);
@@ -1658,7 +1658,7 @@
             this.xrLabel24.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel24.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel24.BorderWidth = 1F;
-            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel24.ForeColor = System.Drawing.Color.Black;
             this.xrLabel24.KeepTogether = true;
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(350.6544F, 75F);
@@ -1685,7 +1685,7 @@
             this.xrLabel25.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel25.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel25.BorderWidth = 1F;
-            this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel25.ForeColor = System.Drawing.Color.Black;
             this.xrLabel25.KeepTogether = true;
             this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(376.124F, 75F);
@@ -1712,7 +1712,7 @@
             this.xrLabel26.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel26.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel26.BorderWidth = 1F;
-            this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel26.ForeColor = System.Drawing.Color.Black;
             this.xrLabel26.KeepTogether = true;
             this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(453.1027F, 75F);
@@ -1739,7 +1739,7 @@
             this.xrLabel27.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel27.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel27.BorderWidth = 1F;
-            this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel27.ForeColor = System.Drawing.Color.Black;
             this.xrLabel27.KeepTogether = true;
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(516.6717F, 75F);
@@ -1766,7 +1766,7 @@
             this.xrLabel28.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel28.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel28.BorderWidth = 1F;
-            this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel28.ForeColor = System.Drawing.Color.Black;
             this.xrLabel28.KeepTogether = true;
             this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(582.9506F, 75F);
@@ -1793,7 +1793,7 @@
             this.xrLabel30.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel30.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel30.BorderWidth = 1F;
-            this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel30.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel30.ForeColor = System.Drawing.Color.Black;
             this.xrLabel30.KeepTogether = true;
             this.xrLabel30.LocationFloat = new DevExpress.Utils.PointFloat(626.1201F, 75F);
@@ -1820,7 +1820,7 @@
             this.xrLabel31.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel31.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel31.BorderWidth = 1F;
-            this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel31.ForeColor = System.Drawing.Color.Black;
             this.xrLabel31.KeepTogether = true;
             this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(649.64F, 75F);
@@ -1847,7 +1847,7 @@
             this.xrLabel32.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel32.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel32.BorderWidth = 1F;
-            this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel32.ForeColor = System.Drawing.Color.Black;
             this.xrLabel32.KeepTogether = true;
             this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(718.0901F, 75F);
@@ -1874,7 +1874,7 @@
             this.xrLabel33.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel33.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel33.BorderWidth = 1F;
-            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel33.ForeColor = System.Drawing.Color.Black;
             this.xrLabel33.KeepTogether = true;
             this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(776.73F, 75F);
@@ -1901,7 +1901,7 @@
             this.xrLabel34.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel34.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel34.BorderWidth = 1F;
-            this.xrLabel34.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel34.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel34.ForeColor = System.Drawing.Color.Black;
             this.xrLabel34.KeepTogether = true;
             this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(839.8801F, 75F);
@@ -1928,7 +1928,7 @@
             this.xrLabel35.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel35.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel35.BorderWidth = 1F;
-            this.xrLabel35.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel35.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel35.ForeColor = System.Drawing.Color.Black;
             this.xrLabel35.KeepTogether = true;
             this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(902.3301F, 75F);
@@ -1955,7 +1955,7 @@
             this.xrLabel36.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel36.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel36.BorderWidth = 1F;
-            this.xrLabel36.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel36.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel36.ForeColor = System.Drawing.Color.Black;
             this.xrLabel36.KeepTogether = true;
             this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(974.1001F, 75F);
@@ -1983,7 +1983,7 @@
             this.xrLabel37.Borders = ((DevExpress.XtraPrinting.BorderSide)(((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel37.BorderWidth = 1F;
-            this.xrLabel37.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel37.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel37.ForeColor = System.Drawing.Color.Black;
             this.xrLabel37.KeepTogether = true;
             this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(994.7701F, 75F);
@@ -2048,7 +2048,7 @@
             this.xrLabel1.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel1.BorderWidth = 1F;
             this.xrLabel1.CanGrow = false;
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel1.ForeColor = System.Drawing.Color.Black;
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(6.239866F, 0F);
@@ -2074,7 +2074,7 @@
             this.xrLabel4.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel4.BorderWidth = 1F;
             this.xrLabel4.CanGrow = false;
-            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel4.ForeColor = System.Drawing.Color.Black;
             this.xrLabel4.KeepTogether = true;
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(201.1166F, 0F);
@@ -2100,7 +2100,7 @@
             this.xrLabel133.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel133.BorderWidth = 1F;
             this.xrLabel133.CanGrow = false;
-            this.xrLabel133.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel133.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel133.ForeColor = System.Drawing.Color.Black;
             this.xrLabel133.KeepTogether = true;
             this.xrLabel133.LocationFloat = new DevExpress.Utils.PointFloat(227.8565F, 0F);
@@ -2126,7 +2126,7 @@
             this.xrLabel134.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel134.BorderWidth = 1F;
             this.xrLabel134.CanGrow = false;
-            this.xrLabel134.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel134.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel134.ForeColor = System.Drawing.Color.Black;
             this.xrLabel134.KeepTogether = true;
             this.xrLabel134.LocationFloat = new DevExpress.Utils.PointFloat(287.1153F, 0F);
@@ -2152,7 +2152,7 @@
             this.xrLabel135.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel135.BorderWidth = 1F;
             this.xrLabel135.CanGrow = false;
-            this.xrLabel135.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel135.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel135.ForeColor = System.Drawing.Color.Black;
             this.xrLabel135.KeepTogether = true;
             this.xrLabel135.LocationFloat = new DevExpress.Utils.PointFloat(350.6544F, 0F);
@@ -2178,7 +2178,7 @@
             this.xrLabel136.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel136.BorderWidth = 1F;
             this.xrLabel136.CanGrow = false;
-            this.xrLabel136.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel136.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel136.ForeColor = System.Drawing.Color.Black;
             this.xrLabel136.KeepTogether = true;
             this.xrLabel136.LocationFloat = new DevExpress.Utils.PointFloat(376.116F, 0F);
@@ -2204,7 +2204,7 @@
             this.xrLabel137.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel137.BorderWidth = 1F;
             this.xrLabel137.CanGrow = false;
-            this.xrLabel137.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel137.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel137.ForeColor = System.Drawing.Color.Black;
             this.xrLabel137.KeepTogether = true;
             this.xrLabel137.LocationFloat = new DevExpress.Utils.PointFloat(453.1027F, 0F);
@@ -2230,7 +2230,7 @@
             this.xrLabel138.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel138.BorderWidth = 1F;
             this.xrLabel138.CanGrow = false;
-            this.xrLabel138.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel138.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel138.ForeColor = System.Drawing.Color.Black;
             this.xrLabel138.KeepTogether = true;
             this.xrLabel138.LocationFloat = new DevExpress.Utils.PointFloat(516.6718F, 0F);
@@ -2256,7 +2256,7 @@
             this.xrLabel139.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel139.BorderWidth = 1F;
             this.xrLabel139.CanGrow = false;
-            this.xrLabel139.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel139.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel139.ForeColor = System.Drawing.Color.Black;
             this.xrLabel139.KeepTogether = true;
             this.xrLabel139.LocationFloat = new DevExpress.Utils.PointFloat(582.9506F, 0F);
@@ -2282,7 +2282,7 @@
             this.xrLabel140.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel140.BorderWidth = 1F;
             this.xrLabel140.CanGrow = false;
-            this.xrLabel140.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel140.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel140.ForeColor = System.Drawing.Color.Black;
             this.xrLabel140.KeepTogether = true;
             this.xrLabel140.LocationFloat = new DevExpress.Utils.PointFloat(626.1199F, 0F);
@@ -2308,7 +2308,7 @@
             this.xrLabel141.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel141.BorderWidth = 1F;
             this.xrLabel141.CanGrow = false;
-            this.xrLabel141.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel141.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel141.ForeColor = System.Drawing.Color.Black;
             this.xrLabel141.KeepTogether = true;
             this.xrLabel141.LocationFloat = new DevExpress.Utils.PointFloat(649.6403F, 0F);
@@ -2334,7 +2334,7 @@
             this.xrLabel142.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel142.BorderWidth = 1F;
             this.xrLabel142.CanGrow = false;
-            this.xrLabel142.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel142.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel142.ForeColor = System.Drawing.Color.Black;
             this.xrLabel142.KeepTogether = true;
             this.xrLabel142.LocationFloat = new DevExpress.Utils.PointFloat(718.0901F, 0F);
@@ -2360,7 +2360,7 @@
             this.xrLabel143.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel143.BorderWidth = 1F;
             this.xrLabel143.CanGrow = false;
-            this.xrLabel143.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel143.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel143.ForeColor = System.Drawing.Color.Black;
             this.xrLabel143.KeepTogether = true;
             this.xrLabel143.LocationFloat = new DevExpress.Utils.PointFloat(776.7302F, 0F);
@@ -2386,7 +2386,7 @@
             this.xrLabel144.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel144.BorderWidth = 1F;
             this.xrLabel144.CanGrow = false;
-            this.xrLabel144.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel144.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel144.ForeColor = System.Drawing.Color.Black;
             this.xrLabel144.KeepTogether = true;
             this.xrLabel144.LocationFloat = new DevExpress.Utils.PointFloat(839.8801F, 0F);
@@ -2412,7 +2412,7 @@
             this.xrLabel145.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel145.BorderWidth = 1F;
             this.xrLabel145.CanGrow = false;
-            this.xrLabel145.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel145.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel145.ForeColor = System.Drawing.Color.Black;
             this.xrLabel145.KeepTogether = true;
             this.xrLabel145.LocationFloat = new DevExpress.Utils.PointFloat(902.33F, 0F);
@@ -2438,7 +2438,7 @@
             this.xrLabel146.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel146.BorderWidth = 1F;
             this.xrLabel146.CanGrow = false;
-            this.xrLabel146.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel146.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel146.ForeColor = System.Drawing.Color.Black;
             this.xrLabel146.KeepTogether = true;
             this.xrLabel146.LocationFloat = new DevExpress.Utils.PointFloat(974.1002F, 0F);
@@ -2465,7 +2465,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel147.BorderWidth = 1F;
             this.xrLabel147.CanGrow = false;
-            this.xrLabel147.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel147.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel147.ForeColor = System.Drawing.Color.Black;
             this.xrLabel147.KeepTogether = true;
             this.xrLabel147.LocationFloat = new DevExpress.Utils.PointFloat(994.77F, 0F);
@@ -2648,7 +2648,7 @@
             this.xrLabel2.CanGrow = false;
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PoolName]")});
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel2.ForeColor = System.Drawing.Color.Black;
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(6.240062F, 0F);
@@ -2674,7 +2674,7 @@
             this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel7.BorderWidth = 1F;
             this.xrLabel7.CanGrow = false;
-            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel7.KeepTogether = true;
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(201.1169F, 0F);
@@ -2700,7 +2700,7 @@
             this.xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel8.BorderWidth = 1F;
             this.xrLabel8.CanGrow = false;
-            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel8.KeepTogether = true;
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(227.8565F, 0F);
@@ -2726,7 +2726,7 @@
             this.xrLabel12.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel12.BorderWidth = 1F;
             this.xrLabel12.CanGrow = false;
-            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel12.KeepTogether = true;
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(287.1156F, 0F);
@@ -2752,7 +2752,7 @@
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel13.BorderWidth = 1F;
             this.xrLabel13.CanGrow = false;
-            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel13.KeepTogether = true;
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(350.6545F, 0F);
@@ -2778,7 +2778,7 @@
             this.xrLabel19.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel19.BorderWidth = 1F;
             this.xrLabel19.CanGrow = false;
-            this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel19.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel19.KeepTogether = true;
             this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(376.1241F, 0F);
@@ -2804,7 +2804,7 @@
             this.xrLabel20.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel20.BorderWidth = 1F;
             this.xrLabel20.CanGrow = false;
-            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel20.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel20.KeepTogether = true;
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(453.1028F, 0F);
@@ -2830,7 +2830,7 @@
             this.xrLabel38.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel38.BorderWidth = 1F;
             this.xrLabel38.CanGrow = false;
-            this.xrLabel38.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel38.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel38.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel38.KeepTogether = true;
             this.xrLabel38.LocationFloat = new DevExpress.Utils.PointFloat(516.6718F, 0F);
@@ -2856,7 +2856,7 @@
             this.xrLabel39.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel39.BorderWidth = 1F;
             this.xrLabel39.CanGrow = false;
-            this.xrLabel39.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel39.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel39.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel39.KeepTogether = true;
             this.xrLabel39.LocationFloat = new DevExpress.Utils.PointFloat(582.9507F, 0F);
@@ -2882,7 +2882,7 @@
             this.xrLabel41.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel41.BorderWidth = 1F;
             this.xrLabel41.CanGrow = false;
-            this.xrLabel41.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel41.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel41.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel41.KeepTogether = true;
             this.xrLabel41.LocationFloat = new DevExpress.Utils.PointFloat(626.1201F, 0F);
@@ -2908,7 +2908,7 @@
             this.xrLabel42.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel42.BorderWidth = 1F;
             this.xrLabel42.CanGrow = false;
-            this.xrLabel42.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel42.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel42.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel42.KeepTogether = true;
             this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(649.6401F, 0F);
@@ -2934,7 +2934,7 @@
             this.xrLabel43.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel43.BorderWidth = 1F;
             this.xrLabel43.CanGrow = false;
-            this.xrLabel43.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel43.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel43.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel43.KeepTogether = true;
             this.xrLabel43.LocationFloat = new DevExpress.Utils.PointFloat(718.0901F, 0F);
@@ -2960,7 +2960,7 @@
             this.xrLabel44.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel44.BorderWidth = 1F;
             this.xrLabel44.CanGrow = false;
-            this.xrLabel44.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel44.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel44.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel44.KeepTogether = true;
             this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(776.7302F, 0F);
@@ -2986,7 +2986,7 @@
             this.xrLabel45.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel45.BorderWidth = 1F;
             this.xrLabel45.CanGrow = false;
-            this.xrLabel45.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel45.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel45.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel45.KeepTogether = true;
             this.xrLabel45.LocationFloat = new DevExpress.Utils.PointFloat(839.8801F, 0F);
@@ -3012,7 +3012,7 @@
             this.xrLabel46.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel46.BorderWidth = 1F;
             this.xrLabel46.CanGrow = false;
-            this.xrLabel46.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel46.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel46.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel46.KeepTogether = true;
             this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(902.3302F, 0F);
@@ -3038,7 +3038,7 @@
             this.xrLabel47.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel47.BorderWidth = 1F;
             this.xrLabel47.CanGrow = false;
-            this.xrLabel47.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel47.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel47.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel47.KeepTogether = true;
             this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(974.1002F, 0F);
@@ -3064,7 +3064,7 @@
             this.xrLabel48.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrLabel48.BorderWidth = 1F;
             this.xrLabel48.CanGrow = false;
-            this.xrLabel48.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel48.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel48.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel48.KeepTogether = true;
             this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(994.7702F, 0F);
@@ -3113,7 +3113,7 @@
             this.xrLabel50.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel50.BorderWidth = 1F;
             this.xrLabel50.CanGrow = false;
-            this.xrLabel50.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel50.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel50.ForeColor = System.Drawing.Color.Black;
             this.xrLabel50.KeepTogether = true;
             this.xrLabel50.LocationFloat = new DevExpress.Utils.PointFloat(6.239891F, 0F);
@@ -3139,7 +3139,7 @@
             this.xrLabel51.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel51.BorderWidth = 1F;
             this.xrLabel51.CanGrow = false;
-            this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel51.ForeColor = System.Drawing.Color.Black;
             this.xrLabel51.KeepTogether = true;
             this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(201.1166F, 0F);
@@ -3165,7 +3165,7 @@
             this.xrLabel52.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel52.BorderWidth = 1F;
             this.xrLabel52.CanGrow = false;
-            this.xrLabel52.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel52.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel52.ForeColor = System.Drawing.Color.Black;
             this.xrLabel52.KeepTogether = true;
             this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(227.8565F, 0F);
@@ -3191,7 +3191,7 @@
             this.xrLabel53.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel53.BorderWidth = 1F;
             this.xrLabel53.CanGrow = false;
-            this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel53.ForeColor = System.Drawing.Color.Black;
             this.xrLabel53.KeepTogether = true;
             this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(287.1152F, 0F);
@@ -3217,7 +3217,7 @@
             this.xrLabel54.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel54.BorderWidth = 1F;
             this.xrLabel54.CanGrow = false;
-            this.xrLabel54.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel54.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel54.ForeColor = System.Drawing.Color.Black;
             this.xrLabel54.KeepTogether = true;
             this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(350.6544F, 0F);
@@ -3243,7 +3243,7 @@
             this.xrLabel55.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel55.BorderWidth = 1F;
             this.xrLabel55.CanGrow = false;
-            this.xrLabel55.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel55.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel55.ForeColor = System.Drawing.Color.Black;
             this.xrLabel55.KeepTogether = true;
             this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(376.1159F, 0F);
@@ -3269,7 +3269,7 @@
             this.xrLabel56.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel56.BorderWidth = 1F;
             this.xrLabel56.CanGrow = false;
-            this.xrLabel56.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel56.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel56.ForeColor = System.Drawing.Color.Black;
             this.xrLabel56.KeepTogether = true;
             this.xrLabel56.LocationFloat = new DevExpress.Utils.PointFloat(453.1026F, 0F);
@@ -3295,7 +3295,7 @@
             this.xrLabel57.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel57.BorderWidth = 1F;
             this.xrLabel57.CanGrow = false;
-            this.xrLabel57.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel57.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel57.ForeColor = System.Drawing.Color.Black;
             this.xrLabel57.KeepTogether = true;
             this.xrLabel57.LocationFloat = new DevExpress.Utils.PointFloat(516.6718F, 0F);
@@ -3321,7 +3321,7 @@
             this.xrLabel58.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel58.BorderWidth = 1F;
             this.xrLabel58.CanGrow = false;
-            this.xrLabel58.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel58.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel58.ForeColor = System.Drawing.Color.Black;
             this.xrLabel58.KeepTogether = true;
             this.xrLabel58.LocationFloat = new DevExpress.Utils.PointFloat(582.9506F, 0F);
@@ -3347,7 +3347,7 @@
             this.xrLabel60.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel60.BorderWidth = 1F;
             this.xrLabel60.CanGrow = false;
-            this.xrLabel60.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel60.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel60.ForeColor = System.Drawing.Color.Black;
             this.xrLabel60.KeepTogether = true;
             this.xrLabel60.LocationFloat = new DevExpress.Utils.PointFloat(626.1199F, 0F);
@@ -3373,7 +3373,7 @@
             this.xrLabel61.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel61.BorderWidth = 1F;
             this.xrLabel61.CanGrow = false;
-            this.xrLabel61.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel61.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel61.ForeColor = System.Drawing.Color.Black;
             this.xrLabel61.KeepTogether = true;
             this.xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(649.6404F, 0F);
@@ -3399,7 +3399,7 @@
             this.xrLabel62.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel62.BorderWidth = 1F;
             this.xrLabel62.CanGrow = false;
-            this.xrLabel62.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel62.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel62.ForeColor = System.Drawing.Color.Black;
             this.xrLabel62.KeepTogether = true;
             this.xrLabel62.LocationFloat = new DevExpress.Utils.PointFloat(718.0901F, 0F);
@@ -3425,7 +3425,7 @@
             this.xrLabel63.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel63.BorderWidth = 1F;
             this.xrLabel63.CanGrow = false;
-            this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel63.ForeColor = System.Drawing.Color.Black;
             this.xrLabel63.KeepTogether = true;
             this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(776.7302F, 0F);
@@ -3451,7 +3451,7 @@
             this.xrLabel64.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel64.BorderWidth = 1F;
             this.xrLabel64.CanGrow = false;
-            this.xrLabel64.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel64.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel64.ForeColor = System.Drawing.Color.Black;
             this.xrLabel64.KeepTogether = true;
             this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(839.8801F, 0F);
@@ -3477,7 +3477,7 @@
             this.xrLabel65.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel65.BorderWidth = 1F;
             this.xrLabel65.CanGrow = false;
-            this.xrLabel65.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel65.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel65.ForeColor = System.Drawing.Color.Black;
             this.xrLabel65.KeepTogether = true;
             this.xrLabel65.LocationFloat = new DevExpress.Utils.PointFloat(902.33F, 0F);
@@ -3503,7 +3503,7 @@
             this.xrLabel66.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel66.BorderWidth = 1F;
             this.xrLabel66.CanGrow = false;
-            this.xrLabel66.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel66.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel66.ForeColor = System.Drawing.Color.Black;
             this.xrLabel66.KeepTogether = true;
             this.xrLabel66.LocationFloat = new DevExpress.Utils.PointFloat(974.1002F, 0F);
@@ -3530,7 +3530,7 @@
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.xrLabel67.BorderWidth = 1F;
             this.xrLabel67.CanGrow = false;
-            this.xrLabel67.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel67.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel67.ForeColor = System.Drawing.Color.Black;
             this.xrLabel67.KeepTogether = true;
             this.xrLabel67.LocationFloat = new DevExpress.Utils.PointFloat(994.7701F, 0F);
@@ -3694,7 +3694,7 @@
             this.xrLabel95.CanGrow = false;
             this.xrLabel95.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'   \' + [PropertyNumName]")});
-            this.xrLabel95.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel95.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel95.ForeColor = System.Drawing.Color.Black;
             this.xrLabel95.KeepTogether = true;
             this.xrLabel95.LocationFloat = new DevExpress.Utils.PointFloat(6.240082F, 0F);
@@ -3722,7 +3722,7 @@
             this.xrLabel96.CanGrow = false;
             this.xrLabel96.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Code1]")});
-            this.xrLabel96.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel96.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel96.ForeColor = System.Drawing.Color.Black;
             this.xrLabel96.KeepTogether = true;
             this.xrLabel96.LocationFloat = new DevExpress.Utils.PointFloat(201.1164F, 15.91665F);
@@ -3750,7 +3750,7 @@
             this.xrLabel97.CanGrow = false;
             this.xrLabel97.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InjVol]")});
-            this.xrLabel97.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel97.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel97.ForeColor = System.Drawing.Color.Black;
             this.xrLabel97.KeepTogether = true;
             this.xrLabel97.LocationFloat = new DevExpress.Utils.PointFloat(227.8561F, 15.91665F);
@@ -3778,7 +3778,7 @@
             this.xrLabel98.CanGrow = false;
             this.xrLabel98.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InjPress]")});
-            this.xrLabel98.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel98.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel98.ForeColor = System.Drawing.Color.Black;
             this.xrLabel98.KeepTogether = true;
             this.xrLabel98.LocationFloat = new DevExpress.Utils.PointFloat(287.1152F, 15.91665F);
@@ -3806,7 +3806,7 @@
             this.xrLabel99.CanGrow = false;
             this.xrLabel99.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Code2]")});
-            this.xrLabel99.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel99.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel99.ForeColor = System.Drawing.Color.Black;
             this.xrLabel99.KeepTogether = true;
             this.xrLabel99.LocationFloat = new DevExpress.Utils.PointFloat(350.6595F, 15.91665F);
@@ -3834,7 +3834,7 @@
             this.xrLabel100.CanGrow = false;
             this.xrLabel100.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OPROD]")});
-            this.xrLabel100.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel100.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel100.ForeColor = System.Drawing.Color.Black;
             this.xrLabel100.KeepTogether = true;
             this.xrLabel100.LocationFloat = new DevExpress.Utils.PointFloat(376.1236F, 15.91665F);
@@ -3862,7 +3862,7 @@
             this.xrLabel101.CanGrow = false;
             this.xrLabel101.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[WPROD]")});
-            this.xrLabel101.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel101.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel101.ForeColor = System.Drawing.Color.Black;
             this.xrLabel101.KeepTogether = true;
             this.xrLabel101.LocationFloat = new DevExpress.Utils.PointFloat(453.104F, 15.91665F);
@@ -3890,7 +3890,7 @@
             this.xrLabel102.CanGrow = false;
             this.xrLabel102.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DaysProd]")});
-            this.xrLabel102.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel102.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel102.ForeColor = System.Drawing.Color.Black;
             this.xrLabel102.KeepTogether = true;
             this.xrLabel102.LocationFloat = new DevExpress.Utils.PointFloat(582.9514F, 15.91665F);
@@ -3918,7 +3918,7 @@
             this.xrLabel103.CanGrow = false;
             this.xrLabel103.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[GPROD]")});
-            this.xrLabel103.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel103.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel103.ForeColor = System.Drawing.Color.Black;
             this.xrLabel103.KeepTogether = true;
             this.xrLabel103.LocationFloat = new DevExpress.Utils.PointFloat(516.6715F, 15.91665F);
@@ -3946,7 +3946,7 @@
             this.xrLabel104.CanGrow = false;
             this.xrLabel104.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([OEInv] = 0, \'\', [OEInv])")});
-            this.xrLabel104.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel104.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel104.ForeColor = System.Drawing.Color.Black;
             this.xrLabel104.KeepTogether = true;
             this.xrLabel104.LocationFloat = new DevExpress.Utils.PointFloat(994.7698F, 15.91665F);
@@ -3974,7 +3974,7 @@
             this.xrLabel105.CanGrow = false;
             this.xrLabel105.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Code4]")});
-            this.xrLabel105.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel105.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel105.ForeColor = System.Drawing.Color.Black;
             this.xrLabel105.KeepTogether = true;
             this.xrLabel105.LocationFloat = new DevExpress.Utils.PointFloat(974.0997F, 15.91665F);
@@ -4002,7 +4002,7 @@
             this.xrLabel106.CanGrow = false;
             this.xrLabel106.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OGRID]")});
-            this.xrLabel106.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel106.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel106.ForeColor = System.Drawing.Color.Black;
             this.xrLabel106.KeepTogether = true;
             this.xrLabel106.LocationFloat = new DevExpress.Utils.PointFloat(902.3298F, 15.91665F);
@@ -4030,7 +4030,7 @@
             this.xrLabel107.CanGrow = false;
             this.xrLabel107.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Volume]")});
-            this.xrLabel107.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel107.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel107.ForeColor = System.Drawing.Color.Black;
             this.xrLabel107.KeepTogether = true;
             this.xrLabel107.LocationFloat = new DevExpress.Utils.PointFloat(839.8796F, 15.91665F);
@@ -4060,7 +4060,7 @@
             this.xrLabel108.CanGrow = false;
             this.xrLabel108.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OilBInv]")});
-            this.xrLabel108.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel108.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel108.ForeColor = System.Drawing.Color.Black;
             this.xrLabel108.KeepTogether = true;
             this.xrLabel108.LocationFloat = new DevExpress.Utils.PointFloat(776.7299F, 15.91665F);
@@ -4088,7 +4088,7 @@
             this.xrLabel109.CanGrow = false;
             this.xrLabel109.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([Code3] = \'O\', [OilAPI], [Code3] = \'G\', [GBTU], [Code3] = \'W\', 0, null)")});
-            this.xrLabel109.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel109.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel109.ForeColor = System.Drawing.Color.Black;
             this.xrLabel109.KeepTogether = true;
             this.xrLabel109.LocationFloat = new DevExpress.Utils.PointFloat(718.0898F, 15.91665F);
@@ -4116,7 +4116,7 @@
             this.xrLabel110.CanGrow = false;
             this.xrLabel110.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[POD]")});
-            this.xrLabel110.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel110.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel110.ForeColor = System.Drawing.Color.Black;
             this.xrLabel110.KeepTogether = true;
             this.xrLabel110.LocationFloat = new DevExpress.Utils.PointFloat(649.6404F, 15.91665F);
@@ -4144,7 +4144,7 @@
             this.xrLabel111.CanGrow = false;
             this.xrLabel111.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Code3]")});
-            this.xrLabel111.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel111.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel111.ForeColor = System.Drawing.Color.Black;
             this.xrLabel111.KeepTogether = true;
             this.xrLabel111.LocationFloat = new DevExpress.Utils.PointFloat(626.1198F, 15.91665F);
@@ -4170,7 +4170,7 @@
             this.xrLabel112.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrLabel112.BorderWidth = 1F;
             this.xrLabel112.CanGrow = false;
-            this.xrLabel112.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel112.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel112.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel112.KeepTogether = true;
             this.xrLabel112.LocationFloat = new DevExpress.Utils.PointFloat(994.7701F, 0F);
@@ -4196,7 +4196,7 @@
             this.xrLabel113.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel113.BorderWidth = 1F;
             this.xrLabel113.CanGrow = false;
-            this.xrLabel113.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel113.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel113.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel113.KeepTogether = true;
             this.xrLabel113.LocationFloat = new DevExpress.Utils.PointFloat(974.1002F, 0F);
@@ -4222,7 +4222,7 @@
             this.xrLabel114.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel114.BorderWidth = 1F;
             this.xrLabel114.CanGrow = false;
-            this.xrLabel114.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel114.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel114.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel114.KeepTogether = true;
             this.xrLabel114.LocationFloat = new DevExpress.Utils.PointFloat(902.3303F, 0F);
@@ -4248,7 +4248,7 @@
             this.xrLabel115.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel115.BorderWidth = 1F;
             this.xrLabel115.CanGrow = false;
-            this.xrLabel115.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel115.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel115.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel115.KeepTogether = true;
             this.xrLabel115.LocationFloat = new DevExpress.Utils.PointFloat(839.8801F, 0F);
@@ -4274,7 +4274,7 @@
             this.xrLabel116.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel116.BorderWidth = 1F;
             this.xrLabel116.CanGrow = false;
-            this.xrLabel116.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel116.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel116.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel116.KeepTogether = true;
             this.xrLabel116.LocationFloat = new DevExpress.Utils.PointFloat(776.7302F, 0F);
@@ -4300,7 +4300,7 @@
             this.xrLabel117.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel117.BorderWidth = 1F;
             this.xrLabel117.CanGrow = false;
-            this.xrLabel117.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel117.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel117.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel117.KeepTogether = true;
             this.xrLabel117.LocationFloat = new DevExpress.Utils.PointFloat(718.0901F, 0F);
@@ -4326,7 +4326,7 @@
             this.xrLabel118.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel118.BorderWidth = 1F;
             this.xrLabel118.CanGrow = false;
-            this.xrLabel118.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel118.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel118.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel118.KeepTogether = true;
             this.xrLabel118.LocationFloat = new DevExpress.Utils.PointFloat(649.6404F, 0F);
@@ -4352,7 +4352,7 @@
             this.xrLabel119.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel119.BorderWidth = 1F;
             this.xrLabel119.CanGrow = false;
-            this.xrLabel119.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel119.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel119.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel119.KeepTogether = true;
             this.xrLabel119.LocationFloat = new DevExpress.Utils.PointFloat(626.1201F, 0F);
@@ -4378,7 +4378,7 @@
             this.xrLabel120.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel120.BorderWidth = 1F;
             this.xrLabel120.CanGrow = false;
-            this.xrLabel120.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel120.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel120.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel120.KeepTogether = true;
             this.xrLabel120.LocationFloat = new DevExpress.Utils.PointFloat(582.9506F, 0F);
@@ -4404,7 +4404,7 @@
             this.xrLabel121.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel121.BorderWidth = 1F;
             this.xrLabel121.CanGrow = false;
-            this.xrLabel121.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel121.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel121.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel121.KeepTogether = true;
             this.xrLabel121.LocationFloat = new DevExpress.Utils.PointFloat(516.6718F, 0F);
@@ -4430,7 +4430,7 @@
             this.xrLabel122.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel122.BorderWidth = 1F;
             this.xrLabel122.CanGrow = false;
-            this.xrLabel122.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel122.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel122.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel122.KeepTogether = true;
             this.xrLabel122.LocationFloat = new DevExpress.Utils.PointFloat(453.1029F, 0F);
@@ -4456,7 +4456,7 @@
             this.xrLabel123.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel123.BorderWidth = 1F;
             this.xrLabel123.CanGrow = false;
-            this.xrLabel123.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel123.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel123.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel123.KeepTogether = true;
             this.xrLabel123.LocationFloat = new DevExpress.Utils.PointFloat(376.1242F, 0F);
@@ -4482,7 +4482,7 @@
             this.xrLabel124.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel124.BorderWidth = 1F;
             this.xrLabel124.CanGrow = false;
-            this.xrLabel124.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel124.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel124.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel124.KeepTogether = true;
             this.xrLabel124.LocationFloat = new DevExpress.Utils.PointFloat(350.6545F, 0F);
@@ -4508,7 +4508,7 @@
             this.xrLabel125.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel125.BorderWidth = 1F;
             this.xrLabel125.CanGrow = false;
-            this.xrLabel125.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel125.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel125.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel125.KeepTogether = true;
             this.xrLabel125.LocationFloat = new DevExpress.Utils.PointFloat(287.1156F, 0F);
@@ -4534,7 +4534,7 @@
             this.xrLabel126.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel126.BorderWidth = 1F;
             this.xrLabel126.CanGrow = false;
-            this.xrLabel126.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel126.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel126.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel126.KeepTogether = true;
             this.xrLabel126.LocationFloat = new DevExpress.Utils.PointFloat(227.8566F, 0F);
@@ -4560,7 +4560,7 @@
             this.xrLabel127.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel127.BorderWidth = 1F;
             this.xrLabel127.CanGrow = false;
-            this.xrLabel127.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel127.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel127.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.xrLabel127.KeepTogether = true;
             this.xrLabel127.LocationFloat = new DevExpress.Utils.PointFloat(201.117F, 0F);
@@ -4588,7 +4588,7 @@
             this.xrLabel128.CanGrow = false;
             this.xrLabel128.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'      \' + [WellAPIandName]")});
-            this.xrLabel128.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel128.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel128.ForeColor = System.Drawing.Color.Black;
             this.xrLabel128.KeepTogether = true;
             this.xrLabel128.LocationFloat = new DevExpress.Utils.PointFloat(6.239764F, 15.91665F);
@@ -4639,7 +4639,7 @@
             this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel10.BorderWidth = 1F;
             this.xrLabel10.CanGrow = false;
-            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel10.ForeColor = System.Drawing.Color.Black;
             this.xrLabel10.KeepTogether = true;
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(201.1163F, 0F);
@@ -4665,7 +4665,7 @@
             this.xrLabel17.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel17.BorderWidth = 1F;
             this.xrLabel17.CanGrow = false;
-            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel17.ForeColor = System.Drawing.Color.Black;
             this.xrLabel17.KeepTogether = true;
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(227.856F, 0F);
@@ -4691,7 +4691,7 @@
             this.xrLabel29.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel29.BorderWidth = 1F;
             this.xrLabel29.CanGrow = false;
-            this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel29.ForeColor = System.Drawing.Color.Black;
             this.xrLabel29.KeepTogether = true;
             this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(287.1153F, 0F);
@@ -4717,7 +4717,7 @@
             this.xrLabel40.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel40.BorderWidth = 1F;
             this.xrLabel40.CanGrow = false;
-            this.xrLabel40.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel40.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel40.ForeColor = System.Drawing.Color.Black;
             this.xrLabel40.KeepTogether = true;
             this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(350.6595F, 0F);
@@ -4743,7 +4743,7 @@
             this.xrLabel49.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel49.BorderWidth = 1F;
             this.xrLabel49.CanGrow = false;
-            this.xrLabel49.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel49.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel49.ForeColor = System.Drawing.Color.Black;
             this.xrLabel49.KeepTogether = true;
             this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(376.1235F, 0F);
@@ -4769,7 +4769,7 @@
             this.xrLabel68.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel68.BorderWidth = 1F;
             this.xrLabel68.CanGrow = false;
-            this.xrLabel68.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel68.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel68.ForeColor = System.Drawing.Color.Black;
             this.xrLabel68.KeepTogether = true;
             this.xrLabel68.LocationFloat = new DevExpress.Utils.PointFloat(453.104F, 0F);
@@ -4795,7 +4795,7 @@
             this.xrLabel69.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel69.BorderWidth = 1F;
             this.xrLabel69.CanGrow = false;
-            this.xrLabel69.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel69.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel69.ForeColor = System.Drawing.Color.Black;
             this.xrLabel69.KeepTogether = true;
             this.xrLabel69.LocationFloat = new DevExpress.Utils.PointFloat(582.9514F, 0F);
@@ -4821,7 +4821,7 @@
             this.xrLabel71.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel71.BorderWidth = 1F;
             this.xrLabel71.CanGrow = false;
-            this.xrLabel71.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel71.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel71.ForeColor = System.Drawing.Color.Black;
             this.xrLabel71.KeepTogether = true;
             this.xrLabel71.LocationFloat = new DevExpress.Utils.PointFloat(516.6715F, 0F);
@@ -4847,7 +4847,7 @@
             this.xrLabel72.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Right)));
             this.xrLabel72.BorderWidth = 1F;
             this.xrLabel72.CanGrow = false;
-            this.xrLabel72.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel72.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel72.ForeColor = System.Drawing.Color.Black;
             this.xrLabel72.KeepTogether = true;
             this.xrLabel72.LocationFloat = new DevExpress.Utils.PointFloat(994.7698F, 0F);
@@ -4873,7 +4873,7 @@
             this.xrLabel73.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel73.BorderWidth = 1F;
             this.xrLabel73.CanGrow = false;
-            this.xrLabel73.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel73.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel73.ForeColor = System.Drawing.Color.Black;
             this.xrLabel73.KeepTogether = true;
             this.xrLabel73.LocationFloat = new DevExpress.Utils.PointFloat(974.0997F, 0F);
@@ -4899,7 +4899,7 @@
             this.xrLabel74.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel74.BorderWidth = 1F;
             this.xrLabel74.CanGrow = false;
-            this.xrLabel74.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel74.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel74.ForeColor = System.Drawing.Color.Black;
             this.xrLabel74.KeepTogether = true;
             this.xrLabel74.LocationFloat = new DevExpress.Utils.PointFloat(902.3297F, 0F);
@@ -4925,7 +4925,7 @@
             this.xrLabel75.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel75.BorderWidth = 1F;
             this.xrLabel75.CanGrow = false;
-            this.xrLabel75.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel75.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel75.ForeColor = System.Drawing.Color.Black;
             this.xrLabel75.KeepTogether = true;
             this.xrLabel75.LocationFloat = new DevExpress.Utils.PointFloat(839.8796F, 0F);
@@ -4951,7 +4951,7 @@
             this.xrLabel76.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel76.BorderWidth = 1F;
             this.xrLabel76.CanGrow = false;
-            this.xrLabel76.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel76.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel76.ForeColor = System.Drawing.Color.Black;
             this.xrLabel76.KeepTogether = true;
             this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(776.7298F, 0F);
@@ -4977,7 +4977,7 @@
             this.xrLabel77.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel77.BorderWidth = 1F;
             this.xrLabel77.CanGrow = false;
-            this.xrLabel77.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel77.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel77.ForeColor = System.Drawing.Color.Black;
             this.xrLabel77.KeepTogether = true;
             this.xrLabel77.LocationFloat = new DevExpress.Utils.PointFloat(718.0897F, 0F);
@@ -5003,7 +5003,7 @@
             this.xrLabel78.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel78.BorderWidth = 1F;
             this.xrLabel78.CanGrow = false;
-            this.xrLabel78.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel78.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel78.ForeColor = System.Drawing.Color.Black;
             this.xrLabel78.KeepTogether = true;
             this.xrLabel78.LocationFloat = new DevExpress.Utils.PointFloat(649.6403F, 0F);
@@ -5029,7 +5029,7 @@
             this.xrLabel129.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel129.BorderWidth = 1F;
             this.xrLabel129.CanGrow = false;
-            this.xrLabel129.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel129.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel129.ForeColor = System.Drawing.Color.Black;
             this.xrLabel129.KeepTogether = true;
             this.xrLabel129.LocationFloat = new DevExpress.Utils.PointFloat(626.1198F, 0F);
@@ -5055,7 +5055,7 @@
             this.xrLabel130.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel130.BorderWidth = 1F;
             this.xrLabel130.CanGrow = false;
-            this.xrLabel130.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.xrLabel130.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel130.ForeColor = System.Drawing.Color.Black;
             this.xrLabel130.KeepTogether = true;
             this.xrLabel130.LocationFloat = new DevExpress.Utils.PointFloat(6.239765F, 0F);

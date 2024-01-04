@@ -876,7 +876,7 @@
             this.Textbox2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox2.SizeF = new System.Drawing.SizeF(95.57121F, 18.75F);
             this.Textbox2.StylePriority.UsePadding = false;
-            this.Textbox2.Text = "Property Code";
+            this.Textbox2.Text = "Property/Well";
             this.Textbox2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox14
@@ -1070,7 +1070,7 @@
             this.Textbox19.SizeF = new System.Drawing.SizeF(90.01007F, 18.75001F);
             this.Textbox19.StylePriority.UsePadding = false;
             this.Textbox19.StylePriority.UseTextAlignment = false;
-            this.Textbox19.Text = "Property";
+            this.Textbox19.Text = "Property/Well";
             this.Textbox19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox21
@@ -1088,7 +1088,7 @@
             this.Textbox21.SizeF = new System.Drawing.SizeF(250.968F, 18.75001F);
             this.Textbox21.StylePriority.UsePadding = false;
             this.Textbox21.StylePriority.UseTextAlignment = false;
-            this.Textbox21.Text = "Property Description";
+            this.Textbox21.Text = "Property/Well Description";
             this.Textbox21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // SubBand1

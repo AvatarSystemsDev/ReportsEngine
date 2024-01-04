@@ -198,6 +198,8 @@
             this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
             this.Rectangle3 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrDeckCodesSelected = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel77 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel69 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrOwnersSelected = new DevExpress.XtraReports.UI.XRLabel();
@@ -283,8 +285,6 @@
             this.Sort = new DevExpress.XtraReports.UI.CalculatedField();
             this.pdteDateToUse = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrDeckCodesSelected = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel77 = new DevExpress.XtraReports.UI.XRLabel();
             this.pstrEndingDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
@@ -1711,6 +1711,33 @@
             this.Rectangle3.Name = "Rectangle3";
             this.Rectangle3.SizeF = new System.Drawing.SizeF(1318.807F, 33.82576F);
             // 
+            // xrDeckCodesSelected
+            // 
+            this.xrDeckCodesSelected.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pstrBeginningDeckCode <= \'\'  And ?pstrEndingDeckCode == \'ZZZZZZ\', \'Selected " +
+                    "Properties\', ?pstrBeginningDeckCode + \' to \' + ?pstrEndingDeckCode )")});
+            this.xrDeckCodesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrDeckCodesSelected.LocationFloat = new DevExpress.Utils.PointFloat(901.7731F, 3.814697E-05F);
+            this.xrDeckCodesSelected.Multiline = true;
+            this.xrDeckCodesSelected.Name = "xrDeckCodesSelected";
+            this.xrDeckCodesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrDeckCodesSelected.SizeF = new System.Drawing.SizeF(248.4206F, 16.32817F);
+            this.xrDeckCodesSelected.StylePriority.UseFont = false;
+            this.xrDeckCodesSelected.StylePriority.UseTextAlignment = false;
+            this.xrDeckCodesSelected.Text = "xrLabel7";
+            this.xrDeckCodesSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel77
+            // 
+            this.xrLabel77.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel77.LocationFloat = new DevExpress.Utils.PointFloat(812.0004F, 6.103516E-05F);
+            this.xrLabel77.Multiline = true;
+            this.xrLabel77.Name = "xrLabel77";
+            this.xrLabel77.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel77.SizeF = new System.Drawing.SizeF(89.77283F, 16.32814F);
+            this.xrLabel77.StylePriority.UseFont = false;
+            this.xrLabel77.Text = "For Deck Codes:";
+            // 
             // xrLabel17
             // 
             this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -2008,7 +2035,7 @@
             this.xrLabel37.SizeF = new System.Drawing.SizeF(276.4583F, 37.84302F);
             this.xrLabel37.StylePriority.UsePadding = false;
             this.xrLabel37.StylePriority.UseTextAlignment = false;
-            this.xrLabel37.Text = "Owner\r\nProperty";
+            this.xrLabel37.Text = "Owner\r\nProperty/Well";
             this.xrLabel37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel38
@@ -2363,7 +2390,7 @@
             this.Textbox1.SizeF = new System.Drawing.SizeF(179.7917F, 37.84304F);
             this.Textbox1.StylePriority.UsePadding = false;
             this.Textbox1.StylePriority.UseTextAlignment = false;
-            this.Textbox1.Text = "Owner\r\nProperty";
+            this.Textbox1.Text = "Owner\r\nProperty/Well";
             this.Textbox1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox22
@@ -3098,33 +3125,6 @@
             // 
             this.pstrBeginningDeckCode.Description = "Beginning Deck Code";
             this.pstrBeginningDeckCode.Name = "pstrBeginningDeckCode";
-            // 
-            // xrDeckCodesSelected
-            // 
-            this.xrDeckCodesSelected.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pstrBeginningDeckCode <= \'\'  And ?pstrEndingDeckCode == \'ZZZZZZ\', \'Selected " +
-                    "Properties\', ?pstrBeginningDeckCode + \' to \' + ?pstrEndingDeckCode )")});
-            this.xrDeckCodesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrDeckCodesSelected.LocationFloat = new DevExpress.Utils.PointFloat(901.7731F, 3.814697E-05F);
-            this.xrDeckCodesSelected.Multiline = true;
-            this.xrDeckCodesSelected.Name = "xrDeckCodesSelected";
-            this.xrDeckCodesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrDeckCodesSelected.SizeF = new System.Drawing.SizeF(248.4206F, 16.32817F);
-            this.xrDeckCodesSelected.StylePriority.UseFont = false;
-            this.xrDeckCodesSelected.StylePriority.UseTextAlignment = false;
-            this.xrDeckCodesSelected.Text = "xrLabel7";
-            this.xrDeckCodesSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel77
-            // 
-            this.xrLabel77.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel77.LocationFloat = new DevExpress.Utils.PointFloat(812.0004F, 6.103516E-05F);
-            this.xrLabel77.Multiline = true;
-            this.xrLabel77.Name = "xrLabel77";
-            this.xrLabel77.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel77.SizeF = new System.Drawing.SizeF(89.77283F, 16.32814F);
-            this.xrLabel77.StylePriority.UseFont = false;
-            this.xrLabel77.Text = "For Deck Codes:";
             // 
             // pstrEndingDeckCode
             // 

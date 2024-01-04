@@ -451,7 +451,7 @@
             this.xrRichText2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Active" +
                     ": </b>\' + [IsActive] + \'</span>\'")});
-            this.xrRichText2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
+            this.xrRichText2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText2.KeepTogether = true;
             this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(635.2501F, 0F);
             this.xrRichText2.Name = "xrRichText2";
@@ -1179,7 +1179,7 @@
             this.Textbox24.SizeF = new System.Drawing.SizeF(96.25004F, 37.44751F);
             this.Textbox24.StylePriority.UseFont = false;
             this.Textbox24.StylePriority.UsePadding = false;
-            this.Textbox24.Text = "Property";
+            this.Textbox24.Text = "Unit/Well";
             this.Textbox24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox25
@@ -1198,7 +1198,7 @@
             this.Textbox25.SizeF = new System.Drawing.SizeF(178.0625F, 37.44751F);
             this.Textbox25.StylePriority.UseFont = false;
             this.Textbox25.StylePriority.UsePadding = false;
-            this.Textbox25.Text = "Property Name";
+            this.Textbox25.Text = "Unit/Well Description";
             this.Textbox25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // SubBand1

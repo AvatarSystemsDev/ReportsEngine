@@ -52,7 +52,7 @@
             this.BottomMargin,
             this.Detail});
             this.DisplayName = "ExcelFinancialCodeListing";
-            this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+            this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9.75F);
             this.Version = "22.2";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

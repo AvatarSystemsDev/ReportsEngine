@@ -51,7 +51,7 @@
             this.TopMargin,
             this.BottomMargin,
             this.Detail});
-            this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+            this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9.75F);
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

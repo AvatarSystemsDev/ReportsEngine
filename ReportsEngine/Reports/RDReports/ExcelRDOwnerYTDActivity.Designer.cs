@@ -869,7 +869,7 @@
             this.Textbox175.StylePriority.UseFont = false;
             this.Textbox175.StylePriority.UsePadding = false;
             this.Textbox175.StylePriority.UseTextAlignment = false;
-            this.Textbox175.Text = "Property";
+            this.Textbox175.Text = "Property/Well";
             this.Textbox175.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox179

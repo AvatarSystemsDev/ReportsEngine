@@ -1092,7 +1092,7 @@
             this.xrLabel1.BorderWidth = 1F;
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Effective Date: \' + formatString(\'{0:MM/dd/yyyy}\', [StartEffectiveDate])")});
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Arial", 10F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.xrLabel1.ForeColor = System.Drawing.Color.Black;
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(542.6973F, 19.97999F);
@@ -1146,7 +1146,7 @@
             this.xrLabel12.BorderWidth = 1F;
             this.xrLabel12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Date: \' + formatString(\'{0:MM/dd/yyyy}\',Today())")});
-            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Arial", 10F);
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.xrLabel12.ForeColor = System.Drawing.Color.Black;
             this.xrLabel12.KeepTogether = true;
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(542.6974F, 0F);
@@ -1200,7 +1200,7 @@
             this.xrLabel60.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel60.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel60.BorderWidth = 1F;
-            this.xrLabel60.Font = new DevExpress.Drawing.DXFont("Arial", 10F);
+            this.xrLabel60.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.xrLabel60.ForeColor = System.Drawing.Color.Black;
             this.xrLabel60.KeepTogether = true;
             this.xrLabel60.LocationFloat = new DevExpress.Utils.PointFloat(0F, 151.6733F);
@@ -1229,7 +1229,7 @@
             this.xrLabel69.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OwnerName] + \'\n\' + [AddressLine1] +  \' \' + \nIif(IsNullOrEmpty([AddressLine2]),\'\'" +
                     ",+\'\n\'+[AddressLine2]) +\'\n\'+[City] + \' \' + [State] + \'  \' + [Zip]\n")});
-            this.xrLabel69.Font = new DevExpress.Drawing.DXFont("Arial", 10F);
+            this.xrLabel69.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.xrLabel69.ForeColor = System.Drawing.Color.Black;
             this.xrLabel69.KeepTogether = true;
             this.xrLabel69.LocationFloat = new DevExpress.Utils.PointFloat(29.36656F, 171.6733F);
@@ -1257,7 +1257,7 @@
             this.xrLabel73.BorderWidth = 1F;
             this.xrLabel73.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'OWNER: \' + [OwnerNumber]")});
-            this.xrLabel73.Font = new DevExpress.Drawing.DXFont("Arial", 10F);
+            this.xrLabel73.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.xrLabel73.ForeColor = System.Drawing.Color.Black;
             this.xrLabel73.KeepTogether = true;
             this.xrLabel73.LocationFloat = new DevExpress.Utils.PointFloat(485.1203F, 171.6733F);
@@ -1284,7 +1284,7 @@
             this.xrLabel80.BorderWidth = 1F;
             this.xrLabel80.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Phone #: \' + [Phone1]\n")});
-            this.xrLabel80.Font = new DevExpress.Drawing.DXFont("Arial", 10F);
+            this.xrLabel80.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.xrLabel80.ForeColor = System.Drawing.Color.Black;
             this.xrLabel80.KeepTogether = true;
             this.xrLabel80.LocationFloat = new DevExpress.Utils.PointFloat(485.1202F, 191.6733F);

@@ -1170,7 +1170,7 @@
             this.xrLabel18.StylePriority.UseFont = false;
             this.xrLabel18.StylePriority.UsePadding = false;
             this.xrLabel18.StylePriority.UseTextAlignment = false;
-            this.xrLabel18.Text = " \r\nProperty/Well Name";
+            this.xrLabel18.Text = "Property/Well Description";
             this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox13
@@ -1191,7 +1191,7 @@
             this.Textbox13.StylePriority.UseFont = false;
             this.Textbox13.StylePriority.UsePadding = false;
             this.Textbox13.StylePriority.UseTextAlignment = false;
-            this.Textbox13.Text = " \r\nProperty/Well";
+            this.Textbox13.Text = "Property/Well";
             this.Textbox13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox16

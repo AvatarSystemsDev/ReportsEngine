@@ -844,7 +844,7 @@
             this.Textbox64.BorderWidth = 1F;
             this.Textbox64.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([IsSuspended], \'Y\', \'N\')")});
-            this.Textbox64.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.Textbox64.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox64.KeepTogether = true;
             this.Textbox64.LocationFloat = new DevExpress.Utils.PointFloat(8.06001F, 0F);
             this.Textbox64.Multiline = true;
@@ -2586,7 +2586,7 @@
             this.Textbox66.BorderWidth = 1F;
             this.Textbox66.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([InvoiceIsSuspended] = 1, \'Y\', \'N\')")});
-            this.Textbox66.Font = new DevExpress.Drawing.DXFont("Arial", 8F);
+            this.Textbox66.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox66.KeepTogether = true;
             this.Textbox66.LocationFloat = new DevExpress.Utils.PointFloat(8.06001F, 0F);
             this.Textbox66.Multiline = true;

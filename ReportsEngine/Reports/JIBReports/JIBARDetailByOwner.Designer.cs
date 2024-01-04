@@ -731,7 +731,7 @@
             this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox7.SizeF = new System.Drawing.SizeF(98.41301F, 20F);
             this.Textbox7.StylePriority.UsePadding = false;
-            this.Textbox7.Text = "Property";
+            this.Textbox7.Text = "Property/Well";
             this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox104
@@ -748,7 +748,7 @@
             this.Textbox104.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox104.SizeF = new System.Drawing.SizeF(230.5325F, 20F);
             this.Textbox104.StylePriority.UsePadding = false;
-            this.Textbox104.Text = "Property Description";
+            this.Textbox104.Text = "Property/Well Description";
             this.Textbox104.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox78
@@ -1281,7 +1281,7 @@
             this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel7.SizeF = new System.Drawing.SizeF(230.5325F, 20F);
             this.xrLabel7.StylePriority.UsePadding = false;
-            this.xrLabel7.Text = "Property Description";
+            this.xrLabel7.Text = "Property/Well Description";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel22
@@ -1298,7 +1298,7 @@
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel22.SizeF = new System.Drawing.SizeF(98.41301F, 20F);
             this.xrLabel22.StylePriority.UsePadding = false;
-            this.xrLabel22.Text = "Property";
+            this.xrLabel22.Text = "Property/Well";
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel23

@@ -740,7 +740,7 @@
             this.xrLabel21.StylePriority.UseFont = false;
             this.xrLabel21.StylePriority.UsePadding = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
-            this.xrLabel21.Text = "Property Description";
+            this.xrLabel21.Text = "Property/Well Description";
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox64
@@ -760,7 +760,7 @@
             this.Textbox64.StylePriority.UseFont = false;
             this.Textbox64.StylePriority.UsePadding = false;
             this.Textbox64.StylePriority.UseTextAlignment = false;
-            this.Textbox64.Text = "Property";
+            this.Textbox64.Text = "Property/Well";
             this.Textbox64.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel17

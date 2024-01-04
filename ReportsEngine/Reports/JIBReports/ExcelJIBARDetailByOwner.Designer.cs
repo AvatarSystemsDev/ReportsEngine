@@ -487,7 +487,7 @@
             this.Textbox7.SizeF = new System.Drawing.SizeF(99.99994F, 35F);
             this.Textbox7.StylePriority.UseFont = false;
             this.Textbox7.StylePriority.UsePadding = false;
-            this.Textbox7.Text = "Property";
+            this.Textbox7.Text = "Property/Well";
             this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox104
@@ -505,7 +505,7 @@
             this.Textbox104.SizeF = new System.Drawing.SizeF(234.25F, 35F);
             this.Textbox104.StylePriority.UseFont = false;
             this.Textbox104.StylePriority.UsePadding = false;
-            this.Textbox104.Text = "Property Description";
+            this.Textbox104.Text = "Property/Well Description";
             this.Textbox104.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox78

@@ -1776,7 +1776,7 @@
             this.Textbox24.StylePriority.UseFont = false;
             this.Textbox24.StylePriority.UsePadding = false;
             this.Textbox24.StylePriority.UseTextAlignment = false;
-            this.Textbox24.Text = "Property";
+            this.Textbox24.Text = "Unit/Well";
             this.Textbox24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox25
@@ -1798,7 +1798,7 @@
             this.Textbox25.StylePriority.UseFont = false;
             this.Textbox25.StylePriority.UsePadding = false;
             this.Textbox25.StylePriority.UseTextAlignment = false;
-            this.Textbox25.Text = "Property Name";
+            this.Textbox25.Text = "Unit/Well Description";
             this.Textbox25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox34
@@ -3095,7 +3095,7 @@
             this.xrLabel7.StylePriority.UseFont = false;
             this.xrLabel7.StylePriority.UsePadding = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
-            this.xrLabel7.Text = "Property Name";
+            this.xrLabel7.Text = "Unit/Well Description";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel8
@@ -3117,7 +3117,7 @@
             this.xrLabel8.StylePriority.UseFont = false;
             this.xrLabel8.StylePriority.UsePadding = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
-            this.xrLabel8.Text = "Property";
+            this.xrLabel8.Text = "Unit/Well";
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel9

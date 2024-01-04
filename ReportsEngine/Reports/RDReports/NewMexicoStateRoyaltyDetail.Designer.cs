@@ -920,7 +920,7 @@
             this.xrLabel11.SizeF = new System.Drawing.SizeF(113.1492F, 42.91666F);
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
-            this.xrLabel11.Text = "Property";
+            this.xrLabel11.Text = "Property/Well";
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel34
@@ -938,7 +938,7 @@
             this.xrLabel34.SizeF = new System.Drawing.SizeF(170.458F, 42.91666F);
             this.xrLabel34.StylePriority.UsePadding = false;
             this.xrLabel34.StylePriority.UseTextAlignment = false;
-            this.xrLabel34.Text = "Property Name";
+            this.xrLabel34.Text = "Property/Well ";
             this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // SubBand2

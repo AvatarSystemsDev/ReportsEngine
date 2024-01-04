@@ -678,7 +678,7 @@
             this.Textbox2.StylePriority.UseFont = false;
             this.Textbox2.StylePriority.UsePadding = false;
             this.Textbox2.StylePriority.UseTextAlignment = false;
-            this.Textbox2.Text = "Sus";
+            this.Textbox2.Text = "Edit Req.";
             this.Textbox2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox3

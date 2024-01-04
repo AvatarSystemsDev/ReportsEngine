@@ -682,7 +682,7 @@
             this.Textbox27.KeepTogether = true;
             this.Textbox27.Name = "Textbox27";
             this.Textbox27.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox27.Text = "Prop Well";
+            this.Textbox27.Text = "Prop/Well";
             this.Textbox27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.Textbox27.Weight = 0.125D;
             // 
@@ -1668,7 +1668,7 @@
             this.xrLabel30.StylePriority.UseForeColor = false;
             this.xrLabel30.StylePriority.UsePadding = false;
             this.xrLabel30.StylePriority.UseTextAlignment = false;
-            this.xrLabel30.Text = "Prop Well";
+            this.xrLabel30.Text = "Prop/Well";
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel31

@@ -1905,7 +1905,7 @@
             this.xrLabel46.SizeF = new System.Drawing.SizeF(156.2502F, 35.00001F);
             this.xrLabel46.StylePriority.UseFont = false;
             this.xrLabel46.StylePriority.UsePadding = false;
-            this.xrLabel46.Text = "Property Well Name";
+            this.xrLabel46.Text = "Property/Well Description";
             this.xrLabel46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel47

@@ -1104,7 +1104,7 @@
             this.xrLabel15.SizeF = new System.Drawing.SizeF(159.8468F, 20F);
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
-            this.xrLabel15.Text = "Property Description";
+            this.xrLabel15.Text = "Prop/Well Description";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel8
@@ -1123,7 +1123,7 @@
             this.xrLabel8.SizeF = new System.Drawing.SizeF(81.59915F, 20F);
             this.xrLabel8.StylePriority.UsePadding = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
-            this.xrLabel8.Text = "Property";
+            this.xrLabel8.Text = "Prop/Well";
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel7

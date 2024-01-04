@@ -1265,7 +1265,7 @@
             this.xrLabel20.StylePriority.UseForeColor = false;
             this.xrLabel20.StylePriority.UsePadding = false;
             this.xrLabel20.StylePriority.UseTextAlignment = false;
-            this.xrLabel20.Text = "Property";
+            this.xrLabel20.Text = "Property/Well";
             this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel21
@@ -2279,7 +2279,7 @@
             this.xrLabel62.StylePriority.UseForeColor = false;
             this.xrLabel62.StylePriority.UsePadding = false;
             this.xrLabel62.StylePriority.UseTextAlignment = false;
-            this.xrLabel62.Text = "Property";
+            this.xrLabel62.Text = "Property/Well";
             this.xrLabel62.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel63
@@ -2719,7 +2719,7 @@
             this.OwnerNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Owner:" +
                     " </b>\' + [OwnerNumber] + \'   \' + [OwnerName] + \'</span>\'\n")});
-            this.OwnerNumber.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
+            this.OwnerNumber.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.OwnerNumber.KeepTogether = true;
             this.OwnerNumber.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.OwnerNumber.Name = "OwnerNumber";

@@ -614,7 +614,7 @@
             this.Textbox16.StylePriority.UseFont = false;
             this.Textbox16.StylePriority.UsePadding = false;
             this.Textbox16.StylePriority.UseTextAlignment = false;
-            this.Textbox16.Text = "Prop Well";
+            this.Textbox16.Text = "Prop/Well";
             this.Textbox16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox17

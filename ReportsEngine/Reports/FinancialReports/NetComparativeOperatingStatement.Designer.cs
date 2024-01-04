@@ -1166,7 +1166,7 @@
             this.Textbox8.BorderWidth = 1F;
             this.Textbox8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", resources.GetString("Textbox8.ExpressionBindings"))});
-            this.Textbox8.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
+            this.Textbox8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox8.KeepTogether = true;
             this.Textbox8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox8.Name = "Textbox8";
@@ -1847,7 +1847,7 @@
             this.xrLabel50.StylePriority.UseFont = false;
             this.xrLabel50.StylePriority.UsePadding = false;
             this.xrLabel50.StylePriority.UseTextAlignment = false;
-            this.xrLabel50.Text = "Property:";
+            this.xrLabel50.Text = "Property/Well:";
             this.xrLabel50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel51

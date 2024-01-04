@@ -142,7 +142,7 @@
             this.RemittanceLine.BorderWidth = 1F;
             this.RemittanceLine.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RemittanceLine]")});
-            this.RemittanceLine.Font = new DevExpress.Drawing.DXFont("Courier New", 9F);
+            this.RemittanceLine.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.RemittanceLine.KeepTogether = true;
             this.RemittanceLine.Name = "RemittanceLine";
             this.RemittanceLine.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);

@@ -2821,7 +2821,7 @@
             this.Textbox135.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox135.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox135.BorderWidth = 1F;
-            this.Textbox135.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox135.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox135.KeepTogether = true;
             this.Textbox135.Name = "Textbox135";
             this.Textbox135.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -2850,7 +2850,7 @@
             this.Textbox139.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox139.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox139.BorderWidth = 1F;
-            this.Textbox139.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox139.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox139.KeepTogether = true;
             this.Textbox139.Name = "Textbox139";
             this.Textbox139.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -2895,7 +2895,7 @@
             this.Textbox142.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox142.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox142.BorderWidth = 1F;
-            this.Textbox142.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox142.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox142.KeepTogether = true;
             this.Textbox142.Name = "Textbox142";
             this.Textbox142.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -2997,7 +2997,7 @@
             this.Textbox265.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox265.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox265.BorderWidth = 1F;
-            this.Textbox265.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox265.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox265.KeepTogether = true;
             this.Textbox265.Name = "Textbox265";
             this.Textbox265.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -3026,7 +3026,7 @@
             this.Textbox270.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox270.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox270.BorderWidth = 1F;
-            this.Textbox270.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox270.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox270.KeepTogether = true;
             this.Textbox270.Name = "Textbox270";
             this.Textbox270.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -3071,7 +3071,7 @@
             this.Textbox277.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox277.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox277.BorderWidth = 1F;
-            this.Textbox277.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox277.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox277.KeepTogether = true;
             this.Textbox277.Name = "Textbox277";
             this.Textbox277.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4157,7 +4157,7 @@
             this.Textbox263.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox263.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox263.BorderWidth = 1F;
-            this.Textbox263.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox263.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox263.KeepTogether = true;
             this.Textbox263.Name = "Textbox263";
             this.Textbox263.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4758,7 +4758,7 @@
             this.Textbox283.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox283.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox283.BorderWidth = 1F;
-            this.Textbox283.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox283.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox283.KeepTogether = true;
             this.Textbox283.Name = "Textbox283";
             this.Textbox283.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4771,7 +4771,7 @@
             this.Textbox285.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox285.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox285.BorderWidth = 1F;
-            this.Textbox285.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox285.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox285.KeepTogether = true;
             this.Textbox285.Name = "Textbox285";
             this.Textbox285.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4784,7 +4784,7 @@
             this.Textbox299.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox299.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox299.BorderWidth = 1F;
-            this.Textbox299.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox299.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox299.KeepTogether = true;
             this.Textbox299.Name = "Textbox299";
             this.Textbox299.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4797,7 +4797,7 @@
             this.Textbox301.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox301.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox301.BorderWidth = 1F;
-            this.Textbox301.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox301.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox301.KeepTogether = true;
             this.Textbox301.Name = "Textbox301";
             this.Textbox301.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4810,7 +4810,7 @@
             this.Textbox321.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox321.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox321.BorderWidth = 1F;
-            this.Textbox321.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox321.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox321.KeepTogether = true;
             this.Textbox321.Name = "Textbox321";
             this.Textbox321.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4823,7 +4823,7 @@
             this.Textbox340.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox340.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox340.BorderWidth = 1F;
-            this.Textbox340.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox340.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox340.KeepTogether = true;
             this.Textbox340.Name = "Textbox340";
             this.Textbox340.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4836,7 +4836,7 @@
             this.Textbox345.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox345.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox345.BorderWidth = 1F;
-            this.Textbox345.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox345.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox345.KeepTogether = true;
             this.Textbox345.Name = "Textbox345";
             this.Textbox345.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4891,7 +4891,7 @@
             this.LeaseObligationType.BorderWidth = 1F;
             this.LeaseObligationType.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LeaseObligationType] + \'    \' + [OblgDescr]")});
-            this.LeaseObligationType.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.LeaseObligationType.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.LeaseObligationType.KeepTogether = true;
             this.LeaseObligationType.Name = "LeaseObligationType";
             this.LeaseObligationType.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4907,7 +4907,7 @@
             this.LseOblgBeginningDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([LseOblgBeginningDate]), \'\', FormatString(\'{0:d}\', [LseOblgBegi" +
                     "nningDate]))")});
-            this.LseOblgBeginningDate.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.LseOblgBeginningDate.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.LseOblgBeginningDate.KeepTogether = true;
             this.LseOblgBeginningDate.Name = "LseOblgBeginningDate";
             this.LseOblgBeginningDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4923,7 +4923,7 @@
             this.LseOblgExpirationDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([LseOblgExpirationDate]), \'\', FormatString(\'{0:d}\', [LseOblgExp" +
                     "irationDate]))")});
-            this.LseOblgExpirationDate.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.LseOblgExpirationDate.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.LseOblgExpirationDate.KeepTogether = true;
             this.LseOblgExpirationDate.Name = "LseOblgExpirationDate";
             this.LseOblgExpirationDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4938,7 +4938,7 @@
             this.LseOblgFrequencyMonths.BorderWidth = 1F;
             this.LseOblgFrequencyMonths.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LseOblgFrequencyMonths]")});
-            this.LseOblgFrequencyMonths.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.LseOblgFrequencyMonths.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.LseOblgFrequencyMonths.KeepTogether = true;
             this.LseOblgFrequencyMonths.Name = "LseOblgFrequencyMonths";
             this.LseOblgFrequencyMonths.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4953,7 +4953,7 @@
             this.LseOblgObligationAmount.BorderWidth = 1F;
             this.LseOblgObligationAmount.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LseOblgObligationAmount]")});
-            this.LseOblgObligationAmount.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.LseOblgObligationAmount.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.LseOblgObligationAmount.KeepTogether = true;
             this.LseOblgObligationAmount.Name = "LseOblgObligationAmount";
             this.LseOblgObligationAmount.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -4976,7 +4976,7 @@
             this.Textbox65.BorderWidth = 1F;
             this.Textbox65.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Obligation Description: \' + Trim([LseOblgDescrText]) + Char(13) + Char(10)")});
-            this.Textbox65.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox65.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox65.KeepTogether = true;
             this.Textbox65.Name = "Textbox65";
             this.Textbox65.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -5001,7 +5001,7 @@
             this.Textbox574.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox574.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox574.BorderWidth = 1F;
-            this.Textbox574.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox574.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox574.KeepTogether = true;
             this.Textbox574.Name = "Textbox574";
             this.Textbox574.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -5014,7 +5014,7 @@
             this.Textbox575.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox575.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox575.BorderWidth = 1F;
-            this.Textbox575.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox575.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox575.KeepTogether = true;
             this.Textbox575.Name = "Textbox575";
             this.Textbox575.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -5027,7 +5027,7 @@
             this.Textbox576.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox576.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox576.BorderWidth = 1F;
-            this.Textbox576.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox576.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox576.KeepTogether = true;
             this.Textbox576.Name = "Textbox576";
             this.Textbox576.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -5040,7 +5040,7 @@
             this.Textbox577.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox577.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox577.BorderWidth = 1F;
-            this.Textbox577.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox577.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox577.KeepTogether = true;
             this.Textbox577.Name = "Textbox577";
             this.Textbox577.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -5053,7 +5053,7 @@
             this.Textbox578.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox578.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox578.BorderWidth = 1F;
-            this.Textbox578.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox578.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox578.KeepTogether = true;
             this.Textbox578.Name = "Textbox578";
             this.Textbox578.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -5066,7 +5066,7 @@
             this.Textbox579.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox579.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox579.BorderWidth = 1F;
-            this.Textbox579.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox579.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox579.KeepTogether = true;
             this.Textbox579.Name = "Textbox579";
             this.Textbox579.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -5235,7 +5235,7 @@
             this.Textbox39.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox39.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox39.BorderWidth = 1F;
-            this.Textbox39.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox39.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox39.KeepTogether = true;
             this.Textbox39.Name = "Textbox39";
             this.Textbox39.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -5248,7 +5248,7 @@
             this.Textbox50.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox50.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox50.BorderWidth = 1F;
-            this.Textbox50.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox50.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox50.KeepTogether = true;
             this.Textbox50.Name = "Textbox50";
             this.Textbox50.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -5261,7 +5261,7 @@
             this.Textbox62.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox62.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox62.BorderWidth = 1F;
-            this.Textbox62.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox62.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox62.KeepTogether = true;
             this.Textbox62.Name = "Textbox62";
             this.Textbox62.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -6247,7 +6247,7 @@
             this.Textbox318.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox318.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox318.BorderWidth = 1F;
-            this.Textbox318.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox318.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox318.KeepTogether = true;
             this.Textbox318.Name = "Textbox318";
             this.Textbox318.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -6260,7 +6260,7 @@
             this.Textbox319.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox319.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox319.BorderWidth = 1F;
-            this.Textbox319.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox319.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox319.KeepTogether = true;
             this.Textbox319.Name = "Textbox319";
             this.Textbox319.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -6273,7 +6273,7 @@
             this.Textbox323.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox323.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox323.BorderWidth = 1F;
-            this.Textbox323.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox323.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox323.KeepTogether = true;
             this.Textbox323.Name = "Textbox323";
             this.Textbox323.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -6286,7 +6286,7 @@
             this.Textbox334.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox334.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox334.BorderWidth = 1F;
-            this.Textbox334.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox334.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox334.KeepTogether = true;
             this.Textbox334.Name = "Textbox334";
             this.Textbox334.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -6299,7 +6299,7 @@
             this.Textbox457.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox457.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox457.BorderWidth = 1F;
-            this.Textbox457.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox457.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox457.KeepTogether = true;
             this.Textbox457.Name = "Textbox457";
             this.Textbox457.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -6312,7 +6312,7 @@
             this.Textbox337.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox337.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox337.BorderWidth = 1F;
-            this.Textbox337.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox337.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox337.KeepTogether = true;
             this.Textbox337.Name = "Textbox337";
             this.Textbox337.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -6325,7 +6325,7 @@
             this.Textbox341.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox341.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox341.BorderWidth = 1F;
-            this.Textbox341.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox341.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox341.KeepTogether = true;
             this.Textbox341.Name = "Textbox341";
             this.Textbox341.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -6338,7 +6338,7 @@
             this.Textbox351.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox351.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox351.BorderWidth = 1F;
-            this.Textbox351.Font = new DevExpress.Drawing.DXFont("Arial", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox351.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox351.KeepTogether = true;
             this.Textbox351.Name = "Textbox351";
             this.Textbox351.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -7144,7 +7144,7 @@
             this.Textbox478.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox478.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox478.BorderWidth = 1F;
-            this.Textbox478.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox478.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox478.KeepTogether = true;
             this.Textbox478.Name = "Textbox478";
             this.Textbox478.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -7157,7 +7157,7 @@
             this.Textbox482.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox482.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox482.BorderWidth = 1F;
-            this.Textbox482.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox482.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox482.KeepTogether = true;
             this.Textbox482.Name = "Textbox482";
             this.Textbox482.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -7170,7 +7170,7 @@
             this.Textbox480.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox480.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox480.BorderWidth = 1F;
-            this.Textbox480.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox480.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox480.KeepTogether = true;
             this.Textbox480.Name = "Textbox480";
             this.Textbox480.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -7183,7 +7183,7 @@
             this.Textbox484.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox484.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox484.BorderWidth = 1F;
-            this.Textbox484.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox484.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox484.KeepTogether = true;
             this.Textbox484.Name = "Textbox484";
             this.Textbox484.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -7196,7 +7196,7 @@
             this.Textbox486.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox486.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox486.BorderWidth = 1F;
-            this.Textbox486.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox486.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox486.KeepTogether = true;
             this.Textbox486.Name = "Textbox486";
             this.Textbox486.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -7432,7 +7432,7 @@
             this.Textbox34.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox34.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox34.BorderWidth = 1F;
-            this.Textbox34.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox34.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox34.KeepTogether = true;
             this.Textbox34.Name = "Textbox34";
             this.Textbox34.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -8100,7 +8100,7 @@
             this.Textbox402.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox402.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox402.BorderWidth = 1F;
-            this.Textbox402.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox402.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox402.KeepTogether = true;
             this.Textbox402.Name = "Textbox402";
             this.Textbox402.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -8113,7 +8113,7 @@
             this.Textbox407.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox407.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox407.BorderWidth = 1F;
-            this.Textbox407.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox407.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox407.KeepTogether = true;
             this.Textbox407.Name = "Textbox407";
             this.Textbox407.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -8126,7 +8126,7 @@
             this.Textbox410.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox410.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox410.BorderWidth = 1F;
-            this.Textbox410.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox410.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox410.KeepTogether = true;
             this.Textbox410.Name = "Textbox410";
             this.Textbox410.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -8139,7 +8139,7 @@
             this.Textbox413.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox413.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox413.BorderWidth = 1F;
-            this.Textbox413.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox413.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox413.KeepTogether = true;
             this.Textbox413.Name = "Textbox413";
             this.Textbox413.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -8152,7 +8152,7 @@
             this.Textbox418.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox418.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox418.BorderWidth = 1F;
-            this.Textbox418.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox418.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox418.KeepTogether = true;
             this.Textbox418.Name = "Textbox418";
             this.Textbox418.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -8440,7 +8440,7 @@
             this.Textbox157.BorderWidth = 1F;
             this.Textbox157.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LeaseGroupClassDescription]")});
-            this.Textbox157.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox157.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox157.KeepTogether = true;
             this.Textbox157.Name = "Textbox157";
             this.Textbox157.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -12830,7 +12830,7 @@
             this.Textbox389.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox389.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox389.BorderWidth = 1F;
-            this.Textbox389.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox389.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox389.KeepTogether = true;
             this.Textbox389.Name = "Textbox389";
             this.Textbox389.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -12843,7 +12843,7 @@
             this.Textbox379.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox379.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox379.BorderWidth = 1F;
-            this.Textbox379.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox379.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox379.KeepTogether = true;
             this.Textbox379.Name = "Textbox379";
             this.Textbox379.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -12856,7 +12856,7 @@
             this.Textbox465.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox465.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox465.BorderWidth = 1F;
-            this.Textbox465.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox465.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox465.KeepTogether = true;
             this.Textbox465.Name = "Textbox465";
             this.Textbox465.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -12869,7 +12869,7 @@
             this.Textbox471.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox471.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox471.BorderWidth = 1F;
-            this.Textbox471.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox471.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox471.KeepTogether = true;
             this.Textbox471.Name = "Textbox471";
             this.Textbox471.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -12882,7 +12882,7 @@
             this.Textbox492.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox492.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox492.BorderWidth = 1F;
-            this.Textbox492.Font = new DevExpress.Drawing.DXFont("Arial", 9F);
+            this.Textbox492.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Textbox492.KeepTogether = true;
             this.Textbox492.Name = "Textbox492";
             this.Textbox492.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);

@@ -942,7 +942,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>For Pr" +
                     "ocessing Date: </b>\' + FormatString(\'{0:MM/dd/yyyy}\',[Dynamic_DSJIBProcessDatesL" +
                     "ookup].[ProcessingDate]) + \'</span>\'\n\n")});
-            this.xrRichText7.Font = new DevExpress.Drawing.DXFont("Times New Roman", 9F);
+            this.xrRichText7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrRichText7.KeepTogether = true;
             this.xrRichText7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrRichText7.Name = "xrRichText7";

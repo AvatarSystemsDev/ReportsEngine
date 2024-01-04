@@ -1132,10 +1132,10 @@
             this.xrLabel19.Multiline = true;
             this.xrLabel19.Name = "xrLabel19";
             this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(87.30325F, 42.91666F);
+            this.xrLabel19.SizeF = new System.Drawing.SizeF(90.42822F, 42.91666F);
             this.xrLabel19.StylePriority.UsePadding = false;
             this.xrLabel19.StylePriority.UseTextAlignment = false;
-            this.xrLabel19.Text = "Property\r\nName";
+            this.xrLabel19.Text = "Property/Well\r\nName";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel21
@@ -1153,7 +1153,7 @@
             this.xrLabel21.SizeF = new System.Drawing.SizeF(101.6667F, 42.91666F);
             this.xrLabel21.StylePriority.UsePadding = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
-            this.xrLabel21.Text = "\r\nProperty";
+            this.xrLabel21.Text = "\r\nProperty/Well";
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel22
@@ -1171,7 +1171,7 @@
             this.xrLabel22.SizeF = new System.Drawing.SizeF(69.29572F, 42.91666F);
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.StylePriority.UseTextAlignment = false;
-            this.xrLabel22.Text = "Volume\r\nbbl-mcf";
+            this.xrLabel22.Text = "Volume\r\nBBL/MCF";
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel23
