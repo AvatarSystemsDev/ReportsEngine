@@ -131,7 +131,7 @@
         ORDER BY
             CASE 
                 WHEN subquery.PA_TXP_LEASETYPE = 'G' AND LEN(subquery.PA_TXP_STFEDWID) &gt; 0 
-                THEN subquery.PA_TXP_STAPRPNAM + ' (' + subquery.PA_TXP_STFEDWID + ')' 
+                THEN subquery.PA_TXP_STAPRPNAM
                 ELSE subquery.PA_TXP_STAPRPNAM 
             END
     ) AS RowNumber
