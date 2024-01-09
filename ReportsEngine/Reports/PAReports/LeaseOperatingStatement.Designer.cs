@@ -1235,7 +1235,7 @@
             this.xrRunDate.Name = "xrRunDate";
             this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
-            this.xrRunDate.SizeF = new System.Drawing.SizeF(311.11F, 11.7084F);
+            this.xrRunDate.SizeF = new System.Drawing.SizeF(311.11F, 13F);
             this.xrRunDate.StylePriority.UseBackColor = false;
             this.xrRunDate.StylePriority.UseBorderColor = false;
             this.xrRunDate.StylePriority.UsePadding = false;
