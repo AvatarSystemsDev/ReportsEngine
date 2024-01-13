@@ -217,7 +217,6 @@
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrControlStyle1 = new DevExpress.XtraReports.UI.XRControlStyle();
             this.xrControlStyle2 = new DevExpress.XtraReports.UI.XRControlStyle();
-            this.Tablix1_GroupFooterBand = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.groupHeaderBandProperty = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
@@ -1310,7 +1309,7 @@
             this.xrPageInfo1.AnchorHorizontal = ((DevExpress.XtraReports.UI.HorizontalAnchorStyles)((DevExpress.XtraReports.UI.HorizontalAnchorStyles.Left | DevExpress.XtraReports.UI.HorizontalAnchorStyles.Right)));
             this.xrPageInfo1.BackColor = System.Drawing.Color.Transparent;
             this.xrPageInfo1.BorderColor = System.Drawing.Color.Transparent;
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(716.1393F, 9.999974F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(716.1485F, 9.999974F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(53.26129F, 11.7084F);
@@ -1471,13 +1470,6 @@
             this.xrControlStyle2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrControlStyle2.Name = "xrControlStyle2";
             // 
-            // Tablix1_GroupFooterBand
-            // 
-            this.Tablix1_GroupFooterBand.HeightF = 0F;
-            this.Tablix1_GroupFooterBand.Level = 2;
-            this.Tablix1_GroupFooterBand.Name = "Tablix1_GroupFooterBand";
-            this.Tablix1_GroupFooterBand.Visible = false;
-            // 
             // groupHeaderBandProperty
             // 
             this.groupHeaderBandProperty.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -1485,6 +1477,7 @@
             this.xrLabel23,
             this.xrLabel1});
             this.groupHeaderBandProperty.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("PhaseWellNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
             new DevExpress.XtraReports.UI.GroupField("DOIDeckCode", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBandProperty.HeightF = 17F;
             this.groupHeaderBandProperty.Level = 1;
@@ -1755,7 +1748,7 @@
             // 
             // pbooPropertyOnNextPage
             // 
-            this.pbooPropertyOnNextPage.Description = "Properties On Own Page";
+            this.pbooPropertyOnNextPage.Description = "New Page Per Property";
             this.pbooPropertyOnNextPage.Name = "pbooPropertyOnNextPage";
             this.pbooPropertyOnNextPage.Type = typeof(bool);
             this.pbooPropertyOnNextPage.ValueInfo = "False";
@@ -1776,6 +1769,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DOIWithOwnerAddress";
             sourceNode1.Alias = null;
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"677\" />";
             source1.DataMember = "DOIWithOwnerAddress";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DOIWithOwnerAddress";
@@ -1809,7 +1803,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbreviation"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InterestTypeCode")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InterestTypeCode"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DeckCode")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_LookupProperties";
             sourceNode2.Alias = null;
@@ -1943,7 +1938,7 @@
             // 
             // pstrSelectDeckCode
             // 
-            this.pstrSelectDeckCode.Description = "Parameter1";
+            this.pstrSelectDeckCode.Description = "Select Deck Code";
             this.pstrSelectDeckCode.MultiValue = true;
             this.pstrSelectDeckCode.Name = "pstrSelectDeckCode";
             this.pstrSelectDeckCode.SelectAllValues = true;
@@ -1961,7 +1956,6 @@
             this.topMarginBand1,
             this.bottomMarginBand1,
             this.Tablix1,
-            this.Tablix1_GroupFooterBand,
             this.pageHeaderBand1,
             this.pageFooterBand1,
             this.groupHeaderBandProperty,
@@ -1984,23 +1978,23 @@
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningDeckCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingDeckCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectDeckCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngInterestTypesToShow, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooPrintJIBAddress, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowIsActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngMaskFederalID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowIsActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowEmail, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowPhone, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooPropertyOnNextPage, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -2008,23 +2002,23 @@
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pdteDateToUse,
             this.pstrDatabaseName,
+            this.pstrBeginningPropertyNumber,
+            this.pstrEndingPropertyNumber,
+            this.pstrSelectProperty,
             this.pstrServerName,
             this.plngCompanyID,
             this.Subtitle,
             this.pstrBeginningDeckCode,
             this.pstrEndingDeckCode,
             this.pstrSelectDeckCode,
-            this.pstrBeginningPropertyNumber,
-            this.pstrEndingPropertyNumber,
-            this.pstrSelectProperty,
             this.pstrBeginningOwnerNumber,
             this.pstrEndingOwnerNumber,
             this.pstrSelectOwner,
             this.plngUserID,
             this.plngInterestTypesToShow,
             this.pbooPrintJIBAddress,
-            this.plngShowIsActive,
             this.plngMaskFederalID,
+            this.plngShowIsActive,
             this.pbooShowEmail,
             this.pbooShowPhone,
             this.pbooPropertyOnNextPage,
@@ -2083,7 +2077,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
-        private DevExpress.XtraReports.UI.GroupFooterBand Tablix1_GroupFooterBand;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBandProperty;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand2;

@@ -52,22 +52,24 @@ namespace ReportsEngine.Reports.FinancialReports
             DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter18 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter19 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter20 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter21 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter22 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter23 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter24 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery6 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter25 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter26 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery7 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery6 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter27 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery8 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter28 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery7 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter29 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery8 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter30 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JournalRegister));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
@@ -135,7 +137,7 @@ namespace ReportsEngine.Reports.FinancialReports
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter29 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter31 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -325,6 +327,8 @@ namespace ReportsEngine.Reports.FinancialReports
             this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
             this.xrCrossBandBox4 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.SelectAccountList = new DevExpress.XtraReports.UI.CalculatedField();
+            this.pbooShowYearEndClosingEntries = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowZeroBalance = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -390,6 +394,12 @@ namespace ReportsEngine.Reports.FinancialReports
             queryParameter19.Name = "@plngSortBy";
             queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngSortBy", typeof(int));
+            queryParameter20.Name = "@pbooShowYearEndClosingEntries";
+            queryParameter20.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter20.Value = new DevExpress.DataAccess.Expression("?pbooShowYearEndClosingEntries", typeof(bool));
+            queryParameter21.Name = "@pbooShowZeroBalance";
+            queryParameter21.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter21.Value = new DevExpress.DataAccess.Expression("?pbooShowZeroBalance", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -409,64 +419,66 @@ namespace ReportsEngine.Reports.FinancialReports
             queryParameter16,
             queryParameter17,
             queryParameter18,
-            queryParameter19});
+            queryParameter19,
+            queryParameter20,
+            queryParameter21});
             storedProcQuery1.StoredProcName = "Report_JournalRegister";
             storedProcQuery2.Name = "DSCompaniesLookup";
-            queryParameter20.Name = "@plngCompanyID";
-            queryParameter20.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter20.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter20});
-            storedProcQuery2.StoredProcName = "Companies_ReportLookup";
-            storedProcQuery3.Name = "DSPropertiesLookup";
-            queryParameter21.Name = "@pbooIncludeFirstLast";
-            queryParameter21.Type = typeof(bool);
-            queryParameter21.ValueInfo = "True";
             queryParameter22.Name = "@plngCompanyID";
             queryParameter22.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter22.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter21,
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter22});
-            storedProcQuery3.StoredProcName = "Properties_ReportLookup";
-            storedProcQuery4.Name = "DSAccountLookup";
-            queryParameter23.Name = "@plngCompanyID";
-            queryParameter23.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter23.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter23});
-            storedProcQuery4.StoredProcName = "Accounts_ReportLookup";
-            storedProcQuery5.Name = "DSAccountingCenterLookup";
+            storedProcQuery2.StoredProcName = "Companies_ReportLookup";
+            storedProcQuery3.Name = "DSPropertiesLookup";
+            queryParameter23.Name = "@pbooIncludeFirstLast";
+            queryParameter23.Type = typeof(bool);
+            queryParameter23.ValueInfo = "True";
             queryParameter24.Name = "@plngCompanyID";
             queryParameter24.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter24.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter23,
             queryParameter24});
-            storedProcQuery5.StoredProcName = "AccountingCenter_ReportLookup";
-            storedProcQuery6.Name = "DSVendorReportLookup";
-            queryParameter25.Name = "@plngVendorsToShow";
-            queryParameter25.Type = typeof(int);
-            queryParameter25.ValueInfo = "0";
+            storedProcQuery3.StoredProcName = "Properties_ReportLookup";
+            storedProcQuery4.Name = "DSAccountLookup";
+            queryParameter25.Name = "@plngCompanyID";
+            queryParameter25.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter25.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
+            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter25});
+            storedProcQuery4.StoredProcName = "Accounts_ReportLookup";
+            storedProcQuery5.Name = "DSAccountingCenterLookup";
             queryParameter26.Name = "@plngCompanyID";
             queryParameter26.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter26.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery6.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter25,
+            storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter26});
-            storedProcQuery6.StoredProcName = "Vendors_ReportLookup";
-            storedProcQuery7.Name = "DSBatchReportLookup";
-            queryParameter27.Name = "@plngCompanyID";
-            queryParameter27.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter27.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery7.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter27});
-            storedProcQuery7.StoredProcName = "Batch_ReportLookup";
-            storedProcQuery8.Name = "DSOwnersReportLookup";
+            storedProcQuery5.StoredProcName = "AccountingCenter_ReportLookup";
+            storedProcQuery6.Name = "DSVendorReportLookup";
+            queryParameter27.Name = "@plngVendorsToShow";
+            queryParameter27.Type = typeof(int);
+            queryParameter27.ValueInfo = "0";
             queryParameter28.Name = "@plngCompanyID";
             queryParameter28.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter28.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery8.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            storedProcQuery6.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter27,
             queryParameter28});
+            storedProcQuery6.StoredProcName = "Vendors_ReportLookup";
+            storedProcQuery7.Name = "DSBatchReportLookup";
+            queryParameter29.Name = "@plngCompanyID";
+            queryParameter29.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter29.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery7.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter29});
+            storedProcQuery7.StoredProcName = "Batch_ReportLookup";
+            storedProcQuery8.Name = "DSOwnersReportLookup";
+            queryParameter30.Name = "@plngCompanyID";
+            queryParameter30.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter30.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery8.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter30});
             storedProcQuery8.StoredProcName = "Owners_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -616,11 +628,11 @@ namespace ReportsEngine.Reports.FinancialReports
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter29.Name = "UserID";
-            queryParameter29.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter29.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter31.Name = "UserID";
+            queryParameter31.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter31.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter29});
+            queryParameter31});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});
@@ -744,11 +756,11 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel29.ForeColor = System.Drawing.Color.Black;
             this.xrLabel29.KeepTogether = true;
-            this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(947.9163F, 0F);
+            this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(947.9169F, 0F);
             this.xrLabel29.Multiline = true;
             this.xrLabel29.Name = "xrLabel29";
             this.xrLabel29.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel29.SizeF = new System.Drawing.SizeF(70.96381F, 17.00334F);
+            this.xrLabel29.SizeF = new System.Drawing.SizeF(70.96313F, 17.00334F);
             this.xrLabel29.StylePriority.UseBackColor = false;
             this.xrLabel29.StylePriority.UseBorderColor = false;
             this.xrLabel29.StylePriority.UseBorderDashStyle = false;
@@ -1615,7 +1627,7 @@ namespace ReportsEngine.Reports.FinancialReports
             // 
             this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
             this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 8.797152F);
+            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 7.505569F);
             this.xrRunDate.Name = "xrRunDate";
             this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
@@ -1914,7 +1926,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DSJournalRegister";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"817\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"957\" />";
             source1.DataMember = "DSJournalRegister";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DSJournalRegister";
@@ -1926,12 +1938,6 @@ namespace ReportsEngine.Reports.FinancialReports
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "NetAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "NetAmountVisible"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AmountType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PeriodNetAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountNetAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GrandPeriodNetAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GrandTotalNetAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GrandPeriodNetAmountCredits"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GrandTotalNetAmountCredits"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DocumentVoucher"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceReference"),
@@ -1943,19 +1949,18 @@ namespace ReportsEngine.Reports.FinancialReports
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "VendorNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "VendorName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AFEMasterNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BottomCount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsBBF"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PhaseWellDescription"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PhaseNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ActualSource"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountingCenterID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ServiceDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbreviation"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BatchNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PhaseWellTypeCode")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PhaseWellTypeCode"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountNumberPrefix"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountNumberSuffix"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "First"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountingCenterNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "isBBF"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PhaseWellDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountTotal")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_DSCompaniesLookup";
             sourceNode2.Alias = null;
@@ -2112,11 +2117,11 @@ namespace ReportsEngine.Reports.FinancialReports
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([NetAmount])\n")});
             this.xrGrandTotal.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrGrandTotal.KeepTogether = true;
-            this.xrGrandTotal.LocationFloat = new DevExpress.Utils.PointFloat(866.5362F, 0F);
+            this.xrGrandTotal.LocationFloat = new DevExpress.Utils.PointFloat(866.5369F, 0F);
             this.xrGrandTotal.Multiline = true;
             this.xrGrandTotal.Name = "xrGrandTotal";
             this.xrGrandTotal.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrGrandTotal.SizeF = new System.Drawing.SizeF(81.38013F, 11.2504F);
+            this.xrGrandTotal.SizeF = new System.Drawing.SizeF(81.37939F, 11.2504F);
             this.xrGrandTotal.StylePriority.UseBorderColor = false;
             this.xrGrandTotal.StylePriority.UseBorderDashStyle = false;
             this.xrGrandTotal.StylePriority.UseBorders = false;
@@ -2238,10 +2243,10 @@ namespace ReportsEngine.Reports.FinancialReports
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrLabel21.ExpressionBindings"))});
             this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel21.KeepTogether = true;
-            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(377.5131F, 0.0006357829F);
+            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(377.513F, 0.0006357829F);
             this.xrLabel21.Name = "xrLabel21";
             this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel21.SizeF = new System.Drawing.SizeF(489.0237F, 15.20846F);
+            this.xrLabel21.SizeF = new System.Drawing.SizeF(487.9817F, 15.2077F);
             this.xrLabel21.StylePriority.UseBorderColor = false;
             this.xrLabel21.StylePriority.UseBorderDashStyle = false;
             this.xrLabel21.StylePriority.UseBorders = false;
@@ -3307,6 +3312,20 @@ namespace ReportsEngine.Reports.FinancialReports
             this.SelectAccountList.FieldType = DevExpress.XtraReports.UI.FieldType.String;
             this.SelectAccountList.Name = "SelectAccountList";
             // 
+            // pbooShowYearEndClosingEntries
+            // 
+            this.pbooShowYearEndClosingEntries.Description = "Show Year End Closing Entries";
+            this.pbooShowYearEndClosingEntries.Name = "pbooShowYearEndClosingEntries";
+            this.pbooShowYearEndClosingEntries.Type = typeof(bool);
+            this.pbooShowYearEndClosingEntries.ValueInfo = "True";
+            // 
+            // pbooShowZeroBalance
+            // 
+            this.pbooShowZeroBalance.Description = "Show Zero Balance";
+            this.pbooShowZeroBalance.Name = "pbooShowZeroBalance";
+            this.pbooShowZeroBalance.Type = typeof(bool);
+            this.pbooShowZeroBalance.ValueInfo = "False";
+            // 
             // JournalRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -3375,6 +3394,8 @@ namespace ReportsEngine.Reports.FinancialReports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeState, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClosingEntries, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowZeroBalance, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
@@ -3408,6 +3429,8 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pstrSelectBatch,
             this.pbooIncludeState,
             this.pbooIncludeDescription,
+            this.pbooShowYearEndClosingEntries,
+            this.pbooShowZeroBalance,
             this.pbooShowCriteria,
             this.pstrDatabaseName});
             this.Version = "23.1";
@@ -3603,5 +3626,7 @@ namespace ReportsEngine.Reports.FinancialReports
         private SubBand SubBand7;
         private XRLabel xrLabel5;
         private CalculatedField SelectAccountList;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEndClosingEntries;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowZeroBalance;
     }
 }

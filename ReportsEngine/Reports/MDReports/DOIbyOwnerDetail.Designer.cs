@@ -42,13 +42,14 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter15 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DOIbyOwnerDetail));
@@ -118,7 +119,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter18 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -150,6 +151,8 @@
             DevExpress.DataAccess.DataFederation.Source source6 = new DevExpress.DataAccess.DataFederation.Source();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings4 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings9 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings10 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings11 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -325,12 +328,15 @@
             queryParameter10.Name = "@plngShowActive";
             queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngShowIsActive", typeof(int));
-            queryParameter11.Name = "@plngShowIsCrossReference";
+            queryParameter11.Name = "@pbooReturnCrossReferences";
             queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngShowIsCrossReference", typeof(int));
-            queryParameter12.Name = "@plngShowHasCrossReference";
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pbooReturnCrossReferences", typeof(bool));
+            queryParameter12.Name = "@plngShowIsCrossReference";
             queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngShowHasCrossReference", typeof(int));
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngShowIsCrossReference", typeof(int));
+            queryParameter13.Name = "@plngShowHasCrossReference";
+            queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngShowHasCrossReference", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -343,32 +349,33 @@
             queryParameter9,
             queryParameter10,
             queryParameter11,
-            queryParameter12});
+            queryParameter12,
+            queryParameter13});
             storedProcQuery1.StoredProcName = "Report_DOIbyOwnerDetail";
             storedProcQuery2.Name = "LookupProperties";
-            queryParameter13.Name = "@pbooIncludeFirstLast";
-            queryParameter13.Type = typeof(bool);
-            queryParameter13.ValueInfo = "True";
-            queryParameter14.Name = "@plngCompanyID";
-            queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter13,
-            queryParameter14});
-            storedProcQuery2.StoredProcName = "Properties_ReportLookup";
-            storedProcQuery3.Name = "LookupCompanies";
+            queryParameter14.Name = "@pbooIncludeFirstLast";
+            queryParameter14.Type = typeof(bool);
+            queryParameter14.ValueInfo = "True";
             queryParameter15.Name = "@plngCompanyID";
             queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter14,
             queryParameter15});
-            storedProcQuery3.StoredProcName = "Companies_ReportLookup";
-            storedProcQuery4.Name = "LookupOwners";
+            storedProcQuery2.StoredProcName = "Properties_ReportLookup";
+            storedProcQuery3.Name = "LookupCompanies";
             queryParameter16.Name = "@plngCompanyID";
             queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter16.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter16.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter16});
+            storedProcQuery3.StoredProcName = "Companies_ReportLookup";
+            storedProcQuery4.Name = "LookupOwners";
+            queryParameter17.Name = "@plngCompanyID";
+            queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
+            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter17});
             storedProcQuery4.StoredProcName = "Owners_ReportLookup";
             storedProcQuery5.Name = "LookupInterestType";
             storedProcQuery5.StoredProcName = "ReportWizard_PopulateInterestTypesForDOIReports";
@@ -522,11 +529,11 @@
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter17.Name = "UserID";
-            queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter18.Name = "UserID";
+            queryParameter18.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter17});
+            queryParameter18});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});
@@ -2366,11 +2373,11 @@
             this.Textbox20.BorderWidth = 1F;
             this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox20.KeepTogether = true;
-            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(548.9996F, 0.04330388F);
+            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(548.9996F, 0F);
             this.Textbox20.Multiline = true;
             this.Textbox20.Name = "Textbox20";
             this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox20.SizeF = new System.Drawing.SizeF(27.99994F, 37.84304F);
+            this.Textbox20.SizeF = new System.Drawing.SizeF(27.99994F, 37.88633F);
             this.Textbox20.StylePriority.UsePadding = false;
             this.Textbox20.Text = "Tax\r\nEx";
             this.Textbox20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
@@ -2383,11 +2390,11 @@
             this.Textbox1.BorderWidth = 1F;
             this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox1.KeepTogether = true;
-            this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0.04330388F);
+            this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox1.Multiline = true;
             this.Textbox1.Name = "Textbox1";
             this.Textbox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox1.SizeF = new System.Drawing.SizeF(179.7917F, 37.84304F);
+            this.Textbox1.SizeF = new System.Drawing.SizeF(179.7917F, 37.88633F);
             this.Textbox1.StylePriority.UsePadding = false;
             this.Textbox1.StylePriority.UseTextAlignment = false;
             this.Textbox1.Text = "Owner\r\nProperty/Well";
@@ -2401,11 +2408,11 @@
             this.Textbox22.BorderWidth = 1F;
             this.Textbox22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox22.KeepTogether = true;
-            this.Textbox22.LocationFloat = new DevExpress.Utils.PointFloat(516.9997F, 0.04330388F);
+            this.Textbox22.LocationFloat = new DevExpress.Utils.PointFloat(516.9997F, 0F);
             this.Textbox22.Multiline = true;
             this.Textbox22.Name = "Textbox22";
             this.Textbox22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox22.SizeF = new System.Drawing.SizeF(31.99994F, 37.84304F);
+            this.Textbox22.SizeF = new System.Drawing.SizeF(31.99994F, 37.88633F);
             this.Textbox22.StylePriority.UsePadding = false;
             this.Textbox22.StylePriority.UseTextAlignment = false;
             this.Textbox22.Text = "Int \r\nType";
@@ -2419,11 +2426,11 @@
             this.Textbox9.BorderWidth = 1F;
             this.Textbox9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox9.KeepTogether = true;
-            this.Textbox9.LocationFloat = new DevExpress.Utils.PointFloat(446.9998F, 0.04330388F);
+            this.Textbox9.LocationFloat = new DevExpress.Utils.PointFloat(446.9998F, 0F);
             this.Textbox9.Multiline = true;
             this.Textbox9.Name = "Textbox9";
             this.Textbox9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox9.SizeF = new System.Drawing.SizeF(69.99994F, 37.84304F);
+            this.Textbox9.SizeF = new System.Drawing.SizeF(69.99994F, 37.88633F);
             this.Textbox9.StylePriority.UsePadding = false;
             this.Textbox9.StylePriority.UseTextAlignment = false;
             this.Textbox9.Text = "Pay\r\nStatus";
@@ -2674,8 +2681,6 @@
             // 
             this.Subtitle.Description = "Subtitle";
             this.Subtitle.Name = "Subtitle";
-            this.Subtitle.Type = typeof(System.DateTime);
-            this.Subtitle.ValueInfo = "2023-09-11";
             this.Subtitle.Visible = false;
             // 
             // pstrServerName
@@ -2773,7 +2778,6 @@
             this.pbooReturnCrossReferences.Name = "pbooReturnCrossReferences";
             this.pbooReturnCrossReferences.Type = typeof(bool);
             this.pbooReturnCrossReferences.ValueInfo = "False";
-            this.pbooReturnCrossReferences.Visible = false;
             // 
             // pbooTotalByInterestType
             // 
@@ -2934,8 +2938,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "HasCrossReferences"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CostDecimal"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OilDecimal"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GasDecimal"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OtherDecimal"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DOIDeckCodeNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ViewRDAddressNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "UseDefaultRDAddress"),
@@ -2952,6 +2954,7 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_LookupProperties";
             sourceNode2.Alias = null;
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source2.DataMember = "LookupProperties";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_LookupProperties";
@@ -2959,7 +2962,8 @@
             selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyAndWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "RecordType")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_LookupCompanies";
             sourceNode3.Alias = null;
@@ -2974,6 +2978,7 @@
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Dynamic_LookupOwners";
             sourceNode4.Alias = null;
+            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source4.DataMember = "LookupOwners";
             source4.DataSource = this.Dynamic;
             source4.Name = "Dynamic_LookupOwners";
@@ -2981,7 +2986,8 @@
             selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RecordType")});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Dynamic_LookupInterestType";
             sourceNode5.Alias = null;
@@ -3046,7 +3052,7 @@
             this.pbooShowDates.Description = "Show Detail";
             this.pbooShowDates.Name = "pbooShowDates";
             this.pbooShowDates.Type = typeof(bool);
-            this.pbooShowDates.ValueInfo = "1";
+            this.pbooShowDates.ValueInfo = "False";
             // 
             // xrCrossBandBox2
             // 
@@ -3125,12 +3131,26 @@
             // 
             this.pstrBeginningDeckCode.Description = "Beginning Deck Code";
             this.pstrBeginningDeckCode.Name = "pstrBeginningDeckCode";
+            dynamicListLookUpSettings9.DataMember = "LookupDeckCodes";
+            dynamicListLookUpSettings9.DataSource = this.Dynamic;
+            dynamicListLookUpSettings9.DisplayMember = "Description";
+            dynamicListLookUpSettings9.FilterString = null;
+            dynamicListLookUpSettings9.SortMember = null;
+            dynamicListLookUpSettings9.ValueMember = "Number";
+            this.pstrBeginningDeckCode.ValueSourceSettings = dynamicListLookUpSettings9;
             // 
             // pstrEndingDeckCode
             // 
             this.pstrEndingDeckCode.Description = "Ending Deck Code";
             this.pstrEndingDeckCode.Name = "pstrEndingDeckCode";
             this.pstrEndingDeckCode.ValueInfo = "ZZZZZZ";
+            dynamicListLookUpSettings10.DataMember = "LookupDeckCodes";
+            dynamicListLookUpSettings10.DataSource = this.Dynamic;
+            dynamicListLookUpSettings10.DisplayMember = "Description";
+            dynamicListLookUpSettings10.FilterString = null;
+            dynamicListLookUpSettings10.SortMember = null;
+            dynamicListLookUpSettings10.ValueMember = "Number";
+            this.pstrEndingDeckCode.ValueSourceSettings = dynamicListLookUpSettings10;
             // 
             // pstrSelectDeckCode
             // 
@@ -3138,13 +3158,13 @@
             this.pstrSelectDeckCode.MultiValue = true;
             this.pstrSelectDeckCode.Name = "pstrSelectDeckCode";
             this.pstrSelectDeckCode.SelectAllValues = true;
-            dynamicListLookUpSettings9.DataMember = "LookupDeckCodes";
-            dynamicListLookUpSettings9.DataSource = this.Dynamic;
-            dynamicListLookUpSettings9.DisplayMember = "Description";
-            dynamicListLookUpSettings9.FilterString = null;
-            dynamicListLookUpSettings9.SortMember = null;
-            dynamicListLookUpSettings9.ValueMember = "Number";
-            this.pstrSelectDeckCode.ValueSourceSettings = dynamicListLookUpSettings9;
+            dynamicListLookUpSettings11.DataMember = "LookupDeckCodes";
+            dynamicListLookUpSettings11.DataSource = this.Dynamic;
+            dynamicListLookUpSettings11.DisplayMember = "Description";
+            dynamicListLookUpSettings11.FilterString = null;
+            dynamicListLookUpSettings11.SortMember = null;
+            dynamicListLookUpSettings11.ValueMember = "Number";
+            this.pstrSelectDeckCode.ValueSourceSettings = dynamicListLookUpSettings11;
             // 
             // DOIbyOwnerDetail
             // 
@@ -3179,55 +3199,55 @@
             this.PageWidth = 1400;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Legal;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooSortByOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningDeckCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingDeckCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectDeckCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooSortByOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngInterestTypesToShow, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowDates, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnCrossReferences, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowDates, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngInterestTypesToShow, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnCrossReferences, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooTotalByInterestType, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowIsCrossReference, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowHasCrossReference, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowIsActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooTotalByInterestType, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+            this.pdteDateToUse,
+            this.pbooSortByOwner,
+            this.pstrBeginningPropertyNumber,
+            this.pstrEndingPropertyNumber,
+            this.pstrSelectProperty,
             this.pstrBeginningDeckCode,
             this.pstrEndingDeckCode,
             this.pstrSelectDeckCode,
             this.pstrBeginningOwnerNumber,
             this.pstrEndingOwnerNumber,
             this.pstrSelectOwner,
-            this.pbooSortByOwner,
-            this.Subtitle,
+            this.plngInterestTypesToShow,
+            this.pbooShowDates,
+            this.pbooReturnCrossReferences,
             this.pstrServerName,
             this.pstrDatabaseName,
             this.plngCompanyID,
-            this.pstrBeginningPropertyNumber,
-            this.pstrEndingPropertyNumber,
-            this.pstrSelectProperty,
-            this.pbooShowDates,
-            this.pdteDateToUse,
             this.plngUserID,
-            this.plngInterestTypesToShow,
-            this.pbooReturnCrossReferences,
-            this.pbooTotalByInterestType,
             this.plngShowIsCrossReference,
             this.plngShowHasCrossReference,
             this.plngShowIsActive,
-            this.pbooShowCriteria});
+            this.pbooShowCriteria,
+            this.Subtitle,
+            this.pbooTotalByInterestType});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

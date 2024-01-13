@@ -94,6 +94,13 @@
             this.pbooShowExemptDOITotals = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectState = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCounty = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngShowIsCrossReference = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngShowHasCrossReference = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooReturnCrossReferences = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngInterestTypesToShow = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -1124,6 +1131,49 @@
             this.pstrSelectCounty.Name = "pstrSelectCounty";
             this.pstrSelectCounty.Type = typeof(int);
             // 
+            // plngShowIsCrossReference
+            // 
+            this.plngShowIsCrossReference.Description = "Parameter1";
+            this.plngShowIsCrossReference.Name = "plngShowIsCrossReference";
+            this.plngShowIsCrossReference.Type = typeof(int);
+            this.plngShowIsCrossReference.ValueInfo = "0";
+            // 
+            // plngShowHasCrossReference
+            // 
+            this.plngShowHasCrossReference.Description = "Parameter1";
+            this.plngShowHasCrossReference.Name = "plngShowHasCrossReference";
+            this.plngShowHasCrossReference.Type = typeof(int);
+            this.plngShowHasCrossReference.ValueInfo = "0";
+            // 
+            // pbooReturnCrossReferences
+            // 
+            this.pbooReturnCrossReferences.Description = "Parameter1";
+            this.pbooReturnCrossReferences.Name = "pbooReturnCrossReferences";
+            this.pbooReturnCrossReferences.Type = typeof(bool);
+            this.pbooReturnCrossReferences.ValueInfo = "False";
+            // 
+            // plngInterestTypesToShow
+            // 
+            this.plngInterestTypesToShow.Description = "Parameter1";
+            this.plngInterestTypesToShow.Name = "plngInterestTypesToShow";
+            this.plngInterestTypesToShow.Type = typeof(int);
+            this.plngInterestTypesToShow.ValueInfo = "0";
+            // 
+            // pstrBeginningDeckCode
+            // 
+            this.pstrBeginningDeckCode.Description = "Beginning Deck Code";
+            this.pstrBeginningDeckCode.Name = "pstrBeginningDeckCode";
+            // 
+            // pstrEndingDeckCode
+            // 
+            this.pstrEndingDeckCode.Name = "pstrEndingDeckCode";
+            // 
+            // pstrSelectDeckCode
+            // 
+            this.pstrSelectDeckCode.Description = "Parameter1";
+            this.pstrSelectDeckCode.MultiValue = true;
+            this.pstrSelectDeckCode.Name = "pstrSelectDeckCode";
+            // 
             // ExcelDOIDeckInformation
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1177,7 +1227,14 @@
             this.pstrSelectProperty,
             this.pbooShowNotes,
             this.pstrSelectState,
-            this.pstrSelectCounty});
+            this.pstrSelectCounty,
+            this.plngShowIsCrossReference,
+            this.plngShowHasCrossReference,
+            this.pbooReturnCrossReferences,
+            this.plngInterestTypesToShow,
+            this.pstrBeginningDeckCode,
+            this.pstrEndingDeckCode,
+            this.pstrSelectDeckCode});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1239,5 +1296,12 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowExemptDOITotals;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectState;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectCounty;
+        private DevExpress.XtraReports.Parameters.Parameter plngShowIsCrossReference;
+        private DevExpress.XtraReports.Parameters.Parameter plngShowHasCrossReference;
+        private DevExpress.XtraReports.Parameters.Parameter pbooReturnCrossReferences;
+        private DevExpress.XtraReports.Parameters.Parameter plngInterestTypesToShow;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningDeckCode;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingDeckCode;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectDeckCode;
     }
 }

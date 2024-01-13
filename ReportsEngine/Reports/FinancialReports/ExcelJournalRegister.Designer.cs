@@ -49,6 +49,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter18 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter19 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter20 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter21 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelJournalRegister));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
@@ -127,6 +129,8 @@
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.First = new DevExpress.XtraReports.UI.CalculatedField();
+            this.pbooShowYearEndClosingEntries = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowZeroBalance = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -191,6 +195,12 @@
             queryParameter19.Name = "@plngSortBy";
             queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngSortBy", typeof(int));
+            queryParameter20.Name = "@pbooShowYearEndClosingEntries";
+            queryParameter20.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter20.Value = new DevExpress.DataAccess.Expression("?pbooShowYearEndClosingEntries", typeof(bool));
+            queryParameter21.Name = "@pbooShowZeroBalance";
+            queryParameter21.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter21.Value = new DevExpress.DataAccess.Expression("?pbooShowZeroBalance", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -210,7 +220,9 @@
             queryParameter16,
             queryParameter17,
             queryParameter18,
-            queryParameter19});
+            queryParameter19,
+            queryParameter20,
+            queryParameter21});
             storedProcQuery1.StoredProcName = "Report_JournalRegister";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -1463,6 +1475,20 @@
             this.First.FieldType = DevExpress.XtraReports.UI.FieldType.String;
             this.First.Name = "First";
             // 
+            // pbooShowYearEndClosingEntries
+            // 
+            this.pbooShowYearEndClosingEntries.Description = "Show Year End Closing Entries";
+            this.pbooShowYearEndClosingEntries.Name = "pbooShowYearEndClosingEntries";
+            this.pbooShowYearEndClosingEntries.Type = typeof(bool);
+            this.pbooShowYearEndClosingEntries.ValueInfo = "False";
+            // 
+            // pbooShowZeroBalance
+            // 
+            this.pbooShowZeroBalance.Description = "Show Zero Balance";
+            this.pbooShowZeroBalance.Name = "pbooShowZeroBalance";
+            this.pbooShowZeroBalance.Type = typeof(bool);
+            this.pbooShowZeroBalance.ValueInfo = "False";
+            // 
             // ExcelJournalRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1548,7 +1574,9 @@
             this.pstrSelectBatch,
             this.pstrSelectOwner,
             this.pstrSelectVendor,
-            this.pstrSelectProperty});
+            this.pstrSelectProperty,
+            this.pbooShowYearEndClosingEntries,
+            this.pbooShowZeroBalance});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1632,5 +1660,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
         private DevExpress.XtraReports.UI.CalculatedField First;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEndClosingEntries;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowZeroBalance;
     }
 }

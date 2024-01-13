@@ -141,7 +141,6 @@
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Tablix1_GroupFooterBand = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             this.Textbox5 = new DevExpress.XtraReports.UI.XRLabel();
@@ -696,14 +695,6 @@
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // Tablix1_GroupFooterBand
-            // 
-            this.Tablix1_GroupFooterBand.HeightF = 0F;
-            this.Tablix1_GroupFooterBand.Level = 2;
-            this.Tablix1_GroupFooterBand.Name = "Tablix1_GroupFooterBand";
-            this.Tablix1_GroupFooterBand.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
-            this.Tablix1_GroupFooterBand.Visible = false;
             // 
             // pageFooterBand1
             // 
@@ -1357,6 +1348,7 @@
             this.groupHeaderBand1.HeightF = 0F;
             this.groupHeaderBand1.Level = 2;
             this.groupHeaderBand1.Name = "groupHeaderBand1";
+            this.groupHeaderBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBandExceptFirstEntry;
             // 
             // groupHeaderBand2
             // 
@@ -1481,7 +1473,6 @@
             this.topMarginBand1,
             this.bottomMarginBand1,
             this.Tablix1,
-            this.Tablix1_GroupFooterBand,
             this.pageFooterBand1,
             this.PageHeader,
             this.ReportFooter,
@@ -1528,7 +1519,6 @@
         private DevExpress.XtraReports.UI.TopMarginBand topMarginBand1;
         private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
         private DevExpress.XtraReports.UI.DetailBand Tablix1;
-        private DevExpress.XtraReports.UI.GroupFooterBand Tablix1_GroupFooterBand;
         private DevExpress.XtraReports.UI.PageFooterBand pageFooterBand1;
         private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
         private DevExpress.XtraReports.Parameters.Parameter pstrDatabaseName;

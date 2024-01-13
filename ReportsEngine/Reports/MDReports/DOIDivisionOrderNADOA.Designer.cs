@@ -1897,6 +1897,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DOIDivisionOrderDataSet";
             sourceNode1.Alias = null;
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"817\" />";
             source1.DataMember = "DOIDivisionOrderDataSet";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DOIDivisionOrderDataSet";
@@ -1931,7 +1932,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "City"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Country"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "EMail"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsActive"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "MailingName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Number"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Phone1"),

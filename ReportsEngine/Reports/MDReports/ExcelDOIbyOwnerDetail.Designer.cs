@@ -40,6 +40,9 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelDOIbyOwnerDetail));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -121,6 +124,9 @@
             this.plngShowIsActive = new DevExpress.XtraReports.Parameters.Parameter();
             this.Sort = new DevExpress.XtraReports.UI.CalculatedField();
             this.pdteDateToUse = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -134,30 +140,39 @@
             queryParameter2.Name = "@pdteDateToUse";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter2.Value = new DevExpress.DataAccess.Expression("?pdteDateToUse", typeof(System.DateTime));
-            queryParameter3.Name = "@pstrBeginningOwnerNumber";
+            queryParameter3.Name = "@pstrBeginningDeckCode";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
-            queryParameter4.Name = "@pstrEndingOwnerNumber";
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrBeginningDeckCode", typeof(string));
+            queryParameter4.Name = "@pstrEndingDeckCode";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
-            queryParameter5.Name = "@pstrBeginningPropertyNumber";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrEndingDeckCode", typeof(string));
+            queryParameter5.Name = "@pstrBeginningOwnerNumber";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
-            queryParameter6.Name = "@pstrEndingPropertyNumber";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
+            queryParameter6.Name = "@pstrEndingOwnerNumber";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
-            queryParameter7.Name = "@plngInterestTypesToShow";
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter7.Name = "@pstrBeginningPropertyNumber";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngInterestTypesToShow", typeof(int));
-            queryParameter8.Name = "@plngShowActive";
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
+            queryParameter8.Name = "@pstrEndingPropertyNumber";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngShowIsActive", typeof(int));
-            queryParameter9.Name = "@plngShowIsCrossReference";
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
+            queryParameter9.Name = "@plngInterestTypesToShow";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngShowIsCrossReference", typeof(int));
-            queryParameter10.Name = "@plngShowHasCrossReference";
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngInterestTypesToShow", typeof(int));
+            queryParameter10.Name = "@plngShowActive";
             queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngShowHasCrossReference", typeof(int));
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngShowIsActive", typeof(int));
+            queryParameter11.Name = "@pbooReturnCrossReferences";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pbooReturnCrossReferences", typeof(bool));
+            queryParameter12.Name = "@plngShowIsCrossReference";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngShowIsCrossReference", typeof(int));
+            queryParameter13.Name = "@plngShowHasCrossReference";
+            queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngShowHasCrossReference", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -168,7 +183,10 @@
             queryParameter7,
             queryParameter8,
             queryParameter9,
-            queryParameter10});
+            queryParameter10,
+            queryParameter11,
+            queryParameter12,
+            queryParameter13});
             storedProcQuery1.StoredProcName = "Report_DOIbyOwnerDetail";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -1547,6 +1565,22 @@
             this.pdteDateToUse.Type = typeof(System.DateTime);
             this.pdteDateToUse.ValueInfo = "2023-11-22";
             // 
+            // pstrBeginningDeckCode
+            // 
+            this.pstrBeginningDeckCode.Description = "Parameter1";
+            this.pstrBeginningDeckCode.Name = "pstrBeginningDeckCode";
+            // 
+            // pstrEndingDeckCode
+            // 
+            this.pstrEndingDeckCode.Description = "Parameter1";
+            this.pstrEndingDeckCode.Name = "pstrEndingDeckCode";
+            // 
+            // pstrSelectDeckCode
+            // 
+            this.pstrSelectDeckCode.Description = "Parameter1";
+            this.pstrSelectDeckCode.MultiValue = true;
+            this.pstrSelectDeckCode.Name = "pstrSelectDeckCode";
+            // 
             // ExcelDOIbyOwnerDetail
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1563,7 +1597,7 @@
             this.DataSource = this.Dynamic;
             this.DisplayName = "DOIbyOwnerDetail";
             this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) And [PhaseWellNumber] In (?pstrSelectProperty" +
-    ")";
+    ") And [DOIDeckCodeNumber] In (?pstrSelectDeckCode)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
             this.PageWidth = 1700;
@@ -1611,7 +1645,10 @@
             this.pstrDatabaseName,
             this.pbooShowCriteria,
             this.pbooShowDates,
-            this.plngShowIsActive});
+            this.plngShowIsActive,
+            this.pstrBeginningDeckCode,
+            this.pstrEndingDeckCode,
+            this.pstrSelectDeckCode});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1693,5 +1730,8 @@
         private DevExpress.XtraReports.Parameters.Parameter plngShowIsActive;
         private DevExpress.XtraReports.UI.CalculatedField Sort;
         private DevExpress.XtraReports.Parameters.Parameter pdteDateToUse;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningDeckCode;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingDeckCode;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectDeckCode;
     }
 }

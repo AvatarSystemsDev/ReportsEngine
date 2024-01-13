@@ -169,14 +169,14 @@
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.lngZero = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngTransactionSourceCodeID = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
-            this.lngZero = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox67)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -1036,6 +1036,7 @@
             this.pbooShowCriteria.Name = "pbooShowCriteria";
             this.pbooShowCriteria.Type = typeof(bool);
             this.pbooShowCriteria.ValueInfo = "True";
+            this.pbooShowCriteria.Visible = false;
             // 
             // plngSortOrder
             // 
@@ -1190,6 +1191,31 @@
             this.SubBand3.HeightF = 38.33669F;
             this.SubBand3.Name = "SubBand3";
             this.SubBand3.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
+            // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.GenerateOwnPages = true;
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.lngZero));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngTransactionSourceCodeID", this.plngTransactionSourceCodeID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAPCheckProcessTrackingID", this.plngID));
+            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.ProcessReports.GLProcessPostRegister();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(770F, 38.33669F);
+            // 
+            // lngZero
+            // 
+            this.lngZero.Description = "zero";
+            this.lngZero.Name = "lngZero";
+            this.lngZero.Type = typeof(int);
+            this.lngZero.ValueInfo = "0";
+            this.lngZero.Visible = false;
             // 
             // plngTransactionSourceCodeID
             // 
@@ -1357,31 +1383,6 @@
             selectNode1,
             selectNode2,
             selectNode3});
-            // 
-            // lngZero
-            // 
-            this.lngZero.Description = "zero";
-            this.lngZero.Name = "lngZero";
-            this.lngZero.Type = typeof(int);
-            this.lngZero.ValueInfo = "0";
-            this.lngZero.Visible = false;
-            // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.GenerateOwnPages = true;
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.lngZero));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngTransactionSourceCodeID", this.plngTransactionSourceCodeID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAPCheckProcessTrackingID", this.plngID));
-            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.ProcessReports.GLProcessPostRegister();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(770F, 38.33669F);
             // 
             // APCheckRegister
             // 

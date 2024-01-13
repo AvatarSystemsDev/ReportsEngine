@@ -1057,6 +1057,8 @@
             // 
             this.Tablix1_GroupHeaderBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel23});
+            this.Tablix1_GroupHeaderBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PhaseWellID])")});
             this.Tablix1_GroupHeaderBand.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("PhaseWellNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.Tablix1_GroupHeaderBand.HeightF = 17.00004F;
@@ -1074,8 +1076,8 @@
             this.xrLabel23.BorderWidth = 0F;
             this.xrLabel23.CanGrow = false;
             this.xrLabel23.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Property/Well:  \'+ [PhaseWellNumber]+\'  \' +[PhaseWellDescription]+ \'Type\'+ [Phas" +
-                    "eWellTypeCode]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Property/Well:  \' + [PhaseWellNumber] + \'  \' + [PhaseWellDescription] + Iif([Pha" +
+                    "seWellNumber], \'  Type \'+ [PhaseWellTypeCode] , \'\')")});
             this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel23.KeepTogether = true;
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -1887,7 +1889,7 @@
             // 
             this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
             this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 8.797152F);
+            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 7.505569F);
             this.xrRunDate.Name = "xrRunDate";
             this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;

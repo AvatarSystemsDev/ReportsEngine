@@ -48,6 +48,7 @@
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery6 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery7 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DOIDeckInformation));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
@@ -152,6 +153,9 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings8 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings9 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings3 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -184,7 +188,6 @@
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel72 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
@@ -223,6 +226,7 @@
             this.xrLabel67 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel71 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
             this.xrCrossBandHeader = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
@@ -233,6 +237,8 @@
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrDeckCodesSelected = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel77 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPropertiesSelected = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
@@ -246,11 +252,13 @@
             this.pstrSelectState = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCounty = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
-            this.xrDeckCodesSelected = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel77 = new DevExpress.XtraReports.UI.XRLabel();
             this.pstrBeginningDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngInterestTypesToShow = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooReturnCrossReferences = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngShowIsCrossReference = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngShowHasCrossReference = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -327,6 +335,8 @@
             customSqlQuery1.Sql = "Select 0 AS ID, \'(First)\' AS Description, \'\' AS Number\r\nUNION ALL\r\nSelect -1 AS I" +
     "D, \'(Last)\' AS Description, \'ZZZZZZ\' AS Number\r\nUNION ALL\r\nSELECT ID, Descriptio" +
     "n, Number\r\nFROM DOIDeckCode";
+            storedProcQuery7.Name = "InterestTypesLookup";
+            storedProcQuery7.StoredProcName = "ReportWizard_PopulateInterestTypesForDOIReports";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
             storedProcQuery2,
@@ -334,7 +344,8 @@
             storedProcQuery4,
             storedProcQuery5,
             storedProcQuery6,
-            customSqlQuery1});
+            customSqlQuery1,
+            storedProcQuery7});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // Pulse
@@ -693,7 +704,7 @@
             // 
             this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
             this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 9.797152F);
+            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 8.505569F);
             this.xrRunDate.Name = "xrRunDate";
             this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
@@ -907,32 +918,6 @@
             this.xrLabel72.StylePriority.UsePadding = false;
             this.xrLabel72.StylePriority.UseTextAlignment = false;
             this.xrLabel72.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel28
-            // 
-            this.xrLabel28.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel28.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel28.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel28.BorderWidth = 0.1F;
-            this.xrLabel28.CanGrow = false;
-            this.xrLabel28.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Notes: \' + [Notes]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(not IsNullOrEmpty([Notes]), ?pbooShowNotes, false )")});
-            this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel28.KeepTogether = true;
-            this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel28.Multiline = true;
-            this.xrLabel28.Name = "xrLabel28";
-            this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel28.SizeF = new System.Drawing.SizeF(770.0001F, 18.5F);
-            this.xrLabel28.StylePriority.UseBorderColor = false;
-            this.xrLabel28.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel28.StylePriority.UseBorders = false;
-            this.xrLabel28.StylePriority.UseBorderWidth = false;
-            this.xrLabel28.StylePriority.UseFont = false;
-            this.xrLabel28.StylePriority.UsePadding = false;
-            this.xrLabel28.StylePriority.UseTextAlignment = false;
-            this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel9
             // 
@@ -1782,6 +1767,32 @@
             this.SubBand3.HeightF = 18.5F;
             this.SubBand3.Name = "SubBand3";
             // 
+            // xrLabel28
+            // 
+            this.xrLabel28.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel28.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel28.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel28.BorderWidth = 0.1F;
+            this.xrLabel28.CanGrow = false;
+            this.xrLabel28.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Notes: \' + [Notes]"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(not IsNullOrEmpty([Notes]), ?pbooShowNotes, false )")});
+            this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel28.KeepTogether = true;
+            this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel28.Multiline = true;
+            this.xrLabel28.Name = "xrLabel28";
+            this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel28.SizeF = new System.Drawing.SizeF(770.0001F, 18.5F);
+            this.xrLabel28.StylePriority.UseBorderColor = false;
+            this.xrLabel28.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel28.StylePriority.UseBorders = false;
+            this.xrLabel28.StylePriority.UseBorderWidth = false;
+            this.xrLabel28.StylePriority.UseFont = false;
+            this.xrLabel28.StylePriority.UsePadding = false;
+            this.xrLabel28.StylePriority.UseTextAlignment = false;
+            this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // SubBand5
             // 
             this.SubBand5.HeightF = 15F;
@@ -1909,6 +1920,33 @@
             this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(0.5599976F, 60.08002F);
             this.xrPanel1.Name = "xrPanel1";
             this.xrPanel1.SizeF = new System.Drawing.SizeF(769.4399F, 16.80334F);
+            // 
+            // xrDeckCodesSelected
+            // 
+            this.xrDeckCodesSelected.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pstrBeginningDeckCode <= \'\'  And ?pstrEndingDeckCode == \'ZZZZZZ\', \'Selected " +
+                    "Properties\', ?pstrBeginningDeckCode + \' to \' + ?pstrEndingDeckCode )")});
+            this.xrDeckCodesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrDeckCodesSelected.LocationFloat = new DevExpress.Utils.PointFloat(520.8258F, 0F);
+            this.xrDeckCodesSelected.Multiline = true;
+            this.xrDeckCodesSelected.Name = "xrDeckCodesSelected";
+            this.xrDeckCodesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrDeckCodesSelected.SizeF = new System.Drawing.SizeF(248.6143F, 16.32817F);
+            this.xrDeckCodesSelected.StylePriority.UseFont = false;
+            this.xrDeckCodesSelected.StylePriority.UseTextAlignment = false;
+            this.xrDeckCodesSelected.Text = "xrLabel7";
+            this.xrDeckCodesSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel77
+            // 
+            this.xrLabel77.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel77.LocationFloat = new DevExpress.Utils.PointFloat(429.159F, 0F);
+            this.xrLabel77.Multiline = true;
+            this.xrLabel77.Name = "xrLabel77";
+            this.xrLabel77.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel77.SizeF = new System.Drawing.SizeF(91.66676F, 16.32815F);
+            this.xrLabel77.StylePriority.UseFont = false;
+            this.xrLabel77.Text = "For Deck Codes:";
             // 
             // xrPropertiesSelected
             // 
@@ -2062,7 +2100,7 @@
             // 
             // pstrSelectState
             // 
-            this.pstrSelectState.Description = "Select State List";
+            this.pstrSelectState.Description = "Select State";
             this.pstrSelectState.MultiValue = true;
             this.pstrSelectState.Name = "pstrSelectState";
             this.pstrSelectState.SelectAllValues = true;
@@ -2077,7 +2115,7 @@
             // 
             // pstrSelectCounty
             // 
-            this.pstrSelectCounty.Description = "Select County List";
+            this.pstrSelectCounty.Description = "Select County";
             this.pstrSelectCounty.MultiValue = true;
             this.pstrSelectCounty.Name = "pstrSelectCounty";
             this.pstrSelectCounty.SelectAllValues = true;
@@ -2124,20 +2162,10 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "LastProcessingDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelCost"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelOil"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelGas"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelOther"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonTaxExOil"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonTaxExGas"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonTaxExOther"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelTaxExOil"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelTaxExGas"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelTaxExOther"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDedExOil"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDedExGas"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDedExOther"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelDedExOil"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelDedExGas"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NonDelDedExOther"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CrossReferenceDOIHeaderID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsCrossReferenceDOI"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CrossReferencePropertyNumber"),
@@ -2252,33 +2280,6 @@
             selectNode6,
             selectNode7});
             // 
-            // xrDeckCodesSelected
-            // 
-            this.xrDeckCodesSelected.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pstrBeginningDeckCode <= \'\'  And ?pstrEndingDeckCode == \'ZZZZZZ\', \'Selected " +
-                    "Properties\', ?pstrBeginningDeckCode + \' to \' + ?pstrEndingDeckCode )")});
-            this.xrDeckCodesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrDeckCodesSelected.LocationFloat = new DevExpress.Utils.PointFloat(520.8258F, 0F);
-            this.xrDeckCodesSelected.Multiline = true;
-            this.xrDeckCodesSelected.Name = "xrDeckCodesSelected";
-            this.xrDeckCodesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrDeckCodesSelected.SizeF = new System.Drawing.SizeF(248.6143F, 16.32817F);
-            this.xrDeckCodesSelected.StylePriority.UseFont = false;
-            this.xrDeckCodesSelected.StylePriority.UseTextAlignment = false;
-            this.xrDeckCodesSelected.Text = "xrLabel7";
-            this.xrDeckCodesSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel77
-            // 
-            this.xrLabel77.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel77.LocationFloat = new DevExpress.Utils.PointFloat(429.159F, 0F);
-            this.xrLabel77.Multiline = true;
-            this.xrLabel77.Name = "xrLabel77";
-            this.xrLabel77.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel77.SizeF = new System.Drawing.SizeF(91.66676F, 16.32815F);
-            this.xrLabel77.StylePriority.UseFont = false;
-            this.xrLabel77.Text = "For Deck Codes:";
-            // 
             // pstrBeginningDeckCode
             // 
             this.pstrBeginningDeckCode.Description = "Beginning Deck Code";
@@ -2318,6 +2319,49 @@
             dynamicListLookUpSettings8.ValueMember = "Number";
             this.pstrSelectDeckCode.ValueSourceSettings = dynamicListLookUpSettings8;
             // 
+            // plngInterestTypesToShow
+            // 
+            this.plngInterestTypesToShow.Description = "Interest Types To Show";
+            this.plngInterestTypesToShow.Name = "plngInterestTypesToShow";
+            this.plngInterestTypesToShow.Type = typeof(int);
+            this.plngInterestTypesToShow.ValueInfo = "0";
+            dynamicListLookUpSettings9.DataMember = "InterestTypesLookup";
+            dynamicListLookUpSettings9.DataSource = this.Dynamic;
+            dynamicListLookUpSettings9.DisplayMember = "Item";
+            dynamicListLookUpSettings9.FilterString = null;
+            dynamicListLookUpSettings9.SortMember = null;
+            dynamicListLookUpSettings9.ValueMember = "ItemData";
+            this.plngInterestTypesToShow.ValueSourceSettings = dynamicListLookUpSettings9;
+            // 
+            // pbooReturnCrossReferences
+            // 
+            this.pbooReturnCrossReferences.Description = "Return Cross References";
+            this.pbooReturnCrossReferences.Name = "pbooReturnCrossReferences";
+            this.pbooReturnCrossReferences.Type = typeof(bool);
+            this.pbooReturnCrossReferences.ValueInfo = "False";
+            // 
+            // plngShowIsCrossReference
+            // 
+            this.plngShowIsCrossReference.Description = "Show Is Cross Ref.";
+            this.plngShowIsCrossReference.Name = "plngShowIsCrossReference";
+            this.plngShowIsCrossReference.Type = typeof(int);
+            this.plngShowIsCrossReference.ValueInfo = "0";
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "All"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Cross Referenced Only"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Not Cross Referenced Only"));
+            this.plngShowIsCrossReference.ValueSourceSettings = staticListLookUpSettings2;
+            // 
+            // plngShowHasCrossReference
+            // 
+            this.plngShowHasCrossReference.Description = "Show Has Cross Ref.";
+            this.plngShowHasCrossReference.Name = "plngShowHasCrossReference";
+            this.plngShowHasCrossReference.Type = typeof(int);
+            this.plngShowHasCrossReference.ValueInfo = "0";
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "All"));
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Has Cross References Only"));
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "No Cross References Only"));
+            this.plngShowHasCrossReference.ValueSourceSettings = staticListLookUpSettings3;
+            // 
             // DOIDeckInformation
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2346,18 +2390,22 @@
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningDeckCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingDeckCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectDeckCode, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectState, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCounty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngInterestTypesToShow, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnCrossReferences, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowIsCrossReference, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowHasCrossReference, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectState, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCounty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowExemptDOITotals, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -2365,18 +2413,22 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pdteDateToUse,
+            this.pstrBeginningPropertyNumber,
+            this.pstrEndingPropertyNumber,
+            this.pstrSelectProperty,
             this.pstrBeginningDeckCode,
             this.pstrEndingDeckCode,
             this.pstrSelectDeckCode,
+            this.pstrSelectState,
+            this.pstrSelectCounty,
+            this.plngInterestTypesToShow,
+            this.pbooReturnCrossReferences,
+            this.plngShowIsCrossReference,
+            this.plngShowHasCrossReference,
             this.plngUserID,
             this.pstrServerName,
             this.pstrDatabaseName,
             this.plngCompanyID,
-            this.pstrBeginningPropertyNumber,
-            this.pstrEndingPropertyNumber,
-            this.pstrSelectProperty,
-            this.pstrSelectState,
-            this.pstrSelectCounty,
             this.Subtitle,
             this.plngShowActive,
             this.pbooShowExemptDOITotals,
@@ -2489,5 +2541,9 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningDeckCode;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingDeckCode;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectDeckCode;
+        private DevExpress.XtraReports.Parameters.Parameter plngInterestTypesToShow;
+        private DevExpress.XtraReports.Parameters.Parameter pbooReturnCrossReferences;
+        private DevExpress.XtraReports.Parameters.Parameter plngShowIsCrossReference;
+        private DevExpress.XtraReports.Parameters.Parameter plngShowHasCrossReference;
     }
 }
