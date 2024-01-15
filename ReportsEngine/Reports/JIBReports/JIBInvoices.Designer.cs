@@ -524,8 +524,8 @@
             this.PropertyNumber.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.PropertyNumber.BorderWidth = 1F;
             this.PropertyNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyAndWellNumber]+ \': \' + [PhaseWellDescription]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PropertyAndWellNumber])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PropertyAndWellNumber])\n"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyAndWellNumber]+ \' : \' + [PhaseWellDescription]")});
             this.PropertyNumber.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.PropertyNumber.KeepTogether = true;
             this.PropertyNumber.LocationFloat = new DevExpress.Utils.PointFloat(13F, 29.56F);
@@ -1540,8 +1540,8 @@
             this.xrLabel14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel14.BorderWidth = 1F;
             this.xrLabel14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(not IsNullOrEmpty([PropertyAndWellNumber]), [PropertyAndWellNumber]+\' \'+ [Pha" +
-                    "seWellDescription]+\':  \' , \'\')  + \'Invoice \' + \'Total:\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(not IsNullOrEmpty([PropertyAndWellNumber]), [PropertyAndWellNumber]+\' : \'+ [P" +
+                    "haseWellDescription]+\':  \' , \'\')  + \'Invoice \' + \'Total:\'")});
             this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel14.KeepTogether = true;
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(0F, 11.99997F);
