@@ -708,7 +708,7 @@
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(692.4005F, 0F);
             this.xrLabel9.Name = "xrLabel9";
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel9.SizeF = new System.Drawing.SizeF(77.43988F, 17.00012F);
+            this.xrLabel9.SizeF = new System.Drawing.SizeF(76.55994F, 17.00012F);
             this.xrLabel9.StylePriority.UseBorderColor = false;
             this.xrLabel9.StylePriority.UseBorderDashStyle = false;
             this.xrLabel9.StylePriority.UseBorders = false;
@@ -1149,11 +1149,11 @@
             this.Textbox16.BorderWidth = 1F;
             this.Textbox16.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox16.KeepTogether = true;
-            this.Textbox16.LocationFloat = new DevExpress.Utils.PointFloat(692.4006F, 86.21671F);
+            this.Textbox16.LocationFloat = new DevExpress.Utils.PointFloat(692.4005F, 86.21671F);
             this.Textbox16.Multiline = true;
             this.Textbox16.Name = "Textbox16";
             this.Textbox16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox16.SizeF = new System.Drawing.SizeF(77F, 39.37F);
+            this.Textbox16.SizeF = new System.Drawing.SizeF(76.56018F, 39.37F);
             this.Textbox16.StylePriority.UsePadding = false;
             this.Textbox16.StylePriority.UseTextAlignment = false;
             this.Textbox16.Text = "Revenue Decimal";
@@ -1433,7 +1433,7 @@
             // 
             // plngInterestTypesToShow
             // 
-            this.plngInterestTypesToShow.Description = "Interest Type";
+            this.plngInterestTypesToShow.Description = "Interest Types To Show";
             this.plngInterestTypesToShow.Name = "plngInterestTypesToShow";
             this.plngInterestTypesToShow.Type = typeof(int);
             this.plngInterestTypesToShow.ValueInfo = "0";
@@ -1445,7 +1445,7 @@
             // 
             // pbooPrintJIBAddress
             // 
-            this.pbooPrintJIBAddress.Description = "Address";
+            this.pbooPrintJIBAddress.Description = "Address To Show";
             this.pbooPrintJIBAddress.Name = "pbooPrintJIBAddress";
             this.pbooPrintJIBAddress.Type = typeof(int);
             this.pbooPrintJIBAddress.ValueInfo = "0";

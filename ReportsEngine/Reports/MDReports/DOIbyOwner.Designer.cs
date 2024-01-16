@@ -265,7 +265,6 @@ namespace ReportsEngine.Reports
             this.pstrEndingDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectDeckCode = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngShowIsCrossReference = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooHasCrosRef = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngShowHasCrossReference = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -2165,7 +2164,7 @@ namespace ReportsEngine.Reports
             // 
             // pstrSelectDeckCode
             // 
-            this.pstrSelectDeckCode.Description = "Select DOI Deck Code";
+            this.pstrSelectDeckCode.Description = "Select Deck Code";
             this.pstrSelectDeckCode.MultiValue = true;
             this.pstrSelectDeckCode.Name = "pstrSelectDeckCode";
             this.pstrSelectDeckCode.SelectAllValues = true;
@@ -2179,6 +2178,7 @@ namespace ReportsEngine.Reports
             // 
             // plngShowIsCrossReference
             // 
+            this.plngShowIsCrossReference.Description = "Show Is Cross Ref.";
             this.plngShowIsCrossReference.Name = "plngShowIsCrossReference";
             this.plngShowIsCrossReference.Type = typeof(int);
             this.plngShowIsCrossReference.ValueInfo = "0";
@@ -2186,13 +2186,6 @@ namespace ReportsEngine.Reports
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Cross Referenced Only"));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Not Cross Referenced Only"));
             this.plngShowIsCrossReference.ValueSourceSettings = staticListLookUpSettings2;
-            // 
-            // pbooHasCrosRef
-            // 
-            this.pbooHasCrosRef.Description = "Parameter1";
-            this.pbooHasCrosRef.Name = "pbooHasCrosRef";
-            this.pbooHasCrosRef.Type = typeof(bool);
-            this.pbooHasCrosRef.ValueInfo = "False";
             // 
             // plngShowHasCrossReference
             // 
@@ -2253,7 +2246,6 @@ namespace ReportsEngine.Reports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnCrossReferences, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowIsCrossReference, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowHasCrossReference, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooHasCrosRef, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooTotalByInterestType, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowInactives, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -2278,7 +2270,6 @@ namespace ReportsEngine.Reports
             this.pbooReturnCrossReferences,
             this.plngShowIsCrossReference,
             this.plngShowHasCrossReference,
-            this.pbooHasCrosRef,
             this.pbooTotalByInterestType,
             this.pbooShowInactives,
             this.pbooShowCriteria});
@@ -2395,7 +2386,6 @@ namespace ReportsEngine.Reports
         private DevExpress.XtraReports.UI.XRLabel xrLabel42;
         private DevExpress.XtraReports.UI.XRLabel xrDeckCodesSelected;
         private DevExpress.XtraReports.Parameters.Parameter plngShowIsCrossReference;
-        private DevExpress.XtraReports.Parameters.Parameter pbooHasCrosRef;
         private DevExpress.XtraReports.Parameters.Parameter plngShowHasCrossReference;
     }
 }

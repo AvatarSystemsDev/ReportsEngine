@@ -44,7 +44,7 @@
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillPrintMICRInformation = new DevExpress.XtraReports.Parameters.Parameter();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.pbooMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckFormat = new DevExpress.XtraReports.Parameters.Parameter();
@@ -118,13 +118,13 @@
             this.plngUserID.Name = "plngUserID";
             this.plngUserID.Visible = false;
             // 
-            // plngCheckFormatIsMICR
+            // pbooWillPrintMICRInformation
             // 
-            this.plngCheckFormatIsMICR.Description = "plngCheckFormatIsMICR";
-            this.plngCheckFormatIsMICR.Name = "plngCheckFormatIsMICR";
-            this.plngCheckFormatIsMICR.Type = typeof(bool);
-            this.plngCheckFormatIsMICR.ValueInfo = "False";
-            this.plngCheckFormatIsMICR.Visible = false;
+            this.pbooWillPrintMICRInformation.Description = "pbooWillPrintMICRInformation";
+            this.pbooWillPrintMICRInformation.Name = "pbooWillPrintMICRInformation";
+            this.pbooWillPrintMICRInformation.Type = typeof(bool);
+            this.pbooWillPrintMICRInformation.ValueInfo = "False";
+            this.pbooWillPrintMICRInformation.Visible = false;
             // 
             // Dynamic
             // 
@@ -656,7 +656,7 @@
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooWillPrintMICRInformation", this.pbooWillPrintMICRInformation));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorNumber", null, "DSAPCheckHeader.VendorNumber"));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strVendorName", null, "DSAPCheckHeader.VendorName"));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("strCheckNumber", null, "DSAPCheckHeader.CheckNumber"));
@@ -696,7 +696,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormatIsMICR, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillPrintMICRInformation, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngIsTwoSignaturesRequired, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrTwoSignaturesRequiredAmount, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -715,7 +715,7 @@
             this.plngProcessTrackingID,
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
-            this.plngCheckFormatIsMICR,
+            this.pbooWillPrintMICRInformation,
             this.plngIsTwoSignaturesRequired,
             this.pstrTwoSignaturesRequiredAmount,
             this.plngCompanyID});
@@ -744,7 +744,7 @@
         private DevExpress.XtraReports.Parameters.Parameter plngProcessTrackingID;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningVendorNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingVendorNumber;
-        private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintMICRInformation;
         private DevExpress.XtraReports.Parameters.Parameter plngIsTwoSignaturesRequired;
         private DevExpress.XtraReports.Parameters.Parameter pstrTwoSignaturesRequiredAmount;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;

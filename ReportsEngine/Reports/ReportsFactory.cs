@@ -278,6 +278,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBServiceCharges", () => new ExcelJIBServiceCharges());
             Reports.Add("PA_MiscDispositions", () => new PA_MiscDispositions());
             Reports.Add("CheckCoverPage", () => new CheckCoverPage());
+            Reports.Add("RDColoradoDR0021W", () => new RDColoradoDR0021W());
+            Reports.Add("ExcelRDColoradoDR0021W", () => new ExcelRDColoradoDR0021W());
+            Reports.Add("RDColoradoDR0456", () => new RDColoradoDR0456());
+            Reports.Add("ExcelRDColoradoDR0456", () => new ExcelRDColoradoDR0456());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

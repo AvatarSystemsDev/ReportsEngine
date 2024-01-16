@@ -49,7 +49,7 @@
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngImbursementID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillPrintMICRInformation = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -196,11 +196,11 @@
             this.plngImbursementID.Type = typeof(int);
             this.plngImbursementID.ValueInfo = "1126";
             // 
-            // plngCheckFormatIsMICR
+            // pbooWillPrintMICRInformation
             // 
-            this.plngCheckFormatIsMICR.Description = "CheckFormatIsMICR";
-            this.plngCheckFormatIsMICR.Name = "plngCheckFormatIsMICR";
-            this.plngCheckFormatIsMICR.Type = typeof(bool);
+            this.pbooWillPrintMICRInformation.Description = "CheckFormatIsMICR";
+            this.pbooWillPrintMICRInformation.Name = "pbooWillPrintMICRInformation";
+            this.pbooWillPrintMICRInformation.Type = typeof(bool);
             // 
             // ManualCheckRemittanceSubreport
             // 
@@ -220,7 +220,7 @@
             this.Subtitle,
             this.plngUserID,
             this.plngImbursementID,
-            this.plngCheckFormatIsMICR});
+            this.pbooWillPrintMICRInformation});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -245,6 +245,6 @@
         private DevExpress.XtraReports.Parameters.Parameter Subtitle;
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
         private DevExpress.XtraReports.Parameters.Parameter plngImbursementID;
-        private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintMICRInformation;
     }
 }

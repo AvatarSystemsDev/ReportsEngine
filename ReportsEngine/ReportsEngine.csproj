@@ -693,6 +693,18 @@
     <Compile Include="Reports\RDReports\ExcelNewMexicoStateTaxDetail.Designer.cs">
       <DependentUpon>ExcelNewMexicoStateTaxDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDColoradoDR0021W.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDColoradoDR0021W.Designer.cs">
+      <DependentUpon>ExcelRDColoradoDR0021W.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDColoradoDR0456.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelRDColoradoDR0456.Designer.cs">
+      <DependentUpon>ExcelRDColoradoDR0456.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -878,6 +890,18 @@
     </Compile>
     <Compile Include="Reports\RDReports\PropertyListAllCompanies.Designer.cs">
       <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDColoradoDR0021W.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDColoradoDR0021W.Designer.cs">
+      <DependentUpon>RDColoradoDR0021W.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDColoradoDR0456.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDColoradoDR0456.Designer.cs">
+      <DependentUpon>RDColoradoDR0456.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDOwnerLevelEntry.cs">
       <SubType>Component</SubType>
@@ -2341,6 +2365,12 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelNewMexicoStateTaxDetail.resx">
       <DependentUpon>ExcelNewMexicoStateTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDColoradoDR0021W.resx">
+      <DependentUpon>ExcelRDColoradoDR0021W.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelRDColoradoDR0456.resx">
+      <DependentUpon>ExcelRDColoradoDR0456.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -2433,6 +2463,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\PropertyListAllCompanies.resx">
       <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDColoradoDR0021W.resx">
+      <DependentUpon>RDColoradoDR0021W.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDColoradoDR0456.resx">
+      <DependentUpon>RDColoradoDR0456.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDOwnerLevelEntry.resx">
       <DependentUpon>RDOwnerLevelEntry.cs</DependentUpon>

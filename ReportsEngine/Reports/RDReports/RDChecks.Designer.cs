@@ -57,14 +57,22 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings8 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings9 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings10 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings11 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings12 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings13 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings14 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.RemittanceDetailBand = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrCheckRemittance = new DevExpress.XtraReports.UI.XRSubreport();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -107,6 +115,7 @@
             this.CheckBegin = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.CheckEnd = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.CheckCoverPage = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrCheckCoverPage = new DevExpress.XtraReports.UI.XRSubreport();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbitMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbitSignature = new DevExpress.XtraReports.Parameters.Parameter();
@@ -119,7 +128,6 @@
             this.pbooReturnPrintedChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrTwoSignaturesRequiredAmount = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngIsTwoSignaturesRequired = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -128,9 +136,11 @@
             this.plngPrintRemittance = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.pbooCheckCoverPage = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrCheckRemittance = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrCheckCoverPage = new DevExpress.XtraReports.UI.XRSubreport();
             this.pbooHideCheckPart = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillPrintMICRInformation = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillPrintDetailOnStub = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillPrintBankAccountName = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillCenterCompanyNameOnStub = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox6)).BeginInit();
@@ -266,6 +276,20 @@
             this.RemittanceDetailBand.MultiColumn.ColumnSpacing = 50F;
             this.RemittanceDetailBand.Name = "RemittanceDetailBand";
             // 
+            // xrCheckRemittance
+            // 
+            this.xrCheckRemittance.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2")});
+            this.xrCheckRemittance.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrCheckRemittance.Name = "xrCheckRemittance";
+            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
+            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "RDCheckHeader.ImbursementID"));
+            this.xrCheckRemittance.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
+            this.xrCheckRemittance.SizeF = new System.Drawing.SizeF(800F, 24.61065F);
+            // 
             // pstrDatabaseName
             // 
             this.pstrDatabaseName.Description = "pstrDatabaseName";
@@ -361,8 +385,8 @@
             this.xrCheckNumber.BorderWidth = 1F;
             this.xrCheckNumber.CanGrow = false;
             this.xrCheckNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑈\'+[SerialNumber]+\'⑈\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑈\'+[SerialNumber]+\'⑈\'"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.xrCheckNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
             this.xrCheckNumber.KeepTogether = true;
             this.xrCheckNumber.LocationFloat = new DevExpress.Utils.PointFloat(27.43004F, 328.23F);
@@ -383,8 +407,8 @@
             this.xrMICRAccountNumber.BorderWidth = 1F;
             this.xrMICRAccountNumber.CanGrow = false;
             this.xrMICRAccountNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\'⑈\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\'⑈\'"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.xrMICRAccountNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
             this.xrMICRAccountNumber.KeepTogether = true;
             this.xrMICRAccountNumber.LocationFloat = new DevExpress.Utils.PointFloat(388.4901F, 328.23F);
@@ -405,8 +429,8 @@
             this.xrMICRTransitNumber.BorderWidth = 1F;
             this.xrMICRTransitNumber.CanGrow = false;
             this.xrMICRTransitNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑆\'+[TransitNumber]+\'⑆\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑆\'+[TransitNumber]+\'⑆\'"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.xrMICRTransitNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
             this.xrMICRTransitNumber.KeepTogether = true;
             this.xrMICRTransitNumber.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 328.23F);
@@ -576,7 +600,7 @@
             this.Textbox24.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox24.BorderWidth = 1F;
             this.Textbox24.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.Textbox24.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox24.KeepTogether = true;
             this.Textbox24.LocationFloat = new DevExpress.Utils.PointFloat(5.35F, 39.41F);
@@ -595,7 +619,8 @@
             this.CheckAmountLongString15.BorderWidth = 1F;
             this.CheckAmountLongString15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BankAddressBlock]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False) AND ?pbooWillPrintBankAcco" +
+                    "untName")});
             this.CheckAmountLongString15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.CheckAmountLongString15.KeepTogether = true;
             this.CheckAmountLongString15.LocationFloat = new DevExpress.Utils.PointFloat(344.4399F, 78.35001F);
@@ -614,7 +639,8 @@
             this.CheckAmountLongString14.BorderWidth = 1F;
             this.CheckAmountLongString14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyAddressBlockLong]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "TextAlignment", "Iif(?pbooWillCenterCompanyNameOnStub, \'TopCenter\', \'TopLeft\')\n")});
             this.CheckAmountLongString14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.CheckAmountLongString14.KeepTogether = true;
             this.CheckAmountLongString14.LocationFloat = new DevExpress.Utils.PointFloat(9.999974F, 78.35001F);
@@ -632,7 +658,7 @@
             this.Textbox18.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox18.BorderWidth = 1F;
             this.Textbox18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.Textbox18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox18.KeepTogether = true;
             this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(625.3499F, 78.35001F);
@@ -669,7 +695,7 @@
             this.Textbox14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox14.BorderWidth = 1F;
             this.Textbox14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox14.KeepTogether = true;
             this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(524.4901F, 78.35001F);
@@ -689,7 +715,7 @@
             this.Textbox16.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox16.BorderWidth = 1F;
             this.Textbox16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.Textbox16.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox16.KeepTogether = true;
             this.Textbox16.LocationFloat = new DevExpress.Utils.PointFloat(696.1799F, 146.63F);
@@ -784,7 +810,7 @@
             this.Textbox20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox20.BorderWidth = 1F;
             this.Textbox20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox20.KeepTogether = true;
             this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 223.14F);
@@ -837,7 +863,8 @@
             this.Image2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Image2.BorderWidth = 1F;
             this.Image2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "?pstrSignPath")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "?pstrSignPath"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbitSignature")});
             this.Image2.LocationFloat = new DevExpress.Utils.PointFloat(534.91F, 259.65F);
             this.Image2.Name = "Image2";
             this.Image2.SizeF = new System.Drawing.SizeF(250.64F, 36.41F);
@@ -864,7 +891,7 @@
             this.Textbox22.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox22.BorderWidth = 1F;
             this.Textbox22.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.Textbox22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox22.KeepTogether = true;
             this.Textbox22.LocationFloat = new DevExpress.Utils.PointFloat(529.51F, 303F);
@@ -906,7 +933,7 @@
             this.xrCompanyHeader.BorderWidth = 1F;
             this.xrCompanyHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyAddressBlockLong]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
             this.xrCompanyHeader.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrCompanyHeader.KeepTogether = true;
             this.xrCompanyHeader.LocationFloat = new DevExpress.Utils.PointFloat(84.99996F, 0F);
@@ -973,6 +1000,21 @@
             this.CheckCoverPage.Level = 2;
             this.CheckCoverPage.Name = "CheckCoverPage";
             // 
+            // xrCheckCoverPage
+            // 
+            this.xrCheckCoverPage.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2")});
+            this.xrCheckCoverPage.GenerateOwnPages = true;
+            this.xrCheckCoverPage.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrCheckCoverPage.Name = "xrCheckCoverPage";
+            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCoverPageAddress", null, "RDCheckHeader.OwnerAddressBlock"));
+            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "RDCheckHeader.CompanyAddressBlockLong"));
+            this.xrCheckCoverPage.ReportSource = new ReportsEngine.Reports.RDReports.CheckCoverPage();
+            this.xrCheckCoverPage.SizeF = new System.Drawing.SizeF(800F, 87.52731F);
+            // 
             // Subtitle
             // 
             this.Subtitle.Description = "Subtitle";
@@ -993,6 +1035,13 @@
             this.pbitSignature.Name = "pbitSignature";
             this.pbitSignature.Type = typeof(bool);
             this.pbitSignature.ValueInfo = "False";
+            dynamicListLookUpSettings1.DataMember = "CheckFormat";
+            dynamicListLookUpSettings1.DataSource = this.Dynamic;
+            dynamicListLookUpSettings1.DisplayMember = "WillPrintSignature";
+            dynamicListLookUpSettings1.FilterString = null;
+            dynamicListLookUpSettings1.SortMember = null;
+            dynamicListLookUpSettings1.ValueMember = "WillPrintSignature";
+            this.pbitSignature.ValueSourceSettings = dynamicListLookUpSettings1;
             this.pbitSignature.Visible = false;
             // 
             // plngCheckPrintingProcessTrackingID
@@ -1008,26 +1057,26 @@
             this.pstrStartingOwnerNumber.Description = "Beginning Owner";
             this.pstrStartingOwnerNumber.Name = "pstrStartingOwnerNumber";
             this.pstrStartingOwnerNumber.ValueInfo = "!";
-            dynamicListLookUpSettings1.DataMember = "OwnersLookup";
-            dynamicListLookUpSettings1.DataSource = this.Dynamic;
-            dynamicListLookUpSettings1.DisplayMember = "Description";
-            dynamicListLookUpSettings1.FilterString = null;
-            dynamicListLookUpSettings1.SortMember = null;
-            dynamicListLookUpSettings1.ValueMember = "Number";
-            this.pstrStartingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings1;
-            // 
-            // pstrEndingOwnerNumber
-            // 
-            this.pstrEndingOwnerNumber.Description = "Ending Owner";
-            this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
-            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings2.DataMember = "OwnersLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "Description";
             dynamicListLookUpSettings2.FilterString = null;
             dynamicListLookUpSettings2.SortMember = null;
             dynamicListLookUpSettings2.ValueMember = "Number";
-            this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings2;
+            this.pstrStartingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings2;
+            // 
+            // pstrEndingOwnerNumber
+            // 
+            this.pstrEndingOwnerNumber.Description = "Ending Owner";
+            this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
+            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
+            dynamicListLookUpSettings3.DataMember = "OwnersLookup";
+            dynamicListLookUpSettings3.DataSource = this.Dynamic;
+            dynamicListLookUpSettings3.DisplayMember = "Description";
+            dynamicListLookUpSettings3.FilterString = null;
+            dynamicListLookUpSettings3.SortMember = null;
+            dynamicListLookUpSettings3.ValueMember = "Number";
+            this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
             // pstrSignPath
             // 
@@ -1066,6 +1115,13 @@
             // 
             this.pstrTwoSignaturesRequiredAmount.Description = "pstrTwoSignaturesRequiredAmount";
             this.pstrTwoSignaturesRequiredAmount.Name = "pstrTwoSignaturesRequiredAmount";
+            dynamicListLookUpSettings4.DataMember = "CheckFormat";
+            dynamicListLookUpSettings4.DataSource = this.Dynamic;
+            dynamicListLookUpSettings4.DisplayMember = "TwoSignaturesRequiredAmount";
+            dynamicListLookUpSettings4.FilterString = null;
+            dynamicListLookUpSettings4.SortMember = null;
+            dynamicListLookUpSettings4.ValueMember = "TwoSignaturesRequiredAmount";
+            this.pstrTwoSignaturesRequiredAmount.ValueSourceSettings = dynamicListLookUpSettings4;
             this.pstrTwoSignaturesRequiredAmount.Visible = false;
             // 
             // plngIsTwoSignaturesRequired
@@ -1074,41 +1130,40 @@
             this.plngIsTwoSignaturesRequired.Name = "plngIsTwoSignaturesRequired";
             this.plngIsTwoSignaturesRequired.Type = typeof(bool);
             this.plngIsTwoSignaturesRequired.ValueInfo = "False";
+            dynamicListLookUpSettings5.DataMember = "CheckFormat";
+            dynamicListLookUpSettings5.DataSource = this.Dynamic;
+            dynamicListLookUpSettings5.DisplayMember = "WillPrintTwoSignatureLines";
+            dynamicListLookUpSettings5.FilterString = null;
+            dynamicListLookUpSettings5.SortMember = null;
+            dynamicListLookUpSettings5.ValueMember = "WillPrintTwoSignatureLines";
+            this.plngIsTwoSignaturesRequired.ValueSourceSettings = dynamicListLookUpSettings5;
             this.plngIsTwoSignaturesRequired.Visible = false;
-            // 
-            // plngCheckFormatIsMICR
-            // 
-            this.plngCheckFormatIsMICR.Description = "plngCheckFormatIsMICR";
-            this.plngCheckFormatIsMICR.Name = "plngCheckFormatIsMICR";
-            this.plngCheckFormatIsMICR.Type = typeof(bool);
-            this.plngCheckFormatIsMICR.ValueInfo = "False";
-            this.plngCheckFormatIsMICR.Visible = false;
             // 
             // pstrBeginningCheckNumber
             // 
             this.pstrBeginningCheckNumber.Description = "Beginning Check Number";
             this.pstrBeginningCheckNumber.Name = "pstrBeginningCheckNumber";
             this.pstrBeginningCheckNumber.ValueInfo = "-1";
-            dynamicListLookUpSettings3.DataMember = "ChecksLookup";
-            dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "Description";
-            dynamicListLookUpSettings3.FilterString = null;
-            dynamicListLookUpSettings3.SortMember = null;
-            dynamicListLookUpSettings3.ValueMember = "CheckNumber";
-            this.pstrBeginningCheckNumber.ValueSourceSettings = dynamicListLookUpSettings3;
+            dynamicListLookUpSettings6.DataMember = "ChecksLookup";
+            dynamicListLookUpSettings6.DataSource = this.Dynamic;
+            dynamicListLookUpSettings6.DisplayMember = "Description";
+            dynamicListLookUpSettings6.FilterString = null;
+            dynamicListLookUpSettings6.SortMember = null;
+            dynamicListLookUpSettings6.ValueMember = "CheckNumber";
+            this.pstrBeginningCheckNumber.ValueSourceSettings = dynamicListLookUpSettings6;
             // 
             // pstrEndingCheckNumber
             // 
             this.pstrEndingCheckNumber.Description = "Ending Check Number";
             this.pstrEndingCheckNumber.Name = "pstrEndingCheckNumber";
             this.pstrEndingCheckNumber.ValueInfo = "0";
-            dynamicListLookUpSettings4.DataMember = "ChecksLookup";
-            dynamicListLookUpSettings4.DataSource = this.Dynamic;
-            dynamicListLookUpSettings4.DisplayMember = "Description";
-            dynamicListLookUpSettings4.FilterString = null;
-            dynamicListLookUpSettings4.SortMember = null;
-            dynamicListLookUpSettings4.ValueMember = "CheckNumber";
-            this.pstrEndingCheckNumber.ValueSourceSettings = dynamicListLookUpSettings4;
+            dynamicListLookUpSettings7.DataMember = "ChecksLookup";
+            dynamicListLookUpSettings7.DataSource = this.Dynamic;
+            dynamicListLookUpSettings7.DisplayMember = "Description";
+            dynamicListLookUpSettings7.FilterString = null;
+            dynamicListLookUpSettings7.SortMember = null;
+            dynamicListLookUpSettings7.ValueMember = "CheckNumber";
+            this.pstrEndingCheckNumber.ValueSourceSettings = dynamicListLookUpSettings7;
             // 
             // plngCompanyID
             // 
@@ -1124,13 +1179,13 @@
             this.pstrSelectOwner.MultiValue = true;
             this.pstrSelectOwner.Name = "pstrSelectOwner";
             this.pstrSelectOwner.SelectAllValues = true;
-            dynamicListLookUpSettings5.DataMember = "OwnersLookup";
-            dynamicListLookUpSettings5.DataSource = this.Dynamic;
-            dynamicListLookUpSettings5.DisplayMember = "Description";
-            dynamicListLookUpSettings5.FilterString = null;
-            dynamicListLookUpSettings5.SortMember = null;
-            dynamicListLookUpSettings5.ValueMember = "Number";
-            this.pstrSelectOwner.ValueSourceSettings = dynamicListLookUpSettings5;
+            dynamicListLookUpSettings8.DataMember = "OwnersLookup";
+            dynamicListLookUpSettings8.DataSource = this.Dynamic;
+            dynamicListLookUpSettings8.DisplayMember = "Description";
+            dynamicListLookUpSettings8.FilterString = null;
+            dynamicListLookUpSettings8.SortMember = null;
+            dynamicListLookUpSettings8.ValueMember = "Number";
+            this.pstrSelectOwner.ValueSourceSettings = dynamicListLookUpSettings8;
             // 
             // pstrSelectCheck
             // 
@@ -1138,13 +1193,13 @@
             this.pstrSelectCheck.MultiValue = true;
             this.pstrSelectCheck.Name = "pstrSelectCheck";
             this.pstrSelectCheck.SelectAllValues = true;
-            dynamicListLookUpSettings6.DataMember = "ChecksLookup";
-            dynamicListLookUpSettings6.DataSource = this.Dynamic;
-            dynamicListLookUpSettings6.DisplayMember = "Description";
-            dynamicListLookUpSettings6.FilterString = null;
-            dynamicListLookUpSettings6.SortMember = null;
-            dynamicListLookUpSettings6.ValueMember = "CheckNumber";
-            this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings6;
+            dynamicListLookUpSettings9.DataMember = "ChecksLookup";
+            dynamicListLookUpSettings9.DataSource = this.Dynamic;
+            dynamicListLookUpSettings9.DisplayMember = "Description";
+            dynamicListLookUpSettings9.FilterString = null;
+            dynamicListLookUpSettings9.SortMember = null;
+            dynamicListLookUpSettings9.ValueMember = "CheckNumber";
+            this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings9;
             // 
             // plngPrintRemittance
             // 
@@ -1166,51 +1221,83 @@
             // 
             this.pbooCheckCoverPage.Description = "Check Cover Page";
             this.pbooCheckCoverPage.Name = "pbooCheckCoverPage";
-            this.pbooCheckCoverPage.Type = typeof(int);
-            this.pbooCheckCoverPage.ValueInfo = "0";
-            dynamicListLookUpSettings7.DataMember = "CheckFormat";
-            dynamicListLookUpSettings7.DataSource = this.Dynamic;
-            dynamicListLookUpSettings7.DisplayMember = "WillPrintCoverSheet";
-            dynamicListLookUpSettings7.FilterString = null;
-            dynamicListLookUpSettings7.SortMember = null;
-            dynamicListLookUpSettings7.ValueMember = "WillPrintCoverSheet";
-            this.pbooCheckCoverPage.ValueSourceSettings = dynamicListLookUpSettings7;
-            // 
-            // xrCheckRemittance
-            // 
-            this.xrCheckRemittance.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2")});
-            this.xrCheckRemittance.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrCheckRemittance.Name = "xrCheckRemittance";
-            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "RDCheckHeader.CheckID"));
-            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "RDCheckHeader.ImbursementID"));
-            this.xrCheckRemittance.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
-            this.xrCheckRemittance.SizeF = new System.Drawing.SizeF(800F, 24.61065F);
-            // 
-            // xrCheckCoverPage
-            // 
-            this.xrCheckCoverPage.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2")});
-            this.xrCheckCoverPage.GenerateOwnPages = true;
-            this.xrCheckCoverPage.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrCheckCoverPage.Name = "xrCheckCoverPage";
-            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCoverPageAddress", null, "RDCheckHeader.OwnerAddressBlock"));
-            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "RDCheckHeader.CompanyAddressBlockLong"));
-            this.xrCheckCoverPage.ReportSource = new ReportsEngine.Reports.RDReports.CheckCoverPage();
-            this.xrCheckCoverPage.SizeF = new System.Drawing.SizeF(800F, 87.52731F);
+            this.pbooCheckCoverPage.Type = typeof(bool);
+            this.pbooCheckCoverPage.ValueInfo = "False";
+            dynamicListLookUpSettings10.DataMember = "CheckFormat";
+            dynamicListLookUpSettings10.DataSource = this.Dynamic;
+            dynamicListLookUpSettings10.DisplayMember = "WillPrintCoverSheet";
+            dynamicListLookUpSettings10.FilterString = null;
+            dynamicListLookUpSettings10.SortMember = null;
+            dynamicListLookUpSettings10.ValueMember = "WillPrintCoverSheet";
+            this.pbooCheckCoverPage.ValueSourceSettings = dynamicListLookUpSettings10;
+            this.pbooCheckCoverPage.Visible = false;
             // 
             // pbooHideCheckPart
             // 
             this.pbooHideCheckPart.Description = "Print Cover Sheet only";
+            this.pbooHideCheckPart.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooCheckCoverPage")});
             this.pbooHideCheckPart.Name = "pbooHideCheckPart";
             this.pbooHideCheckPart.Type = typeof(bool);
             this.pbooHideCheckPart.ValueInfo = "False";
+            // 
+            // pbooWillPrintMICRInformation
+            // 
+            this.pbooWillPrintMICRInformation.Description = "Will Print MICR Information";
+            this.pbooWillPrintMICRInformation.Name = "pbooWillPrintMICRInformation";
+            this.pbooWillPrintMICRInformation.Type = typeof(bool);
+            this.pbooWillPrintMICRInformation.ValueInfo = "False";
+            dynamicListLookUpSettings11.DataMember = "CheckFormat";
+            dynamicListLookUpSettings11.DataSource = this.Dynamic;
+            dynamicListLookUpSettings11.DisplayMember = "WillPrintMICRInformation";
+            dynamicListLookUpSettings11.FilterString = null;
+            dynamicListLookUpSettings11.SortMember = null;
+            dynamicListLookUpSettings11.ValueMember = "WillPrintMICRInformation";
+            this.pbooWillPrintMICRInformation.ValueSourceSettings = dynamicListLookUpSettings11;
+            this.pbooWillPrintMICRInformation.Visible = false;
+            // 
+            // pbooWillPrintDetailOnStub
+            // 
+            this.pbooWillPrintDetailOnStub.Description = "Will Print Detail On Stub";
+            this.pbooWillPrintDetailOnStub.Name = "pbooWillPrintDetailOnStub";
+            this.pbooWillPrintDetailOnStub.Type = typeof(bool);
+            this.pbooWillPrintDetailOnStub.ValueInfo = "False";
+            dynamicListLookUpSettings12.DataMember = "CheckFormat";
+            dynamicListLookUpSettings12.DataSource = this.Dynamic;
+            dynamicListLookUpSettings12.DisplayMember = "WillPrintDetailOnStub";
+            dynamicListLookUpSettings12.FilterString = null;
+            dynamicListLookUpSettings12.SortMember = null;
+            dynamicListLookUpSettings12.ValueMember = "WillPrintDetailOnStub";
+            this.pbooWillPrintDetailOnStub.ValueSourceSettings = dynamicListLookUpSettings12;
+            this.pbooWillPrintDetailOnStub.Visible = false;
+            // 
+            // pbooWillPrintBankAccountName
+            // 
+            this.pbooWillPrintBankAccountName.Description = "Will Print Bank Account Name";
+            this.pbooWillPrintBankAccountName.Name = "pbooWillPrintBankAccountName";
+            this.pbooWillPrintBankAccountName.Type = typeof(bool);
+            this.pbooWillPrintBankAccountName.ValueInfo = "False";
+            dynamicListLookUpSettings13.DataMember = "CheckFormat";
+            dynamicListLookUpSettings13.DataSource = this.Dynamic;
+            dynamicListLookUpSettings13.DisplayMember = "WillPrintBankAccountName";
+            dynamicListLookUpSettings13.FilterString = null;
+            dynamicListLookUpSettings13.SortMember = null;
+            dynamicListLookUpSettings13.ValueMember = "WillPrintBankAccountName";
+            this.pbooWillPrintBankAccountName.ValueSourceSettings = dynamicListLookUpSettings13;
+            // 
+            // pbooWillCenterCompanyNameOnStub
+            // 
+            this.pbooWillCenterCompanyNameOnStub.Description = "Will Center Company Name On Stub";
+            this.pbooWillCenterCompanyNameOnStub.Name = "pbooWillCenterCompanyNameOnStub";
+            this.pbooWillCenterCompanyNameOnStub.Type = typeof(bool);
+            this.pbooWillCenterCompanyNameOnStub.ValueInfo = "True";
+            dynamicListLookUpSettings14.DataMember = "CheckFormat";
+            dynamicListLookUpSettings14.DataSource = this.Dynamic;
+            dynamicListLookUpSettings14.DisplayMember = "WillCenterCompanyNameOnStub";
+            dynamicListLookUpSettings14.FilterString = null;
+            dynamicListLookUpSettings14.SortMember = null;
+            dynamicListLookUpSettings14.ValueMember = "WillCenterCompanyNameOnStub";
+            this.pbooWillCenterCompanyNameOnStub.ValueSourceSettings = dynamicListLookUpSettings14;
             // 
             // RDChecks
             // 
@@ -1246,9 +1333,13 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnPrintedChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrTwoSignaturesRequiredAmount, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngIsTwoSignaturesRequired, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormatIsMICR, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngPrintRemittance, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooCheckCoverPage, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooCheckCoverPage, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooHideCheckPart, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillPrintMICRInformation, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillPrintDetailOnStub, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillPrintBankAccountName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillCenterCompanyNameOnStub, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -1270,10 +1361,13 @@
             this.pbooReturnPrintedChecks,
             this.pstrTwoSignaturesRequiredAmount,
             this.plngIsTwoSignaturesRequired,
-            this.plngCheckFormatIsMICR,
             this.plngPrintRemittance,
             this.pbooCheckCoverPage,
-            this.pbooHideCheckPart});
+            this.pbooHideCheckPart,
+            this.pbooWillPrintMICRInformation,
+            this.pbooWillPrintDetailOnStub,
+            this.pbooWillPrintBankAccountName,
+            this.pbooWillCenterCompanyNameOnStub});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).EndInit();
@@ -1335,7 +1429,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooReturnPrintedChecks;
         private DevExpress.XtraReports.Parameters.Parameter pstrTwoSignaturesRequiredAmount;
         private DevExpress.XtraReports.Parameters.Parameter plngIsTwoSignaturesRequired;
-        private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
         private DevExpress.XtraReports.UI.XRSubreport xrCheckRemittance;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCheckNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingCheckNumber;
@@ -1361,5 +1454,9 @@
         private DevExpress.XtraReports.UI.XRSubreport xrCheckCoverPage;
         private DevExpress.XtraReports.Parameters.Parameter pbooCheckCoverPage;
         private DevExpress.XtraReports.Parameters.Parameter pbooHideCheckPart;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintMICRInformation;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintDetailOnStub;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintBankAccountName;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillCenterCompanyNameOnStub;
     }
 }

@@ -720,6 +720,8 @@
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel16,
             this.xrLabel15});
+            this.groupFooterBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([ImbursementAmount])")});
             this.groupFooterBand1.HeightF = 20.00001F;
             this.groupFooterBand1.Name = "groupFooterBand1";
             // 

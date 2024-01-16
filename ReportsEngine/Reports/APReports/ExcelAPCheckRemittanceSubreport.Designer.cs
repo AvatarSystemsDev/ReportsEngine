@@ -65,7 +65,7 @@
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillPrintMICRInformation = new DevExpress.XtraReports.Parameters.Parameter();
             this.strVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.strVendorName = new DevExpress.XtraReports.Parameters.Parameter();
             this.strCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
@@ -707,13 +707,13 @@
             this.plngID.Type = typeof(int);
             this.plngID.ValueInfo = "1095";
             // 
-            // plngCheckFormatIsMICR
+            // pbooWillPrintMICRInformation
             // 
-            this.plngCheckFormatIsMICR.Description = "plngCheckFormatIsMICR";
-            this.plngCheckFormatIsMICR.Name = "plngCheckFormatIsMICR";
-            this.plngCheckFormatIsMICR.Type = typeof(bool);
-            this.plngCheckFormatIsMICR.ValueInfo = "True";
-            this.plngCheckFormatIsMICR.Visible = false;
+            this.pbooWillPrintMICRInformation.Description = "pbooWillPrintMICRInformation";
+            this.pbooWillPrintMICRInformation.Name = "pbooWillPrintMICRInformation";
+            this.pbooWillPrintMICRInformation.Type = typeof(bool);
+            this.pbooWillPrintMICRInformation.ValueInfo = "True";
+            this.pbooWillPrintMICRInformation.Visible = false;
             // 
             // strVendorNumber
             // 
@@ -811,7 +811,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormatIsMICR, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillPrintMICRInformation, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.strVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.strVendorName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.strCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -822,7 +822,7 @@
             this.pstrServerName,
             this.plngUserID,
             this.plngID,
-            this.plngCheckFormatIsMICR,
+            this.pbooWillPrintMICRInformation,
             this.strVendorNumber,
             this.strVendorName,
             this.strCheckNumber,
@@ -846,7 +846,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrServerName;
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
         private DevExpress.XtraReports.Parameters.Parameter plngID;
-        private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintMICRInformation;
         private DevExpress.XtraReports.Parameters.Parameter strVendorNumber;
         private DevExpress.XtraReports.Parameters.Parameter strVendorName;
         private DevExpress.XtraReports.Parameters.Parameter strCheckNumber;

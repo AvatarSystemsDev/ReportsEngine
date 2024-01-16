@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraReports.UI;
+﻿using DevExpress.XtraReports.Parameters;
+using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -86,6 +87,9 @@ namespace ReportsEngine
 
         private void RemittanceDetailBand_BeforePrint(object sender, CancelEventArgs e)
         {
+            DetailBand band = sender as DetailBand;
+            Parameter p = this.Parameters["pbooWillPrintDetailOnStub"];
+            band.Visible = p.Value.ToString() != "False";
         }
 
         private void XrPages_BeforePrint(object sender, CancelEventArgs e)
