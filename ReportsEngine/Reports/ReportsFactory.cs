@@ -277,7 +277,7 @@ namespace ReportsEngine.Reports
             Reports.Add("JIBServiceCharges", () => new JIBServiceCharges());
             Reports.Add("ExcelJIBServiceCharges", () => new ExcelJIBServiceCharges());
             Reports.Add("PA_MiscDispositions", () => new PA_MiscDispositions());
-
+            Reports.Add("CheckCoverPage", () => new CheckCoverPage());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

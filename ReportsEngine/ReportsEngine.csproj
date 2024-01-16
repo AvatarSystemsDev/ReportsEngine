@@ -675,6 +675,12 @@
     <Compile Include="Reports\PAReports\Texas_PR.Designer.cs">
       <DependentUpon>Texas_PR.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\CheckCoverPage.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\CheckCoverPage.Designer.cs">
+      <DependentUpon>CheckCoverPage.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2325,6 +2331,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\Texas_PR.resx">
       <DependentUpon>Texas_PR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\CheckCoverPage.resx">
+      <DependentUpon>CheckCoverPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.resx">
       <DependentUpon>ExcelNewMexicoStateRoyaltyDetail.cs</DependentUpon>

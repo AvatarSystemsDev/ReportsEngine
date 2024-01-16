@@ -90,6 +90,7 @@
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooHideBeneficiary = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.plngGroupByVendor = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -968,6 +969,11 @@
             this.groupHeaderBand1.HeightF = 16.00006F;
             this.groupHeaderBand1.Name = "groupHeaderBand1";
             // 
+            // plngGroupByVendor
+            // 
+            this.plngGroupByVendor.Description = "Group by Vendor";
+            this.plngGroupByVendor.Name = "plngGroupByVendor";
+            // 
             // ExcelAPPayables
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1017,7 +1023,8 @@
             this.pbooUseInvoiceDate,
             this.plngShowOnlyInvoicesOnHold,
             this.pstrSelectVendor,
-            this.pbooHideBeneficiary});
+            this.pbooHideBeneficiary,
+            this.plngGroupByVendor});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1073,5 +1080,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.Parameters.Parameter pbooHideBeneficiary;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand1;
+        private DevExpress.XtraReports.Parameters.Parameter plngGroupByVendor;
     }
 }

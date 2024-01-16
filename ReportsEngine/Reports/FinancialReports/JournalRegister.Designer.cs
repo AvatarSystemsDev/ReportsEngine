@@ -2190,7 +2190,6 @@ namespace ReportsEngine.Reports.FinancialReports
             // 
             // GroupHeader
             // 
-            this.GroupHeader.Expanded = false;
             this.GroupHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AccountNumber] in (?pstrSelectAccount)")});
             this.GroupHeader.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
