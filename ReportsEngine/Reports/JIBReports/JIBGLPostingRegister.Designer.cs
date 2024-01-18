@@ -866,7 +866,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "HeaderText"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FooterText"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PostDestinationCodeID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CompanyNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CompanyName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ServiceDate"),

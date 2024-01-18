@@ -335,7 +335,7 @@
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrTableCell1.StylePriority.UseFont = false;
-            this.xrTableCell1.Text = "0 – 30 Days";
+            this.xrTableCell1.Text = "0–30 Days";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.xrTableCell1.Weight = 6399.75D;
             // 
