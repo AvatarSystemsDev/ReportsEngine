@@ -13,6 +13,7 @@ namespace ReportsEngine
     public partial class RDChecks : DevExpress.XtraReports.UI.XtraReport
     {
         private int pageCounter = 1;
+        private bool inRemittance = false;
         public RDChecks()
         {
             InitializeComponent();
@@ -28,7 +29,20 @@ namespace ReportsEngine
             xrMICRAccountNumber.BeforePrint += XrMICRAccountNumber_BeforePrint;
             xrMICRTransitNumber.BeforePrint += XrMICRTransitNumber_BeforePrint;
             xrCheckNumber.BeforePrint += XrCheckNumber_BeforePrint;
+            BeginningRemittance.BeforePrint += BeginningRemittance_BeforePrint;
+            EndRemittance.BeforePrint += EndRemittance_BeforePrint;
         }
+
+        private void EndRemittance_BeforePrint(object sender, CancelEventArgs e)
+        {
+            inRemittance = false;
+        }
+
+        private void BeginningRemittance_BeforePrint(object sender, CancelEventArgs e)
+        {
+            inRemittance = true;
+        }
+
         private class CustomFontsHelper
         {
             static PrivateFontCollection fontCollection;
@@ -39,7 +53,7 @@ namespace ReportsEngine
                     if (fontCollection == null)
                     {
                         fontCollection = new PrivateFontCollection();
-                        fontCollection.AddFontFile(HttpContext.Current.Server.MapPath("~/Views/MICRE13B.TTF"));
+                        fontCollection.AddFontFile(HttpContext.Current.Server.MapPath("~/Views/MICRE13B.TTF")); // I don't think this works anyway. Whatever...
                     }
                     return fontCollection;
                 }
@@ -54,23 +68,49 @@ namespace ReportsEngine
         {
             pageCounter = 1;
         }
-
+        // This is the first part of the remittance at the bottom of the check.
         private void XrCheckNumber_BeforePrint(object sender, CancelEventArgs e)
         {
+            Parameter p = this.Parameters["pbooIsCheckOnTopOfForm"];
+            bool checkOnTopOfForm = p.Value.ToString() == "True";
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter <= 2;
+            if (!checkOnTopOfForm) {
+                label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
+            }
+            else
+            {
+                label.Visible = inRemittance; // This will make the check number in that remittance part only print if there is a boolean value for remittance.
+            }
         }
-
+        // Also part of the remittance
         private void XrMICRTransitNumber_BeforePrint(object sender, CancelEventArgs e)
         {
+            Parameter p = this.Parameters["pbooIsCheckOnTopOfForm"];
+            bool checkOnTopOfForm = p.Value.ToString() == "True";
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter <= 2;
+            if (!checkOnTopOfForm)
+            {
+                label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
+            }
+            else
+            {
+                label.Visible = inRemittance; // This will make the Transit Number in that remittance part only print if there is a boolean value for remittance, ie at the bottom of the form.
+            }
         }
-
+        // Also part of the remittance
         private void XrMICRAccountNumber_BeforePrint(object sender, CancelEventArgs e)
         {
+            Parameter p = this.Parameters["pbooIsCheckOnTopOfForm"];
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter <= 2;
+            bool checkOnTopOfForm = p.Value.ToString() == "True";
+            if (!checkOnTopOfForm)
+            {
+                label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
+            }
+            else
+            {
+                label.Visible = inRemittance; // This will make the Account Number in that remittance part only print if there is a boolean value for remittance.
+            }
         }
 
         private void CheckEnd_BeforePrint(object sender, CancelEventArgs e)
@@ -89,7 +129,8 @@ namespace ReportsEngine
         {
             DetailBand band = sender as DetailBand;
             Parameter p = this.Parameters["pbooWillPrintDetailOnStub"];
-            band.Visible = p.Value.ToString() != "False";
+            band.Visible = p.Value.ToString() != "False" || pageCounter <= 2; //Only have remittance visible if it is the first page (don't print remittance on subsequent pages).
+            //band.Visible = p.Value.ToString() != "False";
         }
 
         private void XrPages_BeforePrint(object sender, CancelEventArgs e)
@@ -112,7 +153,16 @@ namespace ReportsEngine
         private void XrNonNegotiablePicture_BeforePrint(object sender, CancelEventArgs e)
         {
             XRPictureBox picture = sender as XRPictureBox;
-            picture.Visible = pageCounter > 2;
+            Parameter p = this.Parameters["pbooIsCheckOnTopOfForm"];
+            bool checkOnTopOfForm = p.Value.ToString() == "True";
+            if (!checkOnTopOfForm)
+            {
+                picture.Visible = pageCounter > 2; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to, I have nothing else.
+            }
+            else
+            {
+                picture.Visible = inRemittance; // This will make the nonnegotiable image visible if it is at the bottom of the form.
+            }
         }
 
     }

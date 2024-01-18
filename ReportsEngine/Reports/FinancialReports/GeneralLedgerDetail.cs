@@ -46,6 +46,7 @@ namespace ReportsEngine.Reports
             xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
             xrDebitLine.PrintOnPage += XrDebitLine_BeforePrint;
             xrCreditLine.PrintOnPage += XrCreditLine_BeforePrint;
+            // Balance forward
             xrDebitForward.PrintOnPage += XrDebitForward_BeforePrint;
             xrCreditForward.PrintOnPage += XrCreditForward_BeforePrint;
             xrRunningBalance.PrintOnPage += XrRunningBalance_BeforePrint;

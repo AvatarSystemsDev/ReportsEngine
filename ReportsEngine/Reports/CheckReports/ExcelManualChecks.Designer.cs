@@ -45,7 +45,7 @@
             this.pbooSignature = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSignaturePath = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrTwoSignaturesRequiredAmount = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooWillPrintMICRInformation = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngIsTwoSignaturesRequired = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -157,13 +157,13 @@
             this.pstrTwoSignaturesRequiredAmount.ValueInfo = "0";
             this.pstrTwoSignaturesRequiredAmount.Visible = false;
             // 
-            // pbooWillPrintMICRInformation
+            // plngCheckFormatIsMICR
             // 
-            this.pbooWillPrintMICRInformation.Description = "pbooWillPrintMICRInformation";
-            this.pbooWillPrintMICRInformation.Name = "pbooWillPrintMICRInformation";
-            this.pbooWillPrintMICRInformation.Type = typeof(bool);
-            this.pbooWillPrintMICRInformation.ValueInfo = "True";
-            this.pbooWillPrintMICRInformation.Visible = false;
+            this.plngCheckFormatIsMICR.Description = "plngCheckFormatIsMICR";
+            this.plngCheckFormatIsMICR.Name = "plngCheckFormatIsMICR";
+            this.plngCheckFormatIsMICR.Type = typeof(bool);
+            this.plngCheckFormatIsMICR.ValueInfo = "True";
+            this.plngCheckFormatIsMICR.Visible = false;
             // 
             // plngIsTwoSignaturesRequired
             // 
@@ -591,7 +591,7 @@
             this.pbooSignature,
             this.pstrSignaturePath,
             this.pstrTwoSignaturesRequiredAmount,
-            this.pbooWillPrintMICRInformation,
+            this.plngCheckFormatIsMICR,
             this.plngIsTwoSignaturesRequired,
             this.plngProcessTrackingID});
             this.Version = "23.1";
@@ -614,7 +614,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooSignature;
         private DevExpress.XtraReports.Parameters.Parameter pstrSignaturePath;
         private DevExpress.XtraReports.Parameters.Parameter pstrTwoSignaturesRequiredAmount;
-        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintMICRInformation;
+        private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
         private DevExpress.XtraReports.Parameters.Parameter plngIsTwoSignaturesRequired;
         private DevExpress.XtraReports.Parameters.Parameter plngProcessTrackingID;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;

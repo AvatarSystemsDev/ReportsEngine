@@ -91,7 +91,7 @@
             this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCheck = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooWillPrintMICRInformation = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngIsTwoSignaturesRequired = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrTwoSignaturesRequiredAmount = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngPrintRemittance = new DevExpress.XtraReports.Parameters.Parameter();
@@ -1001,12 +1001,12 @@
             this.pstrSelectCheck.MultiValue = true;
             this.pstrSelectCheck.Name = "pstrSelectCheck";
             // 
-            // pbooWillPrintMICRInformation
+            // plngCheckFormatIsMICR
             // 
-            this.pbooWillPrintMICRInformation.Description = "Parameter1";
-            this.pbooWillPrintMICRInformation.Name = "pbooWillPrintMICRInformation";
-            this.pbooWillPrintMICRInformation.Type = typeof(bool);
-            this.pbooWillPrintMICRInformation.ValueInfo = "False";
+            this.plngCheckFormatIsMICR.Description = "Parameter1";
+            this.plngCheckFormatIsMICR.Name = "plngCheckFormatIsMICR";
+            this.plngCheckFormatIsMICR.Type = typeof(bool);
+            this.plngCheckFormatIsMICR.ValueInfo = "False";
             // 
             // plngIsTwoSignaturesRequired
             // 
@@ -1073,7 +1073,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillPrintMICRInformation, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormatIsMICR, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngIsTwoSignaturesRequired, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrTwoSignaturesRequiredAmount, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngPrintRemittance, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1097,7 +1097,7 @@
             this.pstrBeginningCheckNumber,
             this.pstrEndingCheckNumber,
             this.pstrSelectCheck,
-            this.pbooWillPrintMICRInformation,
+            this.plngCheckFormatIsMICR,
             this.plngIsTwoSignaturesRequired,
             this.pstrTwoSignaturesRequiredAmount,
             this.plngPrintRemittance,
@@ -1156,7 +1156,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
-        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintMICRInformation;
+        private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
         private DevExpress.XtraReports.Parameters.Parameter plngIsTwoSignaturesRequired;
         private DevExpress.XtraReports.Parameters.Parameter pstrTwoSignaturesRequiredAmount;
         private DevExpress.XtraReports.Parameters.Parameter plngPrintRemittance;

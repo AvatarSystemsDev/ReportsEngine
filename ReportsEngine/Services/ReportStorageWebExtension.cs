@@ -149,6 +149,11 @@ namespace ReportsEngine.Services
             SetData(report, defaultUrl);
             return defaultUrl;
         }
+        public static bool ParameterExists(ParameterCollection parameters, string paramName)
+        {
+            return parameters.Cast<Parameter>().Any(p => p.Name == paramName);
+        }
+
 
         public static void setReportParameters(XtraReport report, System.Collections.Specialized.NameValueCollection parameters, int companyid)
         {
@@ -167,6 +172,10 @@ namespace ReportsEngine.Services
                     connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
                         report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
                         report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+                    if (ParameterExists(report.Parameters, "plngDatabaseID"))
+                    {
+                        report.Parameters["plngDatabaseID"].Value = int.Parse(currentDatabaseID.ToString());
+                    }
                     if (report.Parameters["plngCompanyID"] != null)
                     {
                         report.Parameters["plngCompanyID"].Value = companyid;

@@ -1573,7 +1573,7 @@
             this.pbooShowOwnerTotals.Description = "Show Owner Totals";
             this.pbooShowOwnerTotals.Name = "pbooShowOwnerTotals";
             this.pbooShowOwnerTotals.Type = typeof(bool);
-            this.pbooShowOwnerTotals.ValueInfo = "False";
+            this.pbooShowOwnerTotals.ValueInfo = "True";
             // 
             // JIBPropertyExpenseDistribution
             // 

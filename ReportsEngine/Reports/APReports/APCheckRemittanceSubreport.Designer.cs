@@ -60,7 +60,7 @@
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooWillPrintMICRInformation = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
@@ -401,7 +401,7 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.Line1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooWillPrintMICRInformation = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
             this.Line1.ForeColor = System.Drawing.Color.Black;
             this.Line1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 26.03999F);
             this.Line1.Name = "Line1";
@@ -465,13 +465,13 @@
             this.plngID.Type = typeof(int);
             this.plngID.ValueInfo = "725";
             // 
-            // pbooWillPrintMICRInformation
+            // plngCheckFormatIsMICR
             // 
-            this.pbooWillPrintMICRInformation.Description = "pbooWillPrintMICRInformation";
-            this.pbooWillPrintMICRInformation.Name = "pbooWillPrintMICRInformation";
-            this.pbooWillPrintMICRInformation.Type = typeof(bool);
-            this.pbooWillPrintMICRInformation.ValueInfo = "True";
-            this.pbooWillPrintMICRInformation.Visible = false;
+            this.plngCheckFormatIsMICR.Description = "plngCheckFormatIsMICR";
+            this.plngCheckFormatIsMICR.Name = "plngCheckFormatIsMICR";
+            this.plngCheckFormatIsMICR.Type = typeof(bool);
+            this.plngCheckFormatIsMICR.ValueInfo = "True";
+            this.plngCheckFormatIsMICR.Visible = false;
             // 
             // PageHeader
             // 
@@ -833,14 +833,14 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillPrintMICRInformation, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormatIsMICR, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.Subtitle,
             this.pstrDatabaseName,
             this.pstrServerName,
             this.plngUserID,
             this.plngID,
-            this.pbooWillPrintMICRInformation});
+            this.plngCheckFormatIsMICR});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -864,7 +864,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrServerName;
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
         private DevExpress.XtraReports.Parameters.Parameter plngID;
-        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintMICRInformation;
+        private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
