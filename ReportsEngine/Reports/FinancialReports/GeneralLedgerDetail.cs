@@ -13,8 +13,10 @@ namespace ReportsEngine.Reports
     {
         private double GrandAccountTotalDebitx;
         private double GrandAccountTotalCreditx;
+
         private double GrandPeriodTotalDebitx;
         private double GrandPeriodTotalCreditx;
+
         private double GrandPeriodTotalBalance;
         private double GrandAccountTotalBalance;
 
