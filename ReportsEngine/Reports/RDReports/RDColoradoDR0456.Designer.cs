@@ -35,10 +35,12 @@
             // 
             // TopMargin
             // 
+            this.TopMargin.HeightF = 50F;
             this.TopMargin.Name = "TopMargin";
             // 
             // BottomMargin
             // 
+            this.BottomMargin.HeightF = 50F;
             this.BottomMargin.Name = "BottomMargin";
             // 
             // Detail
@@ -52,6 +54,7 @@
             this.BottomMargin,
             this.Detail});
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
+            this.Margins = new DevExpress.Drawing.DXMargins(50F, 50F, 50F, 50F);
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

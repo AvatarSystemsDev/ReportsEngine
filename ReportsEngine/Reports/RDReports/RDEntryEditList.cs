@@ -22,7 +22,7 @@ namespace ReportsEngine.Reports.RDReports
         {
             Parameter p = this.Parameters["plngReportType"];
             List<LookUpValue> staticValueCollection = (p.LookUpSettings as StaticListLookUpSettings).LookUpValues.ToList();
-            (sender as XRLabel).Text = "Showing:  " + staticValueCollection.FirstOrDefault(x => Object.Equals(x.Value, this.Parameters["plngReportType"].Value)).Description;
+            (sender as XRLabel).Text = "Report Type:  " + staticValueCollection.FirstOrDefault(x => Object.Equals(x.Value, this.Parameters["plngReportType"].Value)).Description;
         }
 
     }

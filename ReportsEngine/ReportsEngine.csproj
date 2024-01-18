@@ -489,11 +489,23 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\JIBReports\ExcelJIBCompanyStatementRecap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBCompanyStatementRecap.Designer.cs">
+      <DependentUpon>ExcelJIBCompanyStatementRecap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBServiceCharges.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBServiceCharges.Designer.cs">
       <DependentUpon>ExcelJIBServiceCharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBCompanyStatementRecap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBCompanyStatementRecap.Designer.cs">
+      <DependentUpon>JIBCompanyStatementRecap.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\JIBReports\JIBServiceCharges.cs">
       <SubType>Component</SubType>
@@ -2263,8 +2275,14 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBCompanyStatementRecap.resx">
+      <DependentUpon>ExcelJIBCompanyStatementRecap.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBServiceCharges.resx">
       <DependentUpon>ExcelJIBServiceCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBCompanyStatementRecap.resx">
+      <DependentUpon>JIBCompanyStatementRecap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\JIBServiceCharges.resx">
       <DependentUpon>JIBServiceCharges.cs</DependentUpon>

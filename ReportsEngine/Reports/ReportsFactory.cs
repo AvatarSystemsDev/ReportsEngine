@@ -282,6 +282,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDColoradoDR0021W", () => new ExcelRDColoradoDR0021W());
             Reports.Add("RDColoradoDR0456", () => new RDColoradoDR0456());
             Reports.Add("ExcelRDColoradoDR0456", () => new ExcelRDColoradoDR0456());
+            Reports.Add("JIBCompanyStatementRecap", () => new JIBCompanyStatementRecap());
+            Reports.Add("ExcelJIBCompanyStatementRecap", () => new ExcelJIBCompanyStatementRecap());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

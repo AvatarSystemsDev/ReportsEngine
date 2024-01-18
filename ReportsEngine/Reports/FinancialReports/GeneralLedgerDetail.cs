@@ -639,7 +639,7 @@ namespace ReportsEngine.Reports
             RunningBalance = 0;
             GrandAccountTotalBalance = 0;
             BalanceForwardAmount = 0;
-    }
+        }
         private void xrAccountTotalDebit_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
