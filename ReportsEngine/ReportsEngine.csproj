@@ -489,6 +489,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\JIBReports\ExcelJIBARDetailbyProperty.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBARDetailbyProperty.Designer.cs">
+      <DependentUpon>ExcelJIBARDetailbyProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBAROpenItems.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2293,6 +2299,9 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBARDetailbyProperty.resx">
+      <DependentUpon>ExcelJIBARDetailbyProperty.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBAROpenItems.resx">
       <DependentUpon>ExcelJIBAROpenItems.cs</DependentUpon>
     </EmbeddedResource>

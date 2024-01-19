@@ -285,7 +285,7 @@ namespace ReportsEngine.Reports
             Reports.Add("JIBCompanyStatementRecap", () => new JIBCompanyStatementRecap());
             Reports.Add("ExcelJIBCompanyStatementRecap", () => new ExcelJIBCompanyStatementRecap());
             Reports.Add("JIBARDetailbyPropertyWell", () => new JIBARDetailbyPropertyWell());
-            Reports.Add("ExcelJIBARDetailbyPropertyWell", () => new ExcelJIBARDetailByOwner());
+            Reports.Add("ExcelJIBARDetailbyPropertyWell", () => new ExcelJIBARDetailbyProperty());
             Reports.Add("JIBAROpenItems", () => new JIBAROpenItems());
             Reports.Add("ExcelJIBAROpenItems", () => new ExcelJIBAROpenItems());
         }

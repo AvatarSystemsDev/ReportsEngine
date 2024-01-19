@@ -1220,14 +1220,14 @@
             this.Textbox1.BorderWidth = 1F;
             this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox1.KeepTogether = true;
-            this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(1.150004F, 86.07664F);
+            this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 86.07664F);
             this.Textbox1.Multiline = true;
             this.Textbox1.Name = "Textbox1";
             this.Textbox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox1.SizeF = new System.Drawing.SizeF(260.6546F, 39.58005F);
+            this.Textbox1.SizeF = new System.Drawing.SizeF(261.8046F, 39.58005F);
             this.Textbox1.StylePriority.UsePadding = false;
             this.Textbox1.StylePriority.UseTextAlignment = false;
-            this.Textbox1.Text = "Owner\r\nProperty/Well";
+            this.Textbox1.Text = "Property/Well\r\nOwner\r\n";
             this.Textbox1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox20
@@ -1482,6 +1482,7 @@
             this.groupHeaderBandProperty.HeightF = 17F;
             this.groupHeaderBandProperty.Level = 1;
             this.groupHeaderBandProperty.Name = "groupHeaderBandProperty";
+            this.groupHeaderBandProperty.RepeatEveryPage = true;
             // 
             // xrLabel22
             // 
@@ -1542,10 +1543,10 @@
                     "llNumber]),\'Type: \' + [PhaseWellShortRecordType] ,\'\' )")});
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel1.KeepTogether = true;
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(1.150004F, 0F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(354.52F, 17F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(355.67F, 17F);
             this.xrLabel1.StylePriority.UseBorderColor = false;
             this.xrLabel1.StylePriority.UseBorderDashStyle = false;
             this.xrLabel1.StylePriority.UseBorders = false;

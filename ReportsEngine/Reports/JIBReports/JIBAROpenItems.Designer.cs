@@ -720,11 +720,11 @@
             this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel29.ForeColor = System.Drawing.Color.Black;
             this.xrLabel29.KeepTogether = true;
-            this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(382.2041F, 3.051758E-05F);
+            this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(380.1207F, 3.051758E-05F);
             this.xrLabel29.Multiline = true;
             this.xrLabel29.Name = "xrLabel29";
             this.xrLabel29.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel29.SizeF = new System.Drawing.SizeF(66.64368F, 16.6667F);
+            this.xrLabel29.SizeF = new System.Drawing.SizeF(68.72699F, 16.6667F);
             this.xrLabel29.StylePriority.UseBackColor = false;
             this.xrLabel29.StylePriority.UseBorderColor = false;
             this.xrLabel29.StylePriority.UseBorderDashStyle = false;
@@ -734,7 +734,7 @@
             this.xrLabel29.StylePriority.UseForeColor = false;
             this.xrLabel29.StylePriority.UsePadding = false;
             this.xrLabel29.StylePriority.UseTextAlignment = false;
-            this.xrLabel29.Text = "For Owners";
+            this.xrLabel29.Text = "For Owners:";
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel30
@@ -808,7 +808,7 @@
             this.xrLabel16.SizeF = new System.Drawing.SizeF(70F, 38.01F);
             this.xrLabel16.StylePriority.UsePadding = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
-            this.xrLabel16.Text = "0-30 Days";
+            this.xrLabel16.Text = "0-30\r\nDays";
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel5
@@ -837,14 +837,14 @@
             this.xrLabel4.BorderWidth = 1F;
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel4.KeepTogether = true;
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(630.0002F, 76.82534F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(630.0003F, 76.82533F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel4.SizeF = new System.Drawing.SizeF(70F, 38.01F);
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
-            this.xrLabel4.Text = "120 Days and Over";
+            this.xrLabel4.Text = "120 Days\r\nand Over";
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel3
@@ -862,7 +862,7 @@
             this.xrLabel3.SizeF = new System.Drawing.SizeF(70F, 38.01F);
             this.xrLabel3.StylePriority.UsePadding = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
-            this.xrLabel3.Text = "90-120 Days";
+            this.xrLabel3.Text = "90-120\r\nDays";
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel2
@@ -880,7 +880,7 @@
             this.xrLabel2.SizeF = new System.Drawing.SizeF(70F, 38.01F);
             this.xrLabel2.StylePriority.UsePadding = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "60-90 Days";
+            this.xrLabel2.Text = "60-90\r\nDays";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel1
@@ -898,7 +898,7 @@
             this.xrLabel1.SizeF = new System.Drawing.SizeF(70F, 38.01F);
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "30-60 Days";
+            this.xrLabel1.Text = "30-60\r\nDays";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel33
@@ -952,7 +952,7 @@
             this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox7.SizeF = new System.Drawing.SizeF(68F, 38.01501F);
             this.Textbox7.StylePriority.UsePadding = false;
-            this.Textbox7.Text = "Owner";
+            this.Textbox7.Text = "\r\nOwner";
             this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox104
@@ -969,7 +969,7 @@
             this.Textbox104.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox104.SizeF = new System.Drawing.SizeF(157.38F, 38.01501F);
             this.Textbox104.StylePriority.UsePadding = false;
-            this.Textbox104.Text = "Owner Description";
+            this.Textbox104.Text = "\r\nName";
             this.Textbox104.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel6
@@ -986,7 +986,7 @@
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(124.6202F, 38.01495F);
             this.xrLabel6.StylePriority.UsePadding = false;
-            this.xrLabel6.Text = "Address";
+            this.xrLabel6.Text = "\r\nAddress";
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // SubBand1
@@ -1361,7 +1361,7 @@
             this.xrLabel26.StylePriority.UseForeColor = false;
             this.xrLabel26.StylePriority.UsePadding = false;
             this.xrLabel26.StylePriority.UseTextAlignment = false;
-            this.xrLabel26.Text = "Report Total:";
+            this.xrLabel26.Text = "Report Total";
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel26.TextFormatString = "{0:\'$\'#,0.00}";
             // 
