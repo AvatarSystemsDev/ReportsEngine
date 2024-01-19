@@ -489,6 +489,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\JIBReports\ExcelJIBAROpenItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBAROpenItems.Designer.cs">
+      <DependentUpon>ExcelJIBAROpenItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBCompanyStatementRecap.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -500,6 +506,18 @@
     </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBServiceCharges.Designer.cs">
       <DependentUpon>ExcelJIBServiceCharges.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBARDetailbyPropertyWell.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBARDetailbyPropertyWell.Designer.cs">
+      <DependentUpon>JIBARDetailbyPropertyWell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBAROpenItems.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBAROpenItems.Designer.cs">
+      <DependentUpon>JIBAROpenItems.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\JIBReports\JIBCompanyStatementRecap.cs">
       <SubType>Component</SubType>
@@ -2275,11 +2293,20 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBAROpenItems.resx">
+      <DependentUpon>ExcelJIBAROpenItems.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBCompanyStatementRecap.resx">
       <DependentUpon>ExcelJIBCompanyStatementRecap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBServiceCharges.resx">
       <DependentUpon>ExcelJIBServiceCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBARDetailbyPropertyWell.resx">
+      <DependentUpon>JIBARDetailbyPropertyWell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBAROpenItems.resx">
+      <DependentUpon>JIBAROpenItems.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\JIBCompanyStatementRecap.resx">
       <DependentUpon>JIBCompanyStatementRecap.cs</DependentUpon>

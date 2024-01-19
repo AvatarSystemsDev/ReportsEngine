@@ -284,6 +284,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDColoradoDR0456", () => new ExcelRDColoradoDR0456());
             Reports.Add("JIBCompanyStatementRecap", () => new JIBCompanyStatementRecap());
             Reports.Add("ExcelJIBCompanyStatementRecap", () => new ExcelJIBCompanyStatementRecap());
+            Reports.Add("JIBARDetailbyPropertyWell", () => new JIBARDetailbyPropertyWell());
+            Reports.Add("ExcelJIBARDetailbyPropertyWell", () => new ExcelJIBARDetailByOwner());
+            Reports.Add("JIBAROpenItems", () => new JIBAROpenItems());
+            Reports.Add("ExcelJIBAROpenItems", () => new ExcelJIBAROpenItems());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

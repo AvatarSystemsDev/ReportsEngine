@@ -161,6 +161,7 @@
             this.xrRichText6 = new DevExpress.XtraReports.UI.XRRichText();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.xrPageLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
             this.xrLabel41 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCopyright = new DevExpress.XtraReports.UI.XRLabel();
@@ -209,7 +210,6 @@
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.pbooAwaitParameterInput = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-            this.xrPageLabel = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText6)).BeginInit();
@@ -1219,6 +1219,26 @@
             this.pageFooterBand1.StylePriority.UseFont = false;
             this.pageFooterBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // xrPageLabel
+            // 
+            this.xrPageLabel.AutoWidth = true;
+            this.xrPageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.xrPageLabel.BorderColor = System.Drawing.Color.Black;
+            this.xrPageLabel.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPageLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPageLabel.BorderWidth = 1F;
+            this.xrPageLabel.CanShrink = true;
+            this.xrPageLabel.KeepTogether = true;
+            this.xrPageLabel.LocationFloat = new DevExpress.Utils.PointFloat(518.9566F, 12.92216F);
+            this.xrPageLabel.Multiline = true;
+            this.xrPageLabel.Name = "xrPageLabel";
+            this.xrPageLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrPageLabel.SizeF = new System.Drawing.SizeF(251.0437F, 8.583385F);
+            this.xrPageLabel.StylePriority.UseBackColor = false;
+            this.xrPageLabel.StylePriority.UsePadding = false;
+            this.xrPageLabel.StylePriority.UseTextAlignment = false;
+            this.xrPageLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // xrRunDate
             // 
             this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
@@ -1478,7 +1498,7 @@
             this.xrRichText5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
-                    "e:  </b>\' + FormatString(\'{0:d}\', [PostingDate]) + \'</span>\'\n")});
+                    "e:  </b>\' + FormatString(\'{0:MM/dd/yyyy}\', [PostingDate]) + \'</span>\'\n")});
             this.xrRichText5.KeepTogether = true;
             this.xrRichText5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.525879E-05F);
             this.xrRichText5.Name = "xrRichText5";
@@ -2135,26 +2155,6 @@
             this.groupHeaderBand3.HeightF = 0F;
             this.groupHeaderBand3.Level = 1;
             this.groupHeaderBand3.Name = "groupHeaderBand3";
-            // 
-            // xrPageLabel
-            // 
-            this.xrPageLabel.AutoWidth = true;
-            this.xrPageLabel.BackColor = System.Drawing.Color.Transparent;
-            this.xrPageLabel.BorderColor = System.Drawing.Color.Black;
-            this.xrPageLabel.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrPageLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPageLabel.BorderWidth = 1F;
-            this.xrPageLabel.CanShrink = true;
-            this.xrPageLabel.KeepTogether = true;
-            this.xrPageLabel.LocationFloat = new DevExpress.Utils.PointFloat(518.9566F, 12.92216F);
-            this.xrPageLabel.Multiline = true;
-            this.xrPageLabel.Name = "xrPageLabel";
-            this.xrPageLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrPageLabel.SizeF = new System.Drawing.SizeF(251.0437F, 8.583385F);
-            this.xrPageLabel.StylePriority.UseBackColor = false;
-            this.xrPageLabel.StylePriority.UsePadding = false;
-            this.xrPageLabel.StylePriority.UseTextAlignment = false;
-            this.xrPageLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // GLProcessPostRegister
             // 

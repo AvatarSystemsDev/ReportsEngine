@@ -6,11 +6,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace ReportsEngine.Reports.TaxReports
+namespace ReportsEngine.Reports.JIBReports
 {
-    public partial class JIBARDetailByOwner : DevExpress.XtraReports.UI.XtraReport
+    public partial class JIBARDetailbyPropertyWell : DevExpress.XtraReports.UI.XtraReport
     {
-        public JIBARDetailByOwner()
+        public JIBARDetailbyPropertyWell()
         {
             InitializeComponent();
         }
