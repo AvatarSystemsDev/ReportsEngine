@@ -280,7 +280,7 @@ namespace ReportsEngine.Reports
             Reports.Add("CheckCoverPage", () => new CheckCoverPage());
             Reports.Add("RDColoradoDR0021W", () => new RDColoradoDR0021W());
             Reports.Add("ExcelRDColoradoDR0021W", () => new ExcelRDColoradoDR0021W());
-            Reports.Add("RDColoradoDR0456", () => new RDColoradoDR0456());
+            Reports.Add("RDColoradoDR0456W", () => new RDColoradoDR0456W());
             Reports.Add("ExcelRDColoradoDR0456", () => new ExcelRDColoradoDR0456());
             Reports.Add("JIBCompanyStatementRecap", () => new JIBCompanyStatementRecap());
             Reports.Add("ExcelJIBCompanyStatementRecap", () => new ExcelJIBCompanyStatementRecap());

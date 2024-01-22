@@ -1,5 +1,6 @@
 ﻿using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraPrinting.Drawing;
 using System;
 using System.Collections;
 using System.ComponentModel;
@@ -7,6 +8,7 @@ using System.Drawing;
 using System.Drawing.Text;
 using System.Linq;
 using System.Web;
+using System.Web.Http.Results;
 
 namespace ReportsEngine
 {
@@ -31,8 +33,75 @@ namespace ReportsEngine
             xrCheckNumber.BeforePrint += XrCheckNumber_BeforePrint;
             BeginningRemittance.BeforePrint += BeginningRemittance_BeforePrint;
             EndRemittance.BeforePrint += EndRemittance_BeforePrint;
+            xrPictureBoxLogo.BeforePrint += XrPictureBoxLogo_BeforePrint;
+            xrPictureBoxTopSignature.BeforePrint += XrPictureBoxTopSignature_BeforePrint;
+            xrPictureBoxBottomSignature.BeforePrint += XrPictureBoxBottomSignature_BeforePrint;
         }
 
+        private void XrPictureBoxBottomSignature_BeforePrint(object sender, CancelEventArgs e)
+        {
+            Parameter TwoSignaturesRequired = this.Parameters["plngIsTwoSignaturesRequired"];
+            Parameter SignPath = this.Parameters["pstrSignPath"];
+            Parameter SecondSignPath = this.Parameters["pstrSecondSignPath"];
+
+            XRPictureBox pictureBox = sender as XRPictureBox;
+            bool TwoSignaturesRequiredValue = TwoSignaturesRequired.Value.ToString() == "True";
+            if (TwoSignaturesRequiredValue)
+            {
+                try
+                {
+                    pictureBox.ImageSource = ImageSource.FromFile(SecondSignPath.Value.ToString());
+                }
+                catch
+                {
+                    // Probably add some IO error handling here.
+                }
+            }
+            else
+            {
+                try
+                {
+                    pictureBox.ImageSource = ImageSource.FromFile(SignPath.Value.ToString());
+                }
+                catch
+                {
+                    // Probably add some IO error handling here.
+                }
+            }
+        }
+
+        private void XrPictureBoxTopSignature_BeforePrint(object sender, CancelEventArgs e)
+        {
+            Parameter TwoSignaturesRequired = this.Parameters["plngIsTwoSignaturesRequired"];
+            Parameter SignPath = this.Parameters["pstrSignPath"];
+            bool TwoSignaturesRequiredValue = TwoSignaturesRequired.Value.ToString() == "True";
+            if (TwoSignaturesRequiredValue)
+            {
+                XRPictureBox pictureBox = sender as XRPictureBox;
+                try
+                {
+                    pictureBox.ImageSource = ImageSource.FromFile(SignPath.Value.ToString());
+                }
+                catch
+                {
+                    // Probably add some IO error handling here.
+                }
+            }
+        }
+
+        private void XrPictureBoxLogo_BeforePrint(object sender, CancelEventArgs e)
+        {
+            Parameter p = this.Parameters["pstrLogoPath"];
+            XRPictureBox pictureBox = sender as XRPictureBox;
+            try
+            {
+                pictureBox.ImageSource = ImageSource.FromFile(p.Value.ToString());
+            }
+            catch
+            {
+                // Probably add some IO error handling here.
+            }
+        }
         private void EndRemittance_BeforePrint(object sender, CancelEventArgs e)
         {
             inRemittance = false;

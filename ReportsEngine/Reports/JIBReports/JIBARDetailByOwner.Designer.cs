@@ -1089,6 +1089,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "GetDate(\'01/01/\'+GetYear(Today()))")});
             this.pdteBeginningJIBDate.Name = "pdteBeginningJIBDate";
             this.pdteBeginningJIBDate.Type = typeof(System.DateTime);
+            this.pdteBeginningJIBDate.ValueInfo = "2024-01-22";
             // 
             // pdteEndingJIBDate
             // 

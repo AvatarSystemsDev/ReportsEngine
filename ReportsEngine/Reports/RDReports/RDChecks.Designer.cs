@@ -82,7 +82,9 @@
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.xrPictureBoxTopSignature = new DevExpress.XtraReports.UI.XRPictureBox();
             this.Rectangle5 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrPictureBoxLogo = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCheckNumber = new DevExpress.XtraReports.UI.XRLabel();
             this.xrMICRAccountNumber = new DevExpress.XtraReports.UI.XRLabel();
@@ -110,7 +112,7 @@
             this.Textbox20 = new DevExpress.XtraReports.UI.XRLabel();
             this.CheckAmountLongString12 = new DevExpress.XtraReports.UI.XRLabel();
             this.Line3 = new DevExpress.XtraReports.UI.XRShape();
-            this.Image2 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.xrPictureBoxBottomSignature = new DevExpress.XtraReports.UI.XRPictureBox();
             this.Line2 = new DevExpress.XtraReports.UI.XRShape();
             this.Textbox22 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrNonNegotiablePicture = new DevExpress.XtraReports.UI.XRPictureBox();
@@ -149,13 +151,11 @@
             this.pbooWillCenterCompanyNameOnStub = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIsCheckOnTopOfForm = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckLogoDisplayOptionCodeID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.pstrSecondSignPath = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrPictureBox2 = new DevExpress.XtraReports.UI.XRPictureBox();
             this.pstrLogoPath = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngDatabaseID = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCheckRemittance = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrCheckCoverPage = new DevExpress.XtraReports.UI.XRSubreport();
-            this.plngDatabaseID = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox6)).BeginInit();
@@ -236,7 +236,7 @@
             queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             queryParameter14.Name = "@plngCheckTypeCode";
             queryParameter14.Type = typeof(int);
-            queryParameter14.ValueInfo = "2";
+            queryParameter14.ValueInfo = "0";
             queryParameter15.Name = "@plngDatabaseID";
             queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngDatabaseID", typeof(int));
@@ -320,7 +320,7 @@
             // groupFooterBand1
             // 
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBox2,
+            this.xrPictureBoxTopSignature,
             this.Rectangle5});
             this.groupFooterBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 1 AND not ?pbooHideCheckPart\n")});
@@ -331,6 +331,20 @@
             this.groupFooterBand1.PrintAtBottom = true;
             this.groupFooterBand1.RepeatEveryPage = true;
             // 
+            // xrPictureBoxTopSignature
+            // 
+            this.xrPictureBoxTopSignature.BorderColor = System.Drawing.Color.Black;
+            this.xrPictureBoxTopSignature.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPictureBoxTopSignature.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPictureBoxTopSignature.BorderWidth = 1F;
+            this.xrPictureBoxTopSignature.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbitSignature"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "Iif(?plngIsTwoSignaturesRequired, ?pstrSignPath,\'\' )\n")});
+            this.xrPictureBoxTopSignature.LocationFloat = new DevExpress.Utils.PointFloat(534.91F, 218.69F);
+            this.xrPictureBoxTopSignature.Name = "xrPictureBoxTopSignature";
+            this.xrPictureBoxTopSignature.SizeF = new System.Drawing.SizeF(250.64F, 36.41F);
+            this.xrPictureBoxTopSignature.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            // 
             // Rectangle5
             // 
             this.Rectangle5.BorderColor = System.Drawing.Color.Black;
@@ -338,7 +352,7 @@
             this.Rectangle5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Rectangle5.BorderWidth = 1F;
             this.Rectangle5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBox1,
+            this.xrPictureBoxLogo,
             this.xrLabel1,
             this.xrCheckNumber,
             this.xrMICRAccountNumber,
@@ -358,13 +372,27 @@
             this.Textbox20,
             this.CheckAmountLongString12,
             this.Line3,
-            this.Image2,
+            this.xrPictureBoxBottomSignature,
             this.Line2,
             this.Textbox22,
             this.xrNonNegotiablePicture});
             this.Rectangle5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Rectangle5.Name = "Rectangle5";
             this.Rectangle5.SizeF = new System.Drawing.SizeF(794.0999F, 354.5633F);
+            // 
+            // xrPictureBoxLogo
+            // 
+            this.xrPictureBoxLogo.BorderColor = System.Drawing.Color.Black;
+            this.xrPictureBoxLogo.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPictureBoxLogo.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPictureBoxLogo.BorderWidth = 1F;
+            this.xrPictureBoxLogo.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngCheckLogoDisplayOptionCodeID in (1,2)"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "?pstrLogoPath")});
+            this.xrPictureBoxLogo.LocationFloat = new DevExpress.Utils.PointFloat(0F, 78.35001F);
+            this.xrPictureBoxLogo.Name = "xrPictureBoxLogo";
+            this.xrPictureBoxLogo.SizeF = new System.Drawing.SizeF(115.6199F, 89.10999F);
+            this.xrPictureBoxLogo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // xrLabel1
             // 
@@ -867,19 +895,19 @@
             this.Line3.SizeF = new System.Drawing.SizeF(257.29F, 2F);
             this.Line3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // Image2
+            // xrPictureBoxBottomSignature
             // 
-            this.Image2.BorderColor = System.Drawing.Color.Black;
-            this.Image2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Image2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Image2.BorderWidth = 1F;
-            this.Image2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.xrPictureBoxBottomSignature.BorderColor = System.Drawing.Color.Black;
+            this.xrPictureBoxBottomSignature.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPictureBoxBottomSignature.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPictureBoxBottomSignature.BorderWidth = 1F;
+            this.xrPictureBoxBottomSignature.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbitSignature"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "Iif(?plngIsTwoSignaturesRequired, ?pstrSecondSignPath,?pstrSignPath )\n")});
-            this.Image2.LocationFloat = new DevExpress.Utils.PointFloat(534.91F, 259.65F);
-            this.Image2.Name = "Image2";
-            this.Image2.SizeF = new System.Drawing.SizeF(250.64F, 36.41F);
-            this.Image2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            this.xrPictureBoxBottomSignature.LocationFloat = new DevExpress.Utils.PointFloat(534.91F, 259.65F);
+            this.xrPictureBoxBottomSignature.Name = "xrPictureBoxBottomSignature";
+            this.xrPictureBoxBottomSignature.SizeF = new System.Drawing.SizeF(250.64F, 36.41F);
+            this.xrPictureBoxBottomSignature.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // Line2
             // 
@@ -1091,10 +1119,8 @@
             // pstrSignPath
             // 
             this.pstrSignPath.Description = "pstrSignPath";
-            this.pstrSignPath.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Iif(?pbitSignature = True, \'/ProvidenceReports/Signatures/TestSig.png\', \'\')")});
             this.pstrSignPath.Name = "pstrSignPath";
-            this.pstrSignPath.ValueInfo = "0";
+            this.pstrSignPath.ValueInfo = "C:\\AvatarSystemsRepository\\37\\CheckPrintingFormats\\1\\2";
             dynamicListLookUpSettings4.DataMember = "CheckFormat";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "SignaturePath";
@@ -1187,7 +1213,7 @@
             this.plngCompanyID.Description = "Company ID";
             this.plngCompanyID.Name = "plngCompanyID";
             this.plngCompanyID.Type = typeof(int);
-            this.plngCompanyID.ValueInfo = "0";
+            this.plngCompanyID.ValueInfo = "1";
             this.plngCompanyID.Visible = false;
             // 
             // pstrSelectOwner
@@ -1338,7 +1364,7 @@
             this.plngCheckLogoDisplayOptionCodeID.Description = "Check Logo Display Option Code";
             this.plngCheckLogoDisplayOptionCodeID.Name = "plngCheckLogoDisplayOptionCodeID";
             this.plngCheckLogoDisplayOptionCodeID.Type = typeof(int);
-            this.plngCheckLogoDisplayOptionCodeID.ValueInfo = "5";
+            this.plngCheckLogoDisplayOptionCodeID.ValueInfo = "1";
             dynamicListLookUpSettings17.DataMember = "CheckFormat";
             dynamicListLookUpSettings17.DataSource = this.Dynamic;
             dynamicListLookUpSettings17.DisplayMember = "CheckLogoDisplayOptionCodeID";
@@ -1346,25 +1372,13 @@
             dynamicListLookUpSettings17.SortMember = null;
             dynamicListLookUpSettings17.ValueMember = "CheckLogoDisplayOptionCodeID";
             this.plngCheckLogoDisplayOptionCodeID.ValueSourceSettings = dynamicListLookUpSettings17;
-            // 
-            // xrPictureBox1
-            // 
-            this.xrPictureBox1.BorderColor = System.Drawing.Color.Black;
-            this.xrPictureBox1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrPictureBox1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPictureBox1.BorderWidth = 1F;
-            this.xrPictureBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "?pstrSignPath"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngCheckLogoDisplayOptionCodeID in (1,2)")});
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 78.35001F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(115.6199F, 89.10999F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            this.plngCheckLogoDisplayOptionCodeID.Visible = false;
             // 
             // pstrSecondSignPath
             // 
             this.pstrSecondSignPath.Description = "Parameter1";
             this.pstrSecondSignPath.Name = "pstrSecondSignPath";
+            this.pstrSecondSignPath.ValueInfo = "C:\\AvatarSystemsRepository\\37\\CheckPrintingFormats\\1\\4";
             dynamicListLookUpSettings18.DataMember = "CheckFormat";
             dynamicListLookUpSettings18.DataSource = this.Dynamic;
             dynamicListLookUpSettings18.DisplayMember = "SecondSignaturePath";
@@ -1373,20 +1387,6 @@
             dynamicListLookUpSettings18.ValueMember = "SecondSignaturePath";
             this.pstrSecondSignPath.ValueSourceSettings = dynamicListLookUpSettings18;
             this.pstrSecondSignPath.Visible = false;
-            // 
-            // xrPictureBox2
-            // 
-            this.xrPictureBox2.BorderColor = System.Drawing.Color.Black;
-            this.xrPictureBox2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrPictureBox2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPictureBox2.BorderWidth = 1F;
-            this.xrPictureBox2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbitSignature"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "Iif(?plngIsTwoSignaturesRequired, ?pstrSignPath,\'\' )\n")});
-            this.xrPictureBox2.LocationFloat = new DevExpress.Utils.PointFloat(534.91F, 218.69F);
-            this.xrPictureBox2.Name = "xrPictureBox2";
-            this.xrPictureBox2.SizeF = new System.Drawing.SizeF(250.64F, 36.41F);
-            this.xrPictureBox2.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
             // 
             // pstrLogoPath
             // 
@@ -1400,6 +1400,14 @@
             dynamicListLookUpSettings19.ValueMember = "FileExtensionOriginalLogo";
             this.pstrLogoPath.ValueSourceSettings = dynamicListLookUpSettings19;
             this.pstrLogoPath.Visible = false;
+            // 
+            // plngDatabaseID
+            // 
+            this.plngDatabaseID.Description = "Database ID";
+            this.plngDatabaseID.Name = "plngDatabaseID";
+            this.plngDatabaseID.Type = typeof(int);
+            this.plngDatabaseID.ValueInfo = "0";
+            this.plngDatabaseID.Visible = false;
             // 
             // xrCheckRemittance
             // 
@@ -1429,14 +1437,6 @@
             this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "RDCheckHeader.CompanyAddressBlockLong"));
             this.xrCheckCoverPage.ReportSource = new ReportsEngine.Reports.RDReports.CheckCoverPage();
             this.xrCheckCoverPage.SizeF = new System.Drawing.SizeF(800F, 87.52731F);
-            // 
-            // plngDatabaseID
-            // 
-            this.plngDatabaseID.Description = "Database ID";
-            this.plngDatabaseID.Name = "plngDatabaseID";
-            this.plngDatabaseID.Type = typeof(int);
-            this.plngDatabaseID.ValueInfo = "0";
-            this.plngDatabaseID.Visible = false;
             // 
             // RDChecks
             // 
@@ -1481,7 +1481,9 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillPrintBankAccountName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillCenterCompanyNameOnStub, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIsCheckOnTopOfForm, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckLogoDisplayOptionCodeID, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckLogoDisplayOptionCodeID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrLogoPath, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngDatabaseID, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -1557,7 +1559,7 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox23;
         private DevExpress.XtraReports.UI.XRLabel Textbox20;
         private DevExpress.XtraReports.UI.XRShape Line3;
-        private DevExpress.XtraReports.UI.XRPictureBox Image2;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBoxBottomSignature;
         private DevExpress.XtraReports.UI.XRShape Line2;
         private DevExpress.XtraReports.UI.XRLabel Textbox22;
         private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
@@ -1609,9 +1611,9 @@
         private DevExpress.XtraReports.UI.GroupFooterBand EndRemittance;
         private DevExpress.XtraReports.Parameters.Parameter pbooIsCheckOnTopOfForm;
         private DevExpress.XtraReports.Parameters.Parameter plngCheckLogoDisplayOptionCodeID;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox1;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBoxLogo;
         private DevExpress.XtraReports.Parameters.Parameter pstrSecondSignPath;
-        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBox2;
+        private DevExpress.XtraReports.UI.XRPictureBox xrPictureBoxTopSignature;
         private DevExpress.XtraReports.Parameters.Parameter pstrLogoPath;
         private DevExpress.XtraReports.Parameters.Parameter plngDatabaseID;
     }
