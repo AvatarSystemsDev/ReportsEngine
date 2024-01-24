@@ -72,6 +72,25 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings17 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings18 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings19 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.DataAccess.DataFederation.SelectNode selectNode1 = new DevExpress.DataAccess.DataFederation.SelectNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode1 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.Source source1 = new DevExpress.DataAccess.DataFederation.Source();
+            DevExpress.DataAccess.DataFederation.SelectNode selectNode2 = new DevExpress.DataAccess.DataFederation.SelectNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode2 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.Source source2 = new DevExpress.DataAccess.DataFederation.Source();
+            DevExpress.DataAccess.DataFederation.SelectNode selectNode3 = new DevExpress.DataAccess.DataFederation.SelectNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode3 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.Source source3 = new DevExpress.DataAccess.DataFederation.Source();
+            DevExpress.DataAccess.DataFederation.SelectNode selectNode4 = new DevExpress.DataAccess.DataFederation.SelectNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode4 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.Source source4 = new DevExpress.DataAccess.DataFederation.Source();
+            DevExpress.DataAccess.DataFederation.SelectNode selectNode5 = new DevExpress.DataAccess.DataFederation.SelectNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode5 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.Source source5 = new DevExpress.DataAccess.DataFederation.Source();
+            DevExpress.DataAccess.DataFederation.SelectNode selectNode6 = new DevExpress.DataAccess.DataFederation.SelectNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode6 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode7 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.JoinElement joinElement1 = new DevExpress.DataAccess.DataFederation.JoinElement();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -154,6 +173,8 @@
             this.pstrSecondSignPath = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrLogoPath = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngDatabaseID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
+            this.Rectangle4 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrCheckRemittance = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrCheckCoverPage = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
@@ -164,6 +185,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Textbox9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -233,13 +255,13 @@
             storedProcQuery5.Name = "CheckFormat";
             queryParameter13.Name = "@plngCompanyID";
             queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("25", typeof(int));
             queryParameter14.Name = "@plngCheckTypeCode";
             queryParameter14.Type = typeof(int);
-            queryParameter14.ValueInfo = "0";
+            queryParameter14.ValueInfo = "2";
             queryParameter15.Name = "@plngDatabaseID";
             queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngDatabaseID", typeof(int));
+            queryParameter15.Value = new DevExpress.DataAccess.Expression("37", typeof(int));
             storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter13,
             queryParameter14,
@@ -281,7 +303,7 @@
             this.BeginningRemittance,
             this.EndRemittance});
             this.Tablix1.DataMember = "RDCheckHeader";
-            this.Tablix1.DataSource = this.Dynamic;
+            this.Tablix1.DataSource = this.federationDataSource1;
             this.Tablix1.FilterString = "[CheckNumber] In (?pstrSelectCheck) And ([OwnerNumber] In (?pstrSelectOwner) Or \'" +
     "!\' In (?pstrSelectOwner) And IsNullOrEmpty([OwnerNumber]))";
             this.Tablix1.Level = 0;
@@ -320,7 +342,6 @@
             // groupFooterBand1
             // 
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBoxTopSignature,
             this.Rectangle5});
             this.groupFooterBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 1 AND not ?pbooHideCheckPart\n")});
@@ -338,12 +359,12 @@
             this.xrPictureBoxTopSignature.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPictureBoxTopSignature.BorderWidth = 1F;
             this.xrPictureBoxTopSignature.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbitSignature"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "Iif(?plngIsTwoSignaturesRequired, ?pstrSignPath,\'\' )\n")});
-            this.xrPictureBoxTopSignature.LocationFloat = new DevExpress.Utils.PointFloat(534.91F, 218.69F);
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintTwoSignatureLines]"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "[SignaturePath]")});
+            this.xrPictureBoxTopSignature.LocationFloat = new DevExpress.Utils.PointFloat(14.44983F, 0F);
             this.xrPictureBoxTopSignature.Name = "xrPictureBoxTopSignature";
-            this.xrPictureBoxTopSignature.SizeF = new System.Drawing.SizeF(250.64F, 36.41F);
-            this.xrPictureBoxTopSignature.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            this.xrPictureBoxTopSignature.SizeF = new System.Drawing.SizeF(250.64F, 39F);
+            this.xrPictureBoxTopSignature.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
             // 
             // Rectangle5
             // 
@@ -352,6 +373,7 @@
             this.Rectangle5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Rectangle5.BorderWidth = 1F;
             this.Rectangle5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Rectangle4,
             this.xrPictureBoxLogo,
             this.xrLabel1,
             this.xrCheckNumber,
@@ -371,10 +393,6 @@
             this.Textbox23,
             this.Textbox20,
             this.CheckAmountLongString12,
-            this.Line3,
-            this.xrPictureBoxBottomSignature,
-            this.Line2,
-            this.Textbox22,
             this.xrNonNegotiablePicture});
             this.Rectangle5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Rectangle5.Name = "Rectangle5";
@@ -387,8 +405,8 @@
             this.xrPictureBoxLogo.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPictureBoxLogo.BorderWidth = 1F;
             this.xrPictureBoxLogo.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngCheckLogoDisplayOptionCodeID in (1,2)"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "?pstrLogoPath")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[CheckLogoDisplayOptionCodeID] in (1,2)\n"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "[LogoPath]")});
             this.xrPictureBoxLogo.LocationFloat = new DevExpress.Utils.PointFloat(0F, 78.35001F);
             this.xrPictureBoxLogo.Name = "xrPictureBoxLogo";
             this.xrPictureBoxLogo.SizeF = new System.Drawing.SizeF(115.6199F, 89.10999F);
@@ -424,7 +442,7 @@
             this.xrCheckNumber.CanGrow = false;
             this.xrCheckNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑈\'+[SerialNumber]+\'⑈\'"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]")});
             this.xrCheckNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
             this.xrCheckNumber.KeepTogether = true;
             this.xrCheckNumber.LocationFloat = new DevExpress.Utils.PointFloat(27.43004F, 328.23F);
@@ -446,7 +464,7 @@
             this.xrMICRAccountNumber.CanGrow = false;
             this.xrMICRAccountNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\'⑈\'"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]")});
             this.xrMICRAccountNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
             this.xrMICRAccountNumber.KeepTogether = true;
             this.xrMICRAccountNumber.LocationFloat = new DevExpress.Utils.PointFloat(388.4901F, 328.23F);
@@ -468,7 +486,7 @@
             this.xrMICRTransitNumber.CanGrow = false;
             this.xrMICRTransitNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑆\'+[TransitNumber]+\'⑆\'"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]")});
             this.xrMICRTransitNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
             this.xrMICRTransitNumber.KeepTogether = true;
             this.xrMICRTransitNumber.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 328.23F);
@@ -637,6 +655,7 @@
             this.Textbox24.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox24.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox24.BorderWidth = 1F;
+            this.Textbox24.CanGrow = false;
             this.Textbox24.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
             this.Textbox24.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
@@ -655,10 +674,10 @@
             this.CheckAmountLongString15.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.CheckAmountLongString15.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CheckAmountLongString15.BorderWidth = 1F;
+            this.CheckAmountLongString15.CanGrow = false;
             this.CheckAmountLongString15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BankAddressBlock]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False) AND ?pbooWillPrintBankAccountName" +
-                    "")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation] AND [WillPrintBankAccountName]")});
             this.CheckAmountLongString15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.CheckAmountLongString15.KeepTogether = true;
             this.CheckAmountLongString15.LocationFloat = new DevExpress.Utils.PointFloat(344.4399F, 78.35001F);
@@ -675,11 +694,11 @@
             this.CheckAmountLongString14.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.CheckAmountLongString14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CheckAmountLongString14.BorderWidth = 1F;
+            this.CheckAmountLongString14.CanGrow = false;
             this.CheckAmountLongString14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyAddressBlockLong]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)\nAND ?plngCheckLogoDisplayOptionCo" +
-                    "deID <> 5"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "LeftF", "Iif(?plngCheckLogoDisplayOptionCodeID in (3,4), 0, 115.62)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "LeftF", "Iif(?plngCheckLogoDisplayOptionCodeID in (3,4), 0, 115.62)\n"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation] AND [CheckLogoDisplayOptionCodeID] <> 5")});
             this.CheckAmountLongString14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.CheckAmountLongString14.KeepTogether = true;
             this.CheckAmountLongString14.LocationFloat = new DevExpress.Utils.PointFloat(115.6199F, 78.35001F);
@@ -696,8 +715,7 @@
             this.Textbox18.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox18.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox18.BorderWidth = 1F;
-            this.Textbox18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            this.Textbox18.CanGrow = false;
             this.Textbox18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox18.KeepTogether = true;
             this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(625.3499F, 78.35001F);
@@ -715,6 +733,7 @@
             this.CheckAmountShortString4.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.CheckAmountShortString4.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CheckAmountShortString4.BorderWidth = 1F;
+            this.CheckAmountShortString4.CanGrow = false;
             this.CheckAmountShortString4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CheckNumber]")});
             this.CheckAmountShortString4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
@@ -733,8 +752,7 @@
             this.Textbox14.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox14.BorderWidth = 1F;
-            this.Textbox14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            this.Textbox14.CanGrow = false;
             this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox14.KeepTogether = true;
             this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(524.4901F, 78.35001F);
@@ -753,8 +771,6 @@
             this.Textbox16.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox16.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox16.BorderWidth = 1F;
-            this.Textbox16.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
             this.Textbox16.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox16.KeepTogether = true;
             this.Textbox16.LocationFloat = new DevExpress.Utils.PointFloat(696.1799F, 146.63F);
@@ -772,6 +788,7 @@
             this.CheckDate2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.CheckDate2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CheckDate2.BorderWidth = 1F;
+            this.CheckDate2.CanGrow = false;
             this.CheckDate2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CheckDate]")});
             this.CheckDate2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
@@ -792,6 +809,7 @@
             this.CheckAmountLongString11.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.CheckAmountLongString11.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CheckAmountLongString11.BorderWidth = 1F;
+            this.CheckAmountLongString11.CanGrow = false;
             this.CheckAmountLongString11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CheckAmountLongString]")});
             this.CheckAmountLongString11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
@@ -810,6 +828,7 @@
             this.CheckAmountShortString3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.CheckAmountShortString3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CheckAmountShortString3.BorderWidth = 1F;
+            this.CheckAmountShortString3.CanGrow = false;
             this.CheckAmountShortString3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CheckAmountShortString]")});
             this.CheckAmountShortString3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
@@ -828,17 +847,20 @@
             this.Textbox23.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox23.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox23.BorderWidth = 1F;
+            this.Textbox23.CanGrow = false;
             this.Textbox23.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\' TWO SIGNATURES REQUIRED OVER \' + ?pstrTwoSignaturesRequiredAmount"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngIsTwoSignaturesRequired = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintTwoSignatureLines]"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\' TWO SIGNATURES REQUIRED OVER \' + FormatString(\'{0:N2}\',[TwoSignaturesRequiredAm" +
+                    "ount])")});
             this.Textbox23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Textbox23.KeepTogether = true;
-            this.Textbox23.LocationFloat = new DevExpress.Utils.PointFloat(418.3983F, 199.41F);
+            this.Textbox23.LocationFloat = new DevExpress.Utils.PointFloat(424.6583F, 199.41F);
             this.Textbox23.Multiline = true;
             this.Textbox23.Name = "Textbox23";
-            this.Textbox23.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox23.SizeF = new System.Drawing.SizeF(363.1917F, 19.28001F);
+            this.Textbox23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.Textbox23.SizeF = new System.Drawing.SizeF(356.9417F, 19.28001F);
             this.Textbox23.StylePriority.UseFont = false;
+            this.Textbox23.StylePriority.UsePadding = false;
             this.Textbox23.StylePriority.UseTextAlignment = false;
             this.Textbox23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
@@ -848,11 +870,12 @@
             this.Textbox20.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox20.BorderWidth = 1F;
+            this.Textbox20.CanGrow = false;
             this.Textbox20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]")});
             this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox20.KeepTogether = true;
-            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 223.14F);
+            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 229.23F);
             this.Textbox20.Multiline = true;
             this.Textbox20.Name = "Textbox20";
             this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -867,11 +890,12 @@
             this.CheckAmountLongString12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.CheckAmountLongString12.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CheckAmountLongString12.BorderWidth = 1F;
+            this.CheckAmountLongString12.CanGrow = false;
             this.CheckAmountLongString12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OwnerAddressBlock]")});
             this.CheckAmountLongString12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.CheckAmountLongString12.KeepTogether = true;
-            this.CheckAmountLongString12.LocationFloat = new DevExpress.Utils.PointFloat(98.91F, 223.14F);
+            this.CheckAmountLongString12.LocationFloat = new DevExpress.Utils.PointFloat(86.72002F, 229.23F);
             this.CheckAmountLongString12.Multiline = true;
             this.CheckAmountLongString12.Name = "CheckAmountLongString12";
             this.CheckAmountLongString12.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
@@ -887,12 +911,12 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.Line3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngIsTwoSignaturesRequired = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintTwoSignatureLines]")});
             this.Line3.ForeColor = System.Drawing.Color.Black;
-            this.Line3.LocationFloat = new DevExpress.Utils.PointFloat(529.51F, 254.09F);
+            this.Line3.LocationFloat = new DevExpress.Utils.PointFloat(13.00989F, 39.00002F);
             this.Line3.Name = "Line3";
             this.Line3.Shape = shapeLine1;
-            this.Line3.SizeF = new System.Drawing.SizeF(257.29F, 2F);
+            this.Line3.SizeF = new System.Drawing.SizeF(252.08F, 2F);
             this.Line3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrPictureBoxBottomSignature
@@ -902,12 +926,12 @@
             this.xrPictureBoxBottomSignature.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPictureBoxBottomSignature.BorderWidth = 1F;
             this.xrPictureBoxBottomSignature.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbitSignature"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "Iif(?plngIsTwoSignaturesRequired, ?pstrSecondSignPath,?pstrSignPath )\n")});
-            this.xrPictureBoxBottomSignature.LocationFloat = new DevExpress.Utils.PointFloat(534.91F, 259.65F);
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "Iif([WillPrintTwoSignatureLines], [SecondSignaturePath],[SignaturePath])\n"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintSignature]")});
+            this.xrPictureBoxBottomSignature.LocationFloat = new DevExpress.Utils.PointFloat(14.44977F, 41.06502F);
             this.xrPictureBoxBottomSignature.Name = "xrPictureBoxBottomSignature";
-            this.xrPictureBoxBottomSignature.SizeF = new System.Drawing.SizeF(250.64F, 36.41F);
-            this.xrPictureBoxBottomSignature.Sizing = DevExpress.XtraPrinting.ImageSizeMode.ZoomImage;
+            this.xrPictureBoxBottomSignature.SizeF = new System.Drawing.SizeF(250.64F, 39F);
+            this.xrPictureBoxBottomSignature.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
             // 
             // Line2
             // 
@@ -917,10 +941,10 @@
             | DevExpress.XtraPrinting.BorderSide.Right) 
             | DevExpress.XtraPrinting.BorderSide.Bottom)));
             this.Line2.ForeColor = System.Drawing.Color.Black;
-            this.Line2.LocationFloat = new DevExpress.Utils.PointFloat(529.51F, 300.19F);
+            this.Line2.LocationFloat = new DevExpress.Utils.PointFloat(13.00977F, 80.06505F);
             this.Line2.Name = "Line2";
             this.Line2.Shape = shapeLine2;
-            this.Line2.SizeF = new System.Drawing.SizeF(257.29F, 2F);
+            this.Line2.SizeF = new System.Drawing.SizeF(252.08F, 2F);
             this.Line2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox22
@@ -929,15 +953,16 @@
             this.Textbox22.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox22.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox22.BorderWidth = 1F;
+            this.Textbox22.CanGrow = false;
             this.Textbox22.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]")});
             this.Textbox22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox22.KeepTogether = true;
-            this.Textbox22.LocationFloat = new DevExpress.Utils.PointFloat(529.51F, 303F);
+            this.Textbox22.LocationFloat = new DevExpress.Utils.PointFloat(13.00989F, 82.26509F);
             this.Textbox22.Multiline = true;
             this.Textbox22.Name = "Textbox22";
             this.Textbox22.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 1, 3, 1, 100F);
-            this.Textbox22.SizeF = new System.Drawing.SizeF(252.08F, 19.11F);
+            this.Textbox22.SizeF = new System.Drawing.SizeF(252.08F, 17.10995F);
             this.Textbox22.StylePriority.UseFont = false;
             this.Textbox22.Text = "VOID IF NOT CASHED WITHIN 60 DAYS";
             this.Textbox22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
@@ -1120,7 +1145,6 @@
             // 
             this.pstrSignPath.Description = "pstrSignPath";
             this.pstrSignPath.Name = "pstrSignPath";
-            this.pstrSignPath.ValueInfo = "C:\\AvatarSystemsRepository\\37\\CheckPrintingFormats\\1\\2";
             dynamicListLookUpSettings4.DataMember = "CheckFormat";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "SignaturePath";
@@ -1128,7 +1152,6 @@
             dynamicListLookUpSettings4.SortMember = null;
             dynamicListLookUpSettings4.ValueMember = "SignaturePath";
             this.pstrSignPath.ValueSourceSettings = dynamicListLookUpSettings4;
-            this.pstrSignPath.Visible = false;
             // 
             // plngCheckFormat
             // 
@@ -1199,7 +1222,7 @@
             // 
             this.pstrEndingCheckNumber.Description = "Ending Check Number";
             this.pstrEndingCheckNumber.Name = "pstrEndingCheckNumber";
-            this.pstrEndingCheckNumber.ValueInfo = "0";
+            this.pstrEndingCheckNumber.ValueInfo = "ZZZZZZZZZ";
             dynamicListLookUpSettings8.DataMember = "ChecksLookup";
             dynamicListLookUpSettings8.DataSource = this.Dynamic;
             dynamicListLookUpSettings8.DisplayMember = "Description";
@@ -1376,9 +1399,8 @@
             // 
             // pstrSecondSignPath
             // 
-            this.pstrSecondSignPath.Description = "Parameter1";
+            this.pstrSecondSignPath.Description = "Second Sign Path";
             this.pstrSecondSignPath.Name = "pstrSecondSignPath";
-            this.pstrSecondSignPath.ValueInfo = "C:\\AvatarSystemsRepository\\37\\CheckPrintingFormats\\1\\4";
             dynamicListLookUpSettings18.DataMember = "CheckFormat";
             dynamicListLookUpSettings18.DataSource = this.Dynamic;
             dynamicListLookUpSettings18.DisplayMember = "SecondSignaturePath";
@@ -1386,7 +1408,6 @@
             dynamicListLookUpSettings18.SortMember = null;
             dynamicListLookUpSettings18.ValueMember = "SecondSignaturePath";
             this.pstrSecondSignPath.ValueSourceSettings = dynamicListLookUpSettings18;
-            this.pstrSecondSignPath.Visible = false;
             // 
             // pstrLogoPath
             // 
@@ -1394,12 +1415,11 @@
             this.pstrLogoPath.Name = "pstrLogoPath";
             dynamicListLookUpSettings19.DataMember = "CheckFormat";
             dynamicListLookUpSettings19.DataSource = this.Dynamic;
-            dynamicListLookUpSettings19.DisplayMember = "FileExtensionOriginalLogo";
+            dynamicListLookUpSettings19.DisplayMember = "LogoPath";
             dynamicListLookUpSettings19.FilterString = null;
             dynamicListLookUpSettings19.SortMember = null;
-            dynamicListLookUpSettings19.ValueMember = "FileExtensionOriginalLogo";
+            dynamicListLookUpSettings19.ValueMember = "LogoPath";
             this.pstrLogoPath.ValueSourceSettings = dynamicListLookUpSettings19;
-            this.pstrLogoPath.Visible = false;
             // 
             // plngDatabaseID
             // 
@@ -1408,6 +1428,266 @@
             this.plngDatabaseID.Type = typeof(int);
             this.plngDatabaseID.ValueInfo = "0";
             this.plngDatabaseID.Visible = false;
+            // 
+            // federationDataSource1
+            // 
+            this.federationDataSource1.Name = "federationDataSource1";
+            selectNode1.Alias = "Dynamic_RDCheckHeader";
+            sourceNode1.Alias = null;
+            source1.DataMember = "RDCheckHeader";
+            source1.DataSource = this.Dynamic;
+            source1.Name = "Dynamic_RDCheckHeader";
+            sourceNode1.Source = source1;
+            selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowCheckFormat"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ImbursementID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "VoidAfterMessage"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyAddressBlockLong"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyAddressBlockShort"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SortFieldCheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "TaxAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DeductionAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerGross"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "WithholdingAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckAmountShortString"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckAmountLongString"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BankID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "TransitNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SerialNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BankName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BankNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SignatureAddedHeight"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SignatureAddedWidth"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "EntityNumberName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerAddressBlock"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsCheck"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "EMailAddress"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OtherDeductionTotal"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "WillEMailRevenueDetail"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BankAddressBlock")});
+            selectNode1.Root = sourceNode1;
+            selectNode2.Alias = "Dynamic_ChecksLookup";
+            sourceNode2.Alias = null;
+            source2.DataMember = "ChecksLookup";
+            source2.DataSource = this.Dynamic;
+            source2.Name = "Dynamic_ChecksLookup";
+            sourceNode2.Source = source2;
+            selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SortByCheckNumber")});
+            selectNode2.Root = sourceNode2;
+            selectNode3.Alias = "Dynamic_OwnersLookup";
+            sourceNode3.Alias = null;
+            source3.DataMember = "OwnersLookup";
+            source3.DataSource = this.Dynamic;
+            source3.Name = "Dynamic_OwnersLookup";
+            sourceNode3.Source = source3;
+            selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "RecordType"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Number"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description")});
+            selectNode3.Root = sourceNode3;
+            selectNode4.Alias = "Dynamic_CompanyFormatSettings";
+            sourceNode4.Alias = null;
+            source4.DataMember = "CompanyFormatSettings";
+            source4.DataSource = this.Dynamic;
+            source4.Name = "Dynamic_CompanyFormatSettings";
+            sourceNode4.Source = source4;
+            selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CompanyID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CompanyNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CompanyName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckTypeCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckTypeCodeDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingSortMethodTypeCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingSortMethodTypeCodeDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingFormatID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingFormatNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingFormatDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PrimaryCheckSignatureFileID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PrimaryCheckSignatureFileInformationID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PrimaryCheckSignatureFileDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SecondaryCheckSignatureFileID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SecondaryCheckSignatureFileInformationID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SecondaryCheckSignatureFileDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckLogoFileID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckLogoFileInformationID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckLogoFileDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CreateDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CreateUser"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ModifyDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ModifyUser")});
+            selectNode4.Root = sourceNode4;
+            selectNode5.Alias = "Dynamic_CheckFormat";
+            sourceNode5.Alias = null;
+            source5.DataMember = "CheckFormat";
+            source5.DataSource = this.Dynamic;
+            source5.Name = "Dynamic_CheckFormat";
+            sourceNode5.Source = source5;
+            selectNode5.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "EntryRow"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CheckPrintingSortMethodTypeCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "Number"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CheckLogoDisplayOptionCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "OverflowOptionCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CheckStubMessage"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "SignatureLineComment"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "TwoSignaturesRequiredAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsCheckOnTopOfForm"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "WillCenterCompanyNameOnStub"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "WillPrintBankAccountName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "WillPrintCompanyAddressOnStub"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "WillPrintDetailOnStub"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "WillPrintMICRInformation"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "WillPrintSecondDescriptionLine"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "WillPrintSignature"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "WillPrintTwoSignatureLines"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "WillPrintCoverSheet"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsDefault"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CreateDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CreateUser"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "ModifyDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "ModifyUser"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "LogoPath"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "SignaturePath"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "SecondSignaturePath"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalLogo"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalSignature"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalSecondarySignature"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "LogoFileType"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "SignatureFileType"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "SecondSignatureFileType"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CheckLogoFileID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "PrimaryCheckSignatureFileID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "SecondaryCheckSignatureFileID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CheckTypeCodeID")});
+            selectNode5.Root = sourceNode5;
+            selectNode6.Alias = "RDCheckHeader";
+            sourceNode6.Alias = "RDCheckHeader";
+            sourceNode6.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"797\" />";
+            sourceNode6.Source = source1;
+            sourceNode7.Alias = "CheckFormat";
+            sourceNode7.MetaSerializable = "<Meta X=\"185\" Y=\"30\" Width=\"125\" Height=\"837\" />";
+            sourceNode7.Source = source5;
+            selectNode6.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "RowCheckFormat"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "ImbursementID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CompanyID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CompanyName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "VoidAfterMessage"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CompanyAddressBlockLong"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CompanyAddressBlockShort"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "SortFieldCheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "TaxAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "DeductionAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerGross"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "WithholdingAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckAmountShortString"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckAmountLongString"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "BankID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "AccountNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "TransitNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "SerialNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "BankName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "BankNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "SignatureAddedHeight"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "SignatureAddedWidth"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "EntityNumberName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerAddressBlock"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "IsCheck"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "EMailAddress"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OtherDeductionTotal"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "WillEMailRevenueDetail"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "BankAddressBlock"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "EntryRow"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "CheckPrintingSortMethodTypeCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "Number"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "CheckLogoDisplayOptionCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "OverflowOptionCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "CheckStubMessage"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "SignatureLineComment"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "TwoSignaturesRequiredAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "IsCheckOnTopOfForm"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "WillCenterCompanyNameOnStub"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "WillPrintBankAccountName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "WillPrintCompanyAddressOnStub"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "WillPrintDetailOnStub"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "WillPrintMICRInformation"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "WillPrintSecondDescriptionLine"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "WillPrintSignature"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "WillPrintTwoSignatureLines"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "WillPrintCoverSheet"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "IsDefault"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "CreateDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "CreateUser"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "ModifyDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "ModifyUser"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "LogoPath"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "SignaturePath"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "SecondSignaturePath"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "FileExtensionOriginalLogo"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "FileExtensionOriginalSignature"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "FileExtensionOriginalSecondarySignature"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "LogoFileType"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "SignatureFileType"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "SecondSignatureFileType"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "CheckLogoFileID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "PrimaryCheckSignatureFileID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "SecondaryCheckSignatureFileID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "CheckTypeCodeID")});
+            selectNode6.Root = sourceNode6;
+            joinElement1.Condition = "[[CheckFormat\\].[EntryRow\\]] = [[RDCheckHeader\\].[RowCheckFormat\\]]";
+            joinElement1.Node = sourceNode7;
+            selectNode6.SubNodes.AddRange(new DevExpress.DataAccess.DataFederation.JoinElement[] {
+            joinElement1});
+            this.federationDataSource1.Queries.AddRange(new DevExpress.DataAccess.DataFederation.QueryNode[] {
+            selectNode1,
+            selectNode2,
+            selectNode3,
+            selectNode4,
+            selectNode5,
+            selectNode6});
+            // 
+            // Rectangle4
+            // 
+            this.Rectangle4.BorderColor = System.Drawing.Color.Black;
+            this.Rectangle4.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Rectangle4.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Rectangle4.BorderWidth = 1F;
+            this.Rectangle4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Line3,
+            this.Line2,
+            this.Textbox22,
+            this.xrPictureBoxBottomSignature,
+            this.xrPictureBoxTopSignature});
+            this.Rectangle4.LocationFloat = new DevExpress.Utils.PointFloat(516.5001F, 221.2301F);
+            this.Rectangle4.Name = "Rectangle4";
+            this.Rectangle4.SizeF = new System.Drawing.SizeF(265.0899F, 99.37505F);
             // 
             // xrCheckRemittance
             // 
@@ -1447,7 +1727,10 @@
             this.Tablix1,
             this.PageHeader});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.Dynamic});
+            this.Dynamic,
+            this.federationDataSource1});
+            this.DataMember = "Dynamic_CheckFormat";
+            this.DataSource = this.federationDataSource1;
             this.DisplayName = "RDChecks";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(25F, 25F, 12.5F, 12.5F);
@@ -1526,6 +1809,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.Textbox9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1616,5 +1900,7 @@
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBoxTopSignature;
         private DevExpress.XtraReports.Parameters.Parameter pstrLogoPath;
         private DevExpress.XtraReports.Parameters.Parameter plngDatabaseID;
+        private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
+        private DevExpress.XtraReports.UI.XRPanel Rectangle4;
     }
 }

@@ -1,4 +1,5 @@
-﻿using DevExpress.Security.Resources;
+﻿using DevExpress.Drawing;
+using DevExpress.Security.Resources;
 using DevExpress.Web.Mvc;
 using DevExpress.XtraReports.Security;
 using DevExpress.XtraReports.Web.WebDocumentViewer;
@@ -31,9 +32,10 @@ namespace ReportsEngine
             AccessSettings.ReportingSpecificResources.SetRules(DirectoryAccessRule.Allow(Server.MapPath("/Styles")));
             DefaultWebDocumentViewerContainer.Register<DocumentOperationService, ServiceOperations>();
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
+            DXFontRepository.Instance.AddFont(@"C:\MICR\MICRE13B.TTF");
             MVCxReportDesigner.StaticInitialize();
             System.Drawing.Text.PrivateFontCollection privateFonts = new System.Drawing.Text.PrivateFontCollection();
-            privateFonts.AddFontFile(Server.MapPath("~/Views/MICRE13B.TTF"));
+
             AreaRegistration.RegisterAllAreas();
 
             GlobalConfiguration.Configure(WebApiConfig.Register);
