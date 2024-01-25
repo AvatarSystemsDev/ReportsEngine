@@ -288,6 +288,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBARDetailbyPropertyWell", () => new ExcelJIBARDetailbyProperty());
             Reports.Add("JIBAROpenItems", () => new JIBAROpenItems());
             Reports.Add("ExcelJIBAROpenItems", () => new ExcelJIBAROpenItems());
+
+            Reports.Add("TestMICRFonts", () => new TestMICRFonts());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

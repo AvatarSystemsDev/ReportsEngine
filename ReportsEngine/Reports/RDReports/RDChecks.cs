@@ -141,21 +141,21 @@ namespace ReportsEngine
         private void XrCheckNumber_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            //label.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
         }
         // Also part of the remittance
         private void XrMICRTransitNumber_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            //label.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
         }
         // Also part of the remittance
         private void XrMICRAccountNumber_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            //label.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
         }
 

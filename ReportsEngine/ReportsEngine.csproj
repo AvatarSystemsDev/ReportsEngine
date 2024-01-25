@@ -1881,6 +1881,12 @@
     <Compile Include="Reports\RDReports\SuspenseByProperty.Designer.cs">
       <DependentUpon>SuspenseByProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\TestMICRFonts.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\TestMICRFonts.Designer.cs">
+      <DependentUpon>TestMICRFonts.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\TexasTaxProducerSummary.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2990,6 +2996,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\SuspenseByProperty.resx">
       <DependentUpon>SuspenseByProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\TestMICRFonts.resx">
+      <DependentUpon>TestMICRFonts.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\TexasTaxProducerSummary.resx">
       <DependentUpon>TexasTaxProducerSummary.cs</DependentUpon>
