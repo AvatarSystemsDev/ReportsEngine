@@ -12,6 +12,7 @@ using System.Web.Http.Results;
 using System.Diagnostics;
 using DevExpress.Utils.Extensions;
 using DevExpress.Drawing;
+using Band = DevExpress.XtraReports.UI.Band;
 
 namespace ReportsEngine
 {
@@ -25,43 +26,72 @@ namespace ReportsEngine
             xrMICRAccountNumber.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             xrMICRTransitNumber.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             xrCheckNumber.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-
+            xrMICRAccountNumberTwo.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            xrMICRTransitNumberTwo.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            xrCheckNumberTwo.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             xrPages.BeforePrint += XrPages_BeforePrint;
             RemittanceDetailBand.BeforePrint += RemittanceDetailBand_BeforePrint;
-            CheckBegin.BeforePrint += CheckBegin_BeforePrint;
-            CheckBegin.BeforePrint += CheckBegin_BeforePrint;
+            CheckBegin.AfterPrint += CheckBegin_AfterPrint;
             CheckEnd.BeforePrint += CheckEnd_BeforePrint;
             xrNonNegotiablePicture.BeforePrint += XrNonNegotiablePicture_BeforePrint;
+            xrNonNegotiablePictureTwo.BeforePrint += XrNonNegotiablePicture_BeforePrint;
             xrMICRAccountNumber.BeforePrint += XrMICRAccountNumber_BeforePrint;
             xrMICRTransitNumber.BeforePrint += XrMICRTransitNumber_BeforePrint;
             xrCheckNumber.BeforePrint += XrCheckNumber_BeforePrint;
+            xrMICRAccountNumberTwo.BeforePrint += XrMICRAccountNumber_BeforePrint;
+            xrMICRTransitNumberTwo.BeforePrint += XrMICRTransitNumber_BeforePrint;
+            xrCheckNumberTwo.BeforePrint += XrCheckNumber_BeforePrint;
             BeginningRemittance.BeforePrint += BeginningRemittance_BeforePrint;
             EndRemittance.BeforePrint += EndRemittance_BeforePrint;
             xrPictureBoxLogo.BeforePrint += XrPictureBoxLogo_BeforePrint;
+            xrPictureBoxLogoTwo.BeforePrint += XrPictureBoxLogo_BeforePrint;
             xrPictureBoxTopSignature.BeforePrint += XrPictureBoxTopSignature_BeforePrint;
             xrPictureBoxBottomSignature.BeforePrint += XrPictureBoxBottomSignature_BeforePrint;
+            xrPictureBoxTopSignatureTwo.BeforePrint += XrPictureBoxTopSignature_BeforePrint;
+            xrPictureBoxBottomSignatureTwo.BeforePrint += XrPictureBoxBottomSignature_BeforePrint;
+            xrTransitBottomCheck.BeforePrint += XrMICRTransitNumber_BeforePrint;
+            xrTransitTopCheck.BeforePrint += XrMICRTransitNumber_BeforePrint;
+            CheckStubBandBottomCheck.BeforePrint += CheckStubBandBottomCheck_BeforePrint;
+            CheckStubBandTopCheck.BeforePrint += CheckStubBandTopCheck_BeforePrint;
+            PageHeader.BeforePrint += PageHeader_BeforePrint;
+            CheckCoverPage.AfterPrint += CheckCoverPage_AfterPrint;
         }
 
-        private void CheckBegin_BeforePrint(object sender, CancelEventArgs e)
+        private void CheckStubBandTopCheck_BeforePrint(object sender, CancelEventArgs e)
+        {
+            Band band = sender as Band;
+            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("IsCheckOnTopOfForm").ToString() == "True";
+            band.Visible = TwoSignaturesRequiredValue && pageCounter > 1;
+        }
+
+        private void CheckCoverPage_AfterPrint(object sender, EventArgs e)
+        {
+            pageCounter = 1;
+        }
+
+        private void PageHeader_BeforePrint(object sender, CancelEventArgs e)
+        {
+            pageCounter++;
+        }
+
+        private void CheckStubBandBottomCheck_BeforePrint(object sender, CancelEventArgs e)
+        {
+            Band band = sender as Band;
+            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("IsCheckOnTopOfForm").ToString() == "False";
+            band.Visible = TwoSignaturesRequiredValue && pageCounter > 1;
+        }
+
+        private void CheckBegin_AfterPrint(object sender, EventArgs e)
         {
             pageCounter = 1;
         }
 
         private void XrPictureBoxBottomSignature_BeforePrint(object sender, CancelEventArgs e)
         {
-            //Parameter TwoSignaturesRequired = this.Parameters["plngIsTwoSignaturesRequired"];
-            //Parameter SignPath = this.Parameters["pstrSignPath"];
-            //Parameter SecondSignPath = this.Parameters["pstrSecondSignPath"];
-
             XRPictureBox pictureBox = sender as XRPictureBox;
-            var currentRow = this.GetCurrentRow();
-            var rowArray = currentRow.YieldArray();
             string imagePathSignature = GetCurrentColumnValue("SignaturePath").ToString();
             string imagePathSecondSignature = GetCurrentColumnValue("SecondSignaturePath").ToString();
-
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
-
-            //bool TwoSignaturesRequiredValue = TwoSignaturesRequired.Description.ToString() == "True";
             if (TwoSignaturesRequiredValue)
             {
                 try
@@ -70,7 +100,7 @@ namespace ReportsEngine
                 }
                 catch
                 {
-                    // Probably add some IO error handling here.
+                    // Probably add some error handling here.
                 }
             }
             else
@@ -81,21 +111,15 @@ namespace ReportsEngine
                 }
                 catch
                 {
-                    // Probably add some IO error handling here.
+                    // Probably add some error handling here.
                 }
             }
         }
 
         private void XrPictureBoxTopSignature_BeforePrint(object sender, CancelEventArgs e)
         {
-            //Parameter TwoSignaturesRequired = this.Parameters["plngIsTwoSignaturesRequired"];
-            //Parameter SignPath = this.Parameters["pstrSignPath"];
-            var currentRow = this.GetCurrentRow();
-            //var rowArray = currentRow.YieldArray();
-           
             string imagePath = GetCurrentColumnValue("SignaturePath").ToString(); // Replace with your column name
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
-            //bool TwoSignaturesRequiredValue = TwoSignaturesRequired.Description.ToString() == "True";
             if (TwoSignaturesRequiredValue)
             {
                 XRPictureBox pictureBox = sender as XRPictureBox;
@@ -105,18 +129,14 @@ namespace ReportsEngine
                 }
                 catch
                 {
-                    // Probably add some IO error handling here.
+                    // Probably add some error handling here.
                 }
             }
         }
 
         private void XrPictureBoxLogo_BeforePrint(object sender, CancelEventArgs e)
         {
-            //Parameter p = this.Parameters["pstrLogoPath"];
             XRPictureBox pictureBox = sender as XRPictureBox;
-
-            var currentRow = this.GetCurrentRow();
-            var rowArray = currentRow.YieldArray();
             string imagePathLogo = GetCurrentColumnValue("LogoPath").ToString();
             try
             {
@@ -124,7 +144,7 @@ namespace ReportsEngine
             }
             catch
             {
-                // Probably add some IO error handling here.
+                // Probably add some error handling here.
             }
         }
         private void EndRemittance_BeforePrint(object sender, CancelEventArgs e)
@@ -141,22 +161,19 @@ namespace ReportsEngine
         private void XrCheckNumber_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            //label.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
+            label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
         }
         // Also part of the remittance
         private void XrMICRTransitNumber_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            //label.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
+            label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
         }
         // Also part of the remittance
         private void XrMICRAccountNumber_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            //label.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
+            label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
         }
 
         private void CheckEnd_BeforePrint(object sender, CancelEventArgs e)
@@ -174,10 +191,9 @@ namespace ReportsEngine
         private void RemittanceDetailBand_BeforePrint(object sender, CancelEventArgs e)
         {
             DetailBand band = sender as DetailBand;
-            Parameter p = this.Parameters["pbooWillPrintDetailOnStub"];
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintDetailOnStub").ToString() == "True";
 
-            band.Visible = TwoSignaturesRequiredValue || pageCounter <= 2; //Only have remittance visible if it is the first page (don't print remittance on subsequent pages).
+            band.Visible = TwoSignaturesRequiredValue || pageCounter <= 1; //Only have remittance visible if it is the first page (don't print remittance on subsequent pages).
             //band.Visible = p.Value.ToString() != "False";
         }
 
@@ -185,7 +201,6 @@ namespace ReportsEngine
         {
             XRLabel label = sender as XRLabel;
             label.Text = "Page "+pageCounter.ToString();
-            pageCounter++;
         }
 
         //private void GroupFooterBand1_BeforePrint(object sender, CancelEventArgs e)
@@ -201,7 +216,7 @@ namespace ReportsEngine
         private void XrNonNegotiablePicture_BeforePrint(object sender, CancelEventArgs e)
         {
             XRPictureBox picture = sender as XRPictureBox;
-            picture.Visible = pageCounter > 2; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to, I have nothing else.
+            picture.Visible = pageCounter > 1; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to, I have nothing else.
         }
 
     }

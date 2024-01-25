@@ -76,6 +76,7 @@
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pbooPrintSecondLine = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -774,6 +775,13 @@
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // pbooPrintSecondLine
+            // 
+            this.pbooPrintSecondLine.Description = "Print Second Line";
+            this.pbooPrintSecondLine.Name = "pbooPrintSecondLine";
+            this.pbooPrintSecondLine.Type = typeof(bool);
+            this.pbooPrintSecondLine.ValueInfo = "False";
+            // 
             // RDCheckRemittanceSubreport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -803,7 +811,8 @@
             this.plngUserID,
             this.plngID,
             this.plngRDCheckStubCodeID,
-            this.plngImbursementID});
+            this.plngImbursementID,
+            this.pbooPrintSecondLine});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -851,5 +860,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.UI.SubBand SubBand1;
+        private DevExpress.XtraReports.Parameters.Parameter pbooPrintSecondLine;
     }
 }
