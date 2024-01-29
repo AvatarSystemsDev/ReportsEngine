@@ -19,6 +19,7 @@ namespace ReportsEngine
     public partial class RDChecks : DevExpress.XtraReports.UI.XtraReport
     {
         private int pageCounter = 1;
+        private bool printChecks = false;
         private bool inRemittance = false;
         public RDChecks()
         {
@@ -29,64 +30,78 @@ namespace ReportsEngine
             xrMICRAccountNumberTwo.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             xrMICRTransitNumberTwo.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             xrCheckNumberTwo.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            xrPages.BeforePrint += XrPages_BeforePrint;
-            RemittanceDetailBand.BeforePrint += RemittanceDetailBand_BeforePrint;
-            CheckBegin.AfterPrint += CheckBegin_AfterPrint;
-            CheckEnd.BeforePrint += CheckEnd_BeforePrint;
-            xrNonNegotiablePicture.BeforePrint += XrNonNegotiablePicture_BeforePrint;
-            xrNonNegotiablePictureTwo.BeforePrint += XrNonNegotiablePicture_BeforePrint;
-            xrMICRAccountNumber.BeforePrint += XrMICRAccountNumber_BeforePrint;
-            xrMICRTransitNumber.BeforePrint += XrMICRTransitNumber_BeforePrint;
-            xrCheckNumber.BeforePrint += XrCheckNumber_BeforePrint;
-            xrMICRAccountNumberTwo.BeforePrint += XrMICRAccountNumber_BeforePrint;
-            xrMICRTransitNumberTwo.BeforePrint += XrMICRTransitNumber_BeforePrint;
-            xrCheckNumberTwo.BeforePrint += XrCheckNumber_BeforePrint;
-            BeginningRemittance.BeforePrint += BeginningRemittance_BeforePrint;
-            EndRemittance.BeforePrint += EndRemittance_BeforePrint;
-            xrPictureBoxLogo.BeforePrint += XrPictureBoxLogo_BeforePrint;
-            xrPictureBoxLogoTwo.BeforePrint += XrPictureBoxLogo_BeforePrint;
-            xrPictureBoxTopSignature.BeforePrint += XrPictureBoxTopSignature_BeforePrint;
-            xrPictureBoxBottomSignature.BeforePrint += XrPictureBoxBottomSignature_BeforePrint;
-            xrPictureBoxTopSignatureTwo.BeforePrint += XrPictureBoxTopSignature_BeforePrint;
-            xrPictureBoxBottomSignatureTwo.BeforePrint += XrPictureBoxBottomSignature_BeforePrint;
-            xrTransitBottomCheck.BeforePrint += XrMICRTransitNumber_BeforePrint;
-            xrTransitTopCheck.BeforePrint += XrMICRTransitNumber_BeforePrint;
-            CheckStubBandBottomCheck.BeforePrint += CheckStubBandBottomCheck_BeforePrint;
-            CheckStubBandTopCheck.BeforePrint += CheckStubBandTopCheck_BeforePrint;
-            PageHeader.BeforePrint += PageHeader_BeforePrint;
-            CheckCoverPage.AfterPrint += CheckCoverPage_AfterPrint;
+            xrPages.PrintOnPage += XrPages_PrintOnPage;
+            RemittanceDetailBand.PrintOnPage += RemittanceDetailBand_PrintOnPage;
+            CheckBegin.PrintOnPage += CheckBegin_PrintOnPage;
+            //CheckEnd.PrintOnPage += CheckEnd_PrintOnPage;
+            xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
+            xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
+            xrNonNegotiablePictureTwo.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
+            xrMICRAccountNumber.PrintOnPage += XrMICRAccountNumber_PrintOnPage;
+            xrMICRTransitNumber.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
+            xrCheckNumber.PrintOnPage += XrCheckNumber_PrintOnPage;
+            xrMICRAccountNumberTwo.PrintOnPage += XrMICRAccountNumber_PrintOnPage;
+            xrMICRTransitNumberTwo.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
+            xrCheckNumberTwo.PrintOnPage += XrCheckNumber_PrintOnPage;
+            BeginningRemittance.PrintOnPage += BeginningRemittance_PrintOnPage;
+            EndRemittance.PrintOnPage += EndRemittance_PrintOnPage;
+            xrPictureBoxLogo.PrintOnPage += XrPictureBoxLogo_PrintOnPage;
+            xrPictureBoxLogoTwo.PrintOnPage += XrPictureBoxLogo_PrintOnPage;
+            xrPictureBoxTopSignature.PrintOnPage += XrPictureBoxTopSignature_PrintOnPage;
+            xrPictureBoxBottomSignature.PrintOnPage += XrPictureBoxBottomSignature_PrintOnPage;
+            xrPictureBoxTopSignatureTwo.PrintOnPage += XrPictureBoxTopSignature_PrintOnPage;
+            xrPictureBoxBottomSignatureTwo.PrintOnPage += XrPictureBoxBottomSignature_PrintOnPage;
+            xrTransitBottomCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
+            xrTransitTopCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
+            CheckStubBandBottomCheck.PrintOnPage += CheckStubBandBottomCheck_PrintOnPage;
+            CheckStubBandTopCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage;
+            CheckCoverPage.PrintOnPage += CheckCoverPage_PrintOnPage;
+            StubEnd.PrintOnPage += StubEnd_PrintOnPage;
+            xrPageBeginningLabel.PrintOnPage += XrPageBeginningLabel_PrintOnPage;
+            xrCheckEnderLabel.PrintOnPage += XrCheckEnderLabel_PrintOnPage;
+
         }
 
-        private void CheckStubBandTopCheck_BeforePrint(object sender, CancelEventArgs e)
+        private void XrCheckEnderLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            pageCounter = 1;
+        }
+
+        private void XrPageBeginningLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            //pageCounter++;
+        }
+
+        private void StubEnd_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            printChecks = true;
+        }
+
+        private void CheckStubBandTopCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             Band band = sender as Band;
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("IsCheckOnTopOfForm").ToString() == "True";
-            band.Visible = TwoSignaturesRequiredValue && pageCounter > 1;
+            band.Visible = TwoSignaturesRequiredValue && pageCounter > 2;
         }
 
-        private void CheckCoverPage_AfterPrint(object sender, EventArgs e)
+        private void CheckCoverPage_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 1;
+            // pageCounter = 1;
         }
 
-        private void PageHeader_BeforePrint(object sender, CancelEventArgs e)
-        {
-            pageCounter++;
-        }
-
-        private void CheckStubBandBottomCheck_BeforePrint(object sender, CancelEventArgs e)
+        private void CheckStubBandBottomCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             Band band = sender as Band;
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("IsCheckOnTopOfForm").ToString() == "False";
-            band.Visible = TwoSignaturesRequiredValue && pageCounter > 1;
+            band.Visible = TwoSignaturesRequiredValue && pageCounter > 2;
         }
 
-        private void CheckBegin_AfterPrint(object sender, EventArgs e)
+        private void CheckBegin_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 1;
+           pageCounter = 1;
         }
 
-        private void XrPictureBoxBottomSignature_BeforePrint(object sender, CancelEventArgs e)
+        private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
             string imagePathSignature = GetCurrentColumnValue("SignaturePath").ToString();
@@ -116,7 +131,7 @@ namespace ReportsEngine
             }
         }
 
-        private void XrPictureBoxTopSignature_BeforePrint(object sender, CancelEventArgs e)
+        private void XrPictureBoxTopSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             string imagePath = GetCurrentColumnValue("SignaturePath").ToString(); // Replace with your column name
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
@@ -134,7 +149,7 @@ namespace ReportsEngine
             }
         }
 
-        private void XrPictureBoxLogo_BeforePrint(object sender, CancelEventArgs e)
+        private void XrPictureBoxLogo_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
             string imagePathLogo = GetCurrentColumnValue("LogoPath").ToString();
@@ -147,76 +162,55 @@ namespace ReportsEngine
                 // Probably add some error handling here.
             }
         }
-        private void EndRemittance_BeforePrint(object sender, CancelEventArgs e)
+
+        private void EndRemittance_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             inRemittance = false;
         }
 
-        private void BeginningRemittance_BeforePrint(object sender, CancelEventArgs e)
+        private void BeginningRemittance_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             inRemittance = true;
         }
 
         // This is the first part of the remittance at the bottom of the check.
-        private void XrCheckNumber_BeforePrint(object sender, CancelEventArgs e)
+        private void XrCheckNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
+            label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
         }
         // Also part of the remittance
-        private void XrMICRTransitNumber_BeforePrint(object sender, CancelEventArgs e)
+        private void XrMICRTransitNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
+            label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
         }
         // Also part of the remittance
-        private void XrMICRAccountNumber_BeforePrint(object sender, CancelEventArgs e)
+        private void XrMICRAccountNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
-        }
-
-        private void CheckEnd_BeforePrint(object sender, CancelEventArgs e)
-        {
-            //pageCounter = 1;
+            label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
         }
 
 
-        //private void CheckBeginningHeader_BeforePrint(object sender, CancelEventArgs e)
-        //{
-        //    xrNonNegotiablePicture.Visible = true;
-        //    pageCounter = 1;
-        //}
-
-        private void RemittanceDetailBand_BeforePrint(object sender, CancelEventArgs e)
+        private void RemittanceDetailBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             DetailBand band = sender as DetailBand;
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintDetailOnStub").ToString() == "True";
-
-            band.Visible = TwoSignaturesRequiredValue || pageCounter <= 1; //Only have remittance visible if it is the first page (don't print remittance on subsequent pages).
-            //band.Visible = p.Value.ToString() != "False";
+            band.Visible = TwoSignaturesRequiredValue || pageCounter <= 2; //Only have remittance visible if it is the first page (don't print remittance on subsequent pages).
         }
 
-        private void XrPages_BeforePrint(object sender, CancelEventArgs e)
+        private void XrPages_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             label.Text = "Page "+pageCounter.ToString();
+            pageCounter++;
         }
 
-        //private void GroupFooterBand1_BeforePrint(object sender, CancelEventArgs e)
-        //{
-        //    xrNonNegotiablePicture.Visible = true;
-        //}
-
-        //private void RDChecks_BeforePrint(object sender, CancelEventArgs e)
-        //{
-        //    pageCounter = -1;
-        //}
-
-        private void XrNonNegotiablePicture_BeforePrint(object sender, CancelEventArgs e)
+        private void XrNonNegotiablePicture_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox picture = sender as XRPictureBox;
-            picture.Visible = pageCounter > 1; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to, I have nothing else.
+            picture.Visible = pageCounter > 2; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to me, I have nothing else.
         }
 
     }
