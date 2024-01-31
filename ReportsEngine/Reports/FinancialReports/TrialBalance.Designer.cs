@@ -667,7 +667,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel7.StylePriority.UseBackColor = false;
             this.xrLabel7.StylePriority.UseBorderWidth = false;
             this.xrLabel7.StylePriority.UsePadding = false;
-            this.xrLabel7.Text = "Accounting Center Name";
+            this.xrLabel7.Text = "Acct. Center Name";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox20

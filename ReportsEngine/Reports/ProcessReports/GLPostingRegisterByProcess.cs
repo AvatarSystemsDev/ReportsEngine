@@ -33,13 +33,13 @@ namespace ReportsEngine.Reports.MDReports
         private void XrPageCountLandscape_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Text = pageCounter.ToString();
+            label.Text = "Page " + pageCounter.ToString();
         }
 
         private void XrPageCountPortrait_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Text = pageCounter.ToString();
+            label.Text = "Page " + pageCounter.ToString();
         }
 
         private void BatchFooter_BeforePrint(object sender, CancelEventArgs e)

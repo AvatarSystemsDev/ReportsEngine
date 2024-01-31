@@ -59,7 +59,74 @@ namespace ReportsEngine
             StubEnd.PrintOnPage += StubEnd_PrintOnPage;
             xrPageBeginningLabel.PrintOnPage += XrPageBeginningLabel_PrintOnPage;
             xrCheckEnderLabel.PrintOnPage += XrCheckEnderLabel_PrintOnPage;
+            xrCompanyAddressBlockTopCheck.PrintOnPage += XrCompanyAddressBlockTopCheck_PrintOnPage;
+            xrCompanyAddressBlockBottomCheck.PrintOnPage += XrCompanyAddressBlockBottomCheck_PrintOnPage;
+            CheckTopBand.PrintOnPage += CheckTopBand_PrintOnPage;
+            CheckBottomBand.PrintOnPage += CheckBottomBand_PrintOnPage;
+            CheckStubBandTopCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
+            CheckStubBandBottomCheck.PrintOnPage += CheckStubBandBottomCheck_PrintOnPage1;
+            ReportFooter.PrintOnPage += ReportFooter_PrintOnPage;
+        }
 
+        private void CheckStubBandBottomCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)
+        {
+            Band band = sender as Band;
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
+            band.Visible = pageCounter <= 2 || !OverflowHideValue;
+            if (pageCounter <= 2 && OverflowHideValue) // Assuming you want to apply this on the first page
+            {
+                band.PageBreak = PageBreak.AfterBand;
+            }
+            else
+            {
+                band.PageBreak = PageBreak.None; // No page break on other pages
+            }
+        }
+
+        private void CheckStubBandTopCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)
+        {
+            Band band = sender as Band;
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
+            band.Visible = pageCounter <= 2 || !OverflowHideValue;
+            if (pageCounter <= 2 && OverflowHideValue) // Assuming you want to apply this on the first page
+            {
+                band.PageBreak = PageBreak.AfterBand;
+            }
+            else
+            {
+                band.PageBreak = PageBreak.None; // No page break on other pages
+            }
+        }
+
+        private void CheckBottomBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            Band band = sender as Band;
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
+            band.Visible = pageCounter <= 2 || !OverflowHideValue;
+        }
+
+        private void CheckTopBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            Band band = sender as Band;
+            bool OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString() == "4" || GetCurrentColumnValue("OverflowOptionCodeID").ToString() == "3";
+            band.Visible = pageCounter <= 2 || !OverflowOptionCodeIDValue;
+        }
+
+        private void XrCompanyAddressBlockBottomCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            XRLabel label = sender as XRLabel;
+            bool WillPrintCompanyAddressOnStubValue = GetCurrentColumnValue("WillPrintCompanyAddressOnStub").ToString() == "True";
+            label.Visible = pageCounter > 2 && WillPrintCompanyAddressOnStubValue;
+        }
+
+        private void XrCompanyAddressBlockTopCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            XRLabel label = sender as XRLabel;
+            bool WillPrintCompanyAddressOnStubValue = GetCurrentColumnValue("WillPrintCompanyAddressOnStub").ToString() == "True";
+            label.Visible = pageCounter > 2 && WillPrintCompanyAddressOnStubValue;
         }
 
         private void XrCheckEnderLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -94,6 +161,16 @@ namespace ReportsEngine
             Band band = sender as Band;
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("IsCheckOnTopOfForm").ToString() == "False";
             band.Visible = TwoSignaturesRequiredValue && pageCounter > 2;
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
+            if (pageCounter <= 2 && OverflowHideValue) // Assuming you want to apply this on the first page
+            {
+                band.PageBreak = PageBreak.BeforeBand;
+            }
+            else
+            {
+                band.PageBreak = PageBreak.None; // No page break on other pages
+            }
         }
 
         private void CheckBegin_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -213,5 +290,38 @@ namespace ReportsEngine
             picture.Visible = pageCounter > 2; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to me, I have nothing else.
         }
 
+        private XRSubreport CreateRDChecksSubreport(int level, int maxLevel)
+        {
+            if (level > maxLevel)
+            {
+                return null;
+            }
+            else
+            {
+                XRSubreport rdChecksSubreport = new XRSubreport();
+                rdChecksSubreport.ReportSource = new RDChecks(); // Your RDChecks report class
+                ((RDChecks)rdChecksSubreport.ReportSource).Parameters["Level"].Value = level;
+                return rdChecksSubreport;
+            }
+        }
+
+        private void ReportFooter_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
+            if (OverflowHideValue) { 
+                XRSubreport rdChecksSubreport = CreateRDChecksSubreport(1, 2); // Define your max level
+                if (rdChecksSubreport != null)
+                {
+                    ReportFooterBand reportFooter = sender as ReportFooterBand;
+                    reportFooter.Controls.Add(rdChecksSubreport);
+
+                    // Set the size and location of the subreport within the ReportFooter
+                    rdChecksSubreport.LocationF = new PointF(0F, 0F); // Adjust as needed
+                    rdChecksSubreport.SizeF = new SizeF(reportFooter.WidthF, 100F); // Adjust height as needed
+                    rdChecksSubreport.GenerateOwnPages = true;
+                }
+            }
+        }
     }
 }

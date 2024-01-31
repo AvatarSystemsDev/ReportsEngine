@@ -711,6 +711,18 @@
     <Compile Include="Reports\PAReports\Texas_PR.Designer.cs">
       <DependentUpon>Texas_PR.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelJIBWriteOffSelection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelJIBWriteOffSelection.Designer.cs">
+      <DependentUpon>ExcelJIBWriteOffSelection.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\JIBWriteOffSelection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\JIBWriteOffSelection.Designer.cs">
+      <DependentUpon>JIBWriteOffSelection.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\CheckCoverPage.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2415,6 +2427,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\Texas_PR.resx">
       <DependentUpon>Texas_PR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\ExcelJIBWriteOffSelection.resx">
+      <DependentUpon>ExcelJIBWriteOffSelection.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\JIBWriteOffSelection.resx">
+      <DependentUpon>JIBWriteOffSelection.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\CheckCoverPage.resx">
       <DependentUpon>CheckCoverPage.cs</DependentUpon>

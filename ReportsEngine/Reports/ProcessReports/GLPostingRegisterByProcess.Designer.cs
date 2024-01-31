@@ -1187,7 +1187,7 @@
             this.xrLabel78.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel78.BorderWidth = 1F;
             this.xrLabel78.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
             this.xrLabel78.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
             this.xrLabel78.KeepTogether = true;
             this.xrLabel78.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -1579,7 +1579,7 @@
             this.xrLabel93.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel93.BorderWidth = 1F;
             this.xrLabel93.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
             this.xrLabel93.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
             this.xrLabel93.KeepTogether = true;
             this.xrLabel93.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -2091,7 +2091,7 @@
             this.xrLabel12,
             this.xrLabel13});
             this.SubBand4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not ?pbooShowDetail\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowDetail\n")});
             this.SubBand4.HeightF = 17F;
             this.SubBand4.Name = "SubBand4";
             // 

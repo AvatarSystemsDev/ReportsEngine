@@ -712,7 +712,7 @@
             this.Textbox19.StylePriority.UseBackColor = false;
             this.Textbox19.StylePriority.UseBorderWidth = false;
             this.Textbox19.StylePriority.UsePadding = false;
-            this.Textbox19.Text = "Accounting Center Name";
+            this.Textbox19.Text = "Acct. Center Name";
             this.Textbox19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox20
