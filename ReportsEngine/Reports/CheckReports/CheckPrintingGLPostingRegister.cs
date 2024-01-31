@@ -21,7 +21,7 @@ namespace ReportsEngine.Reports.RDReports
 
         private void ReportHeader_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
 
         private void RepeatEveryPageBand_BeforePrint(object sender, CancelEventArgs e)
@@ -32,18 +32,18 @@ namespace ReportsEngine.Reports.RDReports
         private void XrPageCountLandscape_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Text = pageCounter.ToString();
+            label.Text = "Page " + pageCounter.ToString();
         }
 
         private void XrPageCountPortrait_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Text = pageCounter.ToString();
+            label.Text = "Page " + pageCounter.ToString();
         }
 
         private void BatchFooter_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
 
     }

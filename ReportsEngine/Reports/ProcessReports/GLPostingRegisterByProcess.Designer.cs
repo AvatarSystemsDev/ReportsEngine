@@ -1818,6 +1818,7 @@
             this.plngUserID.Description = "plngUserID";
             this.plngUserID.Name = "plngUserID";
             this.plngUserID.Type = typeof(int);
+            this.plngUserID.ValueInfo = "0";
             this.plngUserID.Visible = false;
             // 
             // Subtitle
@@ -2338,7 +2339,7 @@
             this.pbooShowDetail.Description = "Show Detail";
             this.pbooShowDetail.Name = "pbooShowDetail";
             this.pbooShowDetail.Type = typeof(bool);
-            this.pbooShowDetail.ValueInfo = "False";
+            this.pbooShowDetail.ValueInfo = "True";
             // 
             // RepeatEveryPageBand
             // 

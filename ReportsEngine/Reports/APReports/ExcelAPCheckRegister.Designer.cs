@@ -599,7 +599,7 @@
             this.Textbox149.SizeF = new System.Drawing.SizeF(124.92F, 35.00001F);
             this.Textbox149.StylePriority.UseFont = false;
             this.Textbox149.StylePriority.UsePadding = false;
-            this.Textbox149.Text = "Check #";
+            this.Textbox149.Text = "Check";
             this.Textbox149.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox10
@@ -618,7 +618,7 @@
             this.Textbox10.StylePriority.UseFont = false;
             this.Textbox10.StylePriority.UsePadding = false;
             this.Textbox10.StylePriority.UseTextAlignment = false;
-            this.Textbox10.Text = "Inv #";
+            this.Textbox10.Text = "Inv";
             this.Textbox10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // pstrServerName

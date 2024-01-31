@@ -32,10 +32,11 @@
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FiscalYearOpeningTrialBalance));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
@@ -103,7 +104,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
@@ -165,7 +166,11 @@
             this.xrCrossBandBox4 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox5 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
+            this.pbooShowIncomeAndExpense = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Rectangle1 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -178,24 +183,28 @@
             queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             queryParameter2.Name = "@pdteBeginningPostDate";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("getDate(\'1/1/\'+?plngYear)", typeof(System.DateTime));
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("GetDate(\'1/1/\' + ?plngYear)", typeof(System.DateTime));
+            queryParameter3.Name = "@pbooShowIncomeAndExpense";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pbooShowIncomeAndExpense", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
-            queryParameter2});
+            queryParameter2,
+            queryParameter3});
             storedProcQuery1.StoredProcName = "Report_FiscalYearOpeningTrialBalance";
             storedProcQuery2.Name = "LookupCompanies";
-            queryParameter3.Name = "@plngCompanyID";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter3});
-            storedProcQuery2.StoredProcName = "Companies_ReportLookup";
-            storedProcQuery3.Name = "LookupAccounts";
             queryParameter4.Name = "@plngCompanyID";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter4});
+            storedProcQuery2.StoredProcName = "Companies_ReportLookup";
+            storedProcQuery3.Name = "LookupAccounts";
+            queryParameter5.Name = "@plngCompanyID";
+            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter5});
             storedProcQuery3.StoredProcName = "Acquisitions_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -340,11 +349,11 @@
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter5.Name = "UserID";
-            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter6.Name = "UserID";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter5});
+            queryParameter6});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});
@@ -546,6 +555,7 @@
             this.pageHeaderBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pageHeaderBand1.BorderWidth = 1F;
             this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Rectangle1,
             this.Textbox1,
             this.xrLabel6,
             this.ReportTitle,
@@ -555,7 +565,7 @@
             this.Textbox18,
             this.Textbox19,
             this.Textbox20});
-            this.pageHeaderBand1.HeightF = 106.185F;
+            this.pageHeaderBand1.HeightF = 119.9367F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand1});
@@ -623,7 +633,7 @@
             this.Textbox4.BorderWidth = 0F;
             this.Textbox4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox4.KeepTogether = true;
-            this.Textbox4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 69.37501F);
+            this.Textbox4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 83.12668F);
             this.Textbox4.Multiline = true;
             this.Textbox4.Name = "Textbox4";
             this.Textbox4.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -643,7 +653,7 @@
             this.Textbox14.BorderWidth = 0F;
             this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox14.KeepTogether = true;
-            this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(163.3013F, 69.37501F);
+            this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(163.3013F, 83.12668F);
             this.Textbox14.Multiline = true;
             this.Textbox14.Name = "Textbox14";
             this.Textbox14.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -663,7 +673,7 @@
             this.Textbox17.BorderWidth = 0F;
             this.Textbox17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox17.KeepTogether = true;
-            this.Textbox17.LocationFloat = new DevExpress.Utils.PointFloat(113.3013F, 69.37501F);
+            this.Textbox17.LocationFloat = new DevExpress.Utils.PointFloat(113.3013F, 83.12668F);
             this.Textbox17.Multiline = true;
             this.Textbox17.Name = "Textbox17";
             this.Textbox17.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -683,7 +693,7 @@
             this.Textbox18.BorderWidth = 0F;
             this.Textbox18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox18.KeepTogether = true;
-            this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(576.6292F, 69.37502F);
+            this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(576.6292F, 83.12669F);
             this.Textbox18.Multiline = true;
             this.Textbox18.Name = "Textbox18";
             this.Textbox18.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -704,7 +714,7 @@
             this.Textbox19.BorderWidth = 0F;
             this.Textbox19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox19.KeepTogether = true;
-            this.Textbox19.LocationFloat = new DevExpress.Utils.PointFloat(393.1966F, 69.37504F);
+            this.Textbox19.LocationFloat = new DevExpress.Utils.PointFloat(393.1966F, 83.12671F);
             this.Textbox19.Multiline = true;
             this.Textbox19.Name = "Textbox19";
             this.Textbox19.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -724,7 +734,7 @@
             this.Textbox20.BorderWidth = 0F;
             this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox20.KeepTogether = true;
-            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(671.7198F, 69.37502F);
+            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(671.7198F, 83.12669F);
             this.Textbox20.Multiline = true;
             this.Textbox20.Name = "Textbox20";
             this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
@@ -878,7 +888,6 @@
             this.pbooShowCriteria.Name = "pbooShowCriteria";
             this.pbooShowCriteria.Type = typeof(bool);
             this.pbooShowCriteria.ValueInfo = "True";
-            this.pbooShowCriteria.Visible = false;
             // 
             // plngYear
             // 
@@ -1146,6 +1155,47 @@
             selectNode3,
             selectNode4});
             // 
+            // pbooShowIncomeAndExpense
+            // 
+            this.pbooShowIncomeAndExpense.Description = "Show Income and Expense Accounts";
+            this.pbooShowIncomeAndExpense.Name = "pbooShowIncomeAndExpense";
+            this.pbooShowIncomeAndExpense.Type = typeof(bool);
+            this.pbooShowIncomeAndExpense.ValueInfo = "False";
+            // 
+            // Rectangle1
+            // 
+            this.Rectangle1.BorderColor = System.Drawing.Color.Black;
+            this.Rectangle1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Rectangle1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Rectangle1.BorderWidth = 1F;
+            this.Rectangle1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrRichText1});
+            this.Rectangle1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)")});
+            this.Rectangle1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 62.29167F);
+            this.Rectangle1.Name = "Rectangle1";
+            this.Rectangle1.SizeF = new System.Drawing.SizeF(770.0001F, 20.835F);
+            // 
+            // xrRichText1
+            // 
+            this.xrRichText1.BorderColor = System.Drawing.Color.Black;
+            this.xrRichText1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrRichText1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrRichText1.BorderWidth = 1F;
+            this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 9pt; color: black;\"><b>Show I" +
+                    "ncome and Expense Accounts: </b>  \' + Iif(?pbooShowIncomeAndExpense, \'Yes\' , \'No" +
+                    "\' ) + \'</span>\'\n")});
+            this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrRichText1.KeepTogether = true;
+            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 5.340576E-05F);
+            this.xrRichText1.Name = "xrRichText1";
+            this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(738.0062F, 20.83495F);
+            this.xrRichText1.StylePriority.UseFont = false;
+            this.xrRichText1.StylePriority.UsePadding = false;
+            // 
             // FiscalYearOpeningTrialBalance
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1176,18 +1226,21 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngYear, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngYear, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowIncomeAndExpense, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
             this.plngUserID,
             this.plngCompanyID,
             this.Subtitle,
-            this.pbooShowCriteria,
-            this.plngYear});
+            this.plngYear,
+            this.pbooShowIncomeAndExpense,
+            this.pbooShowCriteria});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1241,5 +1294,8 @@
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox4;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox5;
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowIncomeAndExpense;
+        private DevExpress.XtraReports.UI.XRPanel Rectangle1;
+        private DevExpress.XtraReports.UI.XRRichText xrRichText1;
     }
 }

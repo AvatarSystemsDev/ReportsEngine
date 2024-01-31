@@ -73,8 +73,8 @@ namespace ReportsEngine
             Band band = sender as Band;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
-            band.Visible = pageCounter <= 2 || !OverflowHideValue;
-            if (pageCounter <= 2 && OverflowHideValue) // Assuming you want to apply this on the first page
+            band.Visible = pageCounter <= 1 || !OverflowHideValue;
+            if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
             {
                 band.PageBreak = PageBreak.AfterBand;
             }
@@ -89,8 +89,8 @@ namespace ReportsEngine
             Band band = sender as Band;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
-            band.Visible = pageCounter <= 2 || !OverflowHideValue;
-            if (pageCounter <= 2 && OverflowHideValue) // Assuming you want to apply this on the first page
+            band.Visible = pageCounter <= 1 || !OverflowHideValue;
+            if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
             {
                 band.PageBreak = PageBreak.AfterBand;
             }
@@ -105,38 +105,38 @@ namespace ReportsEngine
             Band band = sender as Band;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
-            band.Visible = pageCounter <= 2 || !OverflowHideValue;
+            band.Visible = pageCounter <= 1 || !OverflowHideValue;
         }
 
         private void CheckTopBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             Band band = sender as Band;
             bool OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString() == "4" || GetCurrentColumnValue("OverflowOptionCodeID").ToString() == "3";
-            band.Visible = pageCounter <= 2 || !OverflowOptionCodeIDValue;
+            band.Visible = pageCounter <= 1 || !OverflowOptionCodeIDValue;
         }
 
         private void XrCompanyAddressBlockBottomCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             bool WillPrintCompanyAddressOnStubValue = GetCurrentColumnValue("WillPrintCompanyAddressOnStub").ToString() == "True";
-            label.Visible = pageCounter > 2 && WillPrintCompanyAddressOnStubValue;
+            label.Visible = pageCounter > 1 || WillPrintCompanyAddressOnStubValue;
         }
 
         private void XrCompanyAddressBlockTopCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             bool WillPrintCompanyAddressOnStubValue = GetCurrentColumnValue("WillPrintCompanyAddressOnStub").ToString() == "True";
-            label.Visible = pageCounter > 2 && WillPrintCompanyAddressOnStubValue;
+            label.Visible = pageCounter > 1 || WillPrintCompanyAddressOnStubValue;
         }
 
         private void XrCheckEnderLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
 
         private void XrPageBeginningLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            //pageCounter++;
+            pageCounter++;
         }
 
         private void StubEnd_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -175,7 +175,7 @@ namespace ReportsEngine
 
         private void CheckBegin_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-           pageCounter = 1;
+           //pageCounter = 1;
         }
 
         private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -254,19 +254,19 @@ namespace ReportsEngine
         private void XrCheckNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
+            label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
         }
         // Also part of the remittance
         private void XrMICRTransitNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
+            label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
         }
         // Also part of the remittance
         private void XrMICRAccountNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            label.Visible = pageCounter <= 2; // This will make the check number visible if it is at the top of the form.
+            label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
         }
 
 
@@ -274,20 +274,20 @@ namespace ReportsEngine
         {
             DetailBand band = sender as DetailBand;
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintDetailOnStub").ToString() == "True";
-            band.Visible = TwoSignaturesRequiredValue || pageCounter <= 2; //Only have remittance visible if it is the first page (don't print remittance on subsequent pages).
+            band.Visible = TwoSignaturesRequiredValue || pageCounter <= 1; //Only have remittance visible if it is the first page (don't print remittance on subsequent pages).
         }
 
         private void XrPages_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             label.Text = "Page "+pageCounter.ToString();
-            pageCounter++;
+            //pageCounter++;
         }
 
         private void XrNonNegotiablePicture_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox picture = sender as XRPictureBox;
-            picture.Visible = pageCounter > 2; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to me, I have nothing else.
+            picture.Visible = pageCounter > 1; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to me, I have nothing else.
         }
 
         private XRSubreport CreateRDChecksSubreport(int level, int maxLevel)

@@ -240,7 +240,7 @@
             this.xrLabel22.StylePriority.UseForeColor = false;
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.StylePriority.UseTextAlignment = false;
-            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel21
             // 
@@ -375,7 +375,7 @@
             this.xrLabel17.StylePriority.UseForeColor = false;
             this.xrLabel17.StylePriority.UsePadding = false;
             this.xrLabel17.StylePriority.UseTextAlignment = false;
-            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.xrLabel17.TextFormatString = "{0:MM/dd/yyyy}";
             // 
             // xrLabel16
@@ -506,7 +506,7 @@
             this.xrLabel12.StylePriority.UseForeColor = false;
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
-            this.xrLabel12.Text = "Credit Amt";
+            this.xrLabel12.Text = "Credit";
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel11
@@ -532,7 +532,7 @@
             this.xrLabel11.StylePriority.UseForeColor = false;
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
-            this.xrLabel11.Text = "Debit Amt";
+            this.xrLabel11.Text = "Debit";
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel10
@@ -548,7 +548,7 @@
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(1068.703F, 0F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(60.41925F, 35F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(60.41895F, 35F);
             this.xrLabel10.StylePriority.UseBackColor = false;
             this.xrLabel10.StylePriority.UseBorderColor = false;
             this.xrLabel10.StylePriority.UseBorderDashStyle = false;
@@ -741,7 +741,7 @@
             this.xrLabel3.StylePriority.UsePadding = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
             this.xrLabel3.Text = "Srv Dte";
-            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel1
             // 

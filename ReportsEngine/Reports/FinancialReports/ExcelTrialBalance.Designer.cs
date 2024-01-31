@@ -33,8 +33,9 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelTrialBalance));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
@@ -68,6 +69,7 @@
             this.pdteEndDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooSortByDescription = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowVolume = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowIncomeAndExpense = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -78,23 +80,27 @@
             queryParameter1.Name = "@plngCompanyID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter2.Name = "@pdteBeginningPostDate";
+            queryParameter2.Name = "@pdteEndingPostDate";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter2.Value = new DevExpress.DataAccess.Expression("?pdteEndDate", typeof(System.DateTime));
             queryParameter3.Name = "@pbooSortByDescription";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?pbooSortByDescription", typeof(bool));
+            queryParameter4.Name = "@pbooIncludeIncomeAndExpenseAccounts";
+            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pbooShowIncomeAndExpense", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
-            queryParameter3});
+            queryParameter3,
+            queryParameter4});
             storedProcQuery1.StoredProcName = "Report_TrialBalance";
             storedProcQuery2.Name = "AccountLookup";
-            queryParameter4.Name = "@plngCompanyID";
-            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter5.Name = "@plngCompanyID";
+            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter4});
+            queryParameter5});
             storedProcQuery2.StoredProcName = "Accounts_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -637,6 +643,13 @@
             this.pbooShowVolume.Type = typeof(bool);
             this.pbooShowVolume.ValueInfo = "True";
             // 
+            // pbooShowIncomeAndExpense
+            // 
+            this.pbooShowIncomeAndExpense.Description = "Show Income And Expense";
+            this.pbooShowIncomeAndExpense.Name = "pbooShowIncomeAndExpense";
+            this.pbooShowIncomeAndExpense.Type = typeof(bool);
+            this.pbooShowIncomeAndExpense.ValueInfo = "False";
+            // 
             // ExcelTrialBalance
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -675,7 +688,8 @@
             this.pbooIncludeZeroBalance,
             this.pdteEndDate,
             this.pbooSortByDescription,
-            this.pbooShowVolume});
+            this.pbooShowVolume,
+            this.pbooShowIncomeAndExpense});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -714,5 +728,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowVolume;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowIncomeAndExpense;
     }
 }
