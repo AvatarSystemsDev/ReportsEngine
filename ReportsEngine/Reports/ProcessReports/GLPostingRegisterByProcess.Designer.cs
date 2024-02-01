@@ -220,6 +220,7 @@
             this.pbooShowDetail = new DevExpress.XtraReports.Parameters.Parameter();
             this.RepeatEveryPageBand = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText13)).BeginInit();
@@ -1242,8 +1243,8 @@
             this.xrRichText11.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText11.BorderWidth = 1F;
             this.xrRichText11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date: </b>\' +  FormatString(\'{0:d}\',[PostingDate]) + \'</span>\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
+                    "e: </b>\' +  FormatString(\'{0:MM/dd/yyyy}\',[PostDate]) + \'</span>\'")});
             this.xrRichText11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText11.KeepTogether = true;
             this.xrRichText11.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2.670288E-05F);
@@ -1541,8 +1542,8 @@
             this.xrRichText14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText14.BorderWidth = 1F;
             this.xrRichText14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Postin" +
-                    "g Date: </b>\' +  FormatString(\'{0:d}\',[PostingDate]) + \'</span>\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>GL Dat" +
+                    "e: </b>\' +  FormatString(\'{0:MM/dd/yyyy}\',[PostDate]) + \'</span>\'\n")});
             this.xrRichText14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText14.KeepTogether = true;
             this.xrRichText14.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -2087,6 +2088,7 @@
             // SubBand4
             // 
             this.SubBand4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel17,
             this.xrLabel8,
             this.xrLabel9,
             this.xrLabel12,
@@ -2339,7 +2341,7 @@
             this.pbooShowDetail.Description = "Show Detail";
             this.pbooShowDetail.Name = "pbooShowDetail";
             this.pbooShowDetail.Type = typeof(bool);
-            this.pbooShowDetail.ValueInfo = "True";
+            this.pbooShowDetail.ValueInfo = "False";
             // 
             // RepeatEveryPageBand
             // 
@@ -2351,6 +2353,31 @@
             // 
             this.ReportHeader.HeightF = 0F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrLabel17
+            // 
+            this.xrLabel17.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel17.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel17.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel17.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel17.BorderWidth = 1F;
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel17.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel17.KeepTogether = true;
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(0.0002543131F, 0F);
+            this.xrLabel17.Name = "xrLabel17";
+            this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(2F, 17F);
+            this.xrLabel17.StylePriority.UseBackColor = false;
+            this.xrLabel17.StylePriority.UseBorderColor = false;
+            this.xrLabel17.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel17.StylePriority.UseBorders = false;
+            this.xrLabel17.StylePriority.UseBorderWidth = false;
+            this.xrLabel17.StylePriority.UseFont = false;
+            this.xrLabel17.StylePriority.UseForeColor = false;
+            this.xrLabel17.StylePriority.UsePadding = false;
+            this.xrLabel17.StylePriority.UseTextAlignment = false;
+            this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // GLPostingRegisterByProcess
             // 
@@ -2518,5 +2545,6 @@
         private DevExpress.XtraReports.UI.SubBand SubBand12;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel17;
     }
 }

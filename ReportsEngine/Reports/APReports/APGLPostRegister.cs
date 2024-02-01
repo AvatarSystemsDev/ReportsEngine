@@ -8,7 +8,7 @@ namespace ReportsEngine.Reports.APReports
 {
     public partial class APGLPostRegister : DevExpress.XtraReports.UI.XtraReport
     {
-        int pageCounter = 1;
+        int pageCounter = 0;
         public APGLPostRegister()
         {
             InitializeComponent();
@@ -21,7 +21,7 @@ namespace ReportsEngine.Reports.APReports
 
         private void ReportHeader_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
 
         private void RepeatEveryPageBand_BeforePrint(object sender, CancelEventArgs e)
@@ -43,7 +43,7 @@ namespace ReportsEngine.Reports.APReports
 
         private void BatchFooter_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
     }
 }

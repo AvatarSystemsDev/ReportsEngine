@@ -10,7 +10,7 @@ namespace ReportsEngine.Reports.ProcessReports
 {
     public partial class GLProcessPostRegister : DevExpress.XtraReports.UI.XtraReport
     {
-        private int pageCounter = 1;
+        private int pageCounter = 0;
         public GLProcessPostRegister()
         {
             InitializeComponent();
@@ -23,7 +23,7 @@ namespace ReportsEngine.Reports.ProcessReports
 
         private void ReportHeader_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
 
         private void RepeatEveryPageBand_BeforePrint(object sender, CancelEventArgs e)
@@ -45,7 +45,7 @@ namespace ReportsEngine.Reports.ProcessReports
 
         private void BatchFooter_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
     }
 }

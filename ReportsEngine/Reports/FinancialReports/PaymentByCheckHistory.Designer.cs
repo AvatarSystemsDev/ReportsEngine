@@ -1381,7 +1381,7 @@
             this.plngDateToUse.Type = typeof(int);
             this.plngDateToUse.ValueInfo = "0";
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Check Date"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Post Date"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "GL Date"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Status Date"));
             this.plngDateToUse.ValueSourceSettings = staticListLookUpSettings1;
             // 

@@ -888,7 +888,7 @@
             this.Textbox179.StylePriority.UseFont = false;
             this.Textbox179.StylePriority.UsePadding = false;
             this.Textbox179.StylePriority.UseTextAlignment = false;
-            this.Textbox179.Text = "Post Date";
+            this.Textbox179.Text = "GL Date";
             this.Textbox179.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox180

@@ -40,9 +40,8 @@
             this.pstrCoverPageAddress = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.CheckAmountLongString14 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Textbox20 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.pstrCompanyAddressBlockLong = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -109,12 +108,30 @@
             // groupFooterBand1
             // 
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Textbox20,
             this.CheckAmountLongString14,
             this.xrLabel1});
             this.groupFooterBand1.HeightF = 298.0316F;
             this.groupFooterBand1.Name = "groupFooterBand1";
             this.groupFooterBand1.PrintAtBottom = true;
+            // 
+            // CheckAmountLongString14
+            // 
+            this.CheckAmountLongString14.BorderColor = System.Drawing.Color.Black;
+            this.CheckAmountLongString14.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.CheckAmountLongString14.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.CheckAmountLongString14.BorderWidth = 1F;
+            this.CheckAmountLongString14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrCompanyAddressBlockLong")});
+            this.CheckAmountLongString14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
+            this.CheckAmountLongString14.KeepTogether = true;
+            this.CheckAmountLongString14.LocationFloat = new DevExpress.Utils.PointFloat(33.96161F, 1.589457E-05F);
+            this.CheckAmountLongString14.Multiline = true;
+            this.CheckAmountLongString14.Name = "CheckAmountLongString14";
+            this.CheckAmountLongString14.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.CheckAmountLongString14.SizeF = new System.Drawing.SizeF(302.1501F, 89.10995F);
+            this.CheckAmountLongString14.StylePriority.UseFont = false;
+            this.CheckAmountLongString14.StylePriority.UseTextAlignment = false;
+            this.CheckAmountLongString14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel1
             // 
@@ -133,42 +150,6 @@
             this.xrLabel1.SizeF = new System.Drawing.SizeF(322.92F, 131.4233F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // CheckAmountLongString14
-            // 
-            this.CheckAmountLongString14.BorderColor = System.Drawing.Color.Black;
-            this.CheckAmountLongString14.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.CheckAmountLongString14.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.CheckAmountLongString14.BorderWidth = 1F;
-            this.CheckAmountLongString14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrCompanyAddressBlockLong")});
-            this.CheckAmountLongString14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.CheckAmountLongString14.KeepTogether = true;
-            this.CheckAmountLongString14.LocationFloat = new DevExpress.Utils.PointFloat(102.7083F, 1.589457E-05F);
-            this.CheckAmountLongString14.Multiline = true;
-            this.CheckAmountLongString14.Name = "CheckAmountLongString14";
-            this.CheckAmountLongString14.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.CheckAmountLongString14.SizeF = new System.Drawing.SizeF(233.4034F, 89.10995F);
-            this.CheckAmountLongString14.StylePriority.UseFont = false;
-            this.CheckAmountLongString14.StylePriority.UseTextAlignment = false;
-            this.CheckAmountLongString14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // Textbox20
-            // 
-            this.Textbox20.BorderColor = System.Drawing.Color.Black;
-            this.Textbox20.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox20.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox20.BorderWidth = 1F;
-            this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox20.KeepTogether = true;
-            this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(33.96161F, 0F);
-            this.Textbox20.Multiline = true;
-            this.Textbox20.Name = "Textbox20";
-            this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox20.SizeF = new System.Drawing.SizeF(68.74667F, 89.10996F);
-            this.Textbox20.StylePriority.UseFont = false;
-            this.Textbox20.Text = "RETURN\r\nADDRESS";
-            this.Textbox20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // pstrCompanyAddressBlockLong
             // 
@@ -220,7 +201,6 @@
         private DevExpress.XtraReports.UI.GroupFooterBand groupFooterBand1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel CheckAmountLongString14;
-        private DevExpress.XtraReports.UI.XRLabel Textbox20;
         private DevExpress.XtraReports.Parameters.Parameter pstrCompanyAddressBlockLong;
     }
 }

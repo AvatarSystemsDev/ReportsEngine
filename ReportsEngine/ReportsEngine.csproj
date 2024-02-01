@@ -939,6 +939,12 @@
     <Compile Include="Reports\RDReports\PropertyListAllCompanies.Designer.cs">
       <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\RDChecksRemittanceOnly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\RDChecksRemittanceOnly.Designer.cs">
+      <DependentUpon>RDChecksRemittanceOnly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\RDColoradoDR0021W.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2542,6 +2548,9 @@
     <EmbeddedResource Include="Reports\RDReports\PropertyListAllCompanies.resx">
       <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\RDChecksRemittanceOnly.resx">
+      <DependentUpon>RDChecksRemittanceOnly.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDColoradoDR0021W.resx">
       <DependentUpon>RDColoradoDR0021W.cs</DependentUpon>
     </EmbeddedResource>
@@ -2927,6 +2936,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APHistoryDetail.resx">
       <DependentUpon>APHistoryDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APOpenItemsAgedDetail.resx">
       <DependentUpon>APOpenItemsAgedDetail.cs</DependentUpon>

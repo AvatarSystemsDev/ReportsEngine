@@ -3471,7 +3471,7 @@ namespace ReportsEngine.Reports.FinancialReports
                 case 2:
                     return "Document Voucher:";
                 case 3:
-                    return "Post Date:";
+                    return "GL Date:";
                 case 4:
                     return "Source:";
                 case 5:

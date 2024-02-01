@@ -1147,7 +1147,7 @@
             // 
             // pdteBeginningPostDate
             // 
-            this.pdteBeginningPostDate.Description = "Beginning Post Date";
+            this.pdteBeginningPostDate.Description = "Beginning GL Date";
             this.pdteBeginningPostDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteBeginningPostDate.Name = "pdteBeginningPostDate";
@@ -1156,7 +1156,7 @@
             // 
             // pdteEndingPostDate
             // 
-            this.pdteEndingPostDate.Description = "Ending Post Date";
+            this.pdteEndingPostDate.Description = "Ending GL Date";
             this.pdteEndingPostDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteEndingPostDate.Name = "pdteEndingPostDate";

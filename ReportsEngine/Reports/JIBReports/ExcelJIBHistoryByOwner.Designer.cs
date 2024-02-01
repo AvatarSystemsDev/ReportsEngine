@@ -565,7 +565,7 @@
             this.Textbox78.SizeF = new System.Drawing.SizeF(70.02167F, 34.99997F);
             this.Textbox78.StylePriority.UseFont = false;
             this.Textbox78.StylePriority.UsePadding = false;
-            this.Textbox78.Text = "Post Date";
+            this.Textbox78.Text = "GL Date";
             this.Textbox78.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox82

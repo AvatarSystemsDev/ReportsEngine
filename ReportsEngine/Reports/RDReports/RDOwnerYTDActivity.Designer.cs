@@ -1000,7 +1000,7 @@
             this.xrLabel27.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel27.SizeF = new System.Drawing.SizeF(79.04F, 37.36F);
             this.xrLabel27.StylePriority.UseTextAlignment = false;
-            this.xrLabel27.Text = "Post Date";
+            this.xrLabel27.Text = "GL Date";
             this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel28
@@ -1881,7 +1881,7 @@
             this.Textbox179.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox179.SizeF = new System.Drawing.SizeF(79.04F, 37.36F);
             this.Textbox179.StylePriority.UseTextAlignment = false;
-            this.Textbox179.Text = "Post Date";
+            this.Textbox179.Text = "GL Date";
             this.Textbox179.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox175

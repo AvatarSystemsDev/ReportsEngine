@@ -1181,14 +1181,14 @@
             // 
             // pdteBeginningPostDate
             // 
-            this.pdteBeginningPostDate.Description = "Beginning Post Date";
+            this.pdteBeginningPostDate.Description = "Beginning GL Date";
             this.pdteBeginningPostDate.Name = "pdteBeginningPostDate";
             this.pdteBeginningPostDate.Type = typeof(System.DateTime);
             this.pdteBeginningPostDate.ValueInfo = "1900-01-01";
             // 
             // pdteEndingPostDate
             // 
-            this.pdteEndingPostDate.Description = "Ending Post Date";
+            this.pdteEndingPostDate.Description = "Ending GL Date";
             this.pdteEndingPostDate.Name = "pdteEndingPostDate";
             this.pdteEndingPostDate.Type = typeof(System.DateTime);
             this.pdteEndingPostDate.ValueInfo = "9999-12-31";
@@ -1200,7 +1200,7 @@
             this.plngDateUsed.Type = typeof(int);
             this.plngDateUsed.ValueInfo = "0";
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Invoice Date"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Post Date"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "GL Date"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Check Date"));
             this.plngDateUsed.ValueSourceSettings = staticListLookUpSettings1;
             // 

@@ -360,7 +360,7 @@
             this.Textbox29.SizeF = new System.Drawing.SizeF(91.57114F, 35.44002F);
             this.Textbox29.StylePriority.UseFont = false;
             this.Textbox29.StylePriority.UsePadding = false;
-            this.Textbox29.Text = "Post Date";
+            this.Textbox29.Text = "GL Date";
             this.Textbox29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox30
@@ -519,7 +519,7 @@
             this.plngSortOrder.Type = typeof(int);
             this.plngSortOrder.ValueInfo = "0";
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Check Number"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Post Date"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "GL Date"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Check Date"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "Vendor Number"));
             this.plngSortOrder.ValueSourceSettings = staticListLookUpSettings1;

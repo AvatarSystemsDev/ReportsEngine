@@ -751,7 +751,7 @@
             this.Textbox29.StylePriority.UseFont = false;
             this.Textbox29.StylePriority.UsePadding = false;
             this.Textbox29.StylePriority.UseTextAlignment = false;
-            this.Textbox29.Text = "Post Date";
+            this.Textbox29.Text = "GL Date";
             this.Textbox29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox32
@@ -953,7 +953,7 @@
             this.plngDateToUse.Type = typeof(int);
             this.plngDateToUse.ValueInfo = "0";
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Check Date"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Post Date"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "GL Date"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Status Date"));
             this.plngDateToUse.ValueSourceSettings = staticListLookUpSettings1;
             // 

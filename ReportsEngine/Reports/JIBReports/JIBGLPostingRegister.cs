@@ -8,20 +8,20 @@ namespace ReportsEngine.Reports.RDReports
 {
     public partial class JIBGLPostingRegister : DevExpress.XtraReports.UI.XtraReport
     {
-        private int pageCounter = 1;
+        private int pageCounter = 0;
         public JIBGLPostingRegister()
         {
             InitializeComponent();
             BatchFooter.BeforePrint += BatchFooter_BeforePrint;
-            xrPageCountPortrait.BeforePrint += XrPageCountPortrait_BeforePrint;
-            xrPageCountLandscape.BeforePrint += XrPageCountLandscape_BeforePrint;
+            //xrPageCountPortrait.BeforePrint += XrPageCountPortrait_BeforePrint;
+            //xrPageCountLandscape.BeforePrint += XrPageCountLandscape_BeforePrint;
             RepeatEveryPageBand.BeforePrint += RepeatEveryPageBand_BeforePrint;
             ReportHeader.BeforePrint += ReportHeader_BeforePrint;
         }
 
         private void ReportHeader_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
 
         private void RepeatEveryPageBand_BeforePrint(object sender, CancelEventArgs e)
@@ -43,7 +43,7 @@ namespace ReportsEngine.Reports.RDReports
 
         private void BatchFooter_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
     }
 }

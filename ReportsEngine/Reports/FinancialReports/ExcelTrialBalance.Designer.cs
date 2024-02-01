@@ -624,7 +624,7 @@
             // 
             // pdteEndDate
             // 
-            this.pdteEndDate.Description = "Post Date";
+            this.pdteEndDate.Description = "GL Date";
             this.pdteEndDate.Name = "pdteEndDate";
             this.pdteEndDate.Type = typeof(System.DateTime);
             this.pdteEndDate.ValueInfo = "2023-07-20";

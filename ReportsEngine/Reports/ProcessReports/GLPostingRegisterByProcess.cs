@@ -9,7 +9,7 @@ namespace ReportsEngine.Reports.MDReports
 {
     public partial class GLPostingRegisterByProcess : DevExpress.XtraReports.UI.XtraReport
     {
-        int pageCounter = 1;
+        int pageCounter = 0;
         public GLPostingRegisterByProcess()
         {
             InitializeComponent();
@@ -22,7 +22,7 @@ namespace ReportsEngine.Reports.MDReports
 
         private void ReportHeader_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
 
         private void RepeatEveryPageBand_BeforePrint(object sender, CancelEventArgs e)
@@ -44,7 +44,7 @@ namespace ReportsEngine.Reports.MDReports
 
         private void BatchFooter_BeforePrint(object sender, CancelEventArgs e)
         {
-            pageCounter = 1;
+            pageCounter = 0;
         }
     }
 }

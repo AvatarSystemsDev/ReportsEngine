@@ -845,7 +845,7 @@
             // 
             // pdtePostDate
             // 
-            this.pdtePostDate.Description = "Post Date";
+            this.pdtePostDate.Description = "GL Date";
             this.pdtePostDate.Name = "pdtePostDate";
             this.pdtePostDate.Type = typeof(System.DateTime);
             this.pdtePostDate.ValueInfo = "2023-12-12";

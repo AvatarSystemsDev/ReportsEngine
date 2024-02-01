@@ -54,7 +54,8 @@ namespace ReportsEngine
             xrTransitBottomCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             xrTransitTopCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             CheckStubBandBottomCheck.PrintOnPage += CheckStubBandBottomCheck_PrintOnPage;
-            CheckStubBandTopCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage;
+            PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage;
+            CheckInformationPart.PrintOnPage += CheckStubBandTopCheck_PrintOnPage;
             CheckCoverPage.PrintOnPage += CheckCoverPage_PrintOnPage;
             StubEnd.PrintOnPage += StubEnd_PrintOnPage;
             xrPageBeginningLabel.PrintOnPage += XrPageBeginningLabel_PrintOnPage;
@@ -63,9 +64,11 @@ namespace ReportsEngine
             xrCompanyAddressBlockBottomCheck.PrintOnPage += XrCompanyAddressBlockBottomCheck_PrintOnPage;
             CheckTopBand.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckBottomBand.PrintOnPage += CheckBottomBand_PrintOnPage;
-            CheckStubBandTopCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
+            PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
+            CheckInformationPart.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
             CheckStubBandBottomCheck.PrintOnPage += CheckStubBandBottomCheck_PrintOnPage1;
-            ReportFooter.PrintOnPage += ReportFooter_PrintOnPage;
+            PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckTopBand_PrintOnPage;
+            CheckInformationPart.PrintOnPage += CheckTopBand_PrintOnPage;
         }
 
         private void CheckStubBandBottomCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)
@@ -153,7 +156,7 @@ namespace ReportsEngine
 
         private void CheckCoverPage_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            // pageCounter = 1;
+            pageCounter = 0;
         }
 
         private void CheckStubBandBottomCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -175,7 +178,7 @@ namespace ReportsEngine
 
         private void CheckBegin_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-           //pageCounter = 1;
+           pageCounter = 0;
         }
 
         private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -250,25 +253,23 @@ namespace ReportsEngine
             inRemittance = true;
         }
 
-        // This is the first part of the remittance at the bottom of the check.
         private void XrCheckNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
         }
-        // Also part of the remittance
+        
         private void XrMICRTransitNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
         }
-        // Also part of the remittance
+        
         private void XrMICRAccountNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             label.Visible = pageCounter <= 1; // This will make the check number visible if it is at the top of the form.
         }
-
 
         private void RemittanceDetailBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
@@ -281,7 +282,6 @@ namespace ReportsEngine
         {
             XRLabel label = sender as XRLabel;
             label.Text = "Page "+pageCounter.ToString();
-            //pageCounter++;
         }
 
         private void XrNonNegotiablePicture_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -290,38 +290,29 @@ namespace ReportsEngine
             picture.Visible = pageCounter > 1; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to me, I have nothing else.
         }
 
-        private XRSubreport CreateRDChecksSubreport(int level, int maxLevel)
-        {
-            if (level > maxLevel)
-            {
-                return null;
-            }
-            else
-            {
-                XRSubreport rdChecksSubreport = new XRSubreport();
-                rdChecksSubreport.ReportSource = new RDChecks(); // Your RDChecks report class
-                ((RDChecks)rdChecksSubreport.ReportSource).Parameters["Level"].Value = level;
-                return rdChecksSubreport;
-            }
-        }
-
-        private void ReportFooter_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
-            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
-            bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
-            if (OverflowHideValue) { 
-                XRSubreport rdChecksSubreport = CreateRDChecksSubreport(1, 2); // Define your max level
-                if (rdChecksSubreport != null)
-                {
-                    ReportFooterBand reportFooter = sender as ReportFooterBand;
-                    reportFooter.Controls.Add(rdChecksSubreport);
-
-                    // Set the size and location of the subreport within the ReportFooter
-                    rdChecksSubreport.LocationF = new PointF(0F, 0F); // Adjust as needed
-                    rdChecksSubreport.SizeF = new SizeF(reportFooter.WidthF, 100F); // Adjust height as needed
-                    rdChecksSubreport.GenerateOwnPages = true;
-                }
-            }
-        }
+        //private XRSubreport CreateRDChecksSubreport(int level, int maxLevel)
+        //{
+        //    if (level > maxLevel)
+        //    {
+        //        return null;
+        //    }
+        //    else
+        //    {
+        //        XRSubreport rdChecksSubreport = new XRSubreport();
+        //        rdChecksSubreport.ReportSource = new RDChecks(); // Your RDChecks report class
+        //        foreach (Parameter param in this.Parameters)
+        //        {
+        //            // Check if the subreport has this parameter
+        //            if (((RDChecks)rdChecksSubreport.ReportSource).Parameters[param.Name] != null)
+        //            {
+        //                ((RDChecks)rdChecksSubreport.ReportSource).Parameters[param.Name].Value = param.Value;
+        //            }
+        //        }
+        //        // Override specific parameters
+        //        ((RDChecks)rdChecksSubreport.ReportSource).Parameters["lngLevel"].Value = level;
+        //        ((RDChecks)rdChecksSubreport.ReportSource).Parameters["plngPrintRemittance"].Value = 2;
+        //        return rdChecksSubreport;
+        //    }
+        //}
     }
 }
