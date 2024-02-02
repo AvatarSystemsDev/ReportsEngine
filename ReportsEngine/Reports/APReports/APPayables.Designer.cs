@@ -1324,7 +1324,7 @@
             this.xrLabel21.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel21.BorderWidth = 1F;
             this.xrLabel21.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BottomDescription]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InvoiceDescription]")});
             this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel21.ForeColor = System.Drawing.Color.Black;
             this.xrLabel21.KeepTogether = true;
@@ -1653,7 +1653,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "APPaymentStatusCodeDescription"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BeneficiaryRowNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PaymentAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Amount")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Amount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceDescription")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_DSReportTypeLookup";
             sourceNode3.Alias = null;
@@ -1803,7 +1804,7 @@
             this.plngGroupByVendor.Description = "Group By Vendor";
             this.plngGroupByVendor.Name = "plngGroupByVendor";
             this.plngGroupByVendor.Type = typeof(int);
-            this.plngGroupByVendor.ValueInfo = "0";
+            this.plngGroupByVendor.ValueInfo = "1";
             staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Both Vendor and Beneficiary"));
             staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Vendor"));
             staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Benefiiciary"));

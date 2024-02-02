@@ -69,6 +69,15 @@ namespace ReportsEngine
             CheckStubBandBottomCheck.PrintOnPage += CheckStubBandBottomCheck_PrintOnPage1;
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckInformationPart.PrintOnPage += CheckTopBand_PrintOnPage;
+            xrTopCheckPanel.PrintOnPage += XrTopCheckPanel_PrintOnPage;
+        }
+
+        private void XrTopCheckPanel_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            XRPanel XrPanel = sender as XRPanel;
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
+            XrPanel.Visible = pageCounter <= 1 || !OverflowHideValue;
         }
 
         private void CheckStubBandBottomCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)

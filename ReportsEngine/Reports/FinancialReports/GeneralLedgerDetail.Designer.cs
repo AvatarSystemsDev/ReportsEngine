@@ -1157,8 +1157,8 @@
             this.xrLabel33,
             this.xrLabel25});
             this.Tablix1_GroupHeaderBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngShowZeroBalance = 2, [AccountTotal] <> 0 AND not IsNullOrEmpty([AccountT" +
-                    "otal]), ?plngShowZeroBalance = 1,not IsNullOrEmpty([AccountID]), true)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngShowZeroBalance = 2, [AccountTotal] <> 0 AND [TotalBottomHalfCount] <> 0" +
+                    ", ?plngShowZeroBalance = 1,[TotalBottomHalfCount] <> 0, true)\n")});
             this.Tablix1_GroupHeaderBand.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Tablix1_GroupHeaderBand.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("AccountNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
@@ -3625,6 +3625,7 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_DSPropertiesLookup";
             sourceNode2.Alias = null;
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source2.DataMember = "DSPropertiesLookup";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_DSPropertiesLookup";
@@ -3632,10 +3633,12 @@
             selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyAndWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "RecordType")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_DSAccountLookup";
             sourceNode3.Alias = null;
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source3.DataMember = "DSAccountLookup";
             source3.DataSource = this.Dynamic;
             source3.Name = "Dynamic_DSAccountLookup";
@@ -3643,10 +3646,12 @@
             selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "RecordType")});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Dynamic_DSOwnersReportLookup";
             sourceNode4.Alias = null;
+            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source4.DataMember = "DSOwnersReportLookup";
             source4.DataSource = this.Dynamic;
             source4.Name = "Dynamic_DSOwnersReportLookup";
@@ -3654,10 +3659,12 @@
             selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RecordType")});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Dynamic_DSVendorsReportLookup";
             sourceNode5.Alias = null;
+            sourceNode5.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source5.DataMember = "DSVendorsReportLookup";
             source5.DataSource = this.Dynamic;
             source5.Name = "Dynamic_DSVendorsReportLookup";
@@ -3665,10 +3672,12 @@
             selectNode5.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "RecordType")});
             selectNode5.Root = sourceNode5;
             selectNode6.Alias = "Dynamic_DSAcountingCenterReportLookup";
             sourceNode6.Alias = null;
+            sourceNode6.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source6.DataMember = "DSAcountingCenterReportLookup";
             source6.DataSource = this.Dynamic;
             source6.Name = "Dynamic_DSAcountingCenterReportLookup";
@@ -3676,7 +3685,8 @@
             selectNode6.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "Name")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "Name"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "RecordType")});
             selectNode6.Root = sourceNode6;
             selectNode7.Alias = "Dynamic_DSBatchReportLookup";
             sourceNode7.Alias = null;
@@ -3691,7 +3701,7 @@
             selectNode7.Root = sourceNode7;
             selectNode8.Alias = "Dynamic_DSGeneralLedgerDetail";
             sourceNode8.Alias = null;
-            sourceNode8.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"657\" />";
+            sourceNode8.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"697\" />";
             source8.DataMember = "DSGeneralLedgerDetail";
             source8.DataSource = this.Dynamic;
             source8.Name = "Dynamic_DSGeneralLedgerDetail";
@@ -3725,7 +3735,9 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PhaseWellTypeCode"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountTotal"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountingCenterNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "First")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "First"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "BottomHalfID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "TotalBottomHalfCount")});
             selectNode8.Root = sourceNode8;
             selectNode9.Alias = "Pulse_Master_UserRecord";
             sourceNode9.Alias = null;
@@ -4187,7 +4199,7 @@
             this.xrCrossBandBox6.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrCrossBandBox6.BorderWidth = 0.5F;
             this.xrCrossBandBox6.EndBand = this.SubBand4;
-            this.xrCrossBandBox6.EndPointFloat = new DevExpress.Utils.PointFloat(802.9508F, -22.87363F);
+            this.xrCrossBandBox6.EndPointFloat = new DevExpress.Utils.PointFloat(802.9508F, 0F);
             this.xrCrossBandBox6.Name = "xrCrossBandBox6";
             this.xrCrossBandBox6.StartBand = this.SubBand2;
             this.xrCrossBandBox6.StartPointFloat = new DevExpress.Utils.PointFloat(802.9508F, 17.02086F);
