@@ -112,8 +112,9 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.DataAccess.DataFederation.SelectNode selectNode1 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode1 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source1 = new DevExpress.DataAccess.DataFederation.Source();
@@ -186,16 +187,16 @@
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.lngZero = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooGroupByCheck = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngTransactionSourceCodeID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.CheckFooterBand = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.pbooGroupByCheck = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.pbooAwaitParameterInput = new DevExpress.XtraReports.Parameters.Parameter();
+            this.GLProcessPostRegisterSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox67)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
@@ -418,7 +419,7 @@
             this.xrLabel8,
             this.xrLabel9});
             this.Tablix2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not ?pbooGroupByCheck")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooGroupByCheck")});
             this.Tablix2.HeightF = 17F;
             this.Tablix2.MultiColumn.ColumnSpacing = 50F;
             this.Tablix2.Name = "Tablix2";
@@ -682,7 +683,7 @@
             this.Textbox1,
             this.ReportTitle,
             this.Rectangle2});
-            this.pageHeaderBand1.HeightF = 86.39001F;
+            this.pageHeaderBand1.HeightF = 82.22335F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand1,
@@ -739,7 +740,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)")});
             this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 61.39002F);
             this.Rectangle2.Name = "Rectangle2";
-            this.Rectangle2.SizeF = new System.Drawing.SizeF(770.0001F, 25F);
+            this.Rectangle2.SizeF = new System.Drawing.SizeF(770.0001F, 20.83333F);
             // 
             // xrRichText1
             // 
@@ -756,7 +757,7 @@
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
-            this.xrRichText1.SizeF = new System.Drawing.SizeF(372.8941F, 24.99999F);
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(372.8941F, 20.83332F);
             // 
             // Textbox67
             // 
@@ -773,14 +774,14 @@
             this.Textbox67.Name = "Textbox67";
             this.Textbox67.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox67.SerializableRtfString = resources.GetString("Textbox67.SerializableRtfString");
-            this.Textbox67.SizeF = new System.Drawing.SizeF(238.8952F, 25F);
+            this.Textbox67.SizeF = new System.Drawing.SizeF(238.8952F, 20.83333F);
             // 
             // SubBand1
             // 
             this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPanel1});
             this.SubBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooGroupByCheck")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not ?pbooGroupByCheck")});
             this.SubBand1.HeightF = 40F;
             this.SubBand1.Name = "SubBand1";
             // 
@@ -854,7 +855,7 @@
             this.SubBand4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.Rectangle1});
             this.SubBand4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not ?pbooGroupByCheck")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooGroupByCheck")});
             this.SubBand4.HeightF = 40F;
             this.SubBand4.Name = "SubBand4";
             // 
@@ -1182,7 +1183,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooAwaitParameterInput")});
             this.plngID.Name = "plngID";
             this.plngID.Type = typeof(int);
-            this.plngID.ValueInfo = "1";
+            this.plngID.ValueInfo = "0";
             dynamicListLookUpSettings2.DataMember = "APCheckRegisterReprint";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "Item";
@@ -1221,7 +1222,7 @@
             this.xrLabel18,
             this.xrLabel20});
             this.groupHeaderBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooGroupByCheck\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not ?pbooGroupByCheck\n")});
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("CheckID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBand1.HeightF = 17F;
@@ -1386,37 +1387,28 @@
             // SubBand3
             // 
             this.SubBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrSubreport2});
-            this.SubBand3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngTransactionSourceCodeID>0\n")});
+            this.GLProcessPostRegisterSubreport});
             this.SubBand3.HeightF = 38.33669F;
             this.SubBand3.Name = "SubBand3";
             this.SubBand3.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
             // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.GenerateOwnPages = true;
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.lngZero));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngTransactionSourceCodeID", this.plngTransactionSourceCodeID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAPCheckProcessTrackingID", this.plngID));
-            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.ProcessReports.GLProcessPostRegister();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(770F, 38.33669F);
-            // 
             // lngZero
             // 
-            this.lngZero.AllowNull = true;
             this.lngZero.Description = "zero";
             this.lngZero.Name = "lngZero";
             this.lngZero.Type = typeof(int);
+            this.lngZero.ValueInfo = "0";
             this.lngZero.Visible = false;
+            // 
+            // pbooGroupByCheck
+            // 
+            this.pbooGroupByCheck.Description = "Show Detail";
+            this.pbooGroupByCheck.Name = "pbooGroupByCheck";
+            this.pbooGroupByCheck.Type = typeof(bool);
+            this.pbooGroupByCheck.ValueInfo = "False";
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Summary"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Detail"));
+            this.pbooGroupByCheck.ValueSourceSettings = staticListLookUpSettings2;
             // 
             // plngTransactionSourceCodeID
             // 
@@ -1424,17 +1416,24 @@
             this.plngTransactionSourceCodeID.Name = "plngTransactionSourceCodeID";
             this.plngTransactionSourceCodeID.Type = typeof(int);
             this.plngTransactionSourceCodeID.ValueInfo = "-1";
+            dynamicListLookUpSettings3.DataMember = "APCheckRegisterReprint";
+            dynamicListLookUpSettings3.DataSource = this.Dynamic;
+            dynamicListLookUpSettings3.DisplayMember = "TransactionSourceCodeID";
+            dynamicListLookUpSettings3.FilterString = "[ItemData] = ?plngID";
+            dynamicListLookUpSettings3.SortMember = null;
+            dynamicListLookUpSettings3.ValueMember = "TransactionSourceCodeID";
+            this.plngTransactionSourceCodeID.ValueSourceSettings = dynamicListLookUpSettings3;
             this.plngTransactionSourceCodeID.Visible = false;
             // 
-            // groupFooterBand1
+            // CheckFooterBand
             // 
-            this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CheckFooterBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel23,
             this.xrLabel24});
-            this.groupFooterBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not ?pbooGroupByCheck")});
-            this.groupFooterBand1.HeightF = 17F;
-            this.groupFooterBand1.Name = "groupFooterBand1";
+            this.CheckFooterBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooGroupByCheck")});
+            this.CheckFooterBand.HeightF = 17F;
+            this.CheckFooterBand.Name = "CheckFooterBand";
             // 
             // xrLabel23
             // 
@@ -1504,16 +1503,6 @@
             this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(0.009990873F, 0F);
             this.xrCrossBandBox1.WidthF = 770.0001F;
             // 
-            // pbooGroupByCheck
-            // 
-            this.pbooGroupByCheck.Description = "Show Detail";
-            this.pbooGroupByCheck.Name = "pbooGroupByCheck";
-            this.pbooGroupByCheck.Type = typeof(bool);
-            this.pbooGroupByCheck.ValueInfo = "False";
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Summary"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Detail"));
-            this.pbooGroupByCheck.ValueSourceSettings = staticListLookUpSettings2;
-            // 
             // federationDataSource1
             // 
             this.federationDataSource1.Name = "federationDataSource1";
@@ -1530,6 +1519,7 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_DSAPCheckRegister";
             sourceNode2.Alias = null;
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"417\" />";
             source2.DataMember = "DSAPCheckRegister";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_DSAPCheckRegister";
@@ -1550,10 +1540,12 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PaymentAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DiscountTaken"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SortByCheckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "VendorNumber")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "VendorNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "TransactionSourceCodeID")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_APCheckRegisterReprint";
             sourceNode3.Alias = null;
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
             source3.DataMember = "APCheckRegisterReprint";
             source3.DataSource = this.Dynamic;
             source3.Name = "Dynamic_APCheckRegisterReprint";
@@ -1561,7 +1553,8 @@
             selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ItemData"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Item"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PostDate")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PostDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "TransactionSourceCodeID")});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Pulse_Master_UserRecord";
             sourceNode4.Alias = null;
@@ -1617,6 +1610,24 @@
             this.pbooAwaitParameterInput.ValueInfo = "False";
             this.pbooAwaitParameterInput.Visible = false;
             // 
+            // GLProcessPostRegisterSubreport
+            // 
+            this.GLProcessPostRegisterSubreport.GenerateOwnPages = true;
+            this.GLProcessPostRegisterSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.GLProcessPostRegisterSubreport.Name = "GLProcessPostRegisterSubreport";
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.lngZero));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAPCheckProcessTrackingID", this.plngID));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowDetail", this.pbooGroupByCheck));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngTransactionSourceCodeID", this.plngTransactionSourceCodeID));
+            this.GLProcessPostRegisterSubreport.ReportSource = new ReportsEngine.Reports.ProcessReports.GLProcessPostRegister();
+            this.GLProcessPostRegisterSubreport.SizeF = new System.Drawing.SizeF(770F, 38.33669F);
+            // 
             // APCheckRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1627,7 +1638,7 @@
             this.pageFooterBand1,
             this.groupHeaderBand1,
             this.ReportFooter,
-            this.groupFooterBand1});
+            this.CheckFooterBand});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -1700,7 +1711,7 @@
         private DevExpress.XtraReports.UI.XRPageInfo xrRunDate;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand1;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
-        private DevExpress.XtraReports.UI.GroupFooterBand groupFooterBand1;
+        private DevExpress.XtraReports.UI.GroupFooterBand CheckFooterBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel3;
@@ -1719,7 +1730,7 @@
         private DevExpress.XtraReports.UI.XRRichText Textbox67;
         private DevExpress.XtraReports.UI.SubBand SubBand2;
         private DevExpress.XtraReports.Parameters.Parameter plngTransactionSourceCodeID;
-        private DevExpress.XtraReports.UI.XRSubreport xrSubreport2;
+        private DevExpress.XtraReports.UI.XRSubreport GLProcessPostRegisterSubreport;
         private DevExpress.XtraReports.UI.SubBand SubBand3;
         private DevExpress.XtraReports.Parameters.Parameter lngZero;
         private DevExpress.XtraReports.UI.XRRichText xrRichText1;

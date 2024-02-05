@@ -1493,10 +1493,10 @@
             this.xrLabel22.CanGrow = false;
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel22.KeepTogether = true;
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(355.6745F, 0F);
+            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(406.963F, 0F);
             this.xrLabel22.Name = "xrLabel22";
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel22.SizeF = new System.Drawing.SizeF(66.12994F, 16.99999F);
+            this.xrLabel22.SizeF = new System.Drawing.SizeF(33.83829F, 16.99999F);
             this.xrLabel22.StylePriority.UseBorderColor = false;
             this.xrLabel22.StylePriority.UseBorderDashStyle = false;
             this.xrLabel22.StylePriority.UseBorders = false;
@@ -1518,10 +1518,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DOIDeckCode] + \'   \' + [DeckDescription]")});
             this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel23.KeepTogether = true;
-            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(421.8044F, 0F);
+            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(440.8014F, 0F);
             this.xrLabel23.Name = "xrLabel23";
             this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel23.SizeF = new System.Drawing.SizeF(347.1561F, 16.99999F);
+            this.xrLabel23.SizeF = new System.Drawing.SizeF(328.1591F, 16.99999F);
             this.xrLabel23.StylePriority.UseBorderColor = false;
             this.xrLabel23.StylePriority.UseBorderDashStyle = false;
             this.xrLabel23.StylePriority.UseBorders = false;
@@ -1539,14 +1539,14 @@
             this.xrLabel1.BorderWidth = 1F;
             this.xrLabel1.CanGrow = false;
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhaseWellNumber] + \'     \' + [PhaseWellDescription] + Iif(IsNullOrEmpty([PhaseWe" +
-                    "llNumber]),\'Type: \' + [PhaseWellShortRecordType] ,\'\' )")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhaseWellNumber] + \'     \' + [PhaseWellDescription] + \'     \'+Iif(not IsNullOrEm" +
+                    "pty([PhaseWellNumber]),\'Type: \' + [PhaseWellShortRecordType] ,\'\' )")});
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(355.67F, 17F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(406.9629F, 17F);
             this.xrLabel1.StylePriority.UseBorderColor = false;
             this.xrLabel1.StylePriority.UseBorderDashStyle = false;
             this.xrLabel1.StylePriority.UseBorders = false;

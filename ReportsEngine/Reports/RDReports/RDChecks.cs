@@ -75,7 +75,7 @@ namespace ReportsEngine
         private void XrTopCheckPanel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPanel XrPanel = sender as XRPanel;
-            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             XrPanel.Visible = pageCounter <= 1 || !OverflowHideValue;
         }
@@ -83,7 +83,7 @@ namespace ReportsEngine
         private void CheckStubBandBottomCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)
         {
             Band band = sender as Band;
-            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
             if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
@@ -99,7 +99,7 @@ namespace ReportsEngine
         private void CheckStubBandTopCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)
         {
             Band band = sender as Band;
-            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
             if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
@@ -115,29 +115,30 @@ namespace ReportsEngine
         private void CheckBottomBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             Band band = sender as Band;
-            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
         }
 
         private void CheckTopBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            Band band = sender as Band;
-            bool OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString() == "4" || GetCurrentColumnValue("OverflowOptionCodeID").ToString() == "3";
+            Band band = sender as Band; 
+            string OverflowOptionCodeID = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            bool OverflowOptionCodeIDValue = OverflowOptionCodeID == "4" || OverflowOptionCodeID == "3";
             band.Visible = pageCounter <= 1 || !OverflowOptionCodeIDValue;
         }
 
         private void XrCompanyAddressBlockBottomCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            bool WillPrintCompanyAddressOnStubValue = GetCurrentColumnValue("WillPrintCompanyAddressOnStub").ToString() == "True";
+            bool WillPrintCompanyAddressOnStubValue = GetCurrentColumnValue("WillPrintCompanyAddressOnStub") is null ? false : GetCurrentColumnValue("WillPrintCompanyAddressOnStub").ToString() == "True";
             label.Visible = pageCounter > 1 || WillPrintCompanyAddressOnStubValue;
         }
 
         private void XrCompanyAddressBlockTopCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            bool WillPrintCompanyAddressOnStubValue = GetCurrentColumnValue("WillPrintCompanyAddressOnStub").ToString() == "True";
+            bool WillPrintCompanyAddressOnStubValue = GetCurrentColumnValue("WillPrintCompanyAddressOnStub") is null ? false : GetCurrentColumnValue("WillPrintCompanyAddressOnStub").ToString() == "True";
             label.Visible = pageCounter > 1 || WillPrintCompanyAddressOnStubValue;
         }
 
@@ -159,7 +160,7 @@ namespace ReportsEngine
         private void CheckStubBandTopCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             Band band = sender as Band;
-            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("IsCheckOnTopOfForm").ToString() == "True";
+            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("IsCheckOnTopOfForm") is null ? false : GetCurrentColumnValue("IsCheckOnTopOfForm").ToString() == "True";
             band.Visible = TwoSignaturesRequiredValue && pageCounter > 2;
         }
 
@@ -171,9 +172,9 @@ namespace ReportsEngine
         private void CheckStubBandBottomCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             Band band = sender as Band;
-            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("IsCheckOnTopOfForm").ToString() == "False";
+            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("IsCheckOnTopOfForm") is null ? false : GetCurrentColumnValue("IsCheckOnTopOfForm").ToString() == "False";
             band.Visible = TwoSignaturesRequiredValue && pageCounter > 2;
-            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             if (pageCounter <= 2 && OverflowHideValue) // Assuming you want to apply this on the first page
             {
@@ -193,9 +194,9 @@ namespace ReportsEngine
         private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
-            string imagePathSignature = GetCurrentColumnValue("SignaturePath").ToString();
-            string imagePathSecondSignature = GetCurrentColumnValue("SecondSignaturePath").ToString();
-            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
+            string imagePathSignature = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
+            string imagePathSecondSignature = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
+            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines") is null ? false : GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
             if (TwoSignaturesRequiredValue)
             {
                 try
@@ -222,8 +223,8 @@ namespace ReportsEngine
 
         private void XrPictureBoxTopSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            string imagePath = GetCurrentColumnValue("SignaturePath").ToString(); // Replace with your column name
-            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
+            string imagePath = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString(); // Replace with your column name
+            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines") is null ? false : GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
             if (TwoSignaturesRequiredValue)
             {
                 XRPictureBox pictureBox = sender as XRPictureBox;
@@ -241,7 +242,7 @@ namespace ReportsEngine
         private void XrPictureBoxLogo_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
-            string imagePathLogo = GetCurrentColumnValue("LogoPath").ToString();
+            string imagePathLogo = GetCurrentColumnValue("LogoPath") is null ? "" : GetCurrentColumnValue("LogoPath").ToString();
             try
             {
                 pictureBox.ImageSource = ImageSource.FromFile(imagePathLogo);
@@ -283,7 +284,7 @@ namespace ReportsEngine
         private void RemittanceDetailBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             DetailBand band = sender as DetailBand;
-            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintDetailOnStub").ToString() == "True";
+            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintDetailOnStub") is null ? false : GetCurrentColumnValue("WillPrintDetailOnStub").ToString() == "True";
             band.Visible = TwoSignaturesRequiredValue || pageCounter <= 1; //Only have remittance visible if it is the first page (don't print remittance on subsequent pages).
         }
 
