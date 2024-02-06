@@ -489,6 +489,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="JIBSuspenseAction.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="JIBSuspenseAction.Designer.cs">
+      <DependentUpon>JIBSuspenseAction.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBARDetailbyProperty.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2323,6 +2329,9 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="JIBSuspenseAction.resx">
+      <DependentUpon>JIBSuspenseAction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBARDetailbyProperty.resx">
       <DependentUpon>ExcelJIBARDetailbyProperty.cs</DependentUpon>
     </EmbeddedResource>

@@ -63,25 +63,24 @@
             this.plngRDCheckStubCodeID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngImbursementID = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.SubBand4 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Textbox12 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox11 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox10 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox9 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Textbox12 = new DevExpress.XtraReports.UI.XRLabel();
+            this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
             this.Line1 = new DevExpress.XtraReports.UI.XRShape();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.pbooPrintSecondLine = new DevExpress.XtraReports.Parameters.Parameter();
-            this.SubBand4 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
@@ -90,6 +89,7 @@
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
             this.xrShape1 = new DevExpress.XtraReports.UI.XRShape();
             this.plngOverflowOptionCode = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -567,6 +567,20 @@
             this.SubBand4,
             this.SubBand5});
             // 
+            // SubBand4
+            // 
+            this.SubBand4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel18,
+            this.xrLabel17,
+            this.Textbox12,
+            this.Textbox11,
+            this.Textbox10,
+            this.Textbox9,
+            this.Textbox8,
+            this.Textbox7});
+            this.SubBand4.HeightF = 25F;
+            this.SubBand4.Name = "SubBand4";
+            // 
             // xrLabel18
             // 
             this.xrLabel18.BorderColor = System.Drawing.Color.Black;
@@ -601,21 +615,22 @@
             this.xrLabel17.Text = "Vol/Unit Price";
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
-            // Textbox7
+            // Textbox12
             // 
-            this.Textbox7.BorderColor = System.Drawing.Color.Black;
-            this.Textbox7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox7.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox7.BorderWidth = 1F;
-            this.Textbox7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox7.KeepTogether = true;
-            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.Textbox7.Multiline = true;
-            this.Textbox7.Name = "Textbox7";
-            this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox7.SizeF = new System.Drawing.SizeF(143.7505F, 25F);
-            this.Textbox7.Text = "Property/Well";
-            this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.Textbox12.BorderColor = System.Drawing.Color.Black;
+            this.Textbox12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Textbox12.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Textbox12.BorderWidth = 1F;
+            this.Textbox12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox12.KeepTogether = true;
+            this.Textbox12.LocationFloat = new DevExpress.Utils.PointFloat(700.1002F, 0F);
+            this.Textbox12.Multiline = true;
+            this.Textbox12.Name = "Textbox12";
+            this.Textbox12.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox12.SizeF = new System.Drawing.SizeF(99.89984F, 25F);
+            this.Textbox12.StylePriority.UseTextAlignment = false;
+            this.Textbox12.Text = "Owner Net";
+            this.Textbox12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox11
             // 
@@ -683,22 +698,28 @@
             this.Textbox8.Text = "Prod/Date";
             this.Textbox8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
-            // Textbox12
+            // Textbox7
             // 
-            this.Textbox12.BorderColor = System.Drawing.Color.Black;
-            this.Textbox12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox12.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox12.BorderWidth = 1F;
-            this.Textbox12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox12.KeepTogether = true;
-            this.Textbox12.LocationFloat = new DevExpress.Utils.PointFloat(700.1002F, 0F);
-            this.Textbox12.Multiline = true;
-            this.Textbox12.Name = "Textbox12";
-            this.Textbox12.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox12.SizeF = new System.Drawing.SizeF(99.89984F, 25F);
-            this.Textbox12.StylePriority.UseTextAlignment = false;
-            this.Textbox12.Text = "Owner Net";
-            this.Textbox12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.Textbox7.BorderColor = System.Drawing.Color.Black;
+            this.Textbox7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Textbox7.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Textbox7.BorderWidth = 1F;
+            this.Textbox7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox7.KeepTogether = true;
+            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.Textbox7.Multiline = true;
+            this.Textbox7.Name = "Textbox7";
+            this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox7.SizeF = new System.Drawing.SizeF(143.7505F, 25F);
+            this.Textbox7.Text = "Property/Well";
+            this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // SubBand5
+            // 
+            this.SubBand5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Line1});
+            this.SubBand5.HeightF = 4F;
+            this.SubBand5.Name = "SubBand5";
             // 
             // Line1
             // 
@@ -788,27 +809,6 @@
             this.pbooPrintSecondLine.ValueInfo = "False";
             this.pbooPrintSecondLine.Visible = false;
             // 
-            // SubBand4
-            // 
-            this.SubBand4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel18,
-            this.xrLabel17,
-            this.Textbox12,
-            this.Textbox11,
-            this.Textbox10,
-            this.Textbox9,
-            this.Textbox8,
-            this.Textbox7});
-            this.SubBand4.HeightF = 25F;
-            this.SubBand4.Name = "SubBand4";
-            // 
-            // SubBand5
-            // 
-            this.SubBand5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Line1});
-            this.SubBand5.HeightF = 4F;
-            this.SubBand5.Name = "SubBand5";
-            // 
             // ReportHeader
             // 
             this.ReportHeader.HeightF = 0F;
@@ -830,13 +830,6 @@
             this.xrLabel26});
             this.SubBand1.HeightF = 25F;
             this.SubBand1.Name = "SubBand1";
-            // 
-            // SubBand3
-            // 
-            this.SubBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrShape1});
-            this.SubBand3.HeightF = 4F;
-            this.SubBand3.Name = "SubBand3";
             // 
             // xrLabel19
             // 
@@ -970,6 +963,13 @@
             this.xrLabel26.StylePriority.UseTextAlignment = false;
             this.xrLabel26.Text = "Deducts";
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // SubBand3
+            // 
+            this.SubBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrShape1});
+            this.SubBand3.HeightF = 4F;
+            this.SubBand3.Name = "SubBand3";
             // 
             // xrShape1
             // 

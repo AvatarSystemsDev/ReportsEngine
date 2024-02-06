@@ -1478,7 +1478,7 @@ namespace ReportsEngine.Reports
             this.pbooReturnCrossReferences.Description = "Return Cross References";
             this.pbooReturnCrossReferences.Name = "pbooReturnCrossReferences";
             this.pbooReturnCrossReferences.Type = typeof(bool);
-            this.pbooReturnCrossReferences.ValueInfo = "False";
+            this.pbooReturnCrossReferences.ValueInfo = "True";
             // 
             // pbooTotalByInterestType
             // 

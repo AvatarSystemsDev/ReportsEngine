@@ -35,7 +35,7 @@ namespace ReportsEngine
             CheckBegin.PrintOnPage += CheckBegin_PrintOnPage;
             //CheckEnd.PrintOnPage += CheckEnd_PrintOnPage;
             xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
-            xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
+            //xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
             xrNonNegotiablePictureTwo.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
             xrMICRAccountNumber.PrintOnPage += XrMICRAccountNumber_PrintOnPage;
             xrMICRTransitNumber.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
@@ -88,11 +88,11 @@ namespace ReportsEngine
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
             if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
             {
-                band.PageBreak = PageBreak.AfterBand;
+                //band.PageBreak = PageBreak.AfterBand;
             }
             else
             {
-                band.PageBreak = PageBreak.None; // No page break on other pages
+                //band.PageBreak = PageBreak.None; // No page break on other pages
             }
         }
 
@@ -104,11 +104,11 @@ namespace ReportsEngine
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
             if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
             {
-                band.PageBreak = PageBreak.AfterBand;
+                //band.PageBreak = PageBreak.AfterBand;
             }
             else
             {
-                band.PageBreak = PageBreak.None; // No page break on other pages
+                //band.PageBreak = PageBreak.None; // No page break on other pages
             }
         }
 
@@ -178,11 +178,11 @@ namespace ReportsEngine
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             if (pageCounter <= 2 && OverflowHideValue) // Assuming you want to apply this on the first page
             {
-                band.PageBreak = PageBreak.BeforeBand;
+                //band.PageBreak = PageBreak.BeforeBand;
             }
             else
             {
-                band.PageBreak = PageBreak.None; // No page break on other pages
+                //band.PageBreak = PageBreak.None; // No page break on other pages
             }
         }
 

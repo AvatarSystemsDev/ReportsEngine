@@ -2687,8 +2687,6 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.federationDataSource1});
-            this.DataMember = "CheckFormat";
-            this.DataSource = this.Dynamic;
             this.DisplayName = "RDChecks";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(25F, 22F, 12.5F, 12.5F);
