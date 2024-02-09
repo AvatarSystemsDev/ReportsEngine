@@ -149,10 +149,10 @@
 </value>
   </data>
   <data name="$this.ExpressionBindings" xml:space="preserve">
-    <value>?pbooRunningAtEnd And ([CountedImbursementDeductionTypes] + [CountedLineItems]) &gt; 32 Or Not ?pbooRunningAtEnd And ([CountedImbursementDeductionTypes] + [CountedLineItems]) &lt;= 32 Or Not ?plngOverflowOptionCode In (3)
+    <value>(?pbooRunningAtEnd And ([CountedImbursementDeductionTypes] + [CountedLineItems]) &gt; 32) Or (Not ?pbooRunningAtEnd And ([CountedImbursementDeductionTypes] + [CountedLineItems]) &lt;= 32) Or ?plngOverflowOptionCode In (1, 2)
 </value>
   </data>
   <data name="$this.FilterString" xml:space="preserve">
-    <value>?pbooRunningAtEnd And [CountedImbursementDeductionTypes] + [CountedLineItems] &gt; 32 Or Not ?pbooRunningAtEnd And [CountedImbursementDeductionTypes] + [CountedLineItems] &lt;= 32 Or Not ?plngOverflowOptionCode In (3)</value>
+    <value>?pbooRunningAtEnd And [CountedImbursementDeductionTypes] + [CountedLineItems] &gt; 32 Or Not ?pbooRunningAtEnd And [CountedImbursementDeductionTypes] + [CountedLineItems] &lt;= 32 Or ?plngOverflowOptionCode In (1, 2)</value>
   </data>
 </root>

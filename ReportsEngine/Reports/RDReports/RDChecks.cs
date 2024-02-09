@@ -38,6 +38,7 @@ namespace ReportsEngine
             RemittanceDetailBand.PrintOnPage += RemittanceDetailBand_PrintOnPage;
             CheckBegin.PrintOnPage += CheckBegin_PrintOnPage;
             //CheckEnd.PrintOnPage += CheckEnd_PrintOnPage;
+            //CheckEnd.BeforePrint += CheckEnd_BeforePrint;
             xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
             //xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
             xrNonNegotiablePictureTwo.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
@@ -53,8 +54,8 @@ namespace ReportsEngine
             xrPictureBoxLogoTwo.PrintOnPage += XrPictureBoxLogo_PrintOnPage;
             xrPictureBoxTopSignature.PrintOnPage += XrPictureBoxTopSignature_PrintOnPage;
             xrPictureBoxBottomSignature.PrintOnPage += XrPictureBoxBottomSignature_PrintOnPage;
-            xrPictureBoxTopSignatureTwo.PrintOnPage += XrPictureBoxTopSignature_PrintOnPage;
-            xrPictureBoxBottomSignatureTwo.PrintOnPage += XrPictureBoxBottomSignature_PrintOnPage;
+            xrPictureBoxTopSignatureTwo.PrintOnPage += XrPictureBoxTopSignatureTwo_PrintOnPage;
+            xrPictureBoxBottomSignatureTwo.PrintOnPage += XrPictureBoxBottomSignatureTwo_PrintOnPage;
             xrTransitBottomCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             xrTransitTopCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             CheckStubBandBottomCheck.PrintOnPage += CheckStubBandBottomCheck_PrintOnPage;
@@ -64,8 +65,8 @@ namespace ReportsEngine
             StubEnd.PrintOnPage += StubEnd_PrintOnPage;
             xrPageBeginningLabel.PrintOnPage += XrPageBeginningLabel_PrintOnPage;
             xrCheckEnderLabel.PrintOnPage += XrCheckEnderLabel_PrintOnPage;
-            xrCompanyAddressBlockTopCheck.PrintOnPage += XrCompanyAddressBlockTopCheck_PrintOnPage;
-            xrCompanyAddressBlockBottomCheck.PrintOnPage += XrCompanyAddressBlockBottomCheck_PrintOnPage;
+            //xrCompanyAddressBlockTopCheck.PrintOnPage += XrCompanyAddressBlockTopCheck_PrintOnPage;
+            //xrCompanyAddressBlockBottomCheck.PrintOnPage += XrCompanyAddressBlockBottomCheck_PrintOnPage;
             CheckTopBand.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckBottomBand.PrintOnPage += CheckBottomBand_PrintOnPage;
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
@@ -93,19 +94,20 @@ namespace ReportsEngine
             object temp = GetCurrentColumnValue("OverflowOptionCodeID");
             bool success = int.TryParse(temp?.ToString(), out int result);
             OverflowOptionCodeID = success ? result : 1;
+            //CheckGroupBottom.PrintAtBottom = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
         }
 
         private void CheckGroupBottom_BeforePrint(object sender, CancelEventArgs e)
         {
             GroupBand CheckGroupBottom = sender as GroupBand;
-            CheckGroupBottom.RepeatEveryPage = OverflowOptionCodeID != 3 || OverflowOptionCodeID != 4;
+            CheckGroupBottom.RepeatEveryPage = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
             //CheckGroupBottom.Visible = checkIndex <= lastDetail;
         }
 
         private void CheckBeginningHeader_BeforePrint(object sender, CancelEventArgs e)
         {
             GroupBand CheckGroupTop = sender as GroupBand;
-            CheckGroupTop.RepeatEveryPage = OverflowOptionCodeID != 3 || OverflowOptionCodeID != 4;
+            CheckGroupTop.RepeatEveryPage = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
             //CheckGroupTop.Visible = checkIndex <= lastDetail;
         }
 
@@ -171,12 +173,6 @@ namespace ReportsEngine
             band.Visible = pageCounter <= 1 || !OverflowOptionCodeIDValue;
         }
 
-        private void XrCompanyAddressBlockBottomCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
-            XRLabel label = sender as XRLabel;
-            bool WillPrintCompanyAddressOnStubValue = GetCurrentColumnValue("WillPrintCompanyAddressOnStub") is null ? false : GetCurrentColumnValue("WillPrintCompanyAddressOnStub").ToString() == "True";
-            label.Visible = pageCounter > 1 || WillPrintCompanyAddressOnStubValue;
-        }
 
         private void XrCompanyAddressBlockTopCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
@@ -237,48 +233,56 @@ namespace ReportsEngine
         private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
-            string imagePathSignature = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
             string imagePathSecondSignature = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
-            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines") is null ? false : GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
-            if (TwoSignaturesRequiredValue)
+            try
             {
-                try
-                {
-                    pictureBox.ImageSource = ImageSource.FromFile(imagePathSecondSignature); // Second Signature
-                }
-                catch
-                {
-                    // Probably add some error handling here.
-                }
+                pictureBox.ImageSource = ImageSource.FromFile(imagePathSecondSignature); // Second Signature
             }
-            else
+            catch
             {
-                try
-                {
-                    pictureBox.ImageSource = ImageSource.FromFile(imagePathSignature); // First Signature
-                }
-                catch
-                {
-                    // Probably add some error handling here.
-                }
+                // Probably add some error handling here.
+            }
+        }
+
+        private void XrPictureBoxBottomSignatureTwo_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            XRPictureBox pictureBox = sender as XRPictureBox;
+            string imagePathSecondSignature = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
+            try
+            {
+                pictureBox.ImageSource = ImageSource.FromFile(imagePathSecondSignature); // Second Signature
+            }
+            catch
+            {
+                // Probably add some error handling here.
             }
         }
 
         private void XrPictureBoxTopSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             string imagePath = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
-            bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines") is null ? false : GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
-            if (TwoSignaturesRequiredValue)
+            XRPictureBox pictureBox = sender as XRPictureBox;
+            try
             {
-                XRPictureBox pictureBox = sender as XRPictureBox;
-                try
-                {
-                    pictureBox.ImageSource = ImageSource.FromFile(imagePath);
-                }
-                catch
-                {
-                    // Probably add some error handling here.
-                }
+                pictureBox.ImageSource = ImageSource.FromFile(imagePath);
+            }
+            catch
+            {
+                // Probably add some error handling here.
+            }
+        }
+
+        private void XrPictureBoxTopSignatureTwo_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            string imagePath = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
+            XRPictureBox pictureBox = sender as XRPictureBox;
+            try
+            {
+                pictureBox.ImageSource = ImageSource.FromFile(imagePath);
+            }
+            catch
+            {
+                // Probably add some error handling here.
             }
         }
 

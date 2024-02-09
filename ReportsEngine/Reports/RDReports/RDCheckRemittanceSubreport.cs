@@ -18,7 +18,6 @@ namespace ReportsEngine.Reports.RDReports
             xrHeaderBand.PrintOnPage += XrHeaderBand_PrintOnPage;
             pageRun = false;
         }
-
         private void XrHeaderBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             pageCounter = 2;

@@ -724,7 +724,7 @@
             this.xrLabel10});
             this.SubBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([OwnerAddressBlock])\n")});
-            this.SubBand1.HeightF = 16F;
+            this.SubBand1.HeightF = 18F;
             this.SubBand1.Name = "SubBand1";
             // 
             // xrLabel10
@@ -741,7 +741,7 @@
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(748.9839F, 16F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(748.98F, 18F);
             this.xrLabel10.StylePriority.UseBorderColor = false;
             this.xrLabel10.StylePriority.UseBorderDashStyle = false;
             this.xrLabel10.StylePriority.UseBorders = false;
@@ -757,7 +757,7 @@
             this.xrLabel13});
             this.SubBand3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([Email])\nAND ?pbooShowEmail\n")});
-            this.SubBand3.HeightF = 16F;
+            this.SubBand3.HeightF = 18F;
             this.SubBand3.Name = "SubBand3";
             this.SubBand3.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             // 
@@ -777,7 +777,7 @@
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(748.9839F, 16F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(748.98F, 18F);
             this.xrLabel13.StylePriority.UseBorderColor = false;
             this.xrLabel13.StylePriority.UseBorderDashStyle = false;
             this.xrLabel13.StylePriority.UseBorders = false;
@@ -793,7 +793,7 @@
             this.xrLabel17});
             this.SubBand4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([phone1])\nAND [phone1] <> \'(   )    -\'\nAND ?pbooShowPhone")});
-            this.SubBand4.HeightF = 16F;
+            this.SubBand4.HeightF = 18F;
             this.SubBand4.Name = "SubBand4";
             // 
             // xrLabel17
@@ -810,7 +810,7 @@
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel17.SizeF = new System.Drawing.SizeF(748.9839F, 16F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(748.98F, 18F);
             this.xrLabel17.StylePriority.UseBorderColor = false;
             this.xrLabel17.StylePriority.UseBorderDashStyle = false;
             this.xrLabel17.StylePriority.UseBorders = false;
@@ -861,7 +861,7 @@
             this.xrLabel55.SizeF = new System.Drawing.SizeF(55.15839F, 39.37006F);
             this.xrLabel55.StylePriority.UsePadding = false;
             this.xrLabel55.StylePriority.UseTextAlignment = false;
-            this.xrLabel55.Text = "JIB Pay\r\nStatus";
+            this.xrLabel55.Text = "JIB\r\nStatus";
             this.xrLabel55.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel11
@@ -927,11 +927,11 @@
             this.ReportTitle.CanShrink = true;
             this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.ReportTitle.KeepTogether = true;
-            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(1.150004F, 26.97501F);
+            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 26.97503F);
             this.ReportTitle.Multiline = true;
             this.ReportTitle.Name = "ReportTitle";
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.ReportTitle.SizeF = new System.Drawing.SizeF(768.2598F, 30F);
+            this.ReportTitle.SizeF = new System.Drawing.SizeF(769.4098F, 30.00001F);
             this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.StylePriority.UsePadding = false;
             this.ReportTitle.Text = "Division of Interest with Owner Address";
@@ -1477,7 +1477,7 @@
             this.xrLabel23,
             this.xrLabel1});
             this.groupHeaderBandProperty.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("PhaseWellNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
+            new DevExpress.XtraReports.UI.GroupField("PropertyWellNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
             new DevExpress.XtraReports.UI.GroupField("DOIDeckCode", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBandProperty.HeightF = 17F;
             this.groupHeaderBandProperty.Level = 1;
@@ -1539,8 +1539,8 @@
             this.xrLabel1.BorderWidth = 1F;
             this.xrLabel1.CanGrow = false;
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PhaseWellNumber] + \' : \' + [PhaseWellDescription] + \'     \'+Iif(not IsNullOrEmpt" +
-                    "y([PhaseWellNumber]),\'Type: \' + [PhaseWellShortRecordType] ,\'\' )")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyWellNumber] + \' : \' + [PhaseWellDescription] + \'     \'+Iif(not IsNullOrE" +
+                    "mpty([PhaseWellNumber]),\'Type: \' + [PhaseWellShortRecordType] ,\'\' )")});
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -1770,7 +1770,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DOIWithOwnerAddress";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"677\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"737\" />";
             source1.DataMember = "DOIWithOwnerAddress";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DOIWithOwnerAddress";
@@ -1805,7 +1805,10 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateName"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbreviation"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InterestTypeCode"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DeckCode")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DeckCode"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyWellNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerZipCode")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_LookupProperties";
             sourceNode2.Alias = null;
@@ -1972,8 +1975,8 @@
             this.DataMember = "Dynamic_DOIWithOwnerAddress";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "DOIByOwnerAddress";
-            this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) And [PhaseWellNumber] In (?pstrSelectProperty" +
-    ") And [DOIDeckCode] In (?pstrSelectDeckCode)";
+            this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) And [PropertyWellNumber] In (?pstrSelectPrope" +
+    "rty) And [DOIDeckCode] In (?pstrSelectDeckCode)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

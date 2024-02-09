@@ -45,6 +45,7 @@
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngOverflowOptionCode = new DevExpress.XtraReports.Parameters.Parameter();
             this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
@@ -70,7 +71,7 @@
             this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.EndOfRemittanceOfCheck = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrEndOfRemittanceLabel = new DevExpress.XtraReports.UI.XRLabel();
-            this.plngOverflowOptionCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillPrintCompanyAddressOnStub = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCheckRemittance = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -110,6 +111,14 @@
             this.plngUserID.Name = "plngUserID";
             this.plngUserID.Type = typeof(int);
             this.plngUserID.Visible = false;
+            // 
+            // plngOverflowOptionCode
+            // 
+            this.plngOverflowOptionCode.Description = "Overflow Option Code";
+            this.plngOverflowOptionCode.Name = "plngOverflowOptionCode";
+            this.plngOverflowOptionCode.Type = typeof(int);
+            this.plngOverflowOptionCode.ValueInfo = "0";
+            this.plngOverflowOptionCode.Visible = false;
             // 
             // pageHeaderBand1
             // 
@@ -329,13 +338,13 @@
             this.xrEndOfRemittanceLabel.SizeF = new System.Drawing.SizeF(6.875165F, 2F);
             this.xrEndOfRemittanceLabel.Visible = false;
             // 
-            // plngOverflowOptionCode
+            // pbooWillPrintCompanyAddressOnStub
             // 
-            this.plngOverflowOptionCode.Description = "Overflow Option Code";
-            this.plngOverflowOptionCode.Name = "plngOverflowOptionCode";
-            this.plngOverflowOptionCode.Type = typeof(int);
-            this.plngOverflowOptionCode.ValueInfo = "0";
-            this.plngOverflowOptionCode.Visible = false;
+            this.pbooWillPrintCompanyAddressOnStub.Description = "Will Print Company Address On Stub";
+            this.pbooWillPrintCompanyAddressOnStub.Name = "pbooWillPrintCompanyAddressOnStub";
+            this.pbooWillPrintCompanyAddressOnStub.Type = typeof(bool);
+            this.pbooWillPrintCompanyAddressOnStub.ValueInfo = "True";
+            this.pbooWillPrintCompanyAddressOnStub.Visible = false;
             // 
             // xrCheckRemittance
             // 
@@ -359,6 +368,7 @@
             this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblGross", null, "RDCheckHeader.OwnerGross"));
             this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblTax", null, "RDCheckHeader.TaxAmount"));
             this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "RDCheckHeader.CompanyAddressBlockLong"));
+            this.xrCheckRemittance.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooWillPrintCompanyAddressOnStub", this.pbooWillPrintCompanyAddressOnStub));
             this.xrCheckRemittance.ReportSource = new ReportsEngine.Reports.RDReports.RDCheckRemittanceSubreport();
             this.xrCheckRemittance.SizeF = new System.Drawing.SizeF(810F, 1F);
             // 
@@ -420,7 +430,8 @@
             this.pstrEndingCheckNumber,
             this.pstrBeginningCheckNumber,
             this.pstrSelectCheckNumber,
-            this.plngOverflowOptionCode});
+            this.plngOverflowOptionCode,
+            this.pbooWillPrintCompanyAddressOnStub});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -461,5 +472,6 @@
         private DevExpress.XtraReports.UI.SubBand SubBand2;
         private DevExpress.XtraReports.UI.XRLabel xrEndOfRemittanceLabel;
         private DevExpress.XtraReports.Parameters.Parameter plngOverflowOptionCode;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintCompanyAddressOnStub;
     }
 }

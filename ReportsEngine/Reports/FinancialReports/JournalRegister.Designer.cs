@@ -829,7 +829,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel2.StylePriority.UseForeColor = false;
             this.xrLabel2.StylePriority.UsePadding = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "[NetAmount!N2]";
+            this.xrLabel2.Text = "[NetAmount!#,##0.00; (#,##0.00)]";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel2.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             // 
@@ -2133,7 +2133,7 @@ namespace ReportsEngine.Reports.FinancialReports
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrGrandTotal.Summary = xrSummary1;
             this.xrGrandTotal.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrGrandTotal.TextFormatString = "{0:N2}";
+            this.xrGrandTotal.TextFormatString = "{0:#,##0.00; (#,##0.00)}";
             // 
             // xrLabel39
             // 
@@ -2284,7 +2284,7 @@ namespace ReportsEngine.Reports.FinancialReports
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel26.Summary = xrSummary3;
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel26.TextFormatString = "{0:N2}";
+            this.xrLabel26.TextFormatString = "{0:#,##0.00; (#,##0.00)}";
             // 
             // SubBand3
             // 
@@ -3316,7 +3316,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pbooShowYearEndClosingEntries.Description = "Show Year End Closing Entries";
             this.pbooShowYearEndClosingEntries.Name = "pbooShowYearEndClosingEntries";
             this.pbooShowYearEndClosingEntries.Type = typeof(bool);
-            this.pbooShowYearEndClosingEntries.ValueInfo = "True";
+            this.pbooShowYearEndClosingEntries.ValueInfo = "False";
             // 
             // pbooShowZeroBalance
             // 
