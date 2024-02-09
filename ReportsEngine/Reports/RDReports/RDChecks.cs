@@ -13,6 +13,7 @@ using System.Diagnostics;
 using DevExpress.Utils.Extensions;
 using DevExpress.Drawing;
 using Band = DevExpress.XtraReports.UI.Band;
+using DevExpress.Data.Filtering.Helpers;
 
 namespace ReportsEngine
 {
@@ -21,6 +22,9 @@ namespace ReportsEngine
         private int pageCounter = 1;
         private bool printChecks = false;
         private bool inRemittance = false;
+        private int lastDetail = 0;
+        private int checkIndex = 1;
+        private int OverflowOptionCodeID = 1;
         public RDChecks()
         {
             InitializeComponent();
@@ -70,7 +74,46 @@ namespace ReportsEngine
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckInformationPart.PrintOnPage += CheckTopBand_PrintOnPage;
             xrTopCheckPanel.PrintOnPage += XrTopCheckPanel_PrintOnPage;
+            //XRNextReport.BeforePrint += RDChecksRemittanceOnly_BeforePrint;
+            CheckBeginningHeader.BeforePrint += CheckBeginningHeader_BeforePrint;
+            CheckGroupBottom.BeforePrint += CheckGroupBottom_BeforePrint;
+            //EntryRowEndBand.BeforePrint += EntryRowEndBand_BeforePrint;
+            EndRemittance.BeforePrint += EndRemittance_BeforePrint;
+            EntryBegin.BeforePrint += EntryBegin_BeforePrint;
         }
+
+        private void EndRemittance_BeforePrint(object sender, CancelEventArgs e)
+        {
+            checkIndex++;
+        }
+
+        private void EntryBegin_BeforePrint(object sender, CancelEventArgs e)
+        {
+            lastDetail = int.Parse(GetCurrentColumnValue("RecordCount").ToString());
+            object temp = GetCurrentColumnValue("OverflowOptionCodeID");
+            bool success = int.TryParse(temp?.ToString(), out int result);
+            OverflowOptionCodeID = success ? result : 1;
+        }
+
+        private void CheckGroupBottom_BeforePrint(object sender, CancelEventArgs e)
+        {
+            GroupBand CheckGroupBottom = sender as GroupBand;
+            CheckGroupBottom.RepeatEveryPage = OverflowOptionCodeID != 3 || OverflowOptionCodeID != 4;
+            //CheckGroupBottom.Visible = checkIndex <= lastDetail;
+        }
+
+        private void CheckBeginningHeader_BeforePrint(object sender, CancelEventArgs e)
+        {
+            GroupBand CheckGroupTop = sender as GroupBand;
+            CheckGroupTop.RepeatEveryPage = OverflowOptionCodeID != 3 || OverflowOptionCodeID != 4;
+            //CheckGroupTop.Visible = checkIndex <= lastDetail;
+        }
+
+        //private void RDChecksRemittanceOnly_BeforePrint(object sender, CancelEventArgs e)
+        //{
+        //    CheckGroupBottom.RepeatEveryPage = false;
+        //    CheckBeginningHeader.RepeatEveryPage = false;
+        //}
 
         private void XrTopCheckPanel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
@@ -82,7 +125,7 @@ namespace ReportsEngine
 
         private void CheckStubBandBottomCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)
         {
-            Band band = sender as Band;
+            SubBand band = sender as SubBand;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
@@ -98,7 +141,7 @@ namespace ReportsEngine
 
         private void CheckStubBandTopCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)
         {
-            Band band = sender as Band;
+            SubBand band = sender as SubBand;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
@@ -114,7 +157,7 @@ namespace ReportsEngine
 
         private void CheckBottomBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            Band band = sender as Band;
+            SubBand band = sender as SubBand;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
@@ -223,7 +266,7 @@ namespace ReportsEngine
 
         private void XrPictureBoxTopSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            string imagePath = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString(); // Replace with your column name
+            string imagePath = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
             bool TwoSignaturesRequiredValue = GetCurrentColumnValue("WillPrintTwoSignatureLines") is null ? false : GetCurrentColumnValue("WillPrintTwoSignatureLines").ToString() == "True";
             if (TwoSignaturesRequiredValue)
             {
@@ -256,6 +299,7 @@ namespace ReportsEngine
         private void EndRemittance_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             inRemittance = false;
+
         }
 
         private void BeginningRemittance_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -300,29 +344,5 @@ namespace ReportsEngine
             picture.Visible = pageCounter > 1; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to me, I have nothing else.
         }
 
-        //private XRSubreport CreateRDChecksSubreport(int level, int maxLevel)
-        //{
-        //    if (level > maxLevel)
-        //    {
-        //        return null;
-        //    }
-        //    else
-        //    {
-        //        XRSubreport rdChecksSubreport = new XRSubreport();
-        //        rdChecksSubreport.ReportSource = new RDChecks(); // Your RDChecks report class
-        //        foreach (Parameter param in this.Parameters)
-        //        {
-        //            // Check if the subreport has this parameter
-        //            if (((RDChecks)rdChecksSubreport.ReportSource).Parameters[param.Name] != null)
-        //            {
-        //                ((RDChecks)rdChecksSubreport.ReportSource).Parameters[param.Name].Value = param.Value;
-        //            }
-        //        }
-        //        // Override specific parameters
-        //        ((RDChecks)rdChecksSubreport.ReportSource).Parameters["lngLevel"].Value = level;
-        //        ((RDChecks)rdChecksSubreport.ReportSource).Parameters["plngPrintRemittance"].Value = 2;
-        //        return rdChecksSubreport;
-        //    }
-        //}
     }
 }

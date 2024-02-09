@@ -1,25 +1,64 @@
 ﻿using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
+using System.ComponentModel;
 
 namespace ReportsEngine.Reports.RDReports
 {
     public partial class RDCheckRemittanceSubreport : DevExpress.XtraReports.UI.XtraReport
     {
+        int pageCounter = 2;
+        bool pageRun = false;
         public RDCheckRemittanceSubreport()
         {
             InitializeComponent();
+            xrPages.PrintOnPage += XrPages_PrintOnPage;
+            this.PrintOnPage += RDChecksRemittanceOnly_BeforePrint;
+            groupHeaderBand2.PrintOnPage += GroupHeaderBand2_PrintOnPage;
             ReportHeader.PrintOnPage += ReportHeader_PrintOnPage;
+            xrHeaderBand.PrintOnPage += XrHeaderBand_PrintOnPage;
+            pageRun = false;
+        }
+
+        private void XrHeaderBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            pageCounter = 2;
+            pageRun = false;
         }
 
         private void ReportHeader_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            int CountedLineItems = int.Parse(GetCurrentColumnValue("CountedLineItems") is null ? "0" : GetCurrentColumnValue("CountedLineItems").ToString());
-            int CountedDeductionTypes = int.Parse(GetCurrentColumnValue("CountedImbursementDeductionTypes") is null ? "0" : GetCurrentColumnValue("CountedImbursementDeductionTypes").ToString());
-            Parameter OverflowOptionCode = this.Parameters["plngOverflowOptionCode"];
-            if (OverflowOptionCode is object && OverflowOptionCode.Value.ToString() == "3" && (CountedLineItems * 2 + CountedDeductionTypes >= 32))
+            pageCounter = 2;
+            pageRun = false;
+        }
+
+        private void GroupHeaderBand2_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            pageCounter = 2;
+            pageRun = false;
+        }
+
+        private void xrEndOfRemittanceLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            pageCounter = 2;
+            pageRun = false;
+        }
+
+        private void RDChecksRemittanceOnly_BeforePrint(object sender, PrintOnPageEventArgs e)
+        {
+            pageCounter = 2;
+            pageRun = false;
+        }
+
+        private void XrPages_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            if (pageRun == false)
             {
-                //ReportHeader.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
+                pageCounter = 2;
+                pageRun = true;
             }
+            XRLabel label = sender as XRLabel;
+            label.Text = "Page " + pageCounter.ToString();
+            pageCounter++;
         }
     }
 }

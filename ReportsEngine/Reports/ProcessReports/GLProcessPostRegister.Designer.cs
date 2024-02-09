@@ -1310,11 +1310,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PostType]")});
             this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel28.KeepTogether = true;
-            this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(199.19F, 2.670288E-05F);
+            this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(219.8098F, 2.670288E-05F);
             this.xrLabel28.Multiline = true;
             this.xrLabel28.Name = "xrLabel28";
             this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel28.SizeF = new System.Drawing.SizeF(378.2062F, 21.38999F);
+            this.xrLabel28.SizeF = new System.Drawing.SizeF(325.8197F, 21.38999F);
             this.xrLabel28.StylePriority.UseFont = false;
             this.xrLabel28.StylePriority.UsePadding = false;
             this.xrLabel28.StylePriority.UseTextAlignment = false;
@@ -1331,11 +1331,11 @@
                     " </b>\' +  [BatchDescription] + \'</span>\'")});
             this.xrRichText2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText2.KeepTogether = true;
-            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(577.3963F, 1.66893E-05F);
+            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(545.6295F, 2.670288E-05F);
             this.xrRichText2.Name = "xrRichText2";
             this.xrRichText2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
-            this.xrRichText2.SizeF = new System.Drawing.SizeF(192.6037F, 21.38999F);
+            this.xrRichText2.SizeF = new System.Drawing.SizeF(224.3704F, 21.38999F);
             this.xrRichText2.StylePriority.UseFont = false;
             this.xrRichText2.StylePriority.UsePadding = false;
             // 

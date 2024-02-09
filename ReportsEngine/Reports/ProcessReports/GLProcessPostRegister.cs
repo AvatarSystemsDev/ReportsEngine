@@ -10,42 +10,42 @@ namespace ReportsEngine.Reports.ProcessReports
 {
     public partial class GLProcessPostRegister : DevExpress.XtraReports.UI.XtraReport
     {
-        private int pageCounter = 0;
+        private int pageCounter = 1;
         public GLProcessPostRegister()
         {
             InitializeComponent();
-            BatchFooter.BeforePrint += BatchFooter_BeforePrint;
-            xrPageCountPortrait.BeforePrint += XrPageCountPortrait_BeforePrint;
-            xrPageCountLandscape.BeforePrint += XrPageCountLandscape_BeforePrint;
-            RepeatEveryPageBand.BeforePrint += RepeatEveryPageBand_BeforePrint;
-            ReportHeader.BeforePrint += ReportHeader_BeforePrint;
+            BatchFooter.PrintOnPage += BatchFooter_BeforePrint;
+            xrPageCountPortrait.PrintOnPage += XrPageCountPortrait_BeforePrint;
+            xrPageCountLandscape.PrintOnPage += XrPageCountLandscape_BeforePrint;
+            RepeatEveryPageBand.PrintOnPage += RepeatEveryPageBand_BeforePrint;
+            ReportHeader.PrintOnPage += ReportHeader_BeforePrint;
         }
 
-        private void ReportHeader_BeforePrint(object sender, CancelEventArgs e)
+        private void ReportHeader_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 0;
+            pageCounter = 1;
         }
 
-        private void RepeatEveryPageBand_BeforePrint(object sender, CancelEventArgs e)
+        private void RepeatEveryPageBand_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
             pageCounter++;
         }
 
-        private void XrPageCountLandscape_BeforePrint(object sender, CancelEventArgs e)
+        private void XrPageCountLandscape_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             label.Text = "Page " + pageCounter.ToString();
         }
 
-        private void XrPageCountPortrait_BeforePrint(object sender, CancelEventArgs e)
+        private void XrPageCountPortrait_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             label.Text = "Page " + pageCounter.ToString();
         }
 
-        private void BatchFooter_BeforePrint(object sender, CancelEventArgs e)
+        private void BatchFooter_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 0;
+            pageCounter = 1;
         }
     }
 }
