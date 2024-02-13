@@ -489,16 +489,16 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="ExcelJIBSuspenseAction.cs">
+    <Compile Include="Reports\JIBReports\ExcelJIBSuspenseAction.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExcelJIBSuspenseAction.Designer.cs">
+    <Compile Include="Reports\JIBReports\ExcelJIBSuspenseAction.Designer.cs">
       <DependentUpon>ExcelJIBSuspenseAction.cs</DependentUpon>
     </Compile>
-    <Compile Include="JIBSuspenseAction.cs">
+    <Compile Include="Reports\JIBReports\JIBSuspenseAction.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="JIBSuspenseAction.Designer.cs">
+    <Compile Include="Reports\JIBReports\JIBSuspenseAction.Designer.cs">
       <DependentUpon>JIBSuspenseAction.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBARDetailbyProperty.cs">
@@ -740,6 +740,12 @@
     </Compile>
     <Compile Include="Reports\RDReports\CheckCoverPage.Designer.cs">
       <DependentUpon>CheckCoverPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\CheckCoverPageAllRDChecks.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\CheckCoverPageAllRDChecks.Designer.cs">
+      <DependentUpon>CheckCoverPageAllRDChecks.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.cs">
       <SubType>Component</SubType>
@@ -2335,10 +2341,10 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="ExcelJIBSuspenseAction.resx">
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBSuspenseAction.resx">
       <DependentUpon>ExcelJIBSuspenseAction.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="JIBSuspenseAction.resx">
+    <EmbeddedResource Include="Reports\JIBReports\JIBSuspenseAction.resx">
       <DependentUpon>JIBSuspenseAction.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBARDetailbyProperty.resx">
@@ -2460,6 +2466,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\CheckCoverPage.resx">
       <DependentUpon>CheckCoverPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\CheckCoverPageAllRDChecks.resx">
+      <DependentUpon>CheckCoverPageAllRDChecks.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.resx">
       <DependentUpon>ExcelNewMexicoStateRoyaltyDetail.cs</DependentUpon>

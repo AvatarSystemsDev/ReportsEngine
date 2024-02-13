@@ -141,6 +141,6 @@
     <value>iif(?pstrBeginningPurchaserNumber = '!' and ?pstrEndingPurchaserNumber = 'ZZZZZZZZZZ', 'For All Purchasers', 'For Purchasers ' + iif(?pstrBeginningPurchaserNumber = '!', '(First)', ?pstrBeginningPurchaserNumber) +' thru ' + iif(?pstrEndingPurchaserNumber = 'ZZZZZZZZZZ', '(Last)', ?pstrEndingPurchaserNumber))</value>
   </data>
   <data name="$this.FilterString" xml:space="preserve">
-    <value>[PurchaserNumber] In (?pstrSelectPurchaserNumber) Or IsNullOrEmpty([PurchaserNumber]) And '!' In (?pstrSelectPurchaserNumber) And [PropertyAndWellNumber] In (?pstrSelectProperty) Or IsNullOrEmpty([PurchaserNumber]) And '!' In (?pstrSelectProperty) And [OwnerNumber] In (?pstrSelectOwner) Or IsNullOrEmpty([OwnerNumber]) And '!' In (?pstrSelectOwner)</value>
+    <value>([PurchaserNumber] In (?pstrSelectPurchaserNumber) Or IsNullOrEmpty([PurchaserNumber]) And '!' In (?pstrSelectPurchaserNumber)) And [PropertyAndWellNumber] In (?pstrSelectProperty) Or IsNullOrEmpty([PropertyAndWellNumber]) And '!' In (?pstrSelectProperty) And [OwnerNumber] In (?pstrSelectOwner) Or IsNullOrEmpty([OwnerNumber]) And '!' In (?pstrSelectOwner)</value>
   </data>
 </root>

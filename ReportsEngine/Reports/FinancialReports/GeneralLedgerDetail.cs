@@ -3,9 +3,12 @@ using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
 using System;
 using System.ComponentModel;
+using ReportsEngine.Services;
 using System.Diagnostics;
 using System.Globalization;
-
+using DevExpress.CodeParser;
+using DevExpress.XtraReports.Web.WebDocumentViewer.DataContracts;
+using Newtonsoft.Json;
 
 namespace ReportsEngine.Reports
 {
@@ -22,7 +25,8 @@ namespace ReportsEngine.Reports
 
         private double RunningBalance;
         private double BalanceForwardAmount;
-
+        private string PreviousAccount;
+        public DocumentOperationResponse DocumentOperationRequestResponse;
         public GeneralLedgerDetail()
         {
             InitializeComponent();
@@ -73,13 +77,22 @@ namespace ReportsEngine.Reports
 
         private void XrReportAccountSumBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
+            Parameter p = this.Parameters["pbooReportInBalance"];
             if (GrandAccountTotalBalance < 0)
             {
                 ((XRLabel)sender).Text = '(' + GrandAccountTotalBalance.ToString("N2").Replace("-", "") + ')';
+                p.Value = false;
+
+            }
+            else if (GrandAccountTotalBalance != 0)
+            {
+                ((XRLabel)sender).Text = GrandAccountTotalBalance.ToString("N2");
+                p.Value = false;
             }
             else
             {
                 ((XRLabel)sender).Text = GrandAccountTotalBalance.ToString("N2");
+                p.Value = true;
             }
             GrandAccountTotalBalance = 0;
         }
@@ -127,17 +140,24 @@ namespace ReportsEngine.Reports
             GrandPeriodTotalBalance += (RunningBalance - BalanceForwardAmount);
         }
 
-
         private void XrRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
             double netAmountCurrent =  Double.Parse(((XRLabel)sender).Text.Replace(",", ""));
             if (RunningBalance + netAmountCurrent < 0)
             {
-                ((XRLabel)sender).Text = '(' + (RunningBalance + netAmountCurrent).ToString("N2").Replace("-", "") + ')';
+                if (PreviousAccount != GetCurrentColumnValue("AccountID").ToString())
+                {
+                    ((XRLabel)sender).Text = '(' + (RunningBalance + netAmountCurrent).ToString("N2").Replace("-", "") + ')';
+                }
+                PreviousAccount = GetCurrentColumnValue("AccountID").ToString();
             }
             else
             {
-                ((XRLabel)sender).Text = (RunningBalance + netAmountCurrent).ToString("N2");
+                if (PreviousAccount != GetCurrentColumnValue("AccountID").ToString())
+                {
+                    ((XRLabel)sender).Text = (RunningBalance + netAmountCurrent).ToString("N2");
+                }
+                PreviousAccount = GetCurrentColumnValue("AccountID").ToString();
             }
         }
 
@@ -639,6 +659,8 @@ namespace ReportsEngine.Reports
             RunningBalance = 0;
             GrandAccountTotalBalance = 0;
             BalanceForwardAmount = 0;
+            PreviousAccount = "";
+            DocumentOperationRequestResponse = null;
         }
         private void xrAccountTotalDebit_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {

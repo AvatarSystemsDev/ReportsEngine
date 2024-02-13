@@ -166,6 +166,7 @@
             this.Textbox20 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
+            this.xrPageLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCopyright = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel41 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
@@ -190,6 +191,7 @@
             this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
+            this.GLProcessPostRegisterSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             this.lngZero = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooGroupByCheck = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngTransactionSourceCodeID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -199,8 +201,6 @@
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.pbooAwaitParameterInput = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrPageLabel = new DevExpress.XtraReports.UI.XRLabel();
-            this.GLProcessPostRegisterSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox67)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
@@ -1074,6 +1074,27 @@
             this.pageFooterBand1.StylePriority.UseFont = false;
             this.pageFooterBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // xrPageLabel
+            // 
+            this.xrPageLabel.AutoWidth = true;
+            this.xrPageLabel.BackColor = System.Drawing.Color.Transparent;
+            this.xrPageLabel.BorderColor = System.Drawing.Color.Black;
+            this.xrPageLabel.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPageLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPageLabel.BorderWidth = 1F;
+            this.xrPageLabel.CanShrink = true;
+            this.xrPageLabel.KeepTogether = true;
+            this.xrPageLabel.LocationFloat = new DevExpress.Utils.PointFloat(517.905F, 8.505567F);
+            this.xrPageLabel.Multiline = true;
+            this.xrPageLabel.Name = "xrPageLabel";
+            this.xrPageLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrPageLabel.SizeF = new System.Drawing.SizeF(252.0952F, 12.99992F);
+            this.xrPageLabel.StylePriority.UseBackColor = false;
+            this.xrPageLabel.StylePriority.UsePadding = false;
+            this.xrPageLabel.StylePriority.UseTextAlignment = false;
+            this.xrPageLabel.Text = "asdfasdf";
+            this.xrPageLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // xrCopyright
             // 
             this.xrCopyright.AutoWidth = true;
@@ -1369,7 +1390,7 @@
             this.xrLabel32.BorderWidth = 1F;
             this.xrLabel32.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([PaymentAmount])")});
-            this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel32.ForeColor = System.Drawing.Color.Black;
             this.xrLabel32.KeepTogether = true;
             this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(685.069F, 0F);
@@ -1455,6 +1476,24 @@
             this.GLProcessPostRegisterSubreport});
             this.SubBand6.HeightF = 11.25336F;
             this.SubBand6.Name = "SubBand6";
+            // 
+            // GLProcessPostRegisterSubreport
+            // 
+            this.GLProcessPostRegisterSubreport.GenerateOwnPages = true;
+            this.GLProcessPostRegisterSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.GLProcessPostRegisterSubreport.Name = "GLProcessPostRegisterSubreport";
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.lngZero));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAPCheckProcessTrackingID", this.plngID));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowDetail", this.pbooGroupByCheck));
+            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngTransactionSourceCodeID", this.plngTransactionSourceCodeID));
+            this.GLProcessPostRegisterSubreport.ReportSource = new ReportsEngine.Reports.ProcessReports.GLProcessPostRegister();
+            this.GLProcessPostRegisterSubreport.SizeF = new System.Drawing.SizeF(770F, 11.25336F);
             // 
             // lngZero
             // 
@@ -1675,45 +1714,6 @@
             this.pbooAwaitParameterInput.Type = typeof(bool);
             this.pbooAwaitParameterInput.ValueInfo = "False";
             this.pbooAwaitParameterInput.Visible = false;
-            // 
-            // xrPageLabel
-            // 
-            this.xrPageLabel.AutoWidth = true;
-            this.xrPageLabel.BackColor = System.Drawing.Color.Transparent;
-            this.xrPageLabel.BorderColor = System.Drawing.Color.Black;
-            this.xrPageLabel.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrPageLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPageLabel.BorderWidth = 1F;
-            this.xrPageLabel.CanShrink = true;
-            this.xrPageLabel.KeepTogether = true;
-            this.xrPageLabel.LocationFloat = new DevExpress.Utils.PointFloat(517.905F, 8.505567F);
-            this.xrPageLabel.Multiline = true;
-            this.xrPageLabel.Name = "xrPageLabel";
-            this.xrPageLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrPageLabel.SizeF = new System.Drawing.SizeF(252.0952F, 12.99992F);
-            this.xrPageLabel.StylePriority.UseBackColor = false;
-            this.xrPageLabel.StylePriority.UsePadding = false;
-            this.xrPageLabel.StylePriority.UseTextAlignment = false;
-            this.xrPageLabel.Text = "asdfasdf";
-            this.xrPageLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // GLProcessPostRegisterSubreport
-            // 
-            this.GLProcessPostRegisterSubreport.GenerateOwnPages = true;
-            this.GLProcessPostRegisterSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.GLProcessPostRegisterSubreport.Name = "GLProcessPostRegisterSubreport";
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.lngZero));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAPCheckProcessTrackingID", this.plngID));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowDetail", this.pbooGroupByCheck));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngTransactionSourceCodeID", this.plngTransactionSourceCodeID));
-            this.GLProcessPostRegisterSubreport.ReportSource = new ReportsEngine.Reports.ProcessReports.GLProcessPostRegister();
-            this.GLProcessPostRegisterSubreport.SizeF = new System.Drawing.SizeF(770F, 11.25336F);
             // 
             // APCheckRegister
             // 

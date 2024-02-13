@@ -113,6 +113,15 @@ namespace ReportsEngine.Services
                     };
                 }
             }
+            else if (customData.action == "Out of balance")
+            {
+                string message = "The General Ledger is out of balance. If you might need to reclose the fiscal year.";
+                return new DocumentOperationResponse
+                {
+                    Succeeded = false,
+                    Message = message,
+                };
+            }
             else
             {
                 string message = "Invalid custom operation. Custom Operation set up in ServiceOperations";
@@ -122,6 +131,15 @@ namespace ReportsEngine.Services
                     Message = message,
                 };
             }
+        }
+        public static DocumentOperationResponse GeneralLedgerOutOfBalance()
+        {
+            string message = "The General Ledger is out of balance. If you might need to reclose the fiscal year.";
+            return new DocumentOperationResponse
+            {
+                Succeeded = false,
+                Message = message
+            };
         }
         public DocumentOperationResponse customDocumentOperation(DocumentOperationRequest request, PrintingSystemBase initialPrintingSystem, PrintingSystemBase printingSystemWithEditingFields)
         {

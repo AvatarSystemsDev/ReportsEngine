@@ -1824,11 +1824,11 @@
             this.xrLabel100.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel100.ForeColor = System.Drawing.Color.Black;
             this.xrLabel100.KeepTogether = true;
-            this.xrLabel100.LocationFloat = new DevExpress.Utils.PointFloat(951.3898F, 9.918213E-05F);
+            this.xrLabel100.LocationFloat = new DevExpress.Utils.PointFloat(951.3897F, 8.392334E-05F);
             this.xrLabel100.Multiline = true;
             this.xrLabel100.Name = "xrLabel100";
             this.xrLabel100.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel100.SizeF = new System.Drawing.SizeF(67.56757F, 36.20492F);
+            this.xrLabel100.SizeF = new System.Drawing.SizeF(67.56732F, 36.20493F);
             this.xrLabel100.StylePriority.UseBackColor = false;
             this.xrLabel100.StylePriority.UseForeColor = false;
             this.xrLabel100.StylePriority.UsePadding = false;
@@ -3501,8 +3501,8 @@
             this.xrLabel41.BorderWidth = 1F;
             this.xrLabel41.CanGrow = false;
             this.xrLabel41.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Owner: \' + [OwnerNumber] + \'    \' + [OwnerName] + \'    Purchaser: \' + [Purchaser" +
-                    "Number] + \'    \' + [PurchaserName]\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Owner: \' + [OwnerNumber] + \' : \' + [OwnerName] + \'    Purchaser: \' + [PurchaserN" +
+                    "umber] + \' : \' + [PurchaserName]\n")});
             this.xrLabel41.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel41.ForeColor = System.Drawing.Color.Black;
             this.xrLabel41.KeepTogether = true;

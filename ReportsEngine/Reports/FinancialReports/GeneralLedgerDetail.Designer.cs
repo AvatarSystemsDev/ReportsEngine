@@ -64,6 +64,25 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter26 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery8 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter27 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery9 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter28 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter29 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter30 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter31 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter32 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter33 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter34 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter35 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter36 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter37 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter38 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter39 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter40 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter41 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter42 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter43 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter44 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter45 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(GeneralLedgerDetail));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
@@ -131,7 +150,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter28 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter46 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
@@ -204,6 +223,10 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode9 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode9 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source9 = new DevExpress.DataAccess.DataFederation.Source();
+            DevExpress.DataAccess.DataFederation.SelectNode selectNode10 = new DevExpress.DataAccess.DataFederation.SelectNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode10 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.Source source10 = new DevExpress.DataAccess.DataFederation.Source();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings20 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -372,6 +395,7 @@
             this.xrCrossBandBox4 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox7 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox6 = new DevExpress.XtraReports.UI.XRCrossBandBox();
+            this.pbooReportInBalance = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -517,6 +541,81 @@
             storedProcQuery8.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter27});
             storedProcQuery8.StoredProcName = "Batch_ReportLookup";
+            storedProcQuery9.Name = "GLTest";
+            queryParameter28.Name = "@plngCompanyID";
+            queryParameter28.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter28.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter29.Name = "@pdteBeginningPostDate";
+            queryParameter29.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter29.Value = new DevExpress.DataAccess.Expression("?pdteBeginningPostDate", typeof(System.DateTime));
+            queryParameter30.Name = "@pdteEndingPostDate";
+            queryParameter30.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter30.Value = new DevExpress.DataAccess.Expression("?pdteEndingPostDate", typeof(System.DateTime));
+            queryParameter31.Name = "@pstrBeginningAccountNumber";
+            queryParameter31.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter31.Value = new DevExpress.DataAccess.Expression("?pstrBeginningAccountNumber", typeof(string));
+            queryParameter32.Name = "@pstrEndingAccountNumber";
+            queryParameter32.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter32.Value = new DevExpress.DataAccess.Expression("?pstrEndingAccountNumber", typeof(string));
+            queryParameter33.Name = "@pstrBeginningPropertyNumber";
+            queryParameter33.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter33.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
+            queryParameter34.Name = "@pstrEndingPropertyNumber";
+            queryParameter34.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter34.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
+            queryParameter35.Name = "@pstrBeginningOwnerNumber";
+            queryParameter35.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter35.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
+            queryParameter36.Name = "@pstrEndingOwnerNumber";
+            queryParameter36.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter36.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter37.Name = "@pstrBeginningVendorNumber";
+            queryParameter37.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter37.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
+            queryParameter38.Name = "@pstrEndingVendorNumber";
+            queryParameter38.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter38.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
+            queryParameter39.Name = "@plngBookCodeID";
+            queryParameter39.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter39.Value = new DevExpress.DataAccess.Expression("?plngBookCodeID", typeof(int));
+            queryParameter40.Name = "@pstrBeginningCostCenter";
+            queryParameter40.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter40.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenter", typeof(string));
+            queryParameter41.Name = "@pstrEndingCostCenter";
+            queryParameter41.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter41.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
+            queryParameter42.Name = "@plngBeginningBatch";
+            queryParameter42.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter42.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatch", typeof(int));
+            queryParameter43.Name = "@plngEndingBatch";
+            queryParameter43.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter43.Value = new DevExpress.DataAccess.Expression("?plngEndingBatch", typeof(int));
+            queryParameter44.Name = "@pbooShowYearEndClosingEntries";
+            queryParameter44.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter44.Value = new DevExpress.DataAccess.Expression("?pbooShowYearEndClosingEntries", typeof(bool));
+            queryParameter45.Name = "@pbooShowZeroBalance";
+            queryParameter45.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter45.Value = new DevExpress.DataAccess.Expression("?plngShowZeroBalance", typeof(bool));
+            storedProcQuery9.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter28,
+            queryParameter29,
+            queryParameter30,
+            queryParameter31,
+            queryParameter32,
+            queryParameter33,
+            queryParameter34,
+            queryParameter35,
+            queryParameter36,
+            queryParameter37,
+            queryParameter38,
+            queryParameter39,
+            queryParameter40,
+            queryParameter41,
+            queryParameter42,
+            queryParameter43,
+            queryParameter44,
+            queryParameter45});
+            storedProcQuery9.StoredProcName = "Report_GeneralLedgerDetail";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
             storedProcQuery2,
@@ -525,7 +624,8 @@
             storedProcQuery5,
             storedProcQuery6,
             storedProcQuery7,
-            storedProcQuery8});
+            storedProcQuery8,
+            storedProcQuery9});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // Pulse
@@ -665,11 +765,11 @@
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter28.Name = "UserID";
-            queryParameter28.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter28.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter46.Name = "UserID";
+            queryParameter46.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter46.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter28});
+            queryParameter46});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});
@@ -3701,7 +3801,7 @@
             selectNode7.Root = sourceNode7;
             selectNode8.Alias = "Dynamic_DSGeneralLedgerDetail";
             sourceNode8.Alias = null;
-            sourceNode8.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"697\" />";
+            sourceNode8.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"737\" />";
             source8.DataMember = "DSGeneralLedgerDetail";
             source8.DataSource = this.Dynamic;
             source8.Name = "Dynamic_DSGeneralLedgerDetail";
@@ -3737,7 +3837,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountingCenterNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "First"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "BottomHalfID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "TotalBottomHalfCount")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "TotalBottomHalfCount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "SumNetAmountNotZero")});
             selectNode8.Root = sourceNode8;
             selectNode9.Alias = "Pulse_Master_UserRecord";
             sourceNode9.Alias = null;
@@ -3779,6 +3880,17 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode9, "Telephone"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode9, "Initials")});
             selectNode9.Root = sourceNode9;
+            selectNode10.Alias = "FedTestGL";
+            sourceNode10.Alias = "GLTest";
+            sourceNode10.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"737\" />";
+            source10.DataMember = "GLTest";
+            source10.DataSource = this.Dynamic;
+            source10.Name = "Dynamic_GLTest";
+            sourceNode10.Source = source10;
+            selectNode10.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode10, "SumNetAmountNotZero"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode10, "BottomHalfRowNumber")});
+            selectNode10.Root = sourceNode10;
             this.federationDataSource1.Queries.AddRange(new DevExpress.DataAccess.DataFederation.QueryNode[] {
             selectNode1,
             selectNode2,
@@ -3788,7 +3900,8 @@
             selectNode6,
             selectNode7,
             selectNode8,
-            selectNode9});
+            selectNode9,
+            selectNode10});
             // 
             // pbooShowPeriodTotals
             // 
@@ -3797,7 +3910,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "true")});
             this.pbooShowPeriodTotals.Name = "pbooShowPeriodTotals";
             this.pbooShowPeriodTotals.Type = typeof(bool);
-            this.pbooShowPeriodTotals.ValueInfo = "True";
+            this.pbooShowPeriodTotals.ValueInfo = "False";
             // 
             // ReportHeader
             // 
@@ -4205,6 +4318,22 @@
             this.xrCrossBandBox6.StartPointFloat = new DevExpress.Utils.PointFloat(802.9508F, 17.02086F);
             this.xrCrossBandBox6.WidthF = 64.62366F;
             // 
+            // pbooReportInBalance
+            // 
+            this.pbooReportInBalance.Description = "Report In Balance";
+            this.pbooReportInBalance.Enabled = false;
+            this.pbooReportInBalance.Name = "pbooReportInBalance";
+            this.pbooReportInBalance.Type = typeof(bool);
+            this.pbooReportInBalance.ValueInfo = "False";
+            dynamicListLookUpSettings20.DataMember = "DSGeneralLedgerDetail";
+            dynamicListLookUpSettings20.DataSource = this.Dynamic;
+            dynamicListLookUpSettings20.DisplayMember = "SumNetAmountNotZero";
+            dynamicListLookUpSettings20.FilterString = "[BottomHalfRowNumber] = 1";
+            dynamicListLookUpSettings20.SortMember = null;
+            dynamicListLookUpSettings20.ValueMember = "SumNetAmountNotZero";
+            this.pbooReportInBalance.ValueSourceSettings = dynamicListLookUpSettings20;
+            this.pbooReportInBalance.Visible = false;
+            // 
             // GeneralLedgerDetail
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -4236,7 +4365,6 @@
             this.DataMember = "Dynamic_DSGeneralLedgerDetail";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "GeneralLedgerDetail";
-            this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
@@ -4273,6 +4401,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowZeroBalance, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowAFE, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowPeriodTotals, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReportInBalance, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pdteBeginningPostDate,
@@ -4305,6 +4434,7 @@
             this.plngShowZeroBalance,
             this.pbooShowAFE,
             this.pbooShowPeriodTotals,
+            this.pbooReportInBalance,
             this.pbooShowCriteria});
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.xrFooterStyleLeft,
@@ -4490,5 +4620,6 @@
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox4;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox7;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox6;
+        private DevExpress.XtraReports.Parameters.Parameter pbooReportInBalance;
     }
 }
