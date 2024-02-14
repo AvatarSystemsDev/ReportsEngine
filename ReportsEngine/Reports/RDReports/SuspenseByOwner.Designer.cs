@@ -3125,7 +3125,7 @@
             this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 65.56002F);
             this.xrPanel1.Name = "xrPanel1";
             this.xrPanel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPanel1.SizeF = new System.Drawing.SizeF(770.0001F, 26.39F);
+            this.xrPanel1.SizeF = new System.Drawing.SizeF(771.0001F, 26.39F);
             this.xrPanel1.StylePriority.UsePadding = false;
             // 
             // xrRichText1
@@ -3160,7 +3160,7 @@
             this.xrRichText2.Name = "xrRichText2";
             this.xrRichText2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
-            this.xrRichText2.SizeF = new System.Drawing.SizeF(376.7334F, 25F);
+            this.xrRichText2.SizeF = new System.Drawing.SizeF(385.6919F, 25F);
             this.xrRichText2.StylePriority.UseFont = false;
             this.xrRichText2.StylePriority.UsePadding = false;
             // 
@@ -3265,8 +3265,11 @@
             this.CrossBandControls.AddRange(new DevExpress.XtraReports.UI.XRCrossBandControl[] {
             this.xrCrossBandBox2,
             this.xrCrossBandBox1});
+            this.DataMember = "Dynamic_RevenueSuspensebyOwner";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "SuspenseByOwner";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PhaseWellNumber])")});
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 39F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

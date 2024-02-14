@@ -44,6 +44,7 @@
             this.detailBand1 = new DevExpress.XtraReports.UI.DetailBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailReportBand();
             this.Tablix1_Details_DetailBand = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.Details_table = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Textbox41 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -82,6 +83,7 @@
             this.DepositedItemCount = new DevExpress.XtraReports.UI.XRTableCell();
             this.TotalDepositAmount = new DevExpress.XtraReports.UI.XRTableCell();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.CashDepositSummary = new DevExpress.XtraReports.UI.XRSubreport();
             this.plngBatchID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
@@ -91,8 +93,6 @@
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.parameter6 = new DevExpress.XtraReports.Parameters.Parameter();
             this.False = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.CashDepositSummary = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -162,6 +162,20 @@
             this.Tablix1_Details_DetailBand.Name = "Tablix1_Details_DetailBand";
             this.Tablix1_Details_DetailBand.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand1});
+            // 
+            // xrLabel1
+            // 
+            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DepositDate]")});
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(40F, 134.6174F);
+            this.xrLabel1.Multiline = true;
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(105.2083F, 20.76784F);
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.Text = "xrLabel1";
+            this.xrLabel1.TextFormatString = "{0:MM/dd/yyyy}";
             // 
             // Details_table
             // 
@@ -707,6 +721,21 @@
             this.SubBand1.Name = "SubBand1";
             this.SubBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
             // 
+            // CashDepositSummary
+            // 
+            this.CashDepositSummary.LocationFloat = new DevExpress.Utils.PointFloat(40F, 79.66663F);
+            this.CashDepositSummary.Name = "CashDepositSummary";
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.plngBatchID));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowHeader", null, "DSCashDepositTicket.False"));
+            this.CashDepositSummary.ReportSource = new ReportsEngine.Reports.MDReports.CashDepositSummary();
+            this.CashDepositSummary.SizeF = new System.Drawing.SizeF(770F, 20F);
+            // 
             // plngBatchID
             // 
             this.plngBatchID.Name = "plngBatchID";
@@ -779,35 +808,6 @@
             this.False.FieldType = DevExpress.XtraReports.UI.FieldType.Boolean;
             this.False.Name = "False";
             // 
-            // xrLabel1
-            // 
-            this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DepositDate]")});
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(40F, 134.6174F);
-            this.xrLabel1.Multiline = true;
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(105.2083F, 20.76784F);
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.Text = "xrLabel1";
-            this.xrLabel1.TextFormatString = "{0:MM/dd/yyyy}";
-            // 
-            // CashDepositSummary
-            // 
-            this.CashDepositSummary.LocationFloat = new DevExpress.Utils.PointFloat(40F, 79.66663F);
-            this.CashDepositSummary.Name = "CashDepositSummary";
-            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.plngBatchID));
-            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
-            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.CashDepositSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowHeader", null, "DSCashDepositTicket.False"));
-            this.CashDepositSummary.ReportSource = new ReportsEngine.Reports.MDReports.CashDepositSummary();
-            this.CashDepositSummary.SizeF = new System.Drawing.SizeF(770F, 20F);
-            // 
             // CashDepositTicket
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -820,6 +820,8 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
             this.DisplayName = "CashDepositTicket";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] = 0\n")});
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 2F, 0F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

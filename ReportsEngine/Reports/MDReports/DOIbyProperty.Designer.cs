@@ -3027,6 +3027,8 @@
             this.DataMember = "Dynamic_dsDOIbyProperty";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "DOIbyProperty";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PhaseWellNumber])\n")});
             this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) And [PhaseWellNumber] In (?pstrSelectProperty" +
     ") And [CountyID] In (?pstrSelectCounty) And [StateID] In (?pstrSelectState)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

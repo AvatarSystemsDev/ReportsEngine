@@ -321,6 +321,8 @@
             this.xrLabel18,
             this.xrLabel19,
             this.xrLabel20});
+            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([InvoiceID])")});
             this.Tablix1.HeightF = 32.99998F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";

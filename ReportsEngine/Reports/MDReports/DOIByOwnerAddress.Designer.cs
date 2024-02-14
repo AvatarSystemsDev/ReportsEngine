@@ -1975,6 +1975,8 @@
             this.DataMember = "Dynamic_DOIWithOwnerAddress";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "DOIByOwnerAddress";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PropertyWellNumber])\n")});
             this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) And [PropertyWellNumber] In (?pstrSelectPrope" +
     "rty) And [DOIDeckCode] In (?pstrSelectDeckCode)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

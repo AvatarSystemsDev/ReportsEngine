@@ -771,6 +771,12 @@
     <Compile Include="Reports\RDReports\ExcelRDColoradoDR0456.Designer.cs">
       <DependentUpon>ExcelRDColoradoDR0456.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelSalesLedger.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelSalesLedger.Designer.cs">
+      <DependentUpon>ExcelSalesLedger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1905,6 +1911,12 @@
     <Compile Include="Reports\RDReports\RDSuspenseSelectedForEscheatRegister.Designer.cs">
       <DependentUpon>RDSuspenseSelectedForEscheatRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\SalesLedger.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\SalesLedger.Designer.cs">
+      <DependentUpon>SalesLedger.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\SuspenseByOwner.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2482,6 +2494,9 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelRDColoradoDR0456.resx">
       <DependentUpon>ExcelRDColoradoDR0456.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelSalesLedger.resx">
+      <DependentUpon>ExcelSalesLedger.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -3045,6 +3060,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDSuspenseSelectedForEscheatRegister.resx">
       <DependentUpon>RDSuspenseSelectedForEscheatRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\SalesLedger.resx">
+      <DependentUpon>SalesLedger.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\SuspenseByOwner.resx">
       <DependentUpon>SuspenseByOwner.cs</DependentUpon>

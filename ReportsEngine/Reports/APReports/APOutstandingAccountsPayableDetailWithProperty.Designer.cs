@@ -1684,6 +1684,8 @@
             this.DataMember = "Dynamic_APOutstandingPayablesDetailWithProperty";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "AP Accounts Payable Detail With Property";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([ID])\n")});
             this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);

@@ -193,6 +193,7 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings8 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings4 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -418,6 +419,11 @@
             this.pstrBeginningPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooCodeOrDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.parameter1 = new DevExpress.XtraReports.Parameters.Parameter();
+            this.parameter2 = new DevExpress.XtraReports.Parameters.Parameter();
+            this.SortFieldPurchaser = new DevExpress.XtraReports.UI.CalculatedField();
+            this.SortFieldProperty = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox160)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -2170,7 +2176,7 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.Text = "Entry \r\nType";
-            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel12
             // 
@@ -2190,8 +2196,9 @@
             this.xrLabel12.StylePriority.UseBackColor = false;
             this.xrLabel12.StylePriority.UseForeColor = false;
             this.xrLabel12.StylePriority.UsePadding = false;
+            this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.Text = "Prod Date\r\nProp/Well Desc";
-            this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel13
             // 
@@ -2211,8 +2218,9 @@
             this.xrLabel13.StylePriority.UseBackColor = false;
             this.xrLabel13.StylePriority.UseForeColor = false;
             this.xrLabel13.StylePriority.UsePadding = false;
+            this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.Text = "Product\nProp/Well";
-            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel14
             // 
@@ -2234,7 +2242,7 @@
             this.xrLabel14.StylePriority.UsePadding = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
             this.xrLabel14.Text = "BTU\nAdj";
-            this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel15
             // 
@@ -2480,7 +2488,7 @@
             this.xrLabel115.StylePriority.UsePadding = false;
             this.xrLabel115.StylePriority.UseTextAlignment = false;
             this.xrLabel115.Text = "Entry \r\nType";
-            this.xrLabel115.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel115.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel116
             // 
@@ -2500,8 +2508,9 @@
             this.xrLabel116.StylePriority.UseBackColor = false;
             this.xrLabel116.StylePriority.UseForeColor = false;
             this.xrLabel116.StylePriority.UsePadding = false;
+            this.xrLabel116.StylePriority.UseTextAlignment = false;
             this.xrLabel116.Text = "Prod Date\r\nProp/Well Desc";
-            this.xrLabel116.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel116.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel117
             // 
@@ -2521,8 +2530,9 @@
             this.xrLabel117.StylePriority.UseBackColor = false;
             this.xrLabel117.StylePriority.UseForeColor = false;
             this.xrLabel117.StylePriority.UsePadding = false;
+            this.xrLabel117.StylePriority.UseTextAlignment = false;
             this.xrLabel117.Text = "Product\nProp/Well";
-            this.xrLabel117.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel117.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel118
             // 
@@ -2544,7 +2554,7 @@
             this.xrLabel118.StylePriority.UsePadding = false;
             this.xrLabel118.StylePriority.UseTextAlignment = false;
             this.xrLabel118.Text = "BTU\nAdj";
-            this.xrLabel118.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel118.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel119
             // 
@@ -2839,7 +2849,7 @@
             // 
             // pstrBeginningPurchaserNumber
             // 
-            this.pstrBeginningPurchaserNumber.Description = "Beginning Purchaser";
+            this.pstrBeginningPurchaserNumber.Description = "Beginning Purchaser Code";
             this.pstrBeginningPurchaserNumber.Name = "pstrBeginningPurchaserNumber";
             this.pstrBeginningPurchaserNumber.ValueInfo = "!";
             dynamicListLookUpSettings3.DataMember = "Purchasers";
@@ -2850,7 +2860,7 @@
             // 
             // pstrEndingPurchaserNumber
             // 
-            this.pstrEndingPurchaserNumber.Description = "Ending Purchaser";
+            this.pstrEndingPurchaserNumber.Description = "Ending Purchaser Code";
             this.pstrEndingPurchaserNumber.Name = "pstrEndingPurchaserNumber";
             this.pstrEndingPurchaserNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings4.DataMember = "Purchasers";
@@ -3655,7 +3665,7 @@
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.Text = "Entry \r\nType";
-            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel19
             // 
@@ -3675,8 +3685,9 @@
             this.xrLabel19.StylePriority.UseBackColor = false;
             this.xrLabel19.StylePriority.UseForeColor = false;
             this.xrLabel19.StylePriority.UsePadding = false;
+            this.xrLabel19.StylePriority.UseTextAlignment = false;
             this.xrLabel19.Text = "Prod Date\r\nProp/Well Desc";
-            this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel20
             // 
@@ -3696,8 +3707,9 @@
             this.xrLabel20.StylePriority.UseBackColor = false;
             this.xrLabel20.StylePriority.UseForeColor = false;
             this.xrLabel20.StylePriority.UsePadding = false;
+            this.xrLabel20.StylePriority.UseTextAlignment = false;
             this.xrLabel20.Text = "Product\nProp/Well";
-            this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel21
             // 
@@ -3719,7 +3731,7 @@
             this.xrLabel21.StylePriority.UsePadding = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
             this.xrLabel21.Text = "BTU\nAdj";
-            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel22
             // 
@@ -3965,7 +3977,7 @@
             this.xrLabel152.StylePriority.UsePadding = false;
             this.xrLabel152.StylePriority.UseTextAlignment = false;
             this.xrLabel152.Text = "Entry \r\nType";
-            this.xrLabel152.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel152.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel153
             // 
@@ -3985,8 +3997,9 @@
             this.xrLabel153.StylePriority.UseBackColor = false;
             this.xrLabel153.StylePriority.UseForeColor = false;
             this.xrLabel153.StylePriority.UsePadding = false;
+            this.xrLabel153.StylePriority.UseTextAlignment = false;
             this.xrLabel153.Text = "Prod Date\r\nProp/Well Desc";
-            this.xrLabel153.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel153.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel154
             // 
@@ -4006,8 +4019,9 @@
             this.xrLabel154.StylePriority.UseBackColor = false;
             this.xrLabel154.StylePriority.UseForeColor = false;
             this.xrLabel154.StylePriority.UsePadding = false;
+            this.xrLabel154.StylePriority.UseTextAlignment = false;
             this.xrLabel154.Text = "Product\nProp/Well";
-            this.xrLabel154.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel154.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel155
             // 
@@ -4029,7 +4043,7 @@
             this.xrLabel155.StylePriority.UsePadding = false;
             this.xrLabel155.StylePriority.UseTextAlignment = false;
             this.xrLabel155.Text = "BTU\nAdj";
-            this.xrLabel155.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel155.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel156
             // 
@@ -4168,7 +4182,7 @@
             this.xrLabel8.BorderWidth = 1F;
             this.xrLabel8.CanGrow = false;
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Purchaser:  \' + [PurchaserNumber] + \'     \' + [PurchaserName]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Purchaser:  \' + [PurchaserNumber] + \' : \' + [PurchaserName]")});
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel8.ForeColor = System.Drawing.Color.Black;
             this.xrLabel8.KeepTogether = true;
@@ -4986,7 +5000,7 @@
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
             dynamicListLookUpSettings5.DisplayMember = "Description";
             dynamicListLookUpSettings5.FilterString = null;
-            dynamicListLookUpSettings5.SortMember = null;
+            dynamicListLookUpSettings5.SortMember = "SortFieldPurchaser";
             dynamicListLookUpSettings5.ValueMember = "Number";
             this.pstrSelectPurchaserNumber.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
@@ -5954,9 +5968,47 @@
             dynamicListLookUpSettings8.DataSource = this.Dynamic;
             dynamicListLookUpSettings8.DisplayMember = "Description";
             dynamicListLookUpSettings8.FilterString = null;
-            dynamicListLookUpSettings8.SortMember = null;
+            dynamicListLookUpSettings8.SortMember = "SortFieldProperty";
             dynamicListLookUpSettings8.ValueMember = "PropertyAndWellNumber";
             this.pstrSelectPropertyNumber.ValueSourceSettings = dynamicListLookUpSettings8;
+            // 
+            // pbooCodeOrDescription
+            // 
+            this.pbooCodeOrDescription.Description = "Use Code Or Description";
+            this.pbooCodeOrDescription.Name = "pbooCodeOrDescription";
+            this.pbooCodeOrDescription.Type = typeof(bool);
+            this.pbooCodeOrDescription.ValueInfo = "True";
+            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Code"));
+            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
+            this.pbooCodeOrDescription.ValueSourceSettings = staticListLookUpSettings4;
+            // 
+            // parameter1
+            // 
+            this.parameter1.Description = "Ending Purchaser Name";
+            this.parameter1.Name = "parameter1";
+            this.parameter1.ValueInfo = "ZZZZZZZZZZZ";
+            // 
+            // parameter2
+            // 
+            this.parameter2.Description = "Parameter2";
+            this.parameter2.Name = "parameter2";
+            this.parameter2.Type = typeof(int);
+            this.parameter2.ValueInfo = "0";
+            // 
+            // SortFieldPurchaser
+            // 
+            this.SortFieldPurchaser.DataMember = "Purchasers";
+            this.SortFieldPurchaser.DataSource = this.Dynamic;
+            this.SortFieldPurchaser.Expression = "Iif(?pbooCodeOrDescription,[Number] ,[Description] )";
+            this.SortFieldPurchaser.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.SortFieldPurchaser.Name = "SortFieldPurchaser";
+            // 
+            // SortFieldProperty
+            // 
+            this.SortFieldProperty.DataMember = "Properties";
+            this.SortFieldProperty.DataSource = this.Dynamic;
+            this.SortFieldProperty.Expression = "Iif(?pbooCodeOrDescription,[PropertyAndWellNumber] ,[Description] )";
+            this.SortFieldProperty.Name = "SortFieldProperty";
             // 
             // RDEntryEditList
             // 
@@ -5972,6 +6024,9 @@
             this.groupFooterBand1,
             this.groupHeaderBand2,
             this.groupFooterBand2});
+            this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
+            this.SortFieldPurchaser,
+            this.SortFieldProperty});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -5985,12 +6040,14 @@
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "RDEntryEditList";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Landscape", "?pbooShowMMBTU == True")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Landscape", "?pbooShowMMBTU == True"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([RDEntryID])")});
             this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngReportType, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooCodeOrDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -6013,6 +6070,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.plngReportType,
+            this.pbooCodeOrDescription,
             this.pstrDatabaseName,
             this.pstrServerName,
             this.plngUserID,
@@ -6267,5 +6325,10 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectPropertyNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pbooCodeOrDescription;
+        private DevExpress.XtraReports.Parameters.Parameter parameter1;
+        private DevExpress.XtraReports.Parameters.Parameter parameter2;
+        private DevExpress.XtraReports.UI.CalculatedField SortFieldPurchaser;
+        private DevExpress.XtraReports.UI.CalculatedField SortFieldProperty;
     }
 }

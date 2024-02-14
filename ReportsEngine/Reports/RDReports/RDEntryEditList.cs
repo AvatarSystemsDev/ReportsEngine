@@ -1,4 +1,5 @@
-﻿using DevExpress.XtraReports.Parameters;
+﻿using DevExpress.Utils.Helpers;
+using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
 using System;
 using System.Collections;
@@ -15,7 +16,8 @@ namespace ReportsEngine.Reports.RDReports
         {
             InitializeComponent();
             ShowingReportType.BeforePrint += ShowingReportType_BeforePrint;
-
+            Parameter p = this.Parameters["pbooCodeOrDescription"];
+            // p.ValueSourceSettings.
         }
 
         private void ShowingReportType_BeforePrint(object sender, CancelEventArgs e)
