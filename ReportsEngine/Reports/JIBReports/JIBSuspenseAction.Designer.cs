@@ -1194,7 +1194,7 @@
             this.xrLabel21.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel21.BorderWidth = 1F;
             this.xrLabel21.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Address : \'+ [AddressNumber]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AddressNumber]")});
             this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel21.ForeColor = System.Drawing.Color.Black;
             this.xrLabel21.KeepTogether = true;
