@@ -799,11 +799,11 @@
             this.Textbox21.BorderWidth = 1F;
             this.Textbox21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox21.KeepTogether = true;
-            this.Textbox21.LocationFloat = new DevExpress.Utils.PointFloat(986.7205F, 1.589457E-05F);
+            this.Textbox21.LocationFloat = new DevExpress.Utils.PointFloat(986.7209F, 1.589457E-05F);
             this.Textbox21.Multiline = true;
             this.Textbox21.Name = "Textbox21";
             this.Textbox21.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Textbox21.SizeF = new System.Drawing.SizeF(95.28999F, 35.00001F);
+            this.Textbox21.SizeF = new System.Drawing.SizeF(95.28961F, 35.00001F);
             this.Textbox21.StylePriority.UseFont = false;
             this.Textbox21.StylePriority.UsePadding = false;
             this.Textbox21.Text = "Prop/Well";
@@ -835,11 +835,11 @@
             this.Textbox27.BorderWidth = 1F;
             this.Textbox27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox27.KeepTogether = true;
-            this.Textbox27.LocationFloat = new DevExpress.Utils.PointFloat(1142.114F, 1.589457E-05F);
+            this.Textbox27.LocationFloat = new DevExpress.Utils.PointFloat(1142.115F, 1.589457E-05F);
             this.Textbox27.Multiline = true;
             this.Textbox27.Name = "Textbox27";
             this.Textbox27.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.Textbox27.SizeF = new System.Drawing.SizeF(76.75644F, 35.00001F);
+            this.Textbox27.SizeF = new System.Drawing.SizeF(76.7561F, 35.00001F);
             this.Textbox27.StylePriority.UseFont = false;
             this.Textbox27.StylePriority.UsePadding = false;
             this.Textbox27.Text = "Svc Date";
