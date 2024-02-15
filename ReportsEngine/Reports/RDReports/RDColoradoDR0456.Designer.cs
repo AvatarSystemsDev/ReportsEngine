@@ -172,7 +172,7 @@
             // 
             this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
-            storedProcQuery1.Name = "JIBHistoryDataSource";
+            storedProcQuery1.Name = "DataSource";
             queryParameter1.Name = "@plngCompanyID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
@@ -199,21 +199,21 @@
             queryParameter5,
             queryParameter6});
             storedProcQuery1.StoredProcName = "Report_ColoradoSeveranceTaxDR0456Form";
-            storedProcQuery2.Name = "JIBHistoryCompanyLookUp";
+            storedProcQuery2.Name = "CompanyLookUp";
             queryParameter7.Name = "@plngCompanyID";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter7});
             storedProcQuery2.StoredProcName = "Companies_ReportLookup";
-            storedProcQuery3.Name = "JIBHistoryOwnerLookUp";
+            storedProcQuery3.Name = "OwnerLookUp";
             queryParameter8.Name = "@plngCompanyID";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter8});
             storedProcQuery3.StoredProcName = "Owners_ReportLookup";
-            storedProcQuery4.Name = "JIBHistoryPropertyLookUp";
+            storedProcQuery4.Name = "PropertyLookUp";
             queryParameter9.Name = "@pbooIncludeFirstLast";
             queryParameter9.Type = typeof(bool);
             queryParameter9.ValueInfo = "True";
@@ -280,7 +280,7 @@
             this.pstrBeginningOwnerNumber.Description = "Beginning Owner";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
-            dynamicListLookUpSettings1.DataMember = "JIBHistoryOwnerLookUp";
+            dynamicListLookUpSettings1.DataMember = "OwnerLookUp";
             dynamicListLookUpSettings1.DataSource = this.Dynamic;
             dynamicListLookUpSettings1.DisplayMember = "Description";
             dynamicListLookUpSettings1.ValueMember = "Number";
@@ -291,7 +291,7 @@
             this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
-            dynamicListLookUpSettings2.DataMember = "JIBHistoryOwnerLookUp";
+            dynamicListLookUpSettings2.DataMember = "OwnerLookUp";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "Description";
             dynamicListLookUpSettings2.ValueMember = "Number";
@@ -331,7 +331,7 @@
             this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
-            dynamicListLookUpSettings3.DataMember = "JIBHistoryPropertyLookUp";
+            dynamicListLookUpSettings3.DataMember = "PropertyLookUp";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
             dynamicListLookUpSettings3.DisplayMember = "Description";
             dynamicListLookUpSettings3.FilterString = null;
@@ -344,7 +344,7 @@
             this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
-            dynamicListLookUpSettings4.DataMember = "JIBHistoryPropertyLookUp";
+            dynamicListLookUpSettings4.DataMember = "PropertyLookUp";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "Description";
             dynamicListLookUpSettings4.FilterString = null;
@@ -372,7 +372,7 @@
             this.pstrSelectOwner.MultiValue = true;
             this.pstrSelectOwner.Name = "pstrSelectOwner";
             this.pstrSelectOwner.SelectAllValues = true;
-            dynamicListLookUpSettings5.DataMember = "JIBHistoryOwnerLookUp";
+            dynamicListLookUpSettings5.DataMember = "OwnerLookUp";
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
             dynamicListLookUpSettings5.DisplayMember = "Description";
             dynamicListLookUpSettings5.FilterString = null;
@@ -386,7 +386,7 @@
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
-            dynamicListLookUpSettings6.DataMember = "JIBHistoryPropertyLookUp";
+            dynamicListLookUpSettings6.DataMember = "PropertyLookUp";
             dynamicListLookUpSettings6.DataSource = this.Dynamic;
             dynamicListLookUpSettings6.DisplayMember = "Description";
             dynamicListLookUpSettings6.FilterString = null;
@@ -2533,7 +2533,7 @@
             this.groupHeaderBand1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
-            this.DataMember = "JIBHistoryDataSource";
+            this.DataMember = "DataSource";
             this.DataSource = this.Dynamic;
             this.DisplayName = "JIBARDetailByOwner";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

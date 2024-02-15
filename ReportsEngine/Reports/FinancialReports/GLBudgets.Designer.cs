@@ -2022,6 +2022,8 @@
             this.DataMember = "Dynamic_DSGeneralLedgerDetail";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "GLBudgets";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([AccountID])\n")});
             this.FilterString = "[AccountNumber] In (?pstrSelectAccount) And ([AccountingCenterNumber] In (?pstrSe" +
     "lectAccountingCenter) Or IsNullOrEmpty([AccountingCenterNumber]) And [First] In " +
     "(?pstrSelectAccountingCenter))";

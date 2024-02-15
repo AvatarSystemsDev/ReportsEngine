@@ -3491,6 +3491,8 @@
             this.DataMember = "Dynamic_DSAPEditSheet";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "APEditList";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([InvoiceID])")});
             this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;

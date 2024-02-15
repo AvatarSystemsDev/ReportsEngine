@@ -291,8 +291,8 @@ namespace ReportsEngine.Reports
             Reports.Add("TestMICRFonts", () => new TestMICRFonts());
             Reports.Add("JIBWriteOffSelection", () => new JIBWriteOffSelection());
             Reports.Add("ExcelJIBWriteOffSelection", () => new ExcelJIBWriteOffSelection());
-            Reports.Add("JIBSuspenseAction", () => new JIBSuspenseAction());
-            Reports.Add("ExcelJIBSuspenseAction", () => new ExcelJIBSuspenseAction());
+            Reports.Add("SalesLedger", () => new SalesLedger());
+            Reports.Add("ExcelSalesLedger", () => new ExcelSalesLedger());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

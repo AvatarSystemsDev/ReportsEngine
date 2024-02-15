@@ -3778,6 +3778,8 @@
             this.DataMember = "Dynamic_EntryEditList";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "RDOwnerLevelEntry";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PhaseWellID])\n")});
             this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
