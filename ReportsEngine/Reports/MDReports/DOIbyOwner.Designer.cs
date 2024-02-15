@@ -1093,7 +1093,7 @@ namespace ReportsEngine.Reports
             this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel6.SizeF = new System.Drawing.SizeF(84.74811F, 15.75998F);
             this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.Text = "For Properties:";
+            this.xrLabel6.Text = "For Properties/Wells:";
             // 
             // xrLabel10
             // 
@@ -1404,7 +1404,7 @@ namespace ReportsEngine.Reports
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "LookupProperties";
@@ -1415,7 +1415,7 @@ namespace ReportsEngine.Reports
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "LookupProperties";
@@ -1971,7 +1971,7 @@ namespace ReportsEngine.Reports
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;

@@ -1201,13 +1201,13 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property Number";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property Number";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             // 
@@ -1272,7 +1272,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             // 

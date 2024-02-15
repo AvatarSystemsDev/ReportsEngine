@@ -1247,7 +1247,7 @@
             this.Textbox79.SizeF = new System.Drawing.SizeF(55.54285F, 35.00001F);
             this.Textbox79.StylePriority.UseFont = false;
             this.Textbox79.StylePriority.UsePadding = false;
-            this.Textbox79.Text = "Property";
+            this.Textbox79.Text = "Property/Well";
             this.Textbox79.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox70
@@ -1363,7 +1363,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property Number";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             // 
             // pstrEndingPropertyNumber

@@ -639,7 +639,7 @@
             this.Textbox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox1.SizeF = new System.Drawing.SizeF(770F, 30.00001F);
             this.Textbox1.StylePriority.UseFont = false;
-            this.Textbox1.Text = "DOI Deck Information";
+            this.Textbox1.Text = "DOI Information";
             this.Textbox1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox15
@@ -806,7 +806,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings1.DataMember = "JIBHistoryPropertyLookUp";
@@ -817,7 +817,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings2.DataMember = "JIBHistoryPropertyLookUp";
@@ -1813,7 +1813,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
@@ -1969,7 +1969,7 @@
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(91.66673F, 15.75996F);
             this.xrLabel10.StylePriority.UseFont = false;
-            this.xrLabel10.Text = "For Properties:";
+            this.xrLabel10.Text = "For Properties/Wells:";
             // 
             // xrLabel11
             // 

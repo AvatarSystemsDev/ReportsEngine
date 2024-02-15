@@ -2086,13 +2086,13 @@
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "Beginning Owner Number";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property Number";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             // 
             // pstrEndingOwnerNumber
@@ -2102,7 +2102,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property Number";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             // 
             // pstrSelectOwner
@@ -2113,7 +2113,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property List";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             // 

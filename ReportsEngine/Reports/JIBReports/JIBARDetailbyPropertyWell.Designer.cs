@@ -1092,7 +1092,7 @@
             this.xrLabel1.StylePriority.UseForeColor = false;
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "Property:";
+            this.xrLabel1.Text = "Prop/Well:";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel2
@@ -1185,7 +1185,7 @@
             this.xrLabel19.StylePriority.UseForeColor = false;
             this.xrLabel19.StylePriority.UsePadding = false;
             this.xrLabel19.StylePriority.UseTextAlignment = false;
-            this.xrLabel19.Text = "Property Total";
+            this.xrLabel19.Text = "Property/Well Total";
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel12
@@ -1330,7 +1330,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Parameter1";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings5.DataMember = "JIBHistoryPropertyLookUp";
@@ -1343,7 +1343,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings6.DataMember = "JIBHistoryPropertyLookUp";
@@ -1356,7 +1356,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
@@ -1532,7 +1532,7 @@
             this.xrLabel22.StylePriority.UseForeColor = false;
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.StylePriority.UseTextAlignment = false;
-            this.xrLabel22.Text = "For Properties:";
+            this.xrLabel22.Text = "For Properties/Wells:";
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel24

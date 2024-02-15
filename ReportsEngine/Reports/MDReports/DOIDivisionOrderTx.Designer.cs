@@ -862,7 +862,7 @@
             // 
             // plngPhaseWellID
             // 
-            this.plngPhaseWellID.Description = "Property";
+            this.plngPhaseWellID.Description = "Property/Well";
             this.plngPhaseWellID.Name = "plngPhaseWellID";
             this.plngPhaseWellID.Type = typeof(int);
             this.plngPhaseWellID.ValueInfo = "0";
@@ -874,7 +874,7 @@
             // 
             // pstrOwnerNumber
             // 
-            this.pstrOwnerNumber.Description = "Owner Number";
+            this.pstrOwnerNumber.Description = "Owner";
             this.pstrOwnerNumber.Name = "pstrOwnerNumber";
             this.pstrOwnerNumber.ValueInfo = "!";
             dynamicListLookUpSettings3.DataMember = "LookupOwners";
@@ -953,7 +953,7 @@
             // 
             this.xrPropertiesSelected.CanGrow = false;
             this.xrPropertiesSelected.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngPhaseWellID <= 0,\'All Properties\' ,[WellName] )")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngPhaseWellID <= 0,\'All Properties/Wells\' ,[WellName] )")});
             this.xrPropertiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(84.79922F, 3.051758E-05F);
             this.xrPropertiesSelected.Multiline = true;
@@ -974,7 +974,7 @@
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel8.SizeF = new System.Drawing.SizeF(84.79922F, 22.20503F);
             this.xrLabel8.StylePriority.UseFont = false;
-            this.xrLabel8.Text = "For Property:";
+            this.xrLabel8.Text = "For Property/Well:";
             // 
             // ReportTitle
             // 

@@ -1680,7 +1680,7 @@ namespace ReportsEngine.Reports.FinancialReports
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "DSPropertiesLookup";
@@ -1691,7 +1691,7 @@ namespace ReportsEngine.Reports.FinancialReports
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "DSPropertiesLookup";
@@ -2378,7 +2378,7 @@ namespace ReportsEngine.Reports.FinancialReports
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property List";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
@@ -2513,7 +2513,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel46.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel46.BorderWidth = 1F;
             this.xrLabel46.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Properties: \'\r\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Properties/Wells: \'\r\n")});
             this.xrLabel46.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel46.ForeColor = System.Drawing.Color.Black;
             this.xrLabel46.KeepTogether = true;

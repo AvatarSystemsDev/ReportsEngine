@@ -955,7 +955,7 @@
             // 
             // pdteBeginningDate
             // 
-            this.pdteBeginningDate.Description = "From Check Date";
+            this.pdteBeginningDate.Description = "Beginning Check Date";
             this.pdteBeginningDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "AddYears(Today(),-1)")});
             this.pdteBeginningDate.Name = "pdteBeginningDate";
@@ -964,7 +964,7 @@
             // 
             // pdteEndingDate
             // 
-            this.pdteEndingDate.Description = "To Check Date";
+            this.pdteEndingDate.Description = "Ending Check Date";
             this.pdteEndingDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingDate.Name = "pdteEndingDate";
@@ -986,7 +986,7 @@
             // 
             // pstrBeginningVendorNumber
             // 
-            this.pstrBeginningVendorNumber.Description = "From Vendor";
+            this.pstrBeginningVendorNumber.Description = "Beginning Vendor";
             this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
             this.pstrBeginningVendorNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "VendorLookup";
@@ -997,7 +997,7 @@
             // 
             // pstrEndingVendorNumber
             // 
-            this.pstrEndingVendorNumber.Description = "To Vendor";
+            this.pstrEndingVendorNumber.Description = "Ending Vendor";
             this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
             this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "VendorLookup";

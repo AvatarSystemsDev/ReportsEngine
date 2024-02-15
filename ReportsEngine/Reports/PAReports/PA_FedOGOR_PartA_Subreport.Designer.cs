@@ -2302,7 +2302,7 @@
             this.xrLabel64.StylePriority.UseForeColor = false;
             this.xrLabel64.StylePriority.UsePadding = false;
             this.xrLabel64.StylePriority.UseTextAlignment = false;
-            this.xrLabel64.Text = "\r\nProperty";
+            this.xrLabel64.Text = "\r\nProperty/Well";
             this.xrLabel64.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel65

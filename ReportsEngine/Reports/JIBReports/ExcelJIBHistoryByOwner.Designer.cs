@@ -701,14 +701,14 @@
             // 
             // pdteBeginningDate
             // 
-            this.pdteBeginningDate.Description = "From Date:";
+            this.pdteBeginningDate.Description = "Beginning Date:";
             this.pdteBeginningDate.Name = "pdteBeginningDate";
             this.pdteBeginningDate.Type = typeof(System.DateTime);
             this.pdteBeginningDate.ValueInfo = "1900-01-01";
             // 
             // pdteEndingDate
             // 
-            this.pdteEndingDate.Description = "To Date:";
+            this.pdteEndingDate.Description = "Ending Date:";
             this.pdteEndingDate.Name = "pdteEndingDate";
             this.pdteEndingDate.Type = typeof(System.DateTime);
             this.pdteEndingDate.ValueInfo = "9999-12-31";
@@ -731,25 +731,25 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "From Property:";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well:";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "To Property:";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well:";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "From Owner:";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner:";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "To Owner:";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner:";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             // 

@@ -1275,7 +1275,7 @@
             this.xrLabel42.StylePriority.UseForeColor = false;
             this.xrLabel42.StylePriority.UsePadding = false;
             this.xrLabel42.StylePriority.UseTextAlignment = false;
-            this.xrLabel42.Text = "Property Total";
+            this.xrLabel42.Text = "Property/Well Total";
             this.xrLabel42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // groupFooterBand2
@@ -2107,7 +2107,7 @@
             this.Textbox1.SizeF = new System.Drawing.SizeF(769.4801F, 30F);
             this.Textbox1.StylePriority.UseFont = false;
             this.Textbox1.StylePriority.UsePadding = false;
-            this.Textbox1.Text = "Revenue Suspense List by Property";
+            this.Textbox1.Text = "Revenue Suspense List by Property/Well";
             this.Textbox1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox218
@@ -2427,7 +2427,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "From Property:";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well:";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings1.DataMember = "JIBHistoryPropertyLookUp";
@@ -2438,7 +2438,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "To Property:";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well:";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings2.DataMember = "JIBHistoryPropertyLookUp";
@@ -2456,7 +2456,7 @@
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "From Owner:";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner:";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             dynamicListLookUpSettings3.DataMember = "JIBHistoryOwnerLookUp";
@@ -2467,7 +2467,7 @@
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "To Owner:";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner:";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings4.DataMember = "JIBHistoryOwnerLookUp";
@@ -2527,7 +2527,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
@@ -2767,7 +2767,7 @@
             this.xrLabel38.SizeF = new System.Drawing.SizeF(769.4801F, 30F);
             this.xrLabel38.StylePriority.UseFont = false;
             this.xrLabel38.StylePriority.UsePadding = false;
-            this.xrLabel38.Text = "Revenue Suspense List by Property";
+            this.xrLabel38.Text = "Revenue Suspense List by Property/Well";
             this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel39

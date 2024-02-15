@@ -593,7 +593,7 @@
             // 
             // pstrEndingCostCenterNumber
             // 
-            this.pstrEndingCostCenterNumber.Description = "Ending Cost Center Number";
+            this.pstrEndingCostCenterNumber.Description = "Ending Cost Center";
             this.pstrEndingCostCenterNumber.Name = "pstrEndingCostCenterNumber";
             // 
             // pstrSelectAccounts

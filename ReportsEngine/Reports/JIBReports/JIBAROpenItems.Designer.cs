@@ -1128,7 +1128,7 @@
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "From Owner:";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner:";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "JIBHistoryOwnerLookUp";
@@ -1139,7 +1139,7 @@
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "To Owner:";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner:";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "JIBHistoryOwnerLookUp";

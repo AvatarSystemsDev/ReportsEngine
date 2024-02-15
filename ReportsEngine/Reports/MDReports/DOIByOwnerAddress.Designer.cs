@@ -1081,7 +1081,7 @@
             this.xrLabel26.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel26.BorderWidth = 1F;
             this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Properties:\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Properties/Wells:\'\n")});
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel26.ForeColor = System.Drawing.Color.Black;
             this.xrLabel26.KeepTogether = true;
@@ -1396,7 +1396,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "LookupProperties";
@@ -1407,7 +1407,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "LookupProperties";
@@ -1671,7 +1671,7 @@
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "Ending Owner Number";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings6.DataMember = "LookupOwners";
@@ -1684,7 +1684,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
@@ -1749,7 +1749,7 @@
             // 
             // pbooPropertyOnNextPage
             // 
-            this.pbooPropertyOnNextPage.Description = "New Page Per Property";
+            this.pbooPropertyOnNextPage.Description = "New Page Per Property/Well";
             this.pbooPropertyOnNextPage.Name = "pbooPropertyOnNextPage";
             this.pbooPropertyOnNextPage.Type = typeof(bool);
             this.pbooPropertyOnNextPage.ValueInfo = "False";

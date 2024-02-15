@@ -763,7 +763,7 @@
             this.xrLabel58.SizeF = new System.Drawing.SizeF(770.0001F, 30F);
             this.xrLabel58.StylePriority.UseFont = false;
             this.xrLabel58.StylePriority.UsePadding = false;
-            this.xrLabel58.Text = "Joint Interest Billing History by Property";
+            this.xrLabel58.Text = "Joint Interest Billing History by Property/Well";
             this.xrLabel58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel52
@@ -972,14 +972,14 @@
             // 
             // pdteBeginningDate
             // 
-            this.pdteBeginningDate.Description = "From Date:";
+            this.pdteBeginningDate.Description = "Beginning Date:";
             this.pdteBeginningDate.Name = "pdteBeginningDate";
             this.pdteBeginningDate.Type = typeof(System.DateTime);
             this.pdteBeginningDate.ValueInfo = "1900-01-01";
             // 
             // pdteEndingDate
             // 
-            this.pdteEndingDate.Description = "To Date:";
+            this.pdteEndingDate.Description = "Ending Date:";
             this.pdteEndingDate.Name = "pdteEndingDate";
             this.pdteEndingDate.Type = typeof(System.DateTime);
             this.pdteEndingDate.ValueInfo = "9999-12-31";
@@ -1002,7 +1002,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "From Property:";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well:";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings1.DataMember = "JIBHistoryPropertyLookUp";
@@ -1013,7 +1013,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "To Property:";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well:";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings2.DataMember = "JIBHistoryPropertyLookUp";
@@ -1024,7 +1024,7 @@
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "From Owner:";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner:";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             dynamicListLookUpSettings3.DataMember = "JIBHistoryOwnerLookUp";
@@ -1035,7 +1035,7 @@
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "To Owner:";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner:";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings4.DataMember = "JIBHistoryOwnerLookUp";
@@ -1291,7 +1291,7 @@
             this.xrLabel35.StylePriority.UseForeColor = false;
             this.xrLabel35.StylePriority.UsePadding = false;
             this.xrLabel35.StylePriority.UseTextAlignment = false;
-            this.xrLabel35.Text = "Property Total:";
+            this.xrLabel35.Text = "Property/Well Total:";
             this.xrLabel35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel34
@@ -1770,7 +1770,7 @@
             this.xrLabel12.SizeF = new System.Drawing.SizeF(770.0001F, 30F);
             this.xrLabel12.StylePriority.UseFont = false;
             this.xrLabel12.StylePriority.UsePadding = false;
-            this.xrLabel12.Text = "Joint Interest Billing History by Property";
+            this.xrLabel12.Text = "Joint Interest Billing History by Property/Well";
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel13
@@ -2126,7 +2126,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;

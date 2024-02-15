@@ -1088,14 +1088,14 @@
             // 
             // pdteBeginningDate
             // 
-            this.pdteBeginningDate.Description = "From Check Date";
+            this.pdteBeginningDate.Description = "Beginning Check Date";
             this.pdteBeginningDate.Name = "pdteBeginningDate";
             this.pdteBeginningDate.Type = typeof(System.DateTime);
             this.pdteBeginningDate.ValueInfo = "2023-10-04";
             // 
             // pdteEndingDate
             // 
-            this.pdteEndingDate.Description = "To Check Date";
+            this.pdteEndingDate.Description = "Ending Check Date";
             this.pdteEndingDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingDate.Name = "pdteEndingDate";
@@ -1111,13 +1111,13 @@
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "From Owner";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "To Owner";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             // 
@@ -1129,13 +1129,13 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "From Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "To Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             // 

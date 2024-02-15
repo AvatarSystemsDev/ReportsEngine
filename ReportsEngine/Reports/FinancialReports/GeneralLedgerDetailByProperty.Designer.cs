@@ -1602,7 +1602,7 @@
             this.xrLabel33.StylePriority.UseFont = false;
             this.xrLabel33.StylePriority.UsePadding = false;
             this.xrLabel33.StylePriority.UseTextAlignment = false;
-            this.xrLabel33.Text = "Property Total";
+            this.xrLabel33.Text = "Property/Well Total";
             this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrPropertyTotalDebit
@@ -1974,7 +1974,7 @@
             this.Textbox7.SizeF = new System.Drawing.SizeF(1019.013F, 26.975F);
             this.Textbox7.StylePriority.UseFont = false;
             this.Textbox7.StylePriority.UsePadding = false;
-            this.Textbox7.Text = "General Ledger by Property";
+            this.Textbox7.Text = "General Ledger by Property/Well";
             this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Rectangle1
@@ -2239,7 +2239,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings4.DataMember = "DSPropertiesLookup";
@@ -2250,7 +2250,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings5.DataMember = "DSPropertiesLookup";
@@ -2666,7 +2666,7 @@
             this.xrLabel11.StylePriority.UseForeColor = false;
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
-            this.xrLabel11.Text = "Report Property Total";
+            this.xrLabel11.Text = "Report Property/Well Total";
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrReportPropertySumDebit
@@ -3111,7 +3111,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property List";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
@@ -3704,7 +3704,7 @@
             this.xrLabel57.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel57.BorderWidth = 1F;
             this.xrLabel57.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Properties: \'\r\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Properties/Wells: \'\r\n")});
             this.xrLabel57.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel57.ForeColor = System.Drawing.Color.Black;
             this.xrLabel57.KeepTogether = true;
@@ -3919,7 +3919,7 @@
             this.xrLabel65.SizeF = new System.Drawing.SizeF(1019.013F, 26.975F);
             this.xrLabel65.StylePriority.UseFont = false;
             this.xrLabel65.StylePriority.UsePadding = false;
-            this.xrLabel65.Text = "General Ledger by Property";
+            this.xrLabel65.Text = "General Ledger by Property/Well";
             this.xrLabel65.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel66

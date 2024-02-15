@@ -34,13 +34,13 @@ namespace ReportsEngine.Reports.FinancialReports
             {
                 if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
                 {
-                    label.Text = "All Properties";
+                    label.Text = "All Properties/Wells";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Property to ";
+                        label.Text = "First Property/Well to ";
                     }
                     else
                     {
@@ -48,7 +48,7 @@ namespace ReportsEngine.Reports.FinancialReports
                     }
                     if (end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
                     {
-                        label.Text += "Last Property";
+                        label.Text += "Last Property/Well";
                     }
                     else
                     {
@@ -64,13 +64,13 @@ namespace ReportsEngine.Reports.FinancialReports
             {
                 if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
                 {
-                    label.Text = "Selected Properties";
+                    label.Text = "Selected Properties/Wells";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Property to ";
+                        label.Text = "First Property/Well to ";
                     }
                     else
                     {
@@ -78,7 +78,7 @@ namespace ReportsEngine.Reports.FinancialReports
                     }
                     if (end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
                     {
-                        label.Text += "Last Property";
+                        label.Text += "Last Property/Well";
                     }
                     else
                     {

@@ -859,13 +859,13 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             // 
@@ -1382,51 +1382,51 @@
             // 
             // plngBeginningBatchID
             // 
-            this.plngBeginningBatchID.Description = "Beginning Batch ID";
+            this.plngBeginningBatchID.Description = "Beginning Batch";
             this.plngBeginningBatchID.Name = "plngBeginningBatchID";
             this.plngBeginningBatchID.Type = typeof(int);
             this.plngBeginningBatchID.ValueInfo = "0";
             // 
             // plngEndingBatchID
             // 
-            this.plngEndingBatchID.Description = "Ending Batch ID";
+            this.plngEndingBatchID.Description = "Ending Batch";
             this.plngEndingBatchID.Name = "plngEndingBatchID";
             this.plngEndingBatchID.Type = typeof(int);
             this.plngEndingBatchID.ValueInfo = "9999999";
             // 
             // pstrBeginningCostCenterNumber
             // 
-            this.pstrBeginningCostCenterNumber.Description = "Beginning Cost Center Number";
+            this.pstrBeginningCostCenterNumber.Description = "Beginning Cost Center";
             this.pstrBeginningCostCenterNumber.Name = "pstrBeginningCostCenterNumber";
             this.pstrBeginningCostCenterNumber.ValueInfo = "!";
             // 
             // pstrEndingCostCenterNumber
             // 
-            this.pstrEndingCostCenterNumber.Description = "Ending Cost Center Number";
+            this.pstrEndingCostCenterNumber.Description = "Ending Cost Center";
             this.pstrEndingCostCenterNumber.Name = "pstrEndingCostCenterNumber";
             this.pstrEndingCostCenterNumber.ValueInfo = "ZZZZ";
             // 
             // pstrBeginningVendorNumber
             // 
-            this.pstrBeginningVendorNumber.Description = "Beginning Vendor Number";
+            this.pstrBeginningVendorNumber.Description = "Beginning Vendor";
             this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
             this.pstrBeginningVendorNumber.ValueInfo = "!";
             // 
             // pstrEndingVendorNumber
             // 
-            this.pstrEndingVendorNumber.Description = "Ending Vendor Number";
+            this.pstrEndingVendorNumber.Description = "Ending Vendor";
             this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
             this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZZZ";
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "Beginning Owner Number";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "Ending Owner Number";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZ";
             // 
@@ -1464,7 +1464,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             // 

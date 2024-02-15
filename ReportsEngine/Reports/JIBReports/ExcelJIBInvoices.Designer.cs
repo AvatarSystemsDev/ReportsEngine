@@ -778,7 +778,7 @@
             this.xrLabel25.StylePriority.UseFont = false;
             this.xrLabel25.StylePriority.UsePadding = false;
             this.xrLabel25.StylePriority.UseTextAlignment = false;
-            this.xrLabel25.Text = "DOI Deck Description";
+            this.xrLabel25.Text = "DOI Description";
             this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel23

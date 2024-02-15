@@ -330,14 +330,14 @@
             // 
             // pdteBeginningDate
             // 
-            this.pdteBeginningDate.Description = "From Check Date";
+            this.pdteBeginningDate.Description = "Beginning Check Date";
             this.pdteBeginningDate.Name = "pdteBeginningDate";
             this.pdteBeginningDate.Type = typeof(System.DateTime);
             this.pdteBeginningDate.ValueInfo = "2023-09-22";
             // 
             // pdteEndingDate
             // 
-            this.pdteEndingDate.Description = "To Check Date";
+            this.pdteEndingDate.Description = "Ending Check Date";
             this.pdteEndingDate.Name = "pdteEndingDate";
             this.pdteEndingDate.Type = typeof(System.DateTime);
             this.pdteEndingDate.ValueInfo = "2023-09-22";
@@ -357,7 +357,7 @@
             // 
             // pstrBeginningVendorNumber
             // 
-            this.pstrBeginningVendorNumber.Description = "From Vendor";
+            this.pstrBeginningVendorNumber.Description = "Beginning Vendor";
             this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
             this.pstrBeginningVendorNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "VendorLookup";
@@ -368,7 +368,7 @@
             // 
             // pstrEndingVendorNumber
             // 
-            this.pstrEndingVendorNumber.Description = "To Vendor";
+            this.pstrEndingVendorNumber.Description = "Ending Vendor";
             this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
             this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "VendorLookup";

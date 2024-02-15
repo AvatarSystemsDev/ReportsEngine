@@ -1363,13 +1363,13 @@
             // 
             // pstrBeginningProperty
             // 
-            this.pstrBeginningProperty.Description = "Beginning Property";
+            this.pstrBeginningProperty.Description = "Beginning Property/Well";
             this.pstrBeginningProperty.Name = "pstrBeginningProperty";
             this.pstrBeginningProperty.ValueInfo = "!";
             // 
             // pstrEndingProperty
             // 
-            this.pstrEndingProperty.Description = "Ending Property";
+            this.pstrEndingProperty.Description = "Ending Property/Well";
             this.pstrEndingProperty.Name = "pstrEndingProperty";
             this.pstrEndingProperty.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             // 

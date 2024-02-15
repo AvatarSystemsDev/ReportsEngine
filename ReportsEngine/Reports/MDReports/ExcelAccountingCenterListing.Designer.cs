@@ -447,14 +447,14 @@
             // 
             // pstrBeginningAccountCenterNumber
             // 
-            this.pstrBeginningAccountCenterNumber.Description = "Beginning Account Center Number";
+            this.pstrBeginningAccountCenterNumber.Description = "Beginning Account Center";
             this.pstrBeginningAccountCenterNumber.Name = "pstrBeginningAccountCenterNumber";
             this.pstrBeginningAccountCenterNumber.ValueInfo = "!";
             this.pstrBeginningAccountCenterNumber.Visible = false;
             // 
             // pstrEndingAccountCenterNumber
             // 
-            this.pstrEndingAccountCenterNumber.Description = "Ending Account Center Number";
+            this.pstrEndingAccountCenterNumber.Description = "Ending Account Center";
             this.pstrEndingAccountCenterNumber.Name = "pstrEndingAccountCenterNumber";
             this.pstrEndingAccountCenterNumber.ValueInfo = "ZZZZ";
             this.pstrEndingAccountCenterNumber.Visible = false;

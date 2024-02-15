@@ -728,7 +728,7 @@ namespace ReportsEngine.Reports
             // 
             // pstrBeginningAFENumber
             // 
-            this.pstrBeginningAFENumber.Description = "Beginning AFE Number";
+            this.pstrBeginningAFENumber.Description = "Beginning AFE";
             this.pstrBeginningAFENumber.Name = "pstrBeginningAFENumber";
             this.pstrBeginningAFENumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "Lookup_AFEs";

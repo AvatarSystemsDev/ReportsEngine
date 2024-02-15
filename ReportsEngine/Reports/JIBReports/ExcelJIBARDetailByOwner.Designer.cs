@@ -739,14 +739,14 @@
             // 
             // pdteBeginningJIBDate
             // 
-            this.pdteBeginningJIBDate.Description = "From Date:";
+            this.pdteBeginningJIBDate.Description = "Beginning Date:";
             this.pdteBeginningJIBDate.Name = "pdteBeginningJIBDate";
             this.pdteBeginningJIBDate.Type = typeof(System.DateTime);
             this.pdteBeginningJIBDate.ValueInfo = "2021-01-01";
             // 
             // pdteEndingJIBDate
             // 
-            this.pdteEndingJIBDate.Description = "To Date:";
+            this.pdteEndingJIBDate.Description = "Ending Date:";
             this.pdteEndingJIBDate.Name = "pdteEndingJIBDate";
             this.pdteEndingJIBDate.Type = typeof(System.DateTime);
             this.pdteEndingJIBDate.ValueInfo = "2022-12-12";
@@ -778,17 +778,17 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             // 
             // pstrSelectOwner

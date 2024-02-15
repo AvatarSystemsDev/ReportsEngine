@@ -1360,7 +1360,7 @@
             // 
             // pstrBeginningProperty
             // 
-            this.pstrBeginningProperty.Description = "Beginning Property";
+            this.pstrBeginningProperty.Description = "Beginning Property/Well";
             this.pstrBeginningProperty.Name = "pstrBeginningProperty";
             this.pstrBeginningProperty.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "DSPropertyLookup";
@@ -1371,7 +1371,7 @@
             // 
             // pstrEndingProperty
             // 
-            this.pstrEndingProperty.Description = "Ending Property";
+            this.pstrEndingProperty.Description = "Ending Property/Well";
             this.pstrEndingProperty.Name = "pstrEndingProperty";
             this.pstrEndingProperty.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "DSPropertyLookup";

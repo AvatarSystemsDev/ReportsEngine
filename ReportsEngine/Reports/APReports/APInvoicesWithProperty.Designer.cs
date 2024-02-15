@@ -735,7 +735,7 @@
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.ReportTitle.SizeF = new System.Drawing.SizeF(770.0002F, 30F);
             this.ReportTitle.StylePriority.UseFont = false;
-            this.ReportTitle.Text = "Accounts Payable Invoices with Property";
+            this.ReportTitle.Text = "Accounts Payable Invoices with Property/Well";
             this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Rectangle1
@@ -1882,7 +1882,7 @@
             this.xrLabel56.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel56.SizeF = new System.Drawing.SizeF(770.0002F, 30F);
             this.xrLabel56.StylePriority.UseFont = false;
-            this.xrLabel56.Text = "Accounts Payable Invoices with Property";
+            this.xrLabel56.Text = "Accounts Payable Invoices with Property/Well";
             this.xrLabel56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel57

@@ -613,20 +613,20 @@
             // 
             // pdteAgedFromDate
             // 
-            this.pdteAgedFromDate.Description = "From Date:";
+            this.pdteAgedFromDate.Description = "Beginning Date:";
             this.pdteAgedFromDate.Name = "pdteAgedFromDate";
             this.pdteAgedFromDate.Type = typeof(System.DateTime);
             this.pdteAgedFromDate.ValueInfo = "2021-01-01";
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "From Owner:";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner:";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "To Owner:";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner:";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             // 

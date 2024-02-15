@@ -1238,7 +1238,7 @@
             this.xrLabel56.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel56.SizeF = new System.Drawing.SizeF(771.0001F, 30F);
             this.xrLabel56.StylePriority.UseFont = false;
-            this.xrLabel56.Text = "Division of Interest by Property";
+            this.xrLabel56.Text = "Division of Interest by Property/Well";
             this.xrLabel56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel57
@@ -1376,7 +1376,7 @@
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.ReportTitle.SizeF = new System.Drawing.SizeF(771.0001F, 30F);
             this.ReportTitle.StylePriority.UseFont = false;
-            this.ReportTitle.Text = "Division of Interest by Property";
+            this.ReportTitle.Text = "Division of Interest by Property/Well";
             this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Rectangle3
@@ -1542,7 +1542,7 @@
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel8.SizeF = new System.Drawing.SizeF(84.79922F, 13.83336F);
             this.xrLabel8.StylePriority.UseFont = false;
-            this.xrLabel8.Text = "For Properties:";
+            this.xrLabel8.Text = "For Properties/Wells:";
             // 
             // pageFooterBand1
             // 
@@ -1675,7 +1675,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "LookupProperties";
@@ -1686,7 +1686,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "LookupProperties";
@@ -1788,7 +1788,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
@@ -2458,7 +2458,7 @@
             // 
             // pbooPropertyOnNextPage
             // 
-            this.pbooPropertyOnNextPage.Description = "New Page Per Property";
+            this.pbooPropertyOnNextPage.Description = "New Page Per Property/Well";
             this.pbooPropertyOnNextPage.Name = "pbooPropertyOnNextPage";
             this.pbooPropertyOnNextPage.Type = typeof(bool);
             this.pbooPropertyOnNextPage.ValueInfo = "False";

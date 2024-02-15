@@ -775,21 +775,21 @@
             // 
             // pdteBeginningJIBDate
             // 
-            this.pdteBeginningJIBDate.Description = "From Date:";
+            this.pdteBeginningJIBDate.Description = "Beginning Date:";
             this.pdteBeginningJIBDate.Name = "pdteBeginningJIBDate";
             this.pdteBeginningJIBDate.Type = typeof(System.DateTime);
             this.pdteBeginningJIBDate.ValueInfo = "2021-01-01";
             // 
             // pdteEndingJIBDate
             // 
-            this.pdteEndingJIBDate.Description = "To Date:";
+            this.pdteEndingJIBDate.Description = "Ending Date:";
             this.pdteEndingJIBDate.Name = "pdteEndingJIBDate";
             this.pdteEndingJIBDate.Type = typeof(System.DateTime);
             this.pdteEndingJIBDate.ValueInfo = "2022-12-12";
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "From Owner:";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner:";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             dynamicListLookUpSettings1.DataMember = "JIBHistoryOwnerLookUp";
@@ -800,7 +800,7 @@
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "To Owner:";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner:";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings2.DataMember = "JIBHistoryOwnerLookUp";

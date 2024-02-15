@@ -902,13 +902,13 @@
             // 
             // pstrBeginningVendorNumber
             // 
-            this.pstrBeginningVendorNumber.Description = "Beginning Property";
+            this.pstrBeginningVendorNumber.Description = "Beginning Property/Well";
             this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
             this.pstrBeginningVendorNumber.ValueInfo = "!";
             // 
             // pstrEndingVendorNumber
             // 
-            this.pstrEndingVendorNumber.Description = "Ending Property";
+            this.pstrEndingVendorNumber.Description = "Ending Property/Well";
             this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
             this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             // 

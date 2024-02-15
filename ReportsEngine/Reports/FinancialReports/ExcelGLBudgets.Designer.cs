@@ -1297,13 +1297,13 @@
             // 
             // pstrBeginningCostCenterNumber
             // 
-            this.pstrBeginningCostCenterNumber.Description = "Beginning Cost Center Number";
+            this.pstrBeginningCostCenterNumber.Description = "Beginning Cost Center";
             this.pstrBeginningCostCenterNumber.Name = "pstrBeginningCostCenterNumber";
             this.pstrBeginningCostCenterNumber.ValueInfo = "!";
             // 
             // pstrEndingCostCenterNumber
             // 
-            this.pstrEndingCostCenterNumber.Description = "Ending Cost Center Number";
+            this.pstrEndingCostCenterNumber.Description = "Ending Cost Center";
             this.pstrEndingCostCenterNumber.Name = "pstrEndingCostCenterNumber";
             this.pstrEndingCostCenterNumber.ValueInfo = "ZZZZ";
             // 

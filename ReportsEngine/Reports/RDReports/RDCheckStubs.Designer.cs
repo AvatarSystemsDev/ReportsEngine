@@ -260,7 +260,7 @@ namespace ReportsEngine.Reports.RDReports
             // 
             // pstrStartingOwnerNumber
             // 
-            this.pstrStartingOwnerNumber.Description = "Starting Owner Number";
+            this.pstrStartingOwnerNumber.Description = "Starting Owner";
             this.pstrStartingOwnerNumber.Enabled = false;
             this.pstrStartingOwnerNumber.Name = "pstrStartingOwnerNumber";
             this.pstrStartingOwnerNumber.ValueInfo = "!";
@@ -275,7 +275,7 @@ namespace ReportsEngine.Reports.RDReports
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "Ending Owner Number";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Enabled = false;
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";

@@ -1211,7 +1211,7 @@
             this.Textbox64.SizeF = new System.Drawing.SizeF(167.0159F, 40.00001F);
             this.Textbox64.StylePriority.UsePadding = false;
             this.Textbox64.StylePriority.UseTextAlignment = false;
-            this.Textbox64.Text = "Account Description\r\nProperty/Well";
+            this.Textbox64.Text = "Account Description\r\nProp/Well";
             this.Textbox64.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // SubBand1
@@ -1888,7 +1888,7 @@
             this.xrLabel21.SizeF = new System.Drawing.SizeF(148.0368F, 40.00001F);
             this.xrLabel21.StylePriority.UsePadding = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
-            this.xrLabel21.Text = "\r\nProperty Description";
+            this.xrLabel21.Text = "\r\nProp/Well Description";
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // SubBand2

@@ -1197,7 +1197,7 @@
             this.ReportTitle.SizeF = new System.Drawing.SizeF(769.8702F, 27.78001F);
             this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.StylePriority.UsePadding = false;
-            this.ReportTitle.Text = "Production Tax Detail Register by Property";
+            this.ReportTitle.Text = "Production Tax Detail Register by Property/Well";
             this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Rectangle3
@@ -1518,7 +1518,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "Property";
@@ -1529,7 +1529,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "Property";

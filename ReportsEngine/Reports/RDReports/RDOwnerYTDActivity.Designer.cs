@@ -1299,7 +1299,7 @@
             // 
             // pdteBeginningDate
             // 
-            this.pdteBeginningDate.Description = "From Check Date";
+            this.pdteBeginningDate.Description = "Beginning Check Date";
             this.pdteBeginningDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "AddYears(Today(),-1)")});
             this.pdteBeginningDate.Name = "pdteBeginningDate";
@@ -1308,7 +1308,7 @@
             // 
             // pdteEndingDate
             // 
-            this.pdteEndingDate.Description = "To Check Date";
+            this.pdteEndingDate.Description = "Ending Check Date";
             this.pdteEndingDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingDate.Name = "pdteEndingDate";
@@ -1324,7 +1324,7 @@
             // 
             // pstrBeginningOwnerNumber
             // 
-            this.pstrBeginningOwnerNumber.Description = "From Owner";
+            this.pstrBeginningOwnerNumber.Description = "Beginning Owner";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "OwnerLookupDataSet";
@@ -1335,7 +1335,7 @@
             // 
             // pstrEndingOwnerNumber
             // 
-            this.pstrEndingOwnerNumber.Description = "To Owner";
+            this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "OwnerLookupDataSet";
@@ -1357,7 +1357,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "From Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings5.DataMember = "PropertiesLookup";
@@ -1368,7 +1368,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "To Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings6.DataMember = "PropertiesLookup";
@@ -2147,7 +2147,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property";
+            this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;

@@ -622,7 +622,7 @@
             this.xrLabel17.StylePriority.UseForeColor = false;
             this.xrLabel17.StylePriority.UsePadding = false;
             this.xrLabel17.StylePriority.UseTextAlignment = false;
-            this.xrLabel17.Text = "For Properties:";
+            this.xrLabel17.Text = "For Properties/Wells:";
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrPropertiesSelected
@@ -1110,7 +1110,7 @@
             this.xrLabel33.StylePriority.UseFont = false;
             this.xrLabel33.StylePriority.UsePadding = false;
             this.xrLabel33.StylePriority.UseTextAlignment = false;
-            this.xrLabel33.Text = "Property Total";
+            this.xrLabel33.Text = "Property/Well Total";
             this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrPropertyTotalCredit
@@ -1146,7 +1146,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Beginning Property";
+            this.pstrSelectProperty.Description = "Beginning Property/Well";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
@@ -1160,7 +1160,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "JIBHistoryOwnerLookUp";
@@ -1173,7 +1173,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property Number";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "JIBHistoryOwnerLookUp";
@@ -1186,7 +1186,7 @@
             // 
             // pstrBeginningAccountNumber
             // 
-            this.pstrBeginningAccountNumber.Description = "Beginning Account Number";
+            this.pstrBeginningAccountNumber.Description = "Beginning Account";
             this.pstrBeginningAccountNumber.Name = "pstrBeginningAccountNumber";
             this.pstrBeginningAccountNumber.ValueInfo = "!";
             dynamicListLookUpSettings4.DataMember = "DSAccountLookup";
@@ -1199,7 +1199,7 @@
             // 
             // pstrEndingAccountNumber
             // 
-            this.pstrEndingAccountNumber.Description = "Ending Account Number";
+            this.pstrEndingAccountNumber.Description = "Ending Account";
             this.pstrEndingAccountNumber.Name = "pstrEndingAccountNumber";
             this.pstrEndingAccountNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZ";
             dynamicListLookUpSettings5.DataMember = "DSAccountLookup";
@@ -1409,7 +1409,7 @@
             this.xrLabel14.StylePriority.UseFont = false;
             this.xrLabel14.StylePriority.UsePadding = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
-            this.xrLabel14.Text = "Property Total";
+            this.xrLabel14.Text = "Property/Well Total";
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // JIBProvisionalEntries
