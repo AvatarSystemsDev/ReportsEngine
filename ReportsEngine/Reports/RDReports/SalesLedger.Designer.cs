@@ -2379,21 +2379,21 @@
             // 
             // pstrBeginningPropertyID
             // 
-            this.pstrBeginningPropertyID.Description = "Beginning Property";
+            this.pstrBeginningPropertyID.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyID.Name = "pstrBeginningPropertyID";
             this.pstrBeginningPropertyID.Type = typeof(int);
             this.pstrBeginningPropertyID.ValueInfo = "0";
             // 
             // pstrEndingPropertyID
             // 
-            this.pstrEndingPropertyID.Description = "Ending Property";
+            this.pstrEndingPropertyID.Description = "Ending Property/Well";
             this.pstrEndingPropertyID.Name = "pstrEndingPropertyID";
             this.pstrEndingPropertyID.Type = typeof(int);
             this.pstrEndingPropertyID.ValueInfo = "0";
             // 
             // pstrSelectPropertyID
             // 
-            this.pstrSelectPropertyID.Description = "Select Property";
+            this.pstrSelectPropertyID.Description = "Select Property/Well";
             this.pstrSelectPropertyID.MultiValue = true;
             this.pstrSelectPropertyID.Name = "pstrSelectPropertyID";
             this.pstrSelectPropertyID.SelectAllValues = true;
