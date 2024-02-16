@@ -11,6 +11,7 @@ using System.Linq;
 using System.ServiceModel;
 using System.Text.RegularExpressions;
 using System.Web;
+using static DevExpress.Web.Internal.ColorPicker;
 
 namespace ReportsEngine.Services
 {
@@ -310,7 +311,7 @@ namespace ReportsEngine.Services
                 else
                 {
                     report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);
-                }
+                } 
             }
 
             if (!AwaitParameterInputPassed)
