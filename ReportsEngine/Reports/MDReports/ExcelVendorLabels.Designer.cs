@@ -36,6 +36,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelVendorLabels));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -63,6 +65,8 @@
             this.Textbox14 = new DevExpress.XtraReports.UI.XRLabel();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngPrintLabel = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowLabelWithoutAddress = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -217,19 +221,27 @@
             queryParameter4.Name = "@pbooReturnNumber";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?pbooReturnNumber", typeof(bool));
-            queryParameter5.Name = "@plngAddressToReturn";
+            queryParameter5.Name = "@pbooShowLabelWithoutAddress";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngAddressToReturn", typeof(int));
-            queryParameter6.Name = "@plngCompanyID";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooShowLabelWithoutAddress", typeof(bool));
+            queryParameter6.Name = "@pbooIncludeCompanyOwner";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
+            queryParameter7.Name = "@plngAddressToReturn";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngAddressToReturn", typeof(int));
+            queryParameter8.Name = "@plngCompanyID";
+            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
             queryParameter5,
-            queryParameter6});
+            queryParameter6,
+            queryParameter7,
+            queryParameter8});
             storedProcQuery1.StoredProcName = "Report_VendorLabels";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -423,6 +435,20 @@
             this.plngPrintLabel.Type = typeof(int);
             this.plngPrintLabel.ValueInfo = "0";
             // 
+            // pbooIncludeCompanyOwner
+            // 
+            this.pbooIncludeCompanyOwner.Description = "Parameter1";
+            this.pbooIncludeCompanyOwner.Name = "pbooIncludeCompanyOwner";
+            this.pbooIncludeCompanyOwner.Type = typeof(bool);
+            this.pbooIncludeCompanyOwner.ValueInfo = "False";
+            // 
+            // pbooShowLabelWithoutAddress
+            // 
+            this.pbooShowLabelWithoutAddress.Description = "Parameter1";
+            this.pbooShowLabelWithoutAddress.Name = "pbooShowLabelWithoutAddress";
+            this.pbooShowLabelWithoutAddress.Type = typeof(bool);
+            this.pbooShowLabelWithoutAddress.ValueInfo = "False";
+            // 
             // ExcelVendorLabels
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -462,7 +488,9 @@
             this.pbooReturnNumber,
             this.plngCompanyID,
             this.pstrSelectVendor,
-            this.plngPrintLabel});
+            this.plngPrintLabel,
+            this.pbooIncludeCompanyOwner,
+            this.pbooShowLabelWithoutAddress});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -495,5 +523,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
         private DevExpress.XtraReports.Parameters.Parameter plngPrintLabel;
+        private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowLabelWithoutAddress;
     }
 }

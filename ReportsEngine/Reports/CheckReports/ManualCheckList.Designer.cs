@@ -233,15 +233,15 @@
             storedProcQuery2.StoredProcName = "Report_ManualCheckList";
             storedProcQuery3.Name = "DSEditListBatchesLookup";
             queryParameter7.Name = "@plngTransactionSourceCodeID";
-            queryParameter7.Type = typeof(int);
-            queryParameter7.ValueInfo = "53";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngTransactionSourceCodeID", typeof(int));
             queryParameter8.Name = "@plngCompanyID";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter7,
             queryParameter8});
-            storedProcQuery3.StoredProcName = "ReportWizard_PopulateEditListBatches";
+            storedProcQuery3.StoredProcName = "ReportWizard_PopulateEditListBatchesForManualCheckList";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
             storedProcQuery2,

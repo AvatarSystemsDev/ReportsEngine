@@ -1263,10 +1263,10 @@
     <Compile Include="Reports\MDReports\OwnerLabels.Designer.cs">
       <DependentUpon>OwnerLabels.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\PAReports\OwnerLabelsByProperty.cs">
+    <Compile Include="Reports\MDReports\OwnerLabelsByProperty.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\PAReports\OwnerLabelsByProperty.Designer.cs">
+    <Compile Include="Reports\MDReports\OwnerLabelsByProperty.Designer.cs">
       <DependentUpon>OwnerLabelsByProperty.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\OwnerNameAddress.cs">
@@ -2740,7 +2740,7 @@
     <EmbeddedResource Include="Reports\MDReports\OwnerLabels.resx">
       <DependentUpon>OwnerLabels.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\PAReports\OwnerLabelsByProperty.resx">
+    <EmbeddedResource Include="Reports\MDReports\OwnerLabelsByProperty.resx">
       <DependentUpon>OwnerLabelsByProperty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\OwnerNameAddress.resx">

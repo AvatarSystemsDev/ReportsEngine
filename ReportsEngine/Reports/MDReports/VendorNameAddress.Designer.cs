@@ -113,6 +113,7 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.DataAccess.DataFederation.SelectNode selectNode1 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode1 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source1 = new DevExpress.DataAccess.DataFederation.Source();
@@ -125,7 +126,7 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode4 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode4 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source4 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings3 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
@@ -177,7 +178,7 @@
             this.pstrBeginningVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngSortOrder = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooPrintInactives = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngShowActive = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooPrintNotes = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngEntityCodeID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -189,6 +190,7 @@
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.plngUseSortName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowEntitiesWithoutAddresses = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -220,9 +222,9 @@
             queryParameter6.Name = "@plngSortOrder";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
-            queryParameter7.Name = "@pbooPrintInactives";
+            queryParameter7.Name = "@plngShowActive";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooPrintInactives", typeof(bool));
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(bool));
             queryParameter8.Name = "@plngUseSortName";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
@@ -1262,7 +1264,7 @@
             // 
             // pstrBeginningVendorNumber
             // 
-            this.pstrBeginningVendorNumber.Description = "Beginning Vendor";
+            this.pstrBeginningVendorNumber.Description = "Beginning Entity";
             this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
             this.pstrBeginningVendorNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "LookupVendors";
@@ -1273,7 +1275,7 @@
             // 
             // pstrEndingVendorNumber
             // 
-            this.pstrEndingVendorNumber.Description = "Ending Vendor";
+            this.pstrEndingVendorNumber.Description = "Ending Entity";
             this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
             this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "LookupVendors";
@@ -1295,12 +1297,16 @@
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "State, Number Order"));
             this.plngSortOrder.ValueSourceSettings = staticListLookUpSettings1;
             // 
-            // pbooPrintInactives
+            // plngShowActive
             // 
-            this.pbooPrintInactives.Description = "Print Inactives";
-            this.pbooPrintInactives.Name = "pbooPrintInactives";
-            this.pbooPrintInactives.Type = typeof(bool);
-            this.pbooPrintInactives.ValueInfo = "False";
+            this.plngShowActive.Description = "Show Active";
+            this.plngShowActive.Name = "plngShowActive";
+            this.plngShowActive.Type = typeof(int);
+            this.plngShowActive.ValueInfo = "0";
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "All"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Show Active Only"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Show Inactive Only"));
+            this.plngShowActive.ValueSourceSettings = staticListLookUpSettings2;
             // 
             // pbooPrintNotes
             // 
@@ -1470,14 +1476,14 @@
             this.plngUseSortName.Name = "plngUseSortName";
             this.plngUseSortName.Type = typeof(int);
             this.plngUseSortName.ValueInfo = "0";
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Both"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Show Name only"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Show Sort Name only"));
-            this.plngUseSortName.ValueSourceSettings = staticListLookUpSettings2;
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Both"));
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Show Name only"));
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Show Sort Name only"));
+            this.plngUseSortName.ValueSourceSettings = staticListLookUpSettings3;
             // 
             // pstrSelectVendor
             // 
-            this.pstrSelectVendor.Description = "Select Vendor";
+            this.pstrSelectVendor.Description = "Select Entity";
             this.pstrSelectVendor.MultiValue = true;
             this.pstrSelectVendor.Name = "pstrSelectVendor";
             this.pstrSelectVendor.SelectAllValues = true;
@@ -1488,6 +1494,13 @@
             dynamicListLookUpSettings4.SortMember = null;
             dynamicListLookUpSettings4.ValueMember = "Number";
             this.pstrSelectVendor.ValueSourceSettings = dynamicListLookUpSettings4;
+            // 
+            // pbooShowEntitiesWithoutAddresses
+            // 
+            this.pbooShowEntitiesWithoutAddresses.Description = "Show Entities Without Addresses";
+            this.pbooShowEntitiesWithoutAddresses.Name = "pbooShowEntitiesWithoutAddresses";
+            this.pbooShowEntitiesWithoutAddresses.Type = typeof(bool);
+            this.pbooShowEntitiesWithoutAddresses.ValueInfo = "True";
             // 
             // VendorNameAddress
             // 
@@ -1520,7 +1533,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortOrder, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUseSortName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooPrintInactives, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowEntitiesWithoutAddresses, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooPrintNotes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEntityCodeID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1535,7 +1549,8 @@
             this.pstrSelectVendor,
             this.plngSortOrder,
             this.plngUseSortName,
-            this.pbooPrintInactives,
+            this.plngShowActive,
+            this.pbooShowEntitiesWithoutAddresses,
             this.pbooPrintNotes,
             this.plngEntityCodeID,
             this.plngUserID,
@@ -1564,7 +1579,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningVendorNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingVendorNumber;
         private DevExpress.XtraReports.Parameters.Parameter plngSortOrder;
-        private DevExpress.XtraReports.Parameters.Parameter pbooPrintInactives;
+        private DevExpress.XtraReports.Parameters.Parameter plngShowActive;
         private DevExpress.XtraReports.Parameters.Parameter pbooPrintNotes;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
         private DevExpress.XtraReports.Parameters.Parameter plngEntityCodeID;
@@ -1610,5 +1625,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrVendorsSelected;
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowEntitiesWithoutAddresses;
     }
 }

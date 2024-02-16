@@ -39,6 +39,9 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelOwnerLabelsByProperty));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
@@ -59,7 +62,7 @@
             this.pdteDateToUse = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngAddressToPrint = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngShowActives = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngShowActive = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngInterestTypesToShow = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooUseGroupTypes = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
@@ -69,6 +72,9 @@
             this.Textbox14 = new DevExpress.XtraReports.UI.XRLabel();
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngPrintLabel = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowLabelWithoutAddress = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooReturnNumber = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -225,19 +231,28 @@
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
             queryParameter5.Name = "@plngShowActive";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngShowActives", typeof(int));
-            queryParameter6.Name = "@plngInterestTypesToShow";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
+            queryParameter6.Name = "@pbooIncludeCompanyOwner";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngInterestTypesToShow", typeof(int));
-            queryParameter7.Name = "@plngAddressToPrint";
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
+            queryParameter7.Name = "@pbooShowLabelWithoutAddress";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngAddressToPrint", typeof(int));
-            queryParameter8.Name = "@pbooUseGroupTypes";
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooShowLabelWithoutAddress", typeof(bool));
+            queryParameter8.Name = "@pbooReturnNumber";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooUseGroupTypes", typeof(bool));
-            queryParameter9.Name = "@plngUserID";
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooReturnNumber", typeof(bool));
+            queryParameter9.Name = "@plngInterestTypesToShow";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngInterestTypesToShow", typeof(int));
+            queryParameter10.Name = "@plngAddressToPrint";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngAddressToPrint", typeof(int));
+            queryParameter11.Name = "@pbooUseGroupTypes";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pbooUseGroupTypes", typeof(bool));
+            queryParameter12.Name = "@plngUserID";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -247,7 +262,10 @@
             queryParameter6,
             queryParameter7,
             queryParameter8,
-            queryParameter9});
+            queryParameter9,
+            queryParameter10,
+            queryParameter11,
+            queryParameter12});
             storedProcQuery1.StoredProcName = "Report_OwnerLabelsByProperty";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -319,16 +337,16 @@
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "No Address"));
             this.plngAddressToPrint.ValueSourceSettings = staticListLookUpSettings1;
             // 
-            // plngShowActives
+            // plngShowActive
             // 
-            this.plngShowActives.Description = "Show Active";
-            this.plngShowActives.Name = "plngShowActives";
-            this.plngShowActives.Type = typeof(int);
-            this.plngShowActives.ValueInfo = "0";
+            this.plngShowActive.Description = "Show Active";
+            this.plngShowActive.Name = "plngShowActive";
+            this.plngShowActive.Type = typeof(int);
+            this.plngShowActive.ValueInfo = "0";
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "All"));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Show Active Only"));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Show Inactive Only"));
-            this.plngShowActives.ValueSourceSettings = staticListLookUpSettings2;
+            this.plngShowActive.ValueSourceSettings = staticListLookUpSettings2;
             // 
             // plngInterestTypesToShow
             // 
@@ -464,6 +482,27 @@
             this.plngPrintLabel.Type = typeof(int);
             this.plngPrintLabel.ValueInfo = "0";
             // 
+            // pbooIncludeCompanyOwner
+            // 
+            this.pbooIncludeCompanyOwner.Description = "Parameter1";
+            this.pbooIncludeCompanyOwner.Name = "pbooIncludeCompanyOwner";
+            this.pbooIncludeCompanyOwner.Type = typeof(bool);
+            this.pbooIncludeCompanyOwner.ValueInfo = "False";
+            // 
+            // pbooShowLabelWithoutAddress
+            // 
+            this.pbooShowLabelWithoutAddress.Description = "Parameter1";
+            this.pbooShowLabelWithoutAddress.Name = "pbooShowLabelWithoutAddress";
+            this.pbooShowLabelWithoutAddress.Type = typeof(bool);
+            this.pbooShowLabelWithoutAddress.ValueInfo = "False";
+            // 
+            // pbooReturnNumber
+            // 
+            this.pbooReturnNumber.Description = "Parameter1";
+            this.pbooReturnNumber.Name = "pbooReturnNumber";
+            this.pbooReturnNumber.Type = typeof(bool);
+            this.pbooReturnNumber.ValueInfo = "False";
+            // 
             // ExcelOwnerLabelsByProperty
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -490,10 +529,13 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngAddressToPrint, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowActives, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngInterestTypesToShow, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooUseGroupTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngPrintLabel, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngPrintLabel, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeCompanyOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowLabelWithoutAddress, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooReturnNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -505,10 +547,13 @@
             this.pdteDateToUse,
             this.plngCompanyID,
             this.plngAddressToPrint,
-            this.plngShowActives,
+            this.plngShowActive,
             this.plngInterestTypesToShow,
             this.pbooUseGroupTypes,
-            this.plngPrintLabel});
+            this.plngPrintLabel,
+            this.pbooIncludeCompanyOwner,
+            this.pbooShowLabelWithoutAddress,
+            this.pbooReturnNumber});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -533,7 +578,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pdteDateToUse;
         private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
         private DevExpress.XtraReports.Parameters.Parameter plngAddressToPrint;
-        private DevExpress.XtraReports.Parameters.Parameter plngShowActives;
+        private DevExpress.XtraReports.Parameters.Parameter plngShowActive;
         private DevExpress.XtraReports.Parameters.Parameter plngInterestTypesToShow;
         private DevExpress.XtraReports.Parameters.Parameter pbooUseGroupTypes;
         private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
@@ -543,5 +588,8 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox14;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectProperty;
         private DevExpress.XtraReports.Parameters.Parameter plngPrintLabel;
+        private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowLabelWithoutAddress;
+        private DevExpress.XtraReports.Parameters.Parameter pbooReturnNumber;
     }
 }
