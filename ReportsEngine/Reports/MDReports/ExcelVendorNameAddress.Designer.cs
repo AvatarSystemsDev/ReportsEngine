@@ -38,6 +38,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelVendorNameAddress));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -73,6 +74,7 @@
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowEntitiesWithoutAddresses = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrRoleType = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -299,7 +301,7 @@
             this.xrLabel9.StylePriority.UseFont = false;
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
-            this.xrLabel9.Text = "RD Address";
+            this.xrLabel9.Text = "Tax Address";
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel10
@@ -318,7 +320,7 @@
             this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.StylePriority.UsePadding = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
-            this.xrLabel10.Text = "JIB Address";
+            this.xrLabel10.Text = "Mail Address";
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel11
@@ -356,7 +358,7 @@
             this.xrLabel12.StylePriority.UseFont = false;
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
-            this.xrLabel12.Text = "Owner Number";
+            this.xrLabel12.Text = "Vendor Number";
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel14
@@ -409,30 +411,33 @@
             this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
             storedProcQuery1.Name = "NamebaseNameAddress";
-            queryParameter1.Name = "@plngEntityCodeID";
+            queryParameter1.Name = "@pstrBeginningEntityNumber";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngEntityCodeID", typeof(int));
-            queryParameter2.Name = "@pstrBeginningEntityNumber";
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
+            queryParameter2.Name = "@pstrEndingEntityNumber";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
-            queryParameter3.Name = "@pstrEndingEntityNumber";
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
+            queryParameter3.Name = "@plngSortOrder";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
-            queryParameter4.Name = "@plngSortOrder";
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
+            queryParameter4.Name = "@plngShowActive";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
-            queryParameter5.Name = "@plngShowActive";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
+            queryParameter5.Name = "@plngUseSortName";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
-            queryParameter6.Name = "@plngUseSortName";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
+            queryParameter6.Name = "@pstrRoleIDs";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngEntityCodeID", typeof(string));
             queryParameter7.Name = "@pbooIncludeCompanyOwner";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
             queryParameter8.Name = "@pbooShowLabelWithoutAddress";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooShowEntitiesWithoutAddresses", typeof(bool));
+            queryParameter9.Name = "@pbooGetMailingAndTaxAddressOrJIBAndRDAddress";
+            queryParameter9.Type = typeof(bool);
+            queryParameter9.ValueInfo = "True";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -441,7 +446,8 @@
             queryParameter5,
             queryParameter6,
             queryParameter7,
-            queryParameter8});
+            queryParameter8,
+            queryParameter9});
             storedProcQuery1.StoredProcName = "Report_NamebaseNameAddress";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -560,6 +566,13 @@
             this.pstrSelectVendor.MultiValue = true;
             this.pstrSelectVendor.Name = "pstrSelectVendor";
             // 
+            // pstrRoleType
+            // 
+            this.pstrRoleType.Description = "Parameter1";
+            this.pstrRoleType.MultiValue = true;
+            this.pstrRoleType.Name = "pstrRoleType";
+            this.pstrRoleType.Type = typeof(int);
+            // 
             // ExcelVendorNameAddress
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -609,7 +622,8 @@
             this.plngUseSortName,
             this.pbooIncludeCompanyOwner,
             this.pbooShowEntitiesWithoutAddresses,
-            this.pstrSelectVendor});
+            this.pstrSelectVendor,
+            this.pstrRoleType});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -650,5 +664,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowEntitiesWithoutAddresses;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
+        private DevExpress.XtraReports.Parameters.Parameter pstrRoleType;
     }
 }

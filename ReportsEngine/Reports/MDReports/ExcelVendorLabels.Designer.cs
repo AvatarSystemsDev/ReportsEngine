@@ -39,6 +39,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelVendorLabels));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -69,6 +70,7 @@
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowLabelWithoutAddress = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrRoleIDs = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooSortByNumberOrDescription = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -232,12 +234,15 @@
             queryParameter7.Name = "@pstrRoleIDs";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("Join(?pstrRoleIDs)", typeof(string));
-            queryParameter8.Name = "@plngAddressToReturn";
+            queryParameter8.Name = "@pbooSortByNumberOrDescription";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngAddressToReturn", typeof(int));
-            queryParameter9.Name = "@plngCompanyID";
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooSortByNumberOrDescription", typeof(bool));
+            queryParameter9.Name = "@plngAddressToReturn";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngAddressToReturn", typeof(int));
+            queryParameter10.Name = "@plngCompanyID";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -247,7 +252,8 @@
             queryParameter6,
             queryParameter7,
             queryParameter8,
-            queryParameter9});
+            queryParameter9,
+            queryParameter10});
             storedProcQuery1.StoredProcName = "Report_VendorLabels";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -463,6 +469,13 @@
             this.pstrRoleIDs.Name = "pstrRoleIDs";
             this.pstrRoleIDs.Type = typeof(int);
             // 
+            // pbooSortByNumberOrDescription
+            // 
+            this.pbooSortByNumberOrDescription.Description = "Parameter1";
+            this.pbooSortByNumberOrDescription.Name = "pbooSortByNumberOrDescription";
+            this.pbooSortByNumberOrDescription.Type = typeof(bool);
+            this.pbooSortByNumberOrDescription.ValueInfo = "False";
+            // 
             // ExcelVendorLabels
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -510,7 +523,8 @@
             this.plngPrintLabel,
             this.pbooIncludeCompanyOwner,
             this.pbooShowLabelWithoutAddress,
-            this.pstrRoleIDs});
+            this.pstrRoleIDs,
+            this.pbooSortByNumberOrDescription});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -546,5 +560,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowLabelWithoutAddress;
         private DevExpress.XtraReports.Parameters.Parameter pstrRoleIDs;
+        private DevExpress.XtraReports.Parameters.Parameter pbooSortByNumberOrDescription;
     }
 }

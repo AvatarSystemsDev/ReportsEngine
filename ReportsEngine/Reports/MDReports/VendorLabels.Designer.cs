@@ -39,14 +39,16 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter15 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VendorLabels));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -55,6 +57,7 @@
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings3 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -77,6 +80,7 @@
             this.pbooShowLabelWithoutAddress = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrRoleIDs = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooSortByNumberOrDescription = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -105,12 +109,15 @@
             queryParameter7.Name = "@pstrRoleIDs";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("Join(?pstrRoleIDs)", typeof(string));
-            queryParameter8.Name = "@plngAddressToReturn";
+            queryParameter8.Name = "@pbooSortByNumberOrDescription";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngAddressToReturn", typeof(int));
-            queryParameter9.Name = "@plngCompanyID";
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooSortByNumberOrDescription", typeof(bool));
+            queryParameter9.Name = "@plngAddressToReturn";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngAddressToReturn", typeof(int));
+            queryParameter10.Name = "@plngCompanyID";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -120,36 +127,41 @@
             queryParameter6,
             queryParameter7,
             queryParameter8,
-            queryParameter9});
+            queryParameter9,
+            queryParameter10});
             storedProcQuery1.StoredProcName = "Report_VendorLabels";
             storedProcQuery2.Name = "LookupVendors";
-            queryParameter10.Name = "@plngVendorsToShow";
-            queryParameter10.Type = typeof(int);
-            queryParameter10.ValueInfo = "8";
-            queryParameter11.Name = "@plngCompanyID";
-            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter11.Name = "@plngEntitiesToShow";
+            queryParameter11.Type = typeof(int);
+            queryParameter11.ValueInfo = "0";
+            queryParameter12.Name = "@plngCompanyID";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter13.Name = "@showFirstAndLast";
+            queryParameter13.Type = typeof(bool);
+            queryParameter13.ValueInfo = "True";
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter10,
-            queryParameter11});
-            storedProcQuery2.StoredProcName = "Vendors_ReportLookup";
+            queryParameter11,
+            queryParameter12,
+            queryParameter13});
+            storedProcQuery2.StoredProcName = "Entities_ReportLookup";
             customSqlQuery1.Name = "LookupAddressTypeCode";
             customSqlQuery1.Sql = "Select\r\n\t0 AS ID,\r\n\t\'No Address\' AS Description\r\n\r\nUNION ALL \r\n\r\nSelect \r\n\tID,\r\n\t" +
     "Description\r\nfrom AddressTypeCode\r\nWHERE IsValidForEntities = 1";
             storedProcQuery3.Name = "EntityRoleTypeLookup";
-            queryParameter12.Name = "@pbooIncludeOwner";
-            queryParameter12.Type = typeof(bool);
-            queryParameter12.ValueInfo = "True";
-            queryParameter13.Name = "@pbooWillUseVendorOptionsOnly";
-            queryParameter13.Type = typeof(bool);
-            queryParameter13.ValueInfo = "False";
-            queryParameter14.Name = "@pbooIncludeAll";
+            queryParameter14.Name = "@pbooIncludeOwner";
             queryParameter14.Type = typeof(bool);
-            queryParameter14.ValueInfo = "False";
+            queryParameter14.ValueInfo = "True";
+            queryParameter15.Name = "@pbooWillUseVendorOptionsOnly";
+            queryParameter15.Type = typeof(bool);
+            queryParameter15.ValueInfo = "False";
+            queryParameter16.Name = "@pbooIncludeAll";
+            queryParameter16.Type = typeof(bool);
+            queryParameter16.ValueInfo = "False";
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter12,
-            queryParameter13,
-            queryParameter14});
+            queryParameter14,
+            queryParameter15,
+            queryParameter16});
             storedProcQuery3.StoredProcName = "EntityRoles_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -200,7 +212,7 @@
             dynamicListLookUpSettings1.DataMember = "LookupVendors";
             dynamicListLookUpSettings1.DataSource = this.Dynamic;
             dynamicListLookUpSettings1.DisplayMember = "Description";
-            dynamicListLookUpSettings1.FilterString = "[RoleType] = 0 OR [RoleTypeID] In (?pstrRoleIDs)";
+            dynamicListLookUpSettings1.FilterString = "[RoleTypeID] = 0 Or [RoleTypeID] In (?pstrRoleIDs)";
             dynamicListLookUpSettings1.ValueMember = "Number";
             this.pstrBeginningVendorNumber.ValueSourceSettings = dynamicListLookUpSettings1;
             // 
@@ -212,7 +224,7 @@
             dynamicListLookUpSettings2.DataMember = "LookupVendors";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "Description";
-            dynamicListLookUpSettings2.FilterString = "[RoleType] = 0 OR [RoleTypeID] In (?pstrRoleIDs)";
+            dynamicListLookUpSettings2.FilterString = "[RoleTypeID] = 0 Or [RoleTypeID] In (?pstrRoleIDs)";
             dynamicListLookUpSettings2.ValueMember = "Number";
             this.pstrEndingVendorNumber.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
@@ -353,8 +365,9 @@
             dynamicListLookUpSettings4.DataMember = "LookupVendors";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "Description";
-            dynamicListLookUpSettings4.FilterString = "[RoleType] = 0 OR [RoleTypeID] In (?pstrRoleIDs)";
+            dynamicListLookUpSettings4.FilterString = "[RoleTypeID] = 0 Or [RoleTypeID] In (?pstrRoleIDs)";
             dynamicListLookUpSettings4.SortMember = null;
+            dynamicListLookUpSettings4.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
             dynamicListLookUpSettings4.ValueMember = "Number";
             this.pstrSelectVendor.ValueSourceSettings = dynamicListLookUpSettings4;
             // 
@@ -388,6 +401,16 @@
             dynamicListLookUpSettings5.ValueMember = "ID";
             this.pstrRoleIDs.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
+            // pbooSortByNumberOrDescription
+            // 
+            this.pbooSortByNumberOrDescription.Description = "Sort By Number Or Description";
+            this.pbooSortByNumberOrDescription.Name = "pbooSortByNumberOrDescription";
+            this.pbooSortByNumberOrDescription.Type = typeof(bool);
+            this.pbooSortByNumberOrDescription.ValueInfo = "True";
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Number"));
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
+            this.pbooSortByNumberOrDescription.ValueSourceSettings = staticListLookUpSettings3;
+            // 
             // VendorLabels
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -410,6 +433,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrRoleIDs, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooSortByNumberOrDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -426,6 +450,7 @@
             this.plngUserID,
             this.Subtitle,
             this.pstrRoleIDs,
+            this.pbooSortByNumberOrDescription,
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
             this.pstrSelectVendor,
@@ -465,5 +490,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowLabelWithoutAddress;
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
         private DevExpress.XtraReports.Parameters.Parameter pstrRoleIDs;
+        private DevExpress.XtraReports.Parameters.Parameter pbooSortByNumberOrDescription;
     }
 }

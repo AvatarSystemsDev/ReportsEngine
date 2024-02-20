@@ -38,6 +38,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelOwnerNameAddress));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -412,30 +413,33 @@
             this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
             storedProcQuery1.Name = "NamebaseNameAddress";
-            queryParameter1.Name = "@plngEntityCodeID";
+            queryParameter1.Name = "@pstrBeginningEntityNumber";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngEntityCodeID", typeof(int));
-            queryParameter2.Name = "@pstrBeginningEntityNumber";
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
+            queryParameter2.Name = "@pstrEndingEntityNumber";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
-            queryParameter3.Name = "@pstrEndingEntityNumber";
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter3.Name = "@plngSortOrder";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
-            queryParameter4.Name = "@plngSortOrder";
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
+            queryParameter4.Name = "@plngShowActive";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
-            queryParameter5.Name = "@plngShowActive";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
+            queryParameter5.Name = "@plngUseSortName";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
-            queryParameter6.Name = "@plngUseSortName";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
+            queryParameter6.Name = "@pstrRoleIDs";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngEntityCodeID", typeof(string));
             queryParameter7.Name = "@pbooIncludeCompanyOwner";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
             queryParameter8.Name = "@pbooShowLabelWithoutAddress";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooShowEntitiesWithoutAddresses", typeof(bool));
+            queryParameter9.Name = "@pbooGetMailingAndTaxAddressOrJIBAndRDAddress";
+            queryParameter9.Type = typeof(bool);
+            queryParameter9.ValueInfo = "False";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -444,7 +448,8 @@
             queryParameter5,
             queryParameter6,
             queryParameter7,
-            queryParameter8});
+            queryParameter8,
+            queryParameter9});
             storedProcQuery1.StoredProcName = "Report_NamebaseNameAddress";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});

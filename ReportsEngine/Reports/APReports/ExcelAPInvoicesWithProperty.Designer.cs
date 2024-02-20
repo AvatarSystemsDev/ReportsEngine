@@ -35,6 +35,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelAPInvoicesWithProperty));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -84,6 +86,9 @@
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -592,7 +597,7 @@
             this.xrLabel20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel20.BorderWidth = 1F;
             this.xrLabel20.CanGrow = false;
-            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel20.KeepTogether = true;
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(1653.891F, 1.589457E-05F);
             this.xrLabel20.Multiline = true;
@@ -612,7 +617,7 @@
             this.xrLabel18.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel18.BorderWidth = 1F;
             this.xrLabel18.CanGrow = false;
-            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel18.KeepTogether = true;
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(1418.909F, 1.589457E-05F);
             this.xrLabel18.Multiline = true;
@@ -632,7 +637,7 @@
             this.xrLabel16.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel16.BorderWidth = 1F;
             this.xrLabel16.CanGrow = false;
-            this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel16.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel16.KeepTogether = true;
             this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(1316.219F, 1.589457E-05F);
             this.xrLabel16.Multiline = true;
@@ -652,7 +657,7 @@
             this.Textbox20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox20.BorderWidth = 1F;
             this.Textbox20.CanGrow = false;
-            this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox20.KeepTogether = true;
             this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(297.2663F, 0F);
             this.Textbox20.Multiline = true;
@@ -672,7 +677,7 @@
             this.Textbox10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox10.BorderWidth = 1F;
             this.Textbox10.CanGrow = false;
-            this.Textbox10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox10.KeepTogether = true;
             this.Textbox10.LocationFloat = new DevExpress.Utils.PointFloat(360.4239F, 0F);
             this.Textbox10.Multiline = true;
@@ -692,7 +697,7 @@
             this.Textbox14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox14.BorderWidth = 1F;
             this.Textbox14.CanGrow = false;
-            this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox14.KeepTogether = true;
             this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(489.1789F, 0F);
             this.Textbox14.Multiline = true;
@@ -712,7 +717,7 @@
             this.Textbox29.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox29.BorderWidth = 1F;
             this.Textbox29.CanGrow = false;
-            this.Textbox29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox29.KeepTogether = true;
             this.Textbox29.LocationFloat = new DevExpress.Utils.PointFloat(577.4818F, 0F);
             this.Textbox29.Multiline = true;
@@ -732,7 +737,7 @@
             this.Textbox33.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox33.BorderWidth = 1F;
             this.Textbox33.CanGrow = false;
-            this.Textbox33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox33.KeepTogether = true;
             this.Textbox33.LocationFloat = new DevExpress.Utils.PointFloat(660.248F, 0F);
             this.Textbox33.Multiline = true;
@@ -752,7 +757,7 @@
             this.Textbox15.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox15.BorderWidth = 1F;
             this.Textbox15.CanGrow = false;
-            this.Textbox15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox15.KeepTogether = true;
             this.Textbox15.LocationFloat = new DevExpress.Utils.PointFloat(754.7754F, 0F);
             this.Textbox15.Multiline = true;
@@ -772,7 +777,7 @@
             this.Textbox48.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox48.BorderWidth = 1F;
             this.Textbox48.CanGrow = false;
-            this.Textbox48.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox48.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox48.KeepTogether = true;
             this.Textbox48.LocationFloat = new DevExpress.Utils.PointFloat(844.2336F, 0F);
             this.Textbox48.Multiline = true;
@@ -792,7 +797,7 @@
             this.Textbox41.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox41.BorderWidth = 1F;
             this.Textbox41.CanGrow = false;
-            this.Textbox41.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox41.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox41.KeepTogether = true;
             this.Textbox41.LocationFloat = new DevExpress.Utils.PointFloat(932.7557F, 0F);
             this.Textbox41.Multiline = true;
@@ -812,7 +817,7 @@
             this.Textbox37.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox37.BorderWidth = 1F;
             this.Textbox37.CanGrow = false;
-            this.Textbox37.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox37.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox37.KeepTogether = true;
             this.Textbox37.LocationFloat = new DevExpress.Utils.PointFloat(1028.189F, 0F);
             this.Textbox37.Multiline = true;
@@ -832,7 +837,7 @@
             this.Textbox51.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox51.BorderWidth = 1F;
             this.Textbox51.CanGrow = false;
-            this.Textbox51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox51.KeepTogether = true;
             this.Textbox51.LocationFloat = new DevExpress.Utils.PointFloat(1123.623F, 0F);
             this.Textbox51.Multiline = true;
@@ -852,7 +857,7 @@
             this.Textbox52.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox52.BorderWidth = 1F;
             this.Textbox52.CanGrow = false;
-            this.Textbox52.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox52.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox52.KeepTogether = true;
             this.Textbox52.LocationFloat = new DevExpress.Utils.PointFloat(1213.529F, 0F);
             this.Textbox52.Multiline = true;
@@ -873,7 +878,7 @@
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel13.BorderWidth = 1F;
             this.xrLabel13.CanGrow = false;
-            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel13.KeepTogether = true;
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel13.Multiline = true;
@@ -897,7 +902,7 @@
             this.xrLabel12.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel12.BorderWidth = 1F;
             this.xrLabel12.CanGrow = false;
-            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel12.KeepTogether = true;
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(100.0235F, 0F);
             this.xrLabel12.Multiline = true;
@@ -920,25 +925,33 @@
             storedProcQuery1.Name = "DSAPInvoicesWithProperty";
             queryParameter1.Name = "@plngCompanyID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             queryParameter2.Name = "@pdteAsOfDate";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pdteAsOfDate", typeof(string));
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pdteAsOfDate", typeof(System.DateTime));
             queryParameter3.Name = "@pstrBeginningVendorNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
             queryParameter4.Name = "@pstrEndingVendorNumber";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
-            queryParameter5.Name = "@pbooShowReportAsAccrual";
+            queryParameter5.Name = "@pstrBeginningPropertyNumber";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooShowReportAsAccrual", typeof(string));
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
+            queryParameter6.Name = "@pstrEndingPropertyNumber";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
+            queryParameter7.Name = "@pbooShowReportAsAccrual";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooShowReportAsAccrual", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
-            queryParameter5});
+            queryParameter5,
+            queryParameter6,
+            queryParameter7});
             storedProcQuery1.StoredProcName = "Report_APInvoicesWithProperty";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -992,7 +1005,7 @@
             // 
             this.pstrBeginningVendorNumber.Description = "Beginning Vendor";
             this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
-            this.pstrBeginningVendorNumber.ValueInfo = "0";
+            this.pstrBeginningVendorNumber.ValueInfo = "!";
             // 
             // pstrEndingVendorNumber
             // 
@@ -1019,6 +1032,24 @@
             this.pstrSelectVendor.MultiValue = true;
             this.pstrSelectVendor.Name = "pstrSelectVendor";
             // 
+            // pstrSelectPropertyNumber
+            // 
+            this.pstrSelectPropertyNumber.Description = "Parameter1";
+            this.pstrSelectPropertyNumber.MultiValue = true;
+            this.pstrSelectPropertyNumber.Name = "pstrSelectPropertyNumber";
+            // 
+            // pstrBeginningPropertyNumber
+            // 
+            this.pstrBeginningPropertyNumber.Description = "Parameter1";
+            this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
+            this.pstrBeginningPropertyNumber.ValueInfo = "!";
+            // 
+            // pstrEndingPropertyNumber
+            // 
+            this.pstrEndingPropertyNumber.Description = "Parameter1";
+            this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
+            this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZZ";
+            // 
             // ExcelAPInvoicesWithProperty
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1031,8 +1062,7 @@
             this.DataMember = "DSAPInvoicesWithProperty";
             this.DataSource = this.Dynamic;
             this.DisplayName = "APInvoicesWithProperty";
-            this.FilterString = "[VendorNumber] In (?pstrSelectVendor) Or IsNullOrEmpty([VendorNumber]) And \'!\' In" +
-    " (?pstrSelectVendor)";
+            this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
@@ -1048,8 +1078,12 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteAsOfDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrDatabaseName,
@@ -1059,9 +1093,12 @@
             this.pdteAsOfDate,
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
-            this.pbooShowCriteria,
             this.Subtitle,
-            this.pstrSelectVendor});
+            this.pstrSelectVendor,
+            this.pstrSelectPropertyNumber,
+            this.pstrBeginningPropertyNumber,
+            this.pstrEndingPropertyNumber,
+            this.pbooShowCriteria});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1117,5 +1154,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
         private DevExpress.XtraReports.UI.XRLabel xrLabel20;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectPropertyNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningPropertyNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingPropertyNumber;
     }
 }

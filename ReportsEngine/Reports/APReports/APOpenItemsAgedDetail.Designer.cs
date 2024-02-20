@@ -865,10 +865,10 @@
             this.xrLabel52});
             this.xrPanel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)\n")});
-            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 62.42F);
+            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60F);
             this.xrPanel2.Name = "xrPanel2";
             this.xrPanel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPanel2.SizeF = new System.Drawing.SizeF(1018.953F, 14.68333F);
+            this.xrPanel2.SizeF = new System.Drawing.SizeF(1018.95F, 17F);
             this.xrPanel2.StylePriority.UsePadding = false;
             // 
             // xrEntitiesSelected
@@ -883,11 +883,11 @@
             this.xrEntitiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrEntitiesSelected.ForeColor = System.Drawing.Color.Black;
             this.xrEntitiesSelected.KeepTogether = true;
-            this.xrEntitiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(477.4382F, 1.907349E-05F);
+            this.xrEntitiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(477.4382F, 3.433228E-05F);
             this.xrEntitiesSelected.Multiline = true;
             this.xrEntitiesSelected.Name = "xrEntitiesSelected";
             this.xrEntitiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrEntitiesSelected.SizeF = new System.Drawing.SizeF(261.7798F, 14.68333F);
+            this.xrEntitiesSelected.SizeF = new System.Drawing.SizeF(261.7798F, 16.99997F);
             this.xrEntitiesSelected.StylePriority.UseBackColor = false;
             this.xrEntitiesSelected.StylePriority.UseBorderColor = false;
             this.xrEntitiesSelected.StylePriority.UseBorderDashStyle = false;
@@ -912,11 +912,11 @@
             this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel51.ForeColor = System.Drawing.Color.Black;
             this.xrLabel51.KeepTogether = true;
-            this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(403.3423F, 1.907349E-05F);
+            this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(403.3423F, 3.433228E-05F);
             this.xrLabel51.Multiline = true;
             this.xrLabel51.Name = "xrLabel51";
             this.xrLabel51.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel51.SizeF = new System.Drawing.SizeF(74.09579F, 14.68332F);
+            this.xrLabel51.SizeF = new System.Drawing.SizeF(74.09579F, 16.99996F);
             this.xrLabel51.StylePriority.UseBackColor = false;
             this.xrLabel51.StylePriority.UseBorderColor = false;
             this.xrLabel51.StylePriority.UseBorderDashStyle = false;
@@ -937,14 +937,14 @@
             this.xrRichText2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>As of " +
-                    "</b>\' + FormatString(\'{0:d}\', ?pdteAsOfDate) + \'</span>\'\n")});
+                    "</b>\' + FormatString(\'{0:MM/dd/yyyy}\', ?pdteAsOfDate) + \'</span>\'\n")});
             this.xrRichText2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText2.KeepTogether = true;
-            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.907349E-05F);
+            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 3.433228E-05F);
             this.xrRichText2.Name = "xrRichText2";
             this.xrRichText2.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
             this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
-            this.xrRichText2.SizeF = new System.Drawing.SizeF(162.62F, 14.68332F);
+            this.xrRichText2.SizeF = new System.Drawing.SizeF(249.2487F, 16.99996F);
             this.xrRichText2.StylePriority.UseFont = false;
             this.xrRichText2.StylePriority.UsePadding = false;
             // 
@@ -959,11 +959,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngReportType = 1, True, False)")});
             this.xrLabel52.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel52.KeepTogether = true;
-            this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(851.631F, 3.814697E-06F);
+            this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(827.7383F, 3.814697E-05F);
             this.xrLabel52.Multiline = true;
             this.xrLabel52.Name = "xrLabel52";
             this.xrLabel52.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel52.SizeF = new System.Drawing.SizeF(167.3218F, 14.58335F);
+            this.xrLabel52.SizeF = new System.Drawing.SizeF(191.2117F, 16.99995F);
             this.xrLabel52.StylePriority.UseFont = false;
             this.xrLabel52.StylePriority.UsePadding = false;
             this.xrLabel52.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -2595,8 +2595,6 @@
             this.DataMember = "Dynamic_DSAPAgedTrialBalance";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "APOpenItemsAgedDetail";
-            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([InvoiceNumber])\n")});
             this.FilterString = "[VendorNumber] In (?pstrSelectVendor) Or IsNullOrEmpty([VendorNumber]) And \'!\' In" +
     " (?pstrSelectVendor)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

@@ -1320,11 +1320,11 @@
             this.xrLabel64.CanGrow = false;
             this.xrLabel64.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel64.KeepTogether = true;
-            this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(1239.395F, 0.00025177F);
+            this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(1239.395F, 0.0002098083F);
             this.xrLabel64.Multiline = true;
             this.xrLabel64.Name = "xrLabel64";
             this.xrLabel64.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel64.SizeF = new System.Drawing.SizeF(80.08301F, 42.77974F);
+            this.xrLabel64.SizeF = new System.Drawing.SizeF(79.56311F, 42.77975F);
             this.xrLabel64.StylePriority.UsePadding = false;
             this.xrLabel64.StylePriority.UseTextAlignment = false;
             this.xrLabel64.Text = "Net\r\nAmount";
@@ -1439,7 +1439,7 @@
             this.Textbox1.Multiline = true;
             this.Textbox1.Name = "Textbox1";
             this.Textbox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox1.SizeF = new System.Drawing.SizeF(1318.961F, 30F);
+            this.Textbox1.SizeF = new System.Drawing.SizeF(1317.918F, 30F);
             this.Textbox1.StylePriority.UseFont = false;
             this.Textbox1.StylePriority.UsePadding = false;
             this.Textbox1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
@@ -1459,7 +1459,7 @@
             this.ReportTitle.Multiline = true;
             this.ReportTitle.Name = "ReportTitle";
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.ReportTitle.SizeF = new System.Drawing.SizeF(1318.961F, 30F);
+            this.ReportTitle.SizeF = new System.Drawing.SizeF(1317.918F, 30F);
             this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.StylePriority.UsePadding = false;
             this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
@@ -2256,7 +2256,7 @@
             this.xrPanel6});
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("BatchNumberName", DevExpress.XtraReports.UI.XRColumnSortOrder.None)});
-            this.groupHeaderBand1.HeightF = 18.00002F;
+            this.groupHeaderBand1.HeightF = 18.00003F;
             this.groupHeaderBand1.Level = 1;
             this.groupHeaderBand1.Name = "groupHeaderBand1";
             // 
@@ -2285,9 +2285,9 @@
             this.xrPanel6.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.BatchCashAccount});
             this.xrPanel6.KeepTogether = false;
-            this.xrPanel6.LocationFloat = new DevExpress.Utils.PointFloat(1247.817F, 0F);
+            this.xrPanel6.LocationFloat = new DevExpress.Utils.PointFloat(1240.354F, 5.999944F);
             this.xrPanel6.Name = "xrPanel6";
-            this.xrPanel6.SizeF = new System.Drawing.SizeF(72.18311F, 18.00002F);
+            this.xrPanel6.SizeF = new System.Drawing.SizeF(71.14124F, 8.000056F);
             this.xrPanel6.StylePriority.UseFont = false;
             // 
             // BatchCashAccount

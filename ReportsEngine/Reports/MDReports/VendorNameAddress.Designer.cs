@@ -32,8 +32,8 @@
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
@@ -41,8 +41,14 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter15 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VendorNameAddress));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
@@ -110,7 +116,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -130,6 +136,8 @@
             DevExpress.DataAccess.DataFederation.Source source4 = new DevExpress.DataAccess.DataFederation.Source();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings3 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings4 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -194,6 +202,8 @@
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowEntitiesWithoutAddresses = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooSortByNumberOrDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrRoleType = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -202,20 +212,21 @@
             this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
             storedProcQuery1.Name = "LookupVendors";
-            queryParameter1.Name = "@plngVendorsToShow";
+            queryParameter1.Name = "@plngEntitiesToShow";
             queryParameter1.Type = typeof(int);
             queryParameter1.ValueInfo = "0";
             queryParameter2.Name = "@plngCompanyID";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter3.Name = "@showFirstAndLast";
+            queryParameter3.Type = typeof(bool);
+            queryParameter3.ValueInfo = "True";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
-            queryParameter2});
-            storedProcQuery1.StoredProcName = "Vendors_ReportLookup";
+            queryParameter2,
+            queryParameter3});
+            storedProcQuery1.StoredProcName = "Entities_ReportLookup";
             storedProcQuery2.Name = "NamebaseNameAddress";
-            queryParameter3.Name = "@plngEntityCodeID";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngEntityCodeID", typeof(int));
             queryParameter4.Name = "@pstrBeginningEntityNumber";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
@@ -230,34 +241,57 @@
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
             queryParameter8.Name = "@plngUseSortName";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
-            queryParameter9.Name = "@pbooIncludeCompanyOwner";
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
+            queryParameter9.Name = "@pstrRoleIDs";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
-            queryParameter10.Name = "@pbooShowLabelWithoutAddress";
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("Join(?pstrRoleType)", typeof(string));
+            queryParameter10.Name = "@pbooIncludeCompanyOwner";
             queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pbooShowEntitiesWithoutAddresses", typeof(bool));
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
+            queryParameter11.Name = "@pbooShowLabelWithoutAddress";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pbooShowEntitiesWithoutAddresses", typeof(bool));
+            queryParameter12.Name = "@pbooGetMailingAndTaxAddressOrJIBAndRDAddress";
+            queryParameter12.Type = typeof(bool);
+            queryParameter12.ValueInfo = "True";
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter3,
             queryParameter4,
             queryParameter5,
             queryParameter6,
             queryParameter7,
             queryParameter8,
             queryParameter9,
-            queryParameter10});
+            queryParameter10,
+            queryParameter11,
+            queryParameter12});
             storedProcQuery2.StoredProcName = "Report_NamebaseNameAddress";
             storedProcQuery3.Name = "LookupCompanies";
-            queryParameter11.Name = "@plngCompanyID";
-            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter13.Name = "@plngCompanyID";
+            queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter11});
+            queryParameter13});
             storedProcQuery3.StoredProcName = "Companies_ReportLookup";
+            storedProcQuery4.Name = "EntityRolesLookup";
+            queryParameter14.Name = "@pbooIncludeOwner";
+            queryParameter14.Type = typeof(bool);
+            queryParameter14.ValueInfo = "True";
+            queryParameter15.Name = "@pbooWillUseVendorOptionsOnly";
+            queryParameter15.Type = typeof(bool);
+            queryParameter15.ValueInfo = "False";
+            queryParameter16.Name = "@pbooIncludeAll";
+            queryParameter16.Type = typeof(bool);
+            queryParameter16.ValueInfo = "False";
+            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter14,
+            queryParameter15,
+            queryParameter16});
+            storedProcQuery4.StoredProcName = "EntityRoles_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
             storedProcQuery2,
-            storedProcQuery3});
+            storedProcQuery3,
+            storedProcQuery4});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // Pulse
@@ -397,11 +431,11 @@
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter12.Name = "UserID";
-            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter17.Name = "UserID";
+            queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter12});
+            queryParameter17});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});
@@ -686,7 +720,7 @@
             this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel9.SizeF = new System.Drawing.SizeF(769.9999F, 30F);
             this.xrLabel9.StylePriority.UseFont = false;
-            this.xrLabel9.Text = "Vendor Name and Address Listing";
+            this.xrLabel9.Text = "Entity Name and Address Listing";
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel12
@@ -792,7 +826,7 @@
             this.Textbox34.BorderWidth = 1F;
             this.Textbox34.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox34.KeepTogether = true;
-            this.Textbox34.LocationFloat = new DevExpress.Utils.PointFloat(476.4504F, 78.2718F);
+            this.Textbox34.LocationFloat = new DevExpress.Utils.PointFloat(476.4504F, 79.92014F);
             this.Textbox34.Multiline = true;
             this.Textbox34.Name = "Textbox34";
             this.Textbox34.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -810,7 +844,7 @@
             this.Textbox32.BorderWidth = 1F;
             this.Textbox32.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox32.KeepTogether = true;
-            this.Textbox32.LocationFloat = new DevExpress.Utils.PointFloat(280.7507F, 78.27168F);
+            this.Textbox32.LocationFloat = new DevExpress.Utils.PointFloat(280.7507F, 79.92002F);
             this.Textbox32.Multiline = true;
             this.Textbox32.Name = "Textbox32";
             this.Textbox32.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -828,7 +862,7 @@
             this.Textbox29.BorderWidth = 1F;
             this.Textbox29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox29.KeepTogether = true;
-            this.Textbox29.LocationFloat = new DevExpress.Utils.PointFloat(88.06474F, 78.27168F);
+            this.Textbox29.LocationFloat = new DevExpress.Utils.PointFloat(88.06474F, 79.92002F);
             this.Textbox29.Multiline = true;
             this.Textbox29.Name = "Textbox29";
             this.Textbox29.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -846,7 +880,7 @@
             this.Textbox25.BorderWidth = 1F;
             this.Textbox25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox25.KeepTogether = true;
-            this.Textbox25.LocationFloat = new DevExpress.Utils.PointFloat(0F, 78.27168F);
+            this.Textbox25.LocationFloat = new DevExpress.Utils.PointFloat(0F, 79.92002F);
             this.Textbox25.Multiline = true;
             this.Textbox25.Name = "Textbox25";
             this.Textbox25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -864,7 +898,7 @@
             this.Textbox36.BorderWidth = 1F;
             this.Textbox36.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox36.KeepTogether = true;
-            this.Textbox36.LocationFloat = new DevExpress.Utils.PointFloat(672.1499F, 78.2718F);
+            this.Textbox36.LocationFloat = new DevExpress.Utils.PointFloat(672.1499F, 79.92014F);
             this.Textbox36.Multiline = true;
             this.Textbox36.Name = "Textbox36";
             this.Textbox36.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -907,7 +941,7 @@
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.ReportTitle.SizeF = new System.Drawing.SizeF(769.9999F, 30F);
             this.ReportTitle.StylePriority.UseFont = false;
-            this.ReportTitle.Text = "Vendor Name and Address Listing";
+            this.ReportTitle.Text = "Entity Name and Address Listing";
             this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Rectangle4
@@ -929,7 +963,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)")});
             this.Rectangle4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 62.92001F);
             this.Rectangle4.Name = "Rectangle4";
-            this.Rectangle4.SizeF = new System.Drawing.SizeF(769.9999F, 15.35166F);
+            this.Rectangle4.SizeF = new System.Drawing.SizeF(770F, 17F);
             // 
             // xrSortBy
             // 
@@ -941,11 +975,11 @@
             this.xrSortBy.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrSortBy.ForeColor = System.Drawing.Color.Black;
             this.xrSortBy.KeepTogether = true;
-            this.xrSortBy.LocationFloat = new DevExpress.Utils.PointFloat(625.3455F, 1.525879E-05F);
+            this.xrSortBy.LocationFloat = new DevExpress.Utils.PointFloat(625.3455F, 1.907349E-05F);
             this.xrSortBy.Multiline = true;
             this.xrSortBy.Name = "xrSortBy";
             this.xrSortBy.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrSortBy.SizeF = new System.Drawing.SizeF(143.6127F, 13.54169F);
+            this.xrSortBy.SizeF = new System.Drawing.SizeF(144.6548F, 16.99999F);
             this.xrSortBy.StylePriority.UseBackColor = false;
             this.xrSortBy.StylePriority.UseBorderColor = false;
             this.xrSortBy.StylePriority.UseBorderDashStyle = false;
@@ -967,11 +1001,11 @@
             this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel21.ForeColor = System.Drawing.Color.Black;
             this.xrLabel21.KeepTogether = true;
-            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(580.4165F, 1.525879E-05F);
+            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(580.4165F, 1.907349E-05F);
             this.xrLabel21.Multiline = true;
             this.xrLabel21.Name = "xrLabel21";
             this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel21.SizeF = new System.Drawing.SizeF(44.92896F, 13.54169F);
+            this.xrLabel21.SizeF = new System.Drawing.SizeF(44.92896F, 16.99999F);
             this.xrLabel21.StylePriority.UseBackColor = false;
             this.xrLabel21.StylePriority.UseBorderColor = false;
             this.xrLabel21.StylePriority.UseBorderDashStyle = false;
@@ -996,11 +1030,11 @@
             this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel18.ForeColor = System.Drawing.Color.Black;
             this.xrLabel18.KeepTogether = true;
-            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(510.6228F, 1.525879E-05F);
+            this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(510.6228F, 1.907349E-05F);
             this.xrLabel18.Multiline = true;
             this.xrLabel18.Name = "xrLabel18";
             this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel18.SizeF = new System.Drawing.SizeF(51.32434F, 13.54169F);
+            this.xrLabel18.SizeF = new System.Drawing.SizeF(51.32434F, 16.99999F);
             this.xrLabel18.StylePriority.UseBackColor = false;
             this.xrLabel18.StylePriority.UseBorderColor = false;
             this.xrLabel18.StylePriority.UseBorderDashStyle = false;
@@ -1022,11 +1056,11 @@
             this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel19.ForeColor = System.Drawing.Color.Black;
             this.xrLabel19.KeepTogether = true;
-            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(392.7115F, 1.525879E-05F);
+            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(392.7115F, 1.907349E-05F);
             this.xrLabel19.Multiline = true;
             this.xrLabel19.Name = "xrLabel19";
             this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(117.9112F, 13.54169F);
+            this.xrLabel19.SizeF = new System.Drawing.SizeF(117.9112F, 16.99999F);
             this.xrLabel19.StylePriority.UseBackColor = false;
             this.xrLabel19.StylePriority.UseBorderColor = false;
             this.xrLabel19.StylePriority.UseBorderDashStyle = false;
@@ -1051,11 +1085,11 @@
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel10.ForeColor = System.Drawing.Color.Black;
             this.xrLabel10.KeepTogether = true;
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(334.0956F, 1.525879E-05F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(334.0956F, 1.907349E-05F);
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(51.32434F, 13.54169F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(51.32434F, 16.99999F);
             this.xrLabel10.StylePriority.UseBackColor = false;
             this.xrLabel10.StylePriority.UseBorderColor = false;
             this.xrLabel10.StylePriority.UseBorderDashStyle = false;
@@ -1077,11 +1111,11 @@
             this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel11.ForeColor = System.Drawing.Color.Black;
             this.xrLabel11.KeepTogether = true;
-            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(268.3333F, 1.525879E-05F);
+            this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(268.3333F, 1.907349E-05F);
             this.xrLabel11.Multiline = true;
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(65.76233F, 13.54169F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(65.76233F, 16.99999F);
             this.xrLabel11.StylePriority.UseBackColor = false;
             this.xrLabel11.StylePriority.UseBorderColor = false;
             this.xrLabel11.StylePriority.UseBorderDashStyle = false;
@@ -1104,11 +1138,11 @@
             this.xrVendorsSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrVendorsSelected.ForeColor = System.Drawing.Color.Black;
             this.xrVendorsSelected.KeepTogether = true;
-            this.xrVendorsSelected.LocationFloat = new DevExpress.Utils.PointFloat(63.67893F, 1.525879E-05F);
+            this.xrVendorsSelected.LocationFloat = new DevExpress.Utils.PointFloat(63.67887F, 1.907349E-05F);
             this.xrVendorsSelected.Multiline = true;
             this.xrVendorsSelected.Name = "xrVendorsSelected";
             this.xrVendorsSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrVendorsSelected.SizeF = new System.Drawing.SizeF(204.6544F, 13.54169F);
+            this.xrVendorsSelected.SizeF = new System.Drawing.SizeF(204.6544F, 16.99999F);
             this.xrVendorsSelected.StylePriority.UseBackColor = false;
             this.xrVendorsSelected.StylePriority.UseBorderColor = false;
             this.xrVendorsSelected.StylePriority.UseBorderDashStyle = false;
@@ -1130,11 +1164,11 @@
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel15.ForeColor = System.Drawing.Color.Black;
             this.xrLabel15.KeepTogether = true;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.525879E-05F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.907349E-05F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(63.67896F, 13.54169F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(63.67896F, 16.99999F);
             this.xrLabel15.StylePriority.UseBackColor = false;
             this.xrLabel15.StylePriority.UseBorderColor = false;
             this.xrLabel15.StylePriority.UseBorderDashStyle = false;
@@ -1335,10 +1369,11 @@
             // 
             // plngEntityCodeID
             // 
-            this.plngEntityCodeID.Description = "plngEntityCodeID";
+            this.plngEntityCodeID.AllowNull = true;
+            this.plngEntityCodeID.Description = "Role Type";
+            this.plngEntityCodeID.MultiValue = true;
             this.plngEntityCodeID.Name = "plngEntityCodeID";
             this.plngEntityCodeID.Type = typeof(int);
-            this.plngEntityCodeID.ValueInfo = "1";
             this.plngEntityCodeID.Visible = false;
             // 
             // plngUserID
@@ -1352,6 +1387,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_LookupVendors";
             sourceNode1.Alias = null;
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"177\" />";
             source1.DataMember = "LookupVendors";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_LookupVendors";
@@ -1359,7 +1395,8 @@
             selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RoleTypeID")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_NamebaseNameAddress";
             sourceNode2.Alias = null;
@@ -1447,7 +1484,7 @@
             this.Rectangle4,
             this.ReportTitle,
             this.Textbox9});
-            this.ReportHeader.HeightF = 118.8918F;
+            this.ReportHeader.HeightF = 120.5401F;
             this.ReportHeader.Name = "ReportHeader";
             this.ReportHeader.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand3});
@@ -1520,6 +1557,31 @@
             this.pbooIncludeCompanyOwner.Type = typeof(bool);
             this.pbooIncludeCompanyOwner.ValueInfo = "False";
             // 
+            // pbooSortByNumberOrDescription
+            // 
+            this.pbooSortByNumberOrDescription.Description = "Sort By Number Or Description";
+            this.pbooSortByNumberOrDescription.Name = "pbooSortByNumberOrDescription";
+            this.pbooSortByNumberOrDescription.Type = typeof(bool);
+            this.pbooSortByNumberOrDescription.ValueInfo = "True";
+            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Number"));
+            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
+            this.pbooSortByNumberOrDescription.ValueSourceSettings = staticListLookUpSettings4;
+            // 
+            // pstrRoleType
+            // 
+            this.pstrRoleType.Description = "Role Type";
+            this.pstrRoleType.MultiValue = true;
+            this.pstrRoleType.Name = "pstrRoleType";
+            this.pstrRoleType.SelectAllValues = true;
+            this.pstrRoleType.Type = typeof(int);
+            dynamicListLookUpSettings5.DataMember = "EntityRolesLookup";
+            dynamicListLookUpSettings5.DataSource = this.Dynamic;
+            dynamicListLookUpSettings5.DisplayMember = "Description";
+            dynamicListLookUpSettings5.FilterString = null;
+            dynamicListLookUpSettings5.SortMember = null;
+            dynamicListLookUpSettings5.ValueMember = "ID";
+            this.pstrRoleType.ValueSourceSettings = dynamicListLookUpSettings5;
+            // 
             // VendorNameAddress
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1548,11 +1610,13 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrRoleType, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortOrder, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUseSortName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooSortByNumberOrDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowEntitiesWithoutAddresses, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeCompanyOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1565,11 +1629,13 @@
             this.pstrServerName,
             this.plngCompanyID,
             this.Subtitle,
+            this.pstrRoleType,
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
             this.pstrSelectVendor,
             this.plngSortOrder,
             this.plngUseSortName,
+            this.pbooSortByNumberOrDescription,
             this.plngShowActive,
             this.pbooShowEntitiesWithoutAddresses,
             this.pbooIncludeCompanyOwner,
@@ -1649,5 +1715,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowEntitiesWithoutAddresses;
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
+        private DevExpress.XtraReports.Parameters.Parameter pbooSortByNumberOrDescription;
+        private DevExpress.XtraReports.Parameters.Parameter pstrRoleType;
     }
 }
