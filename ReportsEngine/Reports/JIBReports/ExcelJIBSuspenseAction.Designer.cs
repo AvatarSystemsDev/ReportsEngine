@@ -558,7 +558,7 @@
             this.xrLabel8.StylePriority.UseFont = false;
             this.xrLabel8.StylePriority.UsePadding = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
-            this.xrLabel8.Text = "Property Description";
+            this.xrLabel8.Text = "Property/Well Description";
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrLabel8.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             // 

@@ -49,7 +49,7 @@ namespace ReportsEngine.Reports.PAReports
                     }
                     if (end.Value.ToString() == "ZZZZZZZZZZ-ZZZZZZZZZZ")
                     {
-                        label.Text += "Last/Well Property";
+                        label.Text += "Last Property/Well";
                     }
                     else
                     {

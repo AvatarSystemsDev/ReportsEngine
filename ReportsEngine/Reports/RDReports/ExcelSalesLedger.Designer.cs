@@ -594,21 +594,21 @@
             // 
             // plngBeginningPropertyID
             // 
-            this.plngBeginningPropertyID.Description = "Beginning Property";
+            this.plngBeginningPropertyID.Description = "Beginning Property/Well";
             this.plngBeginningPropertyID.Name = "plngBeginningPropertyID";
             this.plngBeginningPropertyID.Type = typeof(int);
             this.plngBeginningPropertyID.ValueInfo = "0";
             // 
             // plngEndingPropertyID
             // 
-            this.plngEndingPropertyID.Description = "Ending Property";
+            this.plngEndingPropertyID.Description = "Ending Property/Well";
             this.plngEndingPropertyID.Name = "plngEndingPropertyID";
             this.plngEndingPropertyID.Type = typeof(int);
             this.plngEndingPropertyID.ValueInfo = "-1";
             // 
             // pstrSelectPropertyID
             // 
-            this.pstrSelectPropertyID.Description = "Select Property";
+            this.pstrSelectPropertyID.Description = "Select Property/Well";
             this.pstrSelectPropertyID.MultiValue = true;
             this.pstrSelectPropertyID.Name = "pstrSelectPropertyID";
             this.pstrSelectPropertyID.Type = typeof(int);

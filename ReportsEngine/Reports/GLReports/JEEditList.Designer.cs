@@ -1002,7 +1002,7 @@
             this.xrLabel21.SizeF = new System.Drawing.SizeF(148.0368F, 40.00001F);
             this.xrLabel21.StylePriority.UsePadding = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
-            this.xrLabel21.Text = "\r\nProperty Description";
+            this.xrLabel21.Text = "\r\nProperty/Well Description";
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox1

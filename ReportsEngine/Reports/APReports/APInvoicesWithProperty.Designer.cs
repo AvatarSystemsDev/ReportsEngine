@@ -2109,7 +2109,7 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "Beginning Property";
+            this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings5.DataMember = "DSPropertiesLookup";
@@ -2122,7 +2122,7 @@
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "Ending Property";
+            this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings6.DataMember = "DSPropertiesLookup";
@@ -2135,7 +2135,7 @@
             // 
             // pstrSelectPropertyNumber
             // 
-            this.pstrSelectPropertyNumber.Description = "Select Property";
+            this.pstrSelectPropertyNumber.Description = "Select Property/Well";
             this.pstrSelectPropertyNumber.MultiValue = true;
             this.pstrSelectPropertyNumber.Name = "pstrSelectPropertyNumber";
             this.pstrSelectPropertyNumber.SelectAllValues = true;
