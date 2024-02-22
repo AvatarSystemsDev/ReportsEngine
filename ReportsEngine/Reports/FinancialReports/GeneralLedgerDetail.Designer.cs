@@ -394,7 +394,6 @@
             this.xrCrossBandBox3 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox4 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox7 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.xrCrossBandBox6 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.pbooReportInBalance = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -4306,18 +4305,6 @@
             this.xrCrossBandBox7.StartPointFloat = new DevExpress.Utils.PointFloat(802.4264F, 16.00005F);
             this.xrCrossBandBox7.WidthF = 64.62372F;
             // 
-            // xrCrossBandBox6
-            // 
-            this.xrCrossBandBox6.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox6.Borders = DevExpress.XtraPrinting.BorderSide.Top;
-            this.xrCrossBandBox6.BorderWidth = 0.5F;
-            this.xrCrossBandBox6.EndBand = this.SubBand4;
-            this.xrCrossBandBox6.EndPointFloat = new DevExpress.Utils.PointFloat(802.9508F, 0F);
-            this.xrCrossBandBox6.Name = "xrCrossBandBox6";
-            this.xrCrossBandBox6.StartBand = this.SubBand2;
-            this.xrCrossBandBox6.StartPointFloat = new DevExpress.Utils.PointFloat(802.9508F, 17.02086F);
-            this.xrCrossBandBox6.WidthF = 64.62366F;
-            // 
             // pbooReportInBalance
             // 
             this.pbooReportInBalance.Description = "Report In Balance";
@@ -4354,7 +4341,6 @@
             this.CrossBandControls.AddRange(new DevExpress.XtraReports.UI.XRCrossBandControl[] {
             this.xrCrossBandBox9,
             this.xrCrossBandBox8,
-            this.xrCrossBandBox6,
             this.xrCrossBandBox7,
             this.xrCrossBandBox4,
             this.xrCrossBandBox5,
@@ -4622,7 +4608,6 @@
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox3;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox4;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox7;
-        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox6;
         private DevExpress.XtraReports.Parameters.Parameter pbooReportInBalance;
     }
 }

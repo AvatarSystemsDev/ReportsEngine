@@ -617,7 +617,7 @@
             this.Textbox36.StylePriority.UseForeColor = false;
             this.Textbox36.StylePriority.UsePadding = false;
             this.Textbox36.StylePriority.UseTextAlignment = false;
-            this.Textbox36.Text = "Property Amount";
+            this.Textbox36.Text = "8/8 Amount";
             this.Textbox36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox34

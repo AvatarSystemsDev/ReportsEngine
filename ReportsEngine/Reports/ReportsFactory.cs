@@ -293,6 +293,9 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBWriteOffSelection", () => new ExcelJIBWriteOffSelection());
             Reports.Add("SalesLedger", () => new SalesLedger());
             Reports.Add("ExcelSalesLedger", () => new ExcelSalesLedger());
+            Reports.Add("JIB88thsHistory", () => new JIBHistory88ths());
+            Reports.Add("ExcelJIB88thsHistory", () => new ExcelJIBHistory88ths());
+
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

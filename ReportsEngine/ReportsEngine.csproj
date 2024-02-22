@@ -747,6 +747,12 @@
     <Compile Include="Reports\RDReports\CheckCoverPageAllRDChecks.Designer.cs">
       <DependentUpon>CheckCoverPageAllRDChecks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelJIBHistory88ths.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelJIBHistory88ths.Designer.cs">
+      <DependentUpon>ExcelJIBHistory88ths.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -932,6 +938,18 @@
     </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerSummary.Designer.cs">
       <DependentUpon>ExcelTexasTaxProducerSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\JIBHistory88ths.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\JIBHistory88ths.Designer.cs">
+      <DependentUpon>JIBHistory88ths.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\JIBHistoryOwnerDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\JIBHistoryOwnerDetail.Designer.cs">
+      <DependentUpon>JIBHistoryOwnerDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\NewMexicoStateRoyaltyDetail.cs">
       <SubType>Component</SubType>
@@ -2482,6 +2500,9 @@
     <EmbeddedResource Include="Reports\RDReports\CheckCoverPageAllRDChecks.resx">
       <DependentUpon>CheckCoverPageAllRDChecks.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelJIBHistory88ths.resx">
+      <DependentUpon>ExcelJIBHistory88ths.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelNewMexicoStateRoyaltyDetail.resx">
       <DependentUpon>ExcelNewMexicoStateRoyaltyDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -2574,6 +2595,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerSummary.resx">
       <DependentUpon>ExcelTexasTaxProducerSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\JIBHistory88ths.resx">
+      <DependentUpon>JIBHistory88ths.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\JIBHistoryOwnerDetail.resx">
+      <DependentUpon>JIBHistoryOwnerDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\NewMexicoStateRoyaltyDetail.resx">
       <DependentUpon>NewMexicoStateRoyaltyDetail.cs</DependentUpon>
