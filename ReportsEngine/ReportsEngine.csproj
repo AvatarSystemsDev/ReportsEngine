@@ -783,6 +783,12 @@
     <Compile Include="Reports\RDReports\ExcelSalesLedger.Designer.cs">
       <DependentUpon>ExcelSalesLedger.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelSalesLedgerTotal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelSalesLedgerTotal.Designer.cs">
+      <DependentUpon>ExcelSalesLedgerTotal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1935,6 +1941,12 @@
     <Compile Include="Reports\RDReports\SalesLedger.Designer.cs">
       <DependentUpon>SalesLedger.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\SalesLedgerTotal.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\SalesLedgerTotal.Designer.cs">
+      <DependentUpon>SalesLedgerTotal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\SuspenseByOwner.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2518,6 +2530,9 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelSalesLedger.resx">
       <DependentUpon>ExcelSalesLedger.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelSalesLedgerTotal.resx">
+      <DependentUpon>ExcelSalesLedgerTotal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -3090,6 +3105,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\SalesLedger.resx">
       <DependentUpon>SalesLedger.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\SalesLedgerTotal.resx">
+      <DependentUpon>SalesLedgerTotal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\SuspenseByOwner.resx">
       <DependentUpon>SuspenseByOwner.cs</DependentUpon>

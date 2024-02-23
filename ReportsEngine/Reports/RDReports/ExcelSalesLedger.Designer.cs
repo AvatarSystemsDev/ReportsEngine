@@ -629,40 +629,19 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-<<<<<<< Updated upstream
-            this.plngBeginningPropertyID.Description = "Beginning Property/Well";
-            this.plngBeginningPropertyID.Name = "plngBeginningPropertyID";
-            this.plngBeginningPropertyID.Type = typeof(int);
-            this.plngBeginningPropertyID.ValueInfo = "0";
-=======
             this.pstrBeginningPropertyNumber.Description = "Beginning Property";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
->>>>>>> Stashed changes
             // 
             // pstrEndingPropertyNumber
             // 
-<<<<<<< Updated upstream
-            this.plngEndingPropertyID.Description = "Ending Property/Well";
-            this.plngEndingPropertyID.Name = "plngEndingPropertyID";
-            this.plngEndingPropertyID.Type = typeof(int);
-            this.plngEndingPropertyID.ValueInfo = "-1";
-=======
             this.pstrEndingPropertyNumber.Description = "Ending Property";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
->>>>>>> Stashed changes
             // 
             // pstrSelectProperty
             // 
-<<<<<<< Updated upstream
-            this.pstrSelectPropertyID.Description = "Select Property/Well";
-            this.pstrSelectPropertyID.MultiValue = true;
-            this.pstrSelectPropertyID.Name = "pstrSelectPropertyID";
-            this.pstrSelectPropertyID.Type = typeof(int);
-=======
             this.pstrSelectProperty.Description = "Select Property";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
->>>>>>> Stashed changes
             // 
             // pbooCodeOrDescription
             // 
