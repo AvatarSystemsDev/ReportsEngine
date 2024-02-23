@@ -927,8 +927,8 @@
             this.xrLabel9.BorderWidth = 1F;
             this.xrLabel9.CanGrow = false;
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyWellNumber] + \' : \' + [PhaseWellDescription] + \' Type: \' + [PhaseWellSho" +
-                    "rtRecordType]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyWellNumber] + \' : \' + [PhaseWellDescription] + \'   Type: \' + [PhaseWellS" +
+                    "hortRecordType]")});
             this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel9.KeepTogether = true;
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -1951,11 +1951,11 @@
             // xrPropertiesSelected
             // 
             this.xrPropertiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(91.66666F, 0.2099991F);
+            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(118.2607F, 0.2099991F);
             this.xrPropertiesSelected.Multiline = true;
             this.xrPropertiesSelected.Name = "xrPropertiesSelected";
             this.xrPropertiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(256.5158F, 15.75999F);
+            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(310.8982F, 15.75999F);
             this.xrPropertiesSelected.StylePriority.UseFont = false;
             this.xrPropertiesSelected.StylePriority.UseTextAlignment = false;
             this.xrPropertiesSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -1967,7 +1967,7 @@
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(91.66673F, 15.75996F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(118.2607F, 15.75996F);
             this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.Text = "For Properties/Wells:";
             // 

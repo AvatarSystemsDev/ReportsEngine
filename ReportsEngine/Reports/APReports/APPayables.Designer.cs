@@ -593,7 +593,7 @@
             this.xrLabel35.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel35.BorderWidth = 1F;
             this.xrLabel35.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 1, \'Paid\',\'Paid\' ) + \'\n Amount\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 0, \'Paid\',?plngReportType = 1,\'Unpaid\',\'\' ) + \'\n Amount\'")});
             this.xrLabel35.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel35.KeepTogether = true;
             this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(627.8123F, 80.12845F);
@@ -810,7 +810,7 @@
             // 
             this.xrPageInfo1.BackColor = System.Drawing.Color.Transparent;
             this.xrPageInfo1.BorderColor = System.Drawing.Color.Transparent;
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(708.2338F, 9.797184F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(709.2753F, 9.797184F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(60.72473F, 11.7084F);
@@ -1051,7 +1051,7 @@
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel5.ForeColor = System.Drawing.Color.Black;
             this.xrLabel5.KeepTogether = true;
-            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(1.041667F, 0F);
+            this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel5.SizeF = new System.Drawing.SizeF(541.0049F, 15.99997F);
@@ -1078,7 +1078,7 @@
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel4.ForeColor = System.Drawing.Color.Black;
             this.xrLabel4.KeepTogether = true;
-            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(1.041667F, 0F);
+            this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel4.Name = "xrLabel4";
             this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel4.SizeF = new System.Drawing.SizeF(541.0049F, 15.99997F);
@@ -1120,8 +1120,9 @@
             this.xrLabel9.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel9.BorderWidth = 1F;
+            this.xrLabel9.CanGrow = false;
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum(Iif([BeneficiaryRowNumber] = 1,[InvoiceAmount] + [DiscountAmount] ,0 ))\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum(Iif([VendorRowNumber] = 1,[InvoiceAmount] + [DiscountAmount] ,0 ))\n")});
             this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel9.ForeColor = System.Drawing.Color.Black;
             this.xrLabel9.KeepTogether = true;
@@ -1177,8 +1178,10 @@
             this.xrLabel7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel7.BorderWidth = 1F;
+            this.xrLabel7.CanGrow = false;
             this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([PaymentAmount])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([VendorRowNumber] = 1,\nIif(?plngReportType <> 1,\nsumSum([PaymentAmount]),\nsum" +
+                    "Sum([UnpaidBalance]\n)) ,0 )\n")});
             this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel7.ForeColor = System.Drawing.Color.Black;
             this.xrLabel7.KeepTogether = true;
@@ -1219,6 +1222,7 @@
             this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel2.BorderWidth = 1F;
+            this.xrLabel2.CanGrow = false;
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum(Iif([RowNumber] = 1,[InvoiceAmount] + [DiscountAmount] ,0 ))\n")});
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
@@ -1276,8 +1280,10 @@
             this.xrLabel6.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel6.BorderWidth = 1F;
+            this.xrLabel6.CanGrow = false;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([PaymentAmount])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([BeneficiaryRowNumber] = 1 OR IsNull([BeneficiaryRowNumber]),\nIif(?plngReport" +
+                    "Type <> 1,\nsumSum([PaymentAmount]),\nsumSum([UnpaidBalance]\n)) ,0 )")});
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel6.ForeColor = System.Drawing.Color.Black;
             this.xrLabel6.KeepTogether = true;
@@ -1351,7 +1357,7 @@
             this.xrLabel17.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel17.BorderWidth = 1F;
             this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([PaymentAmount])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType <> 1,[PaymentAmount] ,[UnpaidBalance] )")});
             this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel17.ForeColor = System.Drawing.Color.Black;
             this.xrLabel17.KeepTogether = true;
@@ -1440,10 +1446,10 @@
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel12.ForeColor = System.Drawing.Color.Black;
             this.xrLabel12.KeepTogether = true;
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(37.6396F, 0F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(30.34789F, 0F);
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel12.SizeF = new System.Drawing.SizeF(125F, 15.99997F);
+            this.xrLabel12.SizeF = new System.Drawing.SizeF(132.2917F, 15.99997F);
             this.xrLabel12.StylePriority.UseBackColor = false;
             this.xrLabel12.StylePriority.UseBorderColor = false;
             this.xrLabel12.StylePriority.UseBorderDashStyle = false;
@@ -1620,7 +1626,7 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_DSAPPayables";
             sourceNode2.Alias = null;
-            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"657\" />";
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"597\" />";
             source2.DataMember = "DSAPPayables";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_DSAPPayables";
@@ -1628,10 +1634,6 @@
             selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "RowNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyAndWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BottomDescription"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Hold"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "VendorNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "VendorName"),
@@ -1642,11 +1644,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "VoucherNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DueDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "GLDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ServiceDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FederalIdNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "StateID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "StateAbbrev"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "AgeDays"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DiscountAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchID"),
@@ -1654,7 +1653,9 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BeneficiaryRowNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PaymentAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Amount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceDescription")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "UnpaidBalance"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "VendorRowNumber")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_DSReportTypeLookup";
             sourceNode3.Alias = null;
@@ -1712,8 +1713,9 @@
             this.xrLabel13.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel13.BorderWidth = 1F;
+            this.xrLabel13.CanGrow = false;
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum(Iif([BeneficiaryRowNumber] = 1,[InvoiceAmount] + [DiscountAmount] ,0 ))\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum(Iif([VendorRowNumber] = 1,[InvoiceAmount] + [DiscountAmount] ,0 ))\n")});
             this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel13.ForeColor = System.Drawing.Color.Black;
             this.xrLabel13.KeepTogether = true;
@@ -1742,8 +1744,10 @@
             this.xrLabel10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel10.BorderWidth = 1F;
+            this.xrLabel10.CanGrow = false;
             this.xrLabel10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([PaymentAmount])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([VendorRowNumber] = 1,\nIif(?plngReportType <> 1,\nsumSum([PaymentAmount]),\nsum" +
+                    "Sum([UnpaidBalance]\n)) ,0 )\n")});
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel10.ForeColor = System.Drawing.Color.Black;
             this.xrLabel10.KeepTogether = true;

@@ -398,7 +398,7 @@
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(671.7199F, 0F);
             this.xrLabel9.Multiline = true;
             this.xrLabel9.Name = "xrLabel9";
-            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel9.SizeF = new System.Drawing.SizeF(93.59015F, 15.16671F);
             this.xrLabel9.StylePriority.UseBackColor = false;
             this.xrLabel9.StylePriority.UseBorderColor = false;
@@ -426,7 +426,7 @@
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(113.3014F, 15.16668F);
             this.xrLabel1.StylePriority.UseBackColor = false;
             this.xrLabel1.StylePriority.UseBorderColor = false;
@@ -453,7 +453,7 @@
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(163.3013F, 0F);
             this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel2.SizeF = new System.Drawing.SizeF(229.8952F, 15.16668F);
             this.xrLabel2.StylePriority.UseBackColor = false;
             this.xrLabel2.StylePriority.UseBorderColor = false;
@@ -480,7 +480,7 @@
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(113.3014F, 0F);
             this.xrLabel3.Name = "xrLabel3";
-            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel3.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel3.SizeF = new System.Drawing.SizeF(49.99986F, 15.16668F);
             this.xrLabel3.StylePriority.UseBackColor = false;
             this.xrLabel3.StylePriority.UseBorderColor = false;
@@ -507,7 +507,7 @@
             this.xrLabel4.KeepTogether = true;
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(576.6292F, 3.178914E-05F);
             this.xrLabel4.Name = "xrLabel4";
-            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel4.SizeF = new System.Drawing.SizeF(95.09052F, 15.16668F);
             this.xrLabel4.StylePriority.UseBackColor = false;
             this.xrLabel4.StylePriority.UseBorderColor = false;
@@ -535,7 +535,7 @@
             this.xrLabel5.KeepTogether = true;
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(393.1966F, 0F);
             this.xrLabel5.Name = "xrLabel5";
-            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel5.SizeF = new System.Drawing.SizeF(183.4328F, 15.16668F);
             this.xrLabel5.StylePriority.UseBackColor = false;
             this.xrLabel5.StylePriority.UseBorderColor = false;
@@ -670,7 +670,7 @@
             this.Textbox4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 83.12668F);
             this.Textbox4.Multiline = true;
             this.Textbox4.Name = "Textbox4";
-            this.Textbox4.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox4.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox4.SizeF = new System.Drawing.SizeF(113.3014F, 36.81F);
             this.Textbox4.StylePriority.UseBackColor = false;
             this.Textbox4.StylePriority.UseBorderWidth = false;
@@ -690,7 +690,7 @@
             this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(163.3013F, 83.12668F);
             this.Textbox14.Multiline = true;
             this.Textbox14.Name = "Textbox14";
-            this.Textbox14.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox14.SizeF = new System.Drawing.SizeF(229.8952F, 36.81001F);
             this.Textbox14.StylePriority.UseBackColor = false;
             this.Textbox14.StylePriority.UseBorderWidth = false;
@@ -710,7 +710,7 @@
             this.Textbox17.LocationFloat = new DevExpress.Utils.PointFloat(113.3013F, 83.12668F);
             this.Textbox17.Multiline = true;
             this.Textbox17.Name = "Textbox17";
-            this.Textbox17.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox17.SizeF = new System.Drawing.SizeF(50F, 36.81F);
             this.Textbox17.StylePriority.UseBackColor = false;
             this.Textbox17.StylePriority.UseBorderWidth = false;
@@ -730,7 +730,7 @@
             this.Textbox18.LocationFloat = new DevExpress.Utils.PointFloat(576.6292F, 83.12669F);
             this.Textbox18.Multiline = true;
             this.Textbox18.Name = "Textbox18";
-            this.Textbox18.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox18.SizeF = new System.Drawing.SizeF(95.09033F, 36.81001F);
             this.Textbox18.StylePriority.UseBackColor = false;
             this.Textbox18.StylePriority.UseBorderWidth = false;
@@ -751,7 +751,7 @@
             this.Textbox19.LocationFloat = new DevExpress.Utils.PointFloat(393.1966F, 83.12671F);
             this.Textbox19.Multiline = true;
             this.Textbox19.Name = "Textbox19";
-            this.Textbox19.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox19.SizeF = new System.Drawing.SizeF(183.4328F, 36.80999F);
             this.Textbox19.StylePriority.UseBackColor = false;
             this.Textbox19.StylePriority.UseBorderWidth = false;
@@ -771,7 +771,7 @@
             this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(671.7198F, 83.12669F);
             this.Textbox20.Multiline = true;
             this.Textbox20.Name = "Textbox20";
-            this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.Textbox20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox20.SizeF = new System.Drawing.SizeF(93.59021F, 36.80999F);
             this.Textbox20.StylePriority.UseBackColor = false;
             this.Textbox20.StylePriority.UseBorderWidth = false;
@@ -963,7 +963,7 @@
             this.xrLabel8.KeepTogether = true;
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(576.6295F, 6.357829E-05F);
             this.xrLabel8.Name = "xrLabel8";
-            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel8.SizeF = new System.Drawing.SizeF(95.09052F, 15.16668F);
             this.xrLabel8.StylePriority.UseBackColor = false;
             this.xrLabel8.StylePriority.UseBorderColor = false;
@@ -995,7 +995,7 @@
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(671.7205F, 3.178914E-05F);
             this.xrLabel7.Multiline = true;
             this.xrLabel7.Name = "xrLabel7";
-            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel7.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel7.SizeF = new System.Drawing.SizeF(93.59064F, 15.16671F);
             this.xrLabel7.StylePriority.UseBackColor = false;
             this.xrLabel7.StylePriority.UseBorderColor = false;
@@ -1025,7 +1025,7 @@
             this.xrLabel10.KeepTogether = true;
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(452.3722F, 3.178914E-05F);
             this.xrLabel10.Name = "xrLabel10";
-            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel10.SizeF = new System.Drawing.SizeF(124.2571F, 15.16668F);
             this.xrLabel10.StylePriority.UseBackColor = false;
             this.xrLabel10.StylePriority.UseBorderColor = false;
