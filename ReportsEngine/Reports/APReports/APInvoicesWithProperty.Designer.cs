@@ -161,7 +161,6 @@
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.Textbox1 = new DevExpress.XtraReports.UI.XRLabel();
@@ -485,7 +484,6 @@
             this.xrLabel16,
             this.xrLabel17,
             this.xrLabel18,
-            this.xrLabel19,
             this.xrLabel20});
             this.Tablix1.HeightF = 32.99998F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
@@ -779,14 +777,15 @@
             this.xrLabel18.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel18.BorderWidth = 1F;
             this.xrLabel18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyAndWellNumber]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyAndWellNumber] + \' : \' + [PropertyDescription] + \'   Type: \' + [PhaseWel" +
+                    "lShortRecordType]")});
             this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel18.ForeColor = System.Drawing.Color.Black;
             this.xrLabel18.KeepTogether = true;
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(0F, 15.99998F);
             this.xrLabel18.Name = "xrLabel18";
             this.xrLabel18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel18.SizeF = new System.Drawing.SizeF(141.5671F, 17F);
+            this.xrLabel18.SizeF = new System.Drawing.SizeF(351.6733F, 17F);
             this.xrLabel18.StylePriority.UseBackColor = false;
             this.xrLabel18.StylePriority.UseBorderColor = false;
             this.xrLabel18.StylePriority.UseBorderDashStyle = false;
@@ -797,34 +796,6 @@
             this.xrLabel18.StylePriority.UsePadding = false;
             this.xrLabel18.StylePriority.UseTextAlignment = false;
             this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel19
-            // 
-            this.xrLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel19.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel19.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel19.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel19.BorderWidth = 1F;
-            this.xrLabel19.CanGrow = false;
-            this.xrLabel19.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyDescription]")});
-            this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel19.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel19.KeepTogether = true;
-            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(141.5671F, 15.99998F);
-            this.xrLabel19.Name = "xrLabel19";
-            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(210.1061F, 17F);
-            this.xrLabel19.StylePriority.UseBackColor = false;
-            this.xrLabel19.StylePriority.UseBorderColor = false;
-            this.xrLabel19.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel19.StylePriority.UseBorders = false;
-            this.xrLabel19.StylePriority.UseBorderWidth = false;
-            this.xrLabel19.StylePriority.UseFont = false;
-            this.xrLabel19.StylePriority.UseForeColor = false;
-            this.xrLabel19.StylePriority.UsePadding = false;
-            this.xrLabel19.StylePriority.UseTextAlignment = false;
-            this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel20
             // 
@@ -1118,10 +1089,10 @@
             this.Textbox103.Multiline = true;
             this.Textbox103.Name = "Textbox103";
             this.Textbox103.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox103.SizeF = new System.Drawing.SizeF(141.5671F, 20.00001F);
+            this.Textbox103.SizeF = new System.Drawing.SizeF(351.6733F, 20.00001F);
             this.Textbox103.StylePriority.UsePadding = false;
             this.Textbox103.StylePriority.UseTextAlignment = false;
-            this.Textbox103.Text = "Prop/Well";
+            this.Textbox103.Text = "Property/Well";
             this.Textbox103.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleLeft;
             // 
             // Textbox113
@@ -2174,6 +2145,7 @@
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_DSAPInvoicesWithProperty";
             sourceNode3.Alias = null;
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"557\" />";
             source3.DataMember = "DSAPInvoicesWithProperty";
             source3.DataSource = this.Dynamic;
             source3.Name = "Dynamic_DSAPInvoicesWithProperty";
@@ -2201,7 +2173,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "InvoiceFullAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "FederalIdNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "StateID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "StateAbbrev")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "StateAbbrev"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PhaseWellShortRecordType")});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Dynamic_DSVendorsLookup";
             sourceNode4.Alias = null;
@@ -2283,6 +2256,8 @@
             this.DataMember = "Dynamic_DSAPInvoicesWithProperty";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "APInvoicesWithProperty";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([InvoiceNumber])")});
             this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
@@ -2372,7 +2347,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.UI.XRLabel xrLabel20;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.XRLabel xrLabel43;

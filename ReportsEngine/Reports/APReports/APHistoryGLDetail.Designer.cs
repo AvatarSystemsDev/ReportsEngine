@@ -1669,7 +1669,7 @@
             // 
             // xrLabel3
             // 
-            this.xrLabel3.BorderColor = System.Drawing.Color.Silver;
+            this.xrLabel3.BorderColor = System.Drawing.Color.Transparent;
             this.xrLabel3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel3.BorderWidth = 1.39F;
@@ -1691,7 +1691,7 @@
             // 
             // xrLabel8
             // 
-            this.xrLabel8.BorderColor = System.Drawing.Color.Silver;
+            this.xrLabel8.BorderColor = System.Drawing.Color.Transparent;
             this.xrLabel8.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.xrLabel8.BorderWidth = 1F;

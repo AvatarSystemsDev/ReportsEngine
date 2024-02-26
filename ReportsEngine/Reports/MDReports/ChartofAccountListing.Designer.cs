@@ -1696,6 +1696,7 @@
             this.pbooShowAFENumber.Name = "pbooShowAFENumber";
             this.pbooShowAFENumber.Type = typeof(bool);
             this.pbooShowAFENumber.ValueInfo = "False";
+            this.pbooShowAFENumber.Visible = false;
             // 
             // pstrServerName
             // 
