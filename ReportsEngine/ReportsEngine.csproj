@@ -489,6 +489,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\APReports\APChecksRemittanceOnly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\APReports\APChecksRemittanceOnly.Designer.cs">
+      <DependentUpon>APChecksRemittanceOnly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBSuspenseAction.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2383,6 +2389,9 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\APReports\APChecksRemittanceOnly.resx">
+      <DependentUpon>APChecksRemittanceOnly.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBSuspenseAction.resx">
       <DependentUpon>ExcelJIBSuspenseAction.cs</DependentUpon>
     </EmbeddedResource>

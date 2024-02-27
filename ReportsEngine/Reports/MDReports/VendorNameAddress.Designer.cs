@@ -1334,7 +1334,7 @@
             this.plngSortOrder.Description = "Sort Order";
             this.plngSortOrder.Name = "plngSortOrder";
             this.plngSortOrder.Type = typeof(int);
-            this.plngSortOrder.ValueInfo = "1";
+            this.plngSortOrder.ValueInfo = "0";
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Number"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Name"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(4, "Sort Name"));
