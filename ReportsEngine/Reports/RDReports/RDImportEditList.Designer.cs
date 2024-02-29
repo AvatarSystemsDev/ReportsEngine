@@ -910,7 +910,7 @@
             this.Textbox18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox18.SizeF = new System.Drawing.SizeF(90.01001F, 18.75F);
             this.Textbox18.StylePriority.UsePadding = false;
-            this.Textbox18.Text = "Sale Date";
+            this.Textbox18.Text = "Prod Date";
             this.Textbox18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox20

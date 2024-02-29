@@ -1188,7 +1188,7 @@
             this.pdteBeginningDate10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pdteBeginningDate10.BorderWidth = 1F;
             this.pdteBeginningDate10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngDateToUse = 0, \'Using Processing Date\', \'Using Service/Sale Date\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngDateToUse = 0, \'Using Processing Date\', \'Using Service/Production Date\')")});
             this.pdteBeginningDate10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.pdteBeginningDate10.KeepTogether = true;
             this.pdteBeginningDate10.LocationFloat = new DevExpress.Utils.PointFloat(451.9467F, 3.814697E-06F);

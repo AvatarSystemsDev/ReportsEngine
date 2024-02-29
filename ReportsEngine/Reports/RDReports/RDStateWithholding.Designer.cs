@@ -1645,7 +1645,7 @@
             this.xrLabel55.StylePriority.UseForeColor = false;
             this.xrLabel55.StylePriority.UsePadding = false;
             this.xrLabel55.StylePriority.UseTextAlignment = false;
-            this.xrLabel55.Text = "Sale Date";
+            this.xrLabel55.Text = "Prod Date";
             this.xrLabel55.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrLabel55.Visible = false;
             // 

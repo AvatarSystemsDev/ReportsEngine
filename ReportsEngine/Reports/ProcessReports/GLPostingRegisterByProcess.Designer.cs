@@ -1267,11 +1267,11 @@
                     " </b>\' +  [BatchDescription] + \'</span>\'")});
             this.xrRichText12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText12.KeepTogether = true;
-            this.xrRichText12.LocationFloat = new DevExpress.Utils.PointFloat(0F, 21.39001F);
+            this.xrRichText12.LocationFloat = new DevExpress.Utils.PointFloat(0F, 21.39002F);
             this.xrRichText12.Name = "xrRichText12";
             this.xrRichText12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRichText12.SerializableRtfString = resources.GetString("xrRichText12.SerializableRtfString");
-            this.xrRichText12.SizeF = new System.Drawing.SizeF(250.1649F, 21.38999F);
+            this.xrRichText12.SizeF = new System.Drawing.SizeF(589.8964F, 21.38999F);
             this.xrRichText12.StylePriority.UseFont = false;
             this.xrRichText12.StylePriority.UsePadding = false;
             // 
@@ -1551,7 +1551,7 @@
             this.xrRichText13.Name = "xrRichText13";
             this.xrRichText13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRichText13.SerializableRtfString = resources.GetString("xrRichText13.SerializableRtfString");
-            this.xrRichText13.SizeF = new System.Drawing.SizeF(192.6037F, 21.38999F);
+            this.xrRichText13.SizeF = new System.Drawing.SizeF(589.8962F, 21.38999F);
             this.xrRichText13.StylePriority.UseFont = false;
             this.xrRichText13.StylePriority.UsePadding = false;
             // 

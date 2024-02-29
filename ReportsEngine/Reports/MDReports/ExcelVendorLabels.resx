@@ -118,6 +118,9 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="Dynamic.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0iRHluYW1pYyI+PFZpZXcgTmFtZT0iVmVuZG9yTGFiZWxzIj48RmllbGQgTmFtZT0iVmVuZG9yQWRkcmVzc0Jsb2NrIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlZlbmRvck51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGZWRlcmFsSUROdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVmVuZG9yTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+    <value>PERhdGFTZXQgTmFtZT0iRHluYW1pYyI+PFZpZXcgTmFtZT0iVmVuZG9yTGFiZWxzIj48RmllbGQgTmFtZT0iVmVuZG9yQWRkcmVzc0Jsb2NrIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlZlbmRvck51bWJlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGZWRlcmFsSUROdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU29ydE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVmVuZG9yTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQcm9wZXJ0eUFuZFdlbGxOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUHJvcGVydHlEZXNjcmlwdGlvbiIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
+  <data name="$this.FilterString" xml:space="preserve">
+    <value>[VendorNumber] In (?pstrSelectVendor) Or IsNullOrEmpty([VendorNumber]) And '!' In (?pstrSelectVendor) And ([PropertyAndWellNumber] In (?pstrSelectProperty) Or IsNullOrEmpty([PropertyAndWellNumber]) And '!' In (?pstrSelectProperty))</value>
   </data>
 </root>

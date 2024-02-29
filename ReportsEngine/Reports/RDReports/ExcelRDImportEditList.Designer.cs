@@ -895,7 +895,7 @@
             this.Textbox18.SizeF = new System.Drawing.SizeF(66.31668F, 35F);
             this.Textbox18.StylePriority.UseFont = false;
             this.Textbox18.StylePriority.UsePadding = false;
-            this.Textbox18.Text = "Sale Date";
+            this.Textbox18.Text = "Production Date";
             this.Textbox18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox20

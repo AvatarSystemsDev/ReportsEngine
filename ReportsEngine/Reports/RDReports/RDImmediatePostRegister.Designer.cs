@@ -416,7 +416,7 @@
             this.xrLabel33.StylePriority.UseFont = false;
             this.xrLabel33.StylePriority.UsePadding = false;
             this.xrLabel33.StylePriority.UseTextAlignment = false;
-            this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel2
             // 
@@ -1685,11 +1685,11 @@
                     " </b> \' + [BatchDescription] + \'</span>\'\n")});
             this.xrRichText2.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.xrRichText2.KeepTogether = true;
-            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(0.0001907349F, 18.00002F);
+            this.xrRichText2.LocationFloat = new DevExpress.Utils.PointFloat(0.0001907349F, 18.00003F);
             this.xrRichText2.Name = "xrRichText2";
             this.xrRichText2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRichText2.SerializableRtfString = resources.GetString("xrRichText2.SerializableRtfString");
-            this.xrRichText2.SizeF = new System.Drawing.SizeF(319.49F, 18F);
+            this.xrRichText2.SizeF = new System.Drawing.SizeF(768.9584F, 18F);
             this.xrRichText2.StylePriority.UseFont = false;
             this.xrRichText2.StylePriority.UsePadding = false;
             // 
