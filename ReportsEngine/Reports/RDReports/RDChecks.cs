@@ -81,8 +81,13 @@ namespace ReportsEngine
             //EntryRowEndBand.BeforePrint += EntryRowEndBand_BeforePrint;
             EndRemittance.BeforePrint += EndRemittance_BeforePrint;
             EntryBegin.BeforePrint += EntryBegin_BeforePrint;
+            xrEndCoverPage.PrintOnPage += XrEndCoverPage_PrintOnPage;
         }
 
+        private void XrEndCoverPage_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            pageCounter = 1;
+        }
         private void EndRemittance_BeforePrint(object sender, CancelEventArgs e)
         {
             checkIndex++;
@@ -183,7 +188,7 @@ namespace ReportsEngine
 
         private void XrCheckEnderLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 0;
+            pageCounter = 1;
         }
 
         private void XrPageBeginningLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -205,7 +210,7 @@ namespace ReportsEngine
 
         private void CheckCoverPage_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 0;
+            pageCounter = 1;
         }
 
         private void CheckStubBandBottomCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -227,7 +232,7 @@ namespace ReportsEngine
 
         private void CheckBegin_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-           pageCounter = 0;
+           pageCounter = 1;
         }
 
         private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
