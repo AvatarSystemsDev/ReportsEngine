@@ -495,6 +495,12 @@
     <Compile Include="Reports\APReports\APChecksRemittanceOnly.Designer.cs">
       <DependentUpon>APChecksRemittanceOnly.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\CheckReports\ManualChecksRemittanceOnly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\CheckReports\ManualChecksRemittanceOnly.Designer.cs">
+      <DependentUpon>ManualChecksRemittanceOnly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBSuspenseAction.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2391,6 +2397,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Reports\APReports\APChecksRemittanceOnly.resx">
       <DependentUpon>APChecksRemittanceOnly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CheckReports\ManualChecksRemittanceOnly.resx">
+      <DependentUpon>ManualChecksRemittanceOnly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBSuspenseAction.resx">
       <DependentUpon>ExcelJIBSuspenseAction.cs</DependentUpon>

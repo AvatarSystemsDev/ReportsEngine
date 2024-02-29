@@ -31,6 +31,11 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APChecksRemittanceOnly));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -39,6 +44,10 @@
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
+            this.booTrue = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngOverflowOptionCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrCompanyAddressBlockLong = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillPrintCompanyAddressOnStub = new DevExpress.XtraReports.Parameters.Parameter();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
@@ -46,10 +55,12 @@
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
             this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
-            this.plngOverflowOptionCode = new DevExpress.XtraReports.Parameters.Parameter();
-            this.booTrue = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooWillPrintCompanyAddressOnStub = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrCompanyAddressBlockLong = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooReturnElectronicPayments = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooReturnChecks = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooReturnACH = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -98,6 +109,35 @@
             this.plngCheckFormatIsMICR.ValueInfo = "True";
             this.plngCheckFormatIsMICR.Visible = false;
             // 
+            // booTrue
+            // 
+            this.booTrue.Description = "True";
+            this.booTrue.Name = "booTrue";
+            this.booTrue.Type = typeof(bool);
+            this.booTrue.ValueInfo = "True";
+            this.booTrue.Visible = false;
+            // 
+            // plngOverflowOptionCode
+            // 
+            this.plngOverflowOptionCode.Description = "Overflow Option Code";
+            this.plngOverflowOptionCode.Name = "plngOverflowOptionCode";
+            this.plngOverflowOptionCode.Type = typeof(int);
+            this.plngOverflowOptionCode.ValueInfo = "1";
+            this.plngOverflowOptionCode.Visible = false;
+            // 
+            // pstrCompanyAddressBlockLong
+            // 
+            this.pstrCompanyAddressBlockLong.Description = "pstrCompanyAddressBlockLong";
+            this.pstrCompanyAddressBlockLong.Name = "pstrCompanyAddressBlockLong";
+            this.pstrCompanyAddressBlockLong.Visible = false;
+            // 
+            // pbooWillPrintCompanyAddressOnStub
+            // 
+            this.pbooWillPrintCompanyAddressOnStub.Description = "pbooWillPrintCompanyAddressOnStub";
+            this.pbooWillPrintCompanyAddressOnStub.Name = "pbooWillPrintCompanyAddressOnStub";
+            this.pbooWillPrintCompanyAddressOnStub.Type = typeof(bool);
+            this.pbooWillPrintCompanyAddressOnStub.ValueInfo = "False";
+            // 
             // pageFooterBand1
             // 
             this.pageFooterBand1.BorderColor = System.Drawing.Color.Black;
@@ -110,15 +150,35 @@
             // 
             // Dynamic
             // 
-            this.Dynamic.ConnectionName = "Connection";
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
             storedProcQuery1.Name = "DSAPCheckRemittanceInformation";
-            queryParameter1.Name = "@plngID";
+            queryParameter1.Name = "@plngProcessTrackingID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngID", typeof(string));
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngProcessTrackingID", typeof(int));
+            queryParameter2.Name = "@pstrBeginningVendorNumber";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendor", typeof(string));
+            queryParameter3.Name = "@pstrEndingVendorNumber";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendor", typeof(string));
+            queryParameter4.Name = "@pbooReturnElectronicPayments";
+            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(bool));
+            queryParameter5.Name = "@pbooReturnChecks";
+            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooReturnChecks", typeof(bool));
+            queryParameter6.Name = "@pbooReturnACH";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooReturnACH", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1});
-            storedProcQuery1.StoredProcName = "APCheckPrinting_GetCheckRemittanceInformation";
+            queryParameter1,
+            queryParameter2,
+            queryParameter3,
+            queryParameter4,
+            queryParameter5,
+            queryParameter6});
+            storedProcQuery1.StoredProcName = "APCheckPrinting_GetChecksToPayHeaders";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
@@ -154,51 +214,69 @@
             this.SubBand2.HeightF = 0F;
             this.SubBand2.Name = "SubBand2";
             // 
-            // plngOverflowOptionCode
+            // plngProcessTrackingID
             // 
-            this.plngOverflowOptionCode.Description = "Overflow Option Code";
-            this.plngOverflowOptionCode.Name = "plngOverflowOptionCode";
-            this.plngOverflowOptionCode.Type = typeof(int);
-            this.plngOverflowOptionCode.ValueInfo = "1";
-            this.plngOverflowOptionCode.Visible = false;
+            this.plngProcessTrackingID.Description = "Process Tracking ID";
+            this.plngProcessTrackingID.Name = "plngProcessTrackingID";
+            this.plngProcessTrackingID.Type = typeof(int);
+            this.plngProcessTrackingID.ValueInfo = "0";
+            this.plngProcessTrackingID.Visible = false;
             // 
-            // booTrue
+            // pstrBeginningVendor
             // 
-            this.booTrue.Description = "True";
-            this.booTrue.Name = "booTrue";
-            this.booTrue.Type = typeof(bool);
-            this.booTrue.ValueInfo = "True";
-            this.booTrue.Visible = false;
+            this.pstrBeginningVendor.Description = "Beginning Vendor";
+            this.pstrBeginningVendor.Name = "pstrBeginningVendor";
+            this.pstrBeginningVendor.Visible = false;
             // 
-            // pbooWillPrintCompanyAddressOnStub
+            // pstrEndingVendor
             // 
-            this.pbooWillPrintCompanyAddressOnStub.Description = "pbooWillPrintCompanyAddressOnStub";
-            this.pbooWillPrintCompanyAddressOnStub.Name = "pbooWillPrintCompanyAddressOnStub";
-            this.pbooWillPrintCompanyAddressOnStub.Type = typeof(bool);
-            this.pbooWillPrintCompanyAddressOnStub.ValueInfo = "False";
+            this.pstrEndingVendor.Description = "Ending Vendor";
+            this.pstrEndingVendor.Name = "pstrEndingVendor";
+            this.pstrEndingVendor.Visible = false;
             // 
-            // pstrCompanyAddressBlockLong
+            // pbooReturnElectronicPayments
             // 
-            this.pstrCompanyAddressBlockLong.Description = "pstrCompanyAddressBlockLong";
-            this.pstrCompanyAddressBlockLong.Name = "pstrCompanyAddressBlockLong";
-            this.pstrCompanyAddressBlockLong.Visible = false;
+            this.pbooReturnElectronicPayments.Description = "Return Electronic Payments";
+            this.pbooReturnElectronicPayments.Name = "pbooReturnElectronicPayments";
+            this.pbooReturnElectronicPayments.Type = typeof(bool);
+            this.pbooReturnElectronicPayments.ValueInfo = "False";
+            // 
+            // pbooReturnChecks
+            // 
+            this.pbooReturnChecks.Description = "Return Checks";
+            this.pbooReturnChecks.Name = "pbooReturnChecks";
+            this.pbooReturnChecks.Type = typeof(bool);
+            this.pbooReturnChecks.ValueInfo = "False";
+            this.pbooReturnChecks.Visible = false;
+            // 
+            // pbooReturnACH
+            // 
+            this.pbooReturnACH.Description = "Return ACH";
+            this.pbooReturnACH.Name = "pbooReturnACH";
+            this.pbooReturnACH.Type = typeof(bool);
+            this.pbooReturnACH.ValueInfo = "False";
             // 
             // xrSubreport2
             // 
+            this.xrSubreport2.GenerateOwnPages = true;
             this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrSubreport2.Name = "xrSubreport2";
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSAPCheckHeader.CheckID"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", null, null));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSAPCheckRemittanceInformation.CheckID"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunningAtEnd", this.booTrue));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCode", this.plngOverflowOptionCode));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", this.pstrCompanyAddressBlockLong));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooWillPrintCompanyAddressOnStub", this.pbooWillPrintCompanyAddressOnStub));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblCheckAmount", null, "DSAPCheckRemittanceInformation.CheckAmount"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteCheckDate", null, "DSAPCheckRemittanceInformation.CheckDate"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCheckNumber", null, "DSAPCheckRemittanceInformation.CheckNumber"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrVendorNumber", null, "DSAPCheckRemittanceInformation.VendorNumber"));
             this.xrSubreport2.ReportSource = new ReportsEngine.Reports.APReports.APCheckRemittanceSubreport();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(794.1F, 2F);
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(810F, 2F);
             // 
             // APChecksRemittanceOnly
             // 
@@ -212,7 +290,7 @@
             this.Dynamic});
             this.DataMember = "DSAPCheckRemittanceInformation";
             this.DataSource = this.Dynamic;
-            this.DisplayName = "APCheckRemittanceSubreport";
+            this.DisplayName = "APChecksRemittanceOnly";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 20F, 20F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
@@ -236,7 +314,13 @@
             this.plngOverflowOptionCode,
             this.booTrue,
             this.pbooWillPrintCompanyAddressOnStub,
-            this.pstrCompanyAddressBlockLong});
+            this.pstrCompanyAddressBlockLong,
+            this.plngProcessTrackingID,
+            this.pstrBeginningVendor,
+            this.pstrEndingVendor,
+            this.pbooReturnElectronicPayments,
+            this.pbooReturnChecks,
+            this.pbooReturnACH});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -263,5 +347,11 @@
         private DevExpress.XtraReports.Parameters.Parameter booTrue;
         private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintCompanyAddressOnStub;
         private DevExpress.XtraReports.Parameters.Parameter pstrCompanyAddressBlockLong;
+        private DevExpress.XtraReports.Parameters.Parameter plngProcessTrackingID;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningVendor;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingVendor;
+        private DevExpress.XtraReports.Parameters.Parameter pbooReturnElectronicPayments;
+        private DevExpress.XtraReports.Parameters.Parameter pbooReturnChecks;
+        private DevExpress.XtraReports.Parameters.Parameter pbooReturnACH;
     }
 }

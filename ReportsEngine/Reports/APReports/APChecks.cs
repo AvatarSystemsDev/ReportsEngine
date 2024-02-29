@@ -10,7 +10,7 @@ namespace ReportsEngine.Reports.APReports
 {
     public partial class APChecks : DevExpress.XtraReports.UI.XtraReport
     {
-        private int pageCounter = 0;
+        private int pageCounter = 1;
         private int OverflowOptionCodeID = 1;
         public APChecks()
         {
@@ -24,10 +24,7 @@ namespace ReportsEngine.Reports.APReports
             xrPages.PrintOnPage += XrPages_PrintOnPage;
             RemittanceDetailBand.PrintOnPage += RemittanceDetailBand_PrintOnPage;
             CheckBegin.PrintOnPage += CheckBegin_PrintOnPage;
-            //CheckEnd.PrintOnPage += CheckEnd_PrintOnPage;
-            //CheckEnd.BeforePrint += CheckEnd_BeforePrint;
             xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
-            //xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
             xrNonNegotiablePictureTwo.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
             xrMICRAccountNumber.PrintOnPage += XrMICRAccountNumber_PrintOnPage;
             xrMICRTransitNumber.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
@@ -51,9 +48,6 @@ namespace ReportsEngine.Reports.APReports
             CheckCoverPage.PrintOnPage += CheckCoverPage_PrintOnPage;
             StubEnd.PrintOnPage += StubEnd_PrintOnPage;
             xrPageBeginningLabel.PrintOnPage += XrPageBeginningLabel_PrintOnPage;
-            xrCheckEnderLabel.PrintOnPage += XrCheckEnderLabel_PrintOnPage;
-            //xrCompanyAddressBlockTopCheck.PrintOnPage += XrCompanyAddressBlockTopCheck_PrintOnPage;
-            //xrCompanyAddressBlockBottomCheck.PrintOnPage += XrCompanyAddressBlockBottomCheck_PrintOnPage;
             CheckTopBand.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckBottomBand.PrintOnPage += CheckBottomBand_PrintOnPage;
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
@@ -62,12 +56,16 @@ namespace ReportsEngine.Reports.APReports
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckInformationPart.PrintOnPage += CheckTopBand_PrintOnPage;
             xrTopCheckPanel.PrintOnPage += XrTopCheckPanel_PrintOnPage;
-            //XRNextReport.BeforePrint += RDChecksRemittanceOnly_BeforePrint;
             CheckBeginningHeader.BeforePrint += CheckBeginningHeader_BeforePrint;
             CheckGroupBottom.BeforePrint += CheckGroupBottom_BeforePrint;
-            //EntryRowEndBand.BeforePrint += EntryRowEndBand_BeforePrint;
             EndRemittance.BeforePrint += EndRemittance_BeforePrint;
             EntryBegin.BeforePrint += EntryBegin_BeforePrint;
+            xrEndCoverPage.PrintOnPage += XrEndCoverPage_PrintOnPage;
+        }
+
+        private void XrEndCoverPage_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            pageCounter = 1;
         }
 
         private void EndRemittance_BeforePrint(object sender, CancelEventArgs e)
@@ -85,15 +83,15 @@ namespace ReportsEngine.Reports.APReports
 
         private void CheckGroupBottom_BeforePrint(object sender, CancelEventArgs e)
         {
-            GroupBand CheckGroupBottom = sender as GroupBand;
-            CheckGroupBottom.RepeatEveryPage = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
+            //GroupBand CheckGroupBottom = sender as GroupBand;
+            //CheckGroupBottom.RepeatEveryPage = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
             //CheckGroupBottom.Visible = checkIndex <= lastDetail;
         }
 
         private void CheckBeginningHeader_BeforePrint(object sender, CancelEventArgs e)
         {
-            GroupBand CheckGroupTop = sender as GroupBand;
-            CheckGroupTop.RepeatEveryPage = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
+            //GroupBand CheckGroupTop = sender as GroupBand;
+            //CheckGroupTop.RepeatEveryPage = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
             //CheckGroupTop.Visible = checkIndex <= lastDetail;
         }
 
@@ -167,10 +165,6 @@ namespace ReportsEngine.Reports.APReports
             label.Visible = pageCounter > 1 || WillPrintCompanyAddressOnStubValue;
         }
 
-        private void XrCheckEnderLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
-            pageCounter = 0;
-        }
 
         private void XrPageBeginningLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
@@ -190,7 +184,7 @@ namespace ReportsEngine.Reports.APReports
 
         private void CheckCoverPage_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 0;
+            pageCounter = 1;
         }
 
         private void CheckStubBandBottomCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -212,7 +206,7 @@ namespace ReportsEngine.Reports.APReports
 
         private void CheckBegin_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 0;
+            pageCounter = 1;
         }
 
         private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
