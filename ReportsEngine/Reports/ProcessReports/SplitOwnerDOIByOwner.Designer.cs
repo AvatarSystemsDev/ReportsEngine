@@ -667,8 +667,8 @@
             // 
             // Textbox13
             // 
-            this.Textbox13.BackColor = System.Drawing.Color.White;
-            this.Textbox13.BorderColor = System.Drawing.Color.LightGray;
+            this.Textbox13.BackColor = System.Drawing.Color.Transparent;
+            this.Textbox13.BorderColor = System.Drawing.Color.Transparent;
             this.Textbox13.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox13.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Textbox13.BorderWidth = 1.39F;
@@ -679,13 +679,15 @@
             this.Textbox13.Name = "Textbox13";
             this.Textbox13.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox13.SizeF = new System.Drawing.SizeF(208.33F, 40.71F);
+            this.Textbox13.StylePriority.UseBackColor = false;
+            this.Textbox13.StylePriority.UseBorderColor = false;
             this.Textbox13.Text = "Property/Well";
             this.Textbox13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox14
             // 
-            this.Textbox14.BackColor = System.Drawing.Color.White;
-            this.Textbox14.BorderColor = System.Drawing.Color.LightGray;
+            this.Textbox14.BackColor = System.Drawing.Color.Transparent;
+            this.Textbox14.BorderColor = System.Drawing.Color.Transparent;
             this.Textbox14.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox14.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Textbox14.BorderWidth = 1.39F;
@@ -696,13 +698,15 @@
             this.Textbox14.Name = "Textbox14";
             this.Textbox14.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox14.SizeF = new System.Drawing.SizeF(100F, 40.71F);
+            this.Textbox14.StylePriority.UseBackColor = false;
+            this.Textbox14.StylePriority.UseBorderColor = false;
             this.Textbox14.Text = "Interest Type";
             this.Textbox14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox15
             // 
-            this.Textbox15.BackColor = System.Drawing.Color.White;
-            this.Textbox15.BorderColor = System.Drawing.Color.LightGray;
+            this.Textbox15.BackColor = System.Drawing.Color.Transparent;
+            this.Textbox15.BorderColor = System.Drawing.Color.Transparent;
             this.Textbox15.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox15.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Textbox15.BorderWidth = 1.39F;
@@ -713,13 +717,15 @@
             this.Textbox15.Name = "Textbox15";
             this.Textbox15.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox15.SizeF = new System.Drawing.SizeF(102.0007F, 40.71F);
-            this.Textbox15.Text = "Pay Status";
+            this.Textbox15.StylePriority.UseBackColor = false;
+            this.Textbox15.StylePriority.UseBorderColor = false;
+            this.Textbox15.Text = "RD Suspense Code";
             this.Textbox15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox16
             // 
-            this.Textbox16.BackColor = System.Drawing.Color.White;
-            this.Textbox16.BorderColor = System.Drawing.Color.LightGray;
+            this.Textbox16.BackColor = System.Drawing.Color.Transparent;
+            this.Textbox16.BorderColor = System.Drawing.Color.Transparent;
             this.Textbox16.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox16.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Textbox16.BorderWidth = 1.39F;
@@ -730,13 +736,15 @@
             this.Textbox16.Name = "Textbox16";
             this.Textbox16.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox16.SizeF = new System.Drawing.SizeF(30F, 40.71F);
+            this.Textbox16.StylePriority.UseBackColor = false;
+            this.Textbox16.StylePriority.UseBorderColor = false;
             this.Textbox16.Text = "Tax\nEx.";
             this.Textbox16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
             // Textbox17
             // 
-            this.Textbox17.BackColor = System.Drawing.Color.White;
-            this.Textbox17.BorderColor = System.Drawing.Color.LightGray;
+            this.Textbox17.BackColor = System.Drawing.Color.Transparent;
+            this.Textbox17.BorderColor = System.Drawing.Color.Transparent;
             this.Textbox17.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox17.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Textbox17.BorderWidth = 1.39F;
@@ -747,13 +755,15 @@
             this.Textbox17.Name = "Textbox17";
             this.Textbox17.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox17.SizeF = new System.Drawing.SizeF(30.46161F, 40.71F);
+            this.Textbox17.StylePriority.UseBackColor = false;
+            this.Textbox17.StylePriority.UseBorderColor = false;
             this.Textbox17.Text = "Ded\nEx.";
             this.Textbox17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
             // Textbox18
             // 
-            this.Textbox18.BackColor = System.Drawing.Color.White;
-            this.Textbox18.BorderColor = System.Drawing.Color.LightGray;
+            this.Textbox18.BackColor = System.Drawing.Color.Transparent;
+            this.Textbox18.BorderColor = System.Drawing.Color.Transparent;
             this.Textbox18.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox18.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Textbox18.BorderWidth = 1.39F;
@@ -764,13 +774,15 @@
             this.Textbox18.Name = "Textbox18";
             this.Textbox18.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox18.SizeF = new System.Drawing.SizeF(71.07721F, 40.71F);
+            this.Textbox18.StylePriority.UseBackColor = false;
+            this.Textbox18.StylePriority.UseBorderColor = false;
             this.Textbox18.Text = "Cost\nDecimal";
             this.Textbox18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // Textbox35
             // 
-            this.Textbox35.BackColor = System.Drawing.Color.White;
-            this.Textbox35.BorderColor = System.Drawing.Color.LightGray;
+            this.Textbox35.BackColor = System.Drawing.Color.Transparent;
+            this.Textbox35.BorderColor = System.Drawing.Color.Transparent;
             this.Textbox35.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox35.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Textbox35.BorderWidth = 1.39F;
@@ -781,13 +793,15 @@
             this.Textbox35.Name = "Textbox35";
             this.Textbox35.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox35.SizeF = new System.Drawing.SizeF(71.07721F, 40.71F);
+            this.Textbox35.StylePriority.UseBackColor = false;
+            this.Textbox35.StylePriority.UseBorderColor = false;
             this.Textbox35.Text = "RD \nDecimal";
             this.Textbox35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // Textbox26
             // 
-            this.Textbox26.BackColor = System.Drawing.Color.White;
-            this.Textbox26.BorderColor = System.Drawing.Color.LightGray;
+            this.Textbox26.BackColor = System.Drawing.Color.Transparent;
+            this.Textbox26.BorderColor = System.Drawing.Color.Transparent;
             this.Textbox26.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox26.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
             this.Textbox26.BorderWidth = 1.39F;
@@ -798,6 +812,8 @@
             this.Textbox26.Name = "Textbox26";
             this.Textbox26.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox26.SizeF = new System.Drawing.SizeF(150F, 40.71F);
+            this.Textbox26.StylePriority.UseBackColor = false;
+            this.Textbox26.StylePriority.UseBorderColor = false;
             this.Textbox26.Text = "Deck Code";
             this.Textbox26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 

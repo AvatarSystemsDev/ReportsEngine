@@ -1640,7 +1640,7 @@
             this.xrLabel29.StylePriority.UseBackColor = false;
             this.xrLabel29.StylePriority.UseForeColor = false;
             this.xrLabel29.StylePriority.UsePadding = false;
-            this.xrLabel29.Text = "Pay Status\r\nOwner DOI";
+            this.xrLabel29.Text = "RD Susp.\r\nOwner DOI";
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
             // 
             // xrLabel19

@@ -854,14 +854,14 @@
             this.xrLabel55.BorderWidth = 1F;
             this.xrLabel55.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel55.KeepTogether = true;
-            this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(351.8046F, 86.21671F);
+            this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(347.6379F, 86.21671F);
             this.xrLabel55.Multiline = true;
             this.xrLabel55.Name = "xrLabel55";
             this.xrLabel55.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel55.SizeF = new System.Drawing.SizeF(55.15839F, 39.37006F);
+            this.xrLabel55.SizeF = new System.Drawing.SizeF(59.32504F, 39.37006F);
             this.xrLabel55.StylePriority.UsePadding = false;
             this.xrLabel55.StylePriority.UseTextAlignment = false;
-            this.xrLabel55.Text = "JIB\r\nStatus";
+            this.xrLabel55.Text = "JIB Susp. Code";
             this.xrLabel55.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel11
@@ -1208,7 +1208,7 @@
             this.Textbox9.SizeF = new System.Drawing.SizeF(70.00006F, 39.58006F);
             this.Textbox9.StylePriority.UsePadding = false;
             this.Textbox9.StylePriority.UseTextAlignment = false;
-            this.Textbox9.Text = "RD Pay\r\nStatus";
+            this.Textbox9.Text = "RD Susp. Code";
             this.Textbox9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox1

@@ -613,7 +613,7 @@
             this.xrLabel15.SizeF = new System.Drawing.SizeF(90F, 40F);
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
-            this.xrLabel15.Text = "Status Into Suspense ";
+            this.xrLabel15.Text = "Code Into Suspense";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox20
@@ -650,7 +650,7 @@
             this.Textbox22.SizeF = new System.Drawing.SizeF(90F, 40F);
             this.Textbox22.StylePriority.UsePadding = false;
             this.Textbox22.StylePriority.UseTextAlignment = false;
-            this.Textbox22.Text = "Status Release\r\nSuspense";
+            this.Textbox22.Text = "Code Release Suspense";
             this.Textbox22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             this.Textbox22.TextFormatString = "{0:\'$\'#,0.00;(\'$\'#,0.00)}";
             // 

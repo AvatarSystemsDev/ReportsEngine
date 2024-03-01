@@ -37,6 +37,9 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelOwnerOptions));
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -93,6 +96,8 @@
             this.pstrHeaderText = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngJIBPayStatusChosenID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngIsRequired = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooSortByCode = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -121,6 +126,14 @@
             queryParameter7.Name = "@pbooMinCheckOwnersOnly";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooMinCheckOwnersOnly", typeof(bool));
+            queryParameter8.Name = "@pstrHeaderText";
+            queryParameter8.Type = typeof(string);
+            queryParameter9.Name = "@plng1099Required";
+            queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngIsRequired", typeof(int));
+            queryParameter10.Name = "@pbooSortBy";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pbooSortByCode", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -128,7 +141,10 @@
             queryParameter4,
             queryParameter5,
             queryParameter6,
-            queryParameter7});
+            queryParameter7,
+            queryParameter8,
+            queryParameter9,
+            queryParameter10});
             storedProcQuery1.StoredProcName = "Report_OwnerOptions";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -1123,7 +1139,7 @@
             this.xrLabel45.StylePriority.UseForeColor = false;
             this.xrLabel45.StylePriority.UsePadding = false;
             this.xrLabel45.StylePriority.UseTextAlignment = false;
-            this.xrLabel45.Text = "RD Pay Status";
+            this.xrLabel45.Text = "RD Suspense Code";
             this.xrLabel45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel46
@@ -1202,7 +1218,7 @@
             this.xrLabel49.StylePriority.UseForeColor = false;
             this.xrLabel49.StylePriority.UsePadding = false;
             this.xrLabel49.StylePriority.UseTextAlignment = false;
-            this.xrLabel49.Text = "JIB Status";
+            this.xrLabel49.Text = "JIB Suspense Code";
             this.xrLabel49.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // pstrDatabaseName
@@ -1299,6 +1315,20 @@
             this.plngJIBPayStatusChosenID.Type = typeof(int);
             this.plngJIBPayStatusChosenID.ValueInfo = "0";
             // 
+            // plngIsRequired
+            // 
+            this.plngIsRequired.Description = "Is Required";
+            this.plngIsRequired.Name = "plngIsRequired";
+            this.plngIsRequired.Type = typeof(int);
+            this.plngIsRequired.ValueInfo = "0";
+            // 
+            // pbooSortByCode
+            // 
+            this.pbooSortByCode.Description = "Sort By Code";
+            this.pbooSortByCode.Name = "pbooSortByCode";
+            this.pbooSortByCode.Type = typeof(bool);
+            this.pbooSortByCode.ValueInfo = "False";
+            // 
             // ExcelOwnerOptions
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1345,7 +1375,9 @@
             this.pbooShowCriteria,
             this.pstrHeaderText,
             this.pstrSelectOwner,
-            this.plngJIBPayStatusChosenID});
+            this.plngJIBPayStatusChosenID,
+            this.plngIsRequired,
+            this.pbooSortByCode});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1408,5 +1440,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel36;
         private DevExpress.XtraReports.UI.XRLabel xrLabel56;
         private DevExpress.XtraReports.UI.XRLabel xrLabel2;
+        private DevExpress.XtraReports.Parameters.Parameter plngIsRequired;
+        private DevExpress.XtraReports.Parameters.Parameter pbooSortByCode;
     }
 }

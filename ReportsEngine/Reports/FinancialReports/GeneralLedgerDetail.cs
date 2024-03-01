@@ -32,17 +32,17 @@ namespace ReportsEngine.Reports
             InitializeComponent();
             //xrAccountTotalDebit.AfterPrint += xrAccountTotalDebit_AfterPrint;
             //BeforePrint += GeneralLedgerDetail_BeforePrint;
-            xrReportAccountSumDebit.PrintOnPage += xrReportAccountSumDebit_PrintOnPage;
-            xrReportAccountSumCredit.PrintOnPage += xrReportAccountSumCredit_PrintOnPage;
+            xrReportAccountSumDebit.BeforePrint += xrReportAccountSumDebit_PrintOnPage;
+            xrReportAccountSumCredit.BeforePrint += xrReportAccountSumCredit_PrintOnPage;
 
-            xrAccountTotalDebit.PrintOnPage += xrAccountTotalDebit_PrintOnPage;
-            xrAccountTotalCredit.PrintOnPage += xrAccountTotalCredit_PrintOnPage;
+            xrAccountTotalDebit.BeforePrint += xrAccountTotalDebit_PrintOnPage;
+            xrAccountTotalCredit.BeforePrint += xrAccountTotalCredit_PrintOnPage;
 
-            xrReportPeriodSumDebit.PrintOnPage += xrReportPeriodSumDebit_PrintOnPage;
-            xrReportPeriodSumCredit.PrintOnPage += xrReportPeriodSumCredit_PrintOnPage;
+            xrReportPeriodSumDebit.BeforePrint += xrReportPeriodSumDebit_PrintOnPage;
+            xrReportPeriodSumCredit.BeforePrint += xrReportPeriodSumCredit_PrintOnPage;
 
-            xrPeriodTotalDebit.PrintOnPage += xrPeriodTotalDebit_PrintOnPage;
-            xrPeriodTotalCredit.PrintOnPage += xrPeriodTotalCredit_PrintOnPage;
+            xrPeriodTotalDebit.BeforePrint += xrPeriodTotalDebit_PrintOnPage;
+            xrPeriodTotalCredit.BeforePrint += xrPeriodTotalCredit_PrintOnPage;
 
             xrAccountsSelected.BeforePrint += xrAccountsSelected_BeforePrint;
             xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
@@ -50,20 +50,20 @@ namespace ReportsEngine.Reports
             xrBatchesSelected.BeforePrint += xrBatchesSelected_BeforePrint;
             xrEntitiesSelected.BeforePrint += xrEntitiesSelected_BeforePrint;
             xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
-            xrDebitLine.PrintOnPage += XrDebitLine_BeforePrint;
-            xrCreditLine.PrintOnPage += XrCreditLine_BeforePrint;
+            xrDebitLine.BeforePrint += XrDebitLine_BeforePrint;
+            xrCreditLine.BeforePrint += XrCreditLine_BeforePrint;
             // Balance forward
-            xrDebitForward.PrintOnPage += XrDebitForward_BeforePrint;
-            xrCreditForward.PrintOnPage += XrCreditForward_BeforePrint;
-            xrRunningBalance.PrintOnPage += XrRunningBalance_BeforePrint;
-            xrPeriodRunningBalance.PrintOnPage += XrPeriodRunningBalance_BeforePrint;
-            xrAccountRunningBalance.PrintOnPage += XrAccountRunningBalance_BeforePrint;
-            xrReportPeriodSumBalance.PrintOnPage += XrReportPeriodSumBalance_BeforePrint;
-            xrReportAccountSumBalance.PrintOnPage += XrReportAccountSumBalance_BeforePrint;
-            xrBalanceForward.PrintOnPage += XrBalanceForward_PrintOnPage;
+            xrDebitForward.BeforePrint += XrDebitForward_BeforePrint;
+            xrCreditForward.BeforePrint += XrCreditForward_BeforePrint;
+            xrRunningBalance.BeforePrint += XrRunningBalance_BeforePrint;
+            xrPeriodRunningBalance.BeforePrint += XrPeriodRunningBalance_BeforePrint;
+            xrAccountRunningBalance.BeforePrint += XrAccountRunningBalance_BeforePrint;
+            xrReportPeriodSumBalance.BeforePrint += XrReportPeriodSumBalance_BeforePrint;
+            xrReportAccountSumBalance.BeforePrint += XrReportAccountSumBalance_BeforePrint;
+            xrBalanceForward.BeforePrint += XrBalanceForward_PrintOnPage;
         }
 
-        private void XrBalanceForward_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void XrBalanceForward_PrintOnPage(object sender, CancelEventArgs e)
         {
             if (BalanceForwardAmount < 0)
             {
@@ -75,29 +75,29 @@ namespace ReportsEngine.Reports
             }
         }
 
-        private void XrReportAccountSumBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        private void XrReportAccountSumBalance_BeforePrint(object sender, CancelEventArgs e)
         {
-            Parameter p = this.Parameters["pbooReportInBalance"];
+            //Parameter p = this.Parameters["pbooReportInBalance"];
             if (GrandAccountTotalBalance < 0)
             {
                 ((XRLabel)sender).Text = '(' + GrandAccountTotalBalance.ToString("N2").Replace("-", "") + ')';
-                p.Value = false;
+                //p.Value = false;
 
             }
             else if (GrandAccountTotalBalance != 0)
             {
                 ((XRLabel)sender).Text = GrandAccountTotalBalance.ToString("N2");
-                p.Value = false;
+                //p.Value = false;
             }
             else
             {
                 ((XRLabel)sender).Text = GrandAccountTotalBalance.ToString("N2");
-                p.Value = true;
+                //p.Value = true;
             }
             GrandAccountTotalBalance = 0;
         }
 
-        private void XrReportPeriodSumBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        private void XrReportPeriodSumBalance_BeforePrint(object sender, CancelEventArgs e)
         {
             if (GrandPeriodTotalBalance < 0)
             {
@@ -110,7 +110,7 @@ namespace ReportsEngine.Reports
             GrandPeriodTotalBalance = 0;
         }
 
-        private void XrAccountRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        private void XrAccountRunningBalance_BeforePrint(object sender, CancelEventArgs e)
         {
             if (RunningBalance < 0)
             {
@@ -126,7 +126,7 @@ namespace ReportsEngine.Reports
             RunningBalance = 0;
         }
 
-        private void XrPeriodRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        private void XrPeriodRunningBalance_BeforePrint(object sender, CancelEventArgs e)
         {
             if (RunningBalance < 0)
             {
@@ -140,7 +140,7 @@ namespace ReportsEngine.Reports
             GrandPeriodTotalBalance += (RunningBalance - BalanceForwardAmount);
         }
 
-        private void XrRunningBalance_BeforePrint(object sender, PrintOnPageEventArgs e)
+        private void XrRunningBalance_BeforePrint(object sender, CancelEventArgs e)
         {
             double netAmountCurrent =  Double.Parse(((XRLabel)sender).Text.Replace(",", ""));
             if (RunningBalance + netAmountCurrent < 0)
@@ -161,7 +161,7 @@ namespace ReportsEngine.Reports
             }
         }
 
-        private void XrCreditForward_BeforePrint(object sender, PrintOnPageEventArgs e)
+        private void XrCreditForward_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             if (((XRLabel)sender).Text != "")
@@ -178,7 +178,7 @@ namespace ReportsEngine.Reports
             }
         }
 
-        private void XrDebitForward_BeforePrint(object sender, PrintOnPageEventArgs e)
+        private void XrDebitForward_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             BalanceForwardAmount = 0;
@@ -196,7 +196,7 @@ namespace ReportsEngine.Reports
             }
         }
 
-        private void XrCreditLine_BeforePrint(object sender, PrintOnPageEventArgs e)
+        private void XrCreditLine_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             if (((XRLabel)sender).Text != "")
@@ -212,7 +212,7 @@ namespace ReportsEngine.Reports
             }
         }
 
-        private void XrDebitLine_BeforePrint(object sender, PrintOnPageEventArgs e)
+        private void XrDebitLine_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             if (((XRLabel)sender).Text != "")
@@ -662,7 +662,7 @@ namespace ReportsEngine.Reports
             PreviousAccount = "";
             DocumentOperationRequestResponse = null;
         }
-        private void xrAccountTotalDebit_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void xrAccountTotalDebit_PrintOnPage(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             if (((XRLabel)sender).Text != "")
@@ -677,7 +677,7 @@ namespace ReportsEngine.Reports
                 }
             }
         }
-        private void xrAccountTotalCredit_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void xrAccountTotalCredit_PrintOnPage(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             if (((XRLabel)sender).Text != "")
@@ -694,7 +694,7 @@ namespace ReportsEngine.Reports
         }
 
 
-        private void xrReportAccountSumDebit_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void xrReportAccountSumDebit_PrintOnPage(object sender, CancelEventArgs e)
         {
             if (GrandAccountTotalDebitx <= 0)
             {
@@ -705,7 +705,7 @@ namespace ReportsEngine.Reports
                 ((XRLabel)sender).Text = GrandAccountTotalDebitx.ToString("N2");
             }
         }
-        private void xrReportAccountSumCredit_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void xrReportAccountSumCredit_PrintOnPage(object sender, CancelEventArgs e)
         {
             if (GrandAccountTotalDebitx <= 0)
             {
@@ -723,7 +723,7 @@ namespace ReportsEngine.Reports
 
 
 
-        private void xrPeriodTotalDebit_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void xrPeriodTotalDebit_PrintOnPage(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             if (((XRLabel)sender).Text != "")
@@ -738,7 +738,7 @@ namespace ReportsEngine.Reports
                 }
             }
         }
-        private void xrPeriodTotalCredit_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void xrPeriodTotalCredit_PrintOnPage(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
             if (((XRLabel)sender).Text != "")
@@ -755,7 +755,7 @@ namespace ReportsEngine.Reports
         }
 
 
-        private void xrReportPeriodSumDebit_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void xrReportPeriodSumDebit_PrintOnPage(object sender, CancelEventArgs e)
         {
             if (GrandPeriodTotalDebitx <= 0)
             {
@@ -766,7 +766,7 @@ namespace ReportsEngine.Reports
                 ((XRLabel)sender).Text = GrandPeriodTotalDebitx.ToString("N2");
             }
         }
-        private void xrReportPeriodSumCredit_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void xrReportPeriodSumCredit_PrintOnPage(object sender, CancelEventArgs e)
         {
             if (GrandPeriodTotalCreditx <= 0)
             {
