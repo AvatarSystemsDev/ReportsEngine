@@ -1202,10 +1202,9 @@
     "tCounty) And [StateCodesID] In (?pstrSelectState)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
-            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
-            this.PageHeight = 850;
-            this.PageWidth = 1400;
-            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Legal;
+            this.Margins = new DevExpress.Drawing.DXMargins(0F, 117F, 0F, 0F);
+            this.PageWidth = 2053;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Custom;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowExemptDOITotals, DevExpress.XtraReports.Parameters.Orientation.Horizontal),

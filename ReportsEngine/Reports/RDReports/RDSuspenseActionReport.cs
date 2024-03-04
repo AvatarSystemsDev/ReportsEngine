@@ -13,5 +13,9 @@ namespace ReportsEngine.Reports.RDReports
             InitializeComponent();
         }
 
+        private void xrLabel8_BeforePrint(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

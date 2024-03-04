@@ -706,7 +706,7 @@
             this.xrLabel15.SizeF = new System.Drawing.SizeF(67.7084F, 39.19025F);
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
-            this.xrLabel15.Text = "JIB\r\nStatus";
+            this.xrLabel15.Text = "JIB Susp.";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel14
@@ -782,7 +782,7 @@
             this.Textbox9.SizeF = new System.Drawing.SizeF(70F, 39.19025F);
             this.Textbox9.StylePriority.UsePadding = false;
             this.Textbox9.StylePriority.UseTextAlignment = false;
-            this.Textbox9.Text = "RD Pay\r\nStatus";
+            this.Textbox9.Text = "RD Susp.";
             this.Textbox9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // Textbox3

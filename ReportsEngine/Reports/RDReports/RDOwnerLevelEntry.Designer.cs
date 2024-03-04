@@ -48,15 +48,16 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter15 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter18 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery6 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter19 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery6 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter20 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter21 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDOwnerLevelEntry));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
@@ -124,7 +125,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter21 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter22 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -378,7 +379,7 @@
             queryParameter10.Value = new DevExpress.DataAccess.Expression("?pdteEndingProductionDate", typeof(System.DateTime));
             queryParameter11.Name = "@pstrBeginningPropertyNumber";
             queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPurchaserNumber", typeof(string));
             queryParameter12.Name = "@pstrEndingPropertyNumber";
             queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter12.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
@@ -388,6 +389,9 @@
             queryParameter14.Name = "@pstrEndingOwnerNumber";
             queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter14.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter15.Name = "@plngReportType";
+            queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngReportType", typeof(int));
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter5,
             queryParameter6,
@@ -398,40 +402,41 @@
             queryParameter11,
             queryParameter12,
             queryParameter13,
-            queryParameter14});
+            queryParameter14,
+            queryParameter15});
             storedProcQuery3.StoredProcName = "Report_RDOwnerLevelEntry";
             storedProcQuery4.Name = "RDBatches";
-            queryParameter15.Name = "@plngCompanyID";
-            queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter16.Name = "@pbooShowAllOption";
-            queryParameter16.Type = typeof(bool);
-            queryParameter16.ValueInfo = "True";
-            queryParameter17.Name = "@plngReportType";
-            queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngReportType", typeof(int));
+            queryParameter16.Name = "@plngCompanyID";
+            queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter16.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter17.Name = "@pbooShowAllOption";
+            queryParameter17.Type = typeof(bool);
+            queryParameter17.ValueInfo = "True";
+            queryParameter18.Name = "@plngReportType";
+            queryParameter18.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngReportType", typeof(int));
             storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter15,
             queryParameter16,
-            queryParameter17});
+            queryParameter17,
+            queryParameter18});
             storedProcQuery4.StoredProcName = "ReportWizard_PopulateRDBatchesReportTypes";
             storedProcQuery5.Name = "OwnerLookup";
-            queryParameter18.Name = "@plngCompanyID";
-            queryParameter18.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter19.Name = "@plngCompanyID";
+            queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter18});
+            queryParameter19});
             storedProcQuery5.StoredProcName = "Owners_ReportLookup";
             storedProcQuery6.Name = "PropertiesLookup";
-            queryParameter19.Name = "@pbooIncludeFirstLast";
-            queryParameter19.Type = typeof(bool);
-            queryParameter19.ValueInfo = "True";
-            queryParameter20.Name = "@plngCompanyID";
-            queryParameter20.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter20.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter20.Name = "@pbooIncludeFirstLast";
+            queryParameter20.Type = typeof(bool);
+            queryParameter20.ValueInfo = "True";
+            queryParameter21.Name = "@plngCompanyID";
+            queryParameter21.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter21.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery6.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter19,
-            queryParameter20});
+            queryParameter20,
+            queryParameter21});
             storedProcQuery6.StoredProcName = "Properties_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -581,11 +586,11 @@
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter21.Name = "UserID";
-            queryParameter21.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter21.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter22.Name = "UserID";
+            queryParameter22.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter22.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter21});
+            queryParameter22});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});
@@ -903,10 +908,10 @@
             this.xrLabel40.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel40.ForeColor = System.Drawing.Color.Black;
             this.xrLabel40.KeepTogether = true;
-            this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(951.3898F, 16.99981F);
+            this.xrLabel40.LocationFloat = new DevExpress.Utils.PointFloat(951.3897F, 16.99982F);
             this.xrLabel40.Name = "xrLabel40";
             this.xrLabel40.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel40.SizeF = new System.Drawing.SizeF(67.56757F, 17F);
+            this.xrLabel40.SizeF = new System.Drawing.SizeF(68.61115F, 17F);
             this.xrLabel40.StylePriority.UseBackColor = false;
             this.xrLabel40.StylePriority.UseBorderColor = false;
             this.xrLabel40.StylePriority.UseBorderDashStyle = false;
@@ -1367,7 +1372,7 @@
             this.xrLabel87.LocationFloat = new DevExpress.Utils.PointFloat(952.3779F, 0F);
             this.xrLabel87.Name = "xrLabel87";
             this.xrLabel87.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel87.SizeF = new System.Drawing.SizeF(66.57947F, 17F);
+            this.xrLabel87.SizeF = new System.Drawing.SizeF(67.62305F, 17F);
             this.xrLabel87.StylePriority.UseBackColor = false;
             this.xrLabel87.StylePriority.UseBorderColor = false;
             this.xrLabel87.StylePriority.UseBorderDashStyle = false;
@@ -1393,10 +1398,10 @@
             this.xrLabel89.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel89.ForeColor = System.Drawing.Color.Black;
             this.xrLabel89.KeepTogether = true;
-            this.xrLabel89.LocationFloat = new DevExpress.Utils.PointFloat(1.04173F, 0F);
+            this.xrLabel89.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel89.Name = "xrLabel89";
             this.xrLabel89.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel89.SizeF = new System.Drawing.SizeF(78.73148F, 17F);
+            this.xrLabel89.SizeF = new System.Drawing.SizeF(79.7732F, 17F);
             this.xrLabel89.StylePriority.UseBackColor = false;
             this.xrLabel89.StylePriority.UseBorderColor = false;
             this.xrLabel89.StylePriority.UseBorderDashStyle = false;
@@ -1976,7 +1981,7 @@
             this.plngCompanyID.Description = "plngCompanyID";
             this.plngCompanyID.Name = "plngCompanyID";
             this.plngCompanyID.Type = typeof(int);
-            this.plngCompanyID.ValueInfo = "0";
+            this.plngCompanyID.ValueInfo = "1";
             dynamicListLookUpSettings1.DataMember = "Companies";
             dynamicListLookUpSettings1.DataSource = this.Dynamic;
             dynamicListLookUpSettings1.DisplayMember = "Description";
@@ -2141,10 +2146,10 @@
             this.xrLabel78.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel78.ForeColor = System.Drawing.Color.Black;
             this.xrLabel78.KeepTogether = true;
-            this.xrLabel78.LocationFloat = new DevExpress.Utils.PointFloat(951.3892F, 33.99995F);
+            this.xrLabel78.LocationFloat = new DevExpress.Utils.PointFloat(951.3892F, 33.99989F);
             this.xrLabel78.Name = "xrLabel78";
             this.xrLabel78.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel78.SizeF = new System.Drawing.SizeF(67.56812F, 17F);
+            this.xrLabel78.SizeF = new System.Drawing.SizeF(68.61169F, 17F);
             this.xrLabel78.StylePriority.UseBackColor = false;
             this.xrLabel78.StylePriority.UseBorderColor = false;
             this.xrLabel78.StylePriority.UseBorderDashStyle = false;
@@ -2357,7 +2362,7 @@
             this.xrLabel67.LocationFloat = new DevExpress.Utils.PointFloat(951.3888F, 0F);
             this.xrLabel67.Name = "xrLabel67";
             this.xrLabel67.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel67.SizeF = new System.Drawing.SizeF(67.56866F, 17F);
+            this.xrLabel67.SizeF = new System.Drawing.SizeF(68.61121F, 17F);
             this.xrLabel67.StylePriority.UseBackColor = false;
             this.xrLabel67.StylePriority.UseBorderColor = false;
             this.xrLabel67.StylePriority.UseBorderDashStyle = false;
@@ -2701,10 +2706,10 @@
             this.xrLabel64.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel64.ForeColor = System.Drawing.Color.Black;
             this.xrLabel64.KeepTogether = true;
-            this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(951.3882F, 16.9999F);
+            this.xrLabel64.LocationFloat = new DevExpress.Utils.PointFloat(951.3882F, 16.99988F);
             this.xrLabel64.Name = "xrLabel64";
             this.xrLabel64.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel64.SizeF = new System.Drawing.SizeF(67.56915F, 17F);
+            this.xrLabel64.SizeF = new System.Drawing.SizeF(68.61273F, 17F);
             this.xrLabel64.StylePriority.UseBackColor = false;
             this.xrLabel64.StylePriority.UseBorderColor = false;
             this.xrLabel64.StylePriority.UseBorderDashStyle = false;
@@ -3150,16 +3155,14 @@
             this.xrLabel21.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel21.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel21.BorderWidth = 1F;
-            this.xrLabel21.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Properties/Wells: \'\r\n")});
             this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel21.ForeColor = System.Drawing.Color.Black;
             this.xrLabel21.KeepTogether = true;
-            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(667.4773F, 13.5417F);
+            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(607.7892F, 13.5417F);
             this.xrLabel21.Multiline = true;
             this.xrLabel21.Name = "xrLabel21";
             this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel21.SizeF = new System.Drawing.SizeF(81.20322F, 12.70838F);
+            this.xrLabel21.SizeF = new System.Drawing.SizeF(113.8079F, 12.70838F);
             this.xrLabel21.StylePriority.UseBackColor = false;
             this.xrLabel21.StylePriority.UseBorderColor = false;
             this.xrLabel21.StylePriority.UseBorderDashStyle = false;
@@ -3169,6 +3172,7 @@
             this.xrLabel21.StylePriority.UseForeColor = false;
             this.xrLabel21.StylePriority.UsePadding = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
+            this.xrLabel21.Text = "For Properties/Wells:";
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrPropertiesSelected
@@ -3183,11 +3187,11 @@
             this.xrPropertiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrPropertiesSelected.ForeColor = System.Drawing.Color.Black;
             this.xrPropertiesSelected.KeepTogether = true;
-            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(748.6806F, 13.5417F);
+            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(721.5972F, 13.5417F);
             this.xrPropertiesSelected.Multiline = true;
             this.xrPropertiesSelected.Name = "xrPropertiesSelected";
             this.xrPropertiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(270.2778F, 12.70837F);
+            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(297.3613F, 12.70837F);
             this.xrPropertiesSelected.StylePriority.UseBackColor = false;
             this.xrPropertiesSelected.StylePriority.UseBorderColor = false;
             this.xrPropertiesSelected.StylePriority.UseBorderDashStyle = false;
@@ -3211,11 +3215,11 @@
             this.xrOwnersSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrOwnersSelected.ForeColor = System.Drawing.Color.Black;
             this.xrOwnersSelected.KeepTogether = true;
-            this.xrOwnersSelected.LocationFloat = new DevExpress.Utils.PointFloat(748.6806F, 0F);
+            this.xrOwnersSelected.LocationFloat = new DevExpress.Utils.PointFloat(721.5972F, 0F);
             this.xrOwnersSelected.Multiline = true;
             this.xrOwnersSelected.Name = "xrOwnersSelected";
             this.xrOwnersSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrOwnersSelected.SizeF = new System.Drawing.SizeF(270.2778F, 13.54166F);
+            this.xrOwnersSelected.SizeF = new System.Drawing.SizeF(297.3613F, 13.54166F);
             this.xrOwnersSelected.StylePriority.UseBackColor = false;
             this.xrOwnersSelected.StylePriority.UseBorderColor = false;
             this.xrOwnersSelected.StylePriority.UseBorderDashStyle = false;
@@ -3239,11 +3243,11 @@
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel22.ForeColor = System.Drawing.Color.Black;
             this.xrLabel22.KeepTogether = true;
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(667.4773F, 3.433228E-05F);
+            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(607.7892F, 3.433228E-05F);
             this.xrLabel22.Multiline = true;
             this.xrLabel22.Name = "xrLabel22";
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel22.SizeF = new System.Drawing.SizeF(81.20319F, 13.54165F);
+            this.xrLabel22.SizeF = new System.Drawing.SizeF(113.8079F, 13.54165F);
             this.xrLabel22.StylePriority.UseBackColor = false;
             this.xrLabel22.StylePriority.UseBorderColor = false;
             this.xrLabel22.StylePriority.UseBorderDashStyle = false;
@@ -3321,7 +3325,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrPurchaserSelected.ExpressionBindings"))});
             this.xrPurchaserSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrPurchaserSelected.KeepTogether = true;
-            this.xrPurchaserSelected.LocationFloat = new DevExpress.Utils.PointFloat(368.0152F, 3.433228E-05F);
+            this.xrPurchaserSelected.LocationFloat = new DevExpress.Utils.PointFloat(308.3272F, 3.433228E-05F);
             this.xrPurchaserSelected.Multiline = true;
             this.xrPurchaserSelected.Name = "xrPurchaserSelected";
             this.xrPurchaserSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);

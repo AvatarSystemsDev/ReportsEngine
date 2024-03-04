@@ -77,22 +77,25 @@ namespace ReportsEngine.Reports
 
         private void XrReportAccountSumBalance_BeforePrint(object sender, CancelEventArgs e)
         {
-            //Parameter p = this.Parameters["pbooReportInBalance"];
+            Parameter p = this.Parameters["plngBalanced"];
+            if (Math.Abs(GrandAccountTotalBalance)< 0.0000000001){
+                GrandAccountTotalBalance = 0;
+            }
             if (GrandAccountTotalBalance < 0)
             {
                 ((XRLabel)sender).Text = '(' + GrandAccountTotalBalance.ToString("N2").Replace("-", "") + ')';
-                //p.Value = false;
+                p.Value = false;
 
             }
             else if (GrandAccountTotalBalance != 0)
             {
                 ((XRLabel)sender).Text = GrandAccountTotalBalance.ToString("N2");
-                //p.Value = false;
+                p.Value = false;
             }
             else
             {
                 ((XRLabel)sender).Text = GrandAccountTotalBalance.ToString("N2");
-                //p.Value = true;
+                p.Value = true;
             }
             GrandAccountTotalBalance = 0;
         }
@@ -112,15 +115,16 @@ namespace ReportsEngine.Reports
 
         private void XrAccountRunningBalance_BeforePrint(object sender, CancelEventArgs e)
         {
+            XRLabel label = sender as XRLabel;
             if (RunningBalance < 0)
             {
-                ((XRLabel)sender).Text = '('+ RunningBalance.ToString("N2").Replace("-", "") +')';
+                label.Text = '('+ RunningBalance.ToString("N2").Replace("-", "") +')';
                 GrandAccountTotalBalance += RunningBalance;
 
             }
             else
             {
-                ((XRLabel)sender).Text = RunningBalance.ToString("N2");
+                label.Text = RunningBalance.ToString("N2");
                 GrandAccountTotalBalance += RunningBalance;
             }
             RunningBalance = 0;
@@ -512,18 +516,18 @@ namespace ReportsEngine.Reports
         private void xrBatchesSelected_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            Parameter p = this.Parameters["pstrSelectBatch"];
+            //Parameter p = this.Parameters["pstrSelectBatch"];
             Parameter start = this.Parameters["plngBeginningBatch"];
             Parameter end = this.Parameters["plngEndingBatch"];
 
-            if (p.MultiValue == false || p.LookUpSettings == null)
-            {
-                return;
-            }
+            //if (p.MultiValue == false || p.LookUpSettings == null)
+            //{
+            //    return;
+            //}
             var dataContext = ((IServiceProvider)label.RootReport).GetService(typeof(DataContext)) as DataContext;
-            LookUpValueCollection col = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext);
-            if (col.Count == (p.Value as Array).Length)
-            {
+            //LookUpValueCollection col = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext);
+            //if (col.Count == (p.Value as Array).Length)
+            //{
                 if (start.Value is int && (int)start.Value == -1 && end.Value is int && (int)end.Value == 999999999)
                 {
                     label.Text = "All Batches";
@@ -547,37 +551,37 @@ namespace ReportsEngine.Reports
                         label.Text += end.Value.ToString();
                     }
                 }
-            }
-            else if ((p.Value as Array).Length == 0)
-            {
-                label.Text = "No Values Selected";
-            }
-            else
-            {
-                if (start.Value is int && (int)start.Value == -1 && end.Value is int && (int)end.Value == 999999999)
-                {
-                    label.Text = "Selected Batches";
-                }
-                else
-                {
-                    if (start.Value is int && (int)start.Value == -1)
-                    {
-                        label.Text = "First Batch to ";
-                    }
-                    else
-                    {
-                        label.Text = start.Value.ToString() + " to ";
-                    }
-                    if (end.Value is int && (int)end.Value == 999999999)
-                    {
-                        label.Text += "Last Batch";
-                    }
-                    else
-                    {
-                        label.Text += end.Value.ToString();
-                    }
-                }
-            }
+            //}
+            //else if ((p.Value as Array).Length == 0)
+            //{
+            //    label.Text = "No Values Selected";
+            //}
+            //else
+            //{
+            //    if (start.Value is int && (int)start.Value == -1 && end.Value is int && (int)end.Value == 999999999)
+            //    {
+            //        label.Text = "Selected Batches";
+            //    }
+            //    else
+            //    {
+            //        if (start.Value is int && (int)start.Value == -1)
+            //        {
+            //            label.Text = "First Batch to ";
+            //        }
+            //        else
+            //        {
+            //            label.Text = start.Value.ToString() + " to ";
+            //        }
+            //        if (end.Value is int && (int)end.Value == 999999999)
+            //        {
+            //            label.Text += "Last Batch";
+            //        }
+            //        else
+            //        {
+            //            label.Text += end.Value.ToString();
+            //        }
+            //    }
+            //}
         }
         private void xrEntitiesSelected_BeforePrint(object sender, CancelEventArgs e)
         {

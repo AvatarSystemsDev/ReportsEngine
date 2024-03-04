@@ -935,7 +935,7 @@
             this.xrLabel28.StylePriority.UseForeColor = false;
             this.xrLabel28.StylePriority.UsePadding = false;
             this.xrLabel28.StylePriority.UseTextAlignment = false;
-            this.xrLabel28.Text = "Pay\r\nStatus";
+            this.xrLabel28.Text = "RD\r\nSusp.";
             this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel29
