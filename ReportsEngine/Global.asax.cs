@@ -32,7 +32,7 @@ namespace ReportsEngine
             AccessSettings.ReportingSpecificResources.SetRules(DirectoryAccessRule.Allow(Server.MapPath("/Styles")));
             DefaultWebDocumentViewerContainer.Register<DocumentOperationService, ServiceOperations>();
             System.Net.ServicePointManager.SecurityProtocol |= System.Net.SecurityProtocolType.Tls12;
-            DXFontRepository.Instance.AddFont(@"C:\MICR\MICRE13B.TTF");
+            DXFontRepository.Instance.AddFont(@"C:\MICR\IDAutomationMICRB10.TTF");
             MVCxReportDesigner.StaticInitialize();
             System.Drawing.Text.PrivateFontCollection privateFonts = new System.Drawing.Text.PrivateFontCollection();
 

@@ -387,6 +387,7 @@
             this.xrLabel8.StylePriority.UsePadding = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel8.TextFormatString = "{0:N2}";
             // 
             // xrLabel9
             // 
@@ -415,6 +416,7 @@
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel9.TextFormatString = "{0:N2}";
             // 
             // xrLabel10
             // 
@@ -443,6 +445,7 @@
             this.xrLabel10.StylePriority.UsePadding = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel10.TextFormatString = "{0:N2}";
             // 
             // xrLabel11
             // 
@@ -471,6 +474,7 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel11.TextFormatString = "{0:N2}";
             // 
             // xrLabel26
             // 
@@ -499,6 +503,7 @@
             this.xrLabel26.StylePriority.UsePadding = false;
             this.xrLabel26.StylePriority.UseTextAlignment = false;
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel26.TextFormatString = "{0:N2}";
             // 
             // xrLabel27
             // 
@@ -527,6 +532,7 @@
             this.xrLabel27.StylePriority.UsePadding = false;
             this.xrLabel27.StylePriority.UseTextAlignment = false;
             this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel27.TextFormatString = "{0:N2}";
             // 
             // xrLabel28
             // 
@@ -555,6 +561,7 @@
             this.xrLabel28.StylePriority.UsePadding = false;
             this.xrLabel28.StylePriority.UseTextAlignment = false;
             this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel28.TextFormatString = "{0:N2}";
             // 
             // xrLabel29
             // 
@@ -583,6 +590,7 @@
             this.xrLabel29.StylePriority.UsePadding = false;
             this.xrLabel29.StylePriority.UseTextAlignment = false;
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel29.TextFormatString = "{0:N2}";
             // 
             // xrLabel30
             // 
@@ -611,6 +619,7 @@
             this.xrLabel30.StylePriority.UsePadding = false;
             this.xrLabel30.StylePriority.UseTextAlignment = false;
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel30.TextFormatString = "{0:N2}";
             // 
             // xrLabel31
             // 
@@ -639,6 +648,7 @@
             this.xrLabel31.StylePriority.UsePadding = false;
             this.xrLabel31.StylePriority.UseTextAlignment = false;
             this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel31.TextFormatString = "{0:N2}";
             // 
             // xrLabel32
             // 
@@ -667,6 +677,7 @@
             this.xrLabel32.StylePriority.UsePadding = false;
             this.xrLabel32.StylePriority.UseTextAlignment = false;
             this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel32.TextFormatString = "{0:N2}";
             // 
             // xrLabel33
             // 
@@ -695,6 +706,7 @@
             this.xrLabel33.StylePriority.UsePadding = false;
             this.xrLabel33.StylePriority.UseTextAlignment = false;
             this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel33.TextFormatString = "{0:N2}";
             // 
             // xrLabel34
             // 
@@ -723,6 +735,7 @@
             this.xrLabel34.StylePriority.UsePadding = false;
             this.xrLabel34.StylePriority.UseTextAlignment = false;
             this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel34.TextFormatString = "{0:N2}";
             // 
             // xrLabel35
             // 
@@ -751,6 +764,7 @@
             this.xrLabel35.StylePriority.UsePadding = false;
             this.xrLabel35.StylePriority.UseTextAlignment = false;
             this.xrLabel35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel35.TextFormatString = "{0:N2}";
             // 
             // xrLabel36
             // 
@@ -1116,8 +1130,9 @@
             this.Textbox22.StylePriority.UseBorderColor = false;
             this.Textbox22.StylePriority.UseFont = false;
             this.Textbox22.StylePriority.UsePadding = false;
+            this.Textbox22.StylePriority.UseTextAlignment = false;
             this.Textbox22.Text = "January";
-            this.Textbox22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.Textbox22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox26
             // 

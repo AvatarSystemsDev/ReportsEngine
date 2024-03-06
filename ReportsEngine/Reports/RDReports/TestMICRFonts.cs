@@ -12,9 +12,9 @@ namespace ReportsEngine.Reports.RDReports
         public TestMICRFonts()
         {
             InitializeComponent();
-            xrMICRAccountNumber.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            xrMICRTransitNumber.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            xrCheckNumber.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            xrMICRAccountNumber.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
+            xrMICRTransitNumber.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
+            xrCheckNumber.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
         }
 
     }

@@ -399,10 +399,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SaleDate]")});
             this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel13.KeepTogether = true;
-            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(278.1868F, 0F);
+            this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(270.8951F, 0F);
             this.xrLabel13.Name = "xrLabel13";
             this.xrLabel13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel13.SizeF = new System.Drawing.SizeF(40.10339F, 20.00001F);
+            this.xrLabel13.SizeF = new System.Drawing.SizeF(47.39505F, 20.00001F);
             this.xrLabel13.StylePriority.UseBorderColor = false;
             this.xrLabel13.StylePriority.UseBorderDashStyle = false;
             this.xrLabel13.StylePriority.UseBorders = false;
@@ -411,7 +411,7 @@
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel13.TextFormatString = "{0:MM/yy}";
+            this.xrLabel13.TextFormatString = "{0:MM/yyyy}";
             // 
             // xrLabel12
             // 
@@ -496,8 +496,8 @@
             this.xrLabel2.BorderWidth = 1F;
             this.xrLabel2.CanGrow = false;
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Own Int: \'+[InterestTypeShortDescription]+\' \'+[GetRawDataFromRemittance.OwnerDOI" +
-                    "]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Own Int: \'+[InterestTypeShortDescription]+\'  \'+[GetRawDataFromRemittance.OwnerDO" +
+                    "I]")});
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(40.2085F, 0F);

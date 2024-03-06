@@ -643,7 +643,7 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel17.CanGrow = false;
             this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\' \'")});
-            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrLabel17.KeepTogether = true;
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(625.3499F, 254.2717F);
             this.xrLabel17.Multiline = true;
@@ -1241,7 +1241,7 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel3.CanGrow = false;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\' \'")});
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(625.35F, 328.23F);
             this.xrLabel3.Multiline = true;

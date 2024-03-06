@@ -56,6 +56,7 @@
             this.PleaseDetachThisRemittanceAdviceBeforeDepositingCheck = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
+            this.ManualCheckSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -77,6 +78,9 @@
             this.CheckBeginningHeader = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.CheckTopBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrTopCheckPanel = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrCheckNumberTwo = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrMICRAccountNumberTwo = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrTransitTopCheck = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel3 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrVoidAfterMessageCheckBottomTwo = new DevExpress.XtraReports.UI.XRLabel();
             this.xrShape3 = new DevExpress.XtraReports.UI.XRShape();
@@ -84,12 +88,8 @@
             this.SignatureLineCommentBottomCheckTwo = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBoxBottomSignatureTwo = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrPictureBoxTopSignatureTwo = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrTransitTopCheck = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrMICRTransitNumberTwo = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrCheckNumberTwo = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPictureBoxLogoTwo = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrMICRAccountNumberTwo = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCompanyAddressBlockTopCheck = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
@@ -105,8 +105,8 @@
             this.PleaseDetachThisRemittanceBeforeDepositingCheck = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.CompanyAddressBandAboveRemittance = new DevExpress.XtraReports.UI.SubBand();
-            this.xrCompanyHeader = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPages = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrCompanyHeader = new DevExpress.XtraReports.UI.XRLabel();
             this.CheckInformationPart = new DevExpress.XtraReports.UI.SubBand();
             this.xrPanel4 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrRichText3 = new DevExpress.XtraReports.UI.XRRichText();
@@ -120,8 +120,6 @@
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.CheckBottomBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
-            this.xrTransitBottomCheck = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrMICRTransitNumber = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCheckNumber = new DevExpress.XtraReports.UI.XRLabel();
             this.Rectangle4 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrPictureBoxTopSignature = new DevExpress.XtraReports.UI.XRPictureBox();
@@ -151,6 +149,7 @@
             this.xrRichText5 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrNonNegotiablePicture = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.xrTransitBottomCheck = new DevExpress.XtraReports.UI.XRLabel();
             this.StubEnd = new DevExpress.XtraReports.UI.SubBand();
             this.SubBand7 = new DevExpress.XtraReports.UI.SubBand();
             this.xrCheckEnderLabel = new DevExpress.XtraReports.UI.XRLabel();
@@ -159,26 +158,25 @@
             this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrSubreport3 = new DevExpress.XtraReports.UI.XRSubreport();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
+            this.APChecksRemittanceOnly = new DevExpress.XtraReports.UI.XRSubreport();
             this.booTrue = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageBeginningLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.EntryBegin = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.CheckCoverPage = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.EndCoverPageBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrEndCoverPage = new DevExpress.XtraReports.UI.XRLabel();
             this.BeginningRemittance = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.EntryRowEndBand = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.groupFooterBand3 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.EndRemittance = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.plngPrintRemittance = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooHideCheckPart = new DevExpress.XtraReports.Parameters.Parameter();
-            this.ManualCheckSubreport = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrSubreport3 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.APChecksRemittanceOnly = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText7)).BeginInit();
@@ -279,6 +277,28 @@
             this.ManualCheckSubreport});
             this.SubBand2.HeightF = 25.00706F;
             this.SubBand2.Name = "SubBand2";
+            // 
+            // ManualCheckSubreport
+            // 
+            this.ManualCheckSubreport.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
+            this.ManualCheckSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.ManualCheckSubreport.Name = "ManualCheckSubreport";
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "Dynamic_DSCheckHeader.CheckID"));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteCheckDate", null, "Dynamic_DSCheckHeader.CheckDate"));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEntity", null, "Dynamic_DSCheckHeader.EntityNumber"));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblCheckAmount", null, "Dynamic_DSCheckHeader.CheckAmount"));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCheckNumber", null, "Dynamic_DSCheckHeader.CheckNumber"));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunningAtEnd", this.booFalse));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCodeID", null, "Dynamic_DSCheckHeader.OverflowOptionCodeID"));
+            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSCheckHeader.CompanyAddressBlockLong"));
+            this.ManualCheckSubreport.ReportSource = new ReportsEngine.ManualCheckRemittanceSubreport();
+            this.ManualCheckSubreport.SizeF = new System.Drawing.SizeF(794.0999F, 24.61065F);
             // 
             // pstrDatabaseName
             // 
@@ -465,13 +485,12 @@
             this.xrTopCheckPanel.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrTopCheckPanel.BorderWidth = 1F;
             this.xrTopCheckPanel.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPanel3,
-            this.xrTransitTopCheck,
-            this.xrMICRTransitNumberTwo,
             this.xrCheckNumberTwo,
+            this.xrMICRAccountNumberTwo,
+            this.xrTransitTopCheck,
+            this.xrPanel3,
             this.xrPictureBoxLogoTwo,
             this.xrLabel21,
-            this.xrMICRAccountNumberTwo,
             this.xrLabel22,
             this.xrCompanyAddressBlockTopCheck,
             this.xrLabel23,
@@ -487,6 +506,72 @@
             this.xrTopCheckPanel.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrTopCheckPanel.Name = "xrTopCheckPanel";
             this.xrTopCheckPanel.SizeF = new System.Drawing.SizeF(794.0999F, 280.6049F);
+            // 
+            // xrCheckNumberTwo
+            // 
+            this.xrCheckNumberTwo.BorderColor = System.Drawing.Color.Black;
+            this.xrCheckNumberTwo.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrCheckNumberTwo.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrCheckNumberTwo.BorderWidth = 1F;
+            this.xrCheckNumberTwo.CanGrow = false;
+            this.xrCheckNumberTwo.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑈\'+[SerialNumber]+\'⑈\'")});
+            this.xrCheckNumberTwo.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
+            this.xrCheckNumberTwo.KeepTogether = true;
+            this.xrCheckNumberTwo.LocationFloat = new DevExpress.Utils.PointFloat(27.43F, 254.2717F);
+            this.xrCheckNumberTwo.Multiline = true;
+            this.xrCheckNumberTwo.Name = "xrCheckNumberTwo";
+            this.xrCheckNumberTwo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrCheckNumberTwo.SizeF = new System.Drawing.SizeF(185.42F, 26.33F);
+            this.xrCheckNumberTwo.StylePriority.UseFont = false;
+            this.xrCheckNumberTwo.StylePriority.UsePadding = false;
+            this.xrCheckNumberTwo.StylePriority.UseTextAlignment = false;
+            this.xrCheckNumberTwo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
+            // 
+            // xrMICRAccountNumberTwo
+            // 
+            this.xrMICRAccountNumberTwo.BorderColor = System.Drawing.Color.Black;
+            this.xrMICRAccountNumberTwo.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrMICRAccountNumberTwo.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrMICRAccountNumberTwo.BorderWidth = 1F;
+            this.xrMICRAccountNumberTwo.CanGrow = false;
+            this.xrMICRAccountNumberTwo.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\'⑈\'")});
+            this.xrMICRAccountNumberTwo.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
+            this.xrMICRAccountNumberTwo.KeepTogether = true;
+            this.xrMICRAccountNumberTwo.LocationFloat = new DevExpress.Utils.PointFloat(388.4901F, 254.2717F);
+            this.xrMICRAccountNumberTwo.Multiline = true;
+            this.xrMICRAccountNumberTwo.Name = "xrMICRAccountNumberTwo";
+            this.xrMICRAccountNumberTwo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrMICRAccountNumberTwo.SizeF = new System.Drawing.SizeF(202.48F, 26.33322F);
+            this.xrMICRAccountNumberTwo.StylePriority.UseFont = false;
+            this.xrMICRAccountNumberTwo.StylePriority.UsePadding = false;
+            this.xrMICRAccountNumberTwo.StylePriority.UseTextAlignment = false;
+            this.xrMICRAccountNumberTwo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            // 
+            // xrTransitTopCheck
+            // 
+            this.xrTransitTopCheck.BorderColor = System.Drawing.Color.Black;
+            this.xrTransitTopCheck.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrTransitTopCheck.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrTransitTopCheck.BorderWidth = 1F;
+            this.xrTransitTopCheck.CanGrow = false;
+            this.xrTransitTopCheck.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑆\'+[TransitNumber] + \'⑆\'")});
+            this.xrTransitTopCheck.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
+            this.xrTransitTopCheck.KeepTogether = true;
+            this.xrTransitTopCheck.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 254.2717F);
+            this.xrTransitTopCheck.Multiline = true;
+            this.xrTransitTopCheck.Name = "xrTransitTopCheck";
+            this.xrTransitTopCheck.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTransitTopCheck.SizeF = new System.Drawing.SizeF(143.75F, 26.32999F);
+            this.xrTransitTopCheck.StylePriority.UseFont = false;
+            this.xrTransitTopCheck.StylePriority.UsePadding = false;
+            this.xrTransitTopCheck.StylePriority.UseTextAlignment = false;
+            this.xrTransitTopCheck.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrPanel3
             // 
@@ -607,72 +692,6 @@
             this.xrPictureBoxTopSignatureTwo.SizeF = new System.Drawing.SizeF(316.1502F, 36.99998F);
             this.xrPictureBoxTopSignatureTwo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.Squeeze;
             // 
-            // xrTransitTopCheck
-            // 
-            this.xrTransitTopCheck.BorderColor = System.Drawing.Color.Black;
-            this.xrTransitTopCheck.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrTransitTopCheck.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrTransitTopCheck.BorderWidth = 1F;
-            this.xrTransitTopCheck.CanGrow = false;
-            this.xrTransitTopCheck.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑆\'")});
-            this.xrTransitTopCheck.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
-            this.xrTransitTopCheck.KeepTogether = true;
-            this.xrTransitTopCheck.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 254.2717F);
-            this.xrTransitTopCheck.Multiline = true;
-            this.xrTransitTopCheck.Name = "xrTransitTopCheck";
-            this.xrTransitTopCheck.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrTransitTopCheck.SizeF = new System.Drawing.SizeF(18.44336F, 26.32999F);
-            this.xrTransitTopCheck.StylePriority.UseFont = false;
-            this.xrTransitTopCheck.StylePriority.UsePadding = false;
-            this.xrTransitTopCheck.StylePriority.UseTextAlignment = false;
-            this.xrTransitTopCheck.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            // 
-            // xrMICRTransitNumberTwo
-            // 
-            this.xrMICRTransitNumberTwo.BorderColor = System.Drawing.Color.Black;
-            this.xrMICRTransitNumberTwo.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrMICRTransitNumberTwo.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrMICRTransitNumberTwo.BorderWidth = 1F;
-            this.xrMICRTransitNumberTwo.CanGrow = false;
-            this.xrMICRTransitNumberTwo.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TransitNumber] + \'⑆\'")});
-            this.xrMICRTransitNumberTwo.Font = new DevExpress.Drawing.DXFont("MICR Encoding", 12F);
-            this.xrMICRTransitNumberTwo.KeepTogether = true;
-            this.xrMICRTransitNumberTwo.LocationFloat = new DevExpress.Utils.PointFloat(246.5233F, 254.2717F);
-            this.xrMICRTransitNumberTwo.Multiline = true;
-            this.xrMICRTransitNumberTwo.Name = "xrMICRTransitNumberTwo";
-            this.xrMICRTransitNumberTwo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrMICRTransitNumberTwo.SizeF = new System.Drawing.SizeF(125.3067F, 26.32999F);
-            this.xrMICRTransitNumberTwo.StylePriority.UseFont = false;
-            this.xrMICRTransitNumberTwo.StylePriority.UsePadding = false;
-            this.xrMICRTransitNumberTwo.StylePriority.UseTextAlignment = false;
-            this.xrMICRTransitNumberTwo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            // 
-            // xrCheckNumberTwo
-            // 
-            this.xrCheckNumberTwo.BorderColor = System.Drawing.Color.Black;
-            this.xrCheckNumberTwo.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrCheckNumberTwo.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrCheckNumberTwo.BorderWidth = 1F;
-            this.xrCheckNumberTwo.CanGrow = false;
-            this.xrCheckNumberTwo.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'/\'+[SerialNumber]+\'/\'")});
-            this.xrCheckNumberTwo.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
-            this.xrCheckNumberTwo.KeepTogether = true;
-            this.xrCheckNumberTwo.LocationFloat = new DevExpress.Utils.PointFloat(27.43F, 254.2717F);
-            this.xrCheckNumberTwo.Multiline = true;
-            this.xrCheckNumberTwo.Name = "xrCheckNumberTwo";
-            this.xrCheckNumberTwo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrCheckNumberTwo.SizeF = new System.Drawing.SizeF(185.42F, 26.33F);
-            this.xrCheckNumberTwo.StylePriority.UseFont = false;
-            this.xrCheckNumberTwo.StylePriority.UsePadding = false;
-            this.xrCheckNumberTwo.StylePriority.UseTextAlignment = false;
-            this.xrCheckNumberTwo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomRight;
-            // 
             // xrPictureBoxLogoTwo
             // 
             this.xrPictureBoxLogoTwo.BorderColor = System.Drawing.Color.Black;
@@ -696,7 +715,7 @@
             this.xrLabel21.CanGrow = false;
             this.xrLabel21.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\' \'")});
-            this.xrLabel21.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel21.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrLabel21.KeepTogether = true;
             this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(625.3499F, 254.2717F);
             this.xrLabel21.Multiline = true;
@@ -707,28 +726,6 @@
             this.xrLabel21.StylePriority.UsePadding = false;
             this.xrLabel21.StylePriority.UseTextAlignment = false;
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            // 
-            // xrMICRAccountNumberTwo
-            // 
-            this.xrMICRAccountNumberTwo.BorderColor = System.Drawing.Color.Black;
-            this.xrMICRAccountNumberTwo.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrMICRAccountNumberTwo.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrMICRAccountNumberTwo.BorderWidth = 1F;
-            this.xrMICRAccountNumberTwo.CanGrow = false;
-            this.xrMICRAccountNumberTwo.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\'/\'")});
-            this.xrMICRAccountNumberTwo.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
-            this.xrMICRAccountNumberTwo.KeepTogether = true;
-            this.xrMICRAccountNumberTwo.LocationFloat = new DevExpress.Utils.PointFloat(388.4901F, 254.2717F);
-            this.xrMICRAccountNumberTwo.Multiline = true;
-            this.xrMICRAccountNumberTwo.Name = "xrMICRAccountNumberTwo";
-            this.xrMICRAccountNumberTwo.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrMICRAccountNumberTwo.SizeF = new System.Drawing.SizeF(202.48F, 26.33322F);
-            this.xrMICRAccountNumberTwo.StylePriority.UseFont = false;
-            this.xrMICRAccountNumberTwo.StylePriority.UsePadding = false;
-            this.xrMICRAccountNumberTwo.StylePriority.UseTextAlignment = false;
-            this.xrMICRAccountNumberTwo.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel22
             // 
@@ -983,6 +980,28 @@
             this.CompanyAddressBandAboveRemittance.HeightF = 46.82214F;
             this.CompanyAddressBandAboveRemittance.Name = "CompanyAddressBandAboveRemittance";
             // 
+            // xrPages
+            // 
+            this.xrPages.BorderColor = System.Drawing.Color.Black;
+            this.xrPages.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPages.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPages.BorderWidth = 1F;
+            this.xrPages.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrPages.KeepTogether = true;
+            this.xrPages.LocationFloat = new DevExpress.Utils.PointFloat(716.9999F, 0F);
+            this.xrPages.Multiline = true;
+            this.xrPages.Name = "xrPages";
+            this.xrPages.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrPages.SizeF = new System.Drawing.SizeF(85F, 18F);
+            this.xrPages.StylePriority.UseBorderColor = false;
+            this.xrPages.StylePriority.UseBorderDashStyle = false;
+            this.xrPages.StylePriority.UseBorders = false;
+            this.xrPages.StylePriority.UseBorderWidth = false;
+            this.xrPages.StylePriority.UseFont = false;
+            this.xrPages.StylePriority.UsePadding = false;
+            this.xrPages.StylePriority.UseTextAlignment = false;
+            this.xrPages.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // xrCompanyHeader
             // 
             this.xrCompanyHeader.BorderColor = System.Drawing.Color.Black;
@@ -1008,28 +1027,6 @@
             this.xrCompanyHeader.StylePriority.UsePadding = false;
             this.xrCompanyHeader.StylePriority.UseTextAlignment = false;
             this.xrCompanyHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // xrPages
-            // 
-            this.xrPages.BorderColor = System.Drawing.Color.Black;
-            this.xrPages.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrPages.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPages.BorderWidth = 1F;
-            this.xrPages.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrPages.KeepTogether = true;
-            this.xrPages.LocationFloat = new DevExpress.Utils.PointFloat(716.9999F, 0F);
-            this.xrPages.Multiline = true;
-            this.xrPages.Name = "xrPages";
-            this.xrPages.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPages.SizeF = new System.Drawing.SizeF(85F, 18F);
-            this.xrPages.StylePriority.UseBorderColor = false;
-            this.xrPages.StylePriority.UseBorderDashStyle = false;
-            this.xrPages.StylePriority.UseBorders = false;
-            this.xrPages.StylePriority.UseBorderWidth = false;
-            this.xrPages.StylePriority.UseFont = false;
-            this.xrPages.StylePriority.UsePadding = false;
-            this.xrPages.StylePriority.UseTextAlignment = false;
-            this.xrPages.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // CheckInformationPart
             // 
@@ -1219,8 +1216,6 @@
             this.xrPanel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPanel1.BorderWidth = 1F;
             this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrTransitBottomCheck,
-            this.xrMICRTransitNumber,
             this.xrCheckNumber,
             this.Rectangle4,
             this.xrPictureBoxLogo,
@@ -1239,54 +1234,11 @@
             this.OwnerAddressBlock,
             this.xrPanel2,
             this.xrLabel2,
-            this.xrNonNegotiablePicture});
+            this.xrNonNegotiablePicture,
+            this.xrTransitBottomCheck});
             this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPanel1.Name = "xrPanel1";
             this.xrPanel1.SizeF = new System.Drawing.SizeF(794.0999F, 345.1883F);
-            // 
-            // xrTransitBottomCheck
-            // 
-            this.xrTransitBottomCheck.BorderColor = System.Drawing.Color.Black;
-            this.xrTransitBottomCheck.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrTransitBottomCheck.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrTransitBottomCheck.BorderWidth = 1F;
-            this.xrTransitBottomCheck.CanGrow = false;
-            this.xrTransitBottomCheck.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑆\'")});
-            this.xrTransitBottomCheck.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
-            this.xrTransitBottomCheck.KeepTogether = true;
-            this.xrTransitBottomCheck.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 318.2301F);
-            this.xrTransitBottomCheck.Multiline = true;
-            this.xrTransitBottomCheck.Name = "xrTransitBottomCheck";
-            this.xrTransitBottomCheck.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrTransitBottomCheck.SizeF = new System.Drawing.SizeF(18.44336F, 26.32999F);
-            this.xrTransitBottomCheck.StylePriority.UseFont = false;
-            this.xrTransitBottomCheck.StylePriority.UsePadding = false;
-            this.xrTransitBottomCheck.StylePriority.UseTextAlignment = false;
-            this.xrTransitBottomCheck.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
-            // 
-            // xrMICRTransitNumber
-            // 
-            this.xrMICRTransitNumber.BorderColor = System.Drawing.Color.Black;
-            this.xrMICRTransitNumber.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrMICRTransitNumber.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrMICRTransitNumber.BorderWidth = 1F;
-            this.xrMICRTransitNumber.CanGrow = false;
-            this.xrMICRTransitNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TransitNumber] + \'⑆\'")});
-            this.xrMICRTransitNumber.Font = new DevExpress.Drawing.DXFont("MICR Encoding", 12F);
-            this.xrMICRTransitNumber.KeepTogether = true;
-            this.xrMICRTransitNumber.LocationFloat = new DevExpress.Utils.PointFloat(246.5233F, 318.2301F);
-            this.xrMICRTransitNumber.Multiline = true;
-            this.xrMICRTransitNumber.Name = "xrMICRTransitNumber";
-            this.xrMICRTransitNumber.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrMICRTransitNumber.SizeF = new System.Drawing.SizeF(125.3067F, 26.32999F);
-            this.xrMICRTransitNumber.StylePriority.UseFont = false;
-            this.xrMICRTransitNumber.StylePriority.UsePadding = false;
-            this.xrMICRTransitNumber.StylePriority.UseTextAlignment = false;
-            this.xrMICRTransitNumber.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrCheckNumber
             // 
@@ -1297,8 +1249,8 @@
             this.xrCheckNumber.CanGrow = false;
             this.xrCheckNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'/\'+[SerialNumber]+\'/\'")});
-            this.xrCheckNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑈\'+[SerialNumber]+\'⑈\'")});
+            this.xrCheckNumber.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrCheckNumber.KeepTogether = true;
             this.xrCheckNumber.LocationFloat = new DevExpress.Utils.PointFloat(27.43F, 318.2301F);
             this.xrCheckNumber.Multiline = true;
@@ -1451,7 +1403,7 @@
             this.xrLabel3.CanGrow = false;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\' \'")});
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(625.35F, 318.2301F);
             this.xrLabel3.Multiline = true;
@@ -1472,8 +1424,8 @@
             this.xrMICRAccountNumber.CanGrow = false;
             this.xrMICRAccountNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\'/\'")});
-            this.xrMICRAccountNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\'⑈\'")});
+            this.xrMICRAccountNumber.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrMICRAccountNumber.KeepTogether = true;
             this.xrMICRAccountNumber.LocationFloat = new DevExpress.Utils.PointFloat(388.4901F, 318.2301F);
             this.xrMICRAccountNumber.Multiline = true;
@@ -1804,6 +1756,28 @@
             this.xrNonNegotiablePicture.SizeF = new System.Drawing.SizeF(794.0999F, 249.88F);
             this.xrNonNegotiablePicture.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
+            // xrTransitBottomCheck
+            // 
+            this.xrTransitBottomCheck.BorderColor = System.Drawing.Color.Black;
+            this.xrTransitBottomCheck.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrTransitBottomCheck.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrTransitBottomCheck.BorderWidth = 1F;
+            this.xrTransitBottomCheck.CanGrow = false;
+            this.xrTransitBottomCheck.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintMICRInformation]"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑆\'+[TransitNumber] + \'⑆\'")});
+            this.xrTransitBottomCheck.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
+            this.xrTransitBottomCheck.KeepTogether = true;
+            this.xrTransitBottomCheck.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 318.2301F);
+            this.xrTransitBottomCheck.Multiline = true;
+            this.xrTransitBottomCheck.Name = "xrTransitBottomCheck";
+            this.xrTransitBottomCheck.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTransitBottomCheck.SizeF = new System.Drawing.SizeF(143.75F, 26.32999F);
+            this.xrTransitBottomCheck.StylePriority.UseFont = false;
+            this.xrTransitBottomCheck.StylePriority.UsePadding = false;
+            this.xrTransitBottomCheck.StylePriority.UseTextAlignment = false;
+            this.xrTransitBottomCheck.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            // 
             // StubEnd
             // 
             this.StubEnd.HeightF = 0F;
@@ -1866,7 +1840,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DSCheckHeader";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"597\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"617\" />";
             source1.DataMember = "DSCheckHeader";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DSCheckHeader";
@@ -1926,7 +1900,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SecondSignaturePath"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FileExtensionOriginalLogo"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FileExtensionOriginalSignature"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FileExtensionOriginalSecondarySignature")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FileExtensionOriginalSecondarySignature"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsEFT")});
             selectNode1.Root = sourceNode1;
             joinElement1.Condition = "[[CheckFormatSettings\\].[EntryRow\\]] = [[Dynamic_DSCheckHeader\\].[RowCheckFormat\\" +
     "]]";
@@ -1970,8 +1945,25 @@
             // 
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrSubreport3});
+            this.ReportHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[OverflowOptionCodeID] in (2,3) AND [WillPrintCoverSheet] OR ?pbooHideCheckPart")});
             this.ReportHeader.HeightF = 0F;
             this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrSubreport3
+            // 
+            this.xrSubreport3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintCoverSheet] OR ?pbooHideCheckPart")});
+            this.xrSubreport3.GenerateOwnPages = true;
+            this.xrSubreport3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport3.Name = "xrSubreport3";
+            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSCheckHeader.CompanyAddressBlockCoverSheet"));
+            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCoverPageAddress", null, "Dynamic_DSCheckHeader.EntityAddressBlock"));
+            this.xrSubreport3.ReportSource = new ReportsEngine.Reports.RDReports.CheckCoverPage();
+            this.xrSubreport3.SizeF = new System.Drawing.SizeF(809F, 0F);
             // 
             // ReportFooter
             // 
@@ -1982,6 +1974,31 @@
                     " (2,3)")});
             this.ReportFooter.HeightF = 2F;
             this.ReportFooter.Name = "ReportFooter";
+            // 
+            // APChecksRemittanceOnly
+            // 
+            this.APChecksRemittanceOnly.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance = 0 AND [OverflowOptionCodeID] in (2,3)")});
+            this.APChecksRemittanceOnly.GenerateOwnPages = true;
+            this.APChecksRemittanceOnly.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.APChecksRemittanceOnly.Name = "APChecksRemittanceOnly";
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunningAtEnd", this.booTrue));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooMICR", null, null));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormat", null, null));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooSignature", null, null));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrSignaturePath", null, null));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrTwoSignaturesRequiredAmount", null, null));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngIsTwoSignaturesRequired", null, null));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngProcessTrackingID", this.plngProcessTrackingID));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSCheckHeader.CompanyAddressBlockLong"));
+            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCodeID", null, "Dynamic_DSCheckHeader.OverflowOptionCodeID"));
+            this.APChecksRemittanceOnly.ReportSource = new ReportsEngine.Reports.CheckReports.ManualChecksRemittanceOnly();
+            this.APChecksRemittanceOnly.SizeF = new System.Drawing.SizeF(809F, 2F);
             // 
             // booTrue
             // 
@@ -2049,6 +2066,21 @@
             this.CheckCoverPage.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.EndCoverPageBand});
             // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintCoverSheet] OR ?pbooHideCheckPart")});
+            this.xrSubreport2.GenerateOwnPages = true;
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCoverPageAddress", null, "Dynamic_DSCheckHeader.EntityAddressBlock"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSCheckHeader.CompanyAddressBlockCoverSheet"));
+            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.RDReports.CheckCoverPage();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(809F, 0F);
+            // 
             // EndCoverPageBand
             // 
             this.EndCoverPageBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -2103,6 +2135,28 @@
             this.groupFooterBand3.Name = "groupFooterBand3";
             this.groupFooterBand3.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
             // 
+            // xrSubreport1
+            // 
+            this.xrSubreport1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2\n")});
+            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport1.Name = "xrSubreport1";
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSAPCheckHeader.CompanyAddressBlockLong"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "Dynamic_DSCheckHeader.CheckID"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteCheckDate", null, "Dynamic_DSCheckHeader.CheckDate"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEntity", null, "Dynamic_DSCheckHeader.EntityNumber"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblCheckAmount", null, "Dynamic_DSCheckHeader.CheckAmount"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCheckNumber", null, "Dynamic_DSCheckHeader.CheckNumber"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunningAtEnd", this.booTrue));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCodeID", null, "Dynamic_DSCheckHeader.OverflowOptionCodeID"));
+            this.xrSubreport1.ReportSource = new ReportsEngine.ManualCheckRemittanceSubreport();
+            this.xrSubreport1.SizeF = new System.Drawing.SizeF(794.0999F, 24.61065F);
+            // 
             // EndRemittance
             // 
             this.EndRemittance.HeightF = 0F;
@@ -2125,115 +2179,6 @@
             this.pbooHideCheckPart.Name = "pbooHideCheckPart";
             this.pbooHideCheckPart.Type = typeof(bool);
             this.pbooHideCheckPart.ValueInfo = "False";
-            // 
-            // ManualCheckSubreport
-            // 
-            this.ManualCheckSubreport.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
-            this.ManualCheckSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.ManualCheckSubreport.Name = "ManualCheckSubreport";
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "Dynamic_DSCheckHeader.CheckID"));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteCheckDate", null, "Dynamic_DSCheckHeader.CheckDate"));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEntity", null, "Dynamic_DSCheckHeader.EntityNumber"));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblCheckAmount", null, "Dynamic_DSCheckHeader.CheckAmount"));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCheckNumber", null, "Dynamic_DSCheckHeader.CheckNumber"));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunningAtEnd", this.booFalse));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCodeID", null, "Dynamic_DSCheckHeader.OverflowOptionCodeID"));
-            this.ManualCheckSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSCheckHeader.CompanyAddressBlockLong"));
-            this.ManualCheckSubreport.ReportSource = new ReportsEngine.ManualCheckRemittanceSubreport();
-            this.ManualCheckSubreport.SizeF = new System.Drawing.SizeF(794.0999F, 24.61065F);
-            // 
-            // xrSubreport3
-            // 
-            this.xrSubreport3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintCoverSheet] OR ?pbooHideCheckPart")});
-            this.xrSubreport3.GenerateOwnPages = true;
-            this.xrSubreport3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport3.Name = "xrSubreport3";
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormat", this.plngCheckFormat));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_RDCheckHeader.CompanyAddressBlockCoverSheet"));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckPrintingProcessTrackingID", null, null));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrStartingOwnerNumber", null, null));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEndingOwnerNumber", null, null));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCodeID", null, null));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooReturnElectronicPayments", null, null));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooReturnPrintedChecks", null, null));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrBeginningCheckNumber", null, null));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEndingCheckNumber", null, null));
-            this.xrSubreport3.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrSelectCheck", null, null));
-            this.xrSubreport3.ReportSource = new ReportsEngine.Reports.RDReports.CheckCoverPageAllRDChecks();
-            this.xrSubreport3.SizeF = new System.Drawing.SizeF(809F, 0F);
-            // 
-            // APChecksRemittanceOnly
-            // 
-            this.APChecksRemittanceOnly.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance = 0 AND [OverflowOptionCodeID] in (2,3)")});
-            this.APChecksRemittanceOnly.GenerateOwnPages = true;
-            this.APChecksRemittanceOnly.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.APChecksRemittanceOnly.Name = "APChecksRemittanceOnly";
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunningAtEnd", this.booTrue));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooMICR", null, null));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormat", null, null));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooSignature", null, null));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrSignaturePath", null, null));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrTwoSignaturesRequiredAmount", null, null));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngIsTwoSignaturesRequired", null, null));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngProcessTrackingID", this.plngProcessTrackingID));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSCheckHeader.CompanyAddressBlockLong"));
-            this.APChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCodeID", null, "Dynamic_DSCheckHeader.OverflowOptionCodeID"));
-            this.APChecksRemittanceOnly.ReportSource = new ReportsEngine.Reports.CheckReports.ManualChecksRemittanceOnly();
-            this.APChecksRemittanceOnly.SizeF = new System.Drawing.SizeF(809F, 2F);
-            // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintCoverSheet] OR ?pbooHideCheckPart")});
-            this.xrSubreport2.GenerateOwnPages = true;
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCoverPageAddress", null, "Dynamic_RDCheckHeader.OwnerAddressBlock"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSCheckHeader.CompanyAddressBlockCoverSheet"));
-            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.RDReports.CheckCoverPage();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(809F, 0F);
-            // 
-            // xrSubreport1
-            // 
-            this.xrSubreport1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2\n")});
-            this.xrSubreport1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport1.Name = "xrSubreport1";
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormatIsMICR", this.plngCheckFormatIsMICR));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSAPCheckHeader.CompanyAddressBlockLong"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngImbursementID", null, "Dynamic_DSCheckHeader.CheckID"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteCheckDate", null, "Dynamic_DSCheckHeader.CheckDate"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEntity", null, "Dynamic_DSCheckHeader.EntityNumber"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblCheckAmount", null, "Dynamic_DSCheckHeader.CheckAmount"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCheckNumber", null, "Dynamic_DSCheckHeader.CheckNumber"));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunningAtEnd", this.booTrue));
-            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCodeID", null, "Dynamic_DSCheckHeader.OverflowOptionCodeID"));
-            this.xrSubreport1.ReportSource = new ReportsEngine.ManualCheckRemittanceSubreport();
-            this.xrSubreport1.SizeF = new System.Drawing.SizeF(794.0999F, 24.61065F);
             // 
             // ManualChecks
             // 
@@ -2261,6 +2206,7 @@
             this.DataMember = "Dynamic_DSCheckHeader";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "ManualChecks";
+            this.FilterString = "Not [IsEFT]";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 21F, 12.5F, 12.5F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
@@ -2372,12 +2318,8 @@
         private DevExpress.XtraReports.UI.XRLabel SignatureLineCommentBottomCheckTwo;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBoxBottomSignatureTwo;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBoxTopSignatureTwo;
-        private DevExpress.XtraReports.UI.XRLabel xrTransitTopCheck;
-        private DevExpress.XtraReports.UI.XRLabel xrMICRTransitNumberTwo;
-        private DevExpress.XtraReports.UI.XRLabel xrCheckNumberTwo;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBoxLogoTwo;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
-        private DevExpress.XtraReports.UI.XRLabel xrMICRAccountNumberTwo;
         private DevExpress.XtraReports.UI.XRLabel xrLabel22;
         private DevExpress.XtraReports.UI.XRLabel xrCompanyAddressBlockTopCheck;
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
@@ -2392,7 +2334,6 @@
         private DevExpress.XtraReports.UI.XRPictureBox xrNonNegotiablePictureTwo;
         private DevExpress.XtraReports.UI.XRPanel xrPanel1;
         private DevExpress.XtraReports.UI.XRLabel xrTransitBottomCheck;
-        private DevExpress.XtraReports.UI.XRLabel xrMICRTransitNumber;
         private DevExpress.XtraReports.UI.XRLabel xrCheckNumber;
         private DevExpress.XtraReports.UI.XRPanel Rectangle4;
         private DevExpress.XtraReports.UI.XRPictureBox xrPictureBoxTopSignature;
@@ -2447,5 +2388,8 @@
         private DevExpress.XtraReports.Parameters.Parameter plngPrintRemittance;
         private DevExpress.XtraReports.Parameters.Parameter pbooHideCheckPart;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport3;
+        private DevExpress.XtraReports.UI.XRLabel xrCheckNumberTwo;
+        private DevExpress.XtraReports.UI.XRLabel xrMICRAccountNumberTwo;
+        private DevExpress.XtraReports.UI.XRLabel xrTransitTopCheck;
     }
 }

@@ -3056,7 +3056,7 @@
             this.xrLabel79.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel79.BorderWidth = 1F;
             this.xrLabel79.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Report Totals\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Report Total\'")});
             this.xrLabel79.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel79.ForeColor = System.Drawing.Color.Black;
             this.xrLabel79.KeepTogether = true;

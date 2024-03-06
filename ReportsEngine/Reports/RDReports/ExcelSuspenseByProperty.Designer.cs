@@ -487,7 +487,7 @@
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            this.xrLabel4.TextFormatString = "{0:MM/dd/yyyy}";
+            this.xrLabel4.TextFormatString = "{0:MM/yyyy}";
             // 
             // xrLabel3
             // 
@@ -1203,7 +1203,7 @@
             this.xrLabel75.StylePriority.UseFont = false;
             this.xrLabel75.StylePriority.UsePadding = false;
             this.xrLabel75.StylePriority.UseTextAlignment = false;
-            this.xrLabel75.Text = "Sale\nDate";
+            this.xrLabel75.Text = "Prod\r\n\nDate";
             this.xrLabel75.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel76

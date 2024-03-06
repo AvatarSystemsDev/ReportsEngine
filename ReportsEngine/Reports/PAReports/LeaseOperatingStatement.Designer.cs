@@ -587,7 +587,7 @@
             this.xrLabel16.StylePriority.UsePadding = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel16.TextFormatString = "{0:N}";
+            this.xrLabel16.TextFormatString = "{0:N2}";
             // 
             // xrLabel15
             // 
@@ -612,7 +612,7 @@
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel15.TextFormatString = "{0:N}";
+            this.xrLabel15.TextFormatString = "{0:N2}";
             // 
             // xrLabel14
             // 
@@ -637,7 +637,7 @@
             this.xrLabel14.StylePriority.UsePadding = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel14.TextFormatString = "{0:N}";
+            this.xrLabel14.TextFormatString = "{0:N2}";
             // 
             // xrLabel13
             // 
@@ -662,7 +662,7 @@
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel13.TextFormatString = "{0:N}";
+            this.xrLabel13.TextFormatString = "{0:N2}";
             // 
             // xrLabel12
             // 
@@ -687,7 +687,7 @@
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel12.TextFormatString = "{0:N}";
+            this.xrLabel12.TextFormatString = "{0:N2}";
             // 
             // xrLabel11
             // 
@@ -712,7 +712,7 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel11.TextFormatString = "{0:N}";
+            this.xrLabel11.TextFormatString = "{0:N2}";
             // 
             // xrLabel10
             // 
@@ -737,7 +737,7 @@
             this.xrLabel10.StylePriority.UsePadding = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel10.TextFormatString = "{0:N}";
+            this.xrLabel10.TextFormatString = "{0:N2}";
             // 
             // xrLabel9
             // 
@@ -762,7 +762,7 @@
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel9.TextFormatString = "{0:N}";
+            this.xrLabel9.TextFormatString = "{0:N2}";
             // 
             // xrLabel8
             // 
@@ -787,7 +787,7 @@
             this.xrLabel8.StylePriority.UsePadding = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel8.TextFormatString = "{0:N}";
+            this.xrLabel8.TextFormatString = "{0:N2}";
             // 
             // xrLabel7
             // 
@@ -812,7 +812,7 @@
             this.xrLabel7.StylePriority.UsePadding = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel7.TextFormatString = "{0:N}";
+            this.xrLabel7.TextFormatString = "{0:N2}";
             // 
             // xrLabel6
             // 
@@ -837,7 +837,7 @@
             this.xrLabel6.StylePriority.UsePadding = false;
             this.xrLabel6.StylePriority.UseTextAlignment = false;
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel6.TextFormatString = "{0:N}";
+            this.xrLabel6.TextFormatString = "{0:N2}";
             // 
             // xrLabel5
             // 
@@ -862,7 +862,7 @@
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel5.TextFormatString = "{0:N}";
+            this.xrLabel5.TextFormatString = "{0:N2}";
             // 
             // xrLabel4
             // 
@@ -887,7 +887,7 @@
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel4.TextFormatString = "{0:N}";
+            this.xrLabel4.TextFormatString = "{0:N2}";
             // 
             // xrLabel3
             // 
@@ -912,7 +912,7 @@
             this.xrLabel3.StylePriority.UsePadding = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel3.TextFormatString = "{0:N}";
+            this.xrLabel3.TextFormatString = "{0:N2}";
             // 
             // xrLabel1
             // 
@@ -1231,7 +1231,7 @@
             // 
             this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
             this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 8.797152F);
+            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 7.505569F);
             this.xrRunDate.Name = "xrRunDate";
             this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;

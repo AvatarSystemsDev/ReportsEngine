@@ -682,7 +682,7 @@
             this.xrLabel21.CanGrow = false;
             this.xrLabel21.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\' \'")});
-            this.xrLabel21.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel21.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrLabel21.KeepTogether = true;
             this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(625.3499F, 254.2717F);
             this.xrLabel21.Multiline = true;
@@ -1264,7 +1264,7 @@
             this.xrLabel3.CanGrow = false;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\' \'")});
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(625.35F, 318.2301F);
             this.xrLabel3.Multiline = true;

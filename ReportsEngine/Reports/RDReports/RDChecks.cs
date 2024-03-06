@@ -20,36 +20,26 @@ namespace ReportsEngine
     public partial class RDChecks : DevExpress.XtraReports.UI.XtraReport
     {
         private int pageCounter = 1;
-        private bool printChecks = false;
-        private bool inRemittance = false;
-        private int lastDetail = 0;
-        private int checkIndex = 1;
-        private int OverflowOptionCodeID = 1;
         public RDChecks()
         {
             InitializeComponent();
-            xrMICRAccountNumber.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            xrMICRTransitNumber.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            xrCheckNumber.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            xrMICRAccountNumberTwo.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            xrMICRTransitNumberTwo.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
-            xrCheckNumberTwo.Font = new DXFont("MICRE13B", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            xrMICRAccountNumber.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
+            xrTransitBottomCheck.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
+            xrCheckNumber.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
+            xrMICRAccountNumberTwo.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
+            xrTransitTopCheck.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
+            xrCheckNumberTwo.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
             xrPages.PrintOnPage += XrPages_PrintOnPage;
             RemittanceDetailBand.PrintOnPage += RemittanceDetailBand_PrintOnPage;
             CheckBegin.PrintOnPage += CheckBegin_PrintOnPage;
-            //CheckEnd.PrintOnPage += CheckEnd_PrintOnPage;
-            //CheckEnd.BeforePrint += CheckEnd_BeforePrint;
             xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
-            //xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
             xrNonNegotiablePictureTwo.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
             xrMICRAccountNumber.PrintOnPage += XrMICRAccountNumber_PrintOnPage;
-            xrMICRTransitNumber.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
+            xrTransitBottomCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             xrCheckNumber.PrintOnPage += XrCheckNumber_PrintOnPage;
             xrMICRAccountNumberTwo.PrintOnPage += XrMICRAccountNumber_PrintOnPage;
-            xrMICRTransitNumberTwo.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
+            xrTransitTopCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             xrCheckNumberTwo.PrintOnPage += XrCheckNumber_PrintOnPage;
-            BeginningRemittance.PrintOnPage += BeginningRemittance_PrintOnPage;
-            EndRemittance.PrintOnPage += EndRemittance_PrintOnPage;
             xrPictureBoxLogo.PrintOnPage += XrPictureBoxLogo_PrintOnPage;
             xrPictureBoxLogoTwo.PrintOnPage += XrPictureBoxLogo_PrintOnPage;
             xrPictureBoxTopSignature.PrintOnPage += XrPictureBoxTopSignature_PrintOnPage;
@@ -62,11 +52,8 @@ namespace ReportsEngine
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage;
             CheckInformationPart.PrintOnPage += CheckStubBandTopCheck_PrintOnPage;
             CheckCoverPage.PrintOnPage += CheckCoverPage_PrintOnPage;
-            StubEnd.PrintOnPage += StubEnd_PrintOnPage;
             xrPageBeginningLabel.PrintOnPage += XrPageBeginningLabel_PrintOnPage;
             xrCheckEnderLabel.PrintOnPage += XrCheckEnderLabel_PrintOnPage;
-            //xrCompanyAddressBlockTopCheck.PrintOnPage += XrCompanyAddressBlockTopCheck_PrintOnPage;
-            //xrCompanyAddressBlockBottomCheck.PrintOnPage += XrCompanyAddressBlockBottomCheck_PrintOnPage;
             CheckTopBand.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckBottomBand.PrintOnPage += CheckBottomBand_PrintOnPage;
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
@@ -75,12 +62,6 @@ namespace ReportsEngine
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckInformationPart.PrintOnPage += CheckTopBand_PrintOnPage;
             xrTopCheckPanel.PrintOnPage += XrTopCheckPanel_PrintOnPage;
-            //XRNextReport.BeforePrint += RDChecksRemittanceOnly_BeforePrint;
-            CheckBeginningHeader.BeforePrint += CheckBeginningHeader_BeforePrint;
-            CheckGroupBottom.BeforePrint += CheckGroupBottom_BeforePrint;
-            //EntryRowEndBand.BeforePrint += EntryRowEndBand_BeforePrint;
-            EndRemittance.BeforePrint += EndRemittance_BeforePrint;
-            EntryBegin.BeforePrint += EntryBegin_BeforePrint;
             xrEndCoverPage.PrintOnPage += XrEndCoverPage_PrintOnPage;
         }
 
@@ -88,39 +69,6 @@ namespace ReportsEngine
         {
             pageCounter = 1;
         }
-        private void EndRemittance_BeforePrint(object sender, CancelEventArgs e)
-        {
-            checkIndex++;
-        }
-
-        private void EntryBegin_BeforePrint(object sender, CancelEventArgs e)
-        {
-            lastDetail = int.Parse(GetCurrentColumnValue("RecordCount").ToString());
-            object temp = GetCurrentColumnValue("OverflowOptionCodeID");
-            bool success = int.TryParse(temp?.ToString(), out int result);
-            OverflowOptionCodeID = success ? result : 1;
-            //CheckGroupBottom.PrintAtBottom = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
-        }
-
-        private void CheckGroupBottom_BeforePrint(object sender, CancelEventArgs e)
-        {
-            GroupBand CheckGroupBottom = sender as GroupBand;
-            CheckGroupBottom.RepeatEveryPage = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
-            //CheckGroupBottom.Visible = checkIndex <= lastDetail;
-        }
-
-        private void CheckBeginningHeader_BeforePrint(object sender, CancelEventArgs e)
-        {
-            GroupBand CheckGroupTop = sender as GroupBand;
-            CheckGroupTop.RepeatEveryPage = OverflowOptionCodeID == 1 || OverflowOptionCodeID == 2;
-            //CheckGroupTop.Visible = checkIndex <= lastDetail;
-        }
-
-        //private void RDChecksRemittanceOnly_BeforePrint(object sender, CancelEventArgs e)
-        //{
-        //    CheckGroupBottom.RepeatEveryPage = false;
-        //    CheckBeginningHeader.RepeatEveryPage = false;
-        //}
 
         private void XrTopCheckPanel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
@@ -136,14 +84,6 @@ namespace ReportsEngine
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
-            if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
-            {
-                //band.PageBreak = PageBreak.AfterBand;
-            }
-            else
-            {
-                //band.PageBreak = PageBreak.None; // No page break on other pages
-            }
         }
 
         private void CheckStubBandTopCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)
@@ -152,14 +92,6 @@ namespace ReportsEngine
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
-            if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
-            {
-                //band.PageBreak = PageBreak.AfterBand;
-            }
-            else
-            {
-                //band.PageBreak = PageBreak.None; // No page break on other pages
-            }
         }
 
         private void CheckBottomBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -196,11 +128,6 @@ namespace ReportsEngine
             pageCounter++;
         }
 
-        private void StubEnd_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
-            printChecks = true;
-        }
-
         private void CheckStubBandTopCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             Band band = sender as Band;
@@ -220,14 +147,6 @@ namespace ReportsEngine
             band.Visible = TwoSignaturesRequiredValue && pageCounter > 2;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
-            if (pageCounter <= 2 && OverflowHideValue) // Assuming you want to apply this on the first page
-            {
-                //band.PageBreak = PageBreak.BeforeBand;
-            }
-            else
-            {
-                //band.PageBreak = PageBreak.None; // No page break on other pages
-            }
         }
 
         private void CheckBegin_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -238,7 +157,7 @@ namespace ReportsEngine
         private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
-            string imagePathSecondSignature = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
+            string imagePathSecondSignature = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
             try
             {
                 pictureBox.ImageSource = ImageSource.FromFile(imagePathSecondSignature); // Second Signature
@@ -252,7 +171,7 @@ namespace ReportsEngine
         private void XrPictureBoxBottomSignatureTwo_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
-            string imagePathSecondSignature = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
+            string imagePathSecondSignature = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
             try
             {
                 pictureBox.ImageSource = ImageSource.FromFile(imagePathSecondSignature); // Second Signature
@@ -265,7 +184,7 @@ namespace ReportsEngine
 
         private void XrPictureBoxTopSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            string imagePath = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
+            string imagePath = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
             XRPictureBox pictureBox = sender as XRPictureBox;
             try
             {
@@ -279,7 +198,7 @@ namespace ReportsEngine
 
         private void XrPictureBoxTopSignatureTwo_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            string imagePath = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
+            string imagePath = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
             XRPictureBox pictureBox = sender as XRPictureBox;
             try
             {
@@ -303,17 +222,6 @@ namespace ReportsEngine
             {
                 // Probably add some error handling here.
             }
-        }
-
-        private void EndRemittance_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
-            inRemittance = false;
-
-        }
-
-        private void BeginningRemittance_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
-            inRemittance = true;
         }
 
         private void XrCheckNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)

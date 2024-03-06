@@ -283,7 +283,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "Iif(?pbitMICR = True, \'MICRE13B\', \'Segoe UI\')"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑈\'+[SerialNumber]+\'⑈\'")});
-            this.xrLabel16.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel16.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrLabel16.KeepTogether = true;
             this.xrLabel16.LocationFloat = new DevExpress.Utils.PointFloat(27.43F, 327.67F);
             this.xrLabel16.Multiline = true;
@@ -303,7 +303,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "Iif(?pbitMICR = True, \'MICRE13B\', \'Segoe UI\')"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\'⑈\'")});
-            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrLabel17.KeepTogether = true;
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(388.49F, 327.67F);
             this.xrLabel17.Multiline = true;
@@ -323,7 +323,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "Iif(?pbitMICR = True, \'MICRE13B\', \'Segoe UI\')"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?plngCheckFormatIsMICR = True, True, False)"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'⑆\'+[TransitNumber]+\'⑆\'")});
-            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrLabel18.KeepTogether = true;
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 328.23F);
             this.xrLabel18.Multiline = true;

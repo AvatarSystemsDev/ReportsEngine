@@ -105,7 +105,7 @@
             this.xrCheckNumber.CanGrow = false;
             this.xrCheckNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CheckNumber]")});
-            this.xrCheckNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrCheckNumber.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrCheckNumber.KeepTogether = true;
             this.xrCheckNumber.LocationFloat = new DevExpress.Utils.PointFloat(27.43004F, 0F);
             this.xrCheckNumber.Multiline = true;
@@ -126,7 +126,7 @@
             this.xrMICRTransitNumber.CanGrow = false;
             this.xrMICRTransitNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[TransitNumber]")});
-            this.xrMICRTransitNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrMICRTransitNumber.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrMICRTransitNumber.KeepTogether = true;
             this.xrMICRTransitNumber.LocationFloat = new DevExpress.Utils.PointFloat(228.08F, 0F);
             this.xrMICRTransitNumber.Multiline = true;
@@ -147,7 +147,7 @@
             this.xrMICRAccountNumber.CanGrow = false;
             this.xrMICRAccountNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]")});
-            this.xrMICRAccountNumber.Font = new DevExpress.Drawing.DXFont("MICRE13B", 12F);
+            this.xrMICRAccountNumber.Font = new DevExpress.Drawing.DXFont("IDAutomationMICRB10", 12F);
             this.xrMICRAccountNumber.KeepTogether = true;
             this.xrMICRAccountNumber.LocationFloat = new DevExpress.Utils.PointFloat(388.4901F, 0F);
             this.xrMICRAccountNumber.Multiline = true;

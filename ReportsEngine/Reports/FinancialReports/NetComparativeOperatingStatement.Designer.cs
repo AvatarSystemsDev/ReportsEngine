@@ -222,13 +222,9 @@
             this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel53 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel54 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel55 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel58 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel59 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel60 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPanel1 = new DevExpress.XtraReports.UI.XRPanel();
             this.pdteBeginningDate8 = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrLabel61 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel62 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel63 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel64 = new DevExpress.XtraReports.UI.XRLabel();
@@ -596,7 +592,7 @@
             this.xrLabel3.StylePriority.UsePadding = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel3.TextFormatString = "{0:N}";
+            this.xrLabel3.TextFormatString = "{0:N2}";
             // 
             // xrLabel4
             // 
@@ -621,7 +617,7 @@
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel4.TextFormatString = "{0:N}";
+            this.xrLabel4.TextFormatString = "{0:N2}";
             // 
             // xrLabel5
             // 
@@ -646,7 +642,7 @@
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel5.TextFormatString = "{0:N}";
+            this.xrLabel5.TextFormatString = "{0:N2}";
             // 
             // xrLabel6
             // 
@@ -671,7 +667,7 @@
             this.xrLabel6.StylePriority.UsePadding = false;
             this.xrLabel6.StylePriority.UseTextAlignment = false;
             this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel6.TextFormatString = "{0:N}";
+            this.xrLabel6.TextFormatString = "{0:N2}";
             // 
             // xrLabel7
             // 
@@ -696,7 +692,7 @@
             this.xrLabel7.StylePriority.UsePadding = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel7.TextFormatString = "{0:N}";
+            this.xrLabel7.TextFormatString = "{0:N2}";
             // 
             // xrLabel8
             // 
@@ -721,7 +717,7 @@
             this.xrLabel8.StylePriority.UsePadding = false;
             this.xrLabel8.StylePriority.UseTextAlignment = false;
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel8.TextFormatString = "{0:N}";
+            this.xrLabel8.TextFormatString = "{0:N2}";
             // 
             // xrLabel9
             // 
@@ -746,7 +742,7 @@
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel9.TextFormatString = "{0:N}";
+            this.xrLabel9.TextFormatString = "{0:N2}";
             // 
             // xrLabel10
             // 
@@ -771,7 +767,7 @@
             this.xrLabel10.StylePriority.UsePadding = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel10.TextFormatString = "{0:N}";
+            this.xrLabel10.TextFormatString = "{0:N2}";
             // 
             // xrLabel11
             // 
@@ -796,7 +792,7 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel11.TextFormatString = "{0:N}";
+            this.xrLabel11.TextFormatString = "{0:N2}";
             // 
             // xrLabel12
             // 
@@ -821,7 +817,7 @@
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel12.TextFormatString = "{0:N}";
+            this.xrLabel12.TextFormatString = "{0:N2}";
             // 
             // xrLabel13
             // 
@@ -846,7 +842,7 @@
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel13.TextFormatString = "{0:N}";
+            this.xrLabel13.TextFormatString = "{0:N2}";
             // 
             // xrLabel14
             // 
@@ -871,7 +867,7 @@
             this.xrLabel14.StylePriority.UsePadding = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel14.TextFormatString = "{0:N}";
+            this.xrLabel14.TextFormatString = "{0:N2}";
             // 
             // xrLabel15
             // 
@@ -896,7 +892,7 @@
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel15.TextFormatString = "{0:N}";
+            this.xrLabel15.TextFormatString = "{0:N2}";
             // 
             // xrLabel16
             // 
@@ -921,7 +917,7 @@
             this.xrLabel16.StylePriority.UsePadding = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel16.TextFormatString = "{0:N}";
+            this.xrLabel16.TextFormatString = "{0:N2}";
             // 
             // xrLabel17
             // 
@@ -1799,12 +1795,8 @@
             this.xrLabel52,
             this.xrLabel53,
             this.xrLabel54,
-            this.xrLabel55,
-            this.xrLabel58,
-            this.xrLabel59,
             this.xrLabel60,
             this.xrPanel1,
-            this.xrLabel61,
             this.xrLabel62,
             this.xrLabel63,
             this.xrLabel64,
@@ -1945,72 +1937,6 @@
             this.xrLabel54.StylePriority.UseTextAlignment = false;
             this.xrLabel54.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // xrLabel55
-            // 
-            this.xrLabel55.BorderColor = System.Drawing.Color.LightGray;
-            this.xrLabel55.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel55.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel55.BorderWidth = 1F;
-            this.xrLabel55.CanGrow = false;
-            this.xrLabel55.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel55.KeepTogether = true;
-            this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(720.3268F, 0F);
-            this.xrLabel55.Name = "xrLabel55";
-            this.xrLabel55.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel55.SizeF = new System.Drawing.SizeF(21.22528F, 17.00001F);
-            this.xrLabel55.StylePriority.UseBorderColor = false;
-            this.xrLabel55.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel55.StylePriority.UseBorders = false;
-            this.xrLabel55.StylePriority.UseBorderWidth = false;
-            this.xrLabel55.StylePriority.UseFont = false;
-            this.xrLabel55.StylePriority.UsePadding = false;
-            this.xrLabel55.StylePriority.UseTextAlignment = false;
-            this.xrLabel55.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel58
-            // 
-            this.xrLabel58.BorderColor = System.Drawing.Color.LightGray;
-            this.xrLabel58.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel58.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel58.BorderWidth = 1F;
-            this.xrLabel58.CanGrow = false;
-            this.xrLabel58.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel58.KeepTogether = true;
-            this.xrLabel58.LocationFloat = new DevExpress.Utils.PointFloat(741.5521F, 0F);
-            this.xrLabel58.Name = "xrLabel58";
-            this.xrLabel58.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel58.SizeF = new System.Drawing.SizeF(62.711F, 17.00001F);
-            this.xrLabel58.StylePriority.UseBorderColor = false;
-            this.xrLabel58.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel58.StylePriority.UseBorders = false;
-            this.xrLabel58.StylePriority.UseBorderWidth = false;
-            this.xrLabel58.StylePriority.UseFont = false;
-            this.xrLabel58.StylePriority.UsePadding = false;
-            this.xrLabel58.StylePriority.UseTextAlignment = false;
-            this.xrLabel58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel59
-            // 
-            this.xrLabel59.BorderColor = System.Drawing.Color.LightGray;
-            this.xrLabel59.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel59.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel59.BorderWidth = 1F;
-            this.xrLabel59.CanGrow = false;
-            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel59.KeepTogether = true;
-            this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(804.2632F, 0F);
-            this.xrLabel59.Name = "xrLabel59";
-            this.xrLabel59.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel59.SizeF = new System.Drawing.SizeF(66.48016F, 17.00001F);
-            this.xrLabel59.StylePriority.UseBorderColor = false;
-            this.xrLabel59.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel59.StylePriority.UseBorders = false;
-            this.xrLabel59.StylePriority.UseBorderWidth = false;
-            this.xrLabel59.StylePriority.UseFont = false;
-            this.xrLabel59.StylePriority.UsePadding = false;
-            this.xrLabel59.StylePriority.UseTextAlignment = false;
-            this.xrLabel59.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
             // xrLabel60
             // 
             this.xrLabel60.BorderColor = System.Drawing.Color.LightGray;
@@ -2064,28 +1990,6 @@
             this.pdteBeginningDate8.SizeF = new System.Drawing.SizeF(272.72F, 17F);
             this.pdteBeginningDate8.StylePriority.UseFont = false;
             this.pdteBeginningDate8.StylePriority.UsePadding = false;
-            // 
-            // xrLabel61
-            // 
-            this.xrLabel61.BorderColor = System.Drawing.Color.Transparent;
-            this.xrLabel61.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel61.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel61.BorderWidth = 1F;
-            this.xrLabel61.CanGrow = false;
-            this.xrLabel61.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel61.KeepTogether = true;
-            this.xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(0F, 17.00001F);
-            this.xrLabel61.Name = "xrLabel61";
-            this.xrLabel61.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel61.SizeF = new System.Drawing.SizeF(162.2067F, 17.00001F);
-            this.xrLabel61.StylePriority.UseBorderColor = false;
-            this.xrLabel61.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel61.StylePriority.UseBorders = false;
-            this.xrLabel61.StylePriority.UseBorderWidth = false;
-            this.xrLabel61.StylePriority.UseFont = false;
-            this.xrLabel61.StylePriority.UsePadding = false;
-            this.xrLabel61.StylePriority.UseTextAlignment = false;
-            this.xrLabel61.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel62
             // 
@@ -3246,12 +3150,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel52;
         private DevExpress.XtraReports.UI.XRLabel xrLabel53;
         private DevExpress.XtraReports.UI.XRLabel xrLabel54;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel55;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel58;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel59;
         private DevExpress.XtraReports.UI.XRLabel xrLabel60;
         private DevExpress.XtraReports.UI.XRPanel xrPanel1;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel61;
         private DevExpress.XtraReports.UI.XRLabel xrLabel62;
         private DevExpress.XtraReports.UI.XRLabel xrLabel63;
         private DevExpress.XtraReports.UI.XRLabel xrLabel64;

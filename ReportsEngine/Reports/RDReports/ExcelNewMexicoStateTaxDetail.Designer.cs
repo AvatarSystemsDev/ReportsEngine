@@ -141,7 +141,7 @@
             this.xrLabel50.StylePriority.UsePadding = false;
             this.xrLabel50.StylePriority.UseTextAlignment = false;
             this.xrLabel50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrLabel50.TextFormatString = "{0:MM/dd/yyyy}";
+            this.xrLabel50.TextFormatString = "{0:MM/yyyy}";
             // 
             // xrLabel10
             // 
@@ -825,7 +825,7 @@
             this.xrLabel9.StylePriority.UseFont = false;
             this.xrLabel9.StylePriority.UsePadding = false;
             this.xrLabel9.StylePriority.UseTextAlignment = false;
-            this.xrLabel9.Text = "\r\nPUN";
+            this.xrLabel9.Text = "PUN";
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel6
