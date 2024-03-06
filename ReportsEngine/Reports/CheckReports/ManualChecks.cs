@@ -17,12 +17,12 @@ namespace ReportsEngine
         public ManualChecks()
         {
             InitializeComponent();
-            xrMICRAccountNumber.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
-            xrTransitBottomCheck.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
-            xrCheckNumber.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
-            xrMICRAccountNumberTwo.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
-            xrTransitTopCheck.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
-            xrCheckNumberTwo.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Bold, DXGraphicsUnit.Point);
+            xrMICRAccountNumber.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            xrTransitBottomCheck.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            xrCheckNumber.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            xrMICRAccountNumberTwo.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            xrTransitTopCheck.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
+            xrCheckNumberTwo.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             xrPages.PrintOnPage += XrPages_PrintOnPage;
             RemittanceDetailBand.PrintOnPage += RemittanceDetailBand_PrintOnPage;
             CheckBegin.PrintOnPage += CheckBegin_PrintOnPage;
