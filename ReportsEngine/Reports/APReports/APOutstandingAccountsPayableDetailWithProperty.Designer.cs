@@ -1641,7 +1641,7 @@
             // 
             // pbooUseInvoiceDate
             // 
-            this.pbooUseInvoiceDate.Description = "Date To Use";
+            this.pbooUseInvoiceDate.Description = "Date to Use";
             this.pbooUseInvoiceDate.Name = "pbooUseInvoiceDate";
             this.pbooUseInvoiceDate.Type = typeof(bool);
             this.pbooUseInvoiceDate.ValueInfo = "False";

@@ -791,7 +791,7 @@
             // 
             // pdteDateToUse
             // 
-            this.pdteDateToUse.Description = "Date To Use";
+            this.pdteDateToUse.Description = "Date to Use";
             this.pdteDateToUse.Name = "pdteDateToUse";
             this.pdteDateToUse.Type = typeof(System.DateTime);
             this.pdteDateToUse.ValueInfo = "2022-03-16";

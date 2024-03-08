@@ -862,11 +862,11 @@
             this.xrLabel60.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel60.ForeColor = System.Drawing.Color.Black;
             this.xrLabel60.KeepTogether = true;
-            this.xrLabel60.LocationFloat = new DevExpress.Utils.PointFloat(79.0966F, 2.670288E-05F);
+            this.xrLabel60.LocationFloat = new DevExpress.Utils.PointFloat(81.41149F, 3.051758E-05F);
             this.xrLabel60.Multiline = true;
             this.xrLabel60.Name = "xrLabel60";
             this.xrLabel60.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel60.SizeF = new System.Drawing.SizeF(148.1323F, 18.40498F);
+            this.xrLabel60.SizeF = new System.Drawing.SizeF(145.8174F, 18.40498F);
             this.xrLabel60.StylePriority.UseBackColor = false;
             this.xrLabel60.StylePriority.UseBorderColor = false;
             this.xrLabel60.StylePriority.UseBorderDashStyle = false;
@@ -886,15 +886,16 @@
             this.xrLabel61.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel61.BorderWidth = 1F;
             this.xrLabel61.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For GL Dates: \'\r\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For \' + Iif(?plngDateToUse = 1, \'GL\',?plngDateToUse = 2,\'Inv.\',\'Due\' )+\' Dates:\'" +
+                    "")});
             this.xrLabel61.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel61.ForeColor = System.Drawing.Color.Black;
             this.xrLabel61.KeepTogether = true;
-            this.xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.144409E-05F);
+            this.xrLabel61.LocationFloat = new DevExpress.Utils.PointFloat(0F, 3.051758E-05F);
             this.xrLabel61.Multiline = true;
             this.xrLabel61.Name = "xrLabel61";
             this.xrLabel61.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel61.SizeF = new System.Drawing.SizeF(79.09666F, 18.40501F);
+            this.xrLabel61.SizeF = new System.Drawing.SizeF(81.41148F, 18.40501F);
             this.xrLabel61.StylePriority.UseBackColor = false;
             this.xrLabel61.StylePriority.UseBorderColor = false;
             this.xrLabel61.StylePriority.UseBorderDashStyle = false;
@@ -2631,7 +2632,7 @@
             // 
             // plngDateToUse
             // 
-            this.plngDateToUse.Description = "Date To Use";
+            this.plngDateToUse.Description = "Date to Use";
             this.plngDateToUse.Name = "plngDateToUse";
             this.plngDateToUse.Type = typeof(int);
             this.plngDateToUse.ValueInfo = "1";

@@ -1393,7 +1393,7 @@
             this.xrLabel45.StylePriority.UseForeColor = false;
             this.xrLabel45.StylePriority.UsePadding = false;
             this.xrLabel45.StylePriority.UseTextAlignment = false;
-            this.xrLabel45.Text = "RD Suspense Code";
+            this.xrLabel45.Text = "RD Susp. Code";
             this.xrLabel45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel46
@@ -1907,7 +1907,7 @@
             // plngRDPayStatusChosenID
             // 
             this.plngRDPayStatusChosenID.AllowNull = true;
-            this.plngRDPayStatusChosenID.Description = "RD Pay Status";
+            this.plngRDPayStatusChosenID.Description = "RD Suspense Code";
             this.plngRDPayStatusChosenID.Name = "plngRDPayStatusChosenID";
             this.plngRDPayStatusChosenID.Type = typeof(int);
             this.plngRDPayStatusChosenID.ValueInfo = "0";
@@ -2122,7 +2122,7 @@
             this.xrLabel20.StylePriority.UseForeColor = false;
             this.xrLabel20.StylePriority.UsePadding = false;
             this.xrLabel20.StylePriority.UseTextAlignment = false;
-            this.xrLabel20.Text = "RD Suspense Code";
+            this.xrLabel20.Text = "RD Susp. Code";
             this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel21
@@ -2587,7 +2587,7 @@
             // plngJIBPayStatusChosenID
             // 
             this.plngJIBPayStatusChosenID.AllowNull = true;
-            this.plngJIBPayStatusChosenID.Description = "JIB Status";
+            this.plngJIBPayStatusChosenID.Description = "JIB Suspense Code";
             this.plngJIBPayStatusChosenID.Name = "plngJIBPayStatusChosenID";
             this.plngJIBPayStatusChosenID.Type = typeof(int);
             this.plngJIBPayStatusChosenID.ValueInfo = "0";

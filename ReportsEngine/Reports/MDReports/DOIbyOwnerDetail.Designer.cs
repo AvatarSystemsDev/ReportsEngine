@@ -1726,7 +1726,7 @@
             this.xrLabel69.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel69.SizeF = new System.Drawing.SizeF(116.6671F, 16.32815F);
             this.xrLabel69.StylePriority.UseFont = false;
-            this.xrLabel69.Text = "Date To Use: ";
+            this.xrLabel69.Text = "Date to Use: ";
             // 
             // xrOwnersSelected
             // 
@@ -1976,7 +1976,7 @@
             this.xrLabel82.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel82.SizeF = new System.Drawing.SizeF(116.6671F, 16.32815F);
             this.xrLabel82.StylePriority.UseFont = false;
-            this.xrLabel82.Text = "Date To Use: ";
+            this.xrLabel82.Text = "Date to Use: ";
             // 
             // xrLabel83
             // 
@@ -3342,7 +3342,7 @@
             // 
             // pdteDateToUse
             // 
-            this.pdteDateToUse.Description = "Date To Use";
+            this.pdteDateToUse.Description = "Date to Use";
             this.pdteDateToUse.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteDateToUse.Name = "pdteDateToUse";

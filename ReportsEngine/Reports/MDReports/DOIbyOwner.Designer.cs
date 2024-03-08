@@ -1466,7 +1466,7 @@ namespace ReportsEngine.Reports
             // 
             // pdteDateToUse
             // 
-            this.pdteDateToUse.Description = "Date To Use";
+            this.pdteDateToUse.Description = "Date to Use";
             this.pdteDateToUse.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteDateToUse.Name = "pdteDateToUse";

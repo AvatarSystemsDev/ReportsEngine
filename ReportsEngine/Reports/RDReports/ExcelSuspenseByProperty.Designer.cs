@@ -1421,7 +1421,7 @@
             // 
             // plngDateToUse
             // 
-            this.plngDateToUse.Description = "Date To Use";
+            this.plngDateToUse.Description = "Date to Use";
             this.plngDateToUse.Name = "plngDateToUse";
             this.plngDateToUse.Type = typeof(int);
             this.plngDateToUse.ValueInfo = "2";
