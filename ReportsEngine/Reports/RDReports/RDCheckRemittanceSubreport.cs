@@ -20,31 +20,76 @@ namespace ReportsEngine.Reports.RDReports
         }
         private void XrHeaderBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 2;
+            Parameter p = this.Parameters["plngOverflowOptionCode"];
+            string code = p.Value.ToString();
+            if (code == "1" || code == "2")
+            {
+                pageCounter = 1;
+            }
+            else
+            {
+                pageCounter = 2;
+            }
             pageRun = false;
         }
 
         private void ReportHeader_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 2;
+            Parameter p = this.Parameters["plngOverflowOptionCode"];
+            string code = p.Value.ToString();
+            if (code == "1" || code == "2")
+            {
+                pageCounter = 1;
+            }
+            else
+            {
+                pageCounter = 2;
+            }
             pageRun = false;
         }
 
         private void GroupHeaderBand2_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 2;
+            Parameter p = this.Parameters["plngOverflowOptionCode"];
+            string code = p.Value.ToString();
+            if (code == "1" || code == "2")
+            {
+                pageCounter = 1;
+            }
+            else
+            {
+                pageCounter = 2;
+            }
             pageRun = false;
         }
 
         private void xrEndOfRemittanceLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 2;
+            Parameter p = this.Parameters["plngOverflowOptionCode"];
+            string code = p.Value.ToString();
+            if (code == "1" || code == "2")
+            {
+                pageCounter = 1;
+            }
+            else
+            {
+                pageCounter = 2;
+            }
             pageRun = false;
         }
 
         private void RDChecksRemittanceOnly_BeforePrint(object sender, PrintOnPageEventArgs e)
         {
-            pageCounter = 2;
+            Parameter p = this.Parameters["plngOverflowOptionCode"];
+            string code = p.Value.ToString();
+            if (code == "1" || code == "2")
+            {
+                pageCounter = 1;
+            }
+            else
+            {
+                pageCounter = 2;
+            }
             pageRun = false;
         }
 
@@ -52,7 +97,16 @@ namespace ReportsEngine.Reports.RDReports
         {
             if (pageRun == false)
             {
-                pageCounter = 2;
+                Parameter p = this.Parameters["plngOverflowOptionCode"];
+                string code = p.Value.ToString();
+                if (code == "1" || code == "2")
+                {
+                    pageCounter = 1;
+                }
+                else
+                {
+                    pageCounter = 2;
+                }
                 pageRun = true;
             }
             XRLabel label = sender as XRLabel;

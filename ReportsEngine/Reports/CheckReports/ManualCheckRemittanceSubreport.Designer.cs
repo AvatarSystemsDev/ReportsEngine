@@ -45,26 +45,27 @@
             this.plngImbursementID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrPages = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrCompanyHeader = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
+            this.Line1 = new DevExpress.XtraReports.UI.XRShape();
+            this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
             this.pdteCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEntity = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdblCheckAmount = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooRunningAtEnd = new DevExpress.XtraReports.Parameters.Parameter();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
-            this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Line1 = new DevExpress.XtraReports.UI.XRShape();
-            this.xrPages = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrCompanyHeader = new DevExpress.XtraReports.UI.XRLabel();
+            this.plngOverflowOptionCodeID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrCompanyAddressBlockLong = new DevExpress.XtraReports.Parameters.Parameter();
+            this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
+            this.xrHeaderBand = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText4 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText5 = new DevExpress.XtraReports.UI.XRRichText();
-            this.plngOverflowOptionCodeID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrCompanyAddressBlockLong = new DevExpress.XtraReports.Parameters.Parameter();
-            this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
-            this.xrHeaderBand = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).BeginInit();
@@ -176,92 +177,18 @@
             this.PageHeader.Name = "PageHeader";
             this.PageHeader.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand1,
+            this.SubBand3,
             this.SubBand2});
-            // 
-            // pdteCheckDate
-            // 
-            this.pdteCheckDate.Description = "Check Date";
-            this.pdteCheckDate.Name = "pdteCheckDate";
-            this.pdteCheckDate.Type = typeof(System.DateTime);
-            this.pdteCheckDate.ValueInfo = "2024-02-28";
-            this.pdteCheckDate.Visible = false;
-            // 
-            // pstrEntity
-            // 
-            this.pstrEntity.Description = "Entity";
-            this.pstrEntity.Name = "pstrEntity";
-            this.pstrEntity.Visible = false;
-            // 
-            // pdblCheckAmount
-            // 
-            this.pdblCheckAmount.Description = "Check Amount";
-            this.pdblCheckAmount.Name = "pdblCheckAmount";
-            this.pdblCheckAmount.Type = typeof(decimal);
-            this.pdblCheckAmount.ValueInfo = "0";
-            this.pdblCheckAmount.Visible = false;
-            // 
-            // pstrCheckNumber
-            // 
-            this.pstrCheckNumber.Description = "Check Number";
-            this.pstrCheckNumber.Name = "pstrCheckNumber";
-            this.pstrCheckNumber.Visible = false;
-            // 
-            // pbooRunningAtEnd
-            // 
-            this.pbooRunningAtEnd.Description = "Running At End";
-            this.pbooRunningAtEnd.Name = "pbooRunningAtEnd";
-            this.pbooRunningAtEnd.Type = typeof(bool);
-            this.pbooRunningAtEnd.ValueInfo = "False";
-            this.pbooRunningAtEnd.Visible = false;
             // 
             // SubBand1
             // 
             this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPages,
-            this.xrCompanyHeader,
-            this.xrPanel2});
+            this.xrCompanyHeader});
             this.SubBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooRunningAtEnd")});
-            this.SubBand1.HeightF = 79.29214F;
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooRunningAtEnd OR ?plngOverflowOptionCode IN (1,2)\n")});
+            this.SubBand1.HeightF = 46.82214F;
             this.SubBand1.Name = "SubBand1";
-            // 
-            // SubBand2
-            // 
-            this.SubBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Line1,
-            this.Textbox7});
-            this.SubBand2.HeightF = 27F;
-            this.SubBand2.Name = "SubBand2";
-            // 
-            // Textbox7
-            // 
-            this.Textbox7.BorderColor = System.Drawing.Color.Black;
-            this.Textbox7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox7.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox7.BorderWidth = 1F;
-            this.Textbox7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox7.KeepTogether = true;
-            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.Textbox7.Multiline = true;
-            this.Textbox7.Name = "Textbox7";
-            this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox7.SizeF = new System.Drawing.SizeF(541.67F, 20F);
-            this.Textbox7.Text = "REMITTANCE INFORMATION";
-            this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // Line1
-            // 
-            this.Line1.Angle = 90;
-            this.Line1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Line1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
-            | DevExpress.XtraPrinting.BorderSide.Right) 
-            | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.Line1.ForeColor = System.Drawing.Color.Black;
-            this.Line1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 25F);
-            this.Line1.Name = "Line1";
-            this.Line1.Shape = shapeLine1;
-            this.Line1.SizeF = new System.Drawing.SizeF(793.0002F, 2F);
-            this.Line1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrPages
             // 
@@ -310,6 +237,132 @@
             this.xrCompanyHeader.StylePriority.UseTextAlignment = false;
             this.xrCompanyHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
+            // SubBand2
+            // 
+            this.SubBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.Line1,
+            this.Textbox7});
+            this.SubBand2.HeightF = 27F;
+            this.SubBand2.Name = "SubBand2";
+            // 
+            // Line1
+            // 
+            this.Line1.Angle = 90;
+            this.Line1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Line1.Borders = ((DevExpress.XtraPrinting.BorderSide)((((DevExpress.XtraPrinting.BorderSide.Left | DevExpress.XtraPrinting.BorderSide.Top) 
+            | DevExpress.XtraPrinting.BorderSide.Right) 
+            | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.Line1.ForeColor = System.Drawing.Color.Black;
+            this.Line1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 25F);
+            this.Line1.Name = "Line1";
+            this.Line1.Shape = shapeLine1;
+            this.Line1.SizeF = new System.Drawing.SizeF(793.0002F, 2F);
+            this.Line1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // Textbox7
+            // 
+            this.Textbox7.BorderColor = System.Drawing.Color.Black;
+            this.Textbox7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Textbox7.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Textbox7.BorderWidth = 1F;
+            this.Textbox7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox7.KeepTogether = true;
+            this.Textbox7.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.Textbox7.Multiline = true;
+            this.Textbox7.Name = "Textbox7";
+            this.Textbox7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox7.SizeF = new System.Drawing.SizeF(541.67F, 20F);
+            this.Textbox7.Text = "REMITTANCE INFORMATION";
+            this.Textbox7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // pdteCheckDate
+            // 
+            this.pdteCheckDate.Description = "Check Date";
+            this.pdteCheckDate.Name = "pdteCheckDate";
+            this.pdteCheckDate.Type = typeof(System.DateTime);
+            this.pdteCheckDate.ValueInfo = "2024-02-28";
+            this.pdteCheckDate.Visible = false;
+            // 
+            // pstrEntity
+            // 
+            this.pstrEntity.Description = "Entity";
+            this.pstrEntity.Name = "pstrEntity";
+            this.pstrEntity.Visible = false;
+            // 
+            // pdblCheckAmount
+            // 
+            this.pdblCheckAmount.Description = "Check Amount";
+            this.pdblCheckAmount.Name = "pdblCheckAmount";
+            this.pdblCheckAmount.Type = typeof(decimal);
+            this.pdblCheckAmount.ValueInfo = "0";
+            this.pdblCheckAmount.Visible = false;
+            // 
+            // pstrCheckNumber
+            // 
+            this.pstrCheckNumber.Description = "Check Number";
+            this.pstrCheckNumber.Name = "pstrCheckNumber";
+            this.pstrCheckNumber.Visible = false;
+            // 
+            // pbooRunningAtEnd
+            // 
+            this.pbooRunningAtEnd.Description = "Running At End";
+            this.pbooRunningAtEnd.Name = "pbooRunningAtEnd";
+            this.pbooRunningAtEnd.Type = typeof(bool);
+            this.pbooRunningAtEnd.ValueInfo = "False";
+            this.pbooRunningAtEnd.Visible = false;
+            // 
+            // plngOverflowOptionCodeID
+            // 
+            this.plngOverflowOptionCodeID.Description = "Overflow Option Code ID";
+            this.plngOverflowOptionCodeID.Name = "plngOverflowOptionCodeID";
+            this.plngOverflowOptionCodeID.Type = typeof(int);
+            this.plngOverflowOptionCodeID.ValueInfo = "0";
+            this.plngOverflowOptionCodeID.Visible = false;
+            // 
+            // pstrCompanyAddressBlockLong
+            // 
+            this.pstrCompanyAddressBlockLong.Description = "pstrCompanyAddressBlockLong";
+            this.pstrCompanyAddressBlockLong.Name = "pstrCompanyAddressBlockLong";
+            this.pstrCompanyAddressBlockLong.Visible = false;
+            // 
+            // ReportHeader
+            // 
+            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrHeaderBand});
+            this.ReportHeader.HeightF = 2.000002F;
+            this.ReportHeader.Name = "ReportHeader";
+            // 
+            // xrHeaderBand
+            // 
+            this.xrHeaderBand.BorderColor = System.Drawing.Color.Black;
+            this.xrHeaderBand.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrHeaderBand.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrHeaderBand.BorderWidth = 1F;
+            this.xrHeaderBand.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrHeaderBand.KeepTogether = true;
+            this.xrHeaderBand.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrHeaderBand.Multiline = true;
+            this.xrHeaderBand.Name = "xrHeaderBand";
+            this.xrHeaderBand.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrHeaderBand.SizeF = new System.Drawing.SizeF(794.0001F, 2.000002F);
+            this.xrHeaderBand.StylePriority.UseBorderColor = false;
+            this.xrHeaderBand.StylePriority.UseBorderDashStyle = false;
+            this.xrHeaderBand.StylePriority.UseBorders = false;
+            this.xrHeaderBand.StylePriority.UseBorderWidth = false;
+            this.xrHeaderBand.StylePriority.UseFont = false;
+            this.xrHeaderBand.StylePriority.UsePadding = false;
+            this.xrHeaderBand.StylePriority.UseTextAlignment = false;
+            this.xrHeaderBand.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // SubBand3
+            // 
+            this.SubBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPanel2});
+            this.SubBand3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooRunningAtEnd")});
+            this.SubBand3.HeightF = 32.47F;
+            this.SubBand3.Name = "SubBand3";
+            // 
             // xrPanel2
             // 
             this.xrPanel2.BorderColor = System.Drawing.Color.Black;
@@ -323,7 +376,7 @@
             this.xrRichText2,
             this.xrRichText4,
             this.xrRichText5});
-            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 46.82214F);
+            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPanel2.Name = "xrPanel2";
             this.xrPanel2.SizeF = new System.Drawing.SizeF(794.1F, 32.47F);
             this.xrPanel2.StylePriority.UseBorders = false;
@@ -391,49 +444,6 @@
             this.xrRichText5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrRichText5.SerializableRtfString = resources.GetString("xrRichText5.SerializableRtfString");
             this.xrRichText5.SizeF = new System.Drawing.SizeF(199.65F, 26.22007F);
-            // 
-            // plngOverflowOptionCodeID
-            // 
-            this.plngOverflowOptionCodeID.Description = "Overflow Option Code ID";
-            this.plngOverflowOptionCodeID.Name = "plngOverflowOptionCodeID";
-            this.plngOverflowOptionCodeID.Type = typeof(int);
-            this.plngOverflowOptionCodeID.ValueInfo = "0";
-            this.plngOverflowOptionCodeID.Visible = false;
-            // 
-            // pstrCompanyAddressBlockLong
-            // 
-            this.pstrCompanyAddressBlockLong.Description = "pstrCompanyAddressBlockLong";
-            this.pstrCompanyAddressBlockLong.Name = "pstrCompanyAddressBlockLong";
-            this.pstrCompanyAddressBlockLong.Visible = false;
-            // 
-            // ReportHeader
-            // 
-            this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrHeaderBand});
-            this.ReportHeader.HeightF = 2.000002F;
-            this.ReportHeader.Name = "ReportHeader";
-            // 
-            // xrHeaderBand
-            // 
-            this.xrHeaderBand.BorderColor = System.Drawing.Color.Black;
-            this.xrHeaderBand.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrHeaderBand.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrHeaderBand.BorderWidth = 1F;
-            this.xrHeaderBand.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrHeaderBand.KeepTogether = true;
-            this.xrHeaderBand.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrHeaderBand.Multiline = true;
-            this.xrHeaderBand.Name = "xrHeaderBand";
-            this.xrHeaderBand.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrHeaderBand.SizeF = new System.Drawing.SizeF(794.0001F, 2.000002F);
-            this.xrHeaderBand.StylePriority.UseBorderColor = false;
-            this.xrHeaderBand.StylePriority.UseBorderDashStyle = false;
-            this.xrHeaderBand.StylePriority.UseBorders = false;
-            this.xrHeaderBand.StylePriority.UseBorderWidth = false;
-            this.xrHeaderBand.StylePriority.UseFont = false;
-            this.xrHeaderBand.StylePriority.UsePadding = false;
-            this.xrHeaderBand.StylePriority.UseTextAlignment = false;
-            this.xrHeaderBand.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // ManualCheckRemittanceSubreport
             // 
@@ -514,14 +524,15 @@
         private DevExpress.XtraReports.UI.SubBand SubBand2;
         private DevExpress.XtraReports.UI.XRLabel xrPages;
         private DevExpress.XtraReports.UI.XRLabel xrCompanyHeader;
+        private DevExpress.XtraReports.Parameters.Parameter plngOverflowOptionCodeID;
+        private DevExpress.XtraReports.Parameters.Parameter pstrCompanyAddressBlockLong;
+        private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
+        private DevExpress.XtraReports.UI.XRLabel xrHeaderBand;
+        private DevExpress.XtraReports.UI.SubBand SubBand3;
         private DevExpress.XtraReports.UI.XRPanel xrPanel2;
         private DevExpress.XtraReports.UI.XRRichText xrRichText1;
         private DevExpress.XtraReports.UI.XRRichText xrRichText2;
         private DevExpress.XtraReports.UI.XRRichText xrRichText4;
         private DevExpress.XtraReports.UI.XRRichText xrRichText5;
-        private DevExpress.XtraReports.Parameters.Parameter plngOverflowOptionCodeID;
-        private DevExpress.XtraReports.Parameters.Parameter pstrCompanyAddressBlockLong;
-        private DevExpress.XtraReports.UI.ReportHeaderBand ReportHeader;
-        private DevExpress.XtraReports.UI.XRLabel xrHeaderBand;
     }
 }

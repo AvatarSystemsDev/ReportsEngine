@@ -43,6 +43,14 @@ namespace ReportsEngine.Reports.APReports
             EndRemittance.BeforePrint += EndRemittance_BeforePrint;
             EntryBegin.BeforePrint += EntryBegin_BeforePrint;
             xrEndCoverPage.PrintOnPage += XrEndCoverPage_PrintOnPage;
+            CheckGroupBottom.BeforePrint += CheckBottomBand_BeforePrint;
+        }
+
+        private void CheckBottomBand_BeforePrint(object sender, CancelEventArgs e)
+        {
+            GroupFooterBand band = sender as GroupFooterBand;
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            band.RepeatEveryPage = OverflowOptionCodeIDValue == "1";
         }
 
         private void XrEndCoverPage_PrintOnPage(object sender, PrintOnPageEventArgs e)

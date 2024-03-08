@@ -63,6 +63,14 @@ namespace ReportsEngine
             CheckInformationPart.PrintOnPage += CheckTopBand_PrintOnPage;
             xrTopCheckPanel.PrintOnPage += XrTopCheckPanel_PrintOnPage;
             xrEndCoverPage.PrintOnPage += XrEndCoverPage_PrintOnPage;
+            CheckGroupBottom.BeforePrint += CheckBottomBand_BeforePrint;
+        }
+
+        private void CheckBottomBand_BeforePrint(object sender, CancelEventArgs e)
+        {
+            GroupFooterBand band = sender as GroupFooterBand;
+            string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            band.RepeatEveryPage = OverflowOptionCodeIDValue == "1";
         }
 
         private void XrEndCoverPage_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -96,8 +104,9 @@ namespace ReportsEngine
 
         private void CheckBottomBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            SubBand band = sender as SubBand;
+            GroupBand band = sender as GroupBand;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            band.RepeatEveryPage = OverflowOptionCodeIDValue == "1";
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
         }

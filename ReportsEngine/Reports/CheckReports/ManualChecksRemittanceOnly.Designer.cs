@@ -40,21 +40,15 @@
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooRunningAtEnd = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngOverflowOptionCodeID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrCompanyAddressBlockLong = new DevExpress.XtraReports.Parameters.Parameter();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.pbooMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckFormat = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooSignature = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSignaturePath = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrTwoSignaturesRequiredAmount = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngIsTwoSignaturesRequired = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.PageHeader = new DevExpress.XtraReports.UI.PageHeaderBand();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
-            this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
-            this.pbooRunningAtEnd = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrCompanyAddressBlockLong = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngOverflowOptionCodeID = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -108,6 +102,27 @@
             this.plngCheckFormatIsMICR.ValueInfo = "True";
             this.plngCheckFormatIsMICR.Visible = false;
             // 
+            // pbooRunningAtEnd
+            // 
+            this.pbooRunningAtEnd.Description = "Running At End";
+            this.pbooRunningAtEnd.Name = "pbooRunningAtEnd";
+            this.pbooRunningAtEnd.Type = typeof(bool);
+            this.pbooRunningAtEnd.ValueInfo = "False";
+            // 
+            // plngOverflowOptionCodeID
+            // 
+            this.plngOverflowOptionCodeID.Description = "Overflow Option Code";
+            this.plngOverflowOptionCodeID.Name = "plngOverflowOptionCodeID";
+            this.plngOverflowOptionCodeID.Type = typeof(int);
+            this.plngOverflowOptionCodeID.ValueInfo = "0";
+            this.plngOverflowOptionCodeID.Visible = false;
+            // 
+            // pstrCompanyAddressBlockLong
+            // 
+            this.pstrCompanyAddressBlockLong.Description = "pstrCompanyAddressBlockLong";
+            this.pstrCompanyAddressBlockLong.Name = "pstrCompanyAddressBlockLong";
+            this.pstrCompanyAddressBlockLong.Visible = false;
+            // 
             // Dynamic
             // 
             this.Dynamic.ConnectionName = "Providence_Connection 1";
@@ -123,28 +138,13 @@
             storedProcQuery1});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
-            // pbooMICR
-            // 
-            this.pbooMICR.Description = "pbooMICR";
-            this.pbooMICR.Name = "pbooMICR";
-            this.pbooMICR.Type = typeof(bool);
-            this.pbooMICR.ValueInfo = "True";
-            this.pbooMICR.Visible = false;
-            // 
             // plngCheckFormat
             // 
             this.plngCheckFormat.Description = "plngCheckFormat";
             this.plngCheckFormat.Name = "plngCheckFormat";
             this.plngCheckFormat.Type = typeof(int);
+            this.plngCheckFormat.ValueInfo = "0";
             this.plngCheckFormat.Visible = false;
-            // 
-            // pbooSignature
-            // 
-            this.pbooSignature.Description = "pbooSignature";
-            this.pbooSignature.Name = "pbooSignature";
-            this.pbooSignature.Type = typeof(bool);
-            this.pbooSignature.ValueInfo = "True";
-            this.pbooSignature.Visible = false;
             // 
             // pstrSignaturePath
             // 
@@ -177,50 +177,6 @@
             this.plngProcessTrackingID.ValueInfo = "3159";
             this.plngProcessTrackingID.Visible = false;
             // 
-            // PageHeader
-            // 
-            this.PageHeader.HeightF = 0F;
-            this.PageHeader.Name = "PageHeader";
-            this.PageHeader.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
-            this.SubBand1,
-            this.SubBand2});
-            // 
-            // SubBand1
-            // 
-            this.SubBand1.HeightF = 0F;
-            this.SubBand1.Name = "SubBand1";
-            // 
-            // SubBand2
-            // 
-            this.SubBand2.HeightF = 0F;
-            this.SubBand2.Name = "SubBand2";
-            // 
-            // PageFooter
-            // 
-            this.PageFooter.HeightF = 0F;
-            this.PageFooter.Name = "PageFooter";
-            // 
-            // pbooRunningAtEnd
-            // 
-            this.pbooRunningAtEnd.Description = "Running At End";
-            this.pbooRunningAtEnd.Name = "pbooRunningAtEnd";
-            this.pbooRunningAtEnd.Type = typeof(bool);
-            this.pbooRunningAtEnd.ValueInfo = "False";
-            // 
-            // pstrCompanyAddressBlockLong
-            // 
-            this.pstrCompanyAddressBlockLong.Description = "pstrCompanyAddressBlockLong";
-            this.pstrCompanyAddressBlockLong.Name = "pstrCompanyAddressBlockLong";
-            this.pstrCompanyAddressBlockLong.Visible = false;
-            // 
-            // plngOverflowOptionCodeID
-            // 
-            this.plngOverflowOptionCodeID.Description = "Overflow Option Code";
-            this.plngOverflowOptionCodeID.Name = "plngOverflowOptionCodeID";
-            this.plngOverflowOptionCodeID.Type = typeof(int);
-            this.plngOverflowOptionCodeID.ValueInfo = "0";
-            this.plngOverflowOptionCodeID.Visible = false;
-            // 
             // xrSubreport2
             // 
             this.xrSubreport2.GenerateOwnPages = true;
@@ -247,9 +203,7 @@
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
             this.topMarginBand1,
             this.bottomMarginBand1,
-            this.detailBand1,
-            this.PageHeader,
-            this.PageFooter});
+            this.detailBand1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
             this.DataMember = "DSCheckHeader";
@@ -257,14 +211,26 @@
             this.DisplayName = "ManualChecks";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(28F, 28F, 12.5F, 12.5F);
+            this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormat, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSignaturePath, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrTwoSignaturesRequiredAmount, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormatIsMICR, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngIsTwoSignaturesRequired, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooRunningAtEnd, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrCompanyAddressBlockLong, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngOverflowOptionCodeID, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
             this.plngUserID,
             this.Subtitle,
-            this.pbooMICR,
             this.plngCheckFormat,
-            this.pbooSignature,
             this.pstrSignaturePath,
             this.pstrTwoSignaturesRequiredAmount,
             this.plngCheckFormatIsMICR,
@@ -288,19 +254,13 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrServerName;
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
         private DevExpress.XtraReports.Parameters.Parameter Subtitle;
-        private DevExpress.XtraReports.Parameters.Parameter pbooMICR;
         private DevExpress.XtraReports.Parameters.Parameter plngCheckFormat;
-        private DevExpress.XtraReports.Parameters.Parameter pbooSignature;
         private DevExpress.XtraReports.Parameters.Parameter pstrSignaturePath;
         private DevExpress.XtraReports.Parameters.Parameter pstrTwoSignaturesRequiredAmount;
         private DevExpress.XtraReports.Parameters.Parameter plngCheckFormatIsMICR;
         private DevExpress.XtraReports.Parameters.Parameter plngIsTwoSignaturesRequired;
         private DevExpress.XtraReports.Parameters.Parameter plngProcessTrackingID;
-        private DevExpress.XtraReports.UI.PageHeaderBand PageHeader;
-        private DevExpress.XtraReports.UI.SubBand SubBand1;
-        private DevExpress.XtraReports.UI.SubBand SubBand2;
         private DevExpress.XtraReports.UI.XRSubreport xrSubreport2;
-        private DevExpress.XtraReports.UI.PageFooterBand PageFooter;
         private DevExpress.XtraReports.Parameters.Parameter pbooRunningAtEnd;
         private DevExpress.XtraReports.Parameters.Parameter pstrCompanyAddressBlockLong;
         private DevExpress.XtraReports.Parameters.Parameter plngOverflowOptionCodeID;

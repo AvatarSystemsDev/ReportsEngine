@@ -99,6 +99,7 @@
             this.pdteCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).BeginInit();
@@ -288,17 +289,17 @@
             this.groupHeaderBand1.RepeatEveryPage = true;
             this.groupHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand10,
+            this.SubBand8,
             this.SubBand11});
             // 
             // SubBand10
             // 
             this.SubBand10.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPanel2,
             this.xrCompanyHeader,
             this.xrPages});
             this.SubBand10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooRunningAtEnd\n")});
-            this.SubBand10.HeightF = 79.29214F;
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooRunningAtEnd OR ?plngOverflowOptionCode IN (1,2)\n")});
+            this.SubBand10.HeightF = 46.82214F;
             this.SubBand10.Name = "SubBand10";
             // 
             // xrPanel2
@@ -314,7 +315,7 @@
             this.xrRichText2,
             this.xrRichText4,
             this.xrRichText5});
-            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 46.82214F);
+            this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPanel2.Name = "xrPanel2";
             this.xrPanel2.SizeF = new System.Drawing.SizeF(794.1F, 32.47F);
             this.xrPanel2.StylePriority.UseBorders = false;
@@ -1026,6 +1027,15 @@
             this.pstrVendorNumber.Name = "pstrVendorNumber";
             this.pstrVendorNumber.Visible = false;
             // 
+            // SubBand8
+            // 
+            this.SubBand8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPanel2});
+            this.SubBand8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooRunningAtEnd")});
+            this.SubBand8.HeightF = 32.47F;
+            this.SubBand8.Name = "SubBand8";
+            // 
             // APCheckRemittanceSubreport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1153,5 +1163,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRLabel xrLabel5;
+        private DevExpress.XtraReports.UI.SubBand SubBand8;
     }
 }
