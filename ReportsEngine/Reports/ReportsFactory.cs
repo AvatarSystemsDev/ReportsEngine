@@ -297,7 +297,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIB88thsHistory", () => new ExcelJIBHistory88ths());
             Reports.Add("SalesLedgerTotal", () => new SalesLedgerTotal());
             Reports.Add("ExcelSalesLedgerTotal", () => new ExcelSalesLedgerTotal());
-
+            Reports.Add("SuspenseByOwnerSummary", () => new SuspenseByOwnerSummary());
+            Reports.Add("ExcelSuspenseByOwnerSummary", () => new ExcelSuspenseByOwnerSummary());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

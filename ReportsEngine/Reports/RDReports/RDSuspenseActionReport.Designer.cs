@@ -743,7 +743,7 @@
             this.xrLabel11.Multiline = true;
             this.xrLabel11.Name = "xrLabel11";
             this.xrLabel11.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel11.SizeF = new System.Drawing.SizeF(768.8286F, 30F);
+            this.xrLabel11.SizeF = new System.Drawing.SizeF(769.8702F, 30F);
             this.xrLabel11.StylePriority.UseFont = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
@@ -760,7 +760,7 @@
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(768.8286F, 27.78001F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(769.8702F, 27.78001F);
             this.xrLabel10.StylePriority.UseFont = false;
             this.xrLabel10.Text = "Suspense Action Report";
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;

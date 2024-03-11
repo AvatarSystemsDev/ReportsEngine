@@ -3542,7 +3542,7 @@
             // 
             this.pdteBeginningProductionDate.Description = "Beginning Production Date";
             this.pdteBeginningProductionDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "GetDate(\'01/01/\'+GetYear(Today()))")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningProductionDate.Name = "pdteBeginningProductionDate";
             this.pdteBeginningProductionDate.Type = typeof(System.DateTime);
             this.pdteBeginningProductionDate.ValueInfo = "2023-10-30";

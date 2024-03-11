@@ -87,7 +87,7 @@
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowLabelWithoutAddress = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrRoleIDs = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectRoleIDs = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngSortBy = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
@@ -125,7 +125,7 @@
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
             queryParameter9.Name = "@pstrRoleIDs";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pstrRoleIDs", typeof(string));
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("Join(?pstrSelectRoleIDs)", typeof(string));
             queryParameter10.Name = "@plngSortBy";
             queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngSortBy", typeof(int));
@@ -243,7 +243,7 @@
             dynamicListLookUpSettings1.DataMember = "LookupVendors";
             dynamicListLookUpSettings1.DataSource = this.Dynamic;
             dynamicListLookUpSettings1.DisplayMember = "Description";
-            dynamicListLookUpSettings1.FilterString = "[RoleTypeID] = 0 Or [RoleTypeID] In (?pstrRoleIDs)";
+            dynamicListLookUpSettings1.FilterString = "[RoleTypeID] = 0 Or [RoleTypeID] In (?pstrSelectRoleIDs)";
             dynamicListLookUpSettings1.ValueMember = "Number";
             this.pstrBeginningVendorNumber.ValueSourceSettings = dynamicListLookUpSettings1;
             // 
@@ -255,7 +255,7 @@
             dynamicListLookUpSettings2.DataMember = "LookupVendors";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "Description";
-            dynamicListLookUpSettings2.FilterString = "[RoleTypeID] = 0 Or [RoleTypeID] In (?pstrRoleIDs)";
+            dynamicListLookUpSettings2.FilterString = "[RoleTypeID] = 0 Or [RoleTypeID] In (?pstrSelectRoleIDs)";
             dynamicListLookUpSettings2.ValueMember = "Number";
             this.pstrEndingVendorNumber.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
@@ -396,7 +396,7 @@
             dynamicListLookUpSettings4.DataMember = "LookupVendors";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "Description";
-            dynamicListLookUpSettings4.FilterString = "[RoleTypeID] = 0 Or [RoleTypeID] In (?pstrRoleIDs)";
+            dynamicListLookUpSettings4.FilterString = "[RoleTypeID] = 0 Or [RoleTypeID] In (?pstrSelectRoleIDs)";
             dynamicListLookUpSettings4.SortMember = null;
             dynamicListLookUpSettings4.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
             dynamicListLookUpSettings4.ValueMember = "Number";
@@ -416,21 +416,21 @@
             this.pbooIncludeCompanyOwner.Type = typeof(bool);
             this.pbooIncludeCompanyOwner.ValueInfo = "False";
             // 
-            // pstrRoleIDs
+            // pstrSelectRoleIDs
             // 
-            this.pstrRoleIDs.AllowNull = true;
-            this.pstrRoleIDs.Description = "Entity Role";
-            this.pstrRoleIDs.MultiValue = true;
-            this.pstrRoleIDs.Name = "pstrRoleIDs";
-            this.pstrRoleIDs.SelectAllValues = true;
-            this.pstrRoleIDs.Type = typeof(int);
+            this.pstrSelectRoleIDs.AllowNull = true;
+            this.pstrSelectRoleIDs.Description = "Entity Role";
+            this.pstrSelectRoleIDs.MultiValue = true;
+            this.pstrSelectRoleIDs.Name = "pstrSelectRoleIDs";
+            this.pstrSelectRoleIDs.SelectAllValues = true;
+            this.pstrSelectRoleIDs.Type = typeof(int);
             dynamicListLookUpSettings5.DataMember = "EntityRoleTypeLookup";
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
             dynamicListLookUpSettings5.DisplayMember = "Description";
             dynamicListLookUpSettings5.FilterString = null;
             dynamicListLookUpSettings5.SortMember = null;
             dynamicListLookUpSettings5.ValueMember = "ID";
-            this.pstrRoleIDs.ValueSourceSettings = dynamicListLookUpSettings5;
+            this.pstrSelectRoleIDs.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
             // plngSortBy
             // 
@@ -496,7 +496,8 @@
             this.DataMember = "VendorLabels";
             this.DataSource = this.Dynamic;
             this.DisplayName = "VendorLabels";
-            this.FilterString = resources.GetString("$this.FilterString");
+            this.FilterString = "[VendorNumber] In (?pstrSelectVendor) Or IsNullOrEmpty([VendorNumber]) And \'!\' In" +
+    " (?pstrSelectVendor)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 30F, 0F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
@@ -504,7 +505,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrRoleIDs, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectRoleIDs, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortBy, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -524,7 +525,7 @@
             this.pstrServerName,
             this.plngUserID,
             this.Subtitle,
-            this.pstrRoleIDs,
+            this.pstrSelectRoleIDs,
             this.plngSortBy,
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
@@ -567,7 +568,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowLabelWithoutAddress;
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
-        private DevExpress.XtraReports.Parameters.Parameter pstrRoleIDs;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectRoleIDs;
         private DevExpress.XtraReports.Parameters.Parameter plngSortBy;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingPropertyNumber;

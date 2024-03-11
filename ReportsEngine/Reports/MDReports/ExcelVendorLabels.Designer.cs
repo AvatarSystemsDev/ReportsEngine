@@ -71,8 +71,8 @@
             this.plngPrintLabel = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowLabelWithoutAddress = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrRoleIDs = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooSortBy = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectRoleIDs = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngSortBy = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
@@ -244,10 +244,10 @@
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
             queryParameter9.Name = "@pstrRoleIDs";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pstrRoleIDs", typeof(string));
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("Join(?pstrSelectRoleIDs)", typeof(string));
             queryParameter10.Name = "@plngSortBy";
             queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pbooSortBy", typeof(int));
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngSortBy", typeof(int));
             queryParameter11.Name = "@plngAddressToReturn";
             queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngAddressToReturn", typeof(int));
@@ -474,20 +474,20 @@
             this.pbooShowLabelWithoutAddress.Type = typeof(bool);
             this.pbooShowLabelWithoutAddress.ValueInfo = "False";
             // 
-            // pstrRoleIDs
+            // pstrSelectRoleIDs
             // 
-            this.pstrRoleIDs.AllowNull = true;
-            this.pstrRoleIDs.Description = "Parameter1";
-            this.pstrRoleIDs.MultiValue = true;
-            this.pstrRoleIDs.Name = "pstrRoleIDs";
-            this.pstrRoleIDs.Type = typeof(int);
+            this.pstrSelectRoleIDs.AllowNull = true;
+            this.pstrSelectRoleIDs.Description = "pstrRoleIDs";
+            this.pstrSelectRoleIDs.MultiValue = true;
+            this.pstrSelectRoleIDs.Name = "pstrSelectRoleIDs";
+            this.pstrSelectRoleIDs.Type = typeof(int);
             // 
-            // pbooSortBy
+            // plngSortBy
             // 
-            this.pbooSortBy.Description = "Parameter1";
-            this.pbooSortBy.Name = "pbooSortBy";
-            this.pbooSortBy.Type = typeof(int);
-            this.pbooSortBy.ValueInfo = "0";
+            this.plngSortBy.Description = "Parameter1";
+            this.plngSortBy.Name = "plngSortBy";
+            this.plngSortBy.Type = typeof(int);
+            this.plngSortBy.ValueInfo = "0";
             // 
             // pstrBeginningPropertyNumber
             // 
@@ -535,8 +535,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngPrintLabel, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeCompanyOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowLabelWithoutAddress, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrRoleIDs, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooSortBy, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectRoleIDs, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortBy, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -555,8 +555,8 @@
             this.plngPrintLabel,
             this.pbooIncludeCompanyOwner,
             this.pbooShowLabelWithoutAddress,
-            this.pstrRoleIDs,
-            this.pbooSortBy,
+            this.pstrSelectRoleIDs,
+            this.plngSortBy,
             this.pstrBeginningPropertyNumber,
             this.pstrEndingPropertyNumber,
             this.pstrSelectProperty});
@@ -594,8 +594,8 @@
         private DevExpress.XtraReports.Parameters.Parameter plngPrintLabel;
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowLabelWithoutAddress;
-        private DevExpress.XtraReports.Parameters.Parameter pstrRoleIDs;
-        private DevExpress.XtraReports.Parameters.Parameter pbooSortBy;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectRoleIDs;
+        private DevExpress.XtraReports.Parameters.Parameter plngSortBy;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectProperty;

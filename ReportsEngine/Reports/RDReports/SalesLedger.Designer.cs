@@ -2111,6 +2111,8 @@
             // pdteBeginningCheckDate
             // 
             this.pdteBeginningCheckDate.Description = "Beginning Check Date";
+            this.pdteBeginningCheckDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningCheckDate.Name = "pdteBeginningCheckDate";
             this.pdteBeginningCheckDate.Type = typeof(System.DateTime);
             this.pdteBeginningCheckDate.ValueInfo = "1900-01-01";
@@ -3305,6 +3307,8 @@
             // pdteBeginningProductionDate
             // 
             this.pdteBeginningProductionDate.Description = "Beginning Production Date";
+            this.pdteBeginningProductionDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningProductionDate.Name = "pdteBeginningProductionDate";
             this.pdteBeginningProductionDate.Type = typeof(System.DateTime);
             this.pdteBeginningProductionDate.ValueInfo = "1900-01-01";

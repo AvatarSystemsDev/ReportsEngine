@@ -801,6 +801,12 @@
     <Compile Include="Reports\RDReports\ExcelSalesLedgerTotal.Designer.cs">
       <DependentUpon>ExcelSalesLedgerTotal.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByOwnerSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByOwnerSummary.Designer.cs">
+      <DependentUpon>ExcelSuspenseByOwnerSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1965,6 +1971,12 @@
     <Compile Include="Reports\RDReports\SuspenseByOwner.Designer.cs">
       <DependentUpon>SuspenseByOwner.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByOwnerSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByOwnerSummary.Designer.cs">
+      <DependentUpon>SuspenseByOwnerSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\SuspenseByProperty.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2448,9 +2460,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APOutstandingAccountsPayableDetail.resx">
       <DependentUpon>APOutstandingAccountsPayableDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APOutstandingAccountsPayableDetailWithProperty.resx">
       <DependentUpon>APOutstandingAccountsPayableDetailWithProperty.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APPayables.resx">
       <DependentUpon>APPayables.cs</DependentUpon>
@@ -2550,6 +2564,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelSalesLedgerTotal.resx">
       <DependentUpon>ExcelSalesLedgerTotal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelSuspenseByOwnerSummary.resx">
+      <DependentUpon>ExcelSuspenseByOwnerSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
@@ -3129,6 +3146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\SuspenseByOwner.resx">
       <DependentUpon>SuspenseByOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\SuspenseByOwnerSummary.resx">
+      <DependentUpon>SuspenseByOwnerSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\SuspenseByProperty.resx">
       <DependentUpon>SuspenseByProperty.cs</DependentUpon>

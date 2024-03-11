@@ -955,8 +955,11 @@
             // pdteBeginningCheckDate
             // 
             this.pdteBeginningCheckDate.Description = "Beginning Check Date";
+            this.pdteBeginningCheckDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningCheckDate.Name = "pdteBeginningCheckDate";
-            this.pdteBeginningCheckDate.ValueInfo = "1/1/1900";
+            this.pdteBeginningCheckDate.Type = typeof(System.DateTime);
+            this.pdteBeginningCheckDate.ValueInfo = "2024-03-11";
             // 
             // pdteEndingCheckDate
             // 

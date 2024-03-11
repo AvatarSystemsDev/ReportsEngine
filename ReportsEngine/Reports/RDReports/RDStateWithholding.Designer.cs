@@ -2537,8 +2537,8 @@
             // 
             this.pdteBeginningDate.Description = "Beginning Date";
             this.pdteBeginningDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "GetDate(\'01/01/\'+GetYear(Today()))"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooUseProcessingDate")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooUseProcessingDate"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningDate.Name = "pdteBeginningDate";
             this.pdteBeginningDate.Type = typeof(System.DateTime);
             this.pdteBeginningDate.ValueInfo = "2023-11-09";
@@ -2547,7 +2547,7 @@
             // 
             this.pdteEndingDate.Description = "Ending Date";
             this.pdteEndingDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "GetDate(\'12/31/\'+GetYear(Today()))"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()"),
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooUseProcessingDate\n")});
             this.pdteEndingDate.Name = "pdteEndingDate";
             this.pdteEndingDate.Type = typeof(System.DateTime);
