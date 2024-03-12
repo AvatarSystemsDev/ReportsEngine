@@ -2633,6 +2633,8 @@ namespace ReportsEngine
             this.DataMember = "Dynamic_RDCheckRegister";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "RDCheckRegister";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
             this.FilterString = "[PaymentOwnerNumber] In (?pstrSelectOwner) Or IsNullOrEmpty([PaymentOwnerNumber])" +
     " And \'!\' In (?pstrSelectOwner)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

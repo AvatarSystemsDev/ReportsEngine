@@ -807,6 +807,18 @@
     <Compile Include="Reports\RDReports\ExcelSuspenseByOwnerSummary.Designer.cs">
       <DependentUpon>ExcelSuspenseByOwnerSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByPropertySummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByPropertySummary.Designer.cs">
+      <DependentUpon>ExcelSuspenseByPropertySummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByPropertyWellAndOwnerSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\ExcelSuspenseByPropertyWellAndOwnerSummary.Designer.cs">
+      <DependentUpon>ExcelSuspenseByPropertyWellAndOwnerSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\ExcelTexasTaxProducerDetail.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1983,6 +1995,18 @@
     <Compile Include="Reports\RDReports\SuspenseByProperty.Designer.cs">
       <DependentUpon>SuspenseByProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByPropertySummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByPropertySummary.Designer.cs">
+      <DependentUpon>SuspenseByPropertySummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByPropertyWellAndOwnerSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\SuspenseByPropertyWellAndOwnerSummary.Designer.cs">
+      <DependentUpon>SuspenseByPropertyWellAndOwnerSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\TestMICRFonts.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2568,6 +2592,12 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelSuspenseByOwnerSummary.resx">
       <DependentUpon>ExcelSuspenseByOwnerSummary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelSuspenseByPropertySummary.resx">
+      <DependentUpon>ExcelSuspenseByPropertySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\ExcelSuspenseByPropertyWellAndOwnerSummary.resx">
+      <DependentUpon>ExcelSuspenseByPropertyWellAndOwnerSummary.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelTexasTaxProducerDetail.resx">
       <DependentUpon>ExcelTexasTaxProducerDetail.cs</DependentUpon>
     </EmbeddedResource>
@@ -3152,6 +3182,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\SuspenseByProperty.resx">
       <DependentUpon>SuspenseByProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\SuspenseByPropertySummary.resx">
+      <DependentUpon>SuspenseByPropertySummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RDReports\SuspenseByPropertyWellAndOwnerSummary.resx">
+      <DependentUpon>SuspenseByPropertyWellAndOwnerSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\TestMICRFonts.resx">
       <DependentUpon>TestMICRFonts.cs</DependentUpon>

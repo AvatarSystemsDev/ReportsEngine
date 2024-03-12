@@ -299,6 +299,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelSalesLedgerTotal", () => new ExcelSalesLedgerTotal());
             Reports.Add("SuspenseByOwnerSummary", () => new SuspenseByOwnerSummary());
             Reports.Add("ExcelSuspenseByOwnerSummary", () => new ExcelSuspenseByOwnerSummary());
+            Reports.Add("SuspenseByPropertySummary", () => new SuspenseByPropertySummary());
+            Reports.Add("ExcelSuspenseByPropertySummary", () => new ExcelSuspenseByPropertySummary());
+            Reports.Add("SuspenseByPropertyWellAndOwnerSummary", () => new SuspenseByPropertyWellAndOwnerSummary());
+            Reports.Add("ExcelSuspenseByPropertyWellAndOwnerSummary", () => new ExcelSuspenseByPropertyWellAndOwnerSummary());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

@@ -1860,6 +1860,8 @@
             this.DataMember = "Dynamic_JIBHistoryDataSource";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "JIBHistoryByOwner";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
             this.FilterString = "[PropertyAndWellNumber] In (?pstrSelectProperty) Or IsNullOrEmpty([PropertyAndWel" +
     "lNumber]) And \'!\' In (?pstrSelectProperty)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

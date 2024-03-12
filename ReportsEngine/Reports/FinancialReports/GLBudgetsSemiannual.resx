@@ -142,12 +142,7 @@ Iif( [AccountingCenterNumber] in (?pstrSelectAccountingCenter), TRUE
 
 </value>
   </data>
-  <data name="$this.ExpressionBindings" xml:space="preserve">
-    <value>Iif([AccountNumber] in (?pstrSelectAccounts), 
-Iif( [AccountingCenterNumber] in (?pstrSelectAccountingCenter), TRUE
-, Iif('!'in (?pstrSelectAccountingCenter) AND IsNullOrEmpty([AccountingCenterNumber]),TRUE ,FALSE ))
-,FALSE )
-
-</value>
+  <data name="$this.FilterString" xml:space="preserve">
+    <value>Iif([AccountNumber] In (?pstrSelectAccounts), Iif([AccountingCenterNumber] In (?pstrSelectAccountingCenter), True, '!' In (?pstrSelectAccountingCenter) And IsNullOrEmpty([AccountingCenterNumber]), True, False), False)</value>
   </data>
 </root>

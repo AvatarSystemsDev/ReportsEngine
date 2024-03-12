@@ -3412,7 +3412,7 @@
             this.DisplayName = "DOIbyOwnerDetail";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Landscape", "?pbooShowDates == True"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PhaseWellNumber])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
             this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) And [PhaseWellNumber] In (?pstrSelectProperty" +
     ") And [DOIDeckCodeNumber] In (?pstrSelectDeckCode)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

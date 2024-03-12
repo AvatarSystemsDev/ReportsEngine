@@ -2384,7 +2384,7 @@
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "DOIDeckInformation";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PropertyWellNumber])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
             this.FilterString = "[PropertyWellNumber] In (?pstrSelectProperty) And [CountyMasterID] In (?pstrSelec" +
     "tCounty) And [StateCodesID] In (?pstrSelectState) And [DeckCode] In (?pstrSelect" +
     "DeckCode)";

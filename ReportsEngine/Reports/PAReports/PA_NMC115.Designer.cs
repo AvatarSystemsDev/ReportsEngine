@@ -5093,6 +5093,8 @@
             this.DataMember = "Dynamic_Report_PA_NMC115";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "PA_NMC115";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(25F, 25F, 25F, 29.16179F);
             this.PageHeight = 850;

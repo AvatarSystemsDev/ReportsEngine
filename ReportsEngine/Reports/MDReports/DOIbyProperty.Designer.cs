@@ -305,12 +305,12 @@
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel75 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-            this.SubBand7 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel71 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel69 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel41 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel37 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel39 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand7 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel51 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
@@ -2949,19 +2949,6 @@
             this.groupHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand7});
             // 
-            // SubBand7
-            // 
-            this.SubBand7.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel2,
-            this.xrLabel51,
-            this.xrLabel52,
-            this.xrLabel48,
-            this.xrLabel47,
-            this.xrLabel77,
-            this.xrLabel76});
-            this.SubBand7.HeightF = 29.5F;
-            this.SubBand7.Name = "SubBand7";
-            // 
             // xrLabel71
             // 
             this.xrLabel71.BorderColor = System.Drawing.Color.Black;
@@ -3081,6 +3068,19 @@
             this.xrLabel39.StylePriority.UseTextAlignment = false;
             this.xrLabel39.Text = "Deck:";
             this.xrLabel39.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // SubBand7
+            // 
+            this.SubBand7.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel2,
+            this.xrLabel51,
+            this.xrLabel52,
+            this.xrLabel48,
+            this.xrLabel47,
+            this.xrLabel77,
+            this.xrLabel76});
+            this.SubBand7.HeightF = 29.5F;
+            this.SubBand7.Name = "SubBand7";
             // 
             // xrLabel2
             // 
@@ -3279,7 +3279,7 @@
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "DOIbyProperty";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PhaseWellNumber])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
             this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) And [PhaseWellNumber] In (?pstrSelectProperty" +
     ") And [CountyID] In (?pstrSelectCounty) And [StateID] In (?pstrSelectState)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

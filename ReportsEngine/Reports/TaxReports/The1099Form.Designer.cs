@@ -1291,6 +1291,8 @@
             this.DataMember = "DS1099Forms";
             this.DataSource = this.Dynamic;
             this.DisplayName = "1099Form";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0\n")});
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(25F, 25F, 25F, 25F);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {

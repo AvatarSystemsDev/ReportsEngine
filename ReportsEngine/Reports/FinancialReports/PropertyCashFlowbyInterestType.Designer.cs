@@ -3248,7 +3248,7 @@
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "PropertyCashFlowbyInterestType";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([PostDate])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
             this.FilterString = "[PropertyNumber] In (?pstrSelectProperty) Or IsNullOrEmpty([PropertyNumber]) And " +
     "\'!\' In (?pstrSelectProperty)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

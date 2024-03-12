@@ -1895,6 +1895,8 @@
             this.DataMember = "Dynamic_RDAllocation";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "RDAllocation";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
