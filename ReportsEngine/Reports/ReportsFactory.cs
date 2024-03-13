@@ -303,6 +303,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelSuspenseByPropertySummary", () => new ExcelSuspenseByPropertySummary());
             Reports.Add("SuspenseByPropertyWellAndOwnerSummary", () => new SuspenseByPropertyWellAndOwnerSummary());
             Reports.Add("ExcelSuspenseByPropertyWellAndOwnerSummary", () => new ExcelSuspenseByPropertyWellAndOwnerSummary());
+            Reports.Add("BalanceSheet", () => new BalanceSheet());
+            Reports.Add("ExcelBalanceSheet", () => new ExcelBalanceSheet());
+            Reports.Add("IncomeAndExpenseStatement", () => new IncomeAndExpenseStatement());
+            Reports.Add("ExcelIncomeAndExpenseStatement", () => new ExcelIncomeAndExpenseStatement());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

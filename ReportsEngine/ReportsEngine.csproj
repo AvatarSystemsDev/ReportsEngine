@@ -501,6 +501,30 @@
     <Compile Include="Reports\CheckReports\ManualChecksRemittanceOnly.Designer.cs">
       <DependentUpon>ManualChecksRemittanceOnly.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\FinancialReports\BalanceSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\BalanceSheet.Designer.cs">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelBalanceSheet.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelBalanceSheet.Designer.cs">
+      <DependentUpon>ExcelBalanceSheet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelIncomeAndExpenseStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\ExcelIncomeAndExpenseStatement.Designer.cs">
+      <DependentUpon>ExcelIncomeAndExpenseStatement.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\IncomeAndExpenseStatement.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\FinancialReports\IncomeAndExpenseStatement.Designer.cs">
+      <DependentUpon>IncomeAndExpenseStatement.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\JIBReports\ExcelJIBSuspenseAction.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2436,6 +2460,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\CheckReports\ManualChecksRemittanceOnly.resx">
       <DependentUpon>ManualChecksRemittanceOnly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\BalanceSheet.resx">
+      <DependentUpon>BalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelBalanceSheet.resx">
+      <DependentUpon>ExcelBalanceSheet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelIncomeAndExpenseStatement.resx">
+      <DependentUpon>ExcelIncomeAndExpenseStatement.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\FinancialReports\IncomeAndExpenseStatement.resx">
+      <DependentUpon>IncomeAndExpenseStatement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\ExcelJIBSuspenseAction.resx">
       <DependentUpon>ExcelJIBSuspenseAction.cs</DependentUpon>
