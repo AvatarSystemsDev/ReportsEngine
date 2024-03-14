@@ -585,6 +585,18 @@
     <Compile Include="Reports\JIBReports\JIBServiceCharges.Designer.cs">
       <DependentUpon>JIBServiceCharges.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\AFEEstimateSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\AFEEstimateSummary.Designer.cs">
+      <DependentUpon>AFEEstimateSummary.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelAFEEstimateSummary.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelAFEEstimateSummary.Designer.cs">
+      <DependentUpon>ExcelAFEEstimateSummary.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PAReports\PA_MiscDispositions.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2502,6 +2514,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\JIBServiceCharges.resx">
       <DependentUpon>JIBServiceCharges.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\AFEEstimateSummary.resx">
+      <DependentUpon>AFEEstimateSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelAFEEstimateSummary.resx">
+      <DependentUpon>ExcelAFEEstimateSummary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\PA_MiscDispositions.resx">
       <DependentUpon>PA_MiscDispositions.cs</DependentUpon>

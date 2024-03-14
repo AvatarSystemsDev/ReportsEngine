@@ -31,8 +31,6 @@ namespace ReportsEngine.Reports.APReports
             xrMICRAccountNumberTwo.PrintOnPage += XrMICRAccountNumber_PrintOnPage;
             xrTransitTopCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             xrCheckNumberTwo.PrintOnPage += XrCheckNumber_PrintOnPage;
-            BeginningRemittance.PrintOnPage += BeginningRemittance_PrintOnPage;
-            EndRemittance.PrintOnPage += EndRemittance_PrintOnPage;
             xrPictureBoxLogo.PrintOnPage += XrPictureBoxLogo_PrintOnPage;
             xrPictureBoxLogoTwo.PrintOnPage += XrPictureBoxLogo_PrintOnPage;
             xrPictureBoxTopSignature.PrintOnPage += XrPictureBoxTopSignature_PrintOnPage;
@@ -45,8 +43,8 @@ namespace ReportsEngine.Reports.APReports
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage;
             CheckInformationPart.PrintOnPage += CheckStubBandTopCheck_PrintOnPage;
             CheckCoverPage.PrintOnPage += CheckCoverPage_PrintOnPage;
-            StubEnd.PrintOnPage += StubEnd_PrintOnPage;
             xrPageBeginningLabel.PrintOnPage += XrPageBeginningLabel_PrintOnPage;
+            xrCheckEnderLabel.PrintOnPage += XrCheckEnderLabel_PrintOnPage;
             CheckTopBand.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckBottomBand.PrintOnPage += CheckBottomBand_PrintOnPage;
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
@@ -71,7 +69,6 @@ namespace ReportsEngine.Reports.APReports
             pageCounter = 1;
         }
 
-
         private void XrTopCheckPanel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPanel XrPanel = sender as XRPanel;
@@ -86,14 +83,6 @@ namespace ReportsEngine.Reports.APReports
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
-            if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
-            {
-                //band.PageBreak = PageBreak.AfterBand;
-            }
-            else
-            {
-                //band.PageBreak = PageBreak.None; // No page break on other pages
-            }
         }
 
         private void CheckStubBandTopCheck_PrintOnPage1(object sender, PrintOnPageEventArgs e)
@@ -102,20 +91,13 @@ namespace ReportsEngine.Reports.APReports
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
-            if (pageCounter <= 1 && OverflowHideValue) // Assuming you want to apply this on the first page
-            {
-                //band.PageBreak = PageBreak.AfterBand;
-            }
-            else
-            {
-                //band.PageBreak = PageBreak.None; // No page break on other pages
-            }
         }
 
         private void CheckBottomBand_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            SubBand band = sender as SubBand;
+            GroupBand band = sender as GroupBand;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
+            band.RepeatEveryPage = OverflowOptionCodeIDValue == "1";
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
             band.Visible = pageCounter <= 1 || !OverflowHideValue;
         }
@@ -136,14 +118,14 @@ namespace ReportsEngine.Reports.APReports
             label.Visible = pageCounter > 1 || WillPrintCompanyAddressOnStubValue;
         }
 
+        private void XrCheckEnderLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            pageCounter = 1;
+        }
 
         private void XrPageBeginningLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             pageCounter++;
-        }
-
-        private void StubEnd_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
         }
 
         private void CheckStubBandTopCheck_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -165,14 +147,6 @@ namespace ReportsEngine.Reports.APReports
             band.Visible = TwoSignaturesRequiredValue && pageCounter > 2;
             string OverflowOptionCodeIDValue = GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString();
             bool OverflowHideValue = OverflowOptionCodeIDValue == "4" || OverflowOptionCodeIDValue == "3";
-            if (pageCounter <= 2 && OverflowHideValue) // Assuming you want to apply this on the first page
-            {
-                //band.PageBreak = PageBreak.BeforeBand;
-            }
-            else
-            {
-                //band.PageBreak = PageBreak.None; // No page break on other pages
-            }
         }
 
         private void CheckBegin_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -183,7 +157,7 @@ namespace ReportsEngine.Reports.APReports
         private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
-            string imagePathSecondSignature = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
+            string imagePathSecondSignature = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
             try
             {
                 pictureBox.ImageSource = ImageSource.FromFile(imagePathSecondSignature); // Second Signature
@@ -197,7 +171,7 @@ namespace ReportsEngine.Reports.APReports
         private void XrPictureBoxBottomSignatureTwo_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
-            string imagePathSecondSignature = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
+            string imagePathSecondSignature = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
             try
             {
                 pictureBox.ImageSource = ImageSource.FromFile(imagePathSecondSignature); // Second Signature
@@ -210,7 +184,7 @@ namespace ReportsEngine.Reports.APReports
 
         private void XrPictureBoxTopSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            string imagePath = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
+            string imagePath = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
             XRPictureBox pictureBox = sender as XRPictureBox;
             try
             {
@@ -224,7 +198,7 @@ namespace ReportsEngine.Reports.APReports
 
         private void XrPictureBoxTopSignatureTwo_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
-            string imagePath = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
+            string imagePath = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
             XRPictureBox pictureBox = sender as XRPictureBox;
             try
             {
@@ -248,15 +222,6 @@ namespace ReportsEngine.Reports.APReports
             {
                 // Probably add some error handling here.
             }
-        }
-
-        private void EndRemittance_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
-
-        }
-
-        private void BeginningRemittance_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
         }
 
         private void XrCheckNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -295,6 +260,5 @@ namespace ReportsEngine.Reports.APReports
             XRPictureBox picture = sender as XRPictureBox;
             picture.Visible = pageCounter > 1; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to me, I have nothing else.
         }
-
     }
 }

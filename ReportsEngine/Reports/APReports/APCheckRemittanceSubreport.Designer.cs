@@ -52,13 +52,14 @@
             this.plngCheckFormatIsMICR = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.SubBand10 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrCompanyHeader = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrPages = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText4 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText5 = new DevExpress.XtraReports.UI.XRRichText();
-            this.xrCompanyHeader = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPages = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand11 = new DevExpress.XtraReports.UI.SubBand();
             this.Line1 = new DevExpress.XtraReports.UI.XRShape();
             this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
@@ -99,7 +100,6 @@
             this.pdteCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).BeginInit();
@@ -302,6 +302,62 @@
             this.SubBand10.HeightF = 46.82214F;
             this.SubBand10.Name = "SubBand10";
             // 
+            // xrCompanyHeader
+            // 
+            this.xrCompanyHeader.BorderColor = System.Drawing.Color.Black;
+            this.xrCompanyHeader.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrCompanyHeader.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrCompanyHeader.BorderWidth = 1F;
+            this.xrCompanyHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrCompanyAddressBlockLong"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooWillPrintCompanyAddressOnStub")});
+            this.xrCompanyHeader.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrCompanyHeader.KeepTogether = true;
+            this.xrCompanyHeader.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrCompanyHeader.Multiline = true;
+            this.xrCompanyHeader.Name = "xrCompanyHeader";
+            this.xrCompanyHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrCompanyHeader.SizeF = new System.Drawing.SizeF(794.0001F, 46.82214F);
+            this.xrCompanyHeader.StylePriority.UseBorderColor = false;
+            this.xrCompanyHeader.StylePriority.UseBorderDashStyle = false;
+            this.xrCompanyHeader.StylePriority.UseBorders = false;
+            this.xrCompanyHeader.StylePriority.UseBorderWidth = false;
+            this.xrCompanyHeader.StylePriority.UseFont = false;
+            this.xrCompanyHeader.StylePriority.UsePadding = false;
+            this.xrCompanyHeader.StylePriority.UseTextAlignment = false;
+            this.xrCompanyHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // xrPages
+            // 
+            this.xrPages.BorderColor = System.Drawing.Color.Black;
+            this.xrPages.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPages.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPages.BorderWidth = 1F;
+            this.xrPages.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrPages.KeepTogether = true;
+            this.xrPages.LocationFloat = new DevExpress.Utils.PointFloat(716.9999F, 0F);
+            this.xrPages.Multiline = true;
+            this.xrPages.Name = "xrPages";
+            this.xrPages.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrPages.SizeF = new System.Drawing.SizeF(75.99994F, 18F);
+            this.xrPages.StylePriority.UseBorderColor = false;
+            this.xrPages.StylePriority.UseBorderDashStyle = false;
+            this.xrPages.StylePriority.UseBorders = false;
+            this.xrPages.StylePriority.UseBorderWidth = false;
+            this.xrPages.StylePriority.UseFont = false;
+            this.xrPages.StylePriority.UsePadding = false;
+            this.xrPages.StylePriority.UseTextAlignment = false;
+            this.xrPages.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // SubBand8
+            // 
+            this.SubBand8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrPanel2});
+            this.SubBand8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooRunningAtEnd")});
+            this.SubBand8.HeightF = 32.47F;
+            this.SubBand8.Name = "SubBand8";
+            // 
             // xrPanel2
             // 
             this.xrPanel2.BorderColor = System.Drawing.Color.Black;
@@ -383,53 +439,6 @@
             this.xrRichText5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrRichText5.SerializableRtfString = resources.GetString("xrRichText5.SerializableRtfString");
             this.xrRichText5.SizeF = new System.Drawing.SizeF(199.65F, 26.22007F);
-            // 
-            // xrCompanyHeader
-            // 
-            this.xrCompanyHeader.BorderColor = System.Drawing.Color.Black;
-            this.xrCompanyHeader.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrCompanyHeader.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrCompanyHeader.BorderWidth = 1F;
-            this.xrCompanyHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pstrCompanyAddressBlockLong"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooWillPrintCompanyAddressOnStub")});
-            this.xrCompanyHeader.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrCompanyHeader.KeepTogether = true;
-            this.xrCompanyHeader.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrCompanyHeader.Multiline = true;
-            this.xrCompanyHeader.Name = "xrCompanyHeader";
-            this.xrCompanyHeader.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrCompanyHeader.SizeF = new System.Drawing.SizeF(794.0001F, 46.82214F);
-            this.xrCompanyHeader.StylePriority.UseBorderColor = false;
-            this.xrCompanyHeader.StylePriority.UseBorderDashStyle = false;
-            this.xrCompanyHeader.StylePriority.UseBorders = false;
-            this.xrCompanyHeader.StylePriority.UseBorderWidth = false;
-            this.xrCompanyHeader.StylePriority.UseFont = false;
-            this.xrCompanyHeader.StylePriority.UsePadding = false;
-            this.xrCompanyHeader.StylePriority.UseTextAlignment = false;
-            this.xrCompanyHeader.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // xrPages
-            // 
-            this.xrPages.BorderColor = System.Drawing.Color.Black;
-            this.xrPages.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrPages.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPages.BorderWidth = 1F;
-            this.xrPages.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrPages.KeepTogether = true;
-            this.xrPages.LocationFloat = new DevExpress.Utils.PointFloat(716.9999F, 0F);
-            this.xrPages.Multiline = true;
-            this.xrPages.Name = "xrPages";
-            this.xrPages.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPages.SizeF = new System.Drawing.SizeF(75.99994F, 18F);
-            this.xrPages.StylePriority.UseBorderColor = false;
-            this.xrPages.StylePriority.UseBorderDashStyle = false;
-            this.xrPages.StylePriority.UseBorders = false;
-            this.xrPages.StylePriority.UseBorderWidth = false;
-            this.xrPages.StylePriority.UseFont = false;
-            this.xrPages.StylePriority.UsePadding = false;
-            this.xrPages.StylePriority.UseTextAlignment = false;
-            this.xrPages.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // SubBand11
             // 
@@ -1027,15 +1036,6 @@
             this.pstrVendorNumber.Name = "pstrVendorNumber";
             this.pstrVendorNumber.Visible = false;
             // 
-            // SubBand8
-            // 
-            this.SubBand8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPanel2});
-            this.SubBand8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooRunningAtEnd")});
-            this.SubBand8.HeightF = 32.47F;
-            this.SubBand8.Name = "SubBand8";
-            // 
             // APCheckRemittanceSubreport
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1072,7 +1072,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillPrintCompanyAddressOnStub, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdblCheckAmount, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.Subtitle,
             this.pstrDatabaseName,
