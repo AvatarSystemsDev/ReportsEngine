@@ -1,10 +1,7 @@
 ﻿using DevExpress.Drawing;
 using DevExpress.XtraPrinting.Drawing;
 using DevExpress.XtraReports.UI;
-using System;
-using System.Collections;
 using System.ComponentModel;
-using System.Drawing;
 
 namespace ReportsEngine.Reports.APReports
 {
@@ -260,5 +257,6 @@ namespace ReportsEngine.Reports.APReports
             XRPictureBox picture = sender as XRPictureBox;
             picture.Visible = pageCounter > 1; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to me, I have nothing else.
         }
+
     }
 }

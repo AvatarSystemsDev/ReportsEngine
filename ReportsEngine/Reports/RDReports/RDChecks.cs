@@ -1,19 +1,8 @@
-﻿using DevExpress.XtraReports.Parameters;
-using DevExpress.XtraReports.UI;
+﻿using DevExpress.XtraReports.UI;
 using DevExpress.XtraPrinting.Drawing;
-using System;
-using System.Collections;
 using System.ComponentModel;
-using System.Drawing;
-using System.Drawing.Text;
-using System.Linq;
-using System.Web;
-using System.Web.Http.Results;
-using System.Diagnostics;
-using DevExpress.Utils.Extensions;
 using DevExpress.Drawing;
 using Band = DevExpress.XtraReports.UI.Band;
-using DevExpress.Data.Filtering.Helpers;
 
 namespace ReportsEngine
 {

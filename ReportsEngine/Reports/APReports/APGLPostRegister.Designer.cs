@@ -2823,14 +2823,14 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_DSGLReprintBatches";
             sourceNode2.Alias = null;
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"137\" />";
             source2.DataMember = "DSGLReprintBatches";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_DSGLReprintBatches";
             sourceNode2.Source = source2;
             selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ItemData"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Item"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PostDate")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Item")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_LookupCompanies";
             sourceNode3.Alias = null;

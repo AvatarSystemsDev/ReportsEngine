@@ -489,6 +489,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ExcelPreVoidCheckReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ExcelPreVoidCheckReport.Designer.cs">
+      <DependentUpon>ExcelPreVoidCheckReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="PreVoidCheckReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="PreVoidCheckReport.Designer.cs">
+      <DependentUpon>PreVoidCheckReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\APChecksRemittanceOnly.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2467,6 +2479,12 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="ExcelPreVoidCheckReport.resx">
+      <DependentUpon>ExcelPreVoidCheckReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PreVoidCheckReport.resx">
+      <DependentUpon>PreVoidCheckReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APChecksRemittanceOnly.resx">
       <DependentUpon>APChecksRemittanceOnly.cs</DependentUpon>
     </EmbeddedResource>

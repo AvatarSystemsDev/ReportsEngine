@@ -46,6 +46,7 @@
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngOverflowOptionCode = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooTrue = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooWillPrintCompanyAddressOnStub = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooWillCenterCompanyNameOnStub = new DevExpress.XtraReports.Parameters.Parameter();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
@@ -59,7 +60,6 @@
             this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooTrue = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCheckRemittance = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -111,6 +111,15 @@
             this.plngOverflowOptionCode.Type = typeof(int);
             this.plngOverflowOptionCode.ValueInfo = "3";
             this.plngOverflowOptionCode.Visible = false;
+            // 
+            // pbooTrue
+            // 
+            this.pbooTrue.Description = "True";
+            this.pbooTrue.Enabled = false;
+            this.pbooTrue.Name = "pbooTrue";
+            this.pbooTrue.Type = typeof(bool);
+            this.pbooTrue.ValueInfo = "True";
+            this.pbooTrue.Visible = false;
             // 
             // pbooWillPrintCompanyAddressOnStub
             // 
@@ -240,19 +249,10 @@
             this.pstrSelectCheckNumber.MultiValue = true;
             this.pstrSelectCheckNumber.Name = "pstrSelectCheckNumber";
             // 
-            // pbooTrue
-            // 
-            this.pbooTrue.Description = "True";
-            this.pbooTrue.Enabled = false;
-            this.pbooTrue.Name = "pbooTrue";
-            this.pbooTrue.Type = typeof(bool);
-            this.pbooTrue.ValueInfo = "True";
-            this.pbooTrue.Visible = false;
-            // 
             // xrCheckRemittance
             // 
             this.xrCheckRemittance.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND ?plngOverflowOptionCode <> 2")});
             this.xrCheckRemittance.GenerateOwnPages = true;
             this.xrCheckRemittance.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrCheckRemittance.Name = "xrCheckRemittance";

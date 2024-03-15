@@ -307,6 +307,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelBalanceSheet", () => new ExcelBalanceSheet());
             Reports.Add("IncomeAndExpenseStatement", () => new IncomeAndExpenseStatement());
             Reports.Add("ExcelIncomeAndExpenseStatement", () => new ExcelIncomeAndExpenseStatement());
+            Reports.Add("PreVoidCheckReport", () => new PreVoidCheckReport());
+            Reports.Add("ExcelPreVoidCheckReport", () => new PreVoidCheckReport());
+
+
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

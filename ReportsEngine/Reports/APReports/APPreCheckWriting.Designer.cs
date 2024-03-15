@@ -202,9 +202,6 @@
             this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.xrCrossBandBox3 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.xrCrossBandBox5 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.xrCrossBandBox6 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -627,7 +624,7 @@
             this.xrLabel14.BorderWidth = 1F;
             this.xrLabel14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([TotalPaymentDue])")});
-            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel14.KeepTogether = true;
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(683.544F, 0F);
             this.xrLabel14.Name = "xrLabel14";
@@ -1096,7 +1093,7 @@
             this.ReportFooter.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel38,
             this.xrLabel39});
-            this.ReportFooter.HeightF = 21F;
+            this.ReportFooter.HeightF = 17F;
             this.ReportFooter.Name = "ReportFooter";
             // 
             // xrLabel38
@@ -1118,7 +1115,7 @@
             this.xrLabel38.StylePriority.UseFont = false;
             this.xrLabel38.StylePriority.UsePadding = false;
             this.xrLabel38.StylePriority.UseTextAlignment = false;
-            this.xrLabel38.Text = "Grand Total";
+            this.xrLabel38.Text = "Report Total";
             this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel39
@@ -1129,7 +1126,7 @@
             this.xrLabel39.BorderWidth = 1F;
             this.xrLabel39.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([TotalPaymentDue])")});
-            this.xrLabel39.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel39.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel39.KeepTogether = true;
             this.xrLabel39.LocationFloat = new DevExpress.Utils.PointFloat(683.5472F, 0F);
             this.xrLabel39.Name = "xrLabel39";
@@ -1370,7 +1367,7 @@
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel7,
             this.xrLabel8});
-            this.groupFooterBand1.HeightF = 25.20828F;
+            this.groupFooterBand1.HeightF = 21F;
             this.groupFooterBand1.Level = 1;
             this.groupFooterBand1.Name = "groupFooterBand1";
             // 
@@ -1404,7 +1401,7 @@
             this.xrLabel8.BorderWidth = 1F;
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([TotalPaymentDue])")});
-            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel8.KeepTogether = true;
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(683.544F, 4F);
             this.xrLabel8.Name = "xrLabel8";
@@ -1858,42 +1855,6 @@
             this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(1.170222F, 0F);
             this.xrCrossBandBox2.WidthF = 770.0001F;
             // 
-            // xrCrossBandBox3
-            // 
-            this.xrCrossBandBox3.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox3.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrCrossBandBox3.BorderWidth = 1F;
-            this.xrCrossBandBox3.EndBand = this.ReportFooter;
-            this.xrCrossBandBox3.EndPointFloat = new DevExpress.Utils.PointFloat(708.2338F, 21F);
-            this.xrCrossBandBox3.Name = "xrCrossBandBox3";
-            this.xrCrossBandBox3.StartBand = this.ReportFooter;
-            this.xrCrossBandBox3.StartPointFloat = new DevExpress.Utils.PointFloat(708.2338F, 17.00001F);
-            this.xrCrossBandBox3.WidthF = 60.72479F;
-            // 
-            // xrCrossBandBox5
-            // 
-            this.xrCrossBandBox5.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox5.Borders = DevExpress.XtraPrinting.BorderSide.Top;
-            this.xrCrossBandBox5.BorderWidth = 1F;
-            this.xrCrossBandBox5.EndBand = this.groupFooterBand1;
-            this.xrCrossBandBox5.EndPointFloat = new DevExpress.Utils.PointFloat(708.2338F, 25F);
-            this.xrCrossBandBox5.Name = "xrCrossBandBox5";
-            this.xrCrossBandBox5.StartBand = this.groupFooterBand1;
-            this.xrCrossBandBox5.StartPointFloat = new DevExpress.Utils.PointFloat(708.2338F, 20.99997F);
-            this.xrCrossBandBox5.WidthF = 61.76642F;
-            // 
-            // xrCrossBandBox6
-            // 
-            this.xrCrossBandBox6.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox6.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
-            this.xrCrossBandBox6.BorderWidth = 1F;
-            this.xrCrossBandBox6.EndBand = this.groupFooterBand1;
-            this.xrCrossBandBox6.EndPointFloat = new DevExpress.Utils.PointFloat(708.2338F, 4.000028F);
-            this.xrCrossBandBox6.Name = "xrCrossBandBox6";
-            this.xrCrossBandBox6.StartBand = this.groupFooterBand1;
-            this.xrCrossBandBox6.StartPointFloat = new DevExpress.Utils.PointFloat(708.2338F, 0F);
-            this.xrCrossBandBox6.WidthF = 61.76642F;
-            // 
             // APPreCheckWriting
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1914,9 +1875,6 @@
             this.Pulse,
             this.federationDataSource1});
             this.CrossBandControls.AddRange(new DevExpress.XtraReports.UI.XRCrossBandControl[] {
-            this.xrCrossBandBox6,
-            this.xrCrossBandBox5,
-            this.xrCrossBandBox3,
             this.xrCrossBandBox2,
             this.xrCrossBandBox1});
             this.DataMember = "Dynamic_DSAPPreCheckWriting";
@@ -2034,8 +1992,5 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel25;
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
-        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox3;
-        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox5;
-        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox6;
     }
 }
