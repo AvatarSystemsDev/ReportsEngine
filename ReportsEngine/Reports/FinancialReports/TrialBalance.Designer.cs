@@ -657,8 +657,7 @@ namespace ReportsEngine.Reports.FinancialReports
             // xrCurrentMonthTitle
             // 
             this.xrCurrentMonthTitle.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pdteEndDate"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowCriteria")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?pdteEndDate")});
             this.xrCurrentMonthTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrCurrentMonthTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 42.29167F);
             this.xrCurrentMonthTitle.Multiline = true;
@@ -994,7 +993,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pbooShowCriteria.Description = "Show Criteria";
             this.pbooShowCriteria.Name = "pbooShowCriteria";
             this.pbooShowCriteria.Type = typeof(bool);
-            this.pbooShowCriteria.ValueInfo = "True";
+            this.pbooShowCriteria.ValueInfo = "False";
             // 
             // xrCrossBandBox1
             // 
@@ -1292,7 +1291,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pbooShowIncomeAndExpense.Description = "Show Inc. & Exp.";
             this.pbooShowIncomeAndExpense.Name = "pbooShowIncomeAndExpense";
             this.pbooShowIncomeAndExpense.Type = typeof(bool);
-            this.pbooShowIncomeAndExpense.ValueInfo = "False";
+            this.pbooShowIncomeAndExpense.ValueInfo = "True";
             // 
             // TrialBalance
             // 

@@ -1128,7 +1128,6 @@
             this.xrRunningBalance.StylePriority.UsePadding = false;
             this.xrRunningBalance.StylePriority.UseTextAlignment = false;
             xrSummary1.IgnoreNullValues = true;
-            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrRunningBalance.Summary = xrSummary1;
             this.xrRunningBalance.TextAlignment = DevExpress.XtraPrinting.TextAlignment.MiddleRight;
             this.xrRunningBalance.TextFormatString = "{0:N2}";
@@ -1560,6 +1559,8 @@
             this.xrBalanceForward.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrBalanceForward.BorderWidth = 0F;
             this.xrBalanceForward.CanGrow = false;
+            this.xrBalanceForward.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrBalanceForward.ExpressionBindings"))});
             this.xrBalanceForward.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrBalanceForward.ForeColor = System.Drawing.Color.Black;
             this.xrBalanceForward.KeepTogether = true;
@@ -2257,7 +2258,7 @@
             this.xrLabel59.Multiline = true;
             this.xrLabel59.Name = "xrLabel59";
             this.xrLabel59.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel59.SizeF = new System.Drawing.SizeF(76.35065F, 38.00999F);
+            this.xrLabel59.SizeF = new System.Drawing.SizeF(77.39575F, 38.00999F);
             this.xrLabel59.StylePriority.UseBorderWidth = false;
             this.xrLabel59.StylePriority.UsePadding = false;
             this.xrLabel59.StylePriority.UseTextAlignment = false;
@@ -3413,7 +3414,7 @@
             this.pbooShowCriteria.Description = "Show Criteria";
             this.pbooShowCriteria.Name = "pbooShowCriteria";
             this.pbooShowCriteria.Type = typeof(bool);
-            this.pbooShowCriteria.ValueInfo = "True";
+            this.pbooShowCriteria.ValueInfo = "1";
             // 
             // plngBookCodeID
             // 
@@ -3690,8 +3691,8 @@
             this.xrAccountTotalCredit.BorderWidth = 0F;
             this.xrAccountTotalCredit.CanGrow = false;
             this.xrAccountTotalCredit.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([AccountID]),0,\niif(sumSum(iif([NetAmount]<0,-1*[NetAmount],0\n)" +
-                    "\n)))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([AccountID]),0,iif(sumSum(iif([NetAmount] <= 0 OR [isBBF] = 1,[" +
+                    "NetAmountVisible],0))))\n")});
             this.xrAccountTotalCredit.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrAccountTotalCredit.KeepTogether = true;
             this.xrAccountTotalCredit.LocationFloat = new DevExpress.Utils.PointFloat(873.5627F, 1.999982F);
@@ -3720,8 +3721,8 @@
             this.xrAccountTotalDebit.BorderWidth = 0.5F;
             this.xrAccountTotalDebit.CanGrow = false;
             this.xrAccountTotalDebit.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([AccountID]),0,\niif(sumSum(iif([NetAmount]>=0,[NetAmount],0\n)\n)" +
-                    "))\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([AccountID]),0,iif(sumSum(iif([NetAmount] >= 0 OR [isBBF] = 1,[" +
+                    "NetAmount],0))))")});
             this.xrAccountTotalDebit.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrAccountTotalDebit.KeepTogether = true;
             this.xrAccountTotalDebit.LocationFloat = new DevExpress.Utils.PointFloat(792.0264F, 1.999982F);
@@ -3796,8 +3797,8 @@
             this.xrPeriodTotalDebit.BorderWidth = 0F;
             this.xrPeriodTotalDebit.CanGrow = false;
             this.xrPeriodTotalDebit.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([AccountID]),0,\niif(sumSum(iif([isBBF] = false AND [NetAmount]>" +
-                    "=0,[NetAmount],0\n)\n)))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([AccountID]),0,iif(sumSum(iif([NetAmount] >= 0 OR [isBBF] = 1,[" +
+                    "NetAmount],0))))\n")});
             this.xrPeriodTotalDebit.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrPeriodTotalDebit.KeepTogether = true;
             this.xrPeriodTotalDebit.LocationFloat = new DevExpress.Utils.PointFloat(792.0262F, 0F);
@@ -3826,8 +3827,8 @@
             this.xrPeriodTotalCredit.BorderWidth = 0F;
             this.xrPeriodTotalCredit.CanGrow = false;
             this.xrPeriodTotalCredit.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([AccountID]),0,\niif(sumSum(iif([isBBF] = false AND [NetAmount]<" +
-                    "0,-1*[NetAmount],0\n)\n)))\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(IsNullOrEmpty([AccountID]),0,iif(sumSum(iif([NetAmount] <= 0 OR [isBBF] = 1,[" +
+                    "NetAmount],0))))")});
             this.xrPeriodTotalCredit.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrPeriodTotalCredit.KeepTogether = true;
             this.xrPeriodTotalCredit.LocationFloat = new DevExpress.Utils.PointFloat(868.1025F, 0F);
@@ -3968,7 +3969,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "true")});
             this.pbooShowPeriodTotals.Name = "pbooShowPeriodTotals";
             this.pbooShowPeriodTotals.Type = typeof(bool);
-            this.pbooShowPeriodTotals.ValueInfo = "False";
+            this.pbooShowPeriodTotals.ValueInfo = "0";
             // 
             // ReportHeader
             // 
@@ -4007,7 +4008,7 @@
             this.xrLabel60.Multiline = true;
             this.xrLabel60.Name = "xrLabel60";
             this.xrLabel60.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel60.SizeF = new System.Drawing.SizeF(76.35065F, 37.99559F);
+            this.xrLabel60.SizeF = new System.Drawing.SizeF(77.39575F, 37.99559F);
             this.xrLabel60.StylePriority.UseBorderWidth = false;
             this.xrLabel60.StylePriority.UsePadding = false;
             this.xrLabel60.StylePriority.UseTextAlignment = false;
@@ -4286,10 +4287,10 @@
             this.xrCrossBandBox2.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrCrossBandBox2.BorderWidth = 0.5F;
             this.xrCrossBandBox2.EndBand = this.SubBand2;
-            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(876.936F, 27.043F);
+            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(876.936F, 26.0222F);
             this.xrCrossBandBox2.Name = "xrCrossBandBox2";
             this.xrCrossBandBox2.StartBand = this.SubBand2;
-            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(876.936F, 16.00003F);
+            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(876.936F, 16.00005F);
             this.xrCrossBandBox2.WidthF = 65.66998F;
             // 
             // xrCrossBandBox5
@@ -4322,10 +4323,10 @@
             this.xrCrossBandBox9.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrCrossBandBox9.BorderWidth = 0.5F;
             this.xrCrossBandBox9.EndBand = this.SubBand2;
-            this.xrCrossBandBox9.EndPointFloat = new DevExpress.Utils.PointFloat(953.2858F, 27.043F);
+            this.xrCrossBandBox9.EndPointFloat = new DevExpress.Utils.PointFloat(953.2858F, 26.0222F);
             this.xrCrossBandBox9.Name = "xrCrossBandBox9";
             this.xrCrossBandBox9.StartBand = this.SubBand2;
-            this.xrCrossBandBox9.StartPointFloat = new DevExpress.Utils.PointFloat(953.2858F, 16.00003F);
+            this.xrCrossBandBox9.StartPointFloat = new DevExpress.Utils.PointFloat(953.2858F, 16.00005F);
             this.xrCrossBandBox9.WidthF = 65.66998F;
             // 
             // xrCrossBandBox3
@@ -4377,6 +4378,7 @@
             dynamicListLookUpSettings19.SortMember = null;
             dynamicListLookUpSettings19.ValueMember = "ID";
             this.parameter1.ValueSourceSettings = dynamicListLookUpSettings19;
+            this.parameter1.Visible = false;
             // 
             // plngBalanced
             // 
@@ -4391,6 +4393,7 @@
             dynamicListLookUpSettings20.SortMember = null;
             dynamicListLookUpSettings20.ValueMember = null;
             this.plngBalanced.ValueSourceSettings = dynamicListLookUpSettings20;
+            this.plngBalanced.Visible = false;
             // 
             // GeneralLedgerDetail
             // 
