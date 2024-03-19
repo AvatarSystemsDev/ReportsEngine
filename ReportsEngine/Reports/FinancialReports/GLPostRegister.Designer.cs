@@ -2247,7 +2247,7 @@
             this.xrLabel73.LocationFloat = new DevExpress.Utils.PointFloat(945.5696F, 0F);
             this.xrLabel73.Name = "xrLabel73";
             this.xrLabel73.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel73.SizeF = new System.Drawing.SizeF(74.43024F, 17F);
+            this.xrLabel73.SizeF = new System.Drawing.SizeF(74.43134F, 17F);
             this.xrLabel73.StylePriority.UseBackColor = false;
             this.xrLabel73.StylePriority.UseBorderColor = false;
             this.xrLabel73.StylePriority.UseBorderDashStyle = false;
