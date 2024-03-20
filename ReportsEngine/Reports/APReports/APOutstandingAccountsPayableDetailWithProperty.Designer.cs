@@ -220,6 +220,7 @@
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.pbooUseInvoiceDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowReportType = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -916,6 +917,8 @@
             // plngReportType
             // 
             this.plngReportType.Description = "Report Type";
+            this.plngReportType.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooShowReportType")});
             this.plngReportType.Name = "plngReportType";
             this.plngReportType.Type = typeof(int);
             this.plngReportType.ValueInfo = "0";
@@ -1129,11 +1132,11 @@
             this.xrLabel25.BorderWidth = 1F;
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel25.KeepTogether = true;
-            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(661.1864F, 93.67008F);
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(662.228F, 93.67008F);
             this.xrLabel25.Multiline = true;
             this.xrLabel25.Name = "xrLabel25";
             this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel25.SizeF = new System.Drawing.SizeF(33.38251F, 40.41671F);
+            this.xrLabel25.SizeF = new System.Drawing.SizeF(31.29907F, 40.41671F);
             this.xrLabel25.StylePriority.UseBackColor = false;
             this.xrLabel25.StylePriority.UsePadding = false;
             this.xrLabel25.StylePriority.UseTextAlignment = false;
@@ -1622,7 +1625,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_APOutstandingPayablesDetailWithProperty";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"497\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"517\" />";
             source1.DataMember = "APOutstandingPayablesDetailWithProperty";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_APOutstandingPayablesDetailWithProperty";
@@ -1642,13 +1645,13 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DueDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GLDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ServiceDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "FederalIdNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbrev"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PhaseWellShortRecordType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsPaid")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsPaid"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "NetAmount")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_DSReportTypeLookup";
             sourceNode2.Alias = null;
@@ -1753,6 +1756,14 @@
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Use Due Date"));
             this.pbooUseInvoiceDate.ValueSourceSettings = staticListLookUpSettings2;
             // 
+            // pbooShowReportType
+            // 
+            this.pbooShowReportType.Description = "Show Report Type";
+            this.pbooShowReportType.Name = "pbooShowReportType";
+            this.pbooShowReportType.Type = typeof(bool);
+            this.pbooShowReportType.ValueInfo = "False";
+            this.pbooShowReportType.Visible = false;
+            // 
             // APOutstandingAccountsPayableDetailWithProperty
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1783,6 +1794,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowReportType, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooUseInvoiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1802,6 +1814,7 @@
             this.pstrDatabaseName,
             this.plngUserID,
             this.plngCompanyID,
+            this.pbooShowReportType,
             this.Subtitle,
             this.pbooUseInvoiceDate,
             this.pdteBeginningPostDate,
@@ -1895,5 +1908,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel xrLabel25;
         private DevExpress.XtraReports.UI.XRLabel xrLabel28;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowReportType;
     }
 }

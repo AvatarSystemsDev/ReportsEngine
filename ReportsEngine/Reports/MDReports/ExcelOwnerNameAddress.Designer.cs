@@ -39,6 +39,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelOwnerNameAddress));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -74,6 +75,7 @@
             this.plngUseSortName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowEntitiesWithoutAddresses = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngMaskFederalID = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -220,7 +222,8 @@
             this.xrLabel5.BorderWidth = 1F;
             this.xrLabel5.CanGrow = false;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FederalIdNumber]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngMaskFederalID = 0, [FederalIDNumber],?plngMaskFederalID = 1, \'*****\'+Sub" +
+                    "string([FederalIDNumber], len([FederalIDNumber]) - 4), \'\')")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel5.ForeColor = System.Drawing.Color.Black;
             this.xrLabel5.KeepTogether = true;
@@ -413,33 +416,36 @@
             this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
             storedProcQuery1.Name = "NamebaseNameAddress";
-            queryParameter1.Name = "@pstrBeginningEntityNumber";
+            queryParameter1.Name = "@plngCompanyID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
-            queryParameter2.Name = "@pstrEndingEntityNumber";
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter2.Name = "@pstrBeginningEntityNumber";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
-            queryParameter3.Name = "@plngSortOrder";
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
+            queryParameter3.Name = "@pstrEndingEntityNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
-            queryParameter4.Name = "@plngShowActive";
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter4.Name = "@plngSortOrder";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
-            queryParameter5.Name = "@plngUseSortName";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngSortOrder", typeof(int));
+            queryParameter5.Name = "@plngShowActive";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
-            queryParameter6.Name = "@pstrRoleIDs";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngShowActive", typeof(int));
+            queryParameter6.Name = "@plngUseSortName";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngEntityCodeID", typeof(string));
-            queryParameter7.Name = "@pbooIncludeCompanyOwner";
-            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
-            queryParameter8.Name = "@pbooShowLabelWithoutAddress";
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
+            queryParameter7.Name = "@pstrRoleIDs";
+            queryParameter7.Type = typeof(string);
+            queryParameter7.ValueInfo = "2";
+            queryParameter8.Name = "@pbooIncludeCompanyOwner";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooShowEntitiesWithoutAddresses", typeof(bool));
-            queryParameter9.Name = "@pbooGetMailingAndTaxAddressOrJIBAndRDAddress";
-            queryParameter9.Type = typeof(bool);
-            queryParameter9.ValueInfo = "False";
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
+            queryParameter9.Name = "@pbooShowLabelWithoutAddress";
+            queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pbooShowEntitiesWithoutAddresses", typeof(bool));
+            queryParameter10.Name = "@pbooGetMailingAndTaxAddressOrJIBAndRDAddress";
+            queryParameter10.Type = typeof(bool);
+            queryParameter10.ValueInfo = "False";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -449,7 +455,8 @@
             queryParameter6,
             queryParameter7,
             queryParameter8,
-            queryParameter9});
+            queryParameter9,
+            queryParameter10});
             storedProcQuery1.StoredProcName = "Report_NamebaseNameAddress";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -568,6 +575,13 @@
             this.pbooShowEntitiesWithoutAddresses.Type = typeof(bool);
             this.pbooShowEntitiesWithoutAddresses.ValueInfo = "False";
             // 
+            // plngMaskFederalID
+            // 
+            this.plngMaskFederalID.Description = "Parameter1";
+            this.plngMaskFederalID.Name = "plngMaskFederalID";
+            this.plngMaskFederalID.Type = typeof(int);
+            this.plngMaskFederalID.ValueInfo = "0";
+            // 
             // ExcelOwnerNameAddress
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -616,7 +630,8 @@
             this.plngEntityCodeID,
             this.pstrSelectOwner,
             this.plngUseSortName,
-            this.pbooShowEntitiesWithoutAddresses});
+            this.pbooShowEntitiesWithoutAddresses,
+            this.plngMaskFederalID});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -657,5 +672,6 @@
         private DevExpress.XtraReports.Parameters.Parameter plngUseSortName;
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowEntitiesWithoutAddresses;
+        private DevExpress.XtraReports.Parameters.Parameter plngMaskFederalID;
     }
 }

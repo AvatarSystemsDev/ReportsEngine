@@ -2678,7 +2678,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_dsDOIbyProperty";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"210\" Height=\"977\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"210\" Height=\"957\" />";
             source1.DataMember = "dsDOIbyProperty";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_dsDOIbyProperty";
@@ -2726,7 +2726,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "NonDeletedCostDecimalHeader"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "NonDeletedRevenueDecimalHeader"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "TotalCostDecimal"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "TotalRevenueDecimal")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "TotalRevenueDecimal"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DOIDeckCodeID")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_LookupProperties";
             sourceNode2.Alias = null;
@@ -2942,7 +2943,8 @@
             this.xrLabel37,
             this.xrLabel39});
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("DOIDeckCodeNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            new DevExpress.XtraReports.UI.GroupField("DOIDeckCodeNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
+            new DevExpress.XtraReports.UI.GroupField("DOIDeckCodeID", DevExpress.XtraReports.UI.XRColumnSortOrder.None)});
             this.groupHeaderBand1.HeightF = 17F;
             this.groupHeaderBand1.Level = 1;
             this.groupHeaderBand1.Name = "groupHeaderBand1";

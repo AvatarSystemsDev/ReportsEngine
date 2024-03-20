@@ -127,6 +127,10 @@
     <value>iif(?pdteBeginningPostDate &lt;= #1900-01-01# &amp;&amp; ?pdteEndingPostDate &gt;= Today(), 'All Dates',FormatString('{0:MM/dd/yyyy}', ?pdteBeginningPostDate) + ' to ' + Iif(?pdteEndingPostDate = Today(),FormatString('{0:MM/dd/yyyy}', ?pdteEndingPostDate) ,FormatString('{0:MM/dd/yyyy}', ?pdteEndingPostDate)))
 </value>
   </data>
+  <data name="xrLabel27.ExpressionBindings" xml:space="preserve">
+    <value>iif(?pdteBeginningPostDate &lt;= #1900-01-01# &amp;&amp; ?pdteEndingPostDate &gt;= Today(), 'All Dates',FormatString('{0:MM/dd/yyyy}', ?pdteBeginningPostDate) + ' to ' + Iif(?pdteEndingPostDate = Today(),FormatString('{0:MM/dd/yyyy}', ?pdteEndingPostDate) ,FormatString('{0:MM/dd/yyyy}', ?pdteEndingPostDate)))
+</value>
+  </data>
   <data name="xrAccountingCentersSelected.ExpressionBindings" xml:space="preserve">
     <value>iif(?pstrBeginningCostCenter = '!', iif(?pstrEndingCostCenter = 'ZZZZ', 'Selected Accounting Centers', 'First Center to ' + ?pstrEndingCostCenter), iif(?pstrEndingCostCenter = 'ZZZZ', ?pstrBeginningCostCenter + ' to Last Center', ?pstrBeginningCostCenter + ' to ' + ?pstrEndingCostCenter))
 </value>
