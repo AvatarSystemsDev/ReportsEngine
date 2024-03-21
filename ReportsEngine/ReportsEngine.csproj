@@ -603,6 +603,12 @@
     <Compile Include="Reports\MDReports\AFEEstimateSummary.Designer.cs">
       <DependentUpon>AFEEstimateSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\AFEEstimateSummarySubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\AFEEstimateSummarySubreport.Designer.cs">
+      <DependentUpon>AFEEstimateSummarySubreport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\ExcelAFEEstimateSummary.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2535,6 +2541,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEEstimateSummary.resx">
       <DependentUpon>AFEEstimateSummary.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\AFEEstimateSummarySubreport.resx">
+      <DependentUpon>AFEEstimateSummarySubreport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelAFEEstimateSummary.resx">
       <DependentUpon>ExcelAFEEstimateSummary.cs</DependentUpon>
