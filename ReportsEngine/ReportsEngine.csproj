@@ -603,6 +603,12 @@
     <Compile Include="Reports\MDReports\AFEDetail.Designer.cs">
       <DependentUpon>AFEDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\AFEDetailInvoiceSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\AFEDetailInvoiceSubreport.Designer.cs">
+      <DependentUpon>AFEDetailInvoiceSubreport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\AFEEstimateSummary.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -620,6 +626,12 @@
     </Compile>
     <Compile Include="Reports\MDReports\AFEEstimateSummarySuperReport.Designer.cs">
       <DependentUpon>AFEEstimateSummarySuperReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelAFEDetail.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelAFEDetail.Designer.cs">
+      <DependentUpon>ExcelAFEDetail.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\MDReports\ExcelAFEEstimateSummary.cs">
       <SubType>Component</SubType>
@@ -2554,6 +2566,9 @@
     <EmbeddedResource Include="Reports\MDReports\AFEDetail.resx">
       <DependentUpon>AFEDetail.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\AFEDetailInvoiceSubreport.resx">
+      <DependentUpon>AFEDetailInvoiceSubreport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEEstimateSummary.resx">
       <DependentUpon>AFEEstimateSummary.cs</DependentUpon>
     </EmbeddedResource>
@@ -2562,6 +2577,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEEstimateSummarySuperReport.resx">
       <DependentUpon>AFEEstimateSummarySuperReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelAFEDetail.resx">
+      <DependentUpon>ExcelAFEDetail.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelAFEEstimateSummary.resx">
       <DependentUpon>ExcelAFEEstimateSummary.cs</DependentUpon>

@@ -6,12 +6,36 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.MDReports
 {
-    public partial class AFEDetail : DevExpress.XtraReports.UI.XtraReport
+    public partial class DetailAFE : DevExpress.XtraReports.UI.XtraReport
     {
-        public AFEDetail()
+        private int PageNumber = 1;
+        private bool EndAFE = false;
+        public DetailAFE()
         {
             InitializeComponent();
+            xrAFEOver.PrintOnPage += XrAFEOver_PrintOnPage;
+            xrPageNumber.PrintOnPage += XrPageNumber_PrintOnPage;
         }
 
+        private void XrPageNumber_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            XRLabel pageLabel = sender as XRLabel;
+            pageLabel.Text = "Page " + PageNumber.ToString();
+            if (!EndAFE)
+            {
+                PageNumber++;
+            }
+            else
+            {
+                EndAFE = true;
+                PageNumber = 1;
+            }
+
+        }
+
+        private void XrAFEOver_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            EndAFE = true;
+        }
     }
 }
