@@ -1004,7 +1004,7 @@ namespace ReportsEngine.Reports
             // xrAFEsSelected
             // 
             this.xrAFEsSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrAFEsSelected.LocationFloat = new DevExpress.Utils.PointFloat(57.51832F, 2.990051F);
+            this.xrAFEsSelected.LocationFloat = new DevExpress.Utils.PointFloat(56.47669F, 2.990051F);
             this.xrAFEsSelected.Multiline = true;
             this.xrAFEsSelected.Name = "xrAFEsSelected";
             this.xrAFEsSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -1016,7 +1016,7 @@ namespace ReportsEngine.Reports
             // xrLabel12
             // 
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(1.041667F, 2.990051F);
+            this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(2.479553E-05F, 2.990051F);
             this.xrLabel12.Multiline = true;
             this.xrLabel12.Name = "xrLabel12";
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);

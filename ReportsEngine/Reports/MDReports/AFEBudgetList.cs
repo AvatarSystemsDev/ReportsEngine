@@ -13,8 +13,8 @@ namespace ReportsEngine.Reports.JIBReports
         public AFEBudgetList()
         {
             InitializeComponent();
-            xrAccountsSelected.BeforePrint += xrAccountsSelected_BeforePrint;
-            xrAFEsSelected.BeforePrint += xrAFEsSelected_BeforePrint;
+            //xrAccountsSelected.BeforePrint += xrAccountsSelected_BeforePrint;
+            //xrAFEsSelected.BeforePrint += xrAFEsSelected_BeforePrint;
         }
         private void xrAccountsSelected_BeforePrint(object sender, CancelEventArgs e)
         {

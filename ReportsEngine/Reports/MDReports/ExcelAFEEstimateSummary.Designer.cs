@@ -134,11 +134,11 @@
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngActualAmountType", typeof(int));
             queryParameter9.Name = "@pbooShowZeroBalances";
-            queryParameter9.Type = typeof(bool);
-            queryParameter9.ValueInfo = "False";
+            queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pbooShowZeroBalances", typeof(bool));
             queryParameter10.Name = "@pbooHideAccountNumber";
             queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("not ?pbooShowAccountNumber", typeof(bool));
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pbooShowAccountNumber", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
