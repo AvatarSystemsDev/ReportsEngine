@@ -63,7 +63,6 @@
             this.pstrBeginningPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectState = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooPrintPropertiesOnly = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrOperatorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngSortOrder = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
@@ -72,16 +71,18 @@
             this.plngOperatorsToShow = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOperator = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngShowActive = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectCounty = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
             // 
-            this.topMarginBand1.HeightF = 20F;
+            this.topMarginBand1.HeightF = 0F;
             this.topMarginBand1.Name = "topMarginBand1";
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 20F;
+            this.bottomMarginBand1.HeightF = 0F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // Tablix3
@@ -503,13 +504,6 @@
             this.pstrSelectState.Name = "pstrSelectState";
             this.pstrSelectState.Type = typeof(int);
             // 
-            // pbooPrintPropertiesOnly
-            // 
-            this.pbooPrintPropertiesOnly.Description = "Print Properties Only";
-            this.pbooPrintPropertiesOnly.Name = "pbooPrintPropertiesOnly";
-            this.pbooPrintPropertiesOnly.Type = typeof(bool);
-            this.pbooPrintPropertiesOnly.ValueInfo = "False";
-            // 
             // pstrOperatorNumber
             // 
             this.pstrOperatorNumber.Description = "Operator";
@@ -566,6 +560,18 @@
             this.plngShowActive.Type = typeof(int);
             this.plngShowActive.ValueInfo = "0";
             // 
+            // pstrSelectCounty
+            // 
+            this.pstrSelectCounty.Description = "Parameter1";
+            this.pstrSelectCounty.MultiValue = true;
+            this.pstrSelectCounty.Name = "pstrSelectCounty";
+            // 
+            // pstrSelectProperty
+            // 
+            this.pstrSelectProperty.Description = "Parameter1";
+            this.pstrSelectProperty.MultiValue = true;
+            this.pstrSelectProperty.Name = "pstrSelectProperty";
+            // 
             // ExcelPropertyListAllCompanies
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -578,9 +584,10 @@
             this.DataMember = "PropertyListAllCompanies";
             this.DataSource = this.Dynamic;
             this.DisplayName = "PropertyListAllCompanies";
-            this.FilterString = "[StateCodeID] In (?pstrSelectState)";
+            this.FilterString = "[PropertyAndWellNumber] In (?pstrSelectProperty) And [StateCodeID] In (?pstrSelec" +
+    "tState) And [CountyID] In (?pstrSelectCounty)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 20F, 20F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -588,15 +595,17 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooUseGroupTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectState, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooPrintPropertiesOnly, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrOperatorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortOrder, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngOperatorsToShow, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOperator, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOperator, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCounty, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrDatabaseName,
@@ -604,8 +613,8 @@
             this.pbooUseGroupTypes,
             this.pstrBeginningPropertyNumber,
             this.pstrEndingPropertyNumber,
+            this.pstrSelectProperty,
             this.pstrSelectState,
-            this.pbooPrintPropertiesOnly,
             this.pstrOperatorNumber,
             this.plngSortOrder,
             this.pbooShowCriteria,
@@ -613,7 +622,8 @@
             this.Subtitle,
             this.plngOperatorsToShow,
             this.pstrSelectOperator,
-            this.plngShowActive});
+            this.plngShowActive,
+            this.pstrSelectCounty});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -636,7 +646,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectState;
-        private DevExpress.XtraReports.Parameters.Parameter pbooPrintPropertiesOnly;
         private DevExpress.XtraReports.Parameters.Parameter pstrOperatorNumber;
         private DevExpress.XtraReports.Parameters.Parameter plngSortOrder;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
@@ -655,5 +664,7 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox26;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectOperator;
         private DevExpress.XtraReports.Parameters.Parameter plngShowActive;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectCounty;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectProperty;
     }
 }

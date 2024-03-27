@@ -86,5 +86,9 @@ namespace ReportsEngine.Reports.MDReports
             }
         }
 
+        private void VendorOptionsListing_BeforePrint(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

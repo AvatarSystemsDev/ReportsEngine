@@ -248,6 +248,7 @@
             this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
             this.xrOwnerFooterLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand12 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrAFEEstimateSummary = new DevExpress.XtraReports.UI.XRSubreport();
             this.SubBand13 = new DevExpress.XtraReports.UI.SubBand();
             this.xrOwnerFooterLabelEnd = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
@@ -256,7 +257,6 @@
             this.pbooSortBy = new DevExpress.XtraReports.Parameters.Parameter();
             this.Grouping1 = new DevExpress.XtraReports.UI.CalculatedField();
             this.Grouping2 = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrAFEEstimateSummary = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -967,6 +967,7 @@
             this.Header.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintAsTotal] = 0 ")});
             this.Header.HeightF = 23.00002F;
+            this.Header.KeepTogether = true;
             this.Header.Name = "Header";
             // 
             // xrLabel23
@@ -1128,6 +1129,7 @@
             this.SubBand4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[WillPrintAsTotal] = 1")});
             this.SubBand4.HeightF = 27.85498F;
+            this.SubBand4.KeepTogether = true;
             this.SubBand4.Name = "SubBand4";
             // 
             // xrLabel21
@@ -1691,7 +1693,7 @@
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel22.SizeF = new System.Drawing.SizeF(93.38672F, 17.00002F);
             this.xrLabel22.StylePriority.UseFont = false;
-            this.xrLabel22.Text = "Est. Comp:";
+            this.xrLabel22.Text = "Est. Completion:";
             // 
             // xrLabel24
             // 
@@ -2052,6 +2054,23 @@
             this.SubBand12.Name = "SubBand12";
             this.SubBand12.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
             // 
+            // xrAFEEstimateSummary
+            // 
+            this.xrAFEEstimateSummary.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
+            this.xrAFEEstimateSummary.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrAFEEstimateSummary.Name = "xrAFEEstimateSummary";
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAFEMasterID", null, "Dynamic_AFEMasterList.AFEMasterID"));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOwnerID", null, "Dynamic_AFEMasterList.OwnerID"));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
+            this.xrAFEEstimateSummary.ReportSource = new ReportsEngine.Reports.MDReports.AFEEstimateSummarySubreport();
+            this.xrAFEEstimateSummary.SizeF = new System.Drawing.SizeF(769.5486F, 19.40232F);
+            // 
             // SubBand13
             // 
             this.SubBand13.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -2127,23 +2146,6 @@
             this.Grouping2.Expression = "Iif(?pbooSortBy, [AFEMasterID], [OwnerNumber])\n";
             this.Grouping2.FieldType = DevExpress.XtraReports.UI.FieldType.String;
             this.Grouping2.Name = "Grouping2";
-            // 
-            // xrAFEEstimateSummary
-            // 
-            this.xrAFEEstimateSummary.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
-            this.xrAFEEstimateSummary.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrAFEEstimateSummary.Name = "xrAFEEstimateSummary";
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAFEMasterID", null, "Dynamic_AFEMasterList.AFEMasterID"));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOwnerID", null, "Dynamic_AFEMasterList.OwnerID"));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
-            this.xrAFEEstimateSummary.ReportSource = new ReportsEngine.Reports.MDReports.AFEEstimateSummarySubreport();
-            this.xrAFEEstimateSummary.SizeF = new System.Drawing.SizeF(769.5486F, 19.40232F);
             // 
             // AFEEstimateSummary
             // 

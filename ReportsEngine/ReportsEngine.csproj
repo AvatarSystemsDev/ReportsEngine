@@ -2145,10 +2145,10 @@
     <Compile Include="Reports\FinancialReports\CheckReconciliationSummary.Designer.cs">
       <DependentUpon>CheckReconciliationSummary.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\FinancialReports\ExcelAFEMasterList.cs">
+    <Compile Include="Reports\MDReports\ExcelAFEMasterList.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\FinancialReports\ExcelAFEMasterList.Designer.cs">
+    <Compile Include="Reports\MDReports\ExcelAFEMasterList.Designer.cs">
       <DependentUpon>ExcelAFEMasterList.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\FinancialReports\ExcelCheckHistory.cs">
@@ -3337,7 +3337,7 @@
     <EmbeddedResource Include="Reports\FinancialReports\CheckReconciliationSummary.resx">
       <DependentUpon>CheckReconciliationSummary.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\FinancialReports\ExcelAFEMasterList.resx">
+    <EmbeddedResource Include="Reports\MDReports\ExcelAFEMasterList.resx">
       <DependentUpon>ExcelAFEMasterList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\FinancialReports\ExcelCheckHistory.resx">
