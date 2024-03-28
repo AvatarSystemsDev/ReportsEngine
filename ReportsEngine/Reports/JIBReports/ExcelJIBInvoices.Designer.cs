@@ -678,7 +678,7 @@
             this.xrLabel46.StylePriority.UseFont = false;
             this.xrLabel46.StylePriority.UsePadding = false;
             this.xrLabel46.StylePriority.UseTextAlignment = false;
-            this.xrLabel46.Text = "Invoice Amount";
+            this.xrLabel46.Text = "8/8 Amount";
             this.xrLabel46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel27
