@@ -313,7 +313,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAFEEstimateSummary", () => new ExcelAFEEstimateSummary());
             Reports.Add("AFEDetail", () => new DetailAFE());
             Reports.Add("ExcelAFEDetail", () => new ExcelAFEDetail());
-
+            Reports.Add("AFEBudgetReceivables", () => new AFEBudgetReceivables());
+            Reports.Add("ExcelAFEBudgetReceivables", () => new ExcelAFEBudgetReceivables());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

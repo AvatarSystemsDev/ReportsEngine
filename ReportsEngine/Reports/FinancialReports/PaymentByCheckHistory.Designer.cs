@@ -975,9 +975,9 @@
             this.Textbox372});
             this.Rectangle1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?ShowCriteria = True, True, False)")});
-            this.Rectangle1.LocationFloat = new DevExpress.Utils.PointFloat(0.9300232F, 58.3F);
+            this.Rectangle1.LocationFloat = new DevExpress.Utils.PointFloat(0.0001271566F, 58.3F);
             this.Rectangle1.Name = "Rectangle1";
-            this.Rectangle1.SizeF = new System.Drawing.SizeF(769.0698F, 38.43333F);
+            this.Rectangle1.SizeF = new System.Drawing.SizeF(769.9999F, 38.43333F);
             // 
             // xrAccountsSelected
             // 
@@ -1075,11 +1075,11 @@
             this.xrEntitiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrEntitiesSelected.ForeColor = System.Drawing.Color.Black;
             this.xrEntitiesSelected.KeepTogether = true;
-            this.xrEntitiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(332.5258F, 0.0001602173F);
+            this.xrEntitiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(332.5258F, 0.0001754761F);
             this.xrEntitiesSelected.Multiline = true;
             this.xrEntitiesSelected.Name = "xrEntitiesSelected";
             this.xrEntitiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrEntitiesSelected.SizeF = new System.Drawing.SizeF(182.1396F, 17.91661F);
+            this.xrEntitiesSelected.SizeF = new System.Drawing.SizeF(183.0695F, 17.91662F);
             this.xrEntitiesSelected.StylePriority.UseBackColor = false;
             this.xrEntitiesSelected.StylePriority.UseBorderColor = false;
             this.xrEntitiesSelected.StylePriority.UseBorderDashStyle = false;
@@ -1156,7 +1156,7 @@
             this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", resources.GetString("xrRichText1.ExpressionBindings"))});
             this.xrRichText1.KeepTogether = true;
-            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(514.6653F, 17.91671F);
+            this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(515.5952F, 17.91671F);
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
@@ -1172,7 +1172,7 @@
             this.Textbox372.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", resources.GetString("Textbox372.ExpressionBindings"))});
             this.Textbox372.KeepTogether = true;
-            this.Textbox372.LocationFloat = new DevExpress.Utils.PointFloat(514.6654F, 0F);
+            this.Textbox372.LocationFloat = new DevExpress.Utils.PointFloat(515.5952F, 0F);
             this.Textbox372.Name = "Textbox372";
             this.Textbox372.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox372.SerializableRtfString = resources.GetString("Textbox372.SerializableRtfString");

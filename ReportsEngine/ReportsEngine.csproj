@@ -501,11 +501,23 @@
     <Compile Include="PreVoidCheckReport.Designer.cs">
       <DependentUpon>PreVoidCheckReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\AFEBudgetReceivablesReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\AFEBudgetReceivablesReport.Designer.cs">
+      <DependentUpon>AFEBudgetReceivablesReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\APReports\APChecksRemittanceOnly.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\APReports\APChecksRemittanceOnly.Designer.cs">
       <DependentUpon>APChecksRemittanceOnly.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelAFEBudgetReceivables.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelAFEBudgetReceivables.Designer.cs">
+      <DependentUpon>ExcelAFEBudgetReceivables.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\CheckReports\ManualChecksRemittanceOnly.cs">
       <SubType>Component</SubType>
@@ -2515,8 +2527,14 @@
     <EmbeddedResource Include="PreVoidCheckReport.resx">
       <DependentUpon>PreVoidCheckReport.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\AFEBudgetReceivablesReport.resx">
+      <DependentUpon>AFEBudgetReceivablesReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APChecksRemittanceOnly.resx">
       <DependentUpon>APChecksRemittanceOnly.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelAFEBudgetReceivables.resx">
+      <DependentUpon>ExcelAFEBudgetReceivables.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\CheckReports\ManualChecksRemittanceOnly.resx">
       <DependentUpon>ManualChecksRemittanceOnly.cs</DependentUpon>

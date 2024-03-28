@@ -1696,7 +1696,7 @@
             this.ReportTitle.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.ReportTitle.BorderWidth = 1F;
             this.ReportTitle.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Detail AFE\' + Iif(?pbooShowJIBInvoices,\' With Invoices\' ,\'\' ) ")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'AFE Detail\' + Iif(?pbooShowJIBInvoices,\' With Invoices\' ,\'\' ) ")});
             this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.ReportTitle.KeepTogether = true;
             this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0.5900065F, 31.39F);

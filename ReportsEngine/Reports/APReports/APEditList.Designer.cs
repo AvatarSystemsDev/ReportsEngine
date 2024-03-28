@@ -138,7 +138,6 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings9 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings10 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings11 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings12 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.DataAccess.DataFederation.SelectNode selectNode1 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode1 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source1 = new DevExpress.DataAccess.DataFederation.Source();
@@ -355,7 +354,6 @@
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrVoucherNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.sqlDataSource1 = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
@@ -2917,22 +2915,6 @@
             dynamicListLookUpSettings11.ValueMember = "Number";
             this.pstrSelectOwner.ValueSourceSettings = dynamicListLookUpSettings11;
             // 
-            // pstrVoucherNumber
-            // 
-            this.pstrVoucherNumber.Description = "Voucher Number";
-            this.pstrVoucherNumber.Enabled = false;
-            this.pstrVoucherNumber.MultiValue = true;
-            this.pstrVoucherNumber.Name = "pstrVoucherNumber";
-            this.pstrVoucherNumber.SelectAllValues = true;
-            dynamicListLookUpSettings12.DataMember = "DSVoucherLookup";
-            dynamicListLookUpSettings12.DataSource = this.Dynamic;
-            dynamicListLookUpSettings12.DisplayMember = "Description";
-            dynamicListLookUpSettings12.FilterString = null;
-            dynamicListLookUpSettings12.SortMember = null;
-            dynamicListLookUpSettings12.ValueMember = "Number";
-            this.pstrVoucherNumber.ValueSourceSettings = dynamicListLookUpSettings12;
-            this.pstrVoucherNumber.Visible = false;
-            // 
             // federationDataSource1
             // 
             this.federationDataSource1.Name = "federationDataSource1";
@@ -3307,7 +3289,6 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooNewPagePerBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowBeneficiary, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowPONumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrVoucherNumber, DevExpress.XtraReports.Parameters.Orientation.Vertical),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
@@ -3329,7 +3310,6 @@
             this.pbooNewPagePerBatch,
             this.pbooShowBeneficiary,
             this.pbooShowPONumber,
-            this.pstrVoucherNumber,
             this.pbooShowCriteria});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
@@ -3424,7 +3404,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectProperty;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
-        private DevExpress.XtraReports.Parameters.Parameter pstrVoucherNumber;
         private DevExpress.XtraReports.UI.XRLabel xrLabel31;
         private DevExpress.XtraReports.UI.XRLabel xrLabel43;
         private DevExpress.XtraReports.UI.XRLabel xrLabel70;

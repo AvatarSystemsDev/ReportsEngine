@@ -1,31 +1,29 @@
 ﻿using DevExpress.Data.Browsing;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
+using ReportsEngine.Reports.RDReports;
 using System;
 using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace ReportsEngine.Reports.RDReports
+namespace ReportsEngine.Reports.APReports
 {
-    public partial class PropertyListAllCompanies : DevExpress.XtraReports.UI.XtraReport
+    public partial class AFEBudgetReceivables : DevExpress.XtraReports.UI.XtraReport
     {
-        public PropertyListAllCompanies()
+        public AFEBudgetReceivables()
         {
             InitializeComponent();
             xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
-            xrPropertiesSelected2.BeforePrint += xrPropertiesSelected_BeforePrint;
-            xrSelectedOperators.BeforePrint += XrSelectedOperators_BeforePrint;
-            xrSelectedOperators2.BeforePrint += XrSelectedOperators_BeforePrint;
-            this.BeforePrint += PropertyListAllCompanies_BeforePrint;
+            xrSelectedAFEs.BeforePrint += XrSelectedOperators_BeforePrint;
         }
 
         private void XrSelectedOperators_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            Parameter p = this.Parameters["pstrSelectOperator"];
-            Parameter start = this.Parameters["pstrBeginningOperatorNumber"];
-            Parameter end = this.Parameters["pstrEndingOperatorNumber"];
+            Parameter p = this.Parameters["pstrSelectAFE"];
+            Parameter start = this.Parameters["pstrBeginningAFENumber"];
+            Parameter end = this.Parameters["pstrEndingAFENumber"];
 
             if (p.MultiValue == false || p.LookUpSettings == null)
             {
@@ -35,23 +33,23 @@ namespace ReportsEngine.Reports.RDReports
             LookUpValueCollection col = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext);
             if (col.Count == (p.Value as Array).Length)
             {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
+                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZ")
                 {
-                    label.Text = "All Operators";
+                    label.Text = "All AFEs";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Operator to ";
+                        label.Text = "First AFE to ";
                     }
                     else
                     {
                         label.Text = start.Value.ToString() + " to ";
                     }
-                    if (end.Value.ToString() == "ZZZZZZZZZZ")
+                    if (end.Value.ToString() == "ZZZZZZZZ")
                     {
-                        label.Text += "Last Operator";
+                        label.Text += "Last AFE";
                     }
                     else
                     {
@@ -65,23 +63,23 @@ namespace ReportsEngine.Reports.RDReports
             }
             else
             {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
+                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZ")
                 {
-                    label.Text = "Selected Operators";
+                    label.Text = "Selected AFEs";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Operator to ";
+                        label.Text = "First AFE to ";
                     }
                     else
                     {
                         label.Text = start.Value.ToString() + " to ";
                     }
-                    if (end.Value.ToString() == "ZZZZZZZZZZ")
+                    if (end.Value.ToString() == "ZZZZZZZZ")
                     {
-                        label.Text += "Last Operator";
+                        label.Text += "Last AFE";
                     }
                     else
                     {
@@ -91,10 +89,6 @@ namespace ReportsEngine.Reports.RDReports
             }
         }
 
-        private void PropertyListAllCompanies_BeforePrint(object sender, CancelEventArgs e)
-        {
-            (sender as PropertyListAllCompanies).Landscape = this.Parameters["pbooShowDetail"].Value.ToString().ToLower() == "true";
-        }
 
         private void xrPropertiesSelected_BeforePrint(object sender, CancelEventArgs e)
         {
