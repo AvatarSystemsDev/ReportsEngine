@@ -2890,6 +2890,7 @@
             // pstrSelectVendor
             // 
             this.pstrSelectVendor.Description = "Select Entity List";
+            this.pstrSelectVendor.Enabled = false;
             this.pstrSelectVendor.MultiValue = true;
             this.pstrSelectVendor.Name = "pstrSelectVendor";
             this.pstrSelectVendor.SelectAllValues = true;

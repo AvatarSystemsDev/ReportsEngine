@@ -315,6 +315,10 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAFEDetail", () => new ExcelAFEDetail());
             Reports.Add("AFEBudgetReceivables", () => new AFEBudgetReceivables());
             Reports.Add("ExcelAFEBudgetReceivables", () => new ExcelAFEBudgetReceivables());
+            Reports.Add("ServiceAgreements", () => new ServiceAgreements());
+            Reports.Add("ExcelServiceAgreements", () => new ExcelServiceAgreements());
+            Reports.Add("InsuranceOptions", () => new InsuranceOptions());
+            Reports.Add("ExcelInsuranceOptions", () => new ExcelInsuranceOptions());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

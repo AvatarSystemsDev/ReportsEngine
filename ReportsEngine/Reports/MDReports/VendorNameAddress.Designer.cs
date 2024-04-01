@@ -1186,7 +1186,7 @@
             this.xrLabel15.StylePriority.UseForeColor = false;
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
-            this.xrLabel15.Text = "For Vendor:";
+            this.xrLabel15.Text = "For Enitity:";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // pageFooterBand1

@@ -131,6 +131,7 @@
             DevExpress.XtraReports.UI.XRSummary xrSummary8 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary9 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary10 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings3 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.DataAccess.DataFederation.SelectNode selectNode1 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode1 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source1 = new DevExpress.DataAccess.DataFederation.Source();
@@ -149,7 +150,7 @@
             DevExpress.XtraReports.UI.XRSummary xrSummary11 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary12 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary13 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings3 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings4 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -1082,7 +1083,7 @@
             this.groupHeaderBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel5});
             this.groupHeaderBand2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not ?pbooHideBeneficiary")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not ?pbooHideBeneficiary AND (Not ([GroupByField1] = [GroupByField2]))")});
             this.groupHeaderBand2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("GroupByField2", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBand2.HeightF = 15.99997F;
@@ -1098,7 +1099,7 @@
             this.xrLabel5.BorderWidth = 1F;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'    \'+Iif(not IsNullOrEmpty([BeneficiaryVendorNumber]), [BeneficiaryVendorNumber" +
-                    "] + \' : \' + [BeneficiaryVendorName], [VendorNumber] + \' \' + [VendorName] )")});
+                    "] + \' : \' + [BeneficiaryVendorName], [VendorNumber] + \' : \' + [VendorName] )")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel5.ForeColor = System.Drawing.Color.Black;
             this.xrLabel5.KeepTogether = true;
@@ -1748,10 +1749,13 @@
             // 
             // pbooHideBeneficiary
             // 
-            this.pbooHideBeneficiary.Description = "Hide Beneficiary";
+            this.pbooHideBeneficiary.Description = "Show Beneficiary";
             this.pbooHideBeneficiary.Name = "pbooHideBeneficiary";
             this.pbooHideBeneficiary.Type = typeof(bool);
             this.pbooHideBeneficiary.ValueInfo = "False";
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Yes"));
+            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "No"));
+            this.pbooHideBeneficiary.ValueSourceSettings = staticListLookUpSettings3;
             // 
             // federationDataSource1
             // 
@@ -2014,10 +2018,10 @@
             this.plngGroupByVendor.Name = "plngGroupByVendor";
             this.plngGroupByVendor.Type = typeof(int);
             this.plngGroupByVendor.ValueInfo = "1";
-            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Both Vendor and Beneficiary"));
-            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Vendor"));
-            staticListLookUpSettings3.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Benefiiciary"));
-            this.plngGroupByVendor.ValueSourceSettings = staticListLookUpSettings3;
+            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Both Vendor and Beneficiary"));
+            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Vendor"));
+            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Benefiiciary"));
+            this.plngGroupByVendor.ValueSourceSettings = staticListLookUpSettings4;
             // 
             // GroupByField2
             // 

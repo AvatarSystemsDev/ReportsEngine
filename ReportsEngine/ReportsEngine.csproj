@@ -651,6 +651,30 @@
     <Compile Include="Reports\MDReports\ExcelAFEEstimateSummary.Designer.cs">
       <DependentUpon>ExcelAFEEstimateSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\ExcelInsuranceOptions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelInsuranceOptions.Designer.cs">
+      <DependentUpon>ExcelInsuranceOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelServiceAgreements.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelServiceAgreements.Designer.cs">
+      <DependentUpon>ExcelServiceAgreements.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\InsuranceOptions.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\InsuranceOptions.Designer.cs">
+      <DependentUpon>InsuranceOptions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ServiceAgreements.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ServiceAgreements.Designer.cs">
+      <DependentUpon>ServiceAgreements.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PAReports\PA_MiscDispositions.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2602,6 +2626,18 @@
     <EmbeddedResource Include="Reports\MDReports\ExcelAFEEstimateSummary.resx">
       <DependentUpon>ExcelAFEEstimateSummary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelInsuranceOptions.resx">
+      <DependentUpon>ExcelInsuranceOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelServiceAgreements.resx">
+      <DependentUpon>ExcelServiceAgreements.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\InsuranceOptions.resx">
+      <DependentUpon>InsuranceOptions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ServiceAgreements.resx">
+      <DependentUpon>ServiceAgreements.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\PA_MiscDispositions.resx">
       <DependentUpon>PA_MiscDispositions.cs</DependentUpon>
     </EmbeddedResource>
@@ -3074,6 +3110,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APChecks.resx">
       <DependentUpon>APChecks.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APOpenSelectedForEscheatRegister.resx">
       <DependentUpon>APOpenSelectedForEscheatRegister.cs</DependentUpon>
@@ -3426,6 +3463,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AccountingCenterListing.resx">
       <DependentUpon>AccountingCenterListing.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEMasterList.resx">
       <DependentUpon>AFEMasterList.cs</DependentUpon>
