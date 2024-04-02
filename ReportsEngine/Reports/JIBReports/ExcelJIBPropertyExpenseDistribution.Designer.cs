@@ -40,6 +40,7 @@
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailBand();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -70,7 +71,6 @@
             this.pbooShowOwnerBreakdown = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowOwnerTotals = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -121,6 +121,35 @@
             this.Tablix1.HeightF = 1.986821E-06F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
+            // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBProcessTrackingID", this.plngJIBProcessTrackingID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngPhaseWellID", null, "DSJIB_PEDPartOne.PhaseWellID"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngDOIDeckCodeID", null, "DSJIB_PEDPartOne.DOIDeckCodeID"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngDirectBillOwnerID", null, "DSJIB_PEDPartOne.DirectBillOwnerID"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrPropertyPhasewellNumber", null, "DSJIB_PEDPartOne.PropertyPhaseWellNumber"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrPropertyPhasewellDescription", null, "DSJIB_PEDPartOne.PropertyPhaseWellDescription"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteDOIDate", null, "DSJIB_PEDPartOne.DOIDate"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDirectBillOwnerName", null, "DSJIB_PEDPartOne.DirectBillOwnerName"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrAccountNumber", null, "DSJIB_PEDPartOne.AccountNumber"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrAccountDescription", null, "DSJIB_PEDPartOne.AccountDescription"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrVendorNumber", null, "DSJIB_PEDPartOne.VendorNumber"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblAmount", null, "DSJIB_PEDPartOne.NetAmount"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrVendorName", null, "DSJIB_PEDPartOne.VendorName"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDirectBillOwnerNumber", null, "DSJIB_PEDPartOne.DirectBillOwnerNumber"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDOIDeckCodeNumber", null, "DSJIB_PEDPartOne.DOIDeckCodeNumber"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDOIDeckCodeDescription", null, "DSJIB_PEDPartOne.DOIDeckCodeDescription"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBottomHalfID", null, "DSJIB_PEDPartOne.BottomHalfID"));
+            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.JIBReports.ExcelJIBPropertyExpenseDistributionSubreport();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(2426.392F, 1.986821E-06F);
             // 
             // pstrDatabaseName
             // 
@@ -471,7 +500,7 @@
             this.Textbox69.StylePriority.UseFont = false;
             this.Textbox69.StylePriority.UsePadding = false;
             this.Textbox69.StylePriority.UseTextAlignment = false;
-            this.Textbox69.Text = "Amount";
+            this.Textbox69.Text = "Net Amount";
             this.Textbox69.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox41
@@ -580,35 +609,6 @@
             this.pbooShowOwnerTotals.Name = "pbooShowOwnerTotals";
             this.pbooShowOwnerTotals.Type = typeof(bool);
             this.pbooShowOwnerTotals.ValueInfo = "False";
-            // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBProcessTrackingID", this.plngJIBProcessTrackingID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngPhaseWellID", null, "DSJIB_PEDPartOne.PhaseWellID"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngDOIDeckCodeID", null, "DSJIB_PEDPartOne.DOIDeckCodeID"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngDirectBillOwnerID", null, "DSJIB_PEDPartOne.DirectBillOwnerID"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrPropertyPhasewellNumber", null, "DSJIB_PEDPartOne.PropertyPhaseWellNumber"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrPropertyPhasewellDescription", null, "DSJIB_PEDPartOne.PropertyPhaseWellDescription"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdteDOIDate", null, "DSJIB_PEDPartOne.DOIDate"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDirectBillOwnerName", null, "DSJIB_PEDPartOne.DirectBillOwnerName"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrAccountNumber", null, "DSJIB_PEDPartOne.AccountNumber"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrAccountDescription", null, "DSJIB_PEDPartOne.AccountDescription"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrVendorNumber", null, "DSJIB_PEDPartOne.VendorNumber"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pdblAmount", null, "DSJIB_PEDPartOne.NetAmount"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrVendorName", null, "DSJIB_PEDPartOne.VendorName"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDirectBillOwnerNumber", null, "DSJIB_PEDPartOne.DirectBillOwnerNumber"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDOIDeckCodeNumber", null, "DSJIB_PEDPartOne.DOIDeckCodeNumber"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDOIDeckCodeDescription", null, "DSJIB_PEDPartOne.DOIDeckCodeDescription"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBottomHalfID", null, "DSJIB_PEDPartOne.BottomHalfID"));
-            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.JIBReports.ExcelJIBPropertyExpenseDistributionSubreport();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(2426.392F, 1.986821E-06F);
             // 
             // ExcelJIBPropertyExpenseDistribution
             // 
