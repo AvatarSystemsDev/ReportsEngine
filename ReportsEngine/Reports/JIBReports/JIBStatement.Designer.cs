@@ -263,7 +263,7 @@
             // 
             // plngJIBProcessingPrint
             // 
-            this.plngJIBProcessingPrint.Description = "plngJIBProcessingPrint";
+            this.plngJIBProcessingPrint.Description = "JIB Processing Print";
             this.plngJIBProcessingPrint.Name = "plngJIBProcessingPrint";
             this.plngJIBProcessingPrint.Type = typeof(int);
             this.plngJIBProcessingPrint.ValueInfo = "0";
@@ -286,7 +286,7 @@
             // 
             this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
-            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
+            this.pstrEndingOwnerNumber.ValueInfo = "0";
             dynamicListLookUpSettings3.DataMember = "DSOwnersLookup";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
             dynamicListLookUpSettings3.DisplayMember = "Description";
@@ -371,7 +371,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningDate.Name = "pdteBeginningDate";
             this.pdteBeginningDate.Type = typeof(System.DateTime);
-            this.pdteBeginningDate.ValueInfo = "1900-01-01";
+            this.pdteBeginningDate.ValueInfo = "0";
             // 
             // pdteEndingDate
             // 
@@ -381,13 +381,13 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingDate.Name = "pdteEndingDate";
             this.pdteEndingDate.Type = typeof(System.DateTime);
-            this.pdteEndingDate.ValueInfo = "9999-12-31";
+            this.pdteEndingDate.ValueInfo = "0";
             // 
             // pstrInvoiceNumber
             // 
             this.pstrInvoiceNumber.Description = "Invoice Number";
             this.pstrInvoiceNumber.Name = "pstrInvoiceNumber";
-            this.pstrInvoiceNumber.ValueInfo = " ";
+            this.pstrInvoiceNumber.ValueInfo = "0";
             this.pstrInvoiceNumber.Visible = false;
             // 
             // boolPrintRemit
@@ -833,7 +833,7 @@
             // 
             // AlsoID
             // 
-            this.AlsoID.DataMember = "AlsoJIB_StatementHeader";
+            this.AlsoID.DataMember = "DSJIB_StatementHeader";
             this.AlsoID.Expression = "[ID]";
             this.AlsoID.FieldType = DevExpress.XtraReports.UI.FieldType.Int32;
             this.AlsoID.Name = "AlsoID";
@@ -898,7 +898,7 @@
             // 
             // pbooAwaitParameterInput
             // 
-            this.pbooAwaitParameterInput.Description = "Parameter1";
+            this.pbooAwaitParameterInput.Description = "Await Parameter Input";
             this.pbooAwaitParameterInput.Name = "pbooAwaitParameterInput";
             this.pbooAwaitParameterInput.Type = typeof(bool);
             this.pbooAwaitParameterInput.ValueInfo = "False";

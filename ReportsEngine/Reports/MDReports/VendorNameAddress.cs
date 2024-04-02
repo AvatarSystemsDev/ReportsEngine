@@ -17,15 +17,6 @@ namespace ReportsEngine.Reports.MDReports
         {
             InitializeComponent();
             xrVendorsSelected.BeforePrint += xrOwnersSelected_BeforePrint;
-            xrSortBy.BeforePrint += xrSortBy_BeforePrint;
-        }
-
-        private void xrSortBy_BeforePrint(object sender, CancelEventArgs e)
-        {
-            XRLabel label = sender as XRLabel;
-            Parameter p = this.Parameters["plngSortOrder"];
-            List<LookUpValue> staticValueCollection = (p.LookUpSettings as StaticListLookUpSettings).LookUpValues.ToList();
-            (sender as XRLabel).Text = staticValueCollection.FirstOrDefault(x => Object.Equals(x.Value, this.Parameters["plngSortOrder"].Value)).Description;
         }
 
         private void xrOwnersSelected_BeforePrint(object sender, CancelEventArgs e)
@@ -45,13 +36,13 @@ namespace ReportsEngine.Reports.MDReports
             {
                 if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
                 {
-                    label.Text = "All Vendors";
+                    label.Text = "All Entities";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Vendor to ";
+                        label.Text = "First Entity to ";
                     }
                     else
                     {
@@ -59,7 +50,7 @@ namespace ReportsEngine.Reports.MDReports
                     }
                     if (end.Value.ToString() == "ZZZZZZZZZZ")
                     {
-                        label.Text += "Last Vendor";
+                        label.Text += "Last Entity";
                     }
                     else
                     {
@@ -75,13 +66,13 @@ namespace ReportsEngine.Reports.MDReports
             {
                 if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
                 {
-                    label.Text = "Selected Vendors";
+                    label.Text = "Selected Entities";
                 }
                 else
                 {
                     if (start.Value.ToString() == "!")
                     {
-                        label.Text = "First Vendor to ";
+                        label.Text = "First Entity to ";
                     }
                     else
                     {
@@ -89,7 +80,7 @@ namespace ReportsEngine.Reports.MDReports
                     }
                     if (end.Value.ToString() == "ZZZZZZZZZZ")
                     {
-                        label.Text += "Last Vendor";
+                        label.Text += "Last Entity";
                     }
                     else
                     {
