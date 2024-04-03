@@ -303,6 +303,7 @@
             this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
             this.plngJIBProcessTrackingID.Type = typeof(int);
             this.plngJIBProcessTrackingID.ValueInfo = "1";
+            this.plngJIBProcessTrackingID.Visible = false;
             // 
             // plngJIBStatementID
             // 
@@ -310,6 +311,7 @@
             this.plngJIBStatementID.Name = "plngJIBStatementID";
             this.plngJIBStatementID.Type = typeof(int);
             this.plngJIBStatementID.ValueInfo = "47";
+            this.plngJIBStatementID.Visible = false;
             // 
             // plngOwnerID
             // 
@@ -317,6 +319,7 @@
             this.plngOwnerID.Name = "plngOwnerID";
             this.plngOwnerID.Type = typeof(int);
             this.plngOwnerID.ValueInfo = "71";
+            this.plngOwnerID.Visible = false;
             // 
             // ReportHeader
             // 

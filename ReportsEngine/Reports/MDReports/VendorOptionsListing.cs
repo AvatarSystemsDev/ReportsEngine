@@ -14,6 +14,32 @@ namespace ReportsEngine.Reports.MDReports
         {
             InitializeComponent();
             xrEntitiesSelected.BeforePrint += xrEntitiesSelected_BeforePrint;
+            xrRoleType.BeforePrint += XrRoleType_BeforePrint;
+        }
+
+        private void XrRoleType_BeforePrint(object sender, CancelEventArgs e)
+        {
+            XRLabel label = sender as XRLabel;
+            Parameter roleType = this.Parameters["pstrSelectRoleTypeID"];
+            if (roleType.MultiValue == false || roleType.LookUpSettings == null)
+            {
+                return;
+            }
+            var dataContext = ((IServiceProvider)label.RootReport).GetService(typeof(DataContext)) as DataContext;
+            LookUpValueCollection col = LookUpHelper.GetLookUpValues(roleType.LookUpSettings, dataContext);
+            if (col.Count == (roleType.Value as Array).Length)
+            {
+                label.Text = "All Roles";
+            }
+            else if ((roleType.Value as Array).Length == 1)
+            {
+                //Array roleTypeArray = roleType.Value as Array;
+                //label.Text = roleTypeArray.GetValue(0).ToString();
+            }
+            else
+            {
+                label.Text = "Selected Roles";
+            }
         }
         private void xrEntitiesSelected_BeforePrint(object sender, CancelEventArgs e)
         {

@@ -219,6 +219,8 @@
             this.plngUseSortName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrRoleTypeIDs = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrRoleType = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel44 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1930,6 +1932,8 @@
             this.xrPanel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPanel1.BorderWidth = 1F;
             this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrRoleType,
+            this.xrLabel44,
             this.xrEntitiesSelected,
             this.xrLabel26});
             this.xrPanel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -1950,7 +1954,7 @@
             this.xrEntitiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrEntitiesSelected.ForeColor = System.Drawing.Color.Black;
             this.xrEntitiesSelected.KeepTogether = true;
-            this.xrEntitiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(67.23153F, 3.051758E-05F);
+            this.xrEntitiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(325.8732F, 3.051758E-05F);
             this.xrEntitiesSelected.Multiline = true;
             this.xrEntitiesSelected.Name = "xrEntitiesSelected";
             this.xrEntitiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -1976,7 +1980,7 @@
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel26.ForeColor = System.Drawing.Color.Black;
             this.xrLabel26.KeepTogether = true;
-            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(0F, 3.051758E-05F);
+            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(258.6417F, 3.051758E-05F);
             this.xrLabel26.Multiline = true;
             this.xrLabel26.Name = "xrLabel26";
             this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -2211,6 +2215,61 @@
             dynamicListLookUpSettings4.ValueMember = "ID";
             this.pstrRoleTypeIDs.ValueSourceSettings = dynamicListLookUpSettings4;
             // 
+            // xrRoleType
+            // 
+            this.xrRoleType.BackColor = System.Drawing.Color.Transparent;
+            this.xrRoleType.BorderColor = System.Drawing.Color.Black;
+            this.xrRoleType.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrRoleType.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrRoleType.BorderWidth = 1F;
+            this.xrRoleType.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "GetDisplayText(?pstrSelectRoleTypeID)")});
+            this.xrRoleType.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrRoleType.ForeColor = System.Drawing.Color.Black;
+            this.xrRoleType.KeepTogether = true;
+            this.xrRoleType.LocationFloat = new DevExpress.Utils.PointFloat(77.2207F, 3.051758E-05F);
+            this.xrRoleType.Multiline = true;
+            this.xrRoleType.Name = "xrRoleType";
+            this.xrRoleType.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
+            this.xrRoleType.SizeF = new System.Drawing.SizeF(169.1687F, 16.66656F);
+            this.xrRoleType.StylePriority.UseBackColor = false;
+            this.xrRoleType.StylePriority.UseBorderColor = false;
+            this.xrRoleType.StylePriority.UseBorderDashStyle = false;
+            this.xrRoleType.StylePriority.UseBorders = false;
+            this.xrRoleType.StylePriority.UseBorderWidth = false;
+            this.xrRoleType.StylePriority.UseFont = false;
+            this.xrRoleType.StylePriority.UseForeColor = false;
+            this.xrRoleType.StylePriority.UsePadding = false;
+            this.xrRoleType.StylePriority.UseTextAlignment = false;
+            this.xrRoleType.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel44
+            // 
+            this.xrLabel44.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel44.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel44.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel44.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel44.BorderWidth = 1F;
+            this.xrLabel44.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel44.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel44.KeepTogether = true;
+            this.xrLabel44.LocationFloat = new DevExpress.Utils.PointFloat(1.041698F, 0F);
+            this.xrLabel44.Multiline = true;
+            this.xrLabel44.Name = "xrLabel44";
+            this.xrLabel44.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
+            this.xrLabel44.SizeF = new System.Drawing.SizeF(76.17897F, 16.66656F);
+            this.xrLabel44.StylePriority.UseBackColor = false;
+            this.xrLabel44.StylePriority.UseBorderColor = false;
+            this.xrLabel44.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel44.StylePriority.UseBorders = false;
+            this.xrLabel44.StylePriority.UseBorderWidth = false;
+            this.xrLabel44.StylePriority.UseFont = false;
+            this.xrLabel44.StylePriority.UseForeColor = false;
+            this.xrLabel44.StylePriority.UsePadding = false;
+            this.xrLabel44.StylePriority.UseTextAlignment = false;
+            this.xrLabel44.Text = "For Role Type:";
+            this.xrLabel44.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // VendorOptionsListing
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2363,5 +2422,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel66;
         private DevExpress.XtraReports.UI.XRLabel xrLabel67;
         private DevExpress.XtraReports.UI.XRLabel xrLabel68;
+        private DevExpress.XtraReports.UI.XRLabel xrRoleType;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel44;
     }
 }

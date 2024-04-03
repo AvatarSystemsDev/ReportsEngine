@@ -1221,7 +1221,7 @@
             // 
             this.plngJIBProcessTrackingID.Description = "Invoice Date";
             this.plngJIBProcessTrackingID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooRunFromStatement = false AND ?pbooAwaitParameterInput")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooRunFromStatement AND ?pbooAwaitParameterInput")});
             this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
             this.plngJIBProcessTrackingID.Type = typeof(int);
             this.plngJIBProcessTrackingID.ValueInfo = "-1";
@@ -1460,7 +1460,7 @@
             this.pstrBeginningInvoiceNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooRunFromStatement\n")});
             this.pstrBeginningInvoiceNumber.Name = "pstrBeginningInvoiceNumber";
-            this.pstrBeginningInvoiceNumber.ValueInfo = "!";
+            this.pstrBeginningInvoiceNumber.ValueInfo = "0";
             dynamicListLookUpSettings6.DataMember = "DSInvoiceNumberLookup";
             dynamicListLookUpSettings6.DataSource = this.Dynamic;
             dynamicListLookUpSettings6.DisplayMember = "Description";
@@ -1567,6 +1567,7 @@
             // 
             // pbooRunFromStatement
             // 
+            this.pbooRunFromStatement.Description = "Run From Statement";
             this.pbooRunFromStatement.Name = "pbooRunFromStatement";
             this.pbooRunFromStatement.Type = typeof(bool);
             this.pbooRunFromStatement.ValueInfo = "False";
@@ -1574,7 +1575,7 @@
             // 
             // pbooAwaitParameterInput
             // 
-            this.pbooAwaitParameterInput.Description = "Parameter1";
+            this.pbooAwaitParameterInput.Description = "Await Parameter Input";
             this.pbooAwaitParameterInput.Name = "pbooAwaitParameterInput";
             this.pbooAwaitParameterInput.Type = typeof(bool);
             this.pbooAwaitParameterInput.ValueInfo = "False";
@@ -1592,10 +1593,10 @@
             // 
             this.pbooShowCompanyOwner.Description = "Show Company Owner";
             this.pbooShowCompanyOwner.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooRunFromStatement = false")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooRunFromStatement")});
             this.pbooShowCompanyOwner.Name = "pbooShowCompanyOwner";
             this.pbooShowCompanyOwner.Type = typeof(bool);
-            this.pbooShowCompanyOwner.ValueInfo = "False";
+            this.pbooShowCompanyOwner.ValueInfo = "0";
             // 
             // JIBInvoices
             // 
@@ -1623,6 +1624,8 @@
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooRunFromStatement, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooAwaitParameterInput, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1638,10 +1641,10 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningInvoiceNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingInvoiceNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCompanyOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.boolPrintRemit, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooRunFromStatement, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooAwaitParameterInput, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.boolPrintRemit, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+            this.pbooRunFromStatement,
+            this.pbooAwaitParameterInput,
             this.pstrServerName,
             this.pstrDatabaseName,
             this.plngUserID,
@@ -1657,9 +1660,7 @@
             this.pstrBeginningInvoiceNumber,
             this.pstrEndingInvoiceNumber,
             this.pbooShowCompanyOwner,
-            this.boolPrintRemit,
-            this.pbooRunFromStatement,
-            this.pbooAwaitParameterInput});
+            this.boolPrintRemit});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

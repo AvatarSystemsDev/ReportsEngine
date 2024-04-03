@@ -54,7 +54,6 @@
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Tablix12 = new DevExpress.XtraReports.UI.DetailBand();
             this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -97,14 +96,12 @@
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.StartInvoicesBand = new DevExpress.XtraReports.UI.SubBand();
             this.JIBInvoiceSubBand = new DevExpress.XtraReports.UI.SubBand();
-            this.InvoiceSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             this.AfterJIBInvoiceSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.AlsoID = new DevExpress.XtraReports.UI.CalculatedField();
             this.LiterallyJustFalse = new DevExpress.XtraReports.UI.CalculatedField();
             this.calculatedField1 = new DevExpress.XtraReports.UI.CalculatedField();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.xrSubreport4 = new DevExpress.XtraReports.UI.XRSubreport();
             this.groupHeaderBand3 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.pbooPrintReportInDuplex = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooAwaitParameterInput = new DevExpress.XtraReports.Parameters.Parameter();
@@ -113,6 +110,11 @@
             this.PageFooterStatement = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.pbooShowInvoice = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooFalse = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooTrue = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
+            this.InvoiceSubreport = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrSubreport4 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.JIBStatementID_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -202,20 +204,6 @@
             this.SubBand1.HeightF = 24.61065F;
             this.SubBand1.Name = "SubBand1";
             // 
-            // xrSubreport2
-            // 
-            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport2.Name = "xrSubreport2";
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBProcessTrackingID", this.plngJIBPrintingProcessTrackingID));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBStatementID", null, "DSJIB_StatementHeader.ID"));
-            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOwnerID", null, "DSJIB_StatementHeader.OwnerID"));
-            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.JIBReports.JIBStatementDetail();
-            this.xrSubreport2.SizeF = new System.Drawing.SizeF(743.66F, 24.61065F);
-            // 
             // pstrDatabaseName
             // 
             this.pstrDatabaseName.Description = "pstrDatabaseName";
@@ -264,6 +252,7 @@
             // plngJIBProcessingPrint
             // 
             this.plngJIBProcessingPrint.Description = "JIB Processing Print";
+            this.plngJIBProcessingPrint.Enabled = false;
             this.plngJIBProcessingPrint.Name = "plngJIBProcessingPrint";
             this.plngJIBProcessingPrint.Type = typeof(int);
             this.plngJIBProcessingPrint.ValueInfo = "0";
@@ -286,7 +275,7 @@
             // 
             this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
-            this.pstrEndingOwnerNumber.ValueInfo = "0";
+            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "DSOwnersLookup";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
             dynamicListLookUpSettings3.DisplayMember = "Description";
@@ -371,7 +360,6 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningDate.Name = "pdteBeginningDate";
             this.pdteBeginningDate.Type = typeof(System.DateTime);
-            this.pdteBeginningDate.ValueInfo = "0";
             // 
             // pdteEndingDate
             // 
@@ -381,7 +369,6 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingDate.Name = "pdteEndingDate";
             this.pdteEndingDate.Type = typeof(System.DateTime);
-            this.pdteEndingDate.ValueInfo = "0";
             // 
             // pstrInvoiceNumber
             // 
@@ -807,25 +794,6 @@
             this.JIBInvoiceSubBand.HeightF = 24.61065F;
             this.JIBInvoiceSubBand.Name = "JIBInvoiceSubBand";
             // 
-            // InvoiceSubreport
-            // 
-            this.InvoiceSubreport.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowInvoice\n")});
-            this.InvoiceSubreport.GenerateOwnPages = true;
-            this.InvoiceSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.InvoiceSubreport.Name = "InvoiceSubreport";
-            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBStatementID", null, "DSJIB_StatementHeader.ID"));
-            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrBeginningOwnerNumber", this.pstrBeginningOwnerNumber));
-            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEndingOwnerNumber", this.pstrEndingOwnerNumber));
-            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunFromStatement", null, "DSJIB_StatementHeader.LiterallyJustFalse"));
-            this.InvoiceSubreport.ReportSource = new ReportsEngine.Reports.FinancialReports.JIBInvoices();
-            this.InvoiceSubreport.SizeF = new System.Drawing.SizeF(770F, 24.61065F);
-            // 
             // AfterJIBInvoiceSubBand
             // 
             this.AfterJIBInvoiceSubBand.HeightF = 0F;
@@ -864,21 +832,6 @@
             this.groupFooterBand2.HeightF = 24.61065F;
             this.groupFooterBand2.Name = "groupFooterBand2";
             this.groupFooterBand2.PrintAtBottom = true;
-            // 
-            // xrSubreport4
-            // 
-            this.xrSubreport4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrSubreport4.Name = "xrSubreport4";
-            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBProcessTrackingID", this.plngJIBPrintingProcessTrackingID));
-            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBProcessingPrint", this.plngJIBProcessingPrint));
-            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrBeginningOwnerNumber", this.pstrBeginningOwnerNumber));
-            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEndingOwnerNumber", this.pstrEndingOwnerNumber));
-            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSJIB_StatementHeader.ID"));
-            this.xrSubreport4.ReportSource = new ReportsEngine.Reports.JIBReports.JIBStatementFooter();
-            this.xrSubreport4.SizeF = new System.Drawing.SizeF(743.66F, 24.61065F);
             // 
             // groupHeaderBand3
             // 
@@ -957,6 +910,71 @@
             this.pbooShowInvoice.Type = typeof(bool);
             this.pbooShowInvoice.ValueInfo = "True";
             // 
+            // pbooFalse
+            // 
+            this.pbooFalse.Description = "False";
+            this.pbooFalse.Name = "pbooFalse";
+            this.pbooFalse.Type = typeof(bool);
+            this.pbooFalse.ValueInfo = "False";
+            this.pbooFalse.Visible = false;
+            // 
+            // pbooTrue
+            // 
+            this.pbooTrue.Description = "True";
+            this.pbooTrue.Name = "pbooTrue";
+            this.pbooTrue.Type = typeof(bool);
+            this.pbooTrue.ValueInfo = "True";
+            this.pbooTrue.Visible = false;
+            // 
+            // xrSubreport2
+            // 
+            this.xrSubreport2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport2.Name = "xrSubreport2";
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBProcessTrackingID", this.plngJIBPrintingProcessTrackingID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBStatementID", null, "DSJIB_StatementHeader.ID"));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOwnerID", null, "DSJIB_StatementHeader.OwnerID"));
+            this.xrSubreport2.ReportSource = new ReportsEngine.Reports.JIBReports.JIBStatementDetail();
+            this.xrSubreport2.SizeF = new System.Drawing.SizeF(743.66F, 24.61065F);
+            // 
+            // InvoiceSubreport
+            // 
+            this.InvoiceSubreport.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowInvoice\n")});
+            this.InvoiceSubreport.GenerateOwnPages = true;
+            this.InvoiceSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.InvoiceSubreport.Name = "InvoiceSubreport";
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBStatementID", null, "DSJIB_StatementHeader.ID"));
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrBeginningOwnerNumber", this.pstrBeginningOwnerNumber));
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEndingOwnerNumber", this.pstrEndingOwnerNumber));
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunFromStatement", this.pbooTrue));
+            this.InvoiceSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooAwaitParameterInput", this.pbooFalse));
+            this.InvoiceSubreport.ReportSource = new ReportsEngine.Reports.FinancialReports.JIBInvoices();
+            this.InvoiceSubreport.SizeF = new System.Drawing.SizeF(770F, 24.61065F);
+            // 
+            // xrSubreport4
+            // 
+            this.xrSubreport4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrSubreport4.Name = "xrSubreport4";
+            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBProcessTrackingID", this.plngJIBPrintingProcessTrackingID));
+            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBProcessingPrint", this.plngJIBProcessingPrint));
+            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrBeginningOwnerNumber", this.pstrBeginningOwnerNumber));
+            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEndingOwnerNumber", this.pstrEndingOwnerNumber));
+            this.xrSubreport4.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngID", null, "DSJIB_StatementHeader.ID"));
+            this.xrSubreport4.ReportSource = new ReportsEngine.Reports.JIBReports.JIBStatementFooter();
+            this.xrSubreport4.SizeF = new System.Drawing.SizeF(743.66F, 24.61065F);
+            // 
             // JIBStatement
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1001,7 +1019,9 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.boolPrintRemit, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooPrintReportInDuplex, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowInvoice, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooAwaitParameterInput, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooAwaitParameterInput, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooFalse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooTrue, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrDatabaseName,
@@ -1018,7 +1038,9 @@
             this.boolPrintRemit,
             this.pbooPrintReportInDuplex,
             this.pbooShowInvoice,
-            this.pbooAwaitParameterInput});
+            this.pbooAwaitParameterInput,
+            this.pbooFalse,
+            this.pbooTrue});
             this.Version = "23.1";
             this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.JIBStatement_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).EndInit();
@@ -1056,7 +1078,6 @@
         private DevExpress.XtraReports.UI.SubBand StartInvoicesBand;
         private DevExpress.XtraReports.UI.XRSubreport InvoiceSubreport;
         private DevExpress.XtraReports.UI.SubBand JIBInvoiceSubBand;
-        private DevExpress.XtraReports.UI.CalculatedField LiterallyJustFalse;
         private DevExpress.XtraReports.UI.CalculatedField calculatedField1;
         private DevExpress.XtraReports.UI.XRTable JIBStatementID_table;
         private DevExpress.XtraReports.UI.XRTableRow xrTableRow1;
@@ -1093,5 +1114,8 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooShowInvoice;
         private DevExpress.XtraReports.UI.XRRichText xrRichText3;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
+        private DevExpress.XtraReports.Parameters.Parameter pbooFalse;
+        private DevExpress.XtraReports.Parameters.Parameter pbooTrue;
+        public DevExpress.XtraReports.UI.CalculatedField LiterallyJustFalse;
     }
 }

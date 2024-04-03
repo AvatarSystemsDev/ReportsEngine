@@ -280,6 +280,7 @@
             this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
             this.plngJIBProcessTrackingID.Type = typeof(int);
             this.plngJIBProcessTrackingID.ValueInfo = "0";
+            this.plngJIBProcessTrackingID.Visible = false;
             // 
             // pstrBeginningOwnerNumber
             // 
