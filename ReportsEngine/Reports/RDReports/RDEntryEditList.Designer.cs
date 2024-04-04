@@ -58,6 +58,7 @@
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter21 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter22 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery3 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDEntryEditList));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
@@ -425,6 +426,8 @@
             this.parameter2 = new DevExpress.XtraReports.Parameters.Parameter();
             this.SortFieldPurchaser = new DevExpress.XtraReports.UI.CalculatedField();
             this.SortFieldProperty = new DevExpress.XtraReports.UI.CalculatedField();
+            this.pbooAwaitParameterInput = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Date = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox160)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -545,6 +548,8 @@
             queryParameter21,
             queryParameter22});
             storedProcQuery5.StoredProcName = "Properties_ReportLookup";
+            customSqlQuery3.Name = "Query";
+            customSqlQuery3.Sql = "select 1";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
             customSqlQuery1,
@@ -552,7 +557,8 @@
             customSqlQuery2,
             storedProcQuery3,
             storedProcQuery4,
-            storedProcQuery5});
+            storedProcQuery5,
+            customSqlQuery3});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // Pulse
@@ -4191,10 +4197,10 @@
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel8.ForeColor = System.Drawing.Color.Black;
             this.xrLabel8.KeepTogether = true;
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(1.04173F, 0F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(330.8F, 17F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(331.8417F, 17F);
             this.xrLabel8.StylePriority.UseBackColor = false;
             this.xrLabel8.StylePriority.UseBorderColor = false;
             this.xrLabel8.StylePriority.UseBorderDashStyle = false;
@@ -5019,8 +5025,6 @@
             // pdteEndingCheckDate
             // 
             this.pdteEndingCheckDate.Description = "Ending Check Date";
-            this.pdteEndingCheckDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingCheckDate.Name = "pdteEndingCheckDate";
             this.pdteEndingCheckDate.Type = typeof(System.DateTime);
             this.pdteEndingCheckDate.ValueInfo = "2023-10-27";
@@ -5980,12 +5984,14 @@
             // pbooCodeOrDescription
             // 
             this.pbooCodeOrDescription.Description = "Use Code Or Description";
+            this.pbooCodeOrDescription.Enabled = false;
             this.pbooCodeOrDescription.Name = "pbooCodeOrDescription";
             this.pbooCodeOrDescription.Type = typeof(bool);
             this.pbooCodeOrDescription.ValueInfo = "True";
             staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Code"));
             staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
             this.pbooCodeOrDescription.ValueSourceSettings = staticListLookUpSettings4;
+            this.pbooCodeOrDescription.Visible = false;
             // 
             // parameter1
             // 
@@ -6015,6 +6021,22 @@
             this.SortFieldProperty.Expression = "Iif(?pbooCodeOrDescription,[PropertyAndWellNumber] ,[Description] )";
             this.SortFieldProperty.Name = "SortFieldProperty";
             // 
+            // pbooAwaitParameterInput
+            // 
+            this.pbooAwaitParameterInput.Description = "Await Parameter Input";
+            this.pbooAwaitParameterInput.Name = "pbooAwaitParameterInput";
+            this.pbooAwaitParameterInput.Type = typeof(bool);
+            this.pbooAwaitParameterInput.ValueInfo = "True";
+            this.pbooAwaitParameterInput.Visible = false;
+            // 
+            // Date
+            // 
+            this.Date.DataMember = "Query";
+            this.Date.DataSource = this.Dynamic;
+            this.Date.Expression = "Iif(?pbooAwaitParameterInput, GetDate(Today()), GetDate(\'01/01/1900\') )";
+            this.Date.FieldType = DevExpress.XtraReports.UI.FieldType.DateTime;
+            this.Date.Name = "Date";
+            // 
             // RDEntryEditList
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -6031,7 +6053,8 @@
             this.groupFooterBand2});
             this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
             this.SortFieldPurchaser,
-            this.SortFieldProperty});
+            this.SortFieldProperty,
+            this.Date});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -6051,7 +6074,17 @@
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooAwaitParameterInput, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngReportType, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPurchaserNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPurchaserNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectPurchaserNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBatchID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortOrder, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngItemsToReport, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowMMBTU, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooCodeOrDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -6059,22 +6092,23 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIsFinal, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBatchID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortOrder, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPurchaserNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPurchaserNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectPurchaserNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngItemsToReport, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowMMBTU, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngRDProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
+            this.pbooAwaitParameterInput,
             this.plngReportType,
+            this.pdteBeginningCheckDate,
+            this.pdteEndingCheckDate,
+            this.pstrBeginningPurchaserNumber,
+            this.pstrEndingPurchaserNumber,
+            this.pstrSelectPurchaserNumber,
+            this.plngBatchID,
+            this.plngSortOrder,
+            this.plngItemsToReport,
+            this.pbooShowMMBTU,
             this.pbooCodeOrDescription,
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -6082,18 +6116,9 @@
             this.Subtitle,
             this.pbooIsFinal,
             this.plngCompanyID,
-            this.plngBatchID,
-            this.plngSortOrder,
-            this.pstrBeginningPurchaserNumber,
-            this.pstrEndingPurchaserNumber,
-            this.pstrSelectPurchaserNumber,
             this.pstrBeginningPropertyNumber,
             this.pstrEndingPropertyNumber,
             this.pstrSelectPropertyNumber,
-            this.pdteBeginningCheckDate,
-            this.pdteEndingCheckDate,
-            this.plngItemsToReport,
-            this.pbooShowMMBTU,
             this.plngRDProcessTrackingID,
             this.pbooShowCriteria});
             this.Version = "23.1";
@@ -6335,5 +6360,7 @@
         private DevExpress.XtraReports.Parameters.Parameter parameter2;
         private DevExpress.XtraReports.UI.CalculatedField SortFieldPurchaser;
         private DevExpress.XtraReports.UI.CalculatedField SortFieldProperty;
+        private DevExpress.XtraReports.Parameters.Parameter pbooAwaitParameterInput;
+        private DevExpress.XtraReports.UI.CalculatedField Date;
     }
 }

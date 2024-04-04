@@ -15,9 +15,6 @@ namespace ReportsEngine.Reports.RDReports
         public RDEntryEditList()
         {
             InitializeComponent();
-            ShowingReportType.BeforePrint += ShowingReportType_BeforePrint;
-            Parameter p = this.Parameters["pbooCodeOrDescription"];
-            // p.ValueSourceSettings.
         }
 
         private void ShowingReportType_BeforePrint(object sender, CancelEventArgs e)

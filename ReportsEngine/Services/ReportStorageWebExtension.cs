@@ -159,6 +159,16 @@ namespace ReportsEngine.Services
         public static void setReportParameters(XtraReport report, System.Collections.Specialized.NameValueCollection parameters, int companyid)
         {
             bool AwaitParameterInputPassed = false;
+            //  Margie wants the default parameters for the reports to be the current day.
+            foreach (Parameter parameter in report.Parameters)
+            {
+                if (parameter.Type.Name.ToString() == "DateTime")
+                {
+                    parameter.Value = DateTime.Today;
+                }
+            }
+
+
             foreach (string parameterName in parameters.AllKeys)
             {
                 if (parameterName == null)
@@ -171,8 +181,8 @@ namespace ReportsEngine.Services
                     string currentDatabaseID = parameters["plngDatabaseID"];
                     //Get the Database ConnectionString based on plngDatabaseID
                     connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
-                        report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
-                        report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+                    report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
+                    report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
                     if (ParameterExists(report.Parameters, "plngDatabaseID"))
                     {
                         report.Parameters["plngDatabaseID"].Value = int.Parse(currentDatabaseID.ToString());
@@ -210,7 +220,7 @@ namespace ReportsEngine.Services
                     report.Parameters["Subtitle"].Value = parameters["pstrSubtitle"].ToString();
                 }
                 else if (parameterName == "pstrParamVisibility")
-                {                 
+                {
                     List<Parameter> reportParameters = report.Parameters.Cast<Parameter>().ToList(); //The unsorted parameters from the report
                     string[] hiddenIndexes = Regex.Split(parameters["pstrParamVisibility"], "-");
                     if (hiddenIndexes.Length > 0)
@@ -275,7 +285,7 @@ namespace ReportsEngine.Services
                     {
                         report.Parameters[parameterName].Value = token.ToObject<string[]>();
                     }
-                    else if(token.Type == JTokenType.Object)
+                    else if (token.Type == JTokenType.Object)
                     {
                         JObject jsonObject = JObject.Parse(jsonInput);
                         List<string> values = new List<string>();
@@ -307,6 +317,11 @@ namespace ReportsEngine.Services
                     {
 
                     }
+                }
+                else if (report.Parameters[parameterName].Type.Name.ToString() == "DateTime")
+                {
+                    DateTime dateTimeParameter = DateTime.Parse(parameters.Get(parameterName).ToString());
+                    report.Parameters[parameterName].Value = dateTimeParameter;
                 }
                 else
                 {

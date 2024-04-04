@@ -172,6 +172,8 @@
             this.Textbox9 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
             this.Rectangle4 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrRoleType = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrSortBy = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
@@ -211,8 +213,6 @@
             this.plngMaskFederalID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooSortByNumberOrDescription = new DevExpress.XtraReports.Parameters.Parameter();
             this.NumberOrDescription = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrRoleType = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1031,6 +1031,61 @@
             this.Rectangle4.Name = "Rectangle4";
             this.Rectangle4.SizeF = new System.Drawing.SizeF(770F, 34.29175F);
             // 
+            // xrRoleType
+            // 
+            this.xrRoleType.BackColor = System.Drawing.Color.Transparent;
+            this.xrRoleType.BorderColor = System.Drawing.Color.Black;
+            this.xrRoleType.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrRoleType.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrRoleType.BorderWidth = 1F;
+            this.xrRoleType.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "GetDisplayText(?pstrSelectRoleTypeID)")});
+            this.xrRoleType.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrRoleType.ForeColor = System.Drawing.Color.Black;
+            this.xrRoleType.KeepTogether = true;
+            this.xrRoleType.LocationFloat = new DevExpress.Utils.PointFloat(77.2207F, 3.433228E-05F);
+            this.xrRoleType.Multiline = true;
+            this.xrRoleType.Name = "xrRoleType";
+            this.xrRoleType.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
+            this.xrRoleType.SizeF = new System.Drawing.SizeF(169.1687F, 16.99999F);
+            this.xrRoleType.StylePriority.UseBackColor = false;
+            this.xrRoleType.StylePriority.UseBorderColor = false;
+            this.xrRoleType.StylePriority.UseBorderDashStyle = false;
+            this.xrRoleType.StylePriority.UseBorders = false;
+            this.xrRoleType.StylePriority.UseBorderWidth = false;
+            this.xrRoleType.StylePriority.UseFont = false;
+            this.xrRoleType.StylePriority.UseForeColor = false;
+            this.xrRoleType.StylePriority.UsePadding = false;
+            this.xrRoleType.StylePriority.UseTextAlignment = false;
+            this.xrRoleType.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel25
+            // 
+            this.xrLabel25.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel25.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel25.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel25.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel25.BorderWidth = 1F;
+            this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel25.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel25.KeepTogether = true;
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(1.041698F, 1.525879E-05F);
+            this.xrLabel25.Multiline = true;
+            this.xrLabel25.Name = "xrLabel25";
+            this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
+            this.xrLabel25.SizeF = new System.Drawing.SizeF(76.17897F, 16.99999F);
+            this.xrLabel25.StylePriority.UseBackColor = false;
+            this.xrLabel25.StylePriority.UseBorderColor = false;
+            this.xrLabel25.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel25.StylePriority.UseBorders = false;
+            this.xrLabel25.StylePriority.UseBorderWidth = false;
+            this.xrLabel25.StylePriority.UseFont = false;
+            this.xrLabel25.StylePriority.UseForeColor = false;
+            this.xrLabel25.StylePriority.UsePadding = false;
+            this.xrLabel25.StylePriority.UseTextAlignment = false;
+            this.xrLabel25.Text = "For Role Type:";
+            this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // xrSortBy
             // 
             this.xrSortBy.BackColor = System.Drawing.Color.Transparent;
@@ -1695,61 +1750,6 @@
             this.NumberOrDescription.Expression = "Iif(?pbooSortByNumberOrDescription,[Number] ,[Description] )";
             this.NumberOrDescription.FieldType = DevExpress.XtraReports.UI.FieldType.String;
             this.NumberOrDescription.Name = "NumberOrDescription";
-            // 
-            // xrRoleType
-            // 
-            this.xrRoleType.BackColor = System.Drawing.Color.Transparent;
-            this.xrRoleType.BorderColor = System.Drawing.Color.Black;
-            this.xrRoleType.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrRoleType.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrRoleType.BorderWidth = 1F;
-            this.xrRoleType.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "GetDisplayText(?pstrSelectRoleTypeID)")});
-            this.xrRoleType.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrRoleType.ForeColor = System.Drawing.Color.Black;
-            this.xrRoleType.KeepTogether = true;
-            this.xrRoleType.LocationFloat = new DevExpress.Utils.PointFloat(77.2207F, 3.433228E-05F);
-            this.xrRoleType.Multiline = true;
-            this.xrRoleType.Name = "xrRoleType";
-            this.xrRoleType.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrRoleType.SizeF = new System.Drawing.SizeF(169.1687F, 16.99999F);
-            this.xrRoleType.StylePriority.UseBackColor = false;
-            this.xrRoleType.StylePriority.UseBorderColor = false;
-            this.xrRoleType.StylePriority.UseBorderDashStyle = false;
-            this.xrRoleType.StylePriority.UseBorders = false;
-            this.xrRoleType.StylePriority.UseBorderWidth = false;
-            this.xrRoleType.StylePriority.UseFont = false;
-            this.xrRoleType.StylePriority.UseForeColor = false;
-            this.xrRoleType.StylePriority.UsePadding = false;
-            this.xrRoleType.StylePriority.UseTextAlignment = false;
-            this.xrRoleType.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel25
-            // 
-            this.xrLabel25.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel25.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel25.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel25.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel25.BorderWidth = 1F;
-            this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel25.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel25.KeepTogether = true;
-            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(1.041698F, 1.525879E-05F);
-            this.xrLabel25.Multiline = true;
-            this.xrLabel25.Name = "xrLabel25";
-            this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel25.SizeF = new System.Drawing.SizeF(76.17897F, 16.99999F);
-            this.xrLabel25.StylePriority.UseBackColor = false;
-            this.xrLabel25.StylePriority.UseBorderColor = false;
-            this.xrLabel25.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel25.StylePriority.UseBorders = false;
-            this.xrLabel25.StylePriority.UseBorderWidth = false;
-            this.xrLabel25.StylePriority.UseFont = false;
-            this.xrLabel25.StylePriority.UseForeColor = false;
-            this.xrLabel25.StylePriority.UsePadding = false;
-            this.xrLabel25.StylePriority.UseTextAlignment = false;
-            this.xrLabel25.Text = "For Role Type:";
-            this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // VendorNameAddress
             // 
