@@ -64,6 +64,7 @@
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.pbooShowOwnerBreakdown = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowOwnerTotals = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -229,6 +230,7 @@
             this.plngUserID.Description = "plngUserID";
             this.plngUserID.Name = "plngUserID";
             this.plngUserID.Type = typeof(int);
+            this.plngUserID.ValueInfo = "0";
             this.plngUserID.Visible = false;
             // 
             // plngJIBProcessTrackingID
@@ -237,6 +239,7 @@
             this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
             this.plngJIBProcessTrackingID.Type = typeof(int);
             this.plngJIBProcessTrackingID.ValueInfo = "1";
+            this.plngJIBProcessTrackingID.Visible = false;
             // 
             // plngPhaseWellID
             // 
@@ -244,6 +247,7 @@
             this.plngPhaseWellID.Name = "plngPhaseWellID";
             this.plngPhaseWellID.Type = typeof(int);
             this.plngPhaseWellID.ValueInfo = "1629";
+            this.plngPhaseWellID.Visible = false;
             // 
             // Subtitle
             // 
@@ -256,6 +260,8 @@
             this.plngDOIDeckCodeID.Description = "plng DOIDeck Code ID";
             this.plngDOIDeckCodeID.Name = "plngDOIDeckCodeID";
             this.plngDOIDeckCodeID.Type = typeof(int);
+            this.plngDOIDeckCodeID.ValueInfo = "0";
+            this.plngDOIDeckCodeID.Visible = false;
             // 
             // plngCompanyID
             // 
@@ -263,12 +269,15 @@
             this.plngCompanyID.Name = "plngCompanyID";
             this.plngCompanyID.Type = typeof(int);
             this.plngCompanyID.ValueInfo = "1";
+            this.plngCompanyID.Visible = false;
             // 
             // plngDirectBillOwnerID
             // 
             this.plngDirectBillOwnerID.AllowNull = true;
             this.plngDirectBillOwnerID.Description = "plng Direct Bill Owner ID";
             this.plngDirectBillOwnerID.Name = "plngDirectBillOwnerID";
+            this.plngDirectBillOwnerID.Type = typeof(int);
+            this.plngDirectBillOwnerID.Visible = false;
             // 
             // ReportFooter
             // 
@@ -435,6 +444,15 @@
             this.pbooShowOwnerBreakdown.Name = "pbooShowOwnerBreakdown";
             this.pbooShowOwnerBreakdown.Type = typeof(bool);
             this.pbooShowOwnerBreakdown.ValueInfo = "False";
+            this.pbooShowOwnerBreakdown.Visible = false;
+            // 
+            // pbooShowOwnerTotals
+            // 
+            this.pbooShowOwnerTotals.Description = "Show Owner Totals";
+            this.pbooShowOwnerTotals.Name = "pbooShowOwnerTotals";
+            this.pbooShowOwnerTotals.Type = typeof(bool);
+            this.pbooShowOwnerTotals.ValueInfo = "False";
+            this.pbooShowOwnerTotals.Visible = false;
             // 
             // PropertyExpenseDistEnding
             // 
@@ -449,6 +467,8 @@
             this.DataMember = "DS_JIB_PEDPartTwo";
             this.DataSource = this.Dynamic;
             this.DisplayName = "PropertyExpenseDistEnding";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0 AND ?pbooShowOwnerTotals")});
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(130F, 130F, 0F, 0F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
@@ -472,7 +492,8 @@
             this.plngDOIDeckCodeID,
             this.plngCompanyID,
             this.plngDirectBillOwnerID,
-            this.pbooShowOwnerBreakdown});
+            this.pbooShowOwnerBreakdown,
+            this.pbooShowOwnerTotals});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -506,5 +527,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel9;
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowOwnerTotals;
     }
 }

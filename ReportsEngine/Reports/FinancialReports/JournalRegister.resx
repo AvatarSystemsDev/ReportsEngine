@@ -130,19 +130,26 @@
   <data name="GroupValue1.Expression" xml:space="preserve">
     <value>Iif(?plngSortBy = 1, [Source],
 Iif(?plngSortBy = 2, [DocumentVoucher],
-Iif(?plngSortBy = 3, [PostDate],
+Iif(?plngSortBy = 3, GetYear([PostDate]) + Iif(GetMonth([PostDate]) &lt; 10,'0' , '') + GetMonth([PostDate]) + Iif(GetDay([PostDate]) &lt; 10,'0' , '') + GetDay([PostDate]),
 Iif(?plngSortBy = 4, [Source],
 Iif(?plngSortBy = 5, [VendorNumber],
 Iif(?plngSortBy = 6, [PhaseWellNumber],
 Iif(?plngSortBy = 7, [OwnerNumber], '')))))))</value>
   </data>
   <data name="GroupValue2.Expression" xml:space="preserve">
-    <value>Iif(?plngSortBy = 1, [PostDate],
+    <value>Iif(?plngSortBy = 1, GetYear([PostDate]) + Iif(GetMonth([PostDate]) &lt; 10,'0' , '') + GetMonth([PostDate]) + Iif(GetDay([PostDate]) &lt; 10,'0' , '') + GetDay([PostDate]),
 Iif(?plngSortBy = 3, [BatchNumber],
 Iif(?plngSortBy = 4, [AccountNumber],
 Iif(?plngSortBy = 5, [OwnerNumber],
 Iif(?plngSortBy = 6, [AccountNumber],
-Iif(?plngSortBy = 7, [PostDate], ''))))))</value>
+Iif(?plngSortBy = 7, GetYear([PostDate]) + Iif(GetMonth([PostDate]) &lt; 10,'0' , '') + GetMonth([PostDate]) + Iif(GetDay([PostDate]) &lt; 10,'0' , '') + GetDay([PostDate]), ''))))))</value>
+  </data>
+  <data name="GroupValue3.Expression" xml:space="preserve">
+    <value>Iif(?plngSortBy = 1, [AccountNumber],
+Iif(?plngSortBy = 3, [AccountNumber],
+Iif(?plngSortBy = 4, GetYear([PostDate]) + Iif(GetMonth([PostDate]) &lt; 10,'0' , '') + GetMonth([PostDate]) + Iif(GetDay([PostDate]) &lt; 10,'0' , '') + GetDay([PostDate]),'')))
+
+</value>
   </data>
   <data name="xrLabel21.ExpressionBindings" xml:space="preserve">
     <value>Iif(?plngSortBy = 1, 'Source/GL Date/Account', Iif(?plngSortBy = 2, 'Doc',Iif(?plngSortBy = 3, 'GLDate/Batch/Account',Iif(?plngSortBy = 4, 'Source/Account/GL Date',Iif(?plngSortBy = 5, 'Vendor/Owner',Iif(?plngSortBy = 6, 'Well/Account',Iif(?plngSortBy = 7, 'Owner/GLDate','')))))))

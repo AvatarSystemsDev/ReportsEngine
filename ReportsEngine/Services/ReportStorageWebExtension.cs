@@ -320,7 +320,8 @@ namespace ReportsEngine.Services
                 }
                 else if (report.Parameters[parameterName].Type.Name.ToString() == "DateTime")
                 {
-                    DateTime dateTimeParameter = DateTime.Parse(parameters.Get(parameterName).ToString());
+                    string dateTimeString = parameters.Get(parameterName).ToString();
+                    DateTime dateTimeParameter = DateTime.Parse(dateTimeString);
                     report.Parameters[parameterName].Value = dateTimeParameter;
                 }
                 else

@@ -1574,7 +1574,7 @@
             this.xrDebitForward,
             this.xrCreditForward,
             this.xrBalanceForward});
-            this.SubBand11.HeightF = 15.00002F;
+            this.SubBand11.HeightF = 17F;
             this.SubBand11.Name = "SubBand11";
             // 
             // xrLabel25
@@ -1588,10 +1588,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AccountNumber]+\' : \' +[AccountDescription]")});
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel25.KeepTogether = true;
-            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(1.879586F, 0F);
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(1.879597F, 0F);
             this.xrLabel25.Name = "xrLabel25";
             this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel25.SizeF = new System.Drawing.SizeF(625.05F, 15.00001F);
+            this.xrLabel25.SizeF = new System.Drawing.SizeF(625.05F, 16.99999F);
             this.xrLabel25.StylePriority.UseBorderColor = false;
             this.xrLabel25.StylePriority.UseBorderDashStyle = false;
             this.xrLabel25.StylePriority.UseBorders = false;
@@ -1611,7 +1611,8 @@
             this.xrBalancedForwardAsteriskLabel.BorderWidth = 0F;
             this.xrBalancedForwardAsteriskLabel.CanGrow = false;
             this.xrBalancedForwardAsteriskLabel.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'***Balance Forward***\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'***Balance Forward***\'"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[IsBBF] = 1")});
             this.xrBalancedForwardAsteriskLabel.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrBalancedForwardAsteriskLabel.ForeColor = System.Drawing.Color.Black;
             this.xrBalancedForwardAsteriskLabel.KeepTogether = true;
@@ -1619,7 +1620,7 @@
             this.xrBalancedForwardAsteriskLabel.Multiline = true;
             this.xrBalancedForwardAsteriskLabel.Name = "xrBalancedForwardAsteriskLabel";
             this.xrBalancedForwardAsteriskLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrBalancedForwardAsteriskLabel.SizeF = new System.Drawing.SizeF(165.0961F, 15.00002F);
+            this.xrBalancedForwardAsteriskLabel.SizeF = new System.Drawing.SizeF(165.0961F, 17F);
             this.xrBalancedForwardAsteriskLabel.StyleName = "xrTablixRowStyle";
             this.xrBalancedForwardAsteriskLabel.StylePriority.UseBackColor = false;
             this.xrBalancedForwardAsteriskLabel.StylePriority.UseBorderColor = false;
@@ -1642,7 +1643,8 @@
             this.xrDebitForward.CanGrow = false;
             this.xrDebitForward.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif(not isNullOrEmpty([AccountID]),iif(sumSum(Iif([isBBF] = 1 , [NetAmount], 0))>" +
-                    "=0,sumSum(Iif([isBBF] = 1, [NetAmount], 0)),0)\n,0)")});
+                    "=0,sumSum(Iif([isBBF] = 1, [NetAmount], 0)),0)\n,0)"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[IsBBF] = 1")});
             this.xrDebitForward.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrDebitForward.ForeColor = System.Drawing.Color.Black;
             this.xrDebitForward.KeepTogether = true;
@@ -1650,7 +1652,7 @@
             this.xrDebitForward.Multiline = true;
             this.xrDebitForward.Name = "xrDebitForward";
             this.xrDebitForward.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrDebitForward.SizeF = new System.Drawing.SizeF(75.54724F, 15.00002F);
+            this.xrDebitForward.SizeF = new System.Drawing.SizeF(75.54724F, 17F);
             this.xrDebitForward.StyleName = "xrTablixRowStyle";
             this.xrDebitForward.StylePriority.UseBackColor = false;
             this.xrDebitForward.StylePriority.UseBorderColor = false;
@@ -1676,7 +1678,8 @@
             this.xrCreditForward.CanGrow = false;
             this.xrCreditForward.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif(not isNullOrEmpty([AccountID]),iif(sumSum(Iif([isBBF] = 1, [NetAmount], 0))<0" +
-                    ",sumSum(Iif([isBBF] = 1, -[NetAmount], 0)),0),0)")});
+                    ",sumSum(Iif([isBBF] = 1, -[NetAmount], 0)),0),0)"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[IsBBF] = 1")});
             this.xrCreditForward.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrCreditForward.ForeColor = System.Drawing.Color.Black;
             this.xrCreditForward.KeepTogether = true;
@@ -1684,7 +1687,7 @@
             this.xrCreditForward.Multiline = true;
             this.xrCreditForward.Name = "xrCreditForward";
             this.xrCreditForward.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrCreditForward.SizeF = new System.Drawing.SizeF(74.50269F, 15.00002F);
+            this.xrCreditForward.SizeF = new System.Drawing.SizeF(74.50269F, 17F);
             this.xrCreditForward.StyleName = "xrTablixRowStyle";
             this.xrCreditForward.StylePriority.UseBackColor = false;
             this.xrCreditForward.StylePriority.UseBorderColor = false;
@@ -1709,15 +1712,16 @@
             this.xrBalanceForward.BorderWidth = 0F;
             this.xrBalanceForward.CanGrow = false;
             this.xrBalanceForward.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrBalanceForward.ExpressionBindings"))});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrBalanceForward.ExpressionBindings")),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[IsBBF] = 1")});
             this.xrBalanceForward.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrBalanceForward.ForeColor = System.Drawing.Color.Black;
             this.xrBalanceForward.KeepTogether = true;
-            this.xrBalanceForward.LocationFloat = new DevExpress.Utils.PointFloat(942.6047F, 0F);
+            this.xrBalanceForward.LocationFloat = new DevExpress.Utils.PointFloat(942.6046F, 0F);
             this.xrBalanceForward.Multiline = true;
             this.xrBalanceForward.Name = "xrBalanceForward";
             this.xrBalanceForward.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrBalanceForward.SizeF = new System.Drawing.SizeF(77.39526F, 15.00002F);
+            this.xrBalanceForward.SizeF = new System.Drawing.SizeF(77.39636F, 17F);
             this.xrBalanceForward.StyleName = "xrTablixRowStyle";
             this.xrBalanceForward.StylePriority.UseBackColor = false;
             this.xrBalanceForward.StylePriority.UseBorderColor = false;
@@ -2500,11 +2504,11 @@
             this.xrLabel54.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel54.ForeColor = System.Drawing.Color.Black;
             this.xrLabel54.KeepTogether = true;
-            this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(74.93F, 2.753704F);
+            this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(74.93F, 0F);
             this.xrLabel54.Multiline = true;
             this.xrLabel54.Name = "xrLabel54";
             this.xrLabel54.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel54.SizeF = new System.Drawing.SizeF(200.5796F, 12.70835F);
+            this.xrLabel54.SizeF = new System.Drawing.SizeF(200.5796F, 15.46205F);
             this.xrLabel54.StyleName = "xrCompanySubheaderStyle";
             this.xrLabel54.StylePriority.UseBackColor = false;
             this.xrLabel54.StylePriority.UseBorderColor = false;
@@ -2529,11 +2533,11 @@
             this.xrLabel55.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel55.ForeColor = System.Drawing.Color.Black;
             this.xrLabel55.KeepTogether = true;
-            this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(0F, 2.75367F);
+            this.xrLabel55.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel55.Multiline = true;
             this.xrLabel55.Name = "xrLabel55";
             this.xrLabel55.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel55.SizeF = new System.Drawing.SizeF(74.92999F, 12.70836F);
+            this.xrLabel55.SizeF = new System.Drawing.SizeF(74.92999F, 15.46205F);
             this.xrLabel55.StyleName = "xrCompanySubheaderStyle";
             this.xrLabel55.StylePriority.UseBackColor = false;
             this.xrLabel55.StylePriority.UseBorderColor = false;
