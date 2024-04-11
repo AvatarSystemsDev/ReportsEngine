@@ -64,7 +64,7 @@ namespace ReportsEngine.Reports.FinancialReports
             xrRunningBalance.PrintOnPage += XrRunningBalance_PrintOnPage;
 
             //xrPeriodRunningBalance.PrintOnPage += XrPeriodRunningBalance_PrintOnPage;
-            //xrAccountRunningBalance.PrintOnPage += XrAccountRunningBalance_PrintOnPage;
+            xrAccountRunningBalance.PrintOnPage += XrAccountRunningBalance_PrintOnPage;
             //xrReportPeriodSumBalance.PrintOnPage += XrReportPeriodSumBalance_PrintOnPage;
             //xrReportAccountSumBalance.PrintOnPage += XrReportAccountSumBalance_PrintOnPage;
             xrBalanceForward.BeforePrint += XrBalanceForward_BeforePrint;

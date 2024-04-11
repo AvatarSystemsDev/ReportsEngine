@@ -501,6 +501,24 @@
     <Compile Include="PreVoidCheckReport.Designer.cs">
       <DependentUpon>PreVoidCheckReport.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\JIBReports\TestCheckReport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\TestCheckReport.Designer.cs">
+      <DependentUpon>TestCheckReport.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\TestRemittance.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\TestRemittance.Designer.cs">
+      <DependentUpon>TestRemittance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\TestRemittanceSubreportOnly.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\TestRemittanceSubreportOnly.Designer.cs">
+      <DependentUpon>TestRemittanceSubreportOnly.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\MDReports\AFEBudgetReceivablesReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2550,6 +2568,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="PreVoidCheckReport.resx">
       <DependentUpon>PreVoidCheckReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\TestCheckReport.resx">
+      <DependentUpon>TestCheckReport.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\TestRemittance.resx">
+      <DependentUpon>TestRemittance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\TestRemittanceSubreportOnly.resx">
+      <DependentUpon>TestRemittanceSubreportOnly.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEBudgetReceivablesReport.resx">
       <DependentUpon>AFEBudgetReceivablesReport.cs</DependentUpon>

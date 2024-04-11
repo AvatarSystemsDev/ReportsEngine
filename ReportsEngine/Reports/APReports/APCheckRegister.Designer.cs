@@ -188,9 +188,6 @@
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
-            this.GLProcessPostRegisterSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             this.lngZero = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooGroupByCheck = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngTransactionSourceCodeID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -1336,9 +1333,7 @@
             this.ReportFooter.HeightF = 0F;
             this.ReportFooter.Name = "ReportFooter";
             this.ReportFooter.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
-            this.SubBand2,
-            this.SubBand3,
-            this.SubBand6});
+            this.SubBand2});
             // 
             // SubBand2
             // 
@@ -1435,36 +1430,6 @@
             this.xrLabel31.StylePriority.UseTextAlignment = false;
             this.xrLabel31.Text = "Report Total";
             this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // SubBand3
-            // 
-            this.SubBand3.HeightF = 4.000046F;
-            this.SubBand3.Name = "SubBand3";
-            // 
-            // SubBand6
-            // 
-            this.SubBand6.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.GLProcessPostRegisterSubreport});
-            this.SubBand6.HeightF = 11.25336F;
-            this.SubBand6.Name = "SubBand6";
-            // 
-            // GLProcessPostRegisterSubreport
-            // 
-            this.GLProcessPostRegisterSubreport.GenerateOwnPages = true;
-            this.GLProcessPostRegisterSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.GLProcessPostRegisterSubreport.Name = "GLProcessPostRegisterSubreport";
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngBatchID", this.lngZero));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAPCheckProcessTrackingID", this.plngID));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowDetail", this.pbooGroupByCheck));
-            this.GLProcessPostRegisterSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngTransactionSourceCodeID", this.plngTransactionSourceCodeID));
-            this.GLProcessPostRegisterSubreport.ReportSource = new ReportsEngine.Reports.ProcessReports.GLProcessPostRegister();
-            this.GLProcessPostRegisterSubreport.SizeF = new System.Drawing.SizeF(770F, 11.25336F);
             // 
             // lngZero
             // 
@@ -1790,8 +1755,6 @@
         private DevExpress.XtraReports.UI.XRRichText Textbox67;
         private DevExpress.XtraReports.UI.SubBand SubBand2;
         private DevExpress.XtraReports.Parameters.Parameter plngTransactionSourceCodeID;
-        private DevExpress.XtraReports.UI.XRSubreport GLProcessPostRegisterSubreport;
-        private DevExpress.XtraReports.UI.SubBand SubBand3;
         private DevExpress.XtraReports.Parameters.Parameter lngZero;
         private DevExpress.XtraReports.UI.XRRichText xrRichText1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
@@ -1817,7 +1780,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooGroupByCheck;
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.Parameters.Parameter pbooAwaitParameterInput;
-        private DevExpress.XtraReports.UI.SubBand SubBand6;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrPageLabel;
     }

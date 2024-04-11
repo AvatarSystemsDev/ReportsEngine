@@ -1713,7 +1713,7 @@
             this.xrBalanceForward.CanGrow = false;
             this.xrBalanceForward.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrBalanceForward.ExpressionBindings")),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[IsBBF] = 1")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[isBBF] = 1 OR IsNull([AccountTotal]) OR [AccountTotal] = 0")});
             this.xrBalanceForward.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrBalanceForward.ForeColor = System.Drawing.Color.Black;
             this.xrBalanceForward.KeepTogether = true;

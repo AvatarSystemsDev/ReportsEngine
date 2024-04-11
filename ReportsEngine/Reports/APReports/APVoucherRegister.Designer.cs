@@ -272,11 +272,11 @@
             this.xrLabel67 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel68 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.plngPostedByUser = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
-            this.xrLabel6 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox62)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox65)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox70)).BeginInit();
@@ -2190,6 +2190,28 @@
             this.groupFooterBand2.HeightF = 10F;
             this.groupFooterBand2.Name = "groupFooterBand2";
             // 
+            // xrLabel6
+            // 
+            this.xrLabel6.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel6.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel6.BorderWidth = 1F;
+            this.xrLabel6.CanGrow = false;
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel6.KeepTogether = true;
+            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel6.Name = "xrLabel6";
+            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel6.SizeF = new System.Drawing.SizeF(1020F, 10F);
+            this.xrLabel6.StylePriority.UseBorderColor = false;
+            this.xrLabel6.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel6.StylePriority.UseBorders = false;
+            this.xrLabel6.StylePriority.UseBorderWidth = false;
+            this.xrLabel6.StylePriority.UseFont = false;
+            this.xrLabel6.StylePriority.UsePadding = false;
+            this.xrLabel6.StylePriority.UseTextAlignment = false;
+            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // xrCrossBandBox1
             // 
             this.xrCrossBandBox1.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
@@ -2353,28 +2375,6 @@
             selectNode2,
             selectNode3,
             selectNode4});
-            // 
-            // xrLabel6
-            // 
-            this.xrLabel6.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel6.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel6.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel6.BorderWidth = 1F;
-            this.xrLabel6.CanGrow = false;
-            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel6.KeepTogether = true;
-            this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel6.Name = "xrLabel6";
-            this.xrLabel6.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel6.SizeF = new System.Drawing.SizeF(1020F, 10F);
-            this.xrLabel6.StylePriority.UseBorderColor = false;
-            this.xrLabel6.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel6.StylePriority.UseBorders = false;
-            this.xrLabel6.StylePriority.UseBorderWidth = false;
-            this.xrLabel6.StylePriority.UseFont = false;
-            this.xrLabel6.StylePriority.UsePadding = false;
-            this.xrLabel6.StylePriority.UseTextAlignment = false;
-            this.xrLabel6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // APVoucherRegister
             // 

@@ -1626,7 +1626,7 @@
             this.pageFooterBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pageFooterBand1.BorderWidth = 1F;
             this.pageFooterBand1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 6F);
-            this.pageFooterBand1.HeightF = 0F;
+            this.pageFooterBand1.HeightF = 5.263011F;
             this.pageFooterBand1.Name = "pageFooterBand1";
             this.pageFooterBand1.StylePriority.UseFont = false;
             this.pageFooterBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {

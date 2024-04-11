@@ -17,6 +17,7 @@ namespace ReportsEngine.Reports.JIBReports
         private bool didOnce;
         private bool didAnotherThingBefore;
         private bool didAnotherThingBeforeThat;
+        private bool lastStatementEntry;
 
 
         private int totalPages;
@@ -35,7 +36,24 @@ namespace ReportsEngine.Reports.JIBReports
             this.BeforePrint += JIBStatement_BeforePrint;
             InvoiceSubreport.BeforePrint += InvoiceSubreport_BeforePrint;
             InvoiceSubreport.AfterPrint += InvoiceSubreport_AfterPrint;
+            xrInvoiceAgingDone.BeforePrint += XrInvoiceAgingDone_BeforePrint;
+            xrEndOfStatementBand.BeforePrint += XrEndOfStatementBand_BeforePrint;
+            xrSubreport1.BeforePrint += XrSubreport1_BeforePrint;
+        }
 
+        private void XrSubreport1_BeforePrint(object sender, CancelEventArgs e)
+        {
+            //(sender as XRSubreport).Visible = lastStatementEntry; // Only show Statement aging at the bottom of the page where it is the last page of the statement.
+        }
+
+        private void XrEndOfStatementBand_BeforePrint(object sender, CancelEventArgs e)
+        {
+            lastStatementEntry = false;
+        }
+
+        private void XrInvoiceAgingDone_BeforePrint(object sender, CancelEventArgs e)
+        {
+            lastStatementEntry = true;
         }
 
         private void InvoiceSubreport_AfterPrint(object sender, EventArgs e)
@@ -94,6 +112,7 @@ namespace ReportsEngine.Reports.JIBReports
             didOnce = false;
             didAnotherThingBefore = false;
             didAnotherThingBeforeThat = false;
+            lastStatementEntry = false;
         }
     }
 }
