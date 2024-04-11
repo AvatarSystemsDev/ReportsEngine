@@ -110,6 +110,7 @@
             this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrNonNegotiablePictureTwo = new DevExpress.XtraReports.UI.XRPictureBox();
             this.PleaseDetachThisRemittanceAdviceBeforeDepositingCheck = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
             this.CompanyAddressBandAboveRemittance = new DevExpress.XtraReports.UI.SubBand();
@@ -156,6 +157,7 @@
             this.xrRichText4 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText5 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrNonNegotiablePicture = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrTransitBottomCheck = new DevExpress.XtraReports.UI.XRLabel();
             this.StubEnd = new DevExpress.XtraReports.UI.SubBand();
             this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
@@ -180,8 +182,6 @@
             this.pbooHideCheckPart = new DevExpress.XtraReports.Parameters.Parameter();
             this.PageFooter = new DevExpress.XtraReports.UI.PageFooterBand();
             this.xrPageBeginningLabel = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrNonNegotiablePictureTwo = new DevExpress.XtraReports.UI.XRPictureBox();
-            this.xrNonNegotiablePicture = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrCheckCoverPage = new DevExpress.XtraReports.UI.XRSubreport();
@@ -983,6 +983,14 @@
             this.xrLabel31.SizeF = new System.Drawing.SizeF(322.92F, 87.5F);
             this.xrLabel31.StylePriority.UseFont = false;
             this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrNonNegotiablePictureTwo
+            // 
+            this.xrNonNegotiablePictureTwo.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(((System.Drawing.Image)(resources.GetObject("xrNonNegotiablePictureTwo.ImageSource"))), true);
+            this.xrNonNegotiablePictureTwo.LocationFloat = new DevExpress.Utils.PointFloat(0F, 4.391734F);
+            this.xrNonNegotiablePictureTwo.Name = "xrNonNegotiablePictureTwo";
+            this.xrNonNegotiablePictureTwo.SizeF = new System.Drawing.SizeF(792.9999F, 249.88F);
+            this.xrNonNegotiablePictureTwo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // PleaseDetachThisRemittanceAdviceBeforeDepositingCheck
             // 
@@ -1790,6 +1798,14 @@
             this.xrLabel2.Text = "PLEASE DETACH THIS REMITTANCE ADVICE BEFORE DEPOSITING CHECK";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
+            // xrNonNegotiablePicture
+            // 
+            this.xrNonNegotiablePicture.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrNonNegotiablePicture.ImageSource"));
+            this.xrNonNegotiablePicture.LocationFloat = new DevExpress.Utils.PointFloat(0F, 68.35001F);
+            this.xrNonNegotiablePicture.Name = "xrNonNegotiablePicture";
+            this.xrNonNegotiablePicture.SizeF = new System.Drawing.SizeF(794.0999F, 249.88F);
+            this.xrNonNegotiablePicture.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            // 
             // xrTransitBottomCheck
             // 
             this.xrTransitBottomCheck.BorderColor = System.Drawing.Color.Black;
@@ -2146,22 +2162,6 @@
             this.xrPageBeginningLabel.StylePriority.UsePadding = false;
             this.xrPageBeginningLabel.StylePriority.UseTextAlignment = false;
             this.xrPageBeginningLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // xrNonNegotiablePictureTwo
-            // 
-            this.xrNonNegotiablePictureTwo.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource(((System.Drawing.Image)(resources.GetObject("xrNonNegotiablePictureTwo.ImageSource"))), true);
-            this.xrNonNegotiablePictureTwo.LocationFloat = new DevExpress.Utils.PointFloat(0F, 4.391734F);
-            this.xrNonNegotiablePictureTwo.Name = "xrNonNegotiablePictureTwo";
-            this.xrNonNegotiablePictureTwo.SizeF = new System.Drawing.SizeF(792.9999F, 249.88F);
-            this.xrNonNegotiablePictureTwo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
-            // 
-            // xrNonNegotiablePicture
-            // 
-            this.xrNonNegotiablePicture.ImageSource = new DevExpress.XtraPrinting.Drawing.ImageSource("img", resources.GetString("xrNonNegotiablePicture.ImageSource"));
-            this.xrNonNegotiablePicture.LocationFloat = new DevExpress.Utils.PointFloat(0F, 68.35001F);
-            this.xrNonNegotiablePicture.Name = "xrNonNegotiablePicture";
-            this.xrNonNegotiablePicture.SizeF = new System.Drawing.SizeF(794.0999F, 249.88F);
-            this.xrNonNegotiablePicture.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // xrSubreport2
             // 

@@ -668,7 +668,7 @@
             this.Textbox32.StylePriority.UseFont = false;
             this.Textbox32.StylePriority.UsePadding = false;
             this.Textbox32.StylePriority.UseTextAlignment = false;
-            this.Textbox32.Text = "Status Date";
+            this.Textbox32.Text = "Clear Date";
             this.Textbox32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox29

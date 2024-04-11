@@ -93,6 +93,7 @@
             this.xrLabel7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel7.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel7.BorderWidth = 1F;
+            this.xrLabel7.CanGrow = false;
             this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CostDecimal]")});
             this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
@@ -117,6 +118,7 @@
             this.xrLabel4.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel4.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel4.BorderWidth = 1F;
+            this.xrLabel4.CanGrow = false;
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OwnerNet]")});
             this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
@@ -141,6 +143,7 @@
             this.xrLabel5.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel5.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel5.BorderWidth = 1F;
+            this.xrLabel5.CanGrow = false;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OwnerNumber] + \': \' + [OwnerName]")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
@@ -270,6 +273,7 @@
             this.xrLabel10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel10.BorderWidth = 1F;
+            this.xrLabel10.CanGrow = false;
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel10.KeepTogether = true;
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(321.25F, 0F);
@@ -292,6 +296,7 @@
             this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel1.BorderWidth = 1F;
+            this.xrLabel1.CanGrow = false;
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(437.92F, 0F);
@@ -315,6 +320,7 @@
             this.xrLabel3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel3.BorderWidth = 1F;
+            this.xrLabel3.CanGrow = false;
             this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -346,9 +352,10 @@
             this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel2.BorderWidth = 1F;
+            this.xrLabel2.CanGrow = false;
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([CostDecimal])")});
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(321.25F, 0F);
             this.xrLabel2.Name = "xrLabel2";
@@ -372,6 +379,7 @@
             this.xrLabel13.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel13.BorderWidth = 1F;
+            this.xrLabel13.CanGrow = false;
             this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel13.KeepTogether = true;
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(150.8352F, 0F);
@@ -394,6 +402,7 @@
             this.xrLabel15.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel15.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel15.BorderWidth = 1F;
+            this.xrLabel15.CanGrow = false;
             this.xrLabel15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([OwnerNet])")});
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);

@@ -80,22 +80,41 @@ namespace ReportsEngine.Reports.FinancialReports
 
         private void NewAccountLine_BeforePrint(object sender, CancelEventArgs e)
         {
-            PreviousAccount = (int)GetCurrentColumnValue("AccountID");
+            var getGetCurrentColumnValue = GetCurrentColumnValue("AccountID").ToString();
+            if (getGetCurrentColumnValue is null)
+            {
+                getGetCurrentColumnValue = "";
+            }
+            if (getGetCurrentColumnValue != "")
+            {
+                PreviousAccount = int.Parse(getGetCurrentColumnValue);
+            }
         }
 
         private void XrCreditForward_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            if (PreviousAccount == (int)GetCurrentColumnValue("AccountID"))
+            var getGetCurrentColumnValue = GetCurrentColumnValue("AccountID").ToString();
+            if (getGetCurrentColumnValue is null)
+            {
+                getGetCurrentColumnValue = "";
+            }
+            if (getGetCurrentColumnValue == "" || PreviousAccount == int.Parse(getGetCurrentColumnValue))
             {
                 label.Text = "";
+
             }
         }
 
         private void XrDebitForward_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            if (PreviousAccount == (int)GetCurrentColumnValue("AccountID"))
+            var getGetCurrentColumnValue = GetCurrentColumnValue("AccountID").ToString();
+            if (getGetCurrentColumnValue is null)
+            {
+                getGetCurrentColumnValue = "";
+            }
+            if (getGetCurrentColumnValue == "" || PreviousAccount == int.Parse(getGetCurrentColumnValue))
             {
                 label.Text = "";
             }
@@ -104,7 +123,12 @@ namespace ReportsEngine.Reports.FinancialReports
         private void XrBalanceForward_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            if (PreviousAccount == (int)GetCurrentColumnValue("AccountID"))
+            var getGetCurrentColumnValue = GetCurrentColumnValue("AccountID").ToString();
+            if (getGetCurrentColumnValue is null)
+            {
+                getGetCurrentColumnValue = "";
+            }
+            if (getGetCurrentColumnValue == "" || PreviousAccount == int.Parse(getGetCurrentColumnValue))
             {
                 label.Text = "";
             }
@@ -113,7 +137,12 @@ namespace ReportsEngine.Reports.FinancialReports
         private void XrBalancedForwardAsteriskLabel_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-            if (PreviousAccount == (int)GetCurrentColumnValue("AccountID"))
+            var getGetCurrentColumnValue = GetCurrentColumnValue("AccountID").ToString();
+            if (getGetCurrentColumnValue is null)
+            {
+                getGetCurrentColumnValue = "";
+            }
+            if (getGetCurrentColumnValue == "" || PreviousAccount == int.Parse(getGetCurrentColumnValue))
             {
                 label.Text = "";
             }
@@ -208,22 +237,30 @@ namespace ReportsEngine.Reports.FinancialReports
         private void XrRunningBalance_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             XRLabel label = sender as XRLabel;
-                string text = label.Text.Replace(",", "");
-                text = text.Replace("(", "-");
-                text = text.Replace(")", "");
-
-                double netAmountCurrent = Double.Parse(text);
-                if (RunningBalance < 0)
+            string text = label.Text.Replace(",", "");
+            text = text.Replace("(", "-");
+            text = text.Replace(")", "");
+            var getGetCurrentColumnValue = GetCurrentColumnValue("AccountID").ToString();
+            if (getGetCurrentColumnValue is null || getGetCurrentColumnValue == "")
+            {
+                getGetCurrentColumnValue = "0";
+            }
+            if (RunningBalance < 0)
+            {
+                label.Text = '(' + (RunningBalance).ToString("N2").Replace("-", "") + ')';
+                if (getGetCurrentColumnValue != "")
                 {
-                    label.Text = '(' + (RunningBalance).ToString("N2").Replace("-", "") + ')';
-                    PreviousAccount = (int)GetCurrentColumnValue("AccountID");
-
+                    PreviousAccount = int.Parse(getGetCurrentColumnValue);
                 }
-                else
+            }
+            else
+            {
+                label.Text = (RunningBalance).ToString("N2");
+                if (getGetCurrentColumnValue != "")
                 {
-                    label.Text = (RunningBalance).ToString("N2");
-                    PreviousAccount = (int)GetCurrentColumnValue("AccountID");
+                    PreviousAccount = int.Parse(getGetCurrentColumnValue);
                 }
+            }
         }
 
         private void XrCreditForward_PrintOnPage(object sender, PrintOnPageEventArgs e)

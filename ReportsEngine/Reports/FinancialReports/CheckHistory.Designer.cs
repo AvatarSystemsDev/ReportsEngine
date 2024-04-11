@@ -1070,7 +1070,7 @@
             this.Textbox32.SizeF = new System.Drawing.SizeF(72.70825F, 27.98994F);
             this.Textbox32.StylePriority.UsePadding = false;
             this.Textbox32.StylePriority.UseTextAlignment = false;
-            this.Textbox32.Text = "Status Date";
+            this.Textbox32.Text = "Clear Date";
             this.Textbox32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
             // Textbox30

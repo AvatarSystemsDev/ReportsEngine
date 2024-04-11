@@ -3639,8 +3639,7 @@
             this.plngShowZeroBalance.Name = "plngShowZeroBalance";
             this.plngShowZeroBalance.Type = typeof(int);
             this.plngShowZeroBalance.ValueInfo = "0";
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "All"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Det"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Yes"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "No"));
             this.plngShowZeroBalance.ValueSourceSettings = staticListLookUpSettings1;
             // 

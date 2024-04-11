@@ -281,8 +281,6 @@
             // 
             // groupHeaderBand1
             // 
-            this.groupHeaderBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[RowNumberImbursementDeductionTypeCodeID] = 1")});
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("ImbursementType", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBand1.HeightF = 0F;
@@ -796,8 +794,6 @@
             // 
             // groupFooterBand3
             // 
-            this.groupFooterBand3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not [WillPrintDetailOnChecks]\n")});
             this.groupFooterBand3.HeightF = 0F;
             this.groupFooterBand3.Name = "groupFooterBand3";
             this.groupFooterBand3.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
