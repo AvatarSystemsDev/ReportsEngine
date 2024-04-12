@@ -321,7 +321,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelInsuranceOptions", () => new ExcelInsuranceOptions());
             Reports.Add("GLProcessPostRegister", () => new GLProcessPostRegister());
             Reports.Add("ExcelGLProcessPostRegister", () => new ExcelGLProcessPostRegister());
-
+            Reports.Add("TestCheckReport", () => new TestCheckReport());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

@@ -50,6 +50,7 @@ namespace ReportsEngine.Reports.RDReports
             DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter15 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDCheckStubs));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -282,10 +283,14 @@ namespace ReportsEngine.Reports.RDReports
             queryParameter15.Name = "@plngDatabaseID";
             queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngDatabaseID", typeof(int));
+            queryParameter16.Name = "@plngCheckPrintingFormatID";
+            queryParameter16.Type = typeof(int);
+            queryParameter16.ValueInfo = "0";
             storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter13,
             queryParameter14,
-            queryParameter15});
+            queryParameter15,
+            queryParameter16});
             storedProcQuery5.StoredProcName = "CheckFormattingOptions_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -1173,7 +1178,7 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel45.StylePriority.UsePadding = false;
             this.xrLabel45.StylePriority.UseTextAlignment = false;
             this.xrLabel45.Text = "CHECK #";
-            this.xrLabel45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel46
             // 
@@ -1197,7 +1202,7 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel46.StylePriority.UsePadding = false;
             this.xrLabel46.StylePriority.UseTextAlignment = false;
             this.xrLabel46.Text = "OWNER";
-            this.xrLabel46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel29
             // 
@@ -1719,7 +1724,7 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel53.StylePriority.UsePadding = false;
             this.xrLabel53.StylePriority.UseTextAlignment = false;
             this.xrLabel53.Text = "CHECK #";
-            this.xrLabel53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel54
             // 
@@ -1743,7 +1748,7 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel54.StylePriority.UsePadding = false;
             this.xrLabel54.StylePriority.UseTextAlignment = false;
             this.xrLabel54.Text = "OWNER";
-            this.xrLabel54.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel54.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel55
             // 

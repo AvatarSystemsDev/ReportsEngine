@@ -430,7 +430,7 @@
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenter", typeof(string));
             queryParameter7.Name = "@pstrEndingCostCenter";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pdteEndingPostDate", typeof(string));
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
             queryParameter8.Name = "@pstrBeginningPropertyNumber";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
