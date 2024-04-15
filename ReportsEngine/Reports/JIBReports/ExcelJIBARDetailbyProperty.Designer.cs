@@ -743,7 +743,7 @@
             this.xrLabel24.SizeF = new System.Drawing.SizeF(76.95825F, 35F);
             this.xrLabel24.StylePriority.UseFont = false;
             this.xrLabel24.StylePriority.UsePadding = false;
-            this.xrLabel24.Text = "Property Type";
+            this.xrLabel24.Text = "Property/Well Type";
             this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // pstrDatabaseName

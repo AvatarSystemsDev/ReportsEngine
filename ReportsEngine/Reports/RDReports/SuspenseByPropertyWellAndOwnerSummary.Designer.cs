@@ -899,7 +899,7 @@
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(770.0003F, 30F);
             this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.Text = "Revenue Suspense Summary by Property and Owner";
+            this.xrLabel1.Text = "Revenue Suspense Summary by Property/Well and Owner";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel2
@@ -1635,7 +1635,7 @@
             this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel23.SizeF = new System.Drawing.SizeF(770.0003F, 30F);
             this.xrLabel23.StylePriority.UseFont = false;
-            this.xrLabel23.Text = "Revenue Suspense Summary by Property and Owner";
+            this.xrLabel23.Text = "Revenue Suspense Summary by Property/Well and Owner";
             this.xrLabel23.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel24

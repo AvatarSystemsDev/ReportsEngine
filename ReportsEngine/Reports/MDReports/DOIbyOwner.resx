@@ -127,7 +127,7 @@
     <value>Iif([InterestTypeDescription] = 'Working Interest','WI',Iif([InterestTypeDescription] = 'Royalty','RI' , Iif([InterestTypeDescription] = 'Overriding Royalty','OR' ,Iif([InterestTypeDescription] = 'Federal Royalty','FR' ,Iif([InterestTypeDescription] = 'State Royalty','SR' ,Iif([InterestTypeDescription] = 'Other','OT' ,'' ))))))</value>
   </data>
   <data name="xrDeckCodesSelected.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))</value>
+    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties/Wells', 'First Property/Well to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property/Well', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))</value>
   </data>
   <data name="xrLabel16.ExpressionBindings" xml:space="preserve">
     <value>IIF(?plngInterestTypesToShow &lt;= 0, 'All Interest Types', Iif(?plngInterestTypesToShow = 1,'Working' , Iif(?plngInterestTypesToShow = 2,'Royalty' , Iif(?plngInterestTypesToShow = 3,'ORRI' ,Iif(?plngInterestTypesToShow = 4,'Royalty and ORRI' ,'Working and ORRI' ) ))))
@@ -138,7 +138,7 @@
 </value>
   </data>
   <data name="xrPropertySelected.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))</value>
+    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties/Wells', 'First Property/Well to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property/Well', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))</value>
   </data>
   <data name="xrLabel21.ExpressionBindings" xml:space="preserve">
     <value>IIF(sumSum(IIF([InterestTypeDescription] = 'Royalty' Or [InterestTypeDescription] = 'Production Payment',[CostDecimal], '')) = '', 0, sumSum(IIF([InterestTypeDescription] = 'Royalty' Or [InterestTypeDescription] = 'Production Payment',[CostDecimal], '')))</value>

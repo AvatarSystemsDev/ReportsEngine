@@ -1006,7 +1006,7 @@
             this.Textbox4.StylePriority.UseFont = false;
             this.Textbox4.StylePriority.UsePadding = false;
             this.Textbox4.StylePriority.UseTextAlignment = false;
-            this.Textbox4.Text = "Property Number";
+            this.Textbox4.Text = "Property/Well Number";
             this.Textbox4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox14

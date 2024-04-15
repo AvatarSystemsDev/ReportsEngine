@@ -876,7 +876,7 @@
             this.xrLabel40.StylePriority.UseForeColor = false;
             this.xrLabel40.StylePriority.UsePadding = false;
             this.xrLabel40.StylePriority.UseTextAlignment = false;
-            this.xrLabel40.Text = "Property State";
+            this.xrLabel40.Text = "State";
             this.xrLabel40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel39
@@ -903,7 +903,7 @@
             this.xrLabel39.StylePriority.UseForeColor = false;
             this.xrLabel39.StylePriority.UsePadding = false;
             this.xrLabel39.StylePriority.UseTextAlignment = false;
-            this.xrLabel39.Text = "Property County";
+            this.xrLabel39.Text = "County";
             this.xrLabel39.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel36
@@ -930,7 +930,7 @@
             this.xrLabel36.StylePriority.UseForeColor = false;
             this.xrLabel36.StylePriority.UsePadding = false;
             this.xrLabel36.StylePriority.UseTextAlignment = false;
-            this.xrLabel36.Text = "Property Name";
+            this.xrLabel36.Text = "Property/Well Name";
             this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel34

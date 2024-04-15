@@ -807,12 +807,12 @@
             // 
             // pstrBeginningProperty
             // 
-            this.pstrBeginningProperty.Description = "Beginnning Property";
+            this.pstrBeginningProperty.Description = "Beginnning Property/Well";
             this.pstrBeginningProperty.Name = "pstrBeginningProperty";
             // 
             // pstrEndingProperty
             // 
-            this.pstrEndingProperty.Description = "Ending Property";
+            this.pstrEndingProperty.Description = "Ending Property/Well";
             this.pstrEndingProperty.Name = "pstrEndingProperty";
             // 
             // plngReportGroupAFEID

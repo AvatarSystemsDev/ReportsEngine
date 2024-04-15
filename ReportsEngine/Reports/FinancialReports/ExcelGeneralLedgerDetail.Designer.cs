@@ -1296,7 +1296,7 @@
             this.xrLabel15.BorderWidth = 0.1F;
             this.xrLabel15.CanGrow = false;
             this.xrLabel15.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Property Number\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Property/Well Number\'")});
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel15.KeepTogether = true;
             this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(1037.96F, 6.357829E-05F);

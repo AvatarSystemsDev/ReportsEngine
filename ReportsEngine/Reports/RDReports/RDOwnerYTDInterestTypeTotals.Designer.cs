@@ -194,12 +194,12 @@
             // 
             // pstrBeginningPropertyNumber
             // 
-            this.pstrBeginningPropertyNumber.Description = "pstr Beginning Property Number";
+            this.pstrBeginningPropertyNumber.Description = "pstr Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             // 
             // pstrEndingPropertyNumber
             // 
-            this.pstrEndingPropertyNumber.Description = "pstr Ending Property Number";
+            this.pstrEndingPropertyNumber.Description = "pstr Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             // 
             // pstrState

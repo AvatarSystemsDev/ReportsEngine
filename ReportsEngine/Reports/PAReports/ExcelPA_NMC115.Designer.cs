@@ -768,7 +768,7 @@
             this.xrLabel35.StylePriority.UseForeColor = false;
             this.xrLabel35.StylePriority.UsePadding = false;
             this.xrLabel35.StylePriority.UseTextAlignment = false;
-            this.xrLabel35.Text = "Property Number/Name";
+            this.xrLabel35.Text = "Property/Well Number/Name";
             this.xrLabel35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel1

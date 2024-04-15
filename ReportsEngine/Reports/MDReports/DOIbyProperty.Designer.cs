@@ -2340,8 +2340,8 @@
             this.pbooSortByProperty.Name = "pbooSortByProperty";
             this.pbooSortByProperty.Type = typeof(bool);
             this.pbooSortByProperty.ValueInfo = "True";
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Property Number"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Property Name"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Property/Well Number"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Property/Well Name"));
             this.pbooSortByProperty.ValueSourceSettings = staticListLookUpSettings2;
             // 
             // plngShowIsCrossReference

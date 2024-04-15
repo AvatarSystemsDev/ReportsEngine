@@ -1132,9 +1132,9 @@
             this.plngPrintOrder.Name = "plngPrintOrder";
             this.plngPrintOrder.Type = typeof(int);
             this.plngPrintOrder.ValueInfo = "0";
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Property #"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Property/Well #"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Entry Order"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Purchaser Property #"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Purchaser Property/Well #"));
             this.plngPrintOrder.ValueSourceSettings = staticListLookUpSettings1;
             // 
             // pbooExceptionsOnly

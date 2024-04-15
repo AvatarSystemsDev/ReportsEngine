@@ -1064,9 +1064,8 @@
             this.xrLabel26.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel26.BorderWidth = 1F;
             this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 0, \'AP Paid Payables Detail With Property\',?plngReportType " +
-                    "= 1, \'A/P Outstanding Payables Detail With Property\',\'A/P Payables Detail With P" +
-                    "roperty\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 0, \'AP Paid Payables Detail With Property/Well\',?plngReportType " +
+                    "= 1, \'A/P Outstanding Payables Detail With Property/Well\',\'A/P Payables Detail With Property/Well\')")});
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel26.KeepTogether = true;
             this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30F);

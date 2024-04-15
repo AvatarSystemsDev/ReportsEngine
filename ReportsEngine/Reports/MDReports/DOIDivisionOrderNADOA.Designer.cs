@@ -883,7 +883,7 @@
             // 
             // plngPhaseWellID
             // 
-            this.plngPhaseWellID.Description = "Property DOI";
+            this.plngPhaseWellID.Description = "Property/Well";
             this.plngPhaseWellID.Name = "plngPhaseWellID";
             this.plngPhaseWellID.Type = typeof(int);
             this.plngPhaseWellID.ValueInfo = "0";

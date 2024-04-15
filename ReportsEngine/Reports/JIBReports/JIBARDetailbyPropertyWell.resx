@@ -132,7 +132,7 @@
 </value>
   </data>
   <data name="xrLabel16.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
+    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties/Wells', 'First Property/Well to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property/Well', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
 
 </value>
   </data>

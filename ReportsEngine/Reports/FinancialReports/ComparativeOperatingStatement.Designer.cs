@@ -1045,8 +1045,7 @@
             this.pdteBeginningDate11.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pdteBeginningDate11.BorderWidth = 1F;
             this.pdteBeginningDate11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pbooPropertyLevel = True, \'Report at Phase/Well Level\', \'Report at Property " +
-                    "Level\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pbooPropertyLevel = True, \'Report at Property Level\', \'Report at Property/Well Level\')")});
             this.pdteBeginningDate11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.pdteBeginningDate11.KeepTogether = true;
             this.pdteBeginningDate11.LocationFloat = new DevExpress.Utils.PointFloat(874.2343F, 7.629395E-06F);
@@ -1220,7 +1219,7 @@
             // 
             // pbooPropertyLevel
             // 
-            this.pbooPropertyLevel.Description = "Property Level";
+            this.pbooPropertyLevel.Description = "Property/Well Level";
             this.pbooPropertyLevel.Name = "pbooPropertyLevel";
             this.pbooPropertyLevel.Type = typeof(bool);
             this.pbooPropertyLevel.ValueInfo = "True";

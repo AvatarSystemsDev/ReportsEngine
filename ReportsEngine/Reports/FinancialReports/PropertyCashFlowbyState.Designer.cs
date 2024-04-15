@@ -1763,7 +1763,7 @@
             // 
             // pbooPropertyLevel
             // 
-            this.pbooPropertyLevel.Description = "Property Level";
+            this.pbooPropertyLevel.Description = "Property/Well Level";
             this.pbooPropertyLevel.Name = "pbooPropertyLevel";
             this.pbooPropertyLevel.Type = typeof(bool);
             this.pbooPropertyLevel.ValueInfo = "True";
@@ -3178,7 +3178,7 @@
             // 
             // pstrSelectProperty
             // 
-            this.pstrSelectProperty.Description = "Select Property List";
+            this.pstrSelectProperty.Description = "Select Property/Well List";
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;

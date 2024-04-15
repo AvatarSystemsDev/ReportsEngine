@@ -1572,7 +1572,7 @@
             // 
             // pbooPropertyLevel
             // 
-            this.pbooPropertyLevel.Description = "Property Level";
+            this.pbooPropertyLevel.Description = "Property/Well Level";
             this.pbooPropertyLevel.Name = "pbooPropertyLevel";
             this.pbooPropertyLevel.Type = typeof(bool);
             this.pbooPropertyLevel.ValueInfo = "True";

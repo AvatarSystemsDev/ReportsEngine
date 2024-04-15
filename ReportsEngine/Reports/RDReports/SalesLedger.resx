@@ -133,7 +133,7 @@
     <value>iif(?pdteBeginningCheckDate &lt;= #1900-01-01# &amp;&amp; ?pdteEndingCheckDate &gt;= Today(), 'All Dates',FormatString('{0:MM/dd/yyyy}', ?pdteBeginningCheckDate) + ' to ' + Iif(?pdteEndingCheckDate = Today(),FormatString('{0:MM/dd/yyyy}', ?pdteEndingCheckDate) ,FormatString('{0:MM/dd/yyyy}', ?pdteEndingCheckDate)))</value>
   </data>
   <data name="xrPropertiesSelected.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
+    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties/Wells', 'First Property/Well to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property/Well', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
 
 </value>
   </data>

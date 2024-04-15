@@ -1228,7 +1228,7 @@
             // 
             // pbooIsUnitLevelEntry
             // 
-            this.pbooIsUnitLevelEntry.Description = "Property Level";
+            this.pbooIsUnitLevelEntry.Description = "Property/Well Level";
             this.pbooIsUnitLevelEntry.Enabled = false;
             this.pbooIsUnitLevelEntry.Name = "pbooIsUnitLevelEntry";
             this.pbooIsUnitLevelEntry.Type = typeof(bool);

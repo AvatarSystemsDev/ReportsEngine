@@ -127,7 +127,7 @@
     <value>?plngReportType = 1 And [IsPosted] = 0 Or ?plngReportType = 2 And [IsDistributed] = 0 And [IsPosted] = 0 Or ?plngReportType = 3 And [IsDistributed] = 0 And [IsPosted] = 1 Or [IsPosted] = 1 And ?plngReportType = 4 And [IsDistributed] = 1 Or ?plngReportType = 5</value>
   </data>
   <data name="xrPropertiesSelected.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
+    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'Selected Properties/Wells', 'First Property/Well to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property/Well', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
 
 </value>
   </data>

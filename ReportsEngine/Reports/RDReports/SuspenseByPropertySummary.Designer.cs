@@ -773,7 +773,7 @@
             this.Textbox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox1.SizeF = new System.Drawing.SizeF(769.9999F, 30F);
             this.Textbox1.StylePriority.UseFont = false;
-            this.Textbox1.Text = "Revenue Suspense Summary by Property";
+            this.Textbox1.Text = "Revenue Suspense Summary by Property/Well";
             this.Textbox1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox7
@@ -1089,7 +1089,7 @@
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel1.SizeF = new System.Drawing.SizeF(770.0003F, 30F);
             this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.Text = "Revenue Suspense Summary by Property";
+            this.xrLabel1.Text = "Revenue Suspense Summary by Property/Well";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel2

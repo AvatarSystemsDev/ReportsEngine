@@ -156,7 +156,7 @@ Iif(?plngSortBy = 4, GetYear([PostDate]) + Iif(GetMonth([PostDate]) &lt; 10,'0' 
 + ' Total'</value>
   </data>
   <data name="xrPropertiesSelected.ExpressionBindings" xml:space="preserve">
-    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'All Properties', 'First Property to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
+    <value>iif(?pstrBeginningPropertyNumber = '!', iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', 'All Properties/Wells', 'First Property/Well to ' + ?pstrEndingPropertyNumber), iif(?pstrEndingPropertyNumber = 'ZZZZZZZZZZ-ZZZZZZZZZZ', ?pstrBeginningPropertyNumber + ' to Last Property/Well', ?pstrBeginningPropertyNumber + ' to ' + ?pstrEndingPropertyNumber))
 
 </value>
   </data>

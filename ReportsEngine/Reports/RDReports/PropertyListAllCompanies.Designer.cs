@@ -1157,7 +1157,7 @@
             this.ReportTitle.SizeF = new System.Drawing.SizeF(769.4096F, 30F);
             this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.StylePriority.UsePadding = false;
-            this.ReportTitle.Text = "Property Listing";
+            this.ReportTitle.Text = "Property/Well Listing";
             this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // Textbox14
@@ -1480,7 +1480,7 @@
             this.xrLabel31.SizeF = new System.Drawing.SizeF(1019.41F, 30F);
             this.xrLabel31.StylePriority.UseFont = false;
             this.xrLabel31.StylePriority.UsePadding = false;
-            this.xrLabel31.Text = "Property Listing";
+            this.xrLabel31.Text = "Property/Well Listing";
             this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel36
@@ -1844,7 +1844,7 @@
             this.plngSortOrder.Type = typeof(int);
             this.plngSortOrder.ValueInfo = "0";
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Property/Well Number Order"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Property/Well Description, Property Number Order"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Property/Well Description, Property/Well Number Order"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "State, Property/Well Number Order"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "State, Property/Well Description Order"));
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(4, "Operator Number, Property/Well Number Order"));
@@ -2353,7 +2353,7 @@
             this.xrLabel15.SizeF = new System.Drawing.SizeF(769.4096F, 30F);
             this.xrLabel15.StylePriority.UseFont = false;
             this.xrLabel15.StylePriority.UsePadding = false;
-            this.xrLabel15.Text = "Property Listing";
+            this.xrLabel15.Text = "Property/Well Listing";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel16
@@ -2719,7 +2719,7 @@
             this.xrLabel20.SizeF = new System.Drawing.SizeF(1019.41F, 30F);
             this.xrLabel20.StylePriority.UseFont = false;
             this.xrLabel20.StylePriority.UsePadding = false;
-            this.xrLabel20.Text = "Property Listing";
+            this.xrLabel20.Text = "Property/Well Listing";
             this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrPanel2
