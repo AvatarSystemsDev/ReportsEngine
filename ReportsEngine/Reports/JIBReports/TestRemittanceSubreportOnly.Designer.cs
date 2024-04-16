@@ -36,21 +36,26 @@
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.pbooTestOverflow = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrCompanyAddressBlockLong = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngOverflowOptionCode = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooRunningAtEnd = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillPrintCompanyNameOnStub = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillCenterCompanyNameOnStub = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.plngPrintRemittance = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooPrintDetailOnChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
             // 
-            this.topMarginBand1.HeightF = 20F;
+            this.topMarginBand1.HeightF = 0F;
             this.topMarginBand1.Name = "topMarginBand1";
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 20F;
+            this.bottomMarginBand1.HeightF = 0F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // detailBand1
@@ -81,16 +86,12 @@
             this.plngUserID.ValueInfo = "0";
             this.plngUserID.Visible = false;
             // 
-            // Dynamic
+            // pbooTestOverflow
             // 
-            this.Dynamic.ConnectionName = "Providence_Connection 1";
-            this.Dynamic.Name = "Dynamic";
-            customSqlQuery1.Name = "TestRemttanceAtEnd";
-            customSqlQuery1.Sql = "select 1 AS Row";
-            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            customSqlQuery1});
-            this.Dynamic.ResultSchemaSerializable = "PERhdGFTZXQgTmFtZT0iRHluYW1pYyI+PFZpZXcgTmFtZT0iVGVzdFJlbXR0YW5jZUF0RW5kIj48Rmllb" +
-    "GQgTmFtZT0iUm93IiBUeXBlPSJJbnQzMiIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==";
+            this.pbooTestOverflow.Description = "test overflow";
+            this.pbooTestOverflow.Name = "pbooTestOverflow";
+            this.pbooTestOverflow.Type = typeof(bool);
+            this.pbooTestOverflow.ValueInfo = "False";
             // 
             // pstrCompanyAddressBlockLong
             // 
@@ -114,6 +115,49 @@
             this.pbooRunningAtEnd.ValueInfo = "False";
             this.pbooRunningAtEnd.Visible = false;
             // 
+            // pbooWillPrintCompanyNameOnStub
+            // 
+            this.pbooWillPrintCompanyNameOnStub.Description = "Will Print Company Name On Stub";
+            this.pbooWillPrintCompanyNameOnStub.Name = "pbooWillPrintCompanyNameOnStub";
+            this.pbooWillPrintCompanyNameOnStub.Type = typeof(bool);
+            this.pbooWillPrintCompanyNameOnStub.ValueInfo = "False";
+            this.pbooWillPrintCompanyNameOnStub.Visible = false;
+            // 
+            // pbooWillCenterCompanyNameOnStub
+            // 
+            this.pbooWillCenterCompanyNameOnStub.Description = "Will Center Company Name On Stub";
+            this.pbooWillCenterCompanyNameOnStub.Name = "pbooWillCenterCompanyNameOnStub";
+            this.pbooWillCenterCompanyNameOnStub.Type = typeof(bool);
+            this.pbooWillCenterCompanyNameOnStub.ValueInfo = "False";
+            this.pbooWillCenterCompanyNameOnStub.Visible = false;
+            // 
+            // Dynamic
+            // 
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
+            this.Dynamic.Name = "Dynamic";
+            customSqlQuery1.Name = "TestRemttanceAtEnd";
+            customSqlQuery1.Sql = "select 1 AS Row";
+            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            customSqlQuery1});
+            this.Dynamic.ResultSchemaSerializable = "PERhdGFTZXQgTmFtZT0iRHluYW1pYyI+PFZpZXcgTmFtZT0iVGVzdFJlbXR0YW5jZUF0RW5kIj48Rmllb" +
+    "GQgTmFtZT0iUm93IiBUeXBlPSJJbnQzMiIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==";
+            // 
+            // plngPrintRemittance
+            // 
+            this.plngPrintRemittance.Description = "Print Remittance";
+            this.plngPrintRemittance.Name = "plngPrintRemittance";
+            this.plngPrintRemittance.Type = typeof(int);
+            this.plngPrintRemittance.ValueInfo = "0";
+            this.plngPrintRemittance.Visible = false;
+            // 
+            // pbooPrintDetailOnChecks
+            // 
+            this.pbooPrintDetailOnChecks.Description = "Print Detail On Checks";
+            this.pbooPrintDetailOnChecks.Name = "pbooPrintDetailOnChecks";
+            this.pbooPrintDetailOnChecks.Type = typeof(bool);
+            this.pbooPrintDetailOnChecks.ValueInfo = "False";
+            this.pbooPrintDetailOnChecks.Visible = false;
+            // 
             // xrSubreport2
             // 
             this.xrSubreport2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -124,6 +168,13 @@
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
             this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooTestOverflow", this.pbooTestOverflow));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", this.pstrCompanyAddressBlockLong));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCode", this.plngOverflowOptionCode));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooRunningAtEnd", this.pbooRunningAtEnd));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooWillPrintCompanyNameOnStub", this.pbooWillPrintCompanyNameOnStub));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooWillCenterCompanyNameOnStub", this.pbooWillCenterCompanyNameOnStub));
+            this.xrSubreport2.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooPrintDetailOnChecks", this.pbooPrintDetailOnChecks));
             this.xrSubreport2.ReportSource = new ReportsEngine.Reports.JIBReports.TestRemittance();
             this.xrSubreport2.SizeF = new System.Drawing.SizeF(810F, 2F);
             // 
@@ -139,7 +190,7 @@
             this.DataSource = this.Dynamic;
             this.DisplayName = "RDCheckRemittanceSubreport";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 20F, 20F);
+            this.Margins = new DevExpress.Drawing.DXMargins(20F, 20F, 0F, 0F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -153,7 +204,12 @@
             this.plngUserID,
             this.pstrCompanyAddressBlockLong,
             this.plngOverflowOptionCode,
-            this.pbooRunningAtEnd});
+            this.pbooRunningAtEnd,
+            this.plngPrintRemittance,
+            this.pbooTestOverflow,
+            this.pbooWillPrintCompanyNameOnStub,
+            this.pbooWillCenterCompanyNameOnStub,
+            this.pbooPrintDetailOnChecks});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -172,5 +228,10 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrCompanyAddressBlockLong;
         private DevExpress.XtraReports.Parameters.Parameter plngOverflowOptionCode;
         private DevExpress.XtraReports.Parameters.Parameter pbooRunningAtEnd;
+        private DevExpress.XtraReports.Parameters.Parameter plngPrintRemittance;
+        private DevExpress.XtraReports.Parameters.Parameter pbooTestOverflow;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintCompanyNameOnStub;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillCenterCompanyNameOnStub;
+        private DevExpress.XtraReports.Parameters.Parameter pbooPrintDetailOnChecks;
     }
 }

@@ -1113,7 +1113,7 @@
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrHeaderBand});
             this.ReportHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "(?pbooRunningAtEnd And ([CountedLineItems]) > 29) Or (Not ?pbooRunningAtEnd And (" +
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "(?pbooRunningAtEnd And ([CountedLineItems]) > 32) Or (Not ?pbooRunningAtEnd And (" +
                     "[CountedLineItems]) <= 32) Or NOT ?plngOverflowOptionCode In (3)\n")});
             this.ReportHeader.HeightF = 2.000002F;
             this.ReportHeader.Name = "ReportHeader";

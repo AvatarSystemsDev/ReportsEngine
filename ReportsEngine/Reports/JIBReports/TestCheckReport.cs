@@ -22,8 +22,8 @@ namespace ReportsEngine.Reports.JIBReports
             xrCheckNumberTwo.Font = new DXFont("IDAutomationMICRB10", 12F, DXFontStyle.Regular, DXGraphicsUnit.Point);
             xrPages.PrintOnPage += XrPages_PrintOnPage;
             CheckBegin.PrintOnPage += CheckBegin_PrintOnPage;
-            xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
-            xrNonNegotiablePictureTwo.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
+            //xrNonNegotiablePicture.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
+            //xrNonNegotiablePictureTwo.PrintOnPage += XrNonNegotiablePicture_PrintOnPage;
             xrMICRAccountNumber.PrintOnPage += XrMICRAccountNumber_PrintOnPage;
             xrTransitBottomCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             xrCheckNumber.PrintOnPage += XrCheckNumber_PrintOnPage;
@@ -257,7 +257,5 @@ namespace ReportsEngine.Reports.JIBReports
             XRPictureBox picture = sender as XRPictureBox;
             picture.Visible = pageCounter > 1; // This will make the nonnegotiable image visible if it is at the top of the form. I guess that is the same as void or something. That's the way that was explained to me, I have nothing else.
         }
-
-
     }
 }

@@ -1330,11 +1330,11 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CheckNumber]")});
             this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel23.KeepTogether = true;
-            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(98.26336F, 22.55507F);
+            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(99.65337F, 22.55503F);
             this.xrLabel23.Multiline = true;
             this.xrLabel23.Name = "xrLabel23";
             this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel23.SizeF = new System.Drawing.SizeF(81.59835F, 17.00001F);
+            this.xrLabel23.SizeF = new System.Drawing.SizeF(80.20834F, 17.00001F);
             this.xrLabel23.StylePriority.UseBorderColor = false;
             this.xrLabel23.StylePriority.UseBorderDashStyle = false;
             this.xrLabel23.StylePriority.UseBorders = false;
@@ -1355,7 +1355,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OwnerNumber]")});
             this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel24.KeepTogether = true;
-            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(0F, 22.55507F);
+            this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 22.55507F);
             this.xrLabel24.Multiline = true;
             this.xrLabel24.Name = "xrLabel24";
             this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);

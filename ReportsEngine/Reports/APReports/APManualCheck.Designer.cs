@@ -37,6 +37,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APManualCheck));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine1 = new DevExpress.XtraPrinting.Shape.ShapeLine();
@@ -115,10 +117,18 @@
             queryParameter5.Name = "@plngDatabaseID";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngDatabaseID", typeof(int));
+            queryParameter6.Name = "@plngCompanyCheckPrintingFormatID";
+            queryParameter6.Type = typeof(int);
+            queryParameter6.ValueInfo = "0";
+            queryParameter7.Name = "@plngCheckPrintingFormatID";
+            queryParameter7.Type = typeof(int);
+            queryParameter7.ValueInfo = "0";
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter3,
             queryParameter4,
-            queryParameter5});
+            queryParameter5,
+            queryParameter6,
+            queryParameter7});
             storedProcQuery3.StoredProcName = "CheckFormattingOptions_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,

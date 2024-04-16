@@ -511,7 +511,7 @@
             this.xrLabel21.BorderWidth = 1F;
             this.xrLabel21.CanGrow = false;
             this.xrLabel21.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OwnerNet]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([RecordType] = 0, [OwnerNet],0)")});
             this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel21.ForeColor = System.Drawing.Color.Black;
             this.xrLabel21.KeepTogether = true;
@@ -1441,7 +1441,7 @@
             this.xrLabel50.BorderWidth = 1F;
             this.xrLabel50.CanGrow = false;
             this.xrLabel50.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([OwnerNet])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum(iif([RecordType] = 0, [OwnerNet],0))")});
             this.xrLabel50.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel50.ForeColor = System.Drawing.Color.Black;
             this.xrLabel50.KeepTogether = true;
@@ -1846,7 +1846,7 @@
             this.xrLabel39.BorderWidth = 1.39F;
             this.xrLabel39.CanGrow = false;
             this.xrLabel39.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([OwnerNet])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum(iif([RecordType] = 0, [OwnerNet],0))")});
             this.xrLabel39.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel39.ForeColor = System.Drawing.Color.Black;
             this.xrLabel39.KeepTogether = true;

@@ -1065,7 +1065,7 @@
             this.xrLabel33.CanGrow = false;
             this.xrLabel33.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "SUMSUM([The88Amount])")});
-            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel33.KeepTogether = true;
             this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(823.8757F, 0F);
             this.xrLabel33.Name = "xrLabel33";
@@ -1092,7 +1092,7 @@
             this.xrLabel34.CanGrow = false;
             this.xrLabel34.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InvoiceNetAmount]")});
-            this.xrLabel34.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel34.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel34.KeepTogether = true;
             this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(921.4438F, 0F);
             this.xrLabel34.Name = "xrLabel34";

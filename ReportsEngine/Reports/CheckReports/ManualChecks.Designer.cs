@@ -36,6 +36,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ManualChecks));
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine1 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine2 = new DevExpress.XtraPrinting.Shape.ShapeLine();
@@ -210,14 +211,18 @@
             queryParameter4.Name = "@plngDatabaseID";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngDatabaseID", typeof(int));
-            queryParameter5.Name = "@plngCheckPrintingFormatID";
+            queryParameter5.Name = "@plngCompanyCheckPrintingFormatID";
             queryParameter5.Type = typeof(int);
             queryParameter5.ValueInfo = "0";
+            queryParameter6.Name = "@plngCheckPrintingFormatID";
+            queryParameter6.Type = typeof(int);
+            queryParameter6.ValueInfo = "0";
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter2,
             queryParameter3,
             queryParameter4,
-            queryParameter5});
+            queryParameter5,
+            queryParameter6});
             storedProcQuery2.StoredProcName = "CheckFormattingOptions_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
