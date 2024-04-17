@@ -11,6 +11,7 @@ namespace ReportsEngine.Reports.RDReports
         public RDImportEditList()
         {
             InitializeComponent();
+            this.Landscape = this.Parameters["pbooShowDetail"].Value.ToString().ToLower() == "true";
         }
 
     }

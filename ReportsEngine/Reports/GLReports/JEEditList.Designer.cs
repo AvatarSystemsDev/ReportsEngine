@@ -1040,11 +1040,11 @@
             this.Textbox33.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60.00004F);
             this.Textbox33.Multiline = true;
             this.Textbox33.Name = "Textbox33";
-            this.Textbox33.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox33.SizeF = new System.Drawing.SizeF(49.30122F, 39.99998F);
+            this.Textbox33.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 2, 2, 100F);
+            this.Textbox33.SizeF = new System.Drawing.SizeF(55.55122F, 39.99998F);
             this.Textbox33.StylePriority.UsePadding = false;
             this.Textbox33.StylePriority.UseTextAlignment = false;
-            this.Textbox33.Text = "Edit Rq. \r\nSrc";
+            this.Textbox33.Text = "Edit Req. \r\nSrc";
             this.Textbox33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
             // Textbox35
@@ -1059,7 +1059,7 @@
             this.Textbox35.LocationFloat = new DevExpress.Utils.PointFloat(47.30104F, 60.00004F);
             this.Textbox35.Multiline = true;
             this.Textbox35.Name = "Textbox35";
-            this.Textbox35.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.Textbox35.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 2, 2, 2, 100F);
             this.Textbox35.SizeF = new System.Drawing.SizeF(84.64081F, 39.99998F);
             this.Textbox35.StylePriority.UsePadding = false;
             this.Textbox35.StylePriority.UseTextAlignment = false;
@@ -1510,7 +1510,8 @@
             this.BatchNumberName1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.BatchNumberName1.BorderWidth = 1F;
             this.BatchNumberName1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", resources.GetString("BatchNumberName1.ExpressionBindings"))});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Batch:" +
+                    " </b>\' +  [BatchNumberName]+\'</span>\'")});
             this.BatchNumberName1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.BatchNumberName1.KeepTogether = true;
             this.BatchNumberName1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);

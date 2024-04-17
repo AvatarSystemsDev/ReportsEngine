@@ -2251,7 +2251,8 @@
             this.BatchNumberName1.BorderWidth = 1F;
             this.BatchNumberName1.CanGrow = false;
             this.BatchNumberName1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", resources.GetString("BatchNumberName1.ExpressionBindings"))});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Batch:" +
+                    " </b>\' +  [BatchNumberName] + \'</span>\'")});
             this.BatchNumberName1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.BatchNumberName1.KeepTogether = true;
             this.BatchNumberName1.LocationFloat = new DevExpress.Utils.PointFloat(1.041667F, 0F);

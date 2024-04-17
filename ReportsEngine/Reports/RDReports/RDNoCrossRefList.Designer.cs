@@ -1502,7 +1502,6 @@
             this.pbooShowCriteria.Description = "Show Criteria";
             this.pbooShowCriteria.Name = "pbooShowCriteria";
             this.pbooShowCriteria.Type = typeof(bool);
-            this.pbooShowCriteria.ValueInfo = "1";
             this.pbooShowCriteria.Visible = false;
             // 
             // Subtitle

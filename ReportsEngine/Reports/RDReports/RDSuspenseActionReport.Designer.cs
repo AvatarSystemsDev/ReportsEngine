@@ -627,7 +627,7 @@
             this.xrLabel25.BorderWidth = 1F;
             this.xrLabel25.CanGrow = false;
             this.xrLabel25.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([RecordType] = 0, [Nothing], [OwnerNet])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([RecordType] = 0, \'\', [OwnerNet])")});
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel25.ForeColor = System.Drawing.Color.Black;
             this.xrLabel25.KeepTogether = true;
@@ -656,7 +656,7 @@
             this.xrLabel27.BorderWidth = 1F;
             this.xrLabel27.CanGrow = false;
             this.xrLabel27.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([RecordType] = 0, [Nothing], [PayCode])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([RecordType] = 0, \'\', [PayCode])")});
             this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel27.ForeColor = System.Drawing.Color.Black;
             this.xrLabel27.KeepTogether = true;
@@ -1943,6 +1943,7 @@
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_SuspenseAction";
             sourceNode2.Alias = null;
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"657\" />";
             source2.DataMember = "SuspenseAction";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_SuspenseAction";
@@ -1961,12 +1962,10 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "OwnerMCF"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InterestType"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PayCode"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SuspenseAction"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Number"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Productype"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BTUAdjustment"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "The88Gross"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "The88Net"),
@@ -1974,7 +1973,9 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BBL"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "UseMCFVolume"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProductionDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProductionDateMinimum")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProductionDateMinimum"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SuspenseAction"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProductType")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_RDProcessTracking";
             sourceNode3.Alias = null;

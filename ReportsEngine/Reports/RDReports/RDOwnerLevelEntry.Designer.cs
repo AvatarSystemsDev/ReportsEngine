@@ -3541,20 +3541,16 @@
             // pdteBeginningProductionDate
             // 
             this.pdteBeginningProductionDate.Description = "Beginning Production Date";
-            this.pdteBeginningProductionDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteBeginningProductionDate.Name = "pdteBeginningProductionDate";
             this.pdteBeginningProductionDate.Type = typeof(System.DateTime);
-            this.pdteBeginningProductionDate.ValueInfo = "2023-10-30";
+            this.pdteBeginningProductionDate.ValueInfo = "1900-01-01";
             // 
             // pdteEndingProductionDate
             // 
             this.pdteEndingProductionDate.Description = "Ending Production Date";
-            this.pdteEndingProductionDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingProductionDate.Name = "pdteEndingProductionDate";
             this.pdteEndingProductionDate.Type = typeof(System.DateTime);
-            this.pdteEndingProductionDate.ValueInfo = "2023-10-30";
+            this.pdteEndingProductionDate.ValueInfo = "9999-12-31";
             // 
             // pstrSelectPurchaserNumber
             // 

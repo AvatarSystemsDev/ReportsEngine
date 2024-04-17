@@ -609,7 +609,7 @@ namespace ReportsEngine
             this.xrLabel27.StylePriority.UsePadding = false;
             this.xrLabel27.StylePriority.UseTextAlignment = false;
             this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel27.TextFormatString = "{0:n2}";
+            this.xrLabel27.TextFormatString = "{0:N2}";
             // 
             // xrLabel28
             // 
@@ -637,7 +637,7 @@ namespace ReportsEngine
             this.xrLabel28.StylePriority.UsePadding = false;
             this.xrLabel28.StylePriority.UseTextAlignment = false;
             this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel28.TextFormatString = "{0:n2}";
+            this.xrLabel28.TextFormatString = "{0:N2}";
             // 
             // xrLabel29
             // 
@@ -665,7 +665,7 @@ namespace ReportsEngine
             this.xrLabel29.StylePriority.UsePadding = false;
             this.xrLabel29.StylePriority.UseTextAlignment = false;
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel29.TextFormatString = "{0:n2}";
+            this.xrLabel29.TextFormatString = "{0:N2}";
             // 
             // xrLabel30
             // 
@@ -693,7 +693,7 @@ namespace ReportsEngine
             this.xrLabel30.StylePriority.UsePadding = false;
             this.xrLabel30.StylePriority.UseTextAlignment = false;
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel30.TextFormatString = "{0:n2}";
+            this.xrLabel30.TextFormatString = "{0:N2}";
             // 
             // xrLabel33
             // 
@@ -776,7 +776,7 @@ namespace ReportsEngine
             this.xrLabel35.StylePriority.UsePadding = false;
             this.xrLabel35.StylePriority.UseTextAlignment = false;
             this.xrLabel35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel35.TextFormatString = "{0:n2}";
+            this.xrLabel35.TextFormatString = "{0:N2}";
             // 
             // xrLabel36
             // 
@@ -804,7 +804,7 @@ namespace ReportsEngine
             this.xrLabel36.StylePriority.UsePadding = false;
             this.xrLabel36.StylePriority.UseTextAlignment = false;
             this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel36.TextFormatString = "{0:n2}";
+            this.xrLabel36.TextFormatString = "{0:N2}";
             // 
             // xrLabel37
             // 
@@ -832,7 +832,7 @@ namespace ReportsEngine
             this.xrLabel37.StylePriority.UsePadding = false;
             this.xrLabel37.StylePriority.UseTextAlignment = false;
             this.xrLabel37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel37.TextFormatString = "{0:n2}";
+            this.xrLabel37.TextFormatString = "{0:N2}";
             // 
             // xrLabel38
             // 
@@ -860,7 +860,7 @@ namespace ReportsEngine
             this.xrLabel38.StylePriority.UsePadding = false;
             this.xrLabel38.StylePriority.UseTextAlignment = false;
             this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel38.TextFormatString = "{0:n2}";
+            this.xrLabel38.TextFormatString = "{0:N2}";
             // 
             // xrLabel39
             // 
@@ -886,7 +886,7 @@ namespace ReportsEngine
             this.xrLabel39.StylePriority.UsePadding = false;
             this.xrLabel39.StylePriority.UseTextAlignment = false;
             this.xrLabel39.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel39.TextFormatString = "{0:n2}";
+            this.xrLabel39.TextFormatString = "{0:N2}";
             // 
             // xrLabel40
             // 
@@ -912,7 +912,7 @@ namespace ReportsEngine
             this.xrLabel40.StylePriority.UsePadding = false;
             this.xrLabel40.StylePriority.UseTextAlignment = false;
             this.xrLabel40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel40.TextFormatString = "{0:n2}";
+            this.xrLabel40.TextFormatString = "{0:N2}";
             // 
             // xrLabel11
             // 
@@ -1621,7 +1621,7 @@ namespace ReportsEngine
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel21.Summary = xrSummary1;
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel21.TextFormatString = "{0:n2}";
+            this.xrLabel21.TextFormatString = "{0:N2}";
             // 
             // xrLabel22
             // 
@@ -1649,7 +1649,7 @@ namespace ReportsEngine
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel22.Summary = xrSummary2;
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel22.TextFormatString = "{0:n2}";
+            this.xrLabel22.TextFormatString = "{0:N2}";
             // 
             // xrLabel32
             // 
@@ -1709,7 +1709,7 @@ namespace ReportsEngine
             xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel58.Summary = xrSummary4;
             this.xrLabel58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel58.TextFormatString = "{0:n2}";
+            this.xrLabel58.TextFormatString = "{0:N2}";
             // 
             // xrLabel59
             // 
@@ -2007,7 +2007,7 @@ namespace ReportsEngine
             xrSummary7.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel51.Summary = xrSummary7;
             this.xrLabel51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel51.TextFormatString = "{0:n2}";
+            this.xrLabel51.TextFormatString = "{0:N2}";
             // 
             // xrLabel52
             // 
