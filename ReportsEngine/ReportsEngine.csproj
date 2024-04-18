@@ -3322,6 +3322,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\GLReports\CashReceiptsEditList.resx">
       <DependentUpon>CashReceiptsEditList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\GLReports\ExcelCashReceiptsEditList.resx">
       <DependentUpon>ExcelCashReceiptsEditList.cs</DependentUpon>

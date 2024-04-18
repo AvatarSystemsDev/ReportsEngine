@@ -21,6 +21,78 @@ namespace ReportsEngine.Reports.APReports
             //CheckFooterBand.BeforePrint += CheckFooterBand_BeforePrint;
             //GLProcessPostRegisterSubreport.BeforePrint += GLProcessPostRegisterSubreport_BeforePrint;
             xrEntitiesSelected.PrintOnPage += xrEntitiesSelected_PrintOnPage;
+            xrChecksSelected.PrintOnPage += XrChecksSelected_PrintOnPage;
+        }
+
+        private void XrChecksSelected_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        {
+            XRLabel label = sender as XRLabel;
+            Parameter p = this.Parameters["pstrSelectAPCheckID"];
+            Parameter start = this.Parameters["plngBeginningCheckSortNumber"];
+            Parameter end = this.Parameters["plngEndingCheckSortNumber"];
+
+            if (p.MultiValue == false || p.LookUpSettings == null)
+            {
+                return;
+            }
+            var dataContext = ((IServiceProvider)label.RootReport).GetService(typeof(DataContext)) as DataContext;
+            LookUpValueCollection col = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext);
+            if (col.Count == (p.Value as Array).Length)
+            {
+                if (start.Value.ToString() == "0" && end.Value.ToString() == "999999999")
+                {
+                    label.Text = "All Checks";
+                }
+                else
+                {
+                    if (start.Value.ToString() == "0")
+                    {
+                        label.Text = "First Check to ";
+                    }
+                    else
+                    {
+                        label.Text = start.Value.ToString() + " to ";
+                    }
+                    if (end.Value.ToString() == "999999999")
+                    {
+                        label.Text += "Last Check";
+                    }
+                    else
+                    {
+                        label.Text += end.Value.ToString();
+                    }
+                }
+            }
+            else if ((p.Value as Array).Length == 0)
+            {
+                label.Text = "No Values Selected";
+            }
+            else
+            {
+                if (start.Value.ToString() == "0" && end.Value.ToString() == "999999999")
+                {
+                    label.Text = "Selected Checks";
+                }
+                else
+                {
+                    if (start.Value.ToString() == "0")
+                    {
+                        label.Text = "First Check to ";
+                    }
+                    else
+                    {
+                        label.Text = start.Value.ToString() + " to ";
+                    }
+                    if (end.Value.ToString() == "999999999")
+                    {
+                        label.Text += "Last Check";
+                    }
+                    else
+                    {
+                        label.Text += end.Value.ToString();
+                    }
+                }
+            }
         }
 
         private void XrPageLabel_PrintOnPage(object sender, PrintOnPageEventArgs e)
@@ -36,7 +108,7 @@ namespace ReportsEngine.Reports.APReports
             var dataContext = ((IServiceProvider)this).GetService(typeof(DataContext)) as DataContext;
             var displayText = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext).Where(x => x.Value.ToString() == p.Value.ToString()).Select(x => x.RealDescription).FirstOrDefault();
             Parameter ShowDetail = this.Parameters["pbooGroupByCheck"];
-            displayText += ShowDetail.Value.ToString() == "True" ? " Detail" : " Summary";
+            displayText += ShowDetail.Value.ToString() == "True" ? " Detail" : "";//" Summary";
             ReportTitle.Text = displayText;
         }
 

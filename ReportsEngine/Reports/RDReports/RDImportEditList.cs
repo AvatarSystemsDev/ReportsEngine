@@ -11,8 +11,14 @@ namespace ReportsEngine.Reports.RDReports
         public RDImportEditList()
         {
             InitializeComponent();
-            this.Landscape = this.Parameters["pbooShowDetail"].Value.ToString().ToLower() == "true";
+            this.BeforePrint += RDImportEditList_BeforePrint;
+            
         }
 
+        private void RDImportEditList_BeforePrint(object sender, CancelEventArgs e)
+        {
+            this.Landscape = this.Parameters["pbooShowDetail"].Value.ToString().ToLower() == "true";
+            this.PaperKind = this.Parameters["pbooShowDetail"].Value.ToString().ToLower() == "true" ? DevExpress.Drawing.Printing.DXPaperKind.Tabloid : DevExpress.Drawing.Printing.DXPaperKind.Letter;
+        }
     }
 }

@@ -1039,8 +1039,8 @@
             this.xrLabel93.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel93.BorderWidth = 1F;
             this.xrLabel93.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For \' + Iif(?plngDateUsed= 1, \'GL\',?plngDateUsed= 0,\'Invoice\',?plngDateUsed= 2,\'" +
-                    "Check\',\'Service\' )+\' Dates:\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For \' + Iif(?plngDateUsed= 1, \'GL\', ?plngDateUsed= 0, \'Invoice\', ?plngDateUsed= " +
+                    "2, \'Check\', \'Service\' ) + \' Dates:\'")});
             this.xrLabel93.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel93.ForeColor = System.Drawing.Color.Black;
             this.xrLabel93.KeepTogether = true;
