@@ -955,7 +955,7 @@
             this.Textbox1.BorderWidth = 1F;
             this.Textbox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
-            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox1.KeepTogether = true;
             this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox1.Multiline = true;
@@ -1045,7 +1045,8 @@
             this.pdteBeginningDate11.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pdteBeginningDate11.BorderWidth = 1F;
             this.pdteBeginningDate11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pbooPropertyLevel = True, \'Report at Property Level\', \'Report at Property/Well Level\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pbooPropertyLevel = True, \'Report at Property Level\', \'Report at Property/We" +
+                    "ll Level\')")});
             this.pdteBeginningDate11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.pdteBeginningDate11.KeepTogether = true;
             this.pdteBeginningDate11.LocationFloat = new DevExpress.Utils.PointFloat(874.2343F, 7.629395E-06F);

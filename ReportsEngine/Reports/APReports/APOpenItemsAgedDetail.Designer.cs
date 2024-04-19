@@ -943,7 +943,7 @@
             this.xrLabel53.BorderWidth = 1F;
             this.xrLabel53.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
-            this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel53.KeepTogether = true;
             this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel53.Multiline = true;

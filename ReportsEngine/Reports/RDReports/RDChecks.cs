@@ -29,12 +29,12 @@ namespace ReportsEngine
             xrMICRAccountNumberTwo.PrintOnPage += XrMICRAccountNumber_PrintOnPage;
             xrTransitTopCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             xrCheckNumberTwo.PrintOnPage += XrCheckNumber_PrintOnPage;
-            xrPictureBoxLogo.PrintOnPage += XrPictureBoxLogo_PrintOnPage;
-            xrPictureBoxLogoTwo.PrintOnPage += XrPictureBoxLogo_PrintOnPage;
-            xrPictureBoxTopSignature.PrintOnPage += XrPictureBoxTopSignature_PrintOnPage;
-            xrPictureBoxBottomSignature.PrintOnPage += XrPictureBoxBottomSignature_PrintOnPage;
-            xrPictureBoxTopSignatureTwo.PrintOnPage += XrPictureBoxTopSignatureTwo_PrintOnPage;
-            xrPictureBoxBottomSignatureTwo.PrintOnPage += XrPictureBoxBottomSignatureTwo_PrintOnPage;
+            xrPictureBoxLogo.BeforePrint += XrPictureBoxLogo_BeforePrint;
+            xrPictureBoxLogoTwo.BeforePrint += XrPictureBoxLogo_BeforePrint;
+            xrPictureBoxTopSignature.BeforePrint += XrPictureBoxTopSignature_BeforePrint;
+            xrPictureBoxBottomSignature.BeforePrint += XrPictureBoxBottomSignature_BeforePrint;
+            xrPictureBoxTopSignatureTwo.BeforePrint += XrPictureBoxTopSignatureTwo_BeforePrint;
+            xrPictureBoxBottomSignatureTwo.BeforePrint += XrPictureBoxBottomSignatureTwo_BeforePrint;
             xrTransitBottomCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             xrTransitTopCheck.PrintOnPage += XrMICRTransitNumber_PrintOnPage;
             CheckStubBandBottomCheck.PrintOnPage += CheckStubBandBottomCheck_PrintOnPage;
@@ -152,7 +152,22 @@ namespace ReportsEngine
            pageCounter = 1;
         }
 
-        private void XrPictureBoxBottomSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void XrPictureBoxBottomSignature_BeforePrint(object sender, CancelEventArgs e)
+        {
+            XRPictureBox pictureBox = sender as XRPictureBox;
+            var column = GetCurrentColumnValue("SignaturePath");
+            string imagePathSecondSignature = column is null ? "" : column.ToString();
+            try
+            {
+                pictureBox.ImageSource = ImageSource.FromFile(imagePathSecondSignature); // Second Signature
+            }
+            catch
+            {
+                // Probably add some error handling here.
+            }
+        }
+
+        private void XrPictureBoxBottomSignatureTwo_BeforePrint(object sender, CancelEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
             string imagePathSecondSignature = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
@@ -166,21 +181,7 @@ namespace ReportsEngine
             }
         }
 
-        private void XrPictureBoxBottomSignatureTwo_PrintOnPage(object sender, PrintOnPageEventArgs e)
-        {
-            XRPictureBox pictureBox = sender as XRPictureBox;
-            string imagePathSecondSignature = GetCurrentColumnValue("SignaturePath") is null ? "" : GetCurrentColumnValue("SignaturePath").ToString();
-            try
-            {
-                pictureBox.ImageSource = ImageSource.FromFile(imagePathSecondSignature); // Second Signature
-            }
-            catch
-            {
-                // Probably add some error handling here.
-            }
-        }
-
-        private void XrPictureBoxTopSignature_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void XrPictureBoxTopSignature_BeforePrint(object sender, CancelEventArgs e)
         {
             string imagePath = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
             XRPictureBox pictureBox = sender as XRPictureBox;
@@ -194,7 +195,7 @@ namespace ReportsEngine
             }
         }
 
-        private void XrPictureBoxTopSignatureTwo_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void XrPictureBoxTopSignatureTwo_BeforePrint(object sender, CancelEventArgs e)
         {
             string imagePath = GetCurrentColumnValue("SecondSignaturePath") is null ? "" : GetCurrentColumnValue("SecondSignaturePath").ToString();
             XRPictureBox pictureBox = sender as XRPictureBox;
@@ -208,7 +209,7 @@ namespace ReportsEngine
             }
         }
 
-        private void XrPictureBoxLogo_PrintOnPage(object sender, PrintOnPageEventArgs e)
+        private void XrPictureBoxLogo_BeforePrint(object sender, CancelEventArgs e)
         {
             XRPictureBox pictureBox = sender as XRPictureBox;
             string imagePathLogo = GetCurrentColumnValue("LogoPath") is null ? "" : GetCurrentColumnValue("LogoPath").ToString();

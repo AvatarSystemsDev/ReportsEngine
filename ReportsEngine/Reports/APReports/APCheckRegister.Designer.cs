@@ -176,6 +176,8 @@
             this.Textbox67 = new DevExpress.XtraReports.UI.XRRichText();
             this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
+            this.xrChecksSelected = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel33 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel34 = new DevExpress.XtraReports.UI.XRLabel();
@@ -246,8 +248,6 @@
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngBeginningCheckSortNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngEndingCheckSortNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrChecksSelected = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox67)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
@@ -936,6 +936,59 @@
             this.xrPanel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrPanel2.Name = "xrPanel2";
             this.xrPanel2.SizeF = new System.Drawing.SizeF(770.0001F, 14.58333F);
+            // 
+            // xrChecksSelected
+            // 
+            this.xrChecksSelected.BackColor = System.Drawing.Color.Transparent;
+            this.xrChecksSelected.BorderColor = System.Drawing.Color.Black;
+            this.xrChecksSelected.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrChecksSelected.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrChecksSelected.BorderWidth = 1F;
+            this.xrChecksSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrChecksSelected.ForeColor = System.Drawing.Color.Black;
+            this.xrChecksSelected.KeepTogether = true;
+            this.xrChecksSelected.LocationFloat = new DevExpress.Utils.PointFloat(63.75001F, 0F);
+            this.xrChecksSelected.Multiline = true;
+            this.xrChecksSelected.Name = "xrChecksSelected";
+            this.xrChecksSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrChecksSelected.SizeF = new System.Drawing.SizeF(117.157F, 14.58334F);
+            this.xrChecksSelected.StylePriority.UseBackColor = false;
+            this.xrChecksSelected.StylePriority.UseBorderColor = false;
+            this.xrChecksSelected.StylePriority.UseBorderDashStyle = false;
+            this.xrChecksSelected.StylePriority.UseBorders = false;
+            this.xrChecksSelected.StylePriority.UseBorderWidth = false;
+            this.xrChecksSelected.StylePriority.UseFont = false;
+            this.xrChecksSelected.StylePriority.UseForeColor = false;
+            this.xrChecksSelected.StylePriority.UsePadding = false;
+            this.xrChecksSelected.StylePriority.UseTextAlignment = false;
+            this.xrChecksSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel2
+            // 
+            this.xrLabel2.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel2.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel2.BorderWidth = 1F;
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel2.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel2.KeepTogether = true;
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel2.Multiline = true;
+            this.xrLabel2.Name = "xrLabel2";
+            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(63.75F, 14.58332F);
+            this.xrLabel2.StylePriority.UseBackColor = false;
+            this.xrLabel2.StylePriority.UseBorderColor = false;
+            this.xrLabel2.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel2.StylePriority.UseBorders = false;
+            this.xrLabel2.StylePriority.UseBorderWidth = false;
+            this.xrLabel2.StylePriority.UseFont = false;
+            this.xrLabel2.StylePriority.UseForeColor = false;
+            this.xrLabel2.StylePriority.UsePadding = false;
+            this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "For Checks:";
+            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel33
             // 
@@ -2248,59 +2301,6 @@
             dynamicListLookUpSettings10.SortMember = null;
             dynamicListLookUpSettings10.ValueMember = "SortFieldCheckNumber";
             this.plngEndingCheckSortNumber.ValueSourceSettings = dynamicListLookUpSettings10;
-            // 
-            // xrLabel2
-            // 
-            this.xrLabel2.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel2.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel2.BorderWidth = 1F;
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel2.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel2.KeepTogether = true;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel2.Multiline = true;
-            this.xrLabel2.Name = "xrLabel2";
-            this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(63.75F, 14.58332F);
-            this.xrLabel2.StylePriority.UseBackColor = false;
-            this.xrLabel2.StylePriority.UseBorderColor = false;
-            this.xrLabel2.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel2.StylePriority.UseBorders = false;
-            this.xrLabel2.StylePriority.UseBorderWidth = false;
-            this.xrLabel2.StylePriority.UseFont = false;
-            this.xrLabel2.StylePriority.UseForeColor = false;
-            this.xrLabel2.StylePriority.UsePadding = false;
-            this.xrLabel2.StylePriority.UseTextAlignment = false;
-            this.xrLabel2.Text = "For Checks:";
-            this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrChecksSelected
-            // 
-            this.xrChecksSelected.BackColor = System.Drawing.Color.Transparent;
-            this.xrChecksSelected.BorderColor = System.Drawing.Color.Black;
-            this.xrChecksSelected.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrChecksSelected.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrChecksSelected.BorderWidth = 1F;
-            this.xrChecksSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrChecksSelected.ForeColor = System.Drawing.Color.Black;
-            this.xrChecksSelected.KeepTogether = true;
-            this.xrChecksSelected.LocationFloat = new DevExpress.Utils.PointFloat(63.75001F, 0F);
-            this.xrChecksSelected.Multiline = true;
-            this.xrChecksSelected.Name = "xrChecksSelected";
-            this.xrChecksSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrChecksSelected.SizeF = new System.Drawing.SizeF(117.157F, 14.58334F);
-            this.xrChecksSelected.StylePriority.UseBackColor = false;
-            this.xrChecksSelected.StylePriority.UseBorderColor = false;
-            this.xrChecksSelected.StylePriority.UseBorderDashStyle = false;
-            this.xrChecksSelected.StylePriority.UseBorders = false;
-            this.xrChecksSelected.StylePriority.UseBorderWidth = false;
-            this.xrChecksSelected.StylePriority.UseFont = false;
-            this.xrChecksSelected.StylePriority.UseForeColor = false;
-            this.xrChecksSelected.StylePriority.UsePadding = false;
-            this.xrChecksSelected.StylePriority.UseTextAlignment = false;
-            this.xrChecksSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // APCheckRegister
             // 

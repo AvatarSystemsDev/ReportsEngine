@@ -1455,7 +1455,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrCompanyHeader.BorderWidth = 0F;
             this.xrCompanyHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup.Description]")});
-            this.xrCompanyHeader.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrCompanyHeader.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrCompanyHeader.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 0F);
             this.xrCompanyHeader.Multiline = true;
             this.xrCompanyHeader.Name = "xrCompanyHeader";
@@ -2985,7 +2985,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.xrLabel63.BorderWidth = 0F;
             this.xrLabel63.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup.Description]")});
-            this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(1.390012F, 0F);
             this.xrLabel63.Multiline = true;
             this.xrLabel63.Name = "xrLabel63";

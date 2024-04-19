@@ -1678,7 +1678,7 @@
             this.Textbox10.BorderWidth = 1F;
             this.Textbox10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]")});
-            this.Textbox10.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox10.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox10.KeepTogether = true;
             this.Textbox10.LocationFloat = new DevExpress.Utils.PointFloat(0.5900065F, 0F);
             this.Textbox10.Multiline = true;

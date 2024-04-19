@@ -2585,7 +2585,7 @@
             this.xrLabel90.BorderWidth = 1F;
             this.xrLabel90.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_JIBHistoryCompanyLookUp].[Description]")});
-            this.xrLabel90.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel90.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel90.KeepTogether = true;
             this.xrLabel90.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel90.Multiline = true;
@@ -3282,7 +3282,7 @@
             this.xrLabel32.BorderWidth = 1F;
             this.xrLabel32.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_JIBHistoryCompanyLookUp].[Description]")});
-            this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel32.KeepTogether = true;
             this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel32.Multiline = true;

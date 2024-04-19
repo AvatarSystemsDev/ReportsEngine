@@ -614,7 +614,7 @@
             this.Textbox2.BorderWidth = 1F;
             this.Textbox2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_JIBHistoryCompanyLookUp].[Description]")});
-            this.Textbox2.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox2.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox2.KeepTogether = true;
             this.Textbox2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox2.Multiline = true;
@@ -1546,7 +1546,7 @@
             this.xrLabel59.BorderWidth = 1F;
             this.xrLabel59.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_JIBHistoryCompanyLookUp].[Description]")});
-            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel59.KeepTogether = true;
             this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel59.Multiline = true;
