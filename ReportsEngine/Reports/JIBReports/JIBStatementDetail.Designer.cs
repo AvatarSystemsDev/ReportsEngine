@@ -255,7 +255,7 @@
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel5.TextFormatString = "{0:N2}";
+            this.xrLabel5.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // Dynamic
             // 

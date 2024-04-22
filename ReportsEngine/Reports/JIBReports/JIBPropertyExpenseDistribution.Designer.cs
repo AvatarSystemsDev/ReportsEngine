@@ -530,7 +530,7 @@
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel4.TextFormatString = "{0:N2}";
+            this.xrLabel4.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // SubBand2
             // 
@@ -1300,7 +1300,7 @@
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel11.Summary = xrSummary1;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel11.TextFormatString = "{0:N2}";
+            this.xrLabel11.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // groupFooterBand2
             // 
@@ -1388,7 +1388,7 @@
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel16.Summary = xrSummary2;
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel16.TextFormatString = "{0:N2}";
+            this.xrLabel16.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // federationDataSource1
             // 
@@ -1562,7 +1562,7 @@
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel21.Summary = xrSummary3;
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel21.TextFormatString = "{0:N2}";
+            this.xrLabel21.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // JIBPropertyExpenseDistribution
             // 

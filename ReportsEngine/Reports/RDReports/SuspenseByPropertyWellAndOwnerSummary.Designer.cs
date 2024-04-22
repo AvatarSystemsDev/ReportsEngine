@@ -598,7 +598,7 @@
             this.xrLabel26.StylePriority.UsePadding = false;
             this.xrLabel26.StylePriority.UseTextAlignment = false;
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel26.TextFormatString = "{0:N2}";
+            this.xrLabel26.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel27
             // 
@@ -627,7 +627,7 @@
             this.xrLabel27.StylePriority.UsePadding = false;
             this.xrLabel27.StylePriority.UseTextAlignment = false;
             this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel27.TextFormatString = "{0:N2}";
+            this.xrLabel27.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel29
             // 
@@ -656,7 +656,7 @@
             this.xrLabel29.StylePriority.UsePadding = false;
             this.xrLabel29.StylePriority.UseTextAlignment = false;
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel29.TextFormatString = "{0:N2}";
+            this.xrLabel29.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel12
             // 
@@ -1246,7 +1246,7 @@
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel7.Summary = xrSummary1;
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel7.TextFormatString = "{0:N2}";
+            this.xrLabel7.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel8
             // 
@@ -1277,7 +1277,7 @@
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel8.Summary = xrSummary2;
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel8.TextFormatString = "{0:N2}";
+            this.xrLabel8.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel9
             // 
@@ -1308,7 +1308,7 @@
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel9.Summary = xrSummary3;
             this.xrLabel9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel9.TextFormatString = "{0:N2}";
+            this.xrLabel9.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // federationDataSource1
             // 
