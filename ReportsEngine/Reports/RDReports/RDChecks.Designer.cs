@@ -61,7 +61,6 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.DataAccess.DataFederation.SelectNode selectNode1 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode1 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source1 = new DevExpress.DataAccess.DataFederation.Source();
@@ -71,14 +70,12 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode3 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode3 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source3 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode4 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode4 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source4 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode5 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode5 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source5 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode6 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.JoinElement joinElement1 = new DevExpress.DataAccess.DataFederation.JoinElement();
+            DevExpress.DataAccess.DataFederation.SelectNode selectNode4 = new DevExpress.DataAccess.DataFederation.SelectNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode5 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings8 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings9 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -228,13 +225,13 @@
             this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCheck = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooWillCenterCompanyNameOnStub = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.ReportHeader1 = new DevExpress.XtraReports.UI.ReportHeaderBand();
             this.pbooReturnElectronicPayments = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnPrintedChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckFormat = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
+            this.pbooWillCenterCompanyNameOnStub = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSignPath = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrTwoSignaturesRequiredAmount = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngIsTwoSignaturesRequired = new DevExpress.XtraReports.Parameters.Parameter();
@@ -2765,21 +2762,6 @@
             dynamicListLookUpSettings5.ValueMember = "CheckNumber";
             this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
-            // pbooWillCenterCompanyNameOnStub
-            // 
-            this.pbooWillCenterCompanyNameOnStub.Description = "Will Center Company Name On Stub";
-            this.pbooWillCenterCompanyNameOnStub.Name = "pbooWillCenterCompanyNameOnStub";
-            this.pbooWillCenterCompanyNameOnStub.Type = typeof(bool);
-            this.pbooWillCenterCompanyNameOnStub.ValueInfo = "True";
-            dynamicListLookUpSettings6.DataMember = "CheckFormat";
-            dynamicListLookUpSettings6.DataSource = this.Dynamic;
-            dynamicListLookUpSettings6.DisplayMember = "WillCenterCompanyNameOnStub";
-            dynamicListLookUpSettings6.FilterString = null;
-            dynamicListLookUpSettings6.SortMember = null;
-            dynamicListLookUpSettings6.ValueMember = "WillCenterCompanyNameOnStub";
-            this.pbooWillCenterCompanyNameOnStub.ValueSourceSettings = dynamicListLookUpSettings6;
-            this.pbooWillCenterCompanyNameOnStub.Visible = false;
-            // 
             // groupFooterBand1
             // 
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -2827,118 +2809,116 @@
             // federationDataSource1
             // 
             this.federationDataSource1.Name = "federationDataSource1";
-            selectNode1.Alias = "Dynamic_RDCheckHeader";
+            selectNode1.Alias = "Dynamic_ChecksLookup";
             sourceNode1.Alias = null;
-            source1.DataMember = "RDCheckHeader";
+            source1.DataMember = "ChecksLookup";
             source1.DataSource = this.Dynamic;
-            source1.Name = "Dynamic_RDCheckHeader";
+            source1.Name = "Dynamic_ChecksLookup";
             sourceNode1.Source = source1;
             selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowCheckFormat"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RecordCount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ImbursementID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyAddressBlockLong"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyAddressBlockCoverSheet"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyAddressBlockShort"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SortFieldCheckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "TaxAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DeductionAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerGross"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "WithholdingAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckAmountShortString"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckAmountLongString"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BankID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "TransitNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SerialNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BankName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BankNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "EntityNumberName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerAddressBlock"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsCheck"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "EMailAddress"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OtherDeductionTotal"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "WillEMailRevenueDetail"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BankAddressBlock"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ISEFT")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SortByCheckNumber")});
             selectNode1.Root = sourceNode1;
-            selectNode2.Alias = "Dynamic_ChecksLookup";
+            selectNode2.Alias = "Dynamic_OwnersLookup";
             sourceNode2.Alias = null;
-            source2.DataMember = "ChecksLookup";
+            source2.DataMember = "OwnersLookup";
             source2.DataSource = this.Dynamic;
-            source2.Name = "Dynamic_ChecksLookup";
+            source2.Name = "Dynamic_OwnersLookup";
             sourceNode2.Source = source2;
             selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "RecordType"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CheckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Description"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SortByCheckNumber")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Number"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Description")});
             selectNode2.Root = sourceNode2;
-            selectNode3.Alias = "Dynamic_OwnersLookup";
+            selectNode3.Alias = "Dynamic_CheckFormat";
             sourceNode3.Alias = null;
-            source3.DataMember = "OwnersLookup";
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"557\" />";
+            source3.DataMember = "CheckFormat";
             source3.DataSource = this.Dynamic;
-            source3.Name = "Dynamic_OwnersLookup";
+            source3.Name = "Dynamic_CheckFormat";
             sourceNode3.Source = source3;
-            selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "RecordType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description")});
-            selectNode3.Root = sourceNode3;
-            selectNode4.Alias = "Dynamic_CompanyFormatSettings";
-            sourceNode4.Alias = null;
-            source4.DataMember = "CompanyFormatSettings";
+            sourceNode4.Alias = "RDCheckHeader";
+            sourceNode4.MetaSerializable = "<Meta X=\"185\" Y=\"30\" Width=\"125\" Height=\"817\" />";
+            source4.DataMember = "RDCheckHeader";
             source4.DataSource = this.Dynamic;
-            source4.Name = "Dynamic_CompanyFormatSettings";
+            source4.Name = "Dynamic_RDCheckHeader";
             sourceNode4.Source = source4;
-            selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ID"),
+            selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "EntryRow"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CheckPrintingSortMethodTypeCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CheckLogoDisplayOptionCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "OverflowOptionCodeID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CheckStubMessage"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "SignatureLineComment"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "TwoSignaturesRequiredAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsCheckOnTopOfForm"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WillCenterCompanyNameOnStub"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WillPrintBankAccountName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WillPrintCompanyAddressOnStub"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WillPrintDetailOnStub"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WillPrintMICRInformation"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WillPrintSecondDescriptionLine"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WillPrintSignature"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WillPrintTwoSignatureLines"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WillPrintCoverSheet"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "VoidAfterMessage"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "LogoPath"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "SignaturePath"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "SecondSignaturePath"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "FileExtensionOriginalLogo"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "FileExtensionOriginalSignature"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "FileExtensionOriginalSecondarySignature"),
+            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode4),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RowCheckFormat"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RowNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RecordCount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ImbursementID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CompanyID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CompanyNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CompanyName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckTypeCodeID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckTypeCodeDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingSortMethodTypeCodeID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingSortMethodTypeCodeDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingFormatID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingFormatNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckPrintingFormatDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PrimaryCheckSignatureFileID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PrimaryCheckSignatureFileInformationID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PrimaryCheckSignatureFileDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SecondaryCheckSignatureFileID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SecondaryCheckSignatureFileInformationID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SecondaryCheckSignatureFileDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckLogoFileID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckLogoFileInformationID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckLogoFileDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CreateDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CreateUser"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ModifyDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ModifyUser")});
-            selectNode4.Root = sourceNode4;
-            selectNode5.Alias = "Dynamic_CheckFormat";
-            sourceNode5.Alias = null;
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CompanyAddressBlockLong"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CompanyAddressBlockCoverSheet"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CompanyAddressBlockShort"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SortFieldCheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "TaxAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "DeductionAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerGross"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "WithholdingAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckAmountShortString"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckAmountLongString"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "BankID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "AccountNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "TransitNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SerialNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "BankName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "BankNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EntityNumberName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerAddressBlock"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "IsCheck"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EMailAddress"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OtherDeductionTotal"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "WillEMailRevenueDetail"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "BankAddressBlock"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ISEFT")});
+            selectNode3.Root = sourceNode3;
+            joinElement1.Condition = "[[RDCheckHeader\\].[RowCheckFormat\\]] = [[Dynamic_CheckFormat\\].[EntryRow\\]]";
+            joinElement1.Node = sourceNode4;
+            selectNode3.SubNodes.AddRange(new DevExpress.DataAccess.DataFederation.JoinElement[] {
+            joinElement1});
+            selectNode4.Alias = "Query";
+            sourceNode5.Alias = "CheckFormat";
             sourceNode5.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"557\" />";
-            source5.DataMember = "CheckFormat";
-            source5.DataSource = this.Dynamic;
-            source5.Name = "Dynamic_CheckFormat";
-            sourceNode5.Source = source5;
-            sourceNode6.Alias = "RDCheckHeader";
-            sourceNode6.MetaSerializable = "<Meta X=\"185\" Y=\"30\" Width=\"125\" Height=\"817\" />";
-            sourceNode6.Source = source1;
-            selectNode5.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            sourceNode5.Source = source3;
+            selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "EntryRow"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CheckPrintingSortMethodTypeCodeID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CheckLogoDisplayOptionCodeID"),
@@ -2962,56 +2942,28 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "SecondSignaturePath"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalLogo"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalSignature"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalSecondarySignature"),
-            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode6),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "RowCheckFormat"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "RowNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "RecordCount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "ImbursementID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CompanyID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CompanyName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CompanyAddressBlockLong"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CompanyAddressBlockCoverSheet"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CompanyAddressBlockShort"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "SortFieldCheckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "TaxAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "DeductionAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerGross"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "WithholdingAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckAmountShortString"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "CheckAmountLongString"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "BankID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "AccountNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "TransitNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "SerialNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "BankName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "BankNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "EntityNumberName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OwnerAddressBlock"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "IsCheck"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "EMailAddress"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "OtherDeductionTotal"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "WillEMailRevenueDetail"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "BankAddressBlock"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "ISEFT")});
-            selectNode5.Root = sourceNode5;
-            joinElement1.Condition = "[[RDCheckHeader\\].[RowCheckFormat\\]] = [[Dynamic_CheckFormat\\].[EntryRow\\]]";
-            joinElement1.Node = sourceNode6;
-            selectNode5.SubNodes.AddRange(new DevExpress.DataAccess.DataFederation.JoinElement[] {
-            joinElement1});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalSecondarySignature")});
+            selectNode4.Root = sourceNode5;
             this.federationDataSource1.Queries.AddRange(new DevExpress.DataAccess.DataFederation.QueryNode[] {
             selectNode1,
             selectNode2,
             selectNode3,
-            selectNode4,
-            selectNode5});
+            selectNode4});
+            // 
+            // pbooWillCenterCompanyNameOnStub
+            // 
+            this.pbooWillCenterCompanyNameOnStub.Description = "Will Center Company Name On Stub";
+            this.pbooWillCenterCompanyNameOnStub.Name = "pbooWillCenterCompanyNameOnStub";
+            this.pbooWillCenterCompanyNameOnStub.Type = typeof(bool);
+            this.pbooWillCenterCompanyNameOnStub.ValueInfo = "True";
+            dynamicListLookUpSettings6.DataMember = "CheckFormat";
+            dynamicListLookUpSettings6.DataSource = this.Dynamic;
+            dynamicListLookUpSettings6.DisplayMember = "WillCenterCompanyNameOnStub";
+            dynamicListLookUpSettings6.FilterString = null;
+            dynamicListLookUpSettings6.SortMember = null;
+            dynamicListLookUpSettings6.ValueMember = "WillCenterCompanyNameOnStub";
+            this.pbooWillCenterCompanyNameOnStub.ValueSourceSettings = dynamicListLookUpSettings6;
+            this.pbooWillCenterCompanyNameOnStub.Visible = false;
             // 
             // pstrSignPath
             // 
@@ -3331,9 +3283,9 @@
             this.RDChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEndingCheckNumber", this.pstrEndingCheckNumber));
             this.RDChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrBeginningCheckNumber", this.pstrBeginningCheckNumber));
             this.RDChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrSelectCheckNumber", this.pstrSelectCheck));
-            this.RDChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCode", null, "Dynamic_RDCheckHeader.OverflowOptionCodeID"));
-            this.RDChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooWillPrintCompanyAddressOnStub", this.pbooWillCenterCompanyNameOnStub));
-            this.RDChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooWillCenterCompanyNameOnStub", null, "Dynamic_RDCheckHeader.WillCenterCompanyNameOnStub"));
+            this.RDChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCode", null, "Dynamic_CheckFormat.OverflowOptionCodeID"));
+            this.RDChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooWillPrintCompanyAddressOnStub", null, "Dynamic_CheckFormat.WillPrintCompanyAddressOnStub"));
+            this.RDChecksRemittanceOnly.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooWillCenterCompanyNameOnStub", null, "Dynamic_CheckFormat.WillCenterCompanyNameOnStub"));
             this.RDChecksRemittanceOnly.ReportSource = new ReportsEngine.Reports.RDReports.RDChecksRemittanceOnly();
             this.RDChecksRemittanceOnly.SizeF = new System.Drawing.SizeF(808F, 2F);
             // 
@@ -3401,6 +3353,7 @@
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.federationDataSource1});
+            this.DataMember = "Query";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "RDChecks";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);

@@ -1064,8 +1064,9 @@
             this.xrLabel26.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel26.BorderWidth = 1F;
             this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 0, \'AP Paid Payables Detail With Property/Well\',?plngReportType " +
-                    "= 1, \'A/P Outstanding Payables Detail With Property/Well\',\'A/P Payables Detail With Property/Well\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngReportType = 0, \'AP Paid Payables Detail With Property/Well\',?plngReport" +
+                    "Type = 1, \'A/P Outstanding Payables Detail With Property/Well\',\'A/P Payables Det" +
+                    "ail With Property/Well\')")});
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel26.KeepTogether = true;
             this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30F);
@@ -1085,7 +1086,7 @@
             this.xrLabel29.BorderWidth = 1F;
             this.xrLabel29.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
-            this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel29.KeepTogether = true;
             this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel29.Multiline = true;

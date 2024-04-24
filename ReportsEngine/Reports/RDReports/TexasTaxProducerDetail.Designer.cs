@@ -1797,7 +1797,7 @@
             this.Textbox1.BorderWidth = 1F;
             this.Textbox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompanies].[Description]")});
-            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox1.KeepTogether = true;
             this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(1.389948F, 0F);
             this.Textbox1.Multiline = true;

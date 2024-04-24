@@ -135,7 +135,7 @@
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel4.TextFormatString = "{0:N2}";
+            this.xrLabel4.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel5
             // 
@@ -421,7 +421,7 @@
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel15.Summary = xrSummary2;
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel15.TextFormatString = "{0:N2}";
+            this.xrLabel15.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // plngBottomHalfID
             // 

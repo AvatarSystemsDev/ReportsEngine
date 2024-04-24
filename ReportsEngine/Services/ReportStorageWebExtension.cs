@@ -159,10 +159,18 @@ namespace ReportsEngine.Services
         public static void setReportParameters(XtraReport report, System.Collections.Specialized.NameValueCollection parameters, int companyid)
         {
             bool AwaitParameterInputPassed = false;
+            foreach (Parameter parameter in report.Parameters)
+            {
+                if (parameter.Name.ToLower() == "pbooawaitparameterinput")
+                {
+                    AwaitParameterInputPassed = parameter.Value.ToString().ToLower() == "true";
+                }
+            }
             //  Margie wants the default parameters for the reports to be the current day.
             foreach (Parameter parameter in report.Parameters)
             {
-                if (parameter.Type.Name.ToString() == "DateTime")
+
+                if (parameter.Type.Name.ToString() == "DateTime" && AwaitParameterInputPassed)
                 {
                     parameter.Value = DateTime.Today;
                 }

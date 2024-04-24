@@ -504,7 +504,7 @@
             this.xrLabel22.StylePriority.UsePadding = false;
             this.xrLabel22.StylePriority.UseTextAlignment = false;
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel22.TextFormatString = "{0:n2}";
+            this.xrLabel22.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel21
             // 
@@ -560,7 +560,7 @@
             this.xrLabel20.StylePriority.UsePadding = false;
             this.xrLabel20.StylePriority.UseTextAlignment = false;
             this.xrLabel20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel20.TextFormatString = "{0:n2}";
+            this.xrLabel20.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel19
             // 
@@ -673,7 +673,7 @@
             this.xrLabel59.BorderWidth = 1F;
             this.xrLabel59.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_JIBHistoryCompanyLookUp].[Description]")});
-            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel59.KeepTogether = true;
             this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(1.040014F, 0F);
             this.xrLabel59.Multiline = true;
@@ -1035,7 +1035,7 @@
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel56.Summary = xrSummary1;
             this.xrLabel56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel56.TextFormatString = "{0:n2}";
+            this.xrLabel56.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel55
             // 
@@ -1173,7 +1173,7 @@
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel38.Summary = xrSummary2;
             this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel38.TextFormatString = "{0:n2}";
+            this.xrLabel38.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel36
             // 
@@ -1203,7 +1203,7 @@
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel36.Summary = xrSummary3;
             this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel36.TextFormatString = "{0:n2}";
+            this.xrLabel36.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel35
             // 
@@ -1322,7 +1322,7 @@
             xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel45.Summary = xrSummary4;
             this.xrLabel45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel45.TextFormatString = "{0:n2}";
+            this.xrLabel45.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel47
             // 
@@ -1352,7 +1352,7 @@
             xrSummary5.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel47.Summary = xrSummary5;
             this.xrLabel47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel47.TextFormatString = "{0:n2}";
+            this.xrLabel47.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrCrossBandBox1
             // 
@@ -1565,7 +1565,7 @@
             this.xrLabel13.BorderWidth = 1F;
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_JIBHistoryCompanyLookUp].[Description]")});
-            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel13.KeepTogether = true;
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(1.040014F, 0F);
             this.xrLabel13.Multiline = true;
@@ -1758,7 +1758,7 @@
             xrSummary6.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel28.Summary = xrSummary6;
             this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel28.TextFormatString = "{0:n2}";
+            this.xrLabel28.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel30
             // 
@@ -1788,7 +1788,7 @@
             xrSummary7.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel30.Summary = xrSummary7;
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel30.TextFormatString = "{0:n2}";
+            this.xrLabel30.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // pstrSelectOwner
             // 

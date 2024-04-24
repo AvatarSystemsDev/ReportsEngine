@@ -60,7 +60,6 @@
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.Rectangle4 = new DevExpress.XtraReports.UI.XRPanel();
             this.Textbox66 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
@@ -108,11 +107,8 @@
             this.Textbox63 = new DevExpress.XtraReports.UI.XRRichText();
             this.Textbox62 = new DevExpress.XtraReports.UI.XRRichText();
             this.Rectangle2 = new DevExpress.XtraReports.UI.XRPanel();
-            this.Textbox78 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Textbox93 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox51 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox37 = new DevExpress.XtraReports.UI.XRLabel();
-            this.Textbox31 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox22 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox7 = new DevExpress.XtraReports.UI.XRLabel();
             this.Textbox32 = new DevExpress.XtraReports.UI.XRLabel();
@@ -532,7 +528,6 @@
             // 
             this.Tablix1_GroupHeaderBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPanel2,
-            this.xrLabel22,
             this.xrLabel23,
             this.xrLabel24,
             this.xrLabel26,
@@ -586,29 +581,6 @@
             this.Textbox66.SizeF = new System.Drawing.SizeF(15F, 15F);
             this.Textbox66.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
-            // xrLabel22
-            // 
-            this.xrLabel22.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel22.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel22.BorderWidth = 1F;
-            this.xrLabel22.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InvoiceVoucher]")});
-            this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel22.KeepTogether = true;
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(55.18773F, 0F);
-            this.xrLabel22.Name = "xrLabel22";
-            this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel22.SizeF = new System.Drawing.SizeF(96.33048F, 20F);
-            this.xrLabel22.StylePriority.UseBorderColor = false;
-            this.xrLabel22.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel22.StylePriority.UseBorders = false;
-            this.xrLabel22.StylePriority.UseBorderWidth = false;
-            this.xrLabel22.StylePriority.UseFont = false;
-            this.xrLabel22.StylePriority.UsePadding = false;
-            this.xrLabel22.StylePriority.UseTextAlignment = false;
-            this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
             // xrLabel23
             // 
             this.xrLabel23.BorderColor = System.Drawing.Color.Black;
@@ -619,10 +591,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InvoiceVendorNumberName]")});
             this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel23.KeepTogether = true;
-            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(151.5182F, 0F);
+            this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(55.18773F, 0F);
             this.xrLabel23.Name = "xrLabel23";
             this.xrLabel23.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel23.SizeF = new System.Drawing.SizeF(213.4876F, 20F);
+            this.xrLabel23.SizeF = new System.Drawing.SizeF(309.818F, 20F);
             this.xrLabel23.StylePriority.UseBorderColor = false;
             this.xrLabel23.StylePriority.UseBorderDashStyle = false;
             this.xrLabel23.StylePriority.UseBorders = false;
@@ -1222,7 +1194,7 @@
             this.ReportTitle,
             this.Rectangle1,
             this.Rectangle2});
-            this.pageHeaderBand1.HeightF = 139.92F;
+            this.pageHeaderBand1.HeightF = 126.0317F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand1});
@@ -1236,13 +1208,13 @@
             this.Textbox1.BorderWidth = 1F;
             this.Textbox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DSCompaniesLookup.Description]")});
-            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox1.KeepTogether = true;
             this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(1.040014F, 0F);
             this.Textbox1.Multiline = true;
             this.Textbox1.Name = "Textbox1";
             this.Textbox1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox1.SizeF = new System.Drawing.SizeF(1017.918F, 30F);
+            this.Textbox1.SizeF = new System.Drawing.SizeF(1018.96F, 30F);
             this.Textbox1.StylePriority.UseFont = false;
             this.Textbox1.StylePriority.UsePadding = false;
             this.Textbox1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
@@ -1255,11 +1227,11 @@
             this.ReportTitle.BorderWidth = 1F;
             this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.ReportTitle.KeepTogether = true;
-            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(1.040014F, 30F);
+            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 30.00002F);
             this.ReportTitle.Multiline = true;
             this.ReportTitle.Name = "ReportTitle";
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.ReportTitle.SizeF = new System.Drawing.SizeF(1017.918F, 30F);
+            this.ReportTitle.SizeF = new System.Drawing.SizeF(1020F, 30F);
             this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.StylePriority.UsePadding = false;
             this.ReportTitle.Text = "AP Manual Check Edit List";
@@ -1276,9 +1248,9 @@
             this.Textbox62});
             this.Rectangle1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)")});
-            this.Rectangle1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 61.03001F);
+            this.Rectangle1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 61.03002F);
             this.Rectangle1.Name = "Rectangle1";
-            this.Rectangle1.SizeF = new System.Drawing.SizeF(1020F, 26.39F);
+            this.Rectangle1.SizeF = new System.Drawing.SizeF(1020F, 21.18166F);
             // 
             // Textbox63
             // 
@@ -1287,11 +1259,11 @@
             this.Textbox63.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox63.BorderWidth = 1F;
             this.Textbox63.KeepTogether = true;
-            this.Textbox63.LocationFloat = new DevExpress.Utils.PointFloat(542.93F, 0F);
+            this.Textbox63.LocationFloat = new DevExpress.Utils.PointFloat(542.93F, 1.144409E-05F);
             this.Textbox63.Name = "Textbox63";
             this.Textbox63.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox63.SerializableRtfString = resources.GetString("Textbox63.SerializableRtfString");
-            this.Textbox63.SizeF = new System.Drawing.SizeF(471.3F, 25F);
+            this.Textbox63.SizeF = new System.Drawing.SizeF(471.3F, 19.99998F);
             // 
             // Textbox62
             // 
@@ -1300,11 +1272,11 @@
             this.Textbox62.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox62.BorderWidth = 1F;
             this.Textbox62.KeepTogether = true;
-            this.Textbox62.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.39F);
+            this.Textbox62.LocationFloat = new DevExpress.Utils.PointFloat(0F, 3.814697E-06F);
             this.Textbox62.Name = "Textbox62";
             this.Textbox62.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox62.SerializableRtfString = resources.GetString("Textbox62.SerializableRtfString");
-            this.Textbox62.SizeF = new System.Drawing.SizeF(468.18F, 25F);
+            this.Textbox62.SizeF = new System.Drawing.SizeF(468.18F, 20F);
             // 
             // Rectangle2
             // 
@@ -1313,11 +1285,8 @@
             this.Rectangle2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Rectangle2.BorderWidth = 1F;
             this.Rectangle2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.Textbox78,
-            this.Textbox93,
             this.Textbox51,
             this.Textbox37,
-            this.Textbox31,
             this.Textbox22,
             this.Textbox7,
             this.Textbox32,
@@ -1335,41 +1304,9 @@
             this.Textbox74,
             this.Textbox81,
             this.Textbox96});
-            this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 96.10001F);
+            this.Rectangle2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 82.21169F);
             this.Rectangle2.Name = "Rectangle2";
             this.Rectangle2.SizeF = new System.Drawing.SizeF(1020F, 43.82F);
-            // 
-            // Textbox78
-            // 
-            this.Textbox78.BorderColor = System.Drawing.Color.Black;
-            this.Textbox78.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox78.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox78.BorderWidth = 1F;
-            this.Textbox78.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox78.KeepTogether = true;
-            this.Textbox78.LocationFloat = new DevExpress.Utils.PointFloat(294.7617F, 0F);
-            this.Textbox78.Multiline = true;
-            this.Textbox78.Name = "Textbox78";
-            this.Textbox78.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox78.SizeF = new System.Drawing.SizeF(70.24423F, 20F);
-            this.Textbox78.StylePriority.UsePadding = false;
-            this.Textbox78.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // Textbox93
-            // 
-            this.Textbox93.BorderColor = System.Drawing.Color.Black;
-            this.Textbox93.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox93.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox93.BorderWidth = 1F;
-            this.Textbox93.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox93.KeepTogether = true;
-            this.Textbox93.LocationFloat = new DevExpress.Utils.PointFloat(416.9474F, 0F);
-            this.Textbox93.Multiline = true;
-            this.Textbox93.Name = "Textbox93";
-            this.Textbox93.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox93.SizeF = new System.Drawing.SizeF(78.26843F, 20F);
-            this.Textbox93.StylePriority.UsePadding = false;
-            this.Textbox93.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox51
             // 
@@ -1396,31 +1333,15 @@
             this.Textbox37.BorderWidth = 1F;
             this.Textbox37.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox37.KeepTogether = true;
-            this.Textbox37.LocationFloat = new DevExpress.Utils.PointFloat(151.5182F, 0F);
+            this.Textbox37.LocationFloat = new DevExpress.Utils.PointFloat(55.18773F, 0F);
             this.Textbox37.Multiline = true;
             this.Textbox37.Name = "Textbox37";
             this.Textbox37.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox37.SizeF = new System.Drawing.SizeF(76.07219F, 20F);
+            this.Textbox37.SizeF = new System.Drawing.SizeF(309.8183F, 20F);
             this.Textbox37.StylePriority.UsePadding = false;
+            this.Textbox37.StylePriority.UseTextAlignment = false;
             this.Textbox37.Text = "Vendor";
-            this.Textbox37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // Textbox31
-            // 
-            this.Textbox31.BorderColor = System.Drawing.Color.Black;
-            this.Textbox31.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox31.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox31.BorderWidth = 1F;
-            this.Textbox31.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox31.KeepTogether = true;
-            this.Textbox31.LocationFloat = new DevExpress.Utils.PointFloat(55.18773F, 0F);
-            this.Textbox31.Multiline = true;
-            this.Textbox31.Name = "Textbox31";
-            this.Textbox31.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox31.SizeF = new System.Drawing.SizeF(96.33051F, 20F);
-            this.Textbox31.StylePriority.UsePadding = false;
-            this.Textbox31.Text = "Voucher";
-            this.Textbox31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            this.Textbox37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Textbox22
             // 
@@ -1976,11 +1897,8 @@
         private DevExpress.XtraReports.UI.XRRichText Textbox63;
         private DevExpress.XtraReports.UI.XRRichText Textbox62;
         private DevExpress.XtraReports.UI.XRPanel Rectangle2;
-        private DevExpress.XtraReports.UI.XRLabel Textbox78;
-        private DevExpress.XtraReports.UI.XRLabel Textbox93;
         private DevExpress.XtraReports.UI.XRLabel Textbox51;
         private DevExpress.XtraReports.UI.XRLabel Textbox37;
-        private DevExpress.XtraReports.UI.XRLabel Textbox31;
         private DevExpress.XtraReports.UI.XRLabel Textbox22;
         private DevExpress.XtraReports.UI.XRLabel Textbox7;
         private DevExpress.XtraReports.UI.XRLabel Textbox32;
@@ -2028,7 +1946,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
         private DevExpress.XtraReports.UI.XRPanel xrPanel2;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel22;
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;

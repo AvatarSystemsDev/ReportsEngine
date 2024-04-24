@@ -729,7 +729,7 @@
             this.Textbox13.BorderWidth = 1F;
             this.Textbox13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_dsLookupCompany].[Description]")});
-            this.Textbox13.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox13.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox13.KeepTogether = true;
             this.Textbox13.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox13.Multiline = true;
@@ -1634,7 +1634,7 @@
             this.xrLabel24.BorderWidth = 1F;
             this.xrLabel24.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_dsLookupCompany].[Description]")});
-            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel24.KeepTogether = true;
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel24.Multiline = true;

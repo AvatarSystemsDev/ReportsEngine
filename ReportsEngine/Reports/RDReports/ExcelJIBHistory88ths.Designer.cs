@@ -35,6 +35,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelJIBHistory88ths));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -81,6 +82,7 @@
             this.pbooUseGroupTypes = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngDateToUse = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -720,18 +722,22 @@
             queryParameter3.Name = "@pstrEndingPropertyNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
-            queryParameter4.Name = "@pdteBeginningDate";
+            queryParameter4.Name = "@plngDateToUse";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pdteBeginningDate", typeof(System.DateTime));
-            queryParameter5.Name = "@pdteEndingDate";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngDateToUse", typeof(int));
+            queryParameter5.Name = "@pdteBeginningDate";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pdteEndingDate", typeof(System.DateTime));
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pdteBeginningDate", typeof(System.DateTime));
+            queryParameter6.Name = "@pdteEndingDate";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pdteEndingDate", typeof(System.DateTime));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
-            queryParameter5});
+            queryParameter5,
+            queryParameter6});
             storedProcQuery1.StoredProcName = "Report_JIBHistory88ths";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -848,6 +854,13 @@
             this.pstrSelectOwner.MultiValue = true;
             this.pstrSelectOwner.Name = "pstrSelectOwner";
             // 
+            // plngDateToUse
+            // 
+            this.plngDateToUse.Description = "Parameter1";
+            this.plngDateToUse.Name = "plngDateToUse";
+            this.plngDateToUse.Type = typeof(int);
+            this.plngDateToUse.ValueInfo = "0";
+            // 
             // ExcelJIBHistory88ths
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -869,6 +882,7 @@
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Tabloid;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -886,6 +900,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
+            this.plngDateToUse,
             this.pstrServerName,
             this.plngUserID,
             this.Subtitle,
@@ -953,5 +968,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectProperty;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
+        private DevExpress.XtraReports.Parameters.Parameter plngDateToUse;
     }
 }

@@ -997,7 +997,7 @@
             this.Textbox1.BorderWidth = 1F;
             this.Textbox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
-            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox1.KeepTogether = true;
             this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox1.Multiline = true;
@@ -1040,11 +1040,11 @@
             this.Textbox33.LocationFloat = new DevExpress.Utils.PointFloat(0F, 60.00004F);
             this.Textbox33.Multiline = true;
             this.Textbox33.Name = "Textbox33";
-            this.Textbox33.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox33.SizeF = new System.Drawing.SizeF(49.30122F, 39.99998F);
+            this.Textbox33.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 2, 2, 100F);
+            this.Textbox33.SizeF = new System.Drawing.SizeF(55.55122F, 39.99998F);
             this.Textbox33.StylePriority.UsePadding = false;
             this.Textbox33.StylePriority.UseTextAlignment = false;
-            this.Textbox33.Text = "Edit Rq. \r\nSrc";
+            this.Textbox33.Text = "Edit Req. \r\nSrc";
             this.Textbox33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
             // Textbox35
@@ -1059,7 +1059,7 @@
             this.Textbox35.LocationFloat = new DevExpress.Utils.PointFloat(47.30104F, 60.00004F);
             this.Textbox35.Multiline = true;
             this.Textbox35.Name = "Textbox35";
-            this.Textbox35.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.Textbox35.Padding = new DevExpress.XtraPrinting.PaddingInfo(6, 2, 2, 2, 100F);
             this.Textbox35.SizeF = new System.Drawing.SizeF(84.64081F, 39.99998F);
             this.Textbox35.StylePriority.UsePadding = false;
             this.Textbox35.StylePriority.UseTextAlignment = false;

@@ -614,7 +614,7 @@
             this.Textbox2.BorderWidth = 1F;
             this.Textbox2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_JIBHistoryCompanyLookUp].[Description]")});
-            this.Textbox2.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox2.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox2.KeepTogether = true;
             this.Textbox2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox2.Multiline = true;
@@ -877,7 +877,7 @@
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel38.Summary = xrSummary1;
             this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel38.TextFormatString = "{0:N2}";
+            this.xrLabel38.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // ReportFooter
             // 
@@ -955,7 +955,7 @@
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel56.Summary = xrSummary3;
             this.xrLabel56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel56.TextFormatString = "{0:N2}";
+            this.xrLabel56.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel55
             // 
@@ -1546,7 +1546,7 @@
             this.xrLabel59.BorderWidth = 1F;
             this.xrLabel59.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_JIBHistoryCompanyLookUp].[Description]")});
-            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel59.KeepTogether = true;
             this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel59.Multiline = true;
@@ -1906,7 +1906,7 @@
             // 
             this.SubBand8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrJIBHistoryOwnerDetailSubreport});
-            this.SubBand8.HeightF = 0F;
+            this.SubBand8.HeightF = 28.74336F;
             this.SubBand8.Name = "SubBand8";
             // 
             // xrJIBHistoryOwnerDetailSubreport
@@ -1922,7 +1922,7 @@
             this.xrJIBHistoryOwnerDetailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngJIBPrintedInvoiceID", null, "Dynamic_JIBHistoryDataSource.ID"));
             this.xrJIBHistoryOwnerDetailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
             this.xrJIBHistoryOwnerDetailSubreport.ReportSource = new ReportsEngine.Reports.RDReports.JIBHistoryOwnerDetail();
-            this.xrJIBHistoryOwnerDetailSubreport.SizeF = new System.Drawing.SizeF(769.9999F, 0F);
+            this.xrJIBHistoryOwnerDetailSubreport.SizeF = new System.Drawing.SizeF(770F, 5F);
             // 
             // JIBHistoryByOwner
             // 

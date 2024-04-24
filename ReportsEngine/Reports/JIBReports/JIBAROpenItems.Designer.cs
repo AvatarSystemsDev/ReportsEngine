@@ -881,7 +881,7 @@
             this.xrLabel33.BorderWidth = 1F;
             this.xrLabel33.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_JIBHistoryCompanyLookUp].[Description]")});
-            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel33.KeepTogether = true;
             this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel33.Multiline = true;

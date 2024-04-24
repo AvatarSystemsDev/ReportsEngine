@@ -251,8 +251,6 @@
             // 
             // xrCheckRemittance
             // 
-            this.xrCheckRemittance.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND ?plngOverflowOptionCode <> 2")});
             this.xrCheckRemittance.GenerateOwnPages = true;
             this.xrCheckRemittance.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrCheckRemittance.Name = "xrCheckRemittance";

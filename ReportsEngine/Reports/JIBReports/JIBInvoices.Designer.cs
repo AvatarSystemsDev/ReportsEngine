@@ -317,7 +317,7 @@
             this.xrLabel12.StylePriority.UsePadding = false;
             this.xrLabel12.StylePriority.UseTextAlignment = false;
             this.xrLabel12.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel12.TextFormatString = "{0:N2}";
+            this.xrLabel12.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel9
             // 
@@ -365,7 +365,7 @@
             this.xrLabel11.StylePriority.UsePadding = false;
             this.xrLabel11.StylePriority.UseTextAlignment = false;
             this.xrLabel11.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel11.TextFormatString = "{0:N2}";
+            this.xrLabel11.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel8
             // 
@@ -1221,7 +1221,7 @@
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.The88Amount.Summary = xrSummary2;
             this.The88Amount.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.The88Amount.TextFormatString = "{0:N2}";
+            this.The88Amount.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // The88Amount2
             // 
@@ -1243,7 +1243,7 @@
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.The88Amount2.Summary = xrSummary3;
             this.The88Amount2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.The88Amount2.TextFormatString = "{0:N2}";
+            this.The88Amount2.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // groupHeaderBand2
             // 
@@ -1393,7 +1393,7 @@
             xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel2.Summary = xrSummary4;
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel2.TextFormatString = "{0:N2}";
+            this.xrLabel2.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel3
             // 
@@ -1415,7 +1415,7 @@
             xrSummary5.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel3.Summary = xrSummary5;
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel3.TextFormatString = "{0:N2}";
+            this.xrLabel3.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel14
             // 
@@ -1560,7 +1560,7 @@
             xrSummary6.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel19.Summary = xrSummary6;
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel19.TextFormatString = "{0:N2}";
+            this.xrLabel19.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel25
             // 
@@ -1587,7 +1587,7 @@
             xrSummary7.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel25.Summary = xrSummary7;
             this.xrLabel25.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel25.TextFormatString = "{0:N2}";
+            this.xrLabel25.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // JIBInvoices
             // 

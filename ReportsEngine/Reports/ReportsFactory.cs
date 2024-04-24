@@ -324,6 +324,7 @@ namespace ReportsEngine.Reports
             Reports.Add("TestCheckReport", () => new TestCheckReport());
             Reports.Add("JIBSuspenseAction", () => new JIBSuspenseAction());
             Reports.Add("ExcelJIBSuspenseAction", () => new ExcelJIBSuspenseAction());
+            Reports.Add("APManualCheckEditList", () => new APManualCheckEditList());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

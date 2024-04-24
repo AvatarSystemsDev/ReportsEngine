@@ -13,6 +13,8 @@ namespace ReportsEngine.Reports.JIBReports
         public JIBARDetailbyPropertyWell()
         {
             InitializeComponent();
+            xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
+            xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
         }
         private void xrOwnersSelected_BeforePrint(object sender, CancelEventArgs e)
         {

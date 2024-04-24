@@ -768,13 +768,13 @@
             this.Textbox9.BorderWidth = 1F;
             this.Textbox9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]")});
-            this.Textbox9.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox9.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox9.KeepTogether = true;
-            this.Textbox9.LocationFloat = new DevExpress.Utils.PointFloat(0.9299596F, 0F);
+            this.Textbox9.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox9.Multiline = true;
             this.Textbox9.Name = "Textbox9";
             this.Textbox9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox9.SizeF = new System.Drawing.SizeF(769.0701F, 28.3F);
+            this.Textbox9.SizeF = new System.Drawing.SizeF(770.0001F, 28.3F);
             this.Textbox9.StylePriority.UseFont = false;
             this.Textbox9.StylePriority.UsePadding = false;
             this.Textbox9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
@@ -788,11 +788,11 @@
             this.ReportTitle.CanShrink = true;
             this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.ReportTitle.KeepTogether = true;
-            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0.9300232F, 28.3F);
+            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 28.3F);
             this.ReportTitle.Multiline = true;
             this.ReportTitle.Name = "ReportTitle";
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.ReportTitle.SizeF = new System.Drawing.SizeF(769.0699F, 30F);
+            this.ReportTitle.SizeF = new System.Drawing.SizeF(769.9998F, 30F);
             this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.StylePriority.UsePadding = false;
             this.ReportTitle.Text = "Check History";
@@ -815,9 +815,9 @@
             this.Textbox372});
             this.Rectangle1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?ShowCriteria = True, True, False)")});
-            this.Rectangle1.LocationFloat = new DevExpress.Utils.PointFloat(0.9300232F, 58.3F);
+            this.Rectangle1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 58.3F);
             this.Rectangle1.Name = "Rectangle1";
-            this.Rectangle1.SizeF = new System.Drawing.SizeF(769.0698F, 38.43333F);
+            this.Rectangle1.SizeF = new System.Drawing.SizeF(769.9998F, 38.43333F);
             // 
             // xrAccountsSelected
             // 

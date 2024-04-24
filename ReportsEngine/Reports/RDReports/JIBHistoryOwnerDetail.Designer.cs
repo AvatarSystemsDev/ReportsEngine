@@ -199,7 +199,7 @@
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.Text = "8/8 Amount ";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel5.TextFormatString = "{0:N2}";
+            this.xrLabel5.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel6
             // 
@@ -243,7 +243,7 @@
             this.xrLabel7.StylePriority.UsePadding = false;
             this.xrLabel7.Text = "Line Item Amount";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel7.TextFormatString = "{0:N2}";
+            this.xrLabel7.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // pstrDatabaseName
             // 

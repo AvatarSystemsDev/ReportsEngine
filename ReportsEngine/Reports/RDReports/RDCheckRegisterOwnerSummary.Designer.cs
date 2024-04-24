@@ -120,7 +120,7 @@
             this.xrLabel3.StylePriority.UsePadding = false;
             this.xrLabel3.StylePriority.UseTextAlignment = false;
             this.xrLabel3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel3.TextFormatString = "{0:n2}";
+            this.xrLabel3.TextFormatString = "{0:N2}";
             // 
             // xrLabel4
             // 
@@ -150,7 +150,7 @@
             this.xrLabel4.StylePriority.UsePadding = false;
             this.xrLabel4.StylePriority.UseTextAlignment = false;
             this.xrLabel4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel4.TextFormatString = "{0:n2}";
+            this.xrLabel4.TextFormatString = "{0:N2}";
             // 
             // Dynamic
             // 

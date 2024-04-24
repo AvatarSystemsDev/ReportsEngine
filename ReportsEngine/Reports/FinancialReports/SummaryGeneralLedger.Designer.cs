@@ -1141,7 +1141,7 @@
             this.Textbox1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox1.BorderWidth = 1F;
-            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.Textbox1.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox1.KeepTogether = true;
             this.Textbox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.Textbox1.Multiline = true;
@@ -2371,7 +2371,7 @@
             this.xrLabel47.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel47.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel47.BorderWidth = 1F;
-            this.xrLabel47.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel47.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel47.KeepTogether = true;
             this.xrLabel47.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel47.Multiline = true;
