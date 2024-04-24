@@ -122,6 +122,27 @@ namespace ReportsEngine.Services
                     Message = message,
                 };
             }
+            /// Add custom print
+            else if (customData.action == "Custom-Print")
+            {
+                using (var stream = new MemoryStream())
+                {
+                    printingSystemWithEditingFields.ExportToPdf(stream);
+                    stream.Position = 0;
+
+                    byte[] documentByteArray = stream.ToArray();
+                    String base64String = Convert.ToBase64String(documentByteArray);
+                    //var archived = SendToArchiveAsync(stream, systemID, userID);  //If call Providence webservice from here. 
+                    string message = "Sent to Printer";
+                    return new DocumentOperationResponse
+                    {
+                        Succeeded = true,
+                        Message = message,
+                        CustomData = base64String,
+                        //trays
+                    };
+                }
+            }
             else
             {
                 string message = "Invalid custom operation. Custom Operation set up in ServiceOperations";
