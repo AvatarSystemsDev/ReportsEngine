@@ -1,4 +1,6 @@
 ﻿using DevExpress.DataAccess.ConnectionParameters;
+using DevExpress.DataAccess.Native.Web;
+using DevExpress.DataProcessing.InMemoryDataProcessor;
 using DevExpress.XtraReports;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
@@ -6,12 +8,12 @@ using Newtonsoft.Json.Linq;
 using ReportsEngine.Reports;
 using System;
 using System.Collections.Generic;
+using System.Data.SqlClient;
 using System.IO;
 using System.Linq;
 using System.ServiceModel;
 using System.Text.RegularExpressions;
 using System.Web;
-using static DevExpress.Web.Internal.ColorPicker;
 
 namespace ReportsEngine.Services
 {
@@ -173,6 +175,37 @@ namespace ReportsEngine.Services
                 if (parameter.Type.Name.ToString() == "DateTime" && AwaitParameterInputPassed)
                 {
                     parameter.Value = DateTime.Today;
+                }
+                else if (parameter.Name == "plngCoverSheetTray") // They want this to be defaulted from a field from CompanySettings
+                {
+                    var query = "Select TOP 1 WillPrintAccountDescription FROM CheckPrintingFormat WHERE Company.ID = " + companyid;
+                    //string connectionStringDynamic = "XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + ReportUser + "; Password=" + ReportUserPassword + "; Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + "; Persist Security Info=true; TrustServerCertificate=true;";
+                    string connectionStringDynamic = $"Data Source={report.Parameters["pstrServerName"].Value}; User ID={ReportUser}; Password={ReportUserPassword}; Initial Catalog={report.Parameters["pstrDatabaseName"].Value}; Persist Security Info=true; TrustServerCertificate=true;";
+                    ///
+                    try
+                    {
+                        using (SqlConnection conn = new SqlConnection(connectionStringDynamic))
+                        {
+                            conn.Open();
+                            using (SqlCommand cmd = new SqlCommand(query, conn))
+                            {
+                                var result = cmd.ExecuteScalar(); // Assuming the query returns a single value
+                                report.Parameters["pbooWillUseAccountNumberForJIBInvoice"].Value = result != DBNull.Value && result != null ? Convert.ToBoolean(result) : false;
+                            }
+                        }
+                    }
+                    catch (SqlException ex)
+                    {
+                        // Log or handle the exception
+                        Console.WriteLine("SQL Error: " + ex.Message);
+                    }
+                    catch (Exception ex)
+                    {
+                        // Handle general exceptions
+                        Console.WriteLine("General Error: " + ex.Message);
+                    }
+
+                    ///
                 }
             }
 

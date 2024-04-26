@@ -177,6 +177,7 @@
             this.xrTransitBottomCheck = new DevExpress.XtraReports.UI.XRLabel();
             this.StubEnd = new DevExpress.XtraReports.UI.SubBand();
             this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrCheckEnderLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.EndRemittance = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.plngCheckPrintingFormatID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngBankID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -184,7 +185,6 @@
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.pbooHideCheckPart = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyCheckPrintingFormatID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.xrCheckEnderLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.APChecksRemittanceOnly = new DevExpress.XtraReports.UI.XRSubreport();
@@ -347,7 +347,7 @@
             this.ReportHeader.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrSubreport1});
             this.ReportHeader.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[OverflowOptionCodeID] in (2,3)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[OverflowOptionCodeID] in (2,3) AND ?plngPrintRemittance <> 1")});
             this.ReportHeader.HeightF = 0F;
             this.ReportHeader.Name = "ReportHeader";
             // 
@@ -419,7 +419,7 @@
             this.plngPrintRemittance.Description = "Print Remittance";
             this.plngPrintRemittance.Name = "plngPrintRemittance";
             this.plngPrintRemittance.Type = typeof(int);
-            this.plngPrintRemittance.ValueInfo = "0";
+            this.plngPrintRemittance.ValueInfo = "2";
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Print Check with Remit"));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Print Remit Only"));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Print Check Only"));
@@ -438,7 +438,7 @@
             this.CheckCoverPage.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrCheckCoverPage});
             this.CheckCoverPage.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[OverflowOptionCodeID] in (1, 4)")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[OverflowOptionCodeID] in (1, 4)  AND ?plngPrintRemittance <> 1")});
             this.CheckCoverPage.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("EntryRow", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.CheckCoverPage.HeightF = 0F;
@@ -838,7 +838,7 @@
             this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel24.SizeF = new System.Drawing.SizeF(156.25F, 25F);
             this.xrLabel24.StylePriority.UseFont = false;
-            this.xrLabel24.Text = "0";
+            this.xrLabel24.Text = "12345678";
             this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel25
@@ -930,7 +930,7 @@
             this.xrLabel29.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrLabel29.SizeF = new System.Drawing.SizeF(156.25F, 25F);
             this.xrLabel29.StylePriority.UseFont = false;
-            this.xrLabel29.Text = "0";
+            this.xrLabel29.Text = "$0.00";
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrLabel30
@@ -1009,7 +1009,7 @@
             this.xrCompanyHeader,
             this.xrPages});
             this.CompanyAddressBandAboveRemittance.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[OverflowOptionCodeID] IN (2,4)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[OverflowOptionCodeID] IN (2,3,4)\n")});
             this.CompanyAddressBandAboveRemittance.HeightF = 46.82214F;
             this.CompanyAddressBandAboveRemittance.Name = "CompanyAddressBandAboveRemittance";
             // 
@@ -1233,7 +1233,7 @@
             this.xrLabel15.StylePriority.UseFont = false;
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
-            this.xrLabel15.Text = "0";
+            this.xrLabel15.Text = "12345678";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel16
@@ -1282,7 +1282,7 @@
             this.xrLabel17.StylePriority.UseFont = false;
             this.xrLabel17.StylePriority.UsePadding = false;
             this.xrLabel17.StylePriority.UseTextAlignment = false;
-            this.xrLabel17.Text = "0";
+            this.xrLabel17.Text = "$0.00";
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel17.TextFormatString = "{0:c2}";
             // 
@@ -1632,7 +1632,7 @@
             this.xrLabel13.StylePriority.UseFont = false;
             this.xrLabel13.StylePriority.UsePadding = false;
             this.xrLabel13.StylePriority.UseTextAlignment = false;
-            this.xrLabel13.Text = "0";
+            this.xrLabel13.Text = "12345678";
             this.xrLabel13.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel18
@@ -1681,7 +1681,7 @@
             this.xrLabel34.StylePriority.UseFont = false;
             this.xrLabel34.StylePriority.UsePadding = false;
             this.xrLabel34.StylePriority.UseTextAlignment = false;
-            this.xrLabel34.Text = "0";
+            this.xrLabel34.Text = "$0.00";
             this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel34.TextFormatString = "{0:c2}";
             // 
@@ -1960,7 +1960,7 @@
             this.CheckAmountShortString4.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.CheckAmountShortString4.SizeF = new System.Drawing.SizeF(156.25F, 25F);
             this.CheckAmountShortString4.StylePriority.UseFont = false;
-            this.CheckAmountShortString4.Text = "0";
+            this.CheckAmountShortString4.Text = "12345678";
             this.CheckAmountShortString4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox14
@@ -2052,7 +2052,7 @@
             this.CheckAmountShortString3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.CheckAmountShortString3.SizeF = new System.Drawing.SizeF(156.25F, 25F);
             this.CheckAmountShortString3.StylePriority.UseFont = false;
-            this.CheckAmountShortString3.Text = "0";
+            this.CheckAmountShortString3.Text = "$0.00";
             this.CheckAmountShortString3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox20
@@ -2149,6 +2149,30 @@
             this.SubBand5.HeightF = 2F;
             this.SubBand5.Name = "SubBand5";
             // 
+            // xrCheckEnderLabel
+            // 
+            this.xrCheckEnderLabel.BorderColor = System.Drawing.Color.Black;
+            this.xrCheckEnderLabel.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrCheckEnderLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrCheckEnderLabel.BorderWidth = 1F;
+            this.xrCheckEnderLabel.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[OverflowOptionCodeID] = 1")});
+            this.xrCheckEnderLabel.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrCheckEnderLabel.KeepTogether = true;
+            this.xrCheckEnderLabel.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrCheckEnderLabel.Multiline = true;
+            this.xrCheckEnderLabel.Name = "xrCheckEnderLabel";
+            this.xrCheckEnderLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrCheckEnderLabel.SizeF = new System.Drawing.SizeF(2F, 2F);
+            this.xrCheckEnderLabel.StylePriority.UseBorderColor = false;
+            this.xrCheckEnderLabel.StylePriority.UseBorderDashStyle = false;
+            this.xrCheckEnderLabel.StylePriority.UseBorders = false;
+            this.xrCheckEnderLabel.StylePriority.UseBorderWidth = false;
+            this.xrCheckEnderLabel.StylePriority.UseFont = false;
+            this.xrCheckEnderLabel.StylePriority.UsePadding = false;
+            this.xrCheckEnderLabel.StylePriority.UseTextAlignment = false;
+            this.xrCheckEnderLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
             // EndRemittance
             // 
             this.EndRemittance.HeightF = 0F;
@@ -2156,7 +2180,7 @@
             // 
             // plngCheckPrintingFormatID
             // 
-            this.plngCheckPrintingFormatID.Description = "Check Printing Format ID";
+            this.plngCheckPrintingFormatID.Description = "Check Printing Format";
             this.plngCheckPrintingFormatID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckType = 0")});
             this.plngCheckPrintingFormatID.Name = "plngCheckPrintingFormatID";
@@ -2299,35 +2323,11 @@
             // 
             // plngCompanyCheckPrintingFormatID
             // 
-            this.plngCompanyCheckPrintingFormatID.Description = "Company Check Printing Format ID";
+            this.plngCompanyCheckPrintingFormatID.Description = "Company Check Printing Format";
             this.plngCompanyCheckPrintingFormatID.Name = "plngCompanyCheckPrintingFormatID";
             this.plngCompanyCheckPrintingFormatID.Type = typeof(int);
             this.plngCompanyCheckPrintingFormatID.ValueInfo = "0";
             this.plngCompanyCheckPrintingFormatID.Visible = false;
-            // 
-            // xrCheckEnderLabel
-            // 
-            this.xrCheckEnderLabel.BorderColor = System.Drawing.Color.Black;
-            this.xrCheckEnderLabel.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrCheckEnderLabel.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrCheckEnderLabel.BorderWidth = 1F;
-            this.xrCheckEnderLabel.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[OverflowOptionCodeID] = 1")});
-            this.xrCheckEnderLabel.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrCheckEnderLabel.KeepTogether = true;
-            this.xrCheckEnderLabel.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrCheckEnderLabel.Multiline = true;
-            this.xrCheckEnderLabel.Name = "xrCheckEnderLabel";
-            this.xrCheckEnderLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrCheckEnderLabel.SizeF = new System.Drawing.SizeF(2F, 2F);
-            this.xrCheckEnderLabel.StylePriority.UseBorderColor = false;
-            this.xrCheckEnderLabel.StylePriority.UseBorderDashStyle = false;
-            this.xrCheckEnderLabel.StylePriority.UseBorders = false;
-            this.xrCheckEnderLabel.StylePriority.UseBorderWidth = false;
-            this.xrCheckEnderLabel.StylePriority.UseFont = false;
-            this.xrCheckEnderLabel.StylePriority.UsePadding = false;
-            this.xrCheckEnderLabel.StylePriority.UseTextAlignment = false;
-            this.xrCheckEnderLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrSubreport2
             // 

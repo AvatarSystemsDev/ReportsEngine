@@ -132,6 +132,10 @@ namespace ReportsEngine
             DevExpress.XtraReports.UI.XRSummary xrSummary4 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary5 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary6 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings8 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.UI.XRSummary xrSummary7 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary8 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings9 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -150,10 +154,6 @@ namespace ReportsEngine
             DevExpress.DataAccess.DataFederation.SelectNode selectNode5 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode5 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source5 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings8 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -223,6 +223,13 @@ namespace ReportsEngine
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
+            this.pstrSelectCashAccountID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteBeginningCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pdteEndingCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngBeginningCheckSortNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectRDCheckID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooIncludeVoidChecks = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngEndingCheckSortNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupHeaderBand2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
@@ -250,13 +257,6 @@ namespace ReportsEngine
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
-            this.pdteBeginningCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pdteEndingCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrSelectCashAccountID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngBeginningCheckSortNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngEndingCheckSortNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrSelectRDCheckID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooIncludeVoidChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooAwaitParameterInput = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport3 = new DevExpress.XtraReports.UI.XRSubreport();
@@ -709,7 +709,7 @@ namespace ReportsEngine
             this.xrLabel28.StylePriority.UsePadding = false;
             this.xrLabel28.StylePriority.UseTextAlignment = false;
             this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel28.TextFormatString = "{0:N2}";
+            this.xrLabel28.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel29
             // 
@@ -737,7 +737,7 @@ namespace ReportsEngine
             this.xrLabel29.StylePriority.UsePadding = false;
             this.xrLabel29.StylePriority.UseTextAlignment = false;
             this.xrLabel29.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel29.TextFormatString = "{0:N2}";
+            this.xrLabel29.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel30
             // 
@@ -765,7 +765,7 @@ namespace ReportsEngine
             this.xrLabel30.StylePriority.UsePadding = false;
             this.xrLabel30.StylePriority.UseTextAlignment = false;
             this.xrLabel30.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel30.TextFormatString = "{0:N2}";
+            this.xrLabel30.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel33
             // 
@@ -876,7 +876,7 @@ namespace ReportsEngine
             this.xrLabel36.StylePriority.UsePadding = false;
             this.xrLabel36.StylePriority.UseTextAlignment = false;
             this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel36.TextFormatString = "{0:N2}";
+            this.xrLabel36.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel37
             // 
@@ -904,7 +904,7 @@ namespace ReportsEngine
             this.xrLabel37.StylePriority.UsePadding = false;
             this.xrLabel37.StylePriority.UseTextAlignment = false;
             this.xrLabel37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel37.TextFormatString = "{0:N2}";
+            this.xrLabel37.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel38
             // 
@@ -932,7 +932,7 @@ namespace ReportsEngine
             this.xrLabel38.StylePriority.UsePadding = false;
             this.xrLabel38.StylePriority.UseTextAlignment = false;
             this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel38.TextFormatString = "{0:N2}";
+            this.xrLabel38.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel39
             // 
@@ -958,7 +958,7 @@ namespace ReportsEngine
             this.xrLabel39.StylePriority.UsePadding = false;
             this.xrLabel39.StylePriority.UseTextAlignment = false;
             this.xrLabel39.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel39.TextFormatString = "{0:N2}";
+            this.xrLabel39.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel40
             // 
@@ -984,7 +984,7 @@ namespace ReportsEngine
             this.xrLabel40.StylePriority.UsePadding = false;
             this.xrLabel40.StylePriority.UseTextAlignment = false;
             this.xrLabel40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel40.TextFormatString = "{0:N2}";
+            this.xrLabel40.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel11
             // 
@@ -1677,7 +1677,7 @@ namespace ReportsEngine
             this.xrLabel21.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel21.BorderWidth = 1F;
             this.xrLabel21.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([OwnerNet])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([OwnerNet] - [ARAmount])")});
             this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel21.ForeColor = System.Drawing.Color.Black;
             this.xrLabel21.KeepTogether = true;
@@ -1696,7 +1696,7 @@ namespace ReportsEngine
             xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel21.Summary = xrSummary1;
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel21.TextFormatString = "{0:N2}";
+            this.xrLabel21.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel22
             // 
@@ -1705,7 +1705,7 @@ namespace ReportsEngine
             this.xrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel22.BorderWidth = 1F;
             this.xrLabel22.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([OwnerDeductions])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([OwnerDeductions] + [ARAmount])")});
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel22.ForeColor = System.Drawing.Color.Black;
             this.xrLabel22.KeepTogether = true;
@@ -1724,7 +1724,7 @@ namespace ReportsEngine
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel22.Summary = xrSummary2;
             this.xrLabel22.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel22.TextFormatString = "{0:N2}";
+            this.xrLabel22.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel32
             // 
@@ -1754,7 +1754,7 @@ namespace ReportsEngine
             xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel32.Summary = xrSummary3;
             this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel32.TextFormatString = "{0:N2}";
+            this.xrLabel32.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel58
             // 
@@ -1784,7 +1784,7 @@ namespace ReportsEngine
             xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
             this.xrLabel58.Summary = xrSummary4;
             this.xrLabel58.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel58.TextFormatString = "{0:N2}";
+            this.xrLabel58.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel59
             // 
@@ -1980,6 +1980,108 @@ namespace ReportsEngine
             this.xrLabel14.Text = "Barrels";
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
+            // pstrSelectCashAccountID
+            // 
+            this.pstrSelectCashAccountID.Description = "Select Cash Account";
+            this.pstrSelectCashAccountID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
+            this.pstrSelectCashAccountID.MultiValue = true;
+            this.pstrSelectCashAccountID.Name = "pstrSelectCashAccountID";
+            this.pstrSelectCashAccountID.SelectAllValues = true;
+            this.pstrSelectCashAccountID.Type = typeof(int);
+            dynamicListLookUpSettings5.DataMember = "BankAccountsLookup";
+            dynamicListLookUpSettings5.DataSource = this.Dynamic;
+            dynamicListLookUpSettings5.DisplayMember = "Description";
+            dynamicListLookUpSettings5.FilterString = null;
+            dynamicListLookUpSettings5.SortMember = null;
+            dynamicListLookUpSettings5.ValueMember = "CashAccountID";
+            this.pstrSelectCashAccountID.ValueSourceSettings = dynamicListLookUpSettings5;
+            // 
+            // pdteBeginningCheckDate
+            // 
+            this.pdteBeginningCheckDate.Description = "Beginning Check Date";
+            this.pdteBeginningCheckDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
+            this.pdteBeginningCheckDate.Name = "pdteBeginningCheckDate";
+            this.pdteBeginningCheckDate.Type = typeof(System.DateTime);
+            this.pdteBeginningCheckDate.ValueInfo = "1900-01-01";
+            // 
+            // pdteEndingCheckDate
+            // 
+            this.pdteEndingCheckDate.Description = "Ending Check Date";
+            this.pdteEndingCheckDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
+            this.pdteEndingCheckDate.Name = "pdteEndingCheckDate";
+            this.pdteEndingCheckDate.Type = typeof(System.DateTime);
+            this.pdteEndingCheckDate.ValueInfo = "9999-12-31";
+            // 
+            // plngBeginningCheckSortNumber
+            // 
+            this.plngBeginningCheckSortNumber.Description = "Beginning Check Number";
+            this.plngBeginningCheckSortNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
+            this.plngBeginningCheckSortNumber.Name = "plngBeginningCheckSortNumber";
+            this.plngBeginningCheckSortNumber.Type = typeof(int);
+            this.plngBeginningCheckSortNumber.ValueInfo = "0";
+            dynamicListLookUpSettings6.DataMember = "RDChecksLookup";
+            dynamicListLookUpSettings6.DataSource = this.Dynamic;
+            dynamicListLookUpSettings6.DisplayMember = "Number";
+            dynamicListLookUpSettings6.FilterString = resources.GetString("dynamicListLookUpSettings6.FilterString");
+            dynamicListLookUpSettings6.SortMember = null;
+            dynamicListLookUpSettings6.ValueMember = "SortFieldCheckNumber";
+            this.plngBeginningCheckSortNumber.ValueSourceSettings = dynamicListLookUpSettings6;
+            // 
+            // pstrSelectRDCheckID
+            // 
+            this.pstrSelectRDCheckID.Description = "Select Check";
+            this.pstrSelectRDCheckID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
+            this.pstrSelectRDCheckID.MultiValue = true;
+            this.pstrSelectRDCheckID.Name = "pstrSelectRDCheckID";
+            this.pstrSelectRDCheckID.SelectAllValues = true;
+            this.pstrSelectRDCheckID.Type = typeof(int);
+            dynamicListLookUpSettings7.DataMember = "RDChecksLookup";
+            dynamicListLookUpSettings7.DataSource = this.Dynamic;
+            dynamicListLookUpSettings7.DisplayMember = "Number";
+            dynamicListLookUpSettings7.FilterString = resources.GetString("dynamicListLookUpSettings7.FilterString");
+            dynamicListLookUpSettings7.SortMember = null;
+            dynamicListLookUpSettings7.ValueMember = "CheckID";
+            this.pstrSelectRDCheckID.ValueSourceSettings = dynamicListLookUpSettings7;
+            // 
+            // pbooIncludeVoidChecks
+            // 
+            this.pbooIncludeVoidChecks.Description = "Include Void Checks";
+            this.pbooIncludeVoidChecks.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
+            this.pbooIncludeVoidChecks.Name = "pbooIncludeVoidChecks";
+            this.pbooIncludeVoidChecks.Type = typeof(bool);
+            this.pbooIncludeVoidChecks.ValueInfo = "False";
+            // 
+            // plngEndingCheckSortNumber
+            // 
+            this.plngEndingCheckSortNumber.Description = "Ending Check Number";
+            this.plngEndingCheckSortNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
+            this.plngEndingCheckSortNumber.Name = "plngEndingCheckSortNumber";
+            this.plngEndingCheckSortNumber.Type = typeof(int);
+            this.plngEndingCheckSortNumber.ValueInfo = "999999999";
+            dynamicListLookUpSettings8.DataMember = "RDChecksLookup";
+            dynamicListLookUpSettings8.DataSource = this.Dynamic;
+            dynamicListLookUpSettings8.DisplayMember = "Number";
+            dynamicListLookUpSettings8.FilterString = resources.GetString("dynamicListLookUpSettings8.FilterString");
+            dynamicListLookUpSettings8.SortMember = null;
+            dynamicListLookUpSettings8.ValueMember = "SortFieldCheckNumber";
+            this.plngEndingCheckSortNumber.ValueSourceSettings = dynamicListLookUpSettings8;
+            // 
             // xrLabel12
             // 
             this.xrLabel12.BorderColor = System.Drawing.Color.Black;
@@ -2071,7 +2173,7 @@ namespace ReportsEngine
             xrSummary7.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrLabel51.Summary = xrSummary7;
             this.xrLabel51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel51.TextFormatString = "{0:N2}";
+            this.xrLabel51.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel52
             // 
@@ -2553,7 +2655,7 @@ namespace ReportsEngine
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_RDCheckRegister";
             sourceNode2.Alias = null;
-            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"737\" />";
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"757\" />";
             source2.DataMember = "RDCheckRegister";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_RDCheckRegister";
@@ -2591,7 +2693,8 @@ namespace ReportsEngine
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "MCF"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BBL"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "UseMCFVolume"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SortCheckNumber")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SortCheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ARAmount")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_CheckPrintingProcessTracking";
             sourceNode3.Alias = null;
@@ -2662,106 +2765,6 @@ namespace ReportsEngine
             selectNode3,
             selectNode4,
             selectNode5});
-            // 
-            // pdteBeginningCheckDate
-            // 
-            this.pdteBeginningCheckDate.Description = "Beginning Check Date";
-            this.pdteBeginningCheckDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
-            this.pdteBeginningCheckDate.Name = "pdteBeginningCheckDate";
-            this.pdteBeginningCheckDate.Type = typeof(System.DateTime);
-            this.pdteBeginningCheckDate.ValueInfo = "1900-01-01";
-            // 
-            // pdteEndingCheckDate
-            // 
-            this.pdteEndingCheckDate.Description = "Ending Check Date";
-            this.pdteEndingCheckDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
-            this.pdteEndingCheckDate.Name = "pdteEndingCheckDate";
-            this.pdteEndingCheckDate.Type = typeof(System.DateTime);
-            this.pdteEndingCheckDate.ValueInfo = "9999-12-31";
-            // 
-            // pstrSelectCashAccountID
-            // 
-            this.pstrSelectCashAccountID.Description = "Select Cash Account";
-            this.pstrSelectCashAccountID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
-            this.pstrSelectCashAccountID.MultiValue = true;
-            this.pstrSelectCashAccountID.Name = "pstrSelectCashAccountID";
-            this.pstrSelectCashAccountID.SelectAllValues = true;
-            this.pstrSelectCashAccountID.Type = typeof(int);
-            dynamicListLookUpSettings5.DataMember = "BankAccountsLookup";
-            dynamicListLookUpSettings5.DataSource = this.Dynamic;
-            dynamicListLookUpSettings5.DisplayMember = "Description";
-            dynamicListLookUpSettings5.FilterString = null;
-            dynamicListLookUpSettings5.SortMember = null;
-            dynamicListLookUpSettings5.ValueMember = "CashAccountID";
-            this.pstrSelectCashAccountID.ValueSourceSettings = dynamicListLookUpSettings5;
-            // 
-            // plngBeginningCheckSortNumber
-            // 
-            this.plngBeginningCheckSortNumber.Description = "Beginning Check Number";
-            this.plngBeginningCheckSortNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
-            this.plngBeginningCheckSortNumber.Name = "plngBeginningCheckSortNumber";
-            this.plngBeginningCheckSortNumber.Type = typeof(int);
-            this.plngBeginningCheckSortNumber.ValueInfo = "0";
-            dynamicListLookUpSettings6.DataMember = "RDChecksLookup";
-            dynamicListLookUpSettings6.DataSource = this.Dynamic;
-            dynamicListLookUpSettings6.DisplayMember = "Number";
-            dynamicListLookUpSettings6.FilterString = null;
-            dynamicListLookUpSettings6.SortMember = null;
-            dynamicListLookUpSettings6.ValueMember = "SortFieldCheckNumber";
-            this.plngBeginningCheckSortNumber.ValueSourceSettings = dynamicListLookUpSettings6;
-            // 
-            // plngEndingCheckSortNumber
-            // 
-            this.plngEndingCheckSortNumber.Description = "Ending Check Number";
-            this.plngEndingCheckSortNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
-            this.plngEndingCheckSortNumber.Name = "plngEndingCheckSortNumber";
-            this.plngEndingCheckSortNumber.Type = typeof(int);
-            this.plngEndingCheckSortNumber.ValueInfo = "999999999";
-            dynamicListLookUpSettings8.DataMember = "RDChecksLookup";
-            dynamicListLookUpSettings8.DataSource = this.Dynamic;
-            dynamicListLookUpSettings8.DisplayMember = "Number";
-            dynamicListLookUpSettings8.FilterString = null;
-            dynamicListLookUpSettings8.SortMember = null;
-            dynamicListLookUpSettings8.ValueMember = "SortFieldCheckNumber";
-            this.plngEndingCheckSortNumber.ValueSourceSettings = dynamicListLookUpSettings8;
-            // 
-            // pstrSelectRDCheckID
-            // 
-            this.pstrSelectRDCheckID.Description = "Select Check";
-            this.pstrSelectRDCheckID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
-            this.pstrSelectRDCheckID.MultiValue = true;
-            this.pstrSelectRDCheckID.Name = "pstrSelectRDCheckID";
-            this.pstrSelectRDCheckID.SelectAllValues = true;
-            this.pstrSelectRDCheckID.Type = typeof(int);
-            dynamicListLookUpSettings7.DataMember = "RDChecksLookup";
-            dynamicListLookUpSettings7.DataSource = this.Dynamic;
-            dynamicListLookUpSettings7.DisplayMember = "Number";
-            dynamicListLookUpSettings7.FilterString = null;
-            dynamicListLookUpSettings7.SortMember = null;
-            dynamicListLookUpSettings7.ValueMember = "CheckID";
-            this.pstrSelectRDCheckID.ValueSourceSettings = dynamicListLookUpSettings7;
-            // 
-            // pbooIncludeVoidChecks
-            // 
-            this.pbooIncludeVoidChecks.Description = "Include Void Checks";
-            this.pbooIncludeVoidChecks.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
-            this.pbooIncludeVoidChecks.Name = "pbooIncludeVoidChecks";
-            this.pbooIncludeVoidChecks.Type = typeof(bool);
-            this.pbooIncludeVoidChecks.ValueInfo = "False";
             // 
             // pbooAwaitParameterInput
             // 
@@ -2839,6 +2842,7 @@ namespace ReportsEngine
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeVoidChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -2846,7 +2850,6 @@ namespace ReportsEngine
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningCheckSortNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingCheckSortNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectRDCheckID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeVoidChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooAwaitParameterInput, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
@@ -2858,6 +2861,7 @@ namespace ReportsEngine
             this.plngCheckPrintingProcessTrackingID,
             this.pdteBeginningCheckDate,
             this.pdteEndingCheckDate,
+            this.pbooIncludeVoidChecks,
             this.pstrBeginningOwnerNumber,
             this.pstrEndingOwnerNumber,
             this.pstrSelectOwner,
@@ -2865,7 +2869,6 @@ namespace ReportsEngine
             this.plngBeginningCheckSortNumber,
             this.plngEndingCheckSortNumber,
             this.pstrSelectRDCheckID,
-            this.pbooIncludeVoidChecks,
             this.pbooAwaitParameterInput,
             this.pbooShowCriteria});
             this.Version = "23.1";

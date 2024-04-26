@@ -285,6 +285,7 @@
             this.DataMember = "RDCheckHeader";
             this.DataSource = this.Dynamic;
             this.DisplayName = "RDChecksRemittanceOnly";
+            this.FilterString = "Not [ISEFT]";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 18F, 20F, 20F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

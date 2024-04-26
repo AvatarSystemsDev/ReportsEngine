@@ -17,7 +17,6 @@ namespace ReportsEngine.Reports.FinancialReports
             pageHeaderBand1.BeforePrint += PageHeaderBand_BeforePrint;
             OwnerGroup.BeforePrint += OwnerGroup_BeforePrint;
         }
-
         private void OwnerGroup_BeforePrint(object sender, CancelEventArgs e)
         {
             pageIndex = 1;

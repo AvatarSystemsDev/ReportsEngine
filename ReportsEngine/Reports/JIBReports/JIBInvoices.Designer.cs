@@ -47,6 +47,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(JIBInvoices));
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -112,7 +114,7 @@
             this.plngJIBStatementID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngJIBProcessTrackingID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrInvoiceNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooPrintAccountDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillUseAccountNumberForJIBInvoice = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.boolPrintRemit = new DevExpress.XtraReports.Parameters.Parameter();
@@ -184,7 +186,7 @@
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngJIBStatementID", typeof(int));
             queryParameter7.Name = "@pbooPrintAccountDescription";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooPrintAccountDescription", typeof(bool));
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooWillUseAccountNumberForJIBInvoice", typeof(bool));
             queryParameter8.Name = "@pstrBeginningInvoiceNumber";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?pstrBeginningInvoiceNumber", typeof(string));
@@ -217,12 +219,22 @@
             storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter13});
             storedProcQuery5.StoredProcName = "JIBInvoiceNumbers_ReportLookup";
+            customSqlQuery1.Name = "Query";
+            queryParameter14.Name = "plngCompanyID";
+            queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            customSqlQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter14});
+            customSqlQuery1.Sql = "Select WillPrintAccountDescription, Options.Yes from Company  LEFT JOIN(\r\nSelect " +
+    "CAST(1 AS BIT) AS Yes\r\nUNION ALL\r\nSelect CAST(0 AS BIT) AS Yes\r\n) AS Options ON " +
+    "1=1\r\nWHERE Company.ID = @plngCompanyID";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
             storedProcQuery2,
             storedProcQuery3,
             storedProcQuery4,
-            storedProcQuery5});
+            storedProcQuery5,
+            customSqlQuery1});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
@@ -1121,12 +1133,12 @@
             this.pstrInvoiceNumber.ValueSourceSettings = dynamicListLookUpSettings3;
             this.pstrInvoiceNumber.Visible = false;
             // 
-            // pbooPrintAccountDescription
+            // pbooWillUseAccountNumberForJIBInvoice
             // 
-            this.pbooPrintAccountDescription.Description = "Print Account Description";
-            this.pbooPrintAccountDescription.Name = "pbooPrintAccountDescription";
-            this.pbooPrintAccountDescription.Type = typeof(bool);
-            this.pbooPrintAccountDescription.ValueInfo = "False";
+            this.pbooWillUseAccountNumberForJIBInvoice.Description = "Print Account Description";
+            this.pbooWillUseAccountNumberForJIBInvoice.Name = "pbooWillUseAccountNumberForJIBInvoice";
+            this.pbooWillUseAccountNumberForJIBInvoice.Type = typeof(bool);
+            this.pbooWillUseAccountNumberForJIBInvoice.ValueInfo = "False";
             // 
             // pstrBeginningOwnerNumber
             // 
@@ -1468,6 +1480,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooRunFromStatement")});
             this.pbooShowCompanyOwner.Name = "pbooShowCompanyOwner";
             this.pbooShowCompanyOwner.Type = typeof(bool);
+            this.pbooShowCompanyOwner.ValueInfo = "False";
             // 
             // groupHeaderBand1
             // 
@@ -1626,7 +1639,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngJIBStatementID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngJIBProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrInvoiceNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooPrintAccountDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooWillUseAccountNumberForJIBInvoice, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningInvoiceNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1645,7 +1658,7 @@
             this.plngJIBStatementID,
             this.plngJIBProcessTrackingID,
             this.pstrInvoiceNumber,
-            this.pbooPrintAccountDescription,
+            this.pbooWillUseAccountNumberForJIBInvoice,
             this.pstrBeginningOwnerNumber,
             this.pstrEndingOwnerNumber,
             this.pstrBeginningInvoiceNumber,
@@ -1689,7 +1702,7 @@
         private DevExpress.XtraReports.Parameters.Parameter plngJIBStatementID;
         private DevExpress.XtraReports.Parameters.Parameter plngJIBProcessTrackingID;
         private DevExpress.XtraReports.Parameters.Parameter pstrInvoiceNumber;
-        private DevExpress.XtraReports.Parameters.Parameter pbooPrintAccountDescription;
+        private DevExpress.XtraReports.Parameters.Parameter pbooWillUseAccountNumberForJIBInvoice;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningOwnerNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingOwnerNumber;
         private DevExpress.XtraReports.Parameters.Parameter boolPrintRemit;
