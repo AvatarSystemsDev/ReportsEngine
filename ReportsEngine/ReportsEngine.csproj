@@ -531,6 +531,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\RDReports\CombinedStateWithholdingSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RDReports\CombinedStateWithholdingSubreport.Designer.cs">
+      <DependentUpon>CombinedStateWithholdingSubreport.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExcelPreVoidCheckReport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2605,6 +2611,9 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\RDReports\CombinedStateWithholdingSubreport.resx">
+      <DependentUpon>CombinedStateWithholdingSubreport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExcelPreVoidCheckReport.resx">
       <DependentUpon>ExcelPreVoidCheckReport.cs</DependentUpon>
     </EmbeddedResource>
