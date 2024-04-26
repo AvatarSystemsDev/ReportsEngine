@@ -12,6 +12,12 @@ using System.Linq;
 using System.Net.Mail;
 using System.Web;
 using WebApiODataServiceProject;
+using iText.Kernel.Pdf;
+using iText.Kernel.Pdf.Canvas.Parser;
+using iText.Kernel.Pdf.Canvas.Parser.Listener;
+using DevExpress.XtraCharts.Native;
+using DevExpress.Office.Utils;
+
 
 namespace ReportsEngine.Services
 {
@@ -132,14 +138,46 @@ namespace ReportsEngine.Services
 
                     byte[] documentByteArray = stream.ToArray();
                     String base64String = Convert.ToBase64String(documentByteArray);
+                    List < KeyValuePair<int, int> > keyValuePagesToTray = new List<KeyValuePair<int, int>>();
+                    DocumentDataWithPDFAndKeyValuePairs documentDataWithPDFAndKeyValuePairs = null;
+                    try
+                    {
+                        MemoryStream pdfStream = new MemoryStream(documentByteArray);
+                        var pdfReader = new PdfReader(pdfStream);
+                        var pdfDocument = new PdfDocument(pdfReader);
+                        int numberOfPages = pdfDocument.GetNumberOfPages();
+
+                        int checkTray = customData.checkTray;
+                        int coverSheetTray = customData.coverSheetTray;
+                        int remittanceTray = customData.remittanceTray;
+
+                        List<int> CheckPages = FindPagesWithText(pdfStream, "PLEASE DETACH THIS REMITTANCE ADVICE BEFORE DEPOSITING CHECK"); // Should be the only pages on check pager. Will not work if this is changed.
+                        List<int> CoverSheetPages = FindMissingIndices(numberOfPages, FindPagesWithText(pdfStream, "Page ")); // Set to empty list if PrintCoverSheet passed is false. Cover Sheets should be the only pages without a page number.
+                        // List<int> RemittanceSheetPages = FindMissingIndices(NumberOfPages, (List<int>) CheckPages.Concat(CoverSheetPages)); // I don't think that I need this, but this is how you get the rest of the pages.
+
+                        keyValuePagesToTray = SetPagesToKeyValuePairList(numberOfPages, CheckPages, CoverSheetPages, checkTray, coverSheetTray, remittanceTray);
+
+                        documentDataWithPDFAndKeyValuePairs = new DocumentDataWithPDFAndKeyValuePairs(base64String, keyValuePagesToTray);
+ 
+                    }
+                    catch
+                    {
+                        return new DocumentOperationResponse
+                        {
+                            Succeeded = false,
+                            Message = "PDF parsing unsuccessful",
+                            CustomData = JsonConvert.SerializeObject(new DocumentDataWithPDFAndKeyValuePairs(base64String, keyValuePagesToTray)),
+                            //trays
+                        };
+                    }
                     //var archived = SendToArchiveAsync(stream, systemID, userID);  //If call Providence webservice from here. 
                     string message = "Sent to Printer";
                     return new DocumentOperationResponse
                     {
                         Succeeded = true,
                         Message = message,
-                        CustomData = base64String,
-                        //trays
+                        CustomData = JsonConvert.SerializeObject(documentDataWithPDFAndKeyValuePairs),
+                        //Trays
                     };
                 }
             }
@@ -223,5 +261,82 @@ namespace ReportsEngine.Services
         {
             return value;
         }
+        private List<int> FindPagesWithText(MemoryStream pdfStream, string searchText)
+        {
+            List<int> pagesWithText = new List<int>();
+
+            // Make sure to reset the position of the stream before reading
+            pdfStream.Position = 0;
+
+            using (var pdfReader = new PdfReader(pdfStream))
+            using (var pdfDocument = new PdfDocument(pdfReader))
+            {
+                int numberOfPages = pdfDocument.GetNumberOfPages();
+
+                for (int i = 1; i <= numberOfPages; i++)
+                {
+                    var page = pdfDocument.GetPage(i);
+                    var text = PdfTextExtractor.GetTextFromPage(page, new SimpleTextExtractionStrategy());
+
+                    if (text.Contains(searchText))
+                    {
+                        pagesWithText.Add(i);
+                    }
+                }
+            }
+
+            return pagesWithText;
+        }
+        // This finds every page index that does not exist in pagesWithText from 1 to the number of Pages. Kind of like 
+        private List<int> FindMissingIndices(int numberOfPages, List<int> pagesWithText)
+        {
+            HashSet<int> pagesWithTextSet = new HashSet<int>(pagesWithText);
+            List<int> missingIndices = new List<int>();
+
+            for (int i = 1; i <= numberOfPages; i++)
+            {
+                if (!pagesWithTextSet.Contains(i))
+                {
+                    missingIndices.Add(i);
+                }
+            }
+
+            return missingIndices;
+        }
+        // Pages are keys, values are sheet types
+        private List<KeyValuePair<int, int>> SetPagesToKeyValuePairList(int numberOfPages, List<int> CheckPages, List<int> CoverSheetPages, int checkTray, int coverSheetTray, int remittanceTray)
+        {
+            List<KeyValuePair<int, int>> keyValuePairList = new List<KeyValuePair<int, int>>();
+            for (int i = 1; i <= numberOfPages; i++)
+            {
+                if (CheckPages.Contains(i))
+                {
+                    keyValuePairList.Add(new KeyValuePair<int, int>(i, checkTray));
+                }
+                else if (CoverSheetPages.Contains(i))
+                {
+                    keyValuePairList.Add(new KeyValuePair<int, int>(i, coverSheetTray));
+                }
+                else
+                {
+                    keyValuePairList.Add(new KeyValuePair<int, int>(i, remittanceTray));
+                }
+            }
+            return keyValuePairList;
+        }
+        // This is for Custom-Print. I want to serialize the PDF String and also the key value
+        private class DocumentDataWithPDFAndKeyValuePairs
+        {
+
+            public DocumentDataWithPDFAndKeyValuePairs(string base64String, List<KeyValuePair<int, int>> keyValuePagesToTray)
+            {
+                this.Base64String = base64String;
+                this.keyValuePagesToTray = keyValuePagesToTray;
+            }
+
+            public String Base64String { get; set; }
+            public List<KeyValuePair<int, int>> keyValuePagesToTray { get; set; }
+        }
+
     }
 }

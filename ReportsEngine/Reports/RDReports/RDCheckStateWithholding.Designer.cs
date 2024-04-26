@@ -240,6 +240,8 @@
             this.pbooUseProcessingDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteBeginningDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteEndingDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.xrLabel108 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox137)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
@@ -712,7 +714,7 @@
             this.xrLabel45.StylePriority.UsePadding = false;
             this.xrLabel45.StylePriority.UseTextAlignment = false;
             this.xrLabel45.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel45.TextFormatString = "{0:n2}";
+            this.xrLabel45.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel46
             // 
@@ -741,7 +743,7 @@
             this.xrLabel46.StylePriority.UsePadding = false;
             this.xrLabel46.StylePriority.UseTextAlignment = false;
             this.xrLabel46.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel46.TextFormatString = "{0:n2}";
+            this.xrLabel46.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel47
             // 
@@ -770,7 +772,7 @@
             this.xrLabel47.StylePriority.UsePadding = false;
             this.xrLabel47.StylePriority.UseTextAlignment = false;
             this.xrLabel47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel47.TextFormatString = "{0:n2}";
+            this.xrLabel47.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // pageFooterBand1
             // 
@@ -2756,7 +2758,7 @@
             this.xrLabel36.StylePriority.UsePadding = false;
             this.xrLabel36.StylePriority.UseTextAlignment = false;
             this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel36.TextFormatString = "{0:n2}";
+            this.xrLabel36.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // xrLabel35
             // 
@@ -2943,7 +2945,7 @@
             this.xrLabel37.StylePriority.UsePadding = false;
             this.xrLabel37.StylePriority.UseTextAlignment = false;
             this.xrLabel37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel37.TextFormatString = "{0:n2}";
+            this.xrLabel37.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // pbooUseProcessingDate
             // 
@@ -2972,6 +2974,39 @@
             this.pdteEndingDate.Type = typeof(System.DateTime);
             this.pdteEndingDate.ValueInfo = "2023-11-09";
             // 
+            // groupFooterBand2
+            // 
+            this.groupFooterBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel108});
+            this.groupFooterBand2.HeightF = 10F;
+            this.groupFooterBand2.Name = "groupFooterBand2";
+            // 
+            // xrLabel108
+            // 
+            this.xrLabel108.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel108.BorderColor = System.Drawing.Color.Transparent;
+            this.xrLabel108.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel108.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrLabel108.BorderWidth = 1.39F;
+            this.xrLabel108.CanGrow = false;
+            this.xrLabel108.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel108.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel108.KeepTogether = true;
+            this.xrLabel108.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel108.Name = "xrLabel108";
+            this.xrLabel108.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel108.SizeF = new System.Drawing.SizeF(770.0005F, 10F);
+            this.xrLabel108.StylePriority.UseBackColor = false;
+            this.xrLabel108.StylePriority.UseBorderColor = false;
+            this.xrLabel108.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel108.StylePriority.UseBorders = false;
+            this.xrLabel108.StylePriority.UseBorderWidth = false;
+            this.xrLabel108.StylePriority.UseFont = false;
+            this.xrLabel108.StylePriority.UseForeColor = false;
+            this.xrLabel108.StylePriority.UsePadding = false;
+            this.xrLabel108.StylePriority.UseTextAlignment = false;
+            this.xrLabel108.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // RDCheckStateWithholding
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2983,7 +3018,8 @@
             this.ReportHeader,
             this.groupFooterBand1,
             this.PageHeader,
-            this.groupHeaderBand2});
+            this.groupHeaderBand2,
+            this.groupFooterBand2});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -3143,5 +3179,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooUseProcessingDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteBeginningDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteEndingDate;
+        private DevExpress.XtraReports.UI.GroupFooterBand groupFooterBand2;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel108;
     }
 }

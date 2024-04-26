@@ -43,15 +43,35 @@ namespace ReportsEngine.Reports.JIBReports
             CheckCoverPage.PrintOnPage += CheckCoverPage_PrintOnPage;
             xrPageBeginningLabel.PrintOnPage += XrPageBeginningLabel_PrintOnPage;
             xrCheckEnderLabel.PrintOnPage += XrCheckEnderLabel_PrintOnPage;
-            CheckTopBand.PrintOnPage += CheckTopBand_PrintOnPage;
+            //CheckTopBand.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckBottomBand.PrintOnPage += CheckBottomBand_PrintOnPage;
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
             CheckInformationPart.PrintOnPage += CheckStubBandTopCheck_PrintOnPage1;
             PleaseDetachThisRemittanceAdviceBeforeDepositingCheck.PrintOnPage += CheckTopBand_PrintOnPage;
             CheckInformationPart.PrintOnPage += CheckTopBand_PrintOnPage;
-            xrTopCheckPanel.PrintOnPage += XrTopCheckPanel_PrintOnPage;
+            //xrTopCheckPanel.PrintOnPage += XrTopCheckPanel_PrintOnPage;
             xrEndCoverPage.PrintOnPage += XrEndCoverPage_PrintOnPage;
             CheckGroupBottom.BeforePrint += CheckBottomBand_BeforePrint;
+            //if ((GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString()) == "1") {
+            //    CheckBeginningHeader.RepeatEveryPage = true;
+            //}
+            //else
+            //{
+            //    CheckBeginningHeader.RepeatEveryPage = false;
+            //}
+            CheckBeginningHeader.BeforePrint += CheckBeginningHeader_BeforePrint;
+        }
+
+        private void CheckBeginningHeader_BeforePrint(object sender, CancelEventArgs e)
+        {
+            if ((GetCurrentColumnValue("OverflowOptionCodeID") is null ? "1" : GetCurrentColumnValue("OverflowOptionCodeID").ToString()) == "1")
+            {
+                CheckBeginningHeader.RepeatEveryPage = true;
+            }
+            else
+            {
+                CheckBeginningHeader.RepeatEveryPage = false;
+            }
         }
 
         private void CheckBottomBand_BeforePrint(object sender, CancelEventArgs e)

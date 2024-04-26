@@ -18,7 +18,7 @@ namespace ReportsEngine.Reports.RDReports
         private void RDImportEditList_BeforePrint(object sender, CancelEventArgs e)
         {
             this.Landscape = this.Parameters["pbooShowDetail"].Value.ToString().ToLower() == "true";
-            this.PaperKind = this.Parameters["pbooShowDetail"].Value.ToString().ToLower() == "true" ? DevExpress.Drawing.Printing.DXPaperKind.Tabloid : DevExpress.Drawing.Printing.DXPaperKind.Letter;
+            this.PaperKind = this.Parameters["pbooShowDetail"].Value.ToString().ToLower() == "true" ? DevExpress.Drawing.Printing.DXPaperKind.Legal : DevExpress.Drawing.Printing.DXPaperKind.Letter;
         }
     }
 }
