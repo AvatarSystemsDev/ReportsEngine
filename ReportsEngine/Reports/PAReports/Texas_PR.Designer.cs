@@ -477,7 +477,7 @@
             this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel3.BorderWidth = 1F;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PA_TXP_UNIQUEREC]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RowNumberUnique]")});
             this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(206.2419F, 0F);
@@ -859,7 +859,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_PATEXASPRRPT";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1017\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1037\" />";
             source1.DataMember = "PATEXASPRRPT";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_PATEXASPRRPT";
@@ -911,7 +911,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "STCode6"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DistNo1"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DistNo2"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumber")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumberUnique")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_Companies";
             sourceNode2.Alias = null;

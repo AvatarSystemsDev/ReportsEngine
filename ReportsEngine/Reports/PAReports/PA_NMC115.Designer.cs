@@ -1568,7 +1568,7 @@
             this.Textbox219.Name = "Textbox219";
             this.Textbox219.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox219.SerializableRtfString = resources.GetString("Textbox219.SerializableRtfString");
-            this.Textbox219.SizeF = new System.Drawing.SizeF(194.877F, 78.12F);
+            this.Textbox219.SizeF = new System.Drawing.SizeF(194.877F, 81.28336F);
             this.Textbox219.StylePriority.UseBorders = false;
             this.Textbox219.StylePriority.UseBorderWidth = false;
             // 
@@ -3609,7 +3609,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "AddressID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Address"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhoneNum"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DispID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DispWellID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProdWellID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyNumName"),
