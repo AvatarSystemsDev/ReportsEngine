@@ -11,7 +11,7 @@ namespace ReportsEngine.Reports.RDReports
         public RDImportEditList()
         {
             InitializeComponent();
-            this.BeforePrint += RDImportEditList_BeforePrint;
+            //this.BeforePrint += RDImportEditList_BeforePrint;
             
         }
 

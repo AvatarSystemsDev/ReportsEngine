@@ -574,7 +574,7 @@
             this.xrLabel8.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel8.BorderWidth = 1.39F;
             this.xrLabel8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([RowNumber] = 1,[PA_TXP_OILBINVE], \'\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([RowNumber] = 1, Round([PA_TXP_OILBINVE]), \'\')")});
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel8.KeepTogether = true;
             this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(489.9946F, 0F);
@@ -597,7 +597,8 @@
             this.xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel9.BorderWidth = 1.39F;
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([RowNumber] = 1, [PA_TXP_OPROD],\'\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([RowNumber] = 1,Round([PA_TXP_OILEINVE]) - Round([PA_TXP_OILBINVE]) + Round([" +
+                    "PA_TXP_OILDISPVOL]),\'\')")});
             this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel9.KeepTogether = true;
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(564.9954F, 0F);
@@ -620,7 +621,7 @@
             this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel10.BorderWidth = 1.39F;
             this.xrLabel10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PA_TXP_OILDISPVOL]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round([PA_TXP_OILDISPVOL])")});
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel10.KeepTogether = true;
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(639.9961F, 0F);
@@ -666,7 +667,7 @@
             this.xrLabel12.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel12.BorderWidth = 1.39F;
             this.xrLabel12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([RowNumber] = 1, [PA_TXP_OILEINVE],\'\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([RowNumber] = 1, Round([PA_TXP_OILEINVE]),\'\')")});
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel12.KeepTogether = true;
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(769.9974F, 0F);
@@ -689,7 +690,7 @@
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel13.BorderWidth = 1.39F;
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([RowNumber] = 1, [PA_TXP_GPROD],\'\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iif([RowNumber] = 1, Round([FormationProduction]),\'\')")});
             this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel13.KeepTogether = true;
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(844.9981F, 0F);
@@ -712,7 +713,7 @@
             this.xrLabel14.Borders = DevExpress.XtraPrinting.BorderSide.Left;
             this.xrLabel14.BorderWidth = 1.39F;
             this.xrLabel14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PA_TXP_GASDISPVOL]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Round([PA_TXP_GASDISPVOL])")});
             this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel14.KeepTogether = true;
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(919.9988F, 0F);
@@ -861,7 +862,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_PATEXASPRRPT";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1037\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1077\" />";
             source1.DataMember = "PATEXASPRRPT";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_PATEXASPRRPT";
@@ -914,7 +915,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DistNo1"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DistNo2"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumberUnique")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumberUnique"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "FormationProduction")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_Companies";
             sourceNode2.Alias = null;
