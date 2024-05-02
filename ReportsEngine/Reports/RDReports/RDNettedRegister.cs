@@ -6,9 +6,9 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.RDReports
 {
-    public partial class RDNettedRegister : DevExpress.XtraReports.UI.XtraReport
+    public partial class CombinedRevenueReport : DevExpress.XtraReports.UI.XtraReport
     {
-        public RDNettedRegister()
+        public CombinedRevenueReport()
         {
             InitializeComponent();
         }

@@ -1191,10 +1191,10 @@
             // 
             // plngJIBProcessTrackingID
             // 
+            this.plngJIBProcessTrackingID.AllowNull = true;
             this.plngJIBProcessTrackingID.Description = "Processing Date";
             this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
             this.plngJIBProcessTrackingID.Type = typeof(int);
-            this.plngJIBProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings2.DataMember = "DSJIBProcessDatesLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "FormattedDate";

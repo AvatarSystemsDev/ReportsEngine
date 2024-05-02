@@ -112,7 +112,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelRDSuspenseActionReport", () => new ExcelRDSuspenseActionReport());
             Reports.Add("RDCheckStateWithholding", () => new RDCheckStateWithholding());
             Reports.Add("ExcelRDCheckStateWithholding", () => new ExcelRDCheckStateWithholding());
-            Reports.Add("RDNettedRegister", () => new RDNettedRegister());
+            Reports.Add("RDNettedRegister", () => new CombinedRevenueReport());
             Reports.Add("ExcelRDNettedRegister", () => new ExcelRDNettedRegister());
             Reports.Add("RDCheckRegister", () => new RDCheckRegister());
             Reports.Add("ExcelRDCheckRegister", () => new ExcelRDCheckRegister());

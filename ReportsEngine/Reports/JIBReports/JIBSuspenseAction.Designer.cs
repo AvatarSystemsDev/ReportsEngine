@@ -817,12 +817,12 @@
             // 
             // plngJIBProcessTrackingID
             // 
+            this.plngJIBProcessTrackingID.AllowNull = true;
             this.plngJIBProcessTrackingID.Description = "Processing Date";
             this.plngJIBProcessTrackingID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooAwaitParameterInput")});
             this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
             this.plngJIBProcessTrackingID.Type = typeof(int);
-            this.plngJIBProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings2.DataMember = "JIBGetProcessingDates";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "FormattedDate";

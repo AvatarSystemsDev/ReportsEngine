@@ -421,10 +421,10 @@
             // 
             // plngJIBProcessTrackingID
             // 
+            this.plngJIBProcessTrackingID.AllowNull = true;
             this.plngJIBProcessTrackingID.Description = "Processing Date";
             this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
             this.plngJIBProcessTrackingID.Type = typeof(int);
-            this.plngJIBProcessTrackingID.ValueInfo = "0";
             // 
             // pbooShowCriteria
             // 

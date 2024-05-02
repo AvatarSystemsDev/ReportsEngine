@@ -1403,10 +1403,10 @@
             // 
             // plngRDProcessTrackingID
             // 
+            this.plngRDProcessTrackingID.AllowNull = true;
             this.plngRDProcessTrackingID.Description = "Processing Date";
             this.plngRDProcessTrackingID.Name = "plngRDProcessTrackingID";
             this.plngRDProcessTrackingID.Type = typeof(int);
-            this.plngRDProcessTrackingID.ValueInfo = "23";
             dynamicListLookUpSettings4.DataMember = "RDProcessTracking";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "FormattedDate";

@@ -99,6 +99,7 @@
             this.JIBInvoiceSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.pbooTrue = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooFalse = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooWillUseAccountNumberForJIBInvoice = new DevExpress.XtraReports.Parameters.Parameter();
             this.AfterJIBInvoiceSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.AlsoID = new DevExpress.XtraReports.UI.CalculatedField();
             this.LiterallyJustFalse = new DevExpress.XtraReports.UI.CalculatedField();
@@ -117,7 +118,6 @@
             this.SubBand4 = new DevExpress.XtraReports.UI.SubBand();
             this.xrInvoiceAgingDone = new DevExpress.XtraReports.UI.XRLabel();
             this.pbooShowInvoice = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooWillUseAccountNumberForJIBInvoice = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.InvoiceSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport4 = new DevExpress.XtraReports.UI.XRSubreport();
@@ -239,12 +239,12 @@
             // 
             // plngJIBPrintingProcessTrackingID
             // 
+            this.plngJIBPrintingProcessTrackingID.AllowNull = true;
             this.plngJIBPrintingProcessTrackingID.Description = "Statement Date";
             this.plngJIBPrintingProcessTrackingID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooAwaitParameterInput")});
             this.plngJIBPrintingProcessTrackingID.Name = "plngJIBPrintingProcessTrackingID";
             this.plngJIBPrintingProcessTrackingID.Type = typeof(int);
-            this.plngJIBPrintingProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings1.DataMember = "DSJIBProcessDatesLookup";
             dynamicListLookUpSettings1.DataSource = this.Dynamic;
             dynamicListLookUpSettings1.DisplayMember = "FormattedDate";
@@ -258,11 +258,11 @@
             // 
             // plngJIBProcessingPrint
             // 
+            this.plngJIBProcessingPrint.AllowNull = true;
             this.plngJIBProcessingPrint.Description = "JIB Processing Print";
             this.plngJIBProcessingPrint.Enabled = false;
             this.plngJIBProcessingPrint.Name = "plngJIBProcessingPrint";
             this.plngJIBProcessingPrint.Type = typeof(int);
-            this.plngJIBProcessingPrint.ValueInfo = "0";
             this.plngJIBProcessingPrint.Visible = false;
             // 
             // pstrBeginningOwnerNumber
@@ -376,6 +376,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingDate.Name = "pdteEndingDate";
             this.pdteEndingDate.Type = typeof(System.DateTime);
+            this.pdteEndingDate.ValueInfo = "0";
             // 
             // pstrInvoiceNumber
             // 
@@ -817,6 +818,13 @@
             this.pbooFalse.ValueInfo = "False";
             this.pbooFalse.Visible = false;
             // 
+            // pbooWillUseAccountNumberForJIBInvoice
+            // 
+            this.pbooWillUseAccountNumberForJIBInvoice.Description = "Print Account Description";
+            this.pbooWillUseAccountNumberForJIBInvoice.Name = "pbooWillUseAccountNumberForJIBInvoice";
+            this.pbooWillUseAccountNumberForJIBInvoice.Type = typeof(bool);
+            this.pbooWillUseAccountNumberForJIBInvoice.ValueInfo = "False";
+            // 
             // AfterJIBInvoiceSubBand
             // 
             this.AfterJIBInvoiceSubBand.HeightF = 0F;
@@ -981,13 +989,6 @@
             this.pbooShowInvoice.Name = "pbooShowInvoice";
             this.pbooShowInvoice.Type = typeof(bool);
             this.pbooShowInvoice.ValueInfo = "False";
-            // 
-            // pbooWillUseAccountNumberForJIBInvoice
-            // 
-            this.pbooWillUseAccountNumberForJIBInvoice.Description = "Print Account Description";
-            this.pbooWillUseAccountNumberForJIBInvoice.Name = "pbooWillUseAccountNumberForJIBInvoice";
-            this.pbooWillUseAccountNumberForJIBInvoice.Type = typeof(bool);
-            this.pbooWillUseAccountNumberForJIBInvoice.ValueInfo = "False";
             // 
             // xrSubreport2
             // 

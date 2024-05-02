@@ -1089,28 +1089,28 @@
             // 
             // plngCompanyVendorID
             // 
+            this.plngCompanyVendorID.AllowNull = true;
             this.plngCompanyVendorID.Description = "plngCompanyVendorID";
             this.plngCompanyVendorID.Name = "plngCompanyVendorID";
             this.plngCompanyVendorID.Type = typeof(int);
-            this.plngCompanyVendorID.ValueInfo = "0";
             this.plngCompanyVendorID.Visible = false;
             // 
             // plngJIBStatementID
             // 
+            this.plngJIBStatementID.AllowNull = true;
             this.plngJIBStatementID.Description = "plngJIBStatementID";
             this.plngJIBStatementID.Name = "plngJIBStatementID";
             this.plngJIBStatementID.Type = typeof(int);
-            this.plngJIBStatementID.ValueInfo = "-1";
             this.plngJIBStatementID.Visible = false;
             // 
             // plngJIBProcessTrackingID
             // 
+            this.plngJIBProcessTrackingID.AllowNull = true;
             this.plngJIBProcessTrackingID.Description = "Invoice Date";
             this.plngJIBProcessTrackingID.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooRunFromStatement AND ?pbooAwaitParameterInput")});
             this.plngJIBProcessTrackingID.Name = "plngJIBProcessTrackingID";
             this.plngJIBProcessTrackingID.Type = typeof(int);
-            this.plngJIBProcessTrackingID.ValueInfo = "-1";
             dynamicListLookUpSettings2.DataMember = "DSJIBProcessDatesLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "FormattedDate";
@@ -1138,7 +1138,7 @@
             this.pbooWillUseAccountNumberForJIBInvoice.Description = "Print Account Description";
             this.pbooWillUseAccountNumberForJIBInvoice.Name = "pbooWillUseAccountNumberForJIBInvoice";
             this.pbooWillUseAccountNumberForJIBInvoice.Type = typeof(bool);
-            this.pbooWillUseAccountNumberForJIBInvoice.ValueInfo = "False";
+            this.pbooWillUseAccountNumberForJIBInvoice.ValueInfo = "0";
             // 
             // pstrBeginningOwnerNumber
             // 

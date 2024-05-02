@@ -867,18 +867,18 @@
             // 
             // plngJIBProcessingPrint
             // 
+            this.plngJIBProcessingPrint.AllowNull = true;
             this.plngJIBProcessingPrint.Description = "plngJIBProcessingPrint";
             this.plngJIBProcessingPrint.Name = "plngJIBProcessingPrint";
             this.plngJIBProcessingPrint.Type = typeof(int);
-            this.plngJIBProcessingPrint.ValueInfo = "0";
             this.plngJIBProcessingPrint.Visible = false;
             // 
             // plngJIBPrintingProcessTrackingID
             // 
+            this.plngJIBPrintingProcessTrackingID.AllowNull = true;
             this.plngJIBPrintingProcessTrackingID.Description = "Processing Date";
             this.plngJIBPrintingProcessTrackingID.Name = "plngJIBPrintingProcessTrackingID";
             this.plngJIBPrintingProcessTrackingID.Type = typeof(int);
-            this.plngJIBPrintingProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings2.DataMember = "DSJIBProcessDatesLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "ProcessingDate";
@@ -1010,7 +1010,10 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrStatementMessage, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.boolPrintRemit, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningInvoiceNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingInvoiceNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingInvoiceNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooAwaitParameterInput, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooPrintReportInDuplex, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowInvoice, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrDatabaseName,

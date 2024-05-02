@@ -818,10 +818,10 @@
             // 
             // plngJIBPrintingProcessTrackingID
             // 
+            this.plngJIBPrintingProcessTrackingID.AllowNull = true;
             this.plngJIBPrintingProcessTrackingID.Description = "Processing Date";
             this.plngJIBPrintingProcessTrackingID.Name = "plngJIBPrintingProcessTrackingID";
             this.plngJIBPrintingProcessTrackingID.Type = typeof(int);
-            this.plngJIBPrintingProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings2.DataMember = "DSJIBProcessDatesLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "FormattedDate";
@@ -845,7 +845,7 @@
             this.Dynamic,
             this.Pulse,
             this.federationDataSource1});
-            this.DataMember = "Dynamic_DSCompaniesLookup";
+            this.DataMember = "Dynamic_DSJIB_CompanyRecapReport";
             this.DataSource = this.federationDataSource1;
             this.DisplayName = "JIBCompanyRecap";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {

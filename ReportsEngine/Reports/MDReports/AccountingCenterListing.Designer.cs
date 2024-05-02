@@ -885,6 +885,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DataSet1";
             sourceNode1.Alias = null;
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"337\" />";
             source1.DataMember = "DataSet1";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DataSet1";
@@ -897,7 +898,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Name"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Number"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AbbreviatedName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "FederalIdNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ReferenceNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Purpose"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsActive"),

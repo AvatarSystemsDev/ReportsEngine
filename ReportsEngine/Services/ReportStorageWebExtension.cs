@@ -367,7 +367,17 @@ namespace ReportsEngine.Services
                 }
                 else
                 {
-                    report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                    switch (parameters.Get(parameterName)) // Not always a string
+                    {
+                        case null:
+                        case "null":
+                        case "undefined":
+                            report.Parameters[parameterName].Value = null;
+                            break;
+                        default:
+                            report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                            break;
+                    }
                 } 
             }
 
