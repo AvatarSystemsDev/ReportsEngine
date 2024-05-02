@@ -167,7 +167,6 @@ namespace ReportsEngine.Services
                             Succeeded = false,
                             Message = "PDF parsing unsuccessful",
                             CustomData = JsonConvert.SerializeObject(new DocumentDataWithPDFAndKeyValuePairs(base64String, keyValuePagesToTray)),
-                            //trays
                         };
                     }
                     //var archived = SendToArchiveAsync(stream, systemID, userID);  //If call Providence webservice from here. 
@@ -177,7 +176,6 @@ namespace ReportsEngine.Services
                         Succeeded = true,
                         Message = message,
                         CustomData = JsonConvert.SerializeObject(documentDataWithPDFAndKeyValuePairs),
-                        //Trays
                     };
                 }
             }
