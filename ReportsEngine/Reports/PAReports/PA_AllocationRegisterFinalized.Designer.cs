@@ -1036,7 +1036,7 @@
             // 
             // xrTableCell1
             // 
-            this.xrTableCell1.BackColor = System.Drawing.Color.White;
+            this.xrTableCell1.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell1.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell1.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1049,6 +1049,7 @@
             this.xrTableCell1.KeepTogether = true;
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell1.StylePriority.UseBackColor = false;
             this.xrTableCell1.StylePriority.UseFont = false;
             this.xrTableCell1.StylePriority.UseForeColor = false;
             this.xrTableCell1.StylePriority.UsePadding = false;
@@ -1057,7 +1058,7 @@
             // 
             // xrTableCell2
             // 
-            this.xrTableCell2.BackColor = System.Drawing.Color.White;
+            this.xrTableCell2.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell2.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell2.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1070,6 +1071,7 @@
             this.xrTableCell2.KeepTogether = true;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell2.StylePriority.UseBackColor = false;
             this.xrTableCell2.StylePriority.UseFont = false;
             this.xrTableCell2.StylePriority.UseForeColor = false;
             this.xrTableCell2.StylePriority.UsePadding = false;
@@ -1078,7 +1080,7 @@
             // 
             // xrTableCell3
             // 
-            this.xrTableCell3.BackColor = System.Drawing.Color.White;
+            this.xrTableCell3.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell3.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell3.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1090,12 +1092,13 @@
             this.xrTableCell3.KeepTogether = true;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell3.StylePriority.UseBackColor = false;
             this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell3.Weight = 0.064287168615454443D;
             // 
             // xrTableCell4
             // 
-            this.xrTableCell4.BackColor = System.Drawing.Color.White;
+            this.xrTableCell4.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell4.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell4.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell4.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1107,12 +1110,13 @@
             this.xrTableCell4.KeepTogether = true;
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell4.StylePriority.UseBackColor = false;
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell4.Weight = 0.061595223263466968D;
             // 
             // xrTableCell5
             // 
-            this.xrTableCell5.BackColor = System.Drawing.Color.White;
+            this.xrTableCell5.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell5.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell5.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell5.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1124,12 +1128,13 @@
             this.xrTableCell5.KeepTogether = true;
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell5.StylePriority.UseBackColor = false;
             this.xrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell5.Weight = 0.062941195939460709D;
             // 
             // xrTableCell6
             // 
-            this.xrTableCell6.BackColor = System.Drawing.Color.White;
+            this.xrTableCell6.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell6.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell6.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell6.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1141,12 +1146,13 @@
             this.xrTableCell6.KeepTogether = true;
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell6.StylePriority.UseBackColor = false;
             this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell6.Weight = 0.061595223263466968D;
             // 
             // xrTableCell7
             // 
-            this.xrTableCell7.BackColor = System.Drawing.Color.White;
+            this.xrTableCell7.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell7.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell7.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1158,12 +1164,13 @@
             this.xrTableCell7.KeepTogether = true;
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell7.StylePriority.UseBackColor = false;
             this.xrTableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell7.Weight = 0.062941195939460709D;
             // 
             // xrTableCell8
             // 
-            this.xrTableCell8.BackColor = System.Drawing.Color.White;
+            this.xrTableCell8.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell8.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell8.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell8.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1175,6 +1182,7 @@
             this.xrTableCell8.KeepTogether = true;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell8.StylePriority.UseBackColor = false;
             this.xrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrTableCell8.Weight = 0.062941195939460709D;
             // 
@@ -1200,7 +1208,7 @@
             // 
             // xrTableCell9
             // 
-            this.xrTableCell9.BackColor = System.Drawing.Color.White;
+            this.xrTableCell9.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell9.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell9.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell9.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1213,6 +1221,7 @@
             this.xrTableCell9.KeepTogether = true;
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell9.StylePriority.UseBackColor = false;
             this.xrTableCell9.StylePriority.UseFont = false;
             this.xrTableCell9.StylePriority.UseForeColor = false;
             this.xrTableCell9.StylePriority.UsePadding = false;
@@ -1221,7 +1230,7 @@
             // 
             // xrTableCell10
             // 
-            this.xrTableCell10.BackColor = System.Drawing.Color.White;
+            this.xrTableCell10.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell10.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell10.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1234,6 +1243,7 @@
             this.xrTableCell10.KeepTogether = true;
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell10.StylePriority.UseBackColor = false;
             this.xrTableCell10.StylePriority.UseFont = false;
             this.xrTableCell10.StylePriority.UseForeColor = false;
             this.xrTableCell10.StylePriority.UsePadding = false;
@@ -1242,7 +1252,7 @@
             // 
             // xrTableCell11
             // 
-            this.xrTableCell11.BackColor = System.Drawing.Color.White;
+            this.xrTableCell11.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell11.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell11.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell11.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1255,6 +1265,7 @@
             this.xrTableCell11.KeepTogether = true;
             this.xrTableCell11.Name = "xrTableCell11";
             this.xrTableCell11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell11.StylePriority.UseBackColor = false;
             this.xrTableCell11.StylePriority.UseFont = false;
             this.xrTableCell11.StylePriority.UseForeColor = false;
             this.xrTableCell11.StylePriority.UsePadding = false;
@@ -1263,7 +1274,7 @@
             // 
             // xrTableCell12
             // 
-            this.xrTableCell12.BackColor = System.Drawing.Color.White;
+            this.xrTableCell12.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell12.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell12.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1276,6 +1287,7 @@
             this.xrTableCell12.KeepTogether = true;
             this.xrTableCell12.Name = "xrTableCell12";
             this.xrTableCell12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell12.StylePriority.UseBackColor = false;
             this.xrTableCell12.StylePriority.UseFont = false;
             this.xrTableCell12.StylePriority.UseForeColor = false;
             this.xrTableCell12.StylePriority.UsePadding = false;
@@ -1285,7 +1297,7 @@
             // 
             // xrTableCell13
             // 
-            this.xrTableCell13.BackColor = System.Drawing.Color.White;
+            this.xrTableCell13.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell13.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell13.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell13.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1298,6 +1310,7 @@
             this.xrTableCell13.KeepTogether = true;
             this.xrTableCell13.Name = "xrTableCell13";
             this.xrTableCell13.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell13.StylePriority.UseBackColor = false;
             this.xrTableCell13.StylePriority.UseFont = false;
             this.xrTableCell13.StylePriority.UseForeColor = false;
             this.xrTableCell13.StylePriority.UsePadding = false;
@@ -1307,7 +1320,7 @@
             // 
             // xrTableCell14
             // 
-            this.xrTableCell14.BackColor = System.Drawing.Color.White;
+            this.xrTableCell14.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell14.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell14.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell14.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1320,6 +1333,7 @@
             this.xrTableCell14.KeepTogether = true;
             this.xrTableCell14.Name = "xrTableCell14";
             this.xrTableCell14.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell14.StylePriority.UseBackColor = false;
             this.xrTableCell14.StylePriority.UseFont = false;
             this.xrTableCell14.StylePriority.UseForeColor = false;
             this.xrTableCell14.StylePriority.UsePadding = false;
@@ -1329,7 +1343,7 @@
             // 
             // xrTableCell15
             // 
-            this.xrTableCell15.BackColor = System.Drawing.Color.White;
+            this.xrTableCell15.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell15.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell15.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell15.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1342,6 +1356,7 @@
             this.xrTableCell15.KeepTogether = true;
             this.xrTableCell15.Name = "xrTableCell15";
             this.xrTableCell15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell15.StylePriority.UseBackColor = false;
             this.xrTableCell15.StylePriority.UseFont = false;
             this.xrTableCell15.StylePriority.UseForeColor = false;
             this.xrTableCell15.StylePriority.UsePadding = false;
@@ -1351,7 +1366,7 @@
             // 
             // xrTableCell16
             // 
-            this.xrTableCell16.BackColor = System.Drawing.Color.White;
+            this.xrTableCell16.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell16.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell16.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell16.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1364,6 +1379,7 @@
             this.xrTableCell16.KeepTogether = true;
             this.xrTableCell16.Name = "xrTableCell16";
             this.xrTableCell16.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell16.StylePriority.UseBackColor = false;
             this.xrTableCell16.StylePriority.UseFont = false;
             this.xrTableCell16.StylePriority.UseForeColor = false;
             this.xrTableCell16.StylePriority.UsePadding = false;
@@ -1373,7 +1389,7 @@
             // 
             // xrTableCell17
             // 
-            this.xrTableCell17.BackColor = System.Drawing.Color.White;
+            this.xrTableCell17.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell17.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell17.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell17.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1386,6 +1402,7 @@
             this.xrTableCell17.KeepTogether = true;
             this.xrTableCell17.Name = "xrTableCell17";
             this.xrTableCell17.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell17.StylePriority.UseBackColor = false;
             this.xrTableCell17.StylePriority.UseFont = false;
             this.xrTableCell17.StylePriority.UseForeColor = false;
             this.xrTableCell17.StylePriority.UsePadding = false;
@@ -1395,7 +1412,7 @@
             // 
             // xrTableCell18
             // 
-            this.xrTableCell18.BackColor = System.Drawing.Color.White;
+            this.xrTableCell18.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell18.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell18.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell18.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1408,6 +1425,7 @@
             this.xrTableCell18.KeepTogether = true;
             this.xrTableCell18.Name = "xrTableCell18";
             this.xrTableCell18.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell18.StylePriority.UseBackColor = false;
             this.xrTableCell18.StylePriority.UseFont = false;
             this.xrTableCell18.StylePriority.UseForeColor = false;
             this.xrTableCell18.StylePriority.UsePadding = false;
@@ -1417,7 +1435,7 @@
             // 
             // xrTableCell19
             // 
-            this.xrTableCell19.BackColor = System.Drawing.Color.White;
+            this.xrTableCell19.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell19.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell19.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell19.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1430,6 +1448,7 @@
             this.xrTableCell19.KeepTogether = true;
             this.xrTableCell19.Name = "xrTableCell19";
             this.xrTableCell19.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell19.StylePriority.UseBackColor = false;
             this.xrTableCell19.StylePriority.UseFont = false;
             this.xrTableCell19.StylePriority.UseForeColor = false;
             this.xrTableCell19.StylePriority.UsePadding = false;
@@ -1439,7 +1458,7 @@
             // 
             // xrTableCell20
             // 
-            this.xrTableCell20.BackColor = System.Drawing.Color.White;
+            this.xrTableCell20.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell20.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell20.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell20.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1452,6 +1471,7 @@
             this.xrTableCell20.KeepTogether = true;
             this.xrTableCell20.Name = "xrTableCell20";
             this.xrTableCell20.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell20.StylePriority.UseBackColor = false;
             this.xrTableCell20.StylePriority.UseFont = false;
             this.xrTableCell20.StylePriority.UseForeColor = false;
             this.xrTableCell20.StylePriority.UsePadding = false;
@@ -1461,7 +1481,7 @@
             // 
             // xrTableCell21
             // 
-            this.xrTableCell21.BackColor = System.Drawing.Color.White;
+            this.xrTableCell21.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell21.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell21.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell21.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1474,6 +1494,7 @@
             this.xrTableCell21.KeepTogether = true;
             this.xrTableCell21.Name = "xrTableCell21";
             this.xrTableCell21.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell21.StylePriority.UseBackColor = false;
             this.xrTableCell21.StylePriority.UseFont = false;
             this.xrTableCell21.StylePriority.UseForeColor = false;
             this.xrTableCell21.StylePriority.UsePadding = false;
@@ -1483,7 +1504,7 @@
             // 
             // xrTableCell22
             // 
-            this.xrTableCell22.BackColor = System.Drawing.Color.White;
+            this.xrTableCell22.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell22.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell22.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell22.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1496,6 +1517,7 @@
             this.xrTableCell22.KeepTogether = true;
             this.xrTableCell22.Name = "xrTableCell22";
             this.xrTableCell22.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrTableCell22.StylePriority.UseBackColor = false;
             this.xrTableCell22.StylePriority.UseFont = false;
             this.xrTableCell22.StylePriority.UseForeColor = false;
             this.xrTableCell22.StylePriority.UsePadding = false;
@@ -1960,7 +1982,7 @@
             // 
             this.xrRunDate.BackColor = System.Drawing.Color.Transparent;
             this.xrRunDate.BorderColor = System.Drawing.Color.Transparent;
-            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 9.797152F);
+            this.xrRunDate.LocationFloat = new DevExpress.Utils.PointFloat(0F, 8.50556F);
             this.xrRunDate.Name = "xrRunDate";
             this.xrRunDate.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRunDate.PageInfo = DevExpress.XtraPrinting.PageInfo.DateTime;
@@ -1985,7 +2007,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Name", "\'Segoe UI\'"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", " \'  Copyright Avatar Systems, Inc.\'")});
             this.xrCopyright.KeepTogether = true;
-            this.xrCopyright.LocationFloat = new DevExpress.Utils.PointFloat(768.9607F, 21.50555F);
+            this.xrCopyright.LocationFloat = new DevExpress.Utils.PointFloat(769.9971F, 21.50555F);
             this.xrCopyright.Multiline = true;
             this.xrCopyright.Name = "xrCopyright";
             this.xrCopyright.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -2009,7 +2031,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'User: \' + [Pulse_Master_UserRecord].[FirstName]  +\' \' + [Pulse_Master_UserRecord" +
                     "].[LastName] ")});
             this.xrUser.KeepTogether = true;
-            this.xrUser.LocationFloat = new DevExpress.Utils.PointFloat(0F, 21.50557F);
+            this.xrUser.LocationFloat = new DevExpress.Utils.PointFloat(0F, 21.50555F);
             this.xrUser.Multiline = true;
             this.xrUser.Name = "xrUser";
             this.xrUser.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -2023,7 +2045,7 @@
             // 
             this.xrPageInfo1.BackColor = System.Drawing.Color.Transparent;
             this.xrPageInfo1.BorderColor = System.Drawing.Color.Transparent;
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(960.3214F, 9.79716F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(961.3578F, 9.79716F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(58.64185F, 11.7084F);

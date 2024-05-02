@@ -151,8 +151,8 @@ namespace ReportsEngine.Services
                         int coverSheetTray = customData.coverSheetTray;
                         int remittanceTray = customData.remittanceTray;
 
-                        List<int> CheckPages = FindPagesWithText(pdfStream, "PLEASE DETACH THIS REMITTANCE ADVICE BEFORE DEPOSITING CHECK"); // Should be the only pages on check pager. Will not work if this is changed.
-                        List<int> CoverSheetPages = FindMissingIndices(numberOfPages, FindPagesWithText(pdfStream, "Page ")); // Set to empty list if PrintCoverSheet passed is false. Cover Sheets should be the only pages without a page number.
+                        List<int> CheckPages = FindPagesWithText(pdfStream, "PLEASE DETACH THIS REMITTANCE ADVICE BEFORE DEPOSITING CHECK", "Page 1"); // Should be the only pages on check pager. Will not work if this is changed.
+                        List<int> CoverSheetPages = FindMissingIndices(numberOfPages, FindPagesWithText(pdfStream, "Page ","")); // Set to empty list if PrintCoverSheet passed is false. Cover Sheets should be the only pages without a page number.
                         // List<int> RemittanceSheetPages = FindMissingIndices(NumberOfPages, (List<int>) CheckPages.Concat(CoverSheetPages)); // I don't think that I need this, but this is how you get the rest of the pages.
 
                         keyValuePagesToTray = SetPagesToKeyValuePairList(numberOfPages, CheckPages, CoverSheetPages, checkTray, coverSheetTray, remittanceTray);
@@ -259,7 +259,7 @@ namespace ReportsEngine.Services
         {
             return value;
         }
-        private List<int> FindPagesWithText(MemoryStream pdfStream, string searchText)
+        private List<int> FindPagesWithText(MemoryStream pdfStream, string searchText, string searchTextTwo)
         {
             List<int> pagesWithText = new List<int>();
 
@@ -276,7 +276,7 @@ namespace ReportsEngine.Services
                     var page = pdfDocument.GetPage(i);
                     var text = PdfTextExtractor.GetTextFromPage(page, new SimpleTextExtractionStrategy());
 
-                    if (text.Contains(searchText))
+                    if (text.Contains(searchText) && text.Contains(searchTextTwo))
                     {
                         pagesWithText.Add(i);
                     }

@@ -445,6 +445,8 @@
             this.Tablix1.HeightF = 25F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
+            this.Tablix1.SortFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("PA_TXP_UNIQUEREC", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             // 
             // xrChange
             // 
@@ -859,7 +861,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_PATEXASPRRPT";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1017\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1037\" />";
             source1.DataMember = "PATEXASPRRPT";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_PATEXASPRRPT";
@@ -911,7 +913,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "STCode6"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DistNo1"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DistNo2"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumber")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RowNumberUnique")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_Companies";
             sourceNode2.Alias = null;

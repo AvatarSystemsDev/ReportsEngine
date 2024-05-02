@@ -1382,6 +1382,7 @@
             this.pstrSelectplngUnitID.Description = "Unit";
             this.pstrSelectplngUnitID.MultiValue = true;
             this.pstrSelectplngUnitID.Name = "pstrSelectplngUnitID";
+            this.pstrSelectplngUnitID.SelectAllValues = true;
             dynamicListLookUpSettings2.DataMember = "UnitLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "Description";

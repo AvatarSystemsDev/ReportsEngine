@@ -1030,13 +1030,12 @@
             this.plngUserID.Description = "plngUserID";
             this.plngUserID.Name = "plngUserID";
             this.plngUserID.Type = typeof(int);
+            this.plngUserID.ValueInfo = "0";
             this.plngUserID.Visible = false;
             // 
             // pdteForPaymentOnDate
             // 
             this.pdteForPaymentOnDate.Description = "For Payment on Date";
-            this.pdteForPaymentOnDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteForPaymentOnDate.Name = "pdteForPaymentOnDate";
             this.pdteForPaymentOnDate.Type = typeof(System.DateTime);
             this.pdteForPaymentOnDate.ValueInfo = "2023-09-25";
