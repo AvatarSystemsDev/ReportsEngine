@@ -99,7 +99,6 @@
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
             this.pdteBeginningCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteEndingCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooIncludeManualChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeVoidChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectAPCheckID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCashAccountID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -1093,13 +1092,6 @@
             this.pdteEndingCheckDate.Type = typeof(System.DateTime);
             this.pdteEndingCheckDate.ValueInfo = "2024-04-18";
             // 
-            // pbooIncludeManualChecks
-            // 
-            this.pbooIncludeManualChecks.Description = "Parameter1";
-            this.pbooIncludeManualChecks.Name = "pbooIncludeManualChecks";
-            this.pbooIncludeManualChecks.Type = typeof(bool);
-            this.pbooIncludeManualChecks.ValueInfo = "False";
-            // 
             // pbooIncludeVoidChecks
             // 
             this.pbooIncludeVoidChecks.Description = "Parameter1";
@@ -1192,14 +1184,15 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooGroupByCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeManualChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeVoidChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAPCheckID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCashAccountID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooAwaitParameterInput, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooAwaitParameterInput, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningCheckSortNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingCheckSortNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrDatabaseName,
@@ -1214,7 +1207,6 @@
             this.pbooGroupByCheck,
             this.pdteBeginningCheckDate,
             this.pdteEndingCheckDate,
-            this.pbooIncludeManualChecks,
             this.pbooIncludeVoidChecks,
             this.pstrSelectAPCheckID,
             this.pstrSelectCashAccountID,
@@ -1269,7 +1261,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.Parameters.Parameter pdteBeginningCheckDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteEndingCheckDate;
-        private DevExpress.XtraReports.Parameters.Parameter pbooIncludeManualChecks;
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeVoidChecks;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectAPCheckID;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectCashAccountID;

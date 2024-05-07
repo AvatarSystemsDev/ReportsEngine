@@ -934,10 +934,10 @@
             // 
             // plngCheckPrintingProcessTrackingID
             // 
+            this.plngCheckPrintingProcessTrackingID.AllowNull = true;
             this.plngCheckPrintingProcessTrackingID.Description = "Processing Date";
             this.plngCheckPrintingProcessTrackingID.Name = "plngCheckPrintingProcessTrackingID";
             this.plngCheckPrintingProcessTrackingID.Type = typeof(int);
-            this.plngCheckPrintingProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings4.DataMember = "CheckPrintingProcessTracking";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "FormattedDate";

@@ -158,8 +158,6 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelAPPrepaidRegister", () => new ExcelAPPrepaidRegister());
             Reports.Add("RDImmediatePostRegister", () => new RDImmediatePostRegister());
             Reports.Add("ExcelRDImmediatePostRegister", () => new ExcelRDImmediatePostRegister());
-            Reports.Add("APManualCheck", () => new APManualCheck());
-            Reports.Add("ExcelAPManualCheck", () => new ExcelAPManualCheck());
             Reports.Add("RDNoCrossRefList", () => new RDNoCrossRefList());
             Reports.Add("ExcelRDNoCrossRefList", () => new ExcelRDNoCrossRefList());
             Reports.Add("RDSuspenseReleaseChecks", () => new RDSuspenseReleaseChecks());

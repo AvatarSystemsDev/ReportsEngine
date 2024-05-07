@@ -237,7 +237,6 @@
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.pbooAwaitParameterInput = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooIncludeManualChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteBeginningCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteEndingCheckDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCashAccountID = new DevExpress.XtraReports.Parameters.Parameter();
@@ -2135,16 +2134,6 @@
             this.pbooAwaitParameterInput.ValueInfo = "True";
             this.pbooAwaitParameterInput.Visible = false;
             // 
-            // pbooIncludeManualChecks
-            // 
-            this.pbooIncludeManualChecks.Description = "Include Manual Checks";
-            this.pbooIncludeManualChecks.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngID = 0\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngID = 0")});
-            this.pbooIncludeManualChecks.Name = "pbooIncludeManualChecks";
-            this.pbooIncludeManualChecks.Type = typeof(bool);
-            this.pbooIncludeManualChecks.ValueInfo = "False";
-            // 
             // pdteBeginningCheckDate
             // 
             this.pdteBeginningCheckDate.Description = "Beginning Check Date";
@@ -2243,8 +2232,7 @@
             dynamicListLookUpSettings7.DataSource = this.Dynamic;
             dynamicListLookUpSettings7.DisplayMember = "Number";
             dynamicListLookUpSettings7.FilterString = "[CheckDate] Between(?pdteBeginningCheckDate, ?pdteEndingCheckDate) And (?pbooIncl" +
-    "udeManualChecks Or Not [IsManual]) And (?pbooIncludeVoidChecks Or Not [IsVoided]" +
-    ") And [CheckID] Is Not Null";
+    "udeVoidChecks Or Not [IsVoided]) And [CheckID] Is Not Null";
             dynamicListLookUpSettings7.SortMember = null;
             dynamicListLookUpSettings7.ValueMember = "CheckID";
             this.pstrSelectAPCheckID.ValueSourceSettings = dynamicListLookUpSettings7;
@@ -2279,8 +2267,7 @@
             dynamicListLookUpSettings9.DataSource = this.Dynamic;
             dynamicListLookUpSettings9.DisplayMember = "Number";
             dynamicListLookUpSettings9.FilterString = "([CheckDate] ?? ?pdteBeginningCheckDate) Between(?pdteBeginningCheckDate, ?pdteEn" +
-    "dingCheckDate) And (?pbooIncludeManualChecks Or Not [IsManual]) And (?pbooInclud" +
-    "eVoidChecks Or Not [IsVoided])";
+    "dingCheckDate) And (?pbooIncludeVoidChecks Or Not [IsVoided])";
             dynamicListLookUpSettings9.SortMember = null;
             dynamicListLookUpSettings9.ValueMember = "SortFieldCheckNumber";
             this.plngBeginningCheckSortNumber.ValueSourceSettings = dynamicListLookUpSettings9;
@@ -2297,7 +2284,9 @@
             dynamicListLookUpSettings10.DataMember = "APChecksQuery";
             dynamicListLookUpSettings10.DataSource = this.Dynamic;
             dynamicListLookUpSettings10.DisplayMember = "Number";
-            dynamicListLookUpSettings10.FilterString = resources.GetString("dynamicListLookUpSettings10.FilterString");
+            dynamicListLookUpSettings10.FilterString = "[thisListSortedAlternate] <> 0 And ([CheckDate] ?? ?pdteBeginningCheckDate) Betwe" +
+    "en(?pdteBeginningCheckDate, ?pdteEndingCheckDate) And (?pbooIncludeVoidChecks Or" +
+    " Not [IsVoided])";
             dynamicListLookUpSettings10.SortMember = null;
             dynamicListLookUpSettings10.ValueMember = "SortFieldCheckNumber";
             this.plngEndingCheckSortNumber.ValueSourceSettings = dynamicListLookUpSettings10;
@@ -2342,7 +2331,6 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooGroupByCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeManualChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeVoidChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCashAccountID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningCheckSortNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -2367,7 +2355,6 @@
             this.pdteBeginningCheckDate,
             this.pdteEndingCheckDate,
             this.pbooGroupByCheck,
-            this.pbooIncludeManualChecks,
             this.pbooIncludeVoidChecks,
             this.pstrSelectCashAccountID,
             this.plngBeginningCheckSortNumber,
@@ -2451,7 +2438,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooAwaitParameterInput;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrPageLabel;
-        private DevExpress.XtraReports.Parameters.Parameter pbooIncludeManualChecks;
         private DevExpress.XtraReports.Parameters.Parameter pdteBeginningCheckDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteEndingCheckDate;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectCashAccountID;
