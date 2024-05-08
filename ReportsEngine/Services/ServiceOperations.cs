@@ -170,11 +170,11 @@ namespace ReportsEngine.Services
                         };
                     }
                     //var archived = SendToArchiveAsync(stream, systemID, userID);  //If call Providence webservice from here. 
-                    string message = "Sent to Printer";
+                    //string message = "Sent to Printer";
                     return new DocumentOperationResponse
                     {
                         Succeeded = true,
-                        Message = message,
+                        //Message = message,
                         CustomData = JsonConvert.SerializeObject(documentDataWithPDFAndKeyValuePairs),
                     };
                 }
