@@ -258,7 +258,7 @@
             this.xrLabel26.StylePriority.UseFont = false;
             this.xrLabel26.StylePriority.UsePadding = false;
             this.xrLabel26.StylePriority.UseTextAlignment = false;
-            this.xrLabel26.Text = "1/1/1900";
+            this.xrLabel26.Text = "01/01/1900";
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.xrLabel26.TextFormatString = "{0:MM/dd/yyyy}";
             // 
@@ -583,7 +583,7 @@
             this.xrLabel14.StylePriority.UseFont = false;
             this.xrLabel14.StylePriority.UsePadding = false;
             this.xrLabel14.StylePriority.UseTextAlignment = false;
-            this.xrLabel14.Text = "1/1/1900";
+            this.xrLabel14.Text = "01/01/1900";
             this.xrLabel14.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.xrLabel14.TextFormatString = "{0:MM/dd/yyyy}";
             // 
@@ -690,7 +690,7 @@
             this.xrLabel5.Multiline = true;
             this.xrLabel5.Name = "xrLabel5";
             this.xrLabel5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel5.SizeF = new System.Drawing.SizeF(113.5402F, 18.75F);
+            this.xrLabel5.SizeF = new System.Drawing.SizeF(113.54F, 18.75F);
             this.xrLabel5.StylePriority.UseTextAlignment = false;
             this.xrLabel5.Text = "Discount Taken";
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
@@ -905,7 +905,7 @@
             this.xrLabel17.StylePriority.UseFont = false;
             this.xrLabel17.StylePriority.UsePadding = false;
             this.xrLabel17.StylePriority.UseTextAlignment = false;
-            this.xrLabel17.Text = "1/1/1900";
+            this.xrLabel17.Text = "01/01/1900";
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.xrLabel17.TextFormatString = "{0:MM/dd/yyyy}";
             // 

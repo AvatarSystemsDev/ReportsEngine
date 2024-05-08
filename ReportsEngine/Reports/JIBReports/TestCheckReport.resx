@@ -124,7 +124,7 @@
 	Bank.Name + char(13) + char(10) + BankAddressView.FullAddress AS BankFullAddress,
 	Bank.Name AS BankName,
 	Company.Name + char(13) + char(10) + CompanyAddressView.FullAddress  +  CompanyAddressView.Phone1 AS CompanyFullAddress,
-	CompanyAddressBlockCoverSheet =  Company.Name + char(13) + char(10) + CompanyAddressView.FullAddress,
+	CompanyAddressBlockCoverSheet = Company.Name + char(13) + char(10) + CompanyAddressView.FullAddress,
 	Company.Name AS CompanyName,
 	1 AS EntryRow
 
@@ -135,12 +135,13 @@ FROM BankAccount
 			MIN(AddressID) AS AddressID,
 			EntityID
 		FROM AddressIDByType
+		WHERE AddressTypeCodeID = 1
 		GROUP BY EntityID	
 	) AS AnyAddress ON AnyAddress.EntityID = Bank.ID
 	LEFT JOIN AddressRecordView AS BankAddressView ON BankAddressView.ID = AnyAddress.AddressID
 	LEFT JOIN Company ON Company.ID = @plngCompanyID
-	LEFT JOIN CompanyAddressIDByType AS CompanyAddressID ON CompanyAddressID.CompanyID = Company.ID AND CompanyAddressID.AddressTypeCodeID = 1
-	LEFT JOIN AddressRecordView AS CompanyAddressView ON CompanyAddressView.ID = AnyAddress.AddressID
+	LEFT JOIN CompanyAddressIDByType AS CompanyAddressID ON @plngCompanyID = Company.ID AND CompanyAddressID.AddressTypeCodeID = 1
+	LEFT JOIN AddressRecordView AS CompanyAddressView ON CompanyAddressView.ID = CompanyAddressID.AddressID
 WHERE 
 	BankAccount.CompanyID = @plngCompanyID
 	AND BankAccount.IsInactive = 0
