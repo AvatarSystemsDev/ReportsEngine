@@ -444,6 +444,8 @@
             this.DataMember = "DS_JIB_PEDPartTwo";
             this.DataSource = this.Dynamic;
             this.DisplayName = "PropertyExpenseDistEnding";
+            this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(130F, 130F, 0F, 0F);
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {

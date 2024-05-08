@@ -179,6 +179,9 @@
             this.EndRemittance = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.plngPrintRemittance = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooHideCheckPart = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngRemittanceSheetTray = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCoverSheetTray = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCheckPrintTray = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText7)).BeginInit();
@@ -2190,6 +2193,27 @@
             this.pbooHideCheckPart.Type = typeof(bool);
             this.pbooHideCheckPart.ValueInfo = "False";
             // 
+            // plngRemittanceSheetTray
+            // 
+            this.plngRemittanceSheetTray.Description = "Remittance Tray";
+            this.plngRemittanceSheetTray.Name = "plngRemittanceSheetTray";
+            this.plngRemittanceSheetTray.Type = typeof(int);
+            this.plngRemittanceSheetTray.ValueInfo = "1";
+            // 
+            // plngCoverSheetTray
+            // 
+            this.plngCoverSheetTray.Description = "Cover Sheet Tray";
+            this.plngCoverSheetTray.Name = "plngCoverSheetTray";
+            this.plngCoverSheetTray.Type = typeof(int);
+            this.plngCoverSheetTray.ValueInfo = "1";
+            // 
+            // plngCheckPrintTray
+            // 
+            this.plngCheckPrintTray.Description = "Check Print Tray";
+            this.plngCheckPrintTray.Name = "plngCheckPrintTray";
+            this.plngCheckPrintTray.Type = typeof(int);
+            this.plngCheckPrintTray.ValueInfo = "1";
+            // 
             // ManualChecks
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2237,7 +2261,10 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngDatabaseID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.booTrue, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.booFalse, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.booFalse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintTray, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCoverSheetTray, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngRemittanceSheetTray, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.plngPrintRemittance,
             this.pbooHideCheckPart,
@@ -2256,7 +2283,10 @@
             this.plngCompanyID,
             this.plngDatabaseID,
             this.booTrue,
-            this.booFalse});
+            this.booFalse,
+            this.plngCheckPrintTray,
+            this.plngCoverSheetTray,
+            this.plngRemittanceSheetTray});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText6)).EndInit();
@@ -2401,5 +2431,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrCheckNumberTwo;
         private DevExpress.XtraReports.UI.XRLabel xrMICRAccountNumberTwo;
         private DevExpress.XtraReports.UI.XRLabel xrTransitTopCheck;
+        private DevExpress.XtraReports.Parameters.Parameter plngRemittanceSheetTray;
+        private DevExpress.XtraReports.Parameters.Parameter plngCoverSheetTray;
+        private DevExpress.XtraReports.Parameters.Parameter plngCheckPrintTray;
     }
 }

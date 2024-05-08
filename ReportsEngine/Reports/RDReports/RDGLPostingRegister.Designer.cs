@@ -158,10 +158,12 @@
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
             this.SubBand14 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrPageCountPortrait = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel43 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrPageInfo2 = new DevExpress.XtraReports.UI.XRPageInfo();
             this.SubBand15 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrPageCountLandscape = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCopyright = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel41 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrRunDate = new DevExpress.XtraReports.UI.XRPageInfo();
@@ -241,8 +243,6 @@
             this.pbooShowDetail = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCrossBandBox5 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox6 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.xrPageCountPortrait = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrPageCountLandscape = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText12)).BeginInit();
@@ -1074,6 +1074,31 @@
             this.SubBand14.HeightF = 30.08895F;
             this.SubBand14.Name = "SubBand14";
             // 
+            // xrPageCountPortrait
+            // 
+            this.xrPageCountPortrait.BackColor = System.Drawing.Color.Transparent;
+            this.xrPageCountPortrait.BorderColor = System.Drawing.Color.Black;
+            this.xrPageCountPortrait.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPageCountPortrait.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPageCountPortrait.BorderWidth = 1F;
+            this.xrPageCountPortrait.Font = new DevExpress.Drawing.DXFont("Segoe UI", 6F);
+            this.xrPageCountPortrait.ForeColor = System.Drawing.Color.Black;
+            this.xrPageCountPortrait.KeepTogether = true;
+            this.xrPageCountPortrait.LocationFloat = new DevExpress.Utils.PointFloat(700.0004F, 8.505567F);
+            this.xrPageCountPortrait.Name = "xrPageCountPortrait";
+            this.xrPageCountPortrait.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrPageCountPortrait.SizeF = new System.Drawing.SizeF(69.99994F, 12.99998F);
+            this.xrPageCountPortrait.StylePriority.UseBackColor = false;
+            this.xrPageCountPortrait.StylePriority.UseBorderColor = false;
+            this.xrPageCountPortrait.StylePriority.UseBorderDashStyle = false;
+            this.xrPageCountPortrait.StylePriority.UseBorders = false;
+            this.xrPageCountPortrait.StylePriority.UseBorderWidth = false;
+            this.xrPageCountPortrait.StylePriority.UseFont = false;
+            this.xrPageCountPortrait.StylePriority.UseForeColor = false;
+            this.xrPageCountPortrait.StylePriority.UsePadding = false;
+            this.xrPageCountPortrait.StylePriority.UseTextAlignment = false;
+            this.xrPageCountPortrait.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
             // xrLabel40
             // 
             this.xrLabel40.AutoWidth = true;
@@ -1142,6 +1167,31 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowDetail")});
             this.SubBand15.HeightF = 30.08895F;
             this.SubBand15.Name = "SubBand15";
+            // 
+            // xrPageCountLandscape
+            // 
+            this.xrPageCountLandscape.BackColor = System.Drawing.Color.Transparent;
+            this.xrPageCountLandscape.BorderColor = System.Drawing.Color.Black;
+            this.xrPageCountLandscape.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPageCountLandscape.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPageCountLandscape.BorderWidth = 1F;
+            this.xrPageCountLandscape.Font = new DevExpress.Drawing.DXFont("Segoe UI", 6F);
+            this.xrPageCountLandscape.ForeColor = System.Drawing.Color.Black;
+            this.xrPageCountLandscape.KeepTogether = true;
+            this.xrPageCountLandscape.LocationFloat = new DevExpress.Utils.PointFloat(950.0001F, 8.505589F);
+            this.xrPageCountLandscape.Name = "xrPageCountLandscape";
+            this.xrPageCountLandscape.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrPageCountLandscape.SizeF = new System.Drawing.SizeF(69.99994F, 12.99998F);
+            this.xrPageCountLandscape.StylePriority.UseBackColor = false;
+            this.xrPageCountLandscape.StylePriority.UseBorderColor = false;
+            this.xrPageCountLandscape.StylePriority.UseBorderDashStyle = false;
+            this.xrPageCountLandscape.StylePriority.UseBorders = false;
+            this.xrPageCountLandscape.StylePriority.UseBorderWidth = false;
+            this.xrPageCountLandscape.StylePriority.UseFont = false;
+            this.xrPageCountLandscape.StylePriority.UseForeColor = false;
+            this.xrPageCountLandscape.StylePriority.UsePadding = false;
+            this.xrPageCountLandscape.StylePriority.UseTextAlignment = false;
+            this.xrPageCountLandscape.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // xrCopyright
             // 
@@ -1242,10 +1292,10 @@
             // 
             // plngRDProcessTrackingID
             // 
+            this.plngRDProcessTrackingID.AllowNull = true;
             this.plngRDProcessTrackingID.Description = "Processing Date";
             this.plngRDProcessTrackingID.Name = "plngRDProcessTrackingID";
             this.plngRDProcessTrackingID.Type = typeof(int);
-            this.plngRDProcessTrackingID.ValueInfo = "0";
             dynamicListLookUpSettings2.DataMember = "RDProcessTracking";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "FormattedDate";
@@ -2604,56 +2654,6 @@
             this.xrCrossBandBox6.StartBand = this.SubBand5;
             this.xrCrossBandBox6.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrCrossBandBox6.WidthF = 1020F;
-            // 
-            // xrPageCountPortrait
-            // 
-            this.xrPageCountPortrait.BackColor = System.Drawing.Color.Transparent;
-            this.xrPageCountPortrait.BorderColor = System.Drawing.Color.Black;
-            this.xrPageCountPortrait.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrPageCountPortrait.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPageCountPortrait.BorderWidth = 1F;
-            this.xrPageCountPortrait.Font = new DevExpress.Drawing.DXFont("Segoe UI", 6F);
-            this.xrPageCountPortrait.ForeColor = System.Drawing.Color.Black;
-            this.xrPageCountPortrait.KeepTogether = true;
-            this.xrPageCountPortrait.LocationFloat = new DevExpress.Utils.PointFloat(700.0004F, 8.505567F);
-            this.xrPageCountPortrait.Name = "xrPageCountPortrait";
-            this.xrPageCountPortrait.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPageCountPortrait.SizeF = new System.Drawing.SizeF(69.99994F, 12.99998F);
-            this.xrPageCountPortrait.StylePriority.UseBackColor = false;
-            this.xrPageCountPortrait.StylePriority.UseBorderColor = false;
-            this.xrPageCountPortrait.StylePriority.UseBorderDashStyle = false;
-            this.xrPageCountPortrait.StylePriority.UseBorders = false;
-            this.xrPageCountPortrait.StylePriority.UseBorderWidth = false;
-            this.xrPageCountPortrait.StylePriority.UseFont = false;
-            this.xrPageCountPortrait.StylePriority.UseForeColor = false;
-            this.xrPageCountPortrait.StylePriority.UsePadding = false;
-            this.xrPageCountPortrait.StylePriority.UseTextAlignment = false;
-            this.xrPageCountPortrait.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrPageCountLandscape
-            // 
-            this.xrPageCountLandscape.BackColor = System.Drawing.Color.Transparent;
-            this.xrPageCountLandscape.BorderColor = System.Drawing.Color.Black;
-            this.xrPageCountLandscape.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrPageCountLandscape.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPageCountLandscape.BorderWidth = 1F;
-            this.xrPageCountLandscape.Font = new DevExpress.Drawing.DXFont("Segoe UI", 6F);
-            this.xrPageCountLandscape.ForeColor = System.Drawing.Color.Black;
-            this.xrPageCountLandscape.KeepTogether = true;
-            this.xrPageCountLandscape.LocationFloat = new DevExpress.Utils.PointFloat(950.0001F, 8.505589F);
-            this.xrPageCountLandscape.Name = "xrPageCountLandscape";
-            this.xrPageCountLandscape.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrPageCountLandscape.SizeF = new System.Drawing.SizeF(69.99994F, 12.99998F);
-            this.xrPageCountLandscape.StylePriority.UseBackColor = false;
-            this.xrPageCountLandscape.StylePriority.UseBorderColor = false;
-            this.xrPageCountLandscape.StylePriority.UseBorderDashStyle = false;
-            this.xrPageCountLandscape.StylePriority.UseBorders = false;
-            this.xrPageCountLandscape.StylePriority.UseBorderWidth = false;
-            this.xrPageCountLandscape.StylePriority.UseFont = false;
-            this.xrPageCountLandscape.StylePriority.UseForeColor = false;
-            this.xrPageCountLandscape.StylePriority.UsePadding = false;
-            this.xrPageCountLandscape.StylePriority.UseTextAlignment = false;
-            this.xrPageCountLandscape.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // RDGLPostingRegister
             // 

@@ -1365,23 +1365,11 @@
     <Compile Include="Reports\APReports\APCheckStubs.Designer.cs">
       <DependentUpon>APCheckStubs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APReports\APManualCheck.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\APReports\APManualCheck.Designer.cs">
-      <DependentUpon>APManualCheck.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\APReports\APManualCheckEditList.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\APReports\APManualCheckEditList.Designer.cs">
       <DependentUpon>APManualCheckEditList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\APReports\ExcelAPManualCheck.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\APReports\ExcelAPManualCheck.Designer.cs">
-      <DependentUpon>ExcelAPManualCheck.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\APReports\ExcelAPPrepaidRegister.cs">
       <SubType>Component</SubType>
@@ -2685,9 +2673,11 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEDetail.resx">
       <DependentUpon>AFEDetail.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEDetailInvoiceSubreport.resx">
       <DependentUpon>AFEDetailInvoiceSubreport.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEEstimateSummary.resx">
       <DependentUpon>AFEEstimateSummary.cs</DependentUpon>
@@ -2903,6 +2893,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEBudgetList.resx">
       <DependentUpon>AFEBudgetList.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelAFEBudgetList.resx">
       <DependentUpon>ExcelAFEBudgetList.cs</DependentUpon>
@@ -3030,14 +3021,8 @@
     <EmbeddedResource Include="Reports\APReports\APCheckStubs.resx">
       <DependentUpon>APCheckStubs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\APManualCheck.resx">
-      <DependentUpon>APManualCheck.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APManualCheckEditList.resx">
       <DependentUpon>APManualCheckEditList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\ExcelAPManualCheck.resx">
-      <DependentUpon>ExcelAPManualCheck.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPPrepaidRegister.resx">
       <DependentUpon>ExcelAPPrepaidRegister.cs</DependentUpon>
