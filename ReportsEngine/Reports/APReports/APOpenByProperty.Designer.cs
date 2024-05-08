@@ -1288,7 +1288,6 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteBeginningPostDate.Name = "pdteBeginningPostDate";
             this.pdteBeginningPostDate.Type = typeof(System.DateTime);
-            this.pdteBeginningPostDate.ValueInfo = "0";
             // 
             // pdteEndingPostDate
             // 
@@ -1297,7 +1296,6 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteEndingPostDate.Name = "pdteEndingPostDate";
             this.pdteEndingPostDate.Type = typeof(System.DateTime);
-            this.pdteEndingPostDate.ValueInfo = "0";
             // 
             // plngReportType
             // 

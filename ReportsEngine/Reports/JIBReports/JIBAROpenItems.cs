@@ -8,11 +8,12 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.JIBReports
 {
-    public partial class JIBAROpenItems : DevExpress.XtraReports.UI.XtraReport
+    public partial class JIBARBalance : DevExpress.XtraReports.UI.XtraReport
     {
-        public JIBAROpenItems()
+        public JIBARBalance()
         {
             InitializeComponent();
+            xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
         }
         private void xrOwnersSelected_BeforePrint(object sender, CancelEventArgs e)
         {
