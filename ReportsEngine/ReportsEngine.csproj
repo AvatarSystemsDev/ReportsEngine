@@ -1365,12 +1365,6 @@
     <Compile Include="Reports\APReports\APCheckStubs.Designer.cs">
       <DependentUpon>APCheckStubs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\APReports\APManualCheckEditList.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\APReports\APManualCheckEditList.Designer.cs">
-      <DependentUpon>APManualCheckEditList.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\APReports\ExcelAPPrepaidRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -3020,9 +3014,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APCheckStubs.resx">
       <DependentUpon>APCheckStubs.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\APReports\APManualCheckEditList.resx">
-      <DependentUpon>APManualCheckEditList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPPrepaidRegister.resx">
       <DependentUpon>ExcelAPPrepaidRegister.cs</DependentUpon>
