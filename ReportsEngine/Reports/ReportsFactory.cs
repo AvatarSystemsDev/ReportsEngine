@@ -322,6 +322,10 @@ namespace ReportsEngine.Reports
             Reports.Add("TestCheckReport", () => new TestCheckReport());
             Reports.Add("JIBSuspenseAction", () => new JIBSuspenseAction());
             Reports.Add("ExcelJIBSuspenseAction", () => new ExcelJIBSuspenseAction());
+            Reports.Add("JIBAllocation", () => new JIBAllocation());
+            Reports.Add("ExcelJIBAllocation", () => new ExcelJIBAllocation());
+            Reports.Add("JIBAllocationInsideImmediate", () => new JIBAllocation());
+            Reports.Add("ExcelJIBAllocationInsideImmediate", () => new ExcelJIBAllocation());
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

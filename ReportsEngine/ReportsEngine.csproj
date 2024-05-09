@@ -531,6 +531,18 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\JIBReports\ExcelJIBAllocation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\ExcelJIBAllocation.Designer.cs">
+      <DependentUpon>ExcelJIBAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBAllocation.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\JIBReports\JIBAllocation.Designer.cs">
+      <DependentUpon>JIBAllocation.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\CombinedStateWithholdingSubreport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2593,6 +2605,12 @@
     <Folder Include="Views\WebDocumentViewer\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\JIBReports\ExcelJIBAllocation.resx">
+      <DependentUpon>ExcelJIBAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\JIBReports\JIBAllocation.resx">
+      <DependentUpon>JIBAllocation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\CombinedStateWithholdingSubreport.resx">
       <DependentUpon>CombinedStateWithholdingSubreport.cs</DependentUpon>
     </EmbeddedResource>
