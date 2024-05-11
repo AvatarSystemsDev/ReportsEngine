@@ -3304,6 +3304,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APPaymentsHistoryRecap.resx">
       <DependentUpon>APPaymentsHistoryRecap.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APPrepaidRegister.resx">
       <DependentUpon>APPrepaidRegister.cs</DependentUpon>
@@ -3352,6 +3353,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPPaymentsHistoryRecap.resx">
       <DependentUpon>ExcelAPPaymentsHistoryRecap.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\ExcelAPVoucherRegister.resx">
       <DependentUpon>ExcelAPVoucherRegister.cs</DependentUpon>

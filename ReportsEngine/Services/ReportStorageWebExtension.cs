@@ -233,8 +233,8 @@ namespace ReportsEngine.Services
                         report.Parameters["plngCompanyID"].Value = companyid;
                     }
 
-                    string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + ReportUser + ";Password=" + ReportUserPassword + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;TrustServerCertificate=true;";
-                    string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;TrustServerCertificate=true;";
+                    string connectionStringDynamic = @"XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + ReportUser + ";Password=" + ReportUserPassword + ";Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + ";Persist Security Info=true;Encrypt=True;TrustServerCertificate=true;";
+                    string connectionStringPulse = @"XpoProvider=MSSqlServer;Data Source=" + PulseServerName + "; User ID=" + Pulseuser + ";Password=" + Pulsepassword + ";Initial Catalog=" + PulseDatabaseName + ";Persist Security Info=true;Encrypt=True;TrustServerCertificate=true;";
 
                     var dataSources = DataSourceManager.GetDataSources(report, true);
                     foreach (var dataSource in dataSources)
@@ -359,7 +359,7 @@ namespace ReportsEngine.Services
 
                     }
                 }
-                else if (report.Parameters[parameterName].Type.Name.ToString() == "DateTime")
+                else if (report.Parameters[parameterName].Type == typeof(DateTime))
                 {
                     string dateTimeString = parameters.Get(parameterName).ToString();
                     DateTime dateTimeParameter = DateTime.Parse(dateTimeString);

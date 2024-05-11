@@ -1111,7 +1111,7 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "IIF(?pstrBeginningDeckCode<= \'\' And ?pstrEndingDeckCode = \'ZZZZZZ\', \'Selected Dec" +
                     "k Codes\', ?pstrBeginningDeckCode+ \' to \' + ?pstrEndingDeckCode )\n")});
             this.xrDeckCodesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrDeckCodesSelected.LocationFloat = new DevExpress.Utils.PointFloat(509.1387F, 14.31002F);
+            this.xrDeckCodesSelected.LocationFloat = new DevExpress.Utils.PointFloat(509.5788F, 14.31002F);
             this.xrDeckCodesSelected.Multiline = true;
             this.xrDeckCodesSelected.Name = "xrDeckCodesSelected";
             this.xrDeckCodesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -1124,7 +1124,7 @@
             // xrLabel70
             // 
             this.xrLabel70.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel70.LocationFloat = new DevExpress.Utils.PointFloat(421.2145F, 14.30995F);
+            this.xrLabel70.LocationFloat = new DevExpress.Utils.PointFloat(421.6546F, 14.30995F);
             this.xrLabel70.Multiline = true;
             this.xrLabel70.Name = "xrLabel70";
             this.xrLabel70.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
@@ -1173,7 +1173,7 @@
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel15.ForeColor = System.Drawing.Color.Black;
             this.xrLabel15.KeepTogether = true;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(421.2145F, 3.814697E-06F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(421.6546F, 3.814697E-06F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
@@ -1201,7 +1201,7 @@
             this.xrOwnersSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrOwnersSelected.ForeColor = System.Drawing.Color.Black;
             this.xrOwnersSelected.KeepTogether = true;
-            this.xrOwnersSelected.LocationFloat = new DevExpress.Utils.PointFloat(509.1387F, 3.814697E-06F);
+            this.xrOwnersSelected.LocationFloat = new DevExpress.Utils.PointFloat(509.5788F, 3.814697E-06F);
             this.xrOwnersSelected.Multiline = true;
             this.xrOwnersSelected.Name = "xrOwnersSelected";
             this.xrOwnersSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
