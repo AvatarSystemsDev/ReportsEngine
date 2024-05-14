@@ -326,6 +326,9 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBAllocation", () => new ExcelJIBAllocation());
             Reports.Add("JIBAllocationInsideImmediate", () => new JIBAllocation());
             Reports.Add("ExcelJIBAllocationInsideImmediate", () => new ExcelJIBAllocation());
+            Reports.Add("PR_StateTableListing", () => new PR_StateTableListing());
+            Reports.Add("ExcelPR_StateTableListing", () => new ExcelPR_StateTableListing());
+
         }
         public static Dictionary<string, Func<XtraReport>> Reports = new Dictionary<string, Func<XtraReport>>();
     }

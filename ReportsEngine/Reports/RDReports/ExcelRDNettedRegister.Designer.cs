@@ -604,6 +604,7 @@
             this.xrLabel25.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel25.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel25.BorderWidth = 1F;
+            this.xrLabel25.CanGrow = false;
             this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel25.ForeColor = System.Drawing.Color.Black;
             this.xrLabel25.KeepTogether = true;
@@ -627,6 +628,7 @@
             this.xrLabel23.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel23.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel23.BorderWidth = 1F;
+            this.xrLabel23.CanGrow = false;
             this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel23.ForeColor = System.Drawing.Color.Black;
             this.xrLabel23.KeepTogether = true;
@@ -650,6 +652,7 @@
             this.xrLabel22.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel22.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel22.BorderWidth = 1F;
+            this.xrLabel22.CanGrow = false;
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel22.ForeColor = System.Drawing.Color.Black;
             this.xrLabel22.KeepTogether = true;
@@ -673,6 +676,7 @@
             this.xrLabel12.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel12.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel12.BorderWidth = 1F;
+            this.xrLabel12.CanGrow = false;
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel12.ForeColor = System.Drawing.Color.Black;
             this.xrLabel12.KeepTogether = true;
@@ -696,6 +700,7 @@
             this.xrLabel11.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel11.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel11.BorderWidth = 1F;
+            this.xrLabel11.CanGrow = false;
             this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel11.ForeColor = System.Drawing.Color.Black;
             this.xrLabel11.KeepTogether = true;
@@ -719,6 +724,7 @@
             this.xrLabel10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel10.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel10.BorderWidth = 1F;
+            this.xrLabel10.CanGrow = false;
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel10.ForeColor = System.Drawing.Color.Black;
             this.xrLabel10.KeepTogether = true;
@@ -742,6 +748,7 @@
             this.xrLabel9.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel9.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel9.BorderWidth = 1F;
+            this.xrLabel9.CanGrow = false;
             this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel9.ForeColor = System.Drawing.Color.Black;
             this.xrLabel9.KeepTogether = true;
@@ -765,6 +772,7 @@
             this.xrLabel28.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel28.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel28.BorderWidth = 1F;
+            this.xrLabel28.CanGrow = false;
             this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel28.ForeColor = System.Drawing.Color.Black;
             this.xrLabel28.KeepTogether = true;
@@ -788,6 +796,7 @@
             this.Textbox183.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox183.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox183.BorderWidth = 1F;
+            this.Textbox183.CanGrow = false;
             this.Textbox183.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox183.ForeColor = System.Drawing.Color.Black;
             this.Textbox183.KeepTogether = true;
@@ -811,6 +820,7 @@
             this.Textbox164.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox164.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox164.BorderWidth = 1F;
+            this.Textbox164.CanGrow = false;
             this.Textbox164.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox164.ForeColor = System.Drawing.Color.Black;
             this.Textbox164.KeepTogether = true;
@@ -834,6 +844,7 @@
             this.Textbox159.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox159.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox159.BorderWidth = 1F;
+            this.Textbox159.CanGrow = false;
             this.Textbox159.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox159.ForeColor = System.Drawing.Color.Black;
             this.Textbox159.KeepTogether = true;
@@ -857,6 +868,7 @@
             this.Textbox165.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox165.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox165.BorderWidth = 1F;
+            this.Textbox165.CanGrow = false;
             this.Textbox165.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox165.ForeColor = System.Drawing.Color.Black;
             this.Textbox165.KeepTogether = true;
@@ -880,6 +892,7 @@
             this.Textbox163.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox163.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox163.BorderWidth = 1F;
+            this.Textbox163.CanGrow = false;
             this.Textbox163.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox163.ForeColor = System.Drawing.Color.Black;
             this.Textbox163.KeepTogether = true;
@@ -903,6 +916,7 @@
             this.Textbox161.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox161.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox161.BorderWidth = 1F;
+            this.Textbox161.CanGrow = false;
             this.Textbox161.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox161.ForeColor = System.Drawing.Color.Black;
             this.Textbox161.KeepTogether = true;
@@ -926,6 +940,7 @@
             this.Textbox158.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox158.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox158.BorderWidth = 1F;
+            this.Textbox158.CanGrow = false;
             this.Textbox158.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox158.ForeColor = System.Drawing.Color.Black;
             this.Textbox158.KeepTogether = true;
@@ -949,6 +964,7 @@
             this.xrLabel27.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel27.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel27.BorderWidth = 1F;
+            this.xrLabel27.CanGrow = false;
             this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel27.ForeColor = System.Drawing.Color.Black;
             this.xrLabel27.KeepTogether = true;
@@ -1033,6 +1049,7 @@
             this.pstrSelectOwner.Description = "Parameter1";
             this.pstrSelectOwner.MultiValue = true;
             this.pstrSelectOwner.Name = "pstrSelectOwner";
+            this.pstrSelectOwner.Type = typeof(int);
             // 
             // ExcelRDNettedRegister
             // 
@@ -1046,12 +1063,11 @@
             this.DataMember = "DSRDNettedRegister";
             this.DataSource = this.Dynamic;
             this.DisplayName = "RDNettedRegister";
-            this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) Or IsNullOrEmpty([OwnerNumber]) And \'!\' In (?" +
-    "pstrSelectOwner)";
+            this.FilterString = "[OwnerID] In (?pstrSelectOwner)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
-            this.PageWidth = 1700;
-            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Ledger;
+            this.PageWidth = 2368;
+            this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Custom;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1061,7 +1077,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngRDProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
