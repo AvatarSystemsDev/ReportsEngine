@@ -315,6 +315,11 @@ namespace ReportsEngine.Services
                         }
                     }
                 }
+                else if (parameterName.Contains("pstrReportName"))
+                {
+                    report.DisplayName = parameters.Get(parameterName).ToString();
+                    report.Name = parameters.Get(parameterName).ToString();
+                }
                 else if (parameterName.Contains("pstrSelect")) // I've made all my multivariate parameters with this naming convention. I know that sucks.
                 {
                     //string[] multivariateParameter = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));

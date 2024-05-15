@@ -596,7 +596,7 @@ namespace ReportsEngine
             this.xrLabel24.StylePriority.UseForeColor = false;
             this.xrLabel24.StylePriority.UsePadding = false;
             this.xrLabel24.StylePriority.UseTextAlignment = false;
-            this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.xrLabel24.TextFormatString = "{0:MM/yyyy}";
             // 
             // xrLabel25
