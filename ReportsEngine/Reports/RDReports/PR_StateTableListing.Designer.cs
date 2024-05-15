@@ -254,7 +254,7 @@
             this.xrLabel5});
             this.SubBand4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([WorkersCompensationModifierRate2]) OR [WorkersCompensationModi" +
-                    "fierRate2] = 0\n")});
+                    "fierRate2] <> 0\n")});
             this.SubBand4.HeightF = 17.00001F;
             this.SubBand4.Name = "SubBand4";
             // 

@@ -2562,6 +2562,7 @@
             this.plngCoverSheetTray.Name = "plngCoverSheetTray";
             this.plngCoverSheetTray.Type = typeof(int);
             this.plngCoverSheetTray.ValueInfo = "0";
+            this.plngCoverSheetTray.Visible = false;
             // 
             // plngCheckPrintTray
             // 
@@ -2569,6 +2570,7 @@
             this.plngCheckPrintTray.Name = "plngCheckPrintTray";
             this.plngCheckPrintTray.Type = typeof(int);
             this.plngCheckPrintTray.ValueInfo = "2";
+            this.plngCheckPrintTray.Visible = false;
             // 
             // plngRemittanceSheetTray
             // 
@@ -2576,6 +2578,7 @@
             this.plngRemittanceSheetTray.Name = "plngRemittanceSheetTray";
             this.plngRemittanceSheetTray.Type = typeof(int);
             this.plngRemittanceSheetTray.ValueInfo = "3";
+            this.plngRemittanceSheetTray.Visible = false;
             // 
             // APChecks
             // 
@@ -2631,7 +2634,10 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooHideCheckPart, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.booFalse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.booTrue, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.booTrue, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCoverSheetTray, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintTray, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngRemittanceSheetTray, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.plngDatabaseID,

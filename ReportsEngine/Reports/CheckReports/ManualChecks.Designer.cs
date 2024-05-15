@@ -2199,6 +2199,7 @@
             this.plngRemittanceSheetTray.Name = "plngRemittanceSheetTray";
             this.plngRemittanceSheetTray.Type = typeof(int);
             this.plngRemittanceSheetTray.ValueInfo = "1";
+            this.plngRemittanceSheetTray.Visible = false;
             // 
             // plngCoverSheetTray
             // 
@@ -2206,6 +2207,7 @@
             this.plngCoverSheetTray.Name = "plngCoverSheetTray";
             this.plngCoverSheetTray.Type = typeof(int);
             this.plngCoverSheetTray.ValueInfo = "1";
+            this.plngCoverSheetTray.Visible = false;
             // 
             // plngCheckPrintTray
             // 
@@ -2213,6 +2215,7 @@
             this.plngCheckPrintTray.Name = "plngCheckPrintTray";
             this.plngCheckPrintTray.Type = typeof(int);
             this.plngCheckPrintTray.ValueInfo = "1";
+            this.plngCheckPrintTray.Visible = false;
             // 
             // ManualChecks
             // 
