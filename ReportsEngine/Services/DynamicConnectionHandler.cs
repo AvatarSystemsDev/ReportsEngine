@@ -11,8 +11,8 @@ namespace ReportsEngine.Services
         {
             const string DataSourcePulseValue = "pulse.avatar.local";
             const string DatabasePulse = "AvatarPulse";
-            const string PulseUserID = "RoyaltyOwnerRelationsUser";
-            const string PulseUserPassword = "SzCz0tka";
+            string PulseUserID = Environment.GetEnvironmentVariable("Pulse_Report_User", EnvironmentVariableTarget.Machine) ?? "RoyaltyOwnerRelationsUser";
+            string PulseUserPassword = Environment.GetEnvironmentVariable("Pulse_Report_Password", EnvironmentVariableTarget.Machine) ?? "SzCz0tka";
 
             return "Data Source=" + DataSourcePulseValue + "; Initial Catalog=" + DatabasePulse
                 + ";User Id=" + PulseUserID + ";Password=" + PulseUserPassword

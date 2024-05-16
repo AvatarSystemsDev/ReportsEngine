@@ -22,12 +22,12 @@ namespace ReportsEngine.Services
         readonly string reportDirectory;
         const string FileExtension = ".repx";
 
-        private const string ReportUser = "reportuser";
-        private const string ReportUserPassword = "Re.port_243";
         private const string PulseServerName = "Pulse.Avatar.Local";
         private const string PulseDatabaseName = "AvatarPulse";
-        private const string Pulseuser = "RoyaltyOwnerRelationsUser";
-        private const string Pulsepassword = "SzCz0tka";
+        private static readonly string Pulseuser = Environment.GetEnvironmentVariable("Pulse_Report_User", EnvironmentVariableTarget.Machine) ?? "RoyaltyOwnerRelationsUser"; // Use these as a backup for testing only. Should get username and password from environment variables from server instead of hard coded values in code.
+        private static readonly string Pulsepassword = Environment.GetEnvironmentVariable("Pulse_Report_Password", EnvironmentVariableTarget.Machine) ?? "SzCz0tka";
+        private static readonly string ReportUser = Environment.GetEnvironmentVariable("Report_User", EnvironmentVariableTarget.Machine) ?? "reportuser";
+        private static readonly string ReportUserPassword = Environment.GetEnvironmentVariable("Report_User_Password", EnvironmentVariableTarget.Machine) ?? "Re.port_243";
 
         public CustomReportStorageWebExtension(string reportDirectory)
         {
