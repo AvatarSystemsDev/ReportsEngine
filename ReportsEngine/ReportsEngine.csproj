@@ -543,6 +543,12 @@
     <Compile Include="Reports\JIBReports\JIBAllocation.Designer.cs">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\PR_PreliminaryPaymentTimeRecordRecap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\PR_PreliminaryPaymentTimeRecordRecap.Designer.cs">
+      <DependentUpon>PR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\CombinedStateWithholdingSubreport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2622,6 +2628,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\JIBAllocation.resx">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\PR_PreliminaryPaymentTimeRecordRecap.resx">
+      <DependentUpon>PR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\CombinedStateWithholdingSubreport.resx">
       <DependentUpon>CombinedStateWithholdingSubreport.cs</DependentUpon>
