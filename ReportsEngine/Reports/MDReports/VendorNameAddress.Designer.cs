@@ -44,12 +44,13 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter15 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter18 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VendorNameAddress));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
@@ -117,7 +118,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter18 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter19 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -256,7 +257,7 @@
             queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
             queryParameter10.Name = "@pstrRoleIDs";
             queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectRoleTypeID)", typeof(string));
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectRoleTypeID, \',\')", typeof(string));
             queryParameter11.Name = "@pbooIncludeCompanyOwner";
             queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter11.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
@@ -266,6 +267,9 @@
             queryParameter13.Name = "@pbooGetMailingAndTaxAddressOrJIBAndRDAddress";
             queryParameter13.Type = typeof(bool);
             queryParameter13.ValueInfo = "True";
+            queryParameter14.Name = "@plngMaskFederalID";
+            queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngMaskFederalID", typeof(int));
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter4,
             queryParameter5,
@@ -276,29 +280,30 @@
             queryParameter10,
             queryParameter11,
             queryParameter12,
-            queryParameter13});
+            queryParameter13,
+            queryParameter14});
             storedProcQuery2.StoredProcName = "Report_NamebaseNameAddress";
             storedProcQuery3.Name = "LookupCompanies";
-            queryParameter14.Name = "@plngCompanyID";
-            queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter15.Name = "@plngCompanyID";
+            queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter14});
+            queryParameter15});
             storedProcQuery3.StoredProcName = "Companies_ReportLookup";
             storedProcQuery4.Name = "EntityRolesLookup";
-            queryParameter15.Name = "@pbooIncludeOwner";
-            queryParameter15.Type = typeof(bool);
-            queryParameter15.ValueInfo = "True";
-            queryParameter16.Name = "@pbooWillUseVendorOptionsOnly";
+            queryParameter16.Name = "@pbooIncludeOwner";
             queryParameter16.Type = typeof(bool);
-            queryParameter16.ValueInfo = "False";
-            queryParameter17.Name = "@pbooIncludeAll";
+            queryParameter16.ValueInfo = "True";
+            queryParameter17.Name = "@pbooWillUseVendorOptionsOnly";
             queryParameter17.Type = typeof(bool);
             queryParameter17.ValueInfo = "False";
+            queryParameter18.Name = "@pbooIncludeAll";
+            queryParameter18.Type = typeof(bool);
+            queryParameter18.ValueInfo = "False";
             storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter15,
             queryParameter16,
-            queryParameter17});
+            queryParameter17,
+            queryParameter18});
             storedProcQuery4.StoredProcName = "EntityRoles_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -444,11 +449,11 @@
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter18.Name = "UserID";
-            queryParameter18.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter19.Name = "UserID";
+            queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter18});
+            queryParameter19});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});

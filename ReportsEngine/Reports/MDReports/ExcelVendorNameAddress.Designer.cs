@@ -40,6 +40,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelVendorNameAddress));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -491,7 +492,7 @@
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngUseSortName", typeof(int));
             queryParameter7.Name = "@pstrRoleIDs";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectRoleTypeID)", typeof(string));
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectRoleTypeID,\',\')", typeof(string));
             queryParameter8.Name = "@pbooIncludeCompanyOwner";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooIncludeCompanyOwner", typeof(bool));
@@ -501,6 +502,9 @@
             queryParameter10.Name = "@pbooGetMailingAndTaxAddressOrJIBAndRDAddress";
             queryParameter10.Type = typeof(bool);
             queryParameter10.ValueInfo = "True";
+            queryParameter11.Name = "@plngMaskFederalID";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngMaskFederalID", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -511,7 +515,8 @@
             queryParameter7,
             queryParameter8,
             queryParameter9,
-            queryParameter10});
+            queryParameter10,
+            queryParameter11});
             storedProcQuery1.StoredProcName = "Report_NamebaseNameAddress";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});

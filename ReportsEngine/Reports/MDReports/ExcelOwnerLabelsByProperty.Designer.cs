@@ -42,6 +42,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelOwnerLabelsByProperty));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
@@ -75,6 +76,7 @@
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowLabelWithoutAddress = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngMaskFederalID = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -253,6 +255,9 @@
             queryParameter12.Name = "@plngUserID";
             queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter13.Name = "@plngMaskFederalID";
+            queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngMaskFederalID", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -265,7 +270,8 @@
             queryParameter9,
             queryParameter10,
             queryParameter11,
-            queryParameter12});
+            queryParameter12,
+            queryParameter13});
             storedProcQuery1.StoredProcName = "Report_OwnerLabelsByProperty";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -381,7 +387,7 @@
             this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel3.BorderWidth = 1F;
             this.xrLabel3.CanGrow = false;
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(443.5417F, 0F);
             this.xrLabel3.Multiline = true;
@@ -405,7 +411,7 @@
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel2.BorderWidth = 1F;
             this.xrLabel2.CanGrow = false;
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(284.7917F, 0F);
             this.xrLabel2.Multiline = true;
@@ -429,7 +435,7 @@
             this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel1.BorderWidth = 1F;
             this.xrLabel1.CanGrow = false;
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Multiline = true;
@@ -453,7 +459,7 @@
             this.Textbox14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox14.BorderWidth = 1F;
             this.Textbox14.CanGrow = false;
-            this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox14.KeepTogether = true;
             this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(126.0417F, 0F);
             this.Textbox14.Multiline = true;
@@ -502,6 +508,13 @@
             this.pbooReturnNumber.Name = "pbooReturnNumber";
             this.pbooReturnNumber.Type = typeof(bool);
             this.pbooReturnNumber.ValueInfo = "False";
+            // 
+            // plngMaskFederalID
+            // 
+            this.plngMaskFederalID.Description = "Parameter1";
+            this.plngMaskFederalID.Name = "plngMaskFederalID";
+            this.plngMaskFederalID.Type = typeof(int);
+            this.plngMaskFederalID.ValueInfo = "0";
             // 
             // ExcelOwnerLabelsByProperty
             // 
@@ -553,7 +566,8 @@
             this.plngPrintLabel,
             this.pbooIncludeCompanyOwner,
             this.pbooShowLabelWithoutAddress,
-            this.pbooReturnNumber});
+            this.pbooReturnNumber,
+            this.plngMaskFederalID});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -591,5 +605,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowLabelWithoutAddress;
         private DevExpress.XtraReports.Parameters.Parameter pbooReturnNumber;
+        private DevExpress.XtraReports.Parameters.Parameter plngMaskFederalID;
     }
 }

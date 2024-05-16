@@ -99,11 +99,12 @@
             this.xrLabel39 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel42 = new DevExpress.XtraReports.UI.XRLabel();
+            this.plngMaskFederalID = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
             // 
-            this.Dynamic.ConnectionName = "Connection";
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
             storedProcQuery1.Name = "DataSet1";
             queryParameter1.Name = "@plngCompanyID";
@@ -1494,6 +1495,13 @@
             this.xrLabel42.Text = "Product\r\nType";
             this.xrLabel42.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // plngMaskFederalID
+            // 
+            this.plngMaskFederalID.Description = "Parameter1";
+            this.plngMaskFederalID.Name = "plngMaskFederalID";
+            this.plngMaskFederalID.Type = typeof(int);
+            this.plngMaskFederalID.ValueInfo = "0";
+            // 
             // ExcelDOIDivisionOrderTx
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1518,7 +1526,8 @@
             this.Subtitle,
             this.plngPhaseWellID,
             this.pstrOwnerNumber,
-            this.pbooShowCriteria});
+            this.pbooShowCriteria,
+            this.plngMaskFederalID});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1583,5 +1592,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel99;
         private DevExpress.XtraReports.UI.XRLabel xrLabel41;
         private DevExpress.XtraReports.UI.XRLabel xrLabel43;
+        private DevExpress.XtraReports.Parameters.Parameter plngMaskFederalID;
     }
 }

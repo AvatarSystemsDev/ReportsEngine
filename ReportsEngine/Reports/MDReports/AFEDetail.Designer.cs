@@ -186,7 +186,6 @@
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.plngReportGroupAFEID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngAFEMasterID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooShowJIBInvoices = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
@@ -1205,13 +1204,6 @@
             this.plngAFEMasterID.ValueInfo = "0";
             this.plngAFEMasterID.Visible = false;
             // 
-            // pbooShowJIBInvoices
-            // 
-            this.pbooShowJIBInvoices.Description = "Show JIB Invoices";
-            this.pbooShowJIBInvoices.Name = "pbooShowJIBInvoices";
-            this.pbooShowJIBInvoices.Type = typeof(bool);
-            this.pbooShowJIBInvoices.ValueInfo = "False";
-            // 
             // groupHeaderBand1
             // 
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
@@ -1696,7 +1688,7 @@
             this.ReportTitle.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.ReportTitle.BorderWidth = 1F;
             this.ReportTitle.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'AFE Detail\' + Iif(?pbooShowJIBInvoices,\' With Invoices\' ,\'\' ) ")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'AFE Detail\' ")});
             this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.ReportTitle.KeepTogether = true;
             this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0.5900065F, 31.39F);
@@ -1984,7 +1976,6 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngActualAmountType, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowZeroBalances, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowJIBInvoices, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngAFEMasterID, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
@@ -2004,7 +1995,6 @@
             this.plngActualAmountType,
             this.pbooShowAccountNumber,
             this.pbooShowZeroBalances,
-            this.pbooShowJIBInvoices,
             this.pbooShowCriteria,
             this.plngAFEMasterID});
             this.Version = "23.1";
@@ -2049,7 +2039,6 @@
         private DevExpress.XtraReports.Parameters.Parameter plngReportGroupAFEID;
         private DevExpress.XtraReports.Parameters.Parameter plngAFEMasterID;
         private DevExpress.XtraReports.UI.XRSubreport xrAFEEstimateSummary;
-        private DevExpress.XtraReports.Parameters.Parameter pbooShowJIBInvoices;
         private DevExpress.XtraReports.UI.SubBand SubBand2;
         private DevExpress.XtraReports.UI.SubBand SubBand3;
         private DevExpress.XtraReports.UI.SubBand SubBand5;

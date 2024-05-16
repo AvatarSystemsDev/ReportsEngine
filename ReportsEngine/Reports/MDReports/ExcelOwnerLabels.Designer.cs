@@ -71,6 +71,7 @@
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.pbooIncludeCompanyOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowLabelsWithoutAddress = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngMaskFederalID = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -126,12 +127,12 @@
             // 
             // topMarginBand1
             // 
-            this.topMarginBand1.HeightF = 30F;
+            this.topMarginBand1.HeightF = 0F;
             this.topMarginBand1.Name = "topMarginBand1";
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 30F;
+            this.bottomMarginBand1.HeightF = 0F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // detailBand1
@@ -369,7 +370,7 @@
             this.Textbox14.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox14.BorderWidth = 1F;
             this.Textbox14.CanGrow = false;
-            this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.Textbox14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox14.KeepTogether = true;
             this.Textbox14.LocationFloat = new DevExpress.Utils.PointFloat(126.0417F, 0F);
             this.Textbox14.Multiline = true;
@@ -393,7 +394,7 @@
             this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel1.BorderWidth = 1F;
             this.xrLabel1.CanGrow = false;
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel1.Multiline = true;
@@ -417,7 +418,7 @@
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel2.BorderWidth = 1F;
             this.xrLabel2.CanGrow = false;
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(284.7917F, 0F);
             this.xrLabel2.Multiline = true;
@@ -441,7 +442,7 @@
             this.xrLabel3.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel3.BorderWidth = 1F;
             this.xrLabel3.CanGrow = false;
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(443.5417F, 0F);
             this.xrLabel3.Multiline = true;
@@ -471,6 +472,13 @@
             this.pbooShowLabelsWithoutAddress.Type = typeof(bool);
             this.pbooShowLabelsWithoutAddress.ValueInfo = "False";
             // 
+            // plngMaskFederalID
+            // 
+            this.plngMaskFederalID.Description = "Mask Federal ID";
+            this.plngMaskFederalID.Name = "plngMaskFederalID";
+            this.plngMaskFederalID.Type = typeof(int);
+            this.plngMaskFederalID.ValueInfo = "0";
+            // 
             // ExcelOwnerLabels
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -485,7 +493,7 @@
             this.DisplayName = "OwnerLabels";
             this.FilterString = "[OwnerNumber] In (?pstrSelectOwner)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 30F, 30F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -515,7 +523,8 @@
             this.plngUserID,
             this.plngPrintLabel,
             this.pbooIncludeCompanyOwner,
-            this.pbooShowLabelsWithoutAddress});
+            this.pbooShowLabelsWithoutAddress,
+            this.plngMaskFederalID});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -550,5 +559,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel4;
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeCompanyOwner;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowLabelsWithoutAddress;
+        private DevExpress.XtraReports.Parameters.Parameter plngMaskFederalID;
     }
 }
