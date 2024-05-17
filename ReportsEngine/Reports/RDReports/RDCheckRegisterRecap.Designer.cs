@@ -39,6 +39,9 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDCheckRegisterRecap));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -58,6 +61,9 @@
             this.pstrSelectRDCheckID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeVoidChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngEndingCheckSortNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -147,27 +153,36 @@
             queryParameter2.Name = "@plngCompanyID";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter3.Name = "@pstrSelectCashAccountID";
+            queryParameter3.Name = "@pstrBeginningOwnerNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectCashAccountID,\',\' )", typeof(string));
-            queryParameter4.Name = "@pdteBeginningCheckDate";
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
+            queryParameter4.Name = "@pstrEndingOwnerNumber";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pdteBeginningCheckDate", typeof(System.DateTime));
-            queryParameter5.Name = "@pdteEndingCheckDate";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter5.Name = "@pstrSelectOwner";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pdteEndingCheckDate", typeof(System.DateTime));
-            queryParameter6.Name = "@plngBegininningCheckSortNumber";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectOwner,\',\')", typeof(string));
+            queryParameter6.Name = "@pstrSelectCashAccountID";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngBeginningCheckSortNumber", typeof(int));
-            queryParameter7.Name = "@plngEndingCheckSortNumber";
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectCashAccountID,\',\' )", typeof(string));
+            queryParameter7.Name = "@pdteBeginningCheckDate";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngEndingCheckSortNumber", typeof(int));
-            queryParameter8.Name = "@pstrSelectRDCheckID";
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pdteBeginningCheckDate", typeof(System.DateTime));
+            queryParameter8.Name = "@pdteEndingCheckDate";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectRDCheckID, \',\' )", typeof(string));
-            queryParameter9.Name = "@pbooIncludeVoidChecks";
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pdteEndingCheckDate", typeof(System.DateTime));
+            queryParameter9.Name = "@plngBegininningCheckSortNumber";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pbooIncludeVoidChecks", typeof(bool));
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngBeginningCheckSortNumber", typeof(int));
+            queryParameter10.Name = "@plngEndingCheckSortNumber";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngEndingCheckSortNumber", typeof(int));
+            queryParameter11.Name = "@pstrSelectRDCheckID";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectRDCheckID,\',\' )", typeof(string));
+            queryParameter12.Name = "@pbooIncludeVoidChecks";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?pbooIncludeVoidChecks", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -177,7 +192,10 @@
             queryParameter6,
             queryParameter7,
             queryParameter8,
-            queryParameter9});
+            queryParameter9,
+            queryParameter10,
+            queryParameter11,
+            queryParameter12});
             storedProcQuery1.StoredProcName = "Report_RDCheckRegisterRecap";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -275,6 +293,25 @@
             this.plngEndingCheckSortNumber.ValueInfo = "0";
             this.plngEndingCheckSortNumber.Visible = false;
             // 
+            // pstrBeginningOwnerNumber
+            // 
+            this.pstrBeginningOwnerNumber.Description = "Parameter1";
+            this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
+            this.pstrBeginningOwnerNumber.Visible = false;
+            // 
+            // pstrEndingOwnerNumber
+            // 
+            this.pstrEndingOwnerNumber.Description = "Parameter1";
+            this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
+            this.pstrEndingOwnerNumber.Visible = false;
+            // 
+            // pstrSelectOwner
+            // 
+            this.pstrSelectOwner.Description = "Select Owner";
+            this.pstrSelectOwner.MultiValue = true;
+            this.pstrSelectOwner.Name = "pstrSelectOwner";
+            this.pstrSelectOwner.Visible = false;
+            // 
             // RDCheckRegisterRecap
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -300,7 +337,10 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningCheckSortNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingCheckSortNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectRDCheckID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeVoidChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeVoidChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -313,7 +353,10 @@
             this.plngBeginningCheckSortNumber,
             this.plngEndingCheckSortNumber,
             this.pstrSelectRDCheckID,
-            this.pbooIncludeVoidChecks});
+            this.pbooIncludeVoidChecks,
+            this.pstrBeginningOwnerNumber,
+            this.pstrEndingOwnerNumber,
+            this.pstrSelectOwner});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -339,5 +382,8 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectRDCheckID;
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeVoidChecks;
         private DevExpress.XtraReports.Parameters.Parameter plngEndingCheckSortNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningOwnerNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingOwnerNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
     }
 }

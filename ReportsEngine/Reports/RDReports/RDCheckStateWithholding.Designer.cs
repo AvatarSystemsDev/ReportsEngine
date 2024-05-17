@@ -488,6 +488,8 @@
             this.Tablix1.HeightF = 17F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
+            this.Tablix1.SortFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("OwnerNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             // 
             // xrLabel38
             // 
@@ -2621,7 +2623,8 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerGross"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerNet"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RevenueWithholdingAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellDescription")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SortFieldCheckNumber")});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Pulse_Master_UserRecord";
             sourceNode5.Alias = null;
@@ -2683,7 +2686,8 @@
             this.xrLabel30,
             this.xrLabel37});
             this.groupHeaderBand2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("ImbursementID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            new DevExpress.XtraReports.UI.GroupField("SortFieldCheckNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
+            new DevExpress.XtraReports.UI.GroupField("ImbursementID", DevExpress.XtraReports.UI.XRColumnSortOrder.None)});
             this.groupHeaderBand2.HeightF = 17F;
             this.groupHeaderBand2.Name = "groupHeaderBand2";
             // 

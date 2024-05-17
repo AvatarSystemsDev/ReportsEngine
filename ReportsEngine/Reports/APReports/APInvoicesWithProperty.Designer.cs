@@ -2104,7 +2104,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Under91Days"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Over90Days"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "InvoiceFullAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "FederalIdNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "StateID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "StateAbbrev"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PhaseWellShortRecordType")});

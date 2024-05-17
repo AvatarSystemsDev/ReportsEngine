@@ -1822,7 +1822,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DueDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "GLDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FederalIdNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "AgeDays"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DiscountAmount"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchID"),

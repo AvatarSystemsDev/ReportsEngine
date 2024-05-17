@@ -1625,7 +1625,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_APOutstandingPayablesDetailWithProperty";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"517\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"497\" />";
             source1.DataMember = "APOutstandingPayablesDetailWithProperty";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_APOutstandingPayablesDetailWithProperty";
@@ -1645,7 +1645,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DueDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GLDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ServiceDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "FederalIdNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbrev"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyAmount"),

@@ -1421,7 +1421,7 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DSAPPayablesDetail";
             sourceNode1.Alias = null;
-            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"577\" />";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"597\" />";
             source1.DataMember = "DSAPPayablesDetail";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DSAPPayablesDetail";
@@ -1442,7 +1442,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GLDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ServiceDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "FederalIdNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbrev"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AgeDays"),

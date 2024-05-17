@@ -36,12 +36,12 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TestCheckReport));
-            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery2 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine1 = new DevExpress.XtraPrinting.Shape.ShapeLine();
@@ -220,31 +220,31 @@
             queryParameter4,
             queryParameter5});
             storedProcQuery1.StoredProcName = "CheckFormattingOptions_ReportLookup";
-            customSqlQuery1.Name = "BankAccountMICRInformationLookup";
-            queryParameter6.Name = "plngCompanyID";
+            customSqlQuery1.Name = "CheckFormSelection";
+            customSqlQuery1.Sql = "Select ID, Number + \' : \' + Description AS Description\r\nFROM CheckPrintingFormat";
+            storedProcQuery2.Name = "BankAccountMICRInformationLookup";
+            queryParameter6.Name = "@plngCompanyID";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter7.Name = "plngBankID";
+            queryParameter7.Name = "@plngBankID";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngBankID", typeof(int));
-            queryParameter8.Name = "plngCashAccountID";
+            queryParameter8.Name = "@plngCashAccountID";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngCashAccountID", typeof(int));
-            queryParameter9.Name = "plngCheckType";
+            queryParameter9.Name = "@plngCheckType";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngCheckType", typeof(int));
-            customSqlQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter6,
             queryParameter7,
             queryParameter8,
             queryParameter9});
-            customSqlQuery1.Sql = resources.GetString("customSqlQuery1.Sql");
-            customSqlQuery2.Name = "CheckFormSelection";
-            customSqlQuery2.Sql = "Select ID, Number + \' : \' + Description AS Description\r\nFROM CheckPrintingFormat";
+            storedProcQuery2.StoredProcName = "BankAccountMICRInformation_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
             customSqlQuery1,
-            customSqlQuery2});
+            storedProcQuery2});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1

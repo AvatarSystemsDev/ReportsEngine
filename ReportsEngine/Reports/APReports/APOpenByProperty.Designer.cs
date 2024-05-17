@@ -2528,7 +2528,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GLDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ServiceDate"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "FederalIdNumber"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbrev"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyAmount"),
