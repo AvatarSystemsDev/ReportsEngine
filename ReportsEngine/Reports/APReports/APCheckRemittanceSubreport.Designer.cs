@@ -150,7 +150,7 @@
             this.xrLabel14.CanGrow = false;
             this.xrLabel14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InvoiceDescription]")});
-            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel14.KeepTogether = true;
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(197.1866F, 0F);
             this.xrLabel14.Name = "xrLabel14";
@@ -174,7 +174,7 @@
             this.xrLabel3.CanGrow = false;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InvoiceDate]")});
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel3.KeepTogether = true;
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(116.9749F, 0F);
             this.xrLabel3.Name = "xrLabel3";
@@ -199,7 +199,7 @@
             this.xrLabel1.CanGrow = false;
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InvoiceNumber]")});
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel1.KeepTogether = true;
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(1.875051F, 0F);
             this.xrLabel1.Name = "xrLabel1";
@@ -842,7 +842,7 @@
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NetAmount]"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not [WillPrintDetailOnChecks]\n")});
-            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel6.KeepTogether = true;
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(671.3599F, 0F);
             this.xrLabel6.Name = "xrLabel6";
@@ -868,7 +868,7 @@
             this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DiscountTaken]"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not [WillPrintDetailOnChecks]\n")});
-            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel7.KeepTogether = true;
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(557.8201F, 0F);
             this.xrLabel7.Name = "xrLabel7";
@@ -894,7 +894,7 @@
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[APPaymentAmount]"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not [WillPrintDetailOnChecks]")});
-            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel5.KeepTogether = true;
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(446.1548F, 0F);
             this.xrLabel5.Name = "xrLabel5";
@@ -962,7 +962,7 @@
             this.xrLabel4.CanGrow = false;
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InvoiceDate]")});
-            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel4.KeepTogether = true;
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(116.9749F, 0F);
             this.xrLabel4.Name = "xrLabel4";
@@ -987,7 +987,7 @@
             this.xrLabel2.CanGrow = false;
             this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[InvoiceNumber]")});
-            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel2.KeepTogether = true;
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(1.875051F, 0F);
             this.xrLabel2.Name = "xrLabel2";
@@ -1011,7 +1011,7 @@
             this.xrLabel20.CanGrow = false;
             this.xrLabel20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BottomHalfDescription]")});
-            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel20.KeepTogether = true;
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(197.1866F, 0F);
             this.xrLabel20.Name = "xrLabel20";
@@ -1035,7 +1035,7 @@
             this.xrLabel18.CanGrow = false;
             this.xrLabel18.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LineItemDiscount]")});
-            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel18.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel18.KeepTogether = true;
             this.xrLabel18.LocationFloat = new DevExpress.Utils.PointFloat(557.8201F, 0F);
             this.xrLabel18.Name = "xrLabel18";
@@ -1060,7 +1060,7 @@
             this.xrLabel13.CanGrow = false;
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LineItemNetAmount]")});
-            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel13.KeepTogether = true;
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(671.36F, 0F);
             this.xrLabel13.Name = "xrLabel13";
@@ -1085,7 +1085,7 @@
             this.xrLabel10.CanGrow = false;
             this.xrLabel10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[BottomHalfAmount]\n")});
-            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8.25F);
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel10.KeepTogether = true;
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(446.155F, 0F);
             this.xrLabel10.Name = "xrLabel10";
@@ -1225,8 +1225,8 @@
             this.DataSource = this.Dynamic;
             this.DisplayName = "APCheckRemittanceSubreport";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "(?pbooRunningAtEnd And ([CountedLineItems]) > 29) Or (Not ?pbooRunningAtEnd And (" +
-                    "[CountedLineItems]) <= 29) Or ?plngOverflowOptionCode In (1, 2)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "(?pbooRunningAtEnd And ([CountedLineItems]) > 32) Or (Not ?pbooRunningAtEnd And (" +
+                    "[CountedLineItems]) <= 32) Or ?plngOverflowOptionCode In (1, 2)\n")});
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(25F, 25F, 25F, 25F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

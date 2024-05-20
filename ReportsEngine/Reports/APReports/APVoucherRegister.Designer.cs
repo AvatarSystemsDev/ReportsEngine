@@ -307,7 +307,7 @@
             this.Pulse.ConnectionName = "localhost_AvatarPulse_Connection";
             this.Pulse.Name = "Pulse";
             columnExpression1.ColumnName = "ID";
-            table1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"703\" />";
+            table1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"723\" />";
             table1.Name = "Master_UserRecord";
             columnExpression1.Table = table1;
             column1.Expression = columnExpression1;
@@ -1324,7 +1324,7 @@
                     "e:  </b>  \' + FormatString(\'{0:MM/dd/yyyy}\', [PostingDate]) + \'</span>\'\n")});
             this.Textbox65.Font = new DevExpress.Drawing.DXFont("Times New Roman", 8F);
             this.Textbox65.KeepTogether = true;
-            this.Textbox65.LocationFloat = new DevExpress.Utils.PointFloat(1.041667F, 1.525879E-05F);
+            this.Textbox65.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.525879E-05F);
             this.Textbox65.Name = "Textbox65";
             this.Textbox65.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.Textbox65.SerializableRtfString = resources.GetString("Textbox65.SerializableRtfString");

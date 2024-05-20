@@ -290,19 +290,21 @@
             this.plngEndingCheckSortNumber.Description = "Ending Check Number";
             this.plngEndingCheckSortNumber.Name = "plngEndingCheckSortNumber";
             this.plngEndingCheckSortNumber.Type = typeof(int);
-            this.plngEndingCheckSortNumber.ValueInfo = "0";
+            this.plngEndingCheckSortNumber.ValueInfo = "999999999";
             this.plngEndingCheckSortNumber.Visible = false;
             // 
             // pstrBeginningOwnerNumber
             // 
             this.pstrBeginningOwnerNumber.Description = "Parameter1";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
+            this.pstrBeginningOwnerNumber.ValueInfo = "!";
             this.pstrBeginningOwnerNumber.Visible = false;
             // 
             // pstrEndingOwnerNumber
             // 
             this.pstrEndingOwnerNumber.Description = "Parameter1";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
+            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             this.pstrEndingOwnerNumber.Visible = false;
             // 
             // pstrSelectOwner
@@ -310,6 +312,7 @@
             this.pstrSelectOwner.Description = "Select Owner";
             this.pstrSelectOwner.MultiValue = true;
             this.pstrSelectOwner.Name = "pstrSelectOwner";
+            this.pstrSelectOwner.Type = typeof(int);
             this.pstrSelectOwner.Visible = false;
             // 
             // RDCheckRegisterRecap
