@@ -1735,7 +1735,7 @@
             xrSummary6.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.xrBalanceForward.Summary = xrSummary6;
             this.xrBalanceForward.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrBalanceForward.TextFormatString = "{0:N2}";
+            this.xrBalanceForward.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
             // SubBand12
             // 

@@ -112,6 +112,7 @@
             this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel54 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel56 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SortOrder = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -191,6 +192,7 @@
             this.Tablix4.MultiColumn.ColumnSpacing = 50F;
             this.Tablix4.Name = "Tablix4";
             this.Tablix4.SortFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("SortField", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
             new DevExpress.XtraReports.UI.GroupField("RDEntryItemID", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             // 
             // xrLabel19
@@ -1952,6 +1954,14 @@
             this.xrLabel56.StylePriority.UseTextAlignment = false;
             this.xrLabel56.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
+            // SortOrder
+            // 
+            this.SortOrder.DataMember = "ProofList";
+            this.SortOrder.Expression = "Iif(?plngPrintOrder = 0, [PhaseWellNumber] ,?plngPrintOrder = 1, \'\' , ?plngPrintO" +
+    "rder = 2, [PurchaserNumber] , [ProcessingDate] )\n";
+            this.SortOrder.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.SortOrder.Name = "SortOrder";
+            // 
             // ExcelRDProofList
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1959,6 +1969,8 @@
             this.bottomMarginBand1,
             this.Tablix4,
             this.PageHeader});
+            this.CalculatedFields.AddRange(new DevExpress.XtraReports.UI.CalculatedField[] {
+            this.SortOrder});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
             this.DataMember = "ProofList";
@@ -2075,5 +2087,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel57;
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
+        private DevExpress.XtraReports.UI.CalculatedField SortOrder;
     }
 }

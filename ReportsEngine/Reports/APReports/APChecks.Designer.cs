@@ -42,7 +42,18 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter15 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APChecks));
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine1 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine2 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine3 = new DevExpress.XtraPrinting.Shape.ShapeLine();
@@ -56,6 +67,10 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode2 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode3 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -195,6 +210,10 @@
             this.plngCoverSheetTray = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCheckPrintTray = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngRemittanceSheetTray = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectCheck = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrSubreport2 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrSubreport1 = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrCheckCoverPage = new DevExpress.XtraReports.UI.XRSubreport();
@@ -257,9 +276,41 @@
             queryParameter10,
             queryParameter11});
             storedProcQuery2.StoredProcName = "CheckFormattingOptions_ReportLookup";
+            storedProcQuery3.Name = "CheckOwnerReportLookup";
+            queryParameter12.Name = "@plngCompanyID";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter13.Name = "@plngProcessTrackingID";
+            queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngProcessTrackingID", typeof(int));
+            queryParameter14.Name = "@plngCheckTypeID";
+            queryParameter14.Type = typeof(int);
+            queryParameter14.ValueInfo = "1";
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter12,
+            queryParameter13,
+            queryParameter14});
+            storedProcQuery3.StoredProcName = "CheckOwner_ReportLookup";
+            storedProcQuery4.Name = "ChecksReportLookup";
+            queryParameter15.Name = "@plngCompanyID";
+            queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter16.Name = "@plngProcessTrackingID";
+            queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter16.Value = new DevExpress.DataAccess.Expression("?plngProcessTrackingID", typeof(int));
+            queryParameter17.Name = "@plngCheckTypeID";
+            queryParameter17.Type = typeof(int);
+            queryParameter17.ValueInfo = "1";
+            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter15,
+            queryParameter16,
+            queryParameter17});
+            storedProcQuery4.StoredProcName = "Checks_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
-            storedProcQuery2});
+            storedProcQuery2,
+            storedProcQuery3,
+            storedProcQuery4});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
@@ -457,21 +508,40 @@
             this.plngProcessTrackingID.Description = "plngProcessTrackingID";
             this.plngProcessTrackingID.Name = "plngProcessTrackingID";
             this.plngProcessTrackingID.Type = typeof(int);
-            this.plngProcessTrackingID.ValueInfo = "3159";
-            this.plngProcessTrackingID.Visible = false;
+            this.plngProcessTrackingID.ValueInfo = "0";
+            dynamicListLookUpSettings1.DataMember = "CheckOwnerReportLookup";
+            dynamicListLookUpSettings1.DataSource = this.Dynamic;
+            dynamicListLookUpSettings1.DisplayMember = "EntityDescription";
+            dynamicListLookUpSettings1.FilterString = null;
+            dynamicListLookUpSettings1.SortMember = null;
+            dynamicListLookUpSettings1.ValueMember = "EntityID";
+            this.plngProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings1;
             // 
             // pstrBeginningVendorNumber
             // 
             this.pstrBeginningVendorNumber.Description = "pstrBeginningVendorNumber";
             this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
-            this.pstrBeginningVendorNumber.Visible = false;
+            this.pstrBeginningVendorNumber.ValueInfo = "!";
+            dynamicListLookUpSettings2.DataMember = "CheckOwnerReportLookup";
+            dynamicListLookUpSettings2.DataSource = this.Dynamic;
+            dynamicListLookUpSettings2.DisplayMember = "EntityDescription";
+            dynamicListLookUpSettings2.FilterString = null;
+            dynamicListLookUpSettings2.SortMember = null;
+            dynamicListLookUpSettings2.ValueMember = "EntityNumber";
+            this.pstrBeginningVendorNumber.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
             // pstrEndingVendorNumber
             // 
             this.pstrEndingVendorNumber.Description = "pstrEndingVendorNumber";
             this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
-            this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZ";
-            this.pstrEndingVendorNumber.Visible = false;
+            this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZZZZZ";
+            dynamicListLookUpSettings3.DataMember = "CheckOwnerReportLookup";
+            dynamicListLookUpSettings3.DataSource = this.Dynamic;
+            dynamicListLookUpSettings3.DisplayMember = "EntityDescription";
+            dynamicListLookUpSettings3.FilterString = null;
+            dynamicListLookUpSettings3.SortMember = null;
+            dynamicListLookUpSettings3.ValueMember = "EntityNumber";
+            this.pstrEndingVendorNumber.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
             // plngIsTwoSignaturesRequired
             // 
@@ -2477,6 +2547,65 @@
             this.plngRemittanceSheetTray.ValueInfo = "3";
             this.plngRemittanceSheetTray.Visible = false;
             // 
+            // pstrSelectVendor
+            // 
+            this.pstrSelectVendor.Description = "Select Vendor";
+            this.pstrSelectVendor.MultiValue = true;
+            this.pstrSelectVendor.Name = "pstrSelectVendor";
+            this.pstrSelectVendor.SelectAllValues = true;
+            this.pstrSelectVendor.Type = typeof(int);
+            dynamicListLookUpSettings4.DataMember = "CheckOwnerReportLookup";
+            dynamicListLookUpSettings4.DataSource = this.Dynamic;
+            dynamicListLookUpSettings4.DisplayMember = "EntityDescription";
+            dynamicListLookUpSettings4.FilterString = null;
+            dynamicListLookUpSettings4.SortMember = null;
+            dynamicListLookUpSettings4.ValueMember = "EntityID";
+            this.pstrSelectVendor.ValueSourceSettings = dynamicListLookUpSettings4;
+            // 
+            // pstrBeginningCheckNumber
+            // 
+            this.pstrBeginningCheckNumber.Description = "Beginning Check Number";
+            this.pstrBeginningCheckNumber.Name = "pstrBeginningCheckNumber";
+            this.pstrBeginningCheckNumber.ValueInfo = "!";
+            dynamicListLookUpSettings5.DataMember = "ChecksReportLookup";
+            dynamicListLookUpSettings5.DataSource = this.Dynamic;
+            dynamicListLookUpSettings5.DisplayMember = "CheckDescription";
+            dynamicListLookUpSettings5.FilterString = "[EntityNumber] = \'\' Or [EntityID] In (?pstrSelectVendor) And [EntityNumber] >= ?p" +
+    "strBeginningVendorNumber And [EntityNumber] <= ?pstrEndingVendorNumber";
+            dynamicListLookUpSettings5.SortMember = null;
+            dynamicListLookUpSettings5.ValueMember = "CheckNumber";
+            this.pstrBeginningCheckNumber.ValueSourceSettings = dynamicListLookUpSettings5;
+            // 
+            // pstrEndingCheckNumber
+            // 
+            this.pstrEndingCheckNumber.Description = "EndingCheckNumber";
+            this.pstrEndingCheckNumber.Name = "pstrEndingCheckNumber";
+            this.pstrEndingCheckNumber.ValueInfo = "ZZZZZZZZZZZ";
+            dynamicListLookUpSettings6.DataMember = "ChecksReportLookup";
+            dynamicListLookUpSettings6.DataSource = this.Dynamic;
+            dynamicListLookUpSettings6.DisplayMember = "CheckDescription";
+            dynamicListLookUpSettings6.FilterString = "[EntityNumber] = \'\' Or [EntityID] In (?pstrSelectVendor) And [EntityNumber] >= ?p" +
+    "strBeginningVendorNumber And [EntityNumber] <= ?pstrEndingVendorNumber";
+            dynamicListLookUpSettings6.SortMember = null;
+            dynamicListLookUpSettings6.ValueMember = "CheckNumber";
+            this.pstrEndingCheckNumber.ValueSourceSettings = dynamicListLookUpSettings6;
+            // 
+            // pstrSelectCheck
+            // 
+            this.pstrSelectCheck.Description = "Select Check";
+            this.pstrSelectCheck.MultiValue = true;
+            this.pstrSelectCheck.Name = "pstrSelectCheck";
+            this.pstrSelectCheck.SelectAllValues = true;
+            this.pstrSelectCheck.Type = typeof(int);
+            dynamicListLookUpSettings7.DataMember = "ChecksReportLookup";
+            dynamicListLookUpSettings7.DataSource = this.Dynamic;
+            dynamicListLookUpSettings7.DisplayMember = "CheckDescription";
+            dynamicListLookUpSettings7.FilterString = "[EntityNumber] = \'\' Or [EntityID] In (?pstrSelectVendor) And [EntityNumber] >= ?p" +
+    "strBeginningVendorNumber And [EntityNumber] <= ?pstrEndingVendorNumber";
+            dynamicListLookUpSettings7.SortMember = null;
+            dynamicListLookUpSettings7.ValueMember = "CheckID";
+            this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings7;
+            // 
             // xrSubreport2
             // 
             this.xrSubreport2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -2613,7 +2742,8 @@
             this.DisplayName = "APChecks";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
-            this.FilterString = "Not [ISEFT]";
+            this.FilterString = "Not [ISEFT] And [CheckID] In (?pstrSelectCheck) And [VendorID] In (?pstrSelectVen" +
+    "dor)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(20F, 21F, 12.5F, 12.5F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
@@ -2633,6 +2763,10 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormatIsMICR, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngIsTwoSignaturesRequired, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrTwoSignaturesRequiredAmount, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -2660,6 +2794,10 @@
             this.plngProcessTrackingID,
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
+            this.pstrSelectVendor,
+            this.pstrBeginningCheckNumber,
+            this.pstrEndingCheckNumber,
+            this.pstrSelectCheck,
             this.plngCheckFormatIsMICR,
             this.plngIsTwoSignaturesRequired,
             this.pstrTwoSignaturesRequiredAmount,
@@ -2822,5 +2960,9 @@
         private DevExpress.XtraReports.Parameters.Parameter plngCoverSheetTray;
         private DevExpress.XtraReports.Parameters.Parameter plngCheckPrintTray;
         private DevExpress.XtraReports.Parameters.Parameter plngRemittanceSheetTray;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCheckNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCheckNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectCheck;
     }
 }
