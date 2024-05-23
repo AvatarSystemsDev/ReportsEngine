@@ -63,6 +63,18 @@ namespace ReportsEngine.Services
             return Path.GetFileName(url) == url;
         }
 
+        private static int? GetDatabaseIDFromUrl(string url)
+        {
+            Regex regex = new Regex(@"plngDatabaseID=(\d+)");
+            Match match = regex.Match(url);
+
+            if (match.Success)
+            {
+                return int.Parse(match.Groups[1].Value);  // The first group (1) captures the digits following "plngDatabaseID="
+            }
+            return null;
+        }
+
         public override byte[] GetData(string url)
         {
             // Returns report layout data stored in a Report Storage using the specified URL. 
@@ -77,6 +89,7 @@ namespace ReportsEngine.Services
                 int companyid;
                 int indexQ = url.IndexOf("?", companyidindex);
                 int indexA = url.IndexOf("&", companyidindex);
+                int? databaseID = GetDatabaseIDFromUrl(url);
 
                 if (indexA == -1 && indexQ == -1)
                 {
@@ -94,7 +107,7 @@ namespace ReportsEngine.Services
 
                 if (ReportsFactory.Reports.ContainsKey(reportName))
                 {
-                    report = ReportsFactory.Reports[reportName]();
+                    report = ReportsFactory.Reports[reportName](databaseID, companyid);
                 }
 
                 if (report != null)
@@ -168,6 +181,7 @@ namespace ReportsEngine.Services
                     AwaitParameterInputPassed = parameter.Value.ToString().ToLower() == "true";
                 }
             }
+
             //  Margie wants the default parameters for the reports to be the current day.
             foreach (Parameter parameter in report.Parameters)
             {

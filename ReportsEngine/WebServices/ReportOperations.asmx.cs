@@ -45,7 +45,7 @@ namespace ReportsEngine.WebServices
                 paramCollection = new List<dynamic>(reportParams);
             }
 
-            XtraReport report = ReportsFactory.Reports[reportName]();
+            XtraReport report = ReportsFactory.Reports[reportName](databaseID, companyid);
 
             DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();
             string currentDatabaseID = databaseID.ToString();

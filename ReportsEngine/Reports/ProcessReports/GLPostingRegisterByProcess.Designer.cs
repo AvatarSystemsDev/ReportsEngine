@@ -1248,7 +1248,7 @@
                     "e: </b>\' +  FormatString(\'{0:MM/dd/yyyy}\',[PostDate]) + \'</span>\'")});
             this.xrRichText11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText11.KeepTogether = true;
-            this.xrRichText11.LocationFloat = new DevExpress.Utils.PointFloat(1.041858F, 5.340576E-05F);
+            this.xrRichText11.LocationFloat = new DevExpress.Utils.PointFloat(0.0002542734F, 5.340576E-05F);
             this.xrRichText11.Name = "xrRichText11";
             this.xrRichText11.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrRichText11.SerializableRtfString = resources.GetString("xrRichText11.SerializableRtfString");

@@ -33,23 +33,28 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter15 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter18 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter19 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter20 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter21 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDChecks));
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine1 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine2 = new DevExpress.XtraPrinting.Shape.ShapeLine();
@@ -74,6 +79,8 @@
             DevExpress.DataAccess.DataFederation.JoinElement joinElement1 = new DevExpress.DataAccess.DataFederation.JoinElement();
             DevExpress.DataAccess.DataFederation.SelectNode selectNode4 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode5 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode6 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.JoinElement joinElement2 = new DevExpress.DataAccess.DataFederation.JoinElement();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings8 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -269,83 +276,103 @@
             this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
             storedProcQuery1.Name = "RDCheckHeader";
-            queryParameter1.Name = "@plngCompanyID";
+            queryParameter1.Name = "@plngCheckPrintingProcessTrackingID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter2.Name = "@plngProcessTrackingID";
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(int));
+            queryParameter2.Name = "@pstrStartingOwnerNumber";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(int));
-            queryParameter3.Name = "@plngCheckTypeID";
-            queryParameter3.Type = typeof(int);
-            queryParameter3.ValueInfo = "2";
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrStartingOwnerNumber", typeof(string));
+            queryParameter3.Name = "@pstrEndingOwnerNumber";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter4.Name = "@pstrBeginningCheckNumber";
+            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCheckNumber", typeof(string));
+            queryParameter5.Name = "@pstrEndingCheckNumber";
+            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrEndingCheckNumber", typeof(string));
+            queryParameter6.Name = "@plngCheckFormat";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngCheckFormat", typeof(int));
+            queryParameter7.Name = "@pbooReturnElectronicPayments";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(bool));
+            queryParameter8.Name = "@pbooReturnPrintedChecks";
+            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooReturnPrintedChecks", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
-            queryParameter3});
-            storedProcQuery1.StoredProcName = "CheckOwner_ReportLookup";
-            storedProcQuery2.Name = "ChecksLookup";
-            queryParameter4.Name = "@plngCompanyID";
-            queryParameter4.Type = typeof(int);
-            queryParameter4.ValueInfo = "0";
-            queryParameter5.Name = "@plngProcessTrackingID";
-            queryParameter5.Type = typeof(int);
-            queryParameter5.ValueInfo = "0";
-            queryParameter6.Name = "@plngCheckTypeID";
-            queryParameter6.Type = typeof(int);
-            queryParameter6.ValueInfo = "0";
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter3,
             queryParameter4,
             queryParameter5,
-            queryParameter6});
-            storedProcQuery2.StoredProcName = "Checks_ReportLookup";
-            storedProcQuery3.Name = "OwnersLookup";
-            queryParameter7.Name = "@plngCompanyID";
-            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter8.Name = "@plngProcessTrackingID";
-            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(int));
-            queryParameter9.Name = "@plngCheckTypeID";
-            queryParameter9.Type = typeof(int);
-            queryParameter9.ValueInfo = "2";
-            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter6,
             queryParameter7,
-            queryParameter8,
-            queryParameter9});
-            storedProcQuery3.StoredProcName = "CheckOwner_ReportLookup";
-            storedProcQuery4.Name = "CompanyFormatSettings";
-            queryParameter10.Name = "@plngID";
-            queryParameter10.Type = typeof(int);
-            queryParameter10.ValueInfo = "0";
-            queryParameter11.Name = "@plngCompanyID";
-            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter8});
+            storedProcQuery1.StoredProcName = "RDProcessing_CheckPrintingGetChecksToPayHeaders";
+            storedProcQuery2.Name = "ChecksLookup";
+            queryParameter9.Name = "@plngCompanyID";
+            queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter10.Name = "@plngProcessTrackingID";
+            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(int));
+            queryParameter11.Name = "@plngCheckTypeID";
+            queryParameter11.Type = typeof(int);
+            queryParameter11.ValueInfo = "2";
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter9,
             queryParameter10,
             queryParameter11});
-            storedProcQuery4.StoredProcName = "CompanyCheckPrintingFormat_Select";
-            storedProcQuery5.Name = "CheckFormat";
+            storedProcQuery2.StoredProcName = "Checks_ReportLookup";
+            storedProcQuery3.Name = "OwnersLookup";
             queryParameter12.Name = "@plngCompanyID";
             queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter13.Name = "@plngCheckTypeCode";
-            queryParameter13.Type = typeof(int);
-            queryParameter13.ValueInfo = "2";
-            queryParameter14.Name = "@plngDatabaseID";
-            queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngDatabaseID", typeof(int));
-            queryParameter15.Name = "@plngCompanyCheckPrintingFormatID";
-            queryParameter15.Type = typeof(int);
-            queryParameter15.ValueInfo = "0";
-            queryParameter16.Name = "@plngCheckPrintingFormatID";
-            queryParameter16.Type = typeof(int);
-            queryParameter16.ValueInfo = "0";
-            storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter13.Name = "@plngProcessTrackingID";
+            queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(int));
+            queryParameter14.Name = "@plngCheckTypeID";
+            queryParameter14.Type = typeof(int);
+            queryParameter14.ValueInfo = "2";
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter12,
             queryParameter13,
-            queryParameter14,
+            queryParameter14});
+            storedProcQuery3.StoredProcName = "CheckOwner_ReportLookup";
+            storedProcQuery4.Name = "CompanyFormatSettings";
+            queryParameter15.Name = "@plngID";
+            queryParameter15.Type = typeof(int);
+            queryParameter15.ValueInfo = "0";
+            queryParameter16.Name = "@plngCompanyID";
+            queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter16.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter15,
             queryParameter16});
+            storedProcQuery4.StoredProcName = "CompanyCheckPrintingFormat_Select";
+            storedProcQuery5.Name = "CheckFormat";
+            queryParameter17.Name = "@plngCompanyID";
+            queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter18.Name = "@plngCheckTypeCode";
+            queryParameter18.Type = typeof(int);
+            queryParameter18.ValueInfo = "2";
+            queryParameter19.Name = "@plngDatabaseID";
+            queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngDatabaseID", typeof(int));
+            queryParameter20.Name = "@plngCompanyCheckPrintingFormatID";
+            queryParameter20.Type = typeof(int);
+            queryParameter20.ValueInfo = "0";
+            queryParameter21.Name = "@plngCheckPrintingFormatID";
+            queryParameter21.Type = typeof(int);
+            queryParameter21.ValueInfo = "0";
+            storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter17,
+            queryParameter18,
+            queryParameter19,
+            queryParameter20,
+            queryParameter21});
             storedProcQuery5.StoredProcName = "CheckFormattingOptions_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -2703,33 +2730,33 @@
             this.pstrStartingOwnerNumber.ValueInfo = "!";
             dynamicListLookUpSettings1.DataMember = "OwnersLookup";
             dynamicListLookUpSettings1.DataSource = this.Dynamic;
-            dynamicListLookUpSettings1.DisplayMember = "Description";
+            dynamicListLookUpSettings1.DisplayMember = "EntityDescription";
             dynamicListLookUpSettings1.FilterString = null;
             dynamicListLookUpSettings1.SortMember = null;
-            dynamicListLookUpSettings1.ValueMember = "Number";
+            dynamicListLookUpSettings1.ValueMember = "EntityNumber";
             this.pstrStartingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings1;
             // 
             // pstrEndingOwnerNumber
             // 
             this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
-            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
+            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZZ";
             dynamicListLookUpSettings2.DataMember = "OwnersLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
-            dynamicListLookUpSettings2.DisplayMember = "Description";
+            dynamicListLookUpSettings2.DisplayMember = "EntityDescription";
             dynamicListLookUpSettings2.FilterString = null;
             dynamicListLookUpSettings2.SortMember = null;
-            dynamicListLookUpSettings2.ValueMember = "Number";
+            dynamicListLookUpSettings2.ValueMember = "EntityNumber";
             this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
             // pstrEndingCheckNumber
             // 
             this.pstrEndingCheckNumber.Description = "Ending Check Number";
             this.pstrEndingCheckNumber.Name = "pstrEndingCheckNumber";
-            this.pstrEndingCheckNumber.ValueInfo = "ZZZZZZZZZ";
+            this.pstrEndingCheckNumber.ValueInfo = "ZZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "ChecksLookup";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "Description";
+            dynamicListLookUpSettings3.DisplayMember = "CheckDescription";
             dynamicListLookUpSettings3.FilterString = null;
             dynamicListLookUpSettings3.SortMember = null;
             dynamicListLookUpSettings3.ValueMember = "SortByCheckNumber";
@@ -2742,7 +2769,7 @@
             this.pstrBeginningCheckNumber.ValueInfo = "!";
             dynamicListLookUpSettings4.DataMember = "ChecksLookup";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
-            dynamicListLookUpSettings4.DisplayMember = "Description";
+            dynamicListLookUpSettings4.DisplayMember = "CheckDescription";
             dynamicListLookUpSettings4.FilterString = null;
             dynamicListLookUpSettings4.SortMember = null;
             dynamicListLookUpSettings4.ValueMember = "SortByCheckNumber";
@@ -2757,10 +2784,10 @@
             this.pstrSelectCheck.Type = typeof(int);
             dynamicListLookUpSettings5.DataMember = "ChecksLookup";
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
-            dynamicListLookUpSettings5.DisplayMember = "Description";
+            dynamicListLookUpSettings5.DisplayMember = "CheckDescription";
             dynamicListLookUpSettings5.FilterString = null;
             dynamicListLookUpSettings5.SortMember = null;
-            dynamicListLookUpSettings5.ValueMember = "ID";
+            dynamicListLookUpSettings5.ValueMember = "CheckID";
             this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
             // groupFooterBand1
@@ -2821,27 +2848,34 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_ChecksLookup";
             sourceNode1.Alias = null;
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"257\" />";
             source1.DataMember = "ChecksLookup";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_ChecksLookup";
             sourceNode1.Source = source1;
             selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ID"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SortByCheckNumber")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsVoided"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CheckDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "EntityID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "EntityNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SortByCheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SortFieldCheckNumber")});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_OwnersLookup";
             sourceNode2.Alias = null;
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"237\" />";
             source2.DataMember = "OwnersLookup";
             source2.DataSource = this.Dynamic;
             source2.Name = "Dynamic_OwnersLookup";
             sourceNode2.Source = source2;
             selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "RecordType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsVoided"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "EntityID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "EntityNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "EntityDescription")});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_CheckFormat";
             sourceNode3.Alias = null;
@@ -2926,8 +2960,11 @@
             joinElement1});
             selectNode4.Alias = "Query";
             sourceNode5.Alias = "CheckFormat";
-            sourceNode5.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"557\" />";
+            sourceNode5.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"637\" />";
             sourceNode5.Source = source3;
+            sourceNode6.Alias = "RDCheckHeader";
+            sourceNode6.MetaSerializable = "<Meta X=\"185\" Y=\"30\" Width=\"125\" Height=\"817\" />";
+            sourceNode6.Source = source4;
             selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "EntryRow"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CheckPrintingSortMethodTypeCodeID"),
@@ -2952,8 +2989,13 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "SecondSignaturePath"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalLogo"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalSignature"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalSecondarySignature")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FileExtensionOriginalSecondarySignature"),
+            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode6)});
             selectNode4.Root = sourceNode5;
+            joinElement2.Condition = "[[RDCheckHeader\\].[RowNumber\\]] = [[CheckFormat\\].[EntryRow\\]]";
+            joinElement2.Node = sourceNode6;
+            selectNode4.SubNodes.AddRange(new DevExpress.DataAccess.DataFederation.JoinElement[] {
+            joinElement2});
             this.federationDataSource1.Queries.AddRange(new DevExpress.DataAccess.DataFederation.QueryNode[] {
             selectNode1,
             selectNode2,
@@ -3033,10 +3075,10 @@
             this.pstrSelectOwner.Type = typeof(int);
             dynamicListLookUpSettings10.DataMember = "OwnersLookup";
             dynamicListLookUpSettings10.DataSource = this.Dynamic;
-            dynamicListLookUpSettings10.DisplayMember = "Description";
+            dynamicListLookUpSettings10.DisplayMember = "EntityDescription";
             dynamicListLookUpSettings10.FilterString = null;
             dynamicListLookUpSettings10.SortMember = null;
-            dynamicListLookUpSettings10.ValueMember = "ID";
+            dynamicListLookUpSettings10.ValueMember = "EntityID";
             this.pstrSelectOwner.ValueSourceSettings = dynamicListLookUpSettings10;
             // 
             // plngPrintRemittance

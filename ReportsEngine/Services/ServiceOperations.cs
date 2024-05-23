@@ -91,7 +91,7 @@ namespace ReportsEngine.Services
                     string fileDownloadName = fileDownloadPath + fileName;
 
                     string reportType = customData.reportNameExcel;
-                    XtraReport report = ReportsFactory.Reports[reportType]();
+                    XtraReport report = ReportsFactory.Reports[reportType](0, 0);
                     int companyID = customData.CompanyID;
                     string parameters = customData.reportParameters.ToString();
 
