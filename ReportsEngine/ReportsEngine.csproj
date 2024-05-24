@@ -545,11 +545,29 @@
     <Compile Include="Reports\JIBReports\JIBAllocation.Designer.cs">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_PreliminaryPaymentTimeRecordRecap.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_PreliminaryPaymentTimeRecordRecap.Designer.cs">
+      <DependentUpon>ExcelPR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_StateTableListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_StateTableListing.Designer.cs">
+      <DependentUpon>ExcelPR_StateTableListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PRReports\PR_PreliminaryPaymentTimeRecordRecap.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Reports\PRReports\PR_PreliminaryPaymentTimeRecordRecap.Designer.cs">
       <DependentUpon>PR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\PRReports\PR_StateTableListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\PR_StateTableListing.Designer.cs">
+      <DependentUpon>PR_StateTableListing.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\CombinedStateWithholdingSubreport.cs">
       <SubType>Component</SubType>
@@ -977,12 +995,6 @@
     <Compile Include="Reports\RDReports\ExcelNewMexicoStateTaxDetail.Designer.cs">
       <DependentUpon>ExcelNewMexicoStateTaxDetail.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\RDReports\ExcelPR_StateTableListing.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RDReports\ExcelPR_StateTableListing.Designer.cs">
-      <DependentUpon>ExcelPR_StateTableListing.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\RDReports\ExcelRDColoradoDR0021W.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -1222,12 +1234,6 @@
     </Compile>
     <Compile Include="Reports\RDReports\PropertyListAllCompanies.Designer.cs">
       <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Reports\RDReports\PR_StateTableListing.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\RDReports\PR_StateTableListing.Designer.cs">
-      <DependentUpon>PR_StateTableListing.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\RDReports\RDChecksRemittanceOnly.cs">
       <SubType>Component</SubType>
@@ -2631,8 +2637,17 @@
     <EmbeddedResource Include="Reports\JIBReports\JIBAllocation.resx">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\ExcelPR_PreliminaryPaymentTimeRecordRecap.resx">
+      <DependentUpon>ExcelPR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\ExcelPR_StateTableListing.resx">
+      <DependentUpon>ExcelPR_StateTableListing.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\PR_PreliminaryPaymentTimeRecordRecap.resx">
       <DependentUpon>PR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\PR_StateTableListing.resx">
+      <DependentUpon>PR_StateTableListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\CombinedStateWithholdingSubreport.resx">
       <DependentUpon>CombinedStateWithholdingSubreport.cs</DependentUpon>
@@ -2851,9 +2866,6 @@
     <EmbeddedResource Include="Reports\RDReports\ExcelNewMexicoStateTaxDetail.resx">
       <DependentUpon>ExcelNewMexicoStateTaxDetail.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RDReports\ExcelPR_StateTableListing.resx">
-      <DependentUpon>ExcelPR_StateTableListing.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\ExcelRDColoradoDR0021W.resx">
       <DependentUpon>ExcelRDColoradoDR0021W.cs</DependentUpon>
     </EmbeddedResource>
@@ -2974,9 +2986,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\PropertyListAllCompanies.resx">
       <DependentUpon>PropertyListAllCompanies.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\RDReports\PR_StateTableListing.resx">
-      <DependentUpon>PR_StateTableListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\RDChecksRemittanceOnly.resx">
       <DependentUpon>RDChecksRemittanceOnly.cs</DependentUpon>
