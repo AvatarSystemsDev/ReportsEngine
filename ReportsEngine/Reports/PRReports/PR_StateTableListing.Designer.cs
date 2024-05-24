@@ -701,6 +701,7 @@
             this.xrRichText1.BorderWidth = 1F;
             this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "Iif(?pstrSortby = \'State Code\', \'State Code\', \'State Name\')")});
+            this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText1.KeepTogether = true;
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(84.73956F, 2.670288E-05F);
             this.xrRichText1.Name = "xrRichText1";
@@ -715,6 +716,7 @@
             this.Textbox22.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox22.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox22.BorderWidth = 1F;
+            this.Textbox22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox22.KeepTogether = true;
             this.Textbox22.LocationFloat = new DevExpress.Utils.PointFloat(3.146235F, 2.670288E-05F);
             this.Textbox22.Name = "Textbox22";
