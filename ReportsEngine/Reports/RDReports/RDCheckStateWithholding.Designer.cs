@@ -43,7 +43,6 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RDCheckStateWithholding));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
@@ -111,7 +110,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -126,12 +125,6 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode3 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode3 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source3 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode4 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode4 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source4 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode5 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode5 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source5 = new DevExpress.DataAccess.DataFederation.Source();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -181,13 +174,6 @@
             this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel27 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel48 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel49 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel50 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel51 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel53 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel54 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel55 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel56 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupHeaderBand1 = new DevExpress.XtraReports.UI.GroupHeaderBand();
@@ -225,27 +211,21 @@
             this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.groupHeaderBand2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.OwnerNumber = new DevExpress.XtraReports.UI.XRRichText();
             this.xrLabel36 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel35 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel34 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel33 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel32 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel31 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel30 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel37 = new DevExpress.XtraReports.UI.XRLabel();
-            this.pbooUseProcessingDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteBeginningDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteEndingDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel108 = new DevExpress.XtraReports.UI.XRLabel();
+            this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox137)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.OwnerNumber)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -287,26 +267,22 @@
             queryParameter7.Name = "@pstrEndingOwner";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwner", typeof(string));
-            queryParameter8.Name = "@pbooUseProcessingDate";
+            queryParameter8.Name = "@plngCompanyID";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooUseProcessingDate", typeof(bool));
-            queryParameter9.Name = "@plngCompanyID";
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter9.Name = "@pdteBeginningDate";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            queryParameter10.Name = "@pdteBeginningDate";
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pdteBeginningDate", typeof(System.DateTime));
+            queryParameter10.Name = "@pdteEndingDate";
             queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pdteBeginningDate", typeof(System.DateTime));
-            queryParameter11.Name = "@pdteEndingDate";
-            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pdteEndingDate", typeof(System.DateTime));
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pdteEndingDate", typeof(System.DateTime));
             storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter5,
             queryParameter6,
             queryParameter7,
             queryParameter8,
             queryParameter9,
-            queryParameter10,
-            queryParameter11});
+            queryParameter10});
             storedProcQuery4.StoredProcName = "Report_RDCheckStateWithholding";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1,
@@ -452,11 +428,11 @@
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter12.Name = "UserID";
-            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter11.Name = "UserID";
+            queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter12});
+            queryParameter11});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});
@@ -907,8 +883,6 @@
             // Subtitle
             // 
             this.Subtitle.Description = "Subtitle";
-            this.Subtitle.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "\'\'")});
             this.Subtitle.Name = "Subtitle";
             this.Subtitle.Visible = false;
             // 
@@ -1487,194 +1461,12 @@
             this.xrLabel28.Text = "Net";
             this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
-            // xrLabel48
-            // 
-            this.xrLabel48.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel48.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel48.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel48.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel48.BorderWidth = 1F;
-            this.xrLabel48.CanGrow = false;
-            this.xrLabel48.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel48.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel48.KeepTogether = true;
-            this.xrLabel48.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrLabel48.Name = "xrLabel48";
-            this.xrLabel48.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel48.SizeF = new System.Drawing.SizeF(96.39632F, 17F);
-            this.xrLabel48.StylePriority.UseBackColor = false;
-            this.xrLabel48.StylePriority.UseBorderColor = false;
-            this.xrLabel48.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel48.StylePriority.UseBorders = false;
-            this.xrLabel48.StylePriority.UseBorderWidth = false;
-            this.xrLabel48.StylePriority.UseFont = false;
-            this.xrLabel48.StylePriority.UseForeColor = false;
-            this.xrLabel48.StylePriority.UsePadding = false;
-            this.xrLabel48.StylePriority.UseTextAlignment = false;
-            this.xrLabel48.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel49
-            // 
-            this.xrLabel49.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel49.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel49.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel49.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel49.BorderWidth = 1F;
-            this.xrLabel49.CanGrow = false;
-            this.xrLabel49.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel49.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel49.KeepTogether = true;
-            this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(96.39613F, 0F);
-            this.xrLabel49.Name = "xrLabel49";
-            this.xrLabel49.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel49.SizeF = new System.Drawing.SizeF(120.3962F, 17F);
-            this.xrLabel49.StylePriority.UseBackColor = false;
-            this.xrLabel49.StylePriority.UseBorderColor = false;
-            this.xrLabel49.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel49.StylePriority.UseBorders = false;
-            this.xrLabel49.StylePriority.UseBorderWidth = false;
-            this.xrLabel49.StylePriority.UseFont = false;
-            this.xrLabel49.StylePriority.UseForeColor = false;
-            this.xrLabel49.StylePriority.UsePadding = false;
-            this.xrLabel49.StylePriority.UseTextAlignment = false;
-            this.xrLabel49.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel50
-            // 
-            this.xrLabel50.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel50.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel50.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel50.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel50.BorderWidth = 1F;
-            this.xrLabel50.CanGrow = false;
-            this.xrLabel50.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel50.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel50.KeepTogether = true;
-            this.xrLabel50.LocationFloat = new DevExpress.Utils.PointFloat(216.7924F, 0F);
-            this.xrLabel50.Name = "xrLabel50";
-            this.xrLabel50.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel50.SizeF = new System.Drawing.SizeF(92.26575F, 17F);
-            this.xrLabel50.StylePriority.UseBackColor = false;
-            this.xrLabel50.StylePriority.UseBorderColor = false;
-            this.xrLabel50.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel50.StylePriority.UseBorders = false;
-            this.xrLabel50.StylePriority.UseBorderWidth = false;
-            this.xrLabel50.StylePriority.UseFont = false;
-            this.xrLabel50.StylePriority.UseForeColor = false;
-            this.xrLabel50.StylePriority.UsePadding = false;
-            this.xrLabel50.StylePriority.UseTextAlignment = false;
-            this.xrLabel50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel51
-            // 
-            this.xrLabel51.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel51.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel51.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel51.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel51.BorderWidth = 1F;
-            this.xrLabel51.CanGrow = false;
-            this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel51.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel51.KeepTogether = true;
-            this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(309.0581F, 0F);
-            this.xrLabel51.Name = "xrLabel51";
-            this.xrLabel51.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel51.SizeF = new System.Drawing.SizeF(61.63947F, 17F);
-            this.xrLabel51.StylePriority.UseBackColor = false;
-            this.xrLabel51.StylePriority.UseBorderColor = false;
-            this.xrLabel51.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel51.StylePriority.UseBorders = false;
-            this.xrLabel51.StylePriority.UseBorderWidth = false;
-            this.xrLabel51.StylePriority.UseFont = false;
-            this.xrLabel51.StylePriority.UseForeColor = false;
-            this.xrLabel51.StylePriority.UsePadding = false;
-            this.xrLabel51.StylePriority.UseTextAlignment = false;
-            this.xrLabel51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel52
-            // 
-            this.xrLabel52.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel52.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel52.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel52.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel52.BorderWidth = 1F;
-            this.xrLabel52.CanGrow = false;
-            this.xrLabel52.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel52.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel52.KeepTogether = true;
-            this.xrLabel52.LocationFloat = new DevExpress.Utils.PointFloat(370.6977F, 0F);
-            this.xrLabel52.Name = "xrLabel52";
-            this.xrLabel52.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel52.SizeF = new System.Drawing.SizeF(47.64194F, 17F);
-            this.xrLabel52.StylePriority.UseBackColor = false;
-            this.xrLabel52.StylePriority.UseBorderColor = false;
-            this.xrLabel52.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel52.StylePriority.UseBorders = false;
-            this.xrLabel52.StylePriority.UseBorderWidth = false;
-            this.xrLabel52.StylePriority.UseFont = false;
-            this.xrLabel52.StylePriority.UseForeColor = false;
-            this.xrLabel52.StylePriority.UsePadding = false;
-            this.xrLabel52.StylePriority.UseTextAlignment = false;
-            this.xrLabel52.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel53
-            // 
-            this.xrLabel53.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel53.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel53.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel53.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel53.BorderWidth = 1F;
-            this.xrLabel53.CanGrow = false;
-            this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel53.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel53.KeepTogether = true;
-            this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(418.3395F, 0F);
-            this.xrLabel53.Name = "xrLabel53";
-            this.xrLabel53.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel53.SizeF = new System.Drawing.SizeF(74.56323F, 17F);
-            this.xrLabel53.StylePriority.UseBackColor = false;
-            this.xrLabel53.StylePriority.UseBorderColor = false;
-            this.xrLabel53.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel53.StylePriority.UseBorders = false;
-            this.xrLabel53.StylePriority.UseBorderWidth = false;
-            this.xrLabel53.StylePriority.UseFont = false;
-            this.xrLabel53.StylePriority.UseForeColor = false;
-            this.xrLabel53.StylePriority.UsePadding = false;
-            this.xrLabel53.StylePriority.UseTextAlignment = false;
-            this.xrLabel53.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel54
-            // 
-            this.xrLabel54.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel54.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel54.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel54.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel54.BorderWidth = 1F;
-            this.xrLabel54.CanGrow = false;
-            this.xrLabel54.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel54.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel54.KeepTogether = true;
-            this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(492.903F, 0F);
-            this.xrLabel54.Name = "xrLabel54";
-            this.xrLabel54.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel54.SizeF = new System.Drawing.SizeF(50.37952F, 17F);
-            this.xrLabel54.StylePriority.UseBackColor = false;
-            this.xrLabel54.StylePriority.UseBorderColor = false;
-            this.xrLabel54.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel54.StylePriority.UseBorders = false;
-            this.xrLabel54.StylePriority.UseBorderWidth = false;
-            this.xrLabel54.StylePriority.UseFont = false;
-            this.xrLabel54.StylePriority.UseForeColor = false;
-            this.xrLabel54.StylePriority.UsePadding = false;
-            this.xrLabel54.StylePriority.UseTextAlignment = false;
-            this.xrLabel54.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
             // xrLabel55
             // 
             this.xrLabel55.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel55.BorderColor = System.Drawing.Color.Black;
             this.xrLabel55.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel55.Borders = DevExpress.XtraPrinting.BorderSide.Top;
+            this.xrLabel55.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel55.BorderWidth = 1.39F;
             this.xrLabel55.CanGrow = false;
             this.xrLabel55.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
@@ -1701,7 +1493,7 @@
             this.xrLabel56.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel56.BorderColor = System.Drawing.Color.Black;
             this.xrLabel56.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel56.Borders = DevExpress.XtraPrinting.BorderSide.Top;
+            this.xrLabel56.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel56.BorderWidth = 1.39F;
             this.xrLabel56.CanGrow = false;
             this.xrLabel56.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -1875,15 +1667,8 @@
             // groupFooterBand1
             // 
             this.groupFooterBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel48,
             this.xrLabel56,
-            this.xrLabel50,
-            this.xrLabel51,
-            this.xrLabel52,
-            this.xrLabel53,
-            this.xrLabel54,
-            this.xrLabel55,
-            this.xrLabel49});
+            this.xrLabel55});
             this.groupFooterBand1.HeightF = 17F;
             this.groupFooterBand1.Level = 1;
             this.groupFooterBand1.Name = "groupFooterBand1";
@@ -2558,131 +2343,11 @@
             this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0.0001271566F, 0F);
             this.xrCrossBandBox2.WidthF = 770.0001F;
             // 
-            // federationDataSource1
-            // 
-            this.federationDataSource1.Name = "federationDataSource1";
-            selectNode1.Alias = "Dynamic_Companies";
-            sourceNode1.Alias = null;
-            source1.DataMember = "Companies";
-            source1.DataSource = this.Dynamic;
-            source1.Name = "Dynamic_Companies";
-            sourceNode1.Source = source1;
-            selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description")});
-            selectNode1.Root = sourceNode1;
-            selectNode2.Alias = "Dynamic_CheckPrintingProcessTracking";
-            sourceNode2.Alias = null;
-            source2.DataMember = "CheckPrintingProcessTracking";
-            source2.DataSource = this.Dynamic;
-            source2.Name = "Dynamic_CheckPrintingProcessTracking";
-            sourceNode2.Source = source2;
-            selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ProcessingDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FormattedDate")});
-            selectNode2.Root = sourceNode2;
-            selectNode3.Alias = "Dynamic_Owners";
-            sourceNode3.Alias = null;
-            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"157\" />";
-            source3.DataMember = "Owners";
-            source3.DataSource = this.Dynamic;
-            source3.Name = "Dynamic_Owners";
-            sourceNode3.Source = source3;
-            selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Description"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "RecordType")});
-            selectNode3.Root = sourceNode3;
-            selectNode4.Alias = "Dynamic_DSRDCheckStateWithholding";
-            sourceNode4.Alias = null;
-            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"497\" />";
-            source4.DataMember = "DSRDCheckStateWithholding";
-            source4.DataSource = this.Dynamic;
-            source4.Name = "Dynamic_DSRDCheckStateWithholding";
-            sourceNode4.Source = source4;
-            selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "WithholdingState"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "StateName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ImbursementID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "CheckWithholdingAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellCounty"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SaleDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Product"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "InterestType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerDOI"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerGross"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "OwnerNet"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RevenueWithholdingAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SortFieldCheckNumber")});
-            selectNode4.Root = sourceNode4;
-            selectNode5.Alias = "Pulse_Master_UserRecord";
-            sourceNode5.Alias = null;
-            source5.DataMember = "Master_UserRecord";
-            source5.DataSource = this.Pulse;
-            source5.Name = "Pulse_Master_UserRecord";
-            sourceNode5.Source = source5;
-            selectNode5.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "LastApplicationUsedID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "LastCompanyUsedID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "LastDatabaseUsedID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsSupportingUser"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "MimicUserID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "TempFullAccessUserID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CompanyID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "EmailAddress"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsInactive"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsAccountLocked"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "LoginAttemptCount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "QuickEntry"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsLoggedIn"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsDeveloper"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsSupportRepresentative"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsSystemAdministrator"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "LoginComputerName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "LastName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "FirstName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "HashPassword"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "SaltPassword"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "PasswordExpirationDays"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "PasswordLastChangeDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "IsDeleted"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CreateDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "CreateUserID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "ModifyDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "ModifyUserID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "PasswordResetToken"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "Telephone"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "Initials")});
-            selectNode5.Root = sourceNode5;
-            this.federationDataSource1.Queries.AddRange(new DevExpress.DataAccess.DataFederation.QueryNode[] {
-            selectNode1,
-            selectNode2,
-            selectNode3,
-            selectNode4,
-            selectNode5});
-            // 
             // groupHeaderBand2
             // 
             this.groupHeaderBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrPanel2,
             this.xrLabel36,
-            this.xrLabel35,
-            this.xrLabel34,
-            this.xrLabel33,
-            this.xrLabel32,
-            this.xrLabel31,
             this.xrLabel30,
             this.xrLabel37});
             this.groupHeaderBand2.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
@@ -2764,136 +2429,6 @@
             this.xrLabel36.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel36.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
-            // xrLabel35
-            // 
-            this.xrLabel35.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel35.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel35.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel35.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel35.BorderWidth = 1F;
-            this.xrLabel35.CanGrow = false;
-            this.xrLabel35.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel35.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel35.KeepTogether = true;
-            this.xrLabel35.LocationFloat = new DevExpress.Utils.PointFloat(543.2822F, 0F);
-            this.xrLabel35.Name = "xrLabel35";
-            this.xrLabel35.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel35.SizeF = new System.Drawing.SizeF(67.51123F, 17F);
-            this.xrLabel35.StylePriority.UseBackColor = false;
-            this.xrLabel35.StylePriority.UseBorderColor = false;
-            this.xrLabel35.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel35.StylePriority.UseBorders = false;
-            this.xrLabel35.StylePriority.UseBorderWidth = false;
-            this.xrLabel35.StylePriority.UseFont = false;
-            this.xrLabel35.StylePriority.UseForeColor = false;
-            this.xrLabel35.StylePriority.UsePadding = false;
-            this.xrLabel35.StylePriority.UseTextAlignment = false;
-            this.xrLabel35.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel34
-            // 
-            this.xrLabel34.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel34.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel34.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel34.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel34.BorderWidth = 1F;
-            this.xrLabel34.CanGrow = false;
-            this.xrLabel34.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel34.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel34.KeepTogether = true;
-            this.xrLabel34.LocationFloat = new DevExpress.Utils.PointFloat(492.9025F, 0F);
-            this.xrLabel34.Name = "xrLabel34";
-            this.xrLabel34.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel34.SizeF = new System.Drawing.SizeF(50.37949F, 17F);
-            this.xrLabel34.StylePriority.UseBackColor = false;
-            this.xrLabel34.StylePriority.UseBorderColor = false;
-            this.xrLabel34.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel34.StylePriority.UseBorders = false;
-            this.xrLabel34.StylePriority.UseBorderWidth = false;
-            this.xrLabel34.StylePriority.UseFont = false;
-            this.xrLabel34.StylePriority.UseForeColor = false;
-            this.xrLabel34.StylePriority.UsePadding = false;
-            this.xrLabel34.StylePriority.UseTextAlignment = false;
-            this.xrLabel34.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel33
-            // 
-            this.xrLabel33.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel33.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel33.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel33.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel33.BorderWidth = 1F;
-            this.xrLabel33.CanGrow = false;
-            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel33.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel33.KeepTogether = true;
-            this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(418.3393F, 0F);
-            this.xrLabel33.Name = "xrLabel33";
-            this.xrLabel33.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel33.SizeF = new System.Drawing.SizeF(74.5632F, 17F);
-            this.xrLabel33.StylePriority.UseBackColor = false;
-            this.xrLabel33.StylePriority.UseBorderColor = false;
-            this.xrLabel33.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel33.StylePriority.UseBorders = false;
-            this.xrLabel33.StylePriority.UseBorderWidth = false;
-            this.xrLabel33.StylePriority.UseFont = false;
-            this.xrLabel33.StylePriority.UseForeColor = false;
-            this.xrLabel33.StylePriority.UsePadding = false;
-            this.xrLabel33.StylePriority.UseTextAlignment = false;
-            this.xrLabel33.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel32
-            // 
-            this.xrLabel32.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel32.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel32.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel32.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel32.BorderWidth = 1F;
-            this.xrLabel32.CanGrow = false;
-            this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel32.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel32.KeepTogether = true;
-            this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(370.6974F, 0F);
-            this.xrLabel32.Name = "xrLabel32";
-            this.xrLabel32.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel32.SizeF = new System.Drawing.SizeF(47.64194F, 17F);
-            this.xrLabel32.StylePriority.UseBackColor = false;
-            this.xrLabel32.StylePriority.UseBorderColor = false;
-            this.xrLabel32.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel32.StylePriority.UseBorders = false;
-            this.xrLabel32.StylePriority.UseBorderWidth = false;
-            this.xrLabel32.StylePriority.UseFont = false;
-            this.xrLabel32.StylePriority.UseForeColor = false;
-            this.xrLabel32.StylePriority.UsePadding = false;
-            this.xrLabel32.StylePriority.UseTextAlignment = false;
-            this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel31
-            // 
-            this.xrLabel31.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel31.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel31.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel31.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel31.BorderWidth = 1F;
-            this.xrLabel31.CanGrow = false;
-            this.xrLabel31.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel31.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel31.KeepTogether = true;
-            this.xrLabel31.LocationFloat = new DevExpress.Utils.PointFloat(309.0622F, 0F);
-            this.xrLabel31.Name = "xrLabel31";
-            this.xrLabel31.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel31.SizeF = new System.Drawing.SizeF(61.63507F, 17F);
-            this.xrLabel31.StylePriority.UseBackColor = false;
-            this.xrLabel31.StylePriority.UseBorderColor = false;
-            this.xrLabel31.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel31.StylePriority.UseBorders = false;
-            this.xrLabel31.StylePriority.UseBorderWidth = false;
-            this.xrLabel31.StylePriority.UseFont = false;
-            this.xrLabel31.StylePriority.UseForeColor = false;
-            this.xrLabel31.StylePriority.UsePadding = false;
-            this.xrLabel31.StylePriority.UseTextAlignment = false;
-            this.xrLabel31.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
             // xrLabel30
             // 
             this.xrLabel30.BackColor = System.Drawing.Color.Transparent;
@@ -2951,32 +2486,27 @@
             this.xrLabel37.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel37.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
-            // pbooUseProcessingDate
-            // 
-            this.pbooUseProcessingDate.Description = "Use Processing Date";
-            this.pbooUseProcessingDate.Name = "pbooUseProcessingDate";
-            this.pbooUseProcessingDate.Type = typeof(bool);
-            this.pbooUseProcessingDate.ValueInfo = "False";
-            // 
             // pdteBeginningDate
             // 
             this.pdteBeginningDate.Description = "Beginning Date";
             this.pdteBeginningDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "GetDate(\'01/01/\'+GetYear(Today()))"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooUseProcessingDate")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "IsNull(?plngCheckPrintingProcessTrackingID, 0) = 0"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "IsNull(?plngCheckPrintingProcessTrackingID, 0) = 0\n")});
             this.pdteBeginningDate.Name = "pdteBeginningDate";
             this.pdteBeginningDate.Type = typeof(System.DateTime);
-            this.pdteBeginningDate.ValueInfo = "2023-11-09";
+            this.pdteBeginningDate.ValueInfo = "0";
             // 
             // pdteEndingDate
             // 
             this.pdteEndingDate.Description = "Ending Date";
             this.pdteEndingDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "GetDate(\'01/01/\'+GetYear(Today()))"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooUseProcessingDate")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "IsNull(?plngCheckPrintingProcessTrackingID, 0) = 0\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "IsNull(?plngCheckPrintingProcessTrackingID, 0) = 0")});
             this.pdteEndingDate.Name = "pdteEndingDate";
             this.pdteEndingDate.Type = typeof(System.DateTime);
-            this.pdteEndingDate.ValueInfo = "2023-11-09";
+            this.pdteEndingDate.ValueInfo = "2024-05-24";
             // 
             // groupFooterBand2
             // 
@@ -3010,6 +2540,94 @@
             this.xrLabel108.StylePriority.UsePadding = false;
             this.xrLabel108.StylePriority.UseTextAlignment = false;
             this.xrLabel108.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // federationDataSource1
+            // 
+            this.federationDataSource1.Name = "federationDataSource1";
+            selectNode1.Alias = "Dynamic_Companies";
+            sourceNode1.Alias = null;
+            source1.DataMember = "Companies";
+            source1.DataSource = this.Dynamic;
+            source1.Name = "Dynamic_Companies";
+            sourceNode1.Source = source1;
+            selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Number"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description")});
+            selectNode1.Root = sourceNode1;
+            selectNode2.Alias = "Dynamic_DSRDCheckStateWithholding";
+            sourceNode2.Alias = null;
+            source2.DataMember = "DSRDCheckStateWithholding";
+            source2.DataSource = this.Dynamic;
+            source2.Name = "Dynamic_DSRDCheckStateWithholding";
+            sourceNode2.Source = source2;
+            selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "WithholdingState"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "StateName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ImbursementID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SortFieldCheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "OwnerNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "OwnerName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CheckDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CheckAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CheckWithholdingAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PhaseWellCounty"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SaleDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Product"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InterestType"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "OwnerDOI"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "OwnerGross"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "OwnerNet"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "RevenueWithholdingAmount")});
+            selectNode2.Root = sourceNode2;
+            selectNode3.Alias = "Pulse_Master_UserRecord";
+            sourceNode3.Alias = null;
+            source3.DataMember = "Master_UserRecord";
+            source3.DataSource = this.Pulse;
+            source3.Name = "Pulse_Master_UserRecord";
+            sourceNode3.Source = source3;
+            selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "LastApplicationUsedID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "LastCompanyUsedID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "LastDatabaseUsedID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsSupportingUser"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "MimicUserID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "TempFullAccessUserID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CompanyID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "EmailAddress"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsInactive"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsAccountLocked"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "LoginAttemptCount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "QuickEntry"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsLoggedIn"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsDeveloper"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsSupportRepresentative"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsSystemAdministrator"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "LoginComputerName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "LastName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "FirstName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "HashPassword"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "SaltPassword"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PasswordExpirationDays"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PasswordLastChangeDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsDeleted"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CreateDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CreateUserID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ModifyDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ModifyUserID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PasswordResetToken"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Telephone"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Initials")});
+            selectNode3.Root = sourceNode3;
+            this.federationDataSource1.Queries.AddRange(new DevExpress.DataAccess.DataFederation.QueryNode[] {
+            selectNode1,
+            selectNode2,
+            selectNode3});
             // 
             // RDCheckStateWithholding
             // 
@@ -3047,7 +2665,6 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooUseProcessingDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -3060,15 +2677,14 @@
             this.pstrBeginOwner,
             this.pstrEndingOwner,
             this.plngCheckPrintingProcessTrackingID,
-            this.pbooUseProcessingDate,
             this.pdteBeginningDate,
             this.pdteEndingDate,
             this.pbooShowCriteria});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.Textbox137)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OwnerNumber)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -3124,13 +2740,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;
         private DevExpress.XtraReports.UI.XRLabel xrLabel27;
         private DevExpress.XtraReports.UI.XRLabel xrLabel28;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel48;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel49;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel50;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel51;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel52;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel53;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel54;
         private DevExpress.XtraReports.UI.XRLabel xrLabel55;
         private DevExpress.XtraReports.UI.XRLabel xrLabel56;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand1;
@@ -3167,23 +2776,17 @@
         private DevExpress.XtraReports.UI.SubBand SubBand2;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox1;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox2;
-        private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.UI.XRRichText xrRichText1;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand2;
         private DevExpress.XtraReports.UI.XRPanel xrPanel2;
         private DevExpress.XtraReports.UI.XRRichText OwnerNumber;
         private DevExpress.XtraReports.UI.XRLabel xrLabel36;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel35;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel34;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel33;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel32;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel31;
         private DevExpress.XtraReports.UI.XRLabel xrLabel30;
         private DevExpress.XtraReports.UI.XRLabel xrLabel37;
-        private DevExpress.XtraReports.Parameters.Parameter pbooUseProcessingDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteBeginningDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteEndingDate;
         private DevExpress.XtraReports.UI.GroupFooterBand groupFooterBand2;
         private DevExpress.XtraReports.UI.XRLabel xrLabel108;
+        private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
     }
 }

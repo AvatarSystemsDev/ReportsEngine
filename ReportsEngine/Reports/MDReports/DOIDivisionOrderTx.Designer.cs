@@ -905,7 +905,7 @@
             this.Textbox1});
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
             new DevExpress.XtraReports.UI.GroupField("OwnerName", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
-            this.groupHeaderBand1.HeightF = 108.7533F;
+            this.groupHeaderBand1.HeightF = 106.4551F;
             this.groupHeaderBand1.Level = 1;
             this.groupHeaderBand1.Name = "groupHeaderBand1";
             this.groupHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
@@ -935,11 +935,11 @@
             this.xrOwnersSelected.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pstrOwnerNumber <= \'!\' ,\'All Owners\' ,?pstrOwnerNumber )")});
             this.xrOwnersSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.xrOwnersSelected.LocationFloat = new DevExpress.Utils.PointFloat(84.79922F, 22.20503F);
+            this.xrOwnersSelected.LocationFloat = new DevExpress.Utils.PointFloat(114.1666F, 22.20504F);
             this.xrOwnersSelected.Multiline = true;
             this.xrOwnersSelected.Name = "xrOwnersSelected";
             this.xrOwnersSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrOwnersSelected.SizeF = new System.Drawing.SizeF(406.2811F, 24.25F);
+            this.xrOwnersSelected.SizeF = new System.Drawing.SizeF(376.9137F, 24.24999F);
             this.xrOwnersSelected.StylePriority.UseFont = false;
             this.xrOwnersSelected.StylePriority.UseTextAlignment = false;
             this.xrOwnersSelected.Text = "xrLabel7";
@@ -952,7 +952,7 @@
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(84.79919F, 24.25006F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(114.1666F, 24.25006F);
             this.xrLabel15.StylePriority.UseFont = false;
             this.xrLabel15.Text = "For Owner: ";
             // 
@@ -962,11 +962,11 @@
             this.xrPropertiesSelected.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngPhaseWellID <= 0,\'All Properties/Wells\' ,[WellName] )")});
             this.xrPropertiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(84.79922F, 3.051758E-05F);
+            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(114.1666F, 3.433228E-05F);
             this.xrPropertiesSelected.Multiline = true;
             this.xrPropertiesSelected.Name = "xrPropertiesSelected";
             this.xrPropertiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(406.281F, 22.205F);
+            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(376.9136F, 22.20501F);
             this.xrPropertiesSelected.StylePriority.UseFont = false;
             this.xrPropertiesSelected.StylePriority.UseTextAlignment = false;
             this.xrPropertiesSelected.Text = "xrLabel7";
@@ -975,11 +975,11 @@
             // xrLabel8
             // 
             this.xrLabel8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 3.051758E-05F);
+            this.xrLabel8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 3.433228E-05F);
             this.xrLabel8.Multiline = true;
             this.xrLabel8.Name = "xrLabel8";
             this.xrLabel8.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel8.SizeF = new System.Drawing.SizeF(84.79922F, 22.20503F);
+            this.xrLabel8.SizeF = new System.Drawing.SizeF(114.1667F, 22.20504F);
             this.xrLabel8.StylePriority.UseFont = false;
             this.xrLabel8.Text = "For Property/Well:";
             // 
@@ -2323,47 +2323,13 @@
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_DOIDivisionHeader";
             sourceNode1.Alias = null;
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"797\" />";
             source1.DataMember = "DOIDivisionHeader";
             source1.DataSource = this.Dynamic;
             source1.Name = "Dynamic_DOIDivisionHeader";
             sourceNode1.Source = source1;
             selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "WellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "WellName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "LegalDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OperatorName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "RevenueDecimal"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ProductType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InterestType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "FederalIdNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayCode"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsOperator"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyAddress1"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyAddress2"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyCity"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyCountry"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyState"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CompanyZipCode"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StartEffectiveDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "EndEffectiveDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AddressLine1"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AddressLine2"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "City"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Country"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "EMail"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "MailingName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Phone1"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "State"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Zip"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyState"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyCounty")});
+            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode1)});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_LookupCompanies";
             sourceNode2.Alias = null;

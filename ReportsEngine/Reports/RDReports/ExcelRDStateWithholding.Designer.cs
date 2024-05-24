@@ -36,7 +36,6 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelRDStateWithholding));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -103,7 +102,6 @@
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
-            this.pbooUseProcessingDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteBeginningDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteEndingDate = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -884,26 +882,22 @@
             queryParameter3.Name = "@pdteEndingDate";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?pdteEndingDate", typeof(System.DateTime));
-            queryParameter4.Name = "@pbooUseProcessingDate";
+            queryParameter4.Name = "@plngPrintOrder";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pbooUseProcessingDate", typeof(bool));
-            queryParameter5.Name = "@plngPrintOrder";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngPrintOrder", typeof(int));
+            queryParameter5.Name = "@pstrBeginningPropertyNumber";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngPrintOrder", typeof(int));
-            queryParameter6.Name = "@pstrBeginningPropertyNumber";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
+            queryParameter6.Name = "@pstrEndingPropertyNumber";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
-            queryParameter7.Name = "@pstrEndingPropertyNumber";
-            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
             queryParameter5,
-            queryParameter6,
-            queryParameter7});
+            queryParameter6});
             storedProcQuery1.StoredProcName = "Report_RDStateWithholding";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -1722,13 +1716,6 @@
             this.xrLabel17.StylePriority.UseTextAlignment = false;
             this.xrLabel17.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // pbooUseProcessingDate
-            // 
-            this.pbooUseProcessingDate.Description = "Parameter1";
-            this.pbooUseProcessingDate.Name = "pbooUseProcessingDate";
-            this.pbooUseProcessingDate.Type = typeof(bool);
-            this.pbooUseProcessingDate.ValueInfo = "False";
-            // 
             // pdteBeginningDate
             // 
             this.pdteBeginningDate.Description = "Parameter1";
@@ -1768,7 +1755,9 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngPrintOrder, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngRDProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -1779,7 +1768,6 @@
             this.plngPrintOrder,
             this.plngRDProcessTrackingID,
             this.Subtitle,
-            this.pbooUseProcessingDate,
             this.pdteBeginningDate,
             this.pdteEndingDate});
             this.Version = "23.1";
@@ -1853,7 +1841,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel36;
         private DevExpress.XtraReports.UI.XRLabel xrLabel41;
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
-        private DevExpress.XtraReports.Parameters.Parameter pbooUseProcessingDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteBeginningDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteEndingDate;
     }
