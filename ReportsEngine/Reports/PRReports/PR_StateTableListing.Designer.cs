@@ -1612,8 +1612,6 @@
             this.xrLabel83.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel83.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel83.BorderWidth = 1F;
-            this.xrLabel83.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Sort Order: ")});
             this.xrLabel83.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel83.ForeColor = System.Drawing.Color.Black;
             this.xrLabel83.KeepTogether = true;
@@ -1631,6 +1629,7 @@
             this.xrLabel83.StylePriority.UseForeColor = false;
             this.xrLabel83.StylePriority.UsePadding = false;
             this.xrLabel83.StylePriority.UseTextAlignment = false;
+            this.xrLabel83.Text = "Sort Order";
             this.xrLabel83.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel81
