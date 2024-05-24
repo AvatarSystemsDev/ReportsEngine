@@ -273,8 +273,8 @@ namespace ReportsEngine.Reports.RDReports
             queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter11.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             queryParameter12.Name = "@plngProcessTrackingID";
-            queryParameter12.Type = typeof(int);
-            queryParameter12.ValueInfo = "0";
+            queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngCheckPrintingProcessTrackingID", typeof(int));
             queryParameter13.Name = "@plngCheckTypeID";
             queryParameter13.Type = typeof(int);
             queryParameter13.ValueInfo = "2";
