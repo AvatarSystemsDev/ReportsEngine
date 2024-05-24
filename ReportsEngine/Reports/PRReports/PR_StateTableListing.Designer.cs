@@ -973,7 +973,7 @@
             this.Textbox41.Name = "Textbox41";
             this.Textbox41.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox41.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.Textbox41.Weight = 0.027315839742072235D;
+            this.Textbox41.Weight = 0.017986025633842904D;
             // 
             // Textbox59
             // 
@@ -987,7 +987,7 @@
             this.Textbox59.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox59.Text = "MODIFIER DESCRIPTION                              ";
             this.Textbox59.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.Textbox59.Weight = 0.20056603070587464D;
+            this.Textbox59.Weight = 0.20989584481410398D;
             // 
             // xrLabel7
             // 
@@ -1025,10 +1025,10 @@
             this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 7F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel10.ForeColor = System.Drawing.Color.Black;
             this.xrLabel10.KeepTogether = true;
-            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(529.3055F, 0F);
+            this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(522.1499F, 0F);
             this.xrLabel10.Name = "xrLabel10";
             this.xrLabel10.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel10.SizeF = new System.Drawing.SizeF(239.6531F, 16.67F);
+            this.xrLabel10.SizeF = new System.Drawing.SizeF(246.8085F, 16.67F);
             this.xrLabel10.StylePriority.UseBackColor = false;
             this.xrLabel10.StylePriority.UseBorderColor = false;
             this.xrLabel10.StylePriority.UseBorderDashStyle = false;
