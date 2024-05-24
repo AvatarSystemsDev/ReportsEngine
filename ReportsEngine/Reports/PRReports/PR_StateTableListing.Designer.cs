@@ -688,14 +688,14 @@
             this.xrRichText1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrRichText1.BorderWidth = 1F;
             this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "Iif(?pstrSortby = \'State Code\', \'State Code\', \'State Name\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "Iif(?pstrSortby = \'C\', \'State Code\', \'State Name\')")});
             this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText1.KeepTogether = true;
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(84.73956F, 2.670288E-05F);
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
-            this.xrRichText1.SizeF = new System.Drawing.SizeF(482.635F, 18.49998F);
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(371.1767F, 18.49998F);
             this.xrRichText1.StylePriority.UseFont = false;
             // 
             // Textbox22
@@ -1204,10 +1204,10 @@
             // 
             this.pstrSortby.Description = "Sort By";
             this.pstrSortby.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "\'State Code\'")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "\'C\'")});
             this.pstrSortby.Name = "pstrSortby";
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("State Code", "State Code"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("State Name", "State Name"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("C", "State Code"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue("N", "State Name"));
             this.pstrSortby.ValueSourceSettings = staticListLookUpSettings1;
             // 
             // pbooShowCriteria
