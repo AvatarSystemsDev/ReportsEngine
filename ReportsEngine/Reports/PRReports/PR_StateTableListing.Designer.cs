@@ -720,7 +720,7 @@
             this.Textbox22.Name = "Textbox22";
             this.Textbox22.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox22.SerializableRtfString = resources.GetString("Textbox22.SerializableRtfString");
-            this.Textbox22.SizeF = new System.Drawing.SizeF(81.59336F, 25F);
+            this.Textbox22.SizeF = new System.Drawing.SizeF(81.59336F, 18.49998F);
             this.Textbox22.StylePriority.UseFont = false;
             // 
             // ReportTitle
@@ -730,13 +730,14 @@
             this.ReportTitle.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.ReportTitle.BorderWidth = 1F;
             this.ReportTitle.CanShrink = true;
-            this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 14F);
+            this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.ReportTitle.KeepTogether = true;
             this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0.03000895F, 28.00001F);
             this.ReportTitle.Multiline = true;
             this.ReportTitle.Name = "ReportTitle";
             this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.ReportTitle.SizeF = new System.Drawing.SizeF(769.9216F, 30F);
+            this.ReportTitle.StylePriority.UseFont = false;
             this.ReportTitle.Text = "Payroll State Table Listing";
             this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
