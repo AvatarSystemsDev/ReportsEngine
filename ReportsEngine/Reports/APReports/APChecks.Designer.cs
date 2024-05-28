@@ -491,7 +491,6 @@
             this.pbooSignature.Description = "pbooSignature";
             this.pbooSignature.Name = "pbooSignature";
             this.pbooSignature.Type = typeof(bool);
-            this.pbooSignature.ValueInfo = "0";
             this.pbooSignature.Visible = false;
             // 
             // pstrSignaturePath

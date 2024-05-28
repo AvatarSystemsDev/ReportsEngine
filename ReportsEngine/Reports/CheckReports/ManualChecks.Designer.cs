@@ -2235,23 +2235,27 @@
             this.pstrBeginningCheckNumber.ValueInfo = "!";
             dynamicListLookUpSettings4.DataMember = "Check_Number_Lookup";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
-            dynamicListLookUpSettings4.DisplayMember = "Number";
-            dynamicListLookUpSettings4.FilterString = null;
+            dynamicListLookUpSettings4.DisplayMember = "CheckNumberDescription";
+            dynamicListLookUpSettings4.FilterString = "StartsWith([CheckEntityNumber], \'\') Or [CheckEntityID] In (?pstrSelectOwner) And " +
+    "[CheckEntityNumber] >= ?pstrBeginningOwnerNumber And [CheckEntityNumber] <= ?pst" +
+    "rEndingOwnerNumber";
             dynamicListLookUpSettings4.SortMember = null;
-            dynamicListLookUpSettings4.ValueMember = "Number";
+            dynamicListLookUpSettings4.ValueMember = "SortByCheckNumber";
             this.pstrBeginningCheckNumber.ValueSourceSettings = dynamicListLookUpSettings4;
             // 
             // pstrEndingCheckNumber
             // 
             this.pstrEndingCheckNumber.Description = "Ending Check";
             this.pstrEndingCheckNumber.Name = "pstrEndingCheckNumber";
-            this.pstrEndingCheckNumber.ValueInfo = "ZZZZZZZZZZZ";
+            this.pstrEndingCheckNumber.ValueInfo = "ZZZZZZZZZZZZZZZ";
             dynamicListLookUpSettings5.DataMember = "Check_Number_Lookup";
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
-            dynamicListLookUpSettings5.DisplayMember = "Number";
-            dynamicListLookUpSettings5.FilterString = null;
+            dynamicListLookUpSettings5.DisplayMember = "CheckNumberDescription";
+            dynamicListLookUpSettings5.FilterString = "StartsWith([CheckEntityNumber], \'\') Or [CheckEntityID] In (?pstrSelectOwner) And " +
+    "[CheckEntityNumber] >= ?pstrBeginningOwnerNumber And [CheckEntityNumber] <= ?pst" +
+    "rEndingOwnerNumber";
             dynamicListLookUpSettings5.SortMember = null;
-            dynamicListLookUpSettings5.ValueMember = "Number";
+            dynamicListLookUpSettings5.ValueMember = "SortByCheckNumber";
             this.pstrEndingCheckNumber.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
             // pstrSelectCheck
@@ -2263,8 +2267,10 @@
             this.pstrSelectCheck.Type = typeof(int);
             dynamicListLookUpSettings6.DataMember = "Check_Number_Lookup";
             dynamicListLookUpSettings6.DataSource = this.Dynamic;
-            dynamicListLookUpSettings6.DisplayMember = "Number";
-            dynamicListLookUpSettings6.FilterString = null;
+            dynamicListLookUpSettings6.DisplayMember = "CheckNumberDescription";
+            dynamicListLookUpSettings6.FilterString = "StartsWith([CheckEntityNumber], \'\') Or [CheckEntityID] In (?pstrSelectOwner) And " +
+    "[CheckEntityNumber] >= ?pstrBeginningOwnerNumber And [CheckEntityNumber] <= ?pst" +
+    "rEndingOwnerNumber";
             dynamicListLookUpSettings6.SortMember = null;
             dynamicListLookUpSettings6.ValueMember = "CheckID";
             this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings6;
@@ -2415,12 +2421,12 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintTray, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCoverSheetTray, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngRemittanceSheetTray, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCheck, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.plngPrintRemittance,
             this.pbooHideCheckPart,
@@ -2443,12 +2449,12 @@
             this.plngCheckPrintTray,
             this.plngCoverSheetTray,
             this.plngRemittanceSheetTray,
-            this.pstrBeginningCheckNumber,
-            this.pstrEndingCheckNumber,
-            this.pstrSelectCheck,
             this.pstrBeginningOwnerNumber,
             this.pstrEndingOwnerNumber,
-            this.pstrSelectOwner});
+            this.pstrSelectOwner,
+            this.pstrBeginningCheckNumber,
+            this.pstrEndingCheckNumber,
+            this.pstrSelectCheck});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText6)).EndInit();

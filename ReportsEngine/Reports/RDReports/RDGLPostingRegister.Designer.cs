@@ -243,6 +243,8 @@
             this.pbooShowDetail = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCrossBandBox5 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.xrCrossBandBox6 = new DevExpress.XtraReports.UI.XRCrossBandBox();
+            this.groupHeaderBand4 = new DevExpress.XtraReports.UI.GroupHeaderBand();
+            this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText12)).BeginInit();
@@ -266,8 +268,8 @@
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngRDProcessTrackingID", typeof(int));
             queryParameter3.Name = "@plngCompanyID";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter3.Type = typeof(int);
+            queryParameter3.ValueInfo = "0";
             queryParameter4.Name = "@plngPostDestinationCodeID";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngPostDestinationCodeID", typeof(int));
@@ -2655,6 +2657,21 @@
             this.xrCrossBandBox6.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrCrossBandBox6.WidthF = 1020F;
             // 
+            // groupHeaderBand4
+            // 
+            this.groupHeaderBand4.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("CompanyNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.None)});
+            this.groupHeaderBand4.HeightF = 0F;
+            this.groupHeaderBand4.Level = 3;
+            this.groupHeaderBand4.Name = "groupHeaderBand4";
+            // 
+            // groupFooterBand1
+            // 
+            this.groupFooterBand1.HeightF = 0F;
+            this.groupFooterBand1.Level = 3;
+            this.groupFooterBand1.Name = "groupFooterBand1";
+            this.groupFooterBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
+            // 
             // RDGLPostingRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2668,7 +2685,9 @@
             this.groupHeaderBand2,
             this.groupFooterBand2,
             this.PageHeader,
-            this.groupHeaderBand3});
+            this.groupHeaderBand3,
+            this.groupHeaderBand4,
+            this.groupFooterBand1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -2833,5 +2852,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel80;
         private DevExpress.XtraReports.UI.XRLabel xrPageCountPortrait;
         private DevExpress.XtraReports.UI.XRLabel xrPageCountLandscape;
+        private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand4;
+        private DevExpress.XtraReports.UI.GroupFooterBand groupFooterBand1;
     }
 }
