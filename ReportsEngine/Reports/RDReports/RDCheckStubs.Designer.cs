@@ -483,8 +483,7 @@ namespace ReportsEngine.Reports.RDReports
             // 
             this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
-            this.pstrEndingOwnerNumber.Type = typeof(short);
-            this.pstrEndingOwnerNumber.ValueInfo = "0";
+            this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZZ";
             dynamicListLookUpSettings2.DataMember = "Owner_ReportLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "EntityDescription";
