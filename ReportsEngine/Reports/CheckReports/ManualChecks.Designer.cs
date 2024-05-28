@@ -2294,7 +2294,7 @@
             dynamicListLookUpSettings1.DisplayMember = "EntityDescription";
             dynamicListLookUpSettings1.FilterString = null;
             dynamicListLookUpSettings1.SortMember = null;
-            dynamicListLookUpSettings1.ValueMember = "EntityNumber";
+            dynamicListLookUpSettings1.ValueMember = "EntityID";
             this.pstrSelectOwner.ValueSourceSettings = dynamicListLookUpSettings1;
             // 
             // pstrBeginningOwnerNumber
