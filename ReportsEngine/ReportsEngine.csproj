@@ -565,6 +565,12 @@
     <Compile Include="Reports\PRReports\PR_StateTableListing.Designer.cs">
       <DependentUpon>PR_StateTableListing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\PR_WorkersCompGenLiabilityTableListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\PR_WorkersCompGenLiabilityTableListing.Designer.cs">
+      <DependentUpon>PR_WorkersCompGenLiabilityTableListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\RDReports\CombinedStateWithholdingSubreport.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2641,6 +2647,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\PR_StateTableListing.resx">
       <DependentUpon>PR_StateTableListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\PR_WorkersCompGenLiabilityTableListing.resx">
+      <DependentUpon>PR_WorkersCompGenLiabilityTableListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\RDReports\CombinedStateWithholdingSubreport.resx">
       <DependentUpon>CombinedStateWithholdingSubreport.cs</DependentUpon>
