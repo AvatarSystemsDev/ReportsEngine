@@ -2671,6 +2671,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEBudgetReceivablesReport.resx">
       <DependentUpon>AFEBudgetReceivablesReport.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\APReports\APChecksRemittanceOnly.resx">
       <DependentUpon>APChecksRemittanceOnly.cs</DependentUpon>
@@ -2733,6 +2734,7 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEEstimateSummary.resx">
       <DependentUpon>AFEEstimateSummary.cs</DependentUpon>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\AFEEstimateSummarySubreport.resx">
       <DependentUpon>AFEEstimateSummarySubreport.cs</DependentUpon>

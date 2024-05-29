@@ -140,6 +140,7 @@
             this.plngUserID.Description = "plngUserID";
             this.plngUserID.Name = "plngUserID";
             this.plngUserID.Type = typeof(int);
+            this.plngUserID.ValueInfo = "0";
             this.plngUserID.Visible = false;
             // 
             // Subtitle
@@ -212,6 +213,7 @@
             this.pstrSelectCheck.Description = "Select Check";
             this.pstrSelectCheck.MultiValue = true;
             this.pstrSelectCheck.Name = "pstrSelectCheck";
+            this.pstrSelectCheck.Visible = false;
             // 
             // groupHeaderBand1
             // 

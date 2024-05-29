@@ -66,10 +66,10 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode2 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode3 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -466,6 +466,7 @@
             this.pbooSignature.Description = "pbooSignature";
             this.pbooSignature.Name = "pbooSignature";
             this.pbooSignature.Type = typeof(bool);
+            this.pbooSignature.ValueInfo = "False";
             this.pbooSignature.Visible = false;
             // 
             // pstrSignaturePath
@@ -2546,19 +2547,33 @@
             this.pstrSelectVendor.Name = "pstrSelectVendor";
             this.pstrSelectVendor.SelectAllValues = true;
             this.pstrSelectVendor.Type = typeof(int);
-            dynamicListLookUpSettings3.DataMember = "CheckOwnerReportLookup";
-            dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "EntityDescription";
-            dynamicListLookUpSettings3.FilterString = null;
-            dynamicListLookUpSettings3.SortMember = null;
-            dynamicListLookUpSettings3.ValueMember = "EntityID";
-            this.pstrSelectVendor.ValueSourceSettings = dynamicListLookUpSettings3;
+            dynamicListLookUpSettings6.DataMember = "CheckOwnerReportLookup";
+            dynamicListLookUpSettings6.DataSource = this.Dynamic;
+            dynamicListLookUpSettings6.DisplayMember = "EntityDescription";
+            dynamicListLookUpSettings6.FilterString = null;
+            dynamicListLookUpSettings6.SortMember = null;
+            dynamicListLookUpSettings6.ValueMember = "EntityID";
+            this.pstrSelectVendor.ValueSourceSettings = dynamicListLookUpSettings6;
             // 
             // pstrBeginningCheckNumber
             // 
             this.pstrBeginningCheckNumber.Description = "Beginning Check Number";
             this.pstrBeginningCheckNumber.Name = "pstrBeginningCheckNumber";
             this.pstrBeginningCheckNumber.ValueInfo = "!";
+            dynamicListLookUpSettings3.DataMember = "ChecksReportLookup";
+            dynamicListLookUpSettings3.DataSource = this.Dynamic;
+            dynamicListLookUpSettings3.DisplayMember = "CheckDescription";
+            dynamicListLookUpSettings3.FilterString = "[EntityNumber] = \'\' Or [EntityID] In (?pstrSelectVendor) And [EntityNumber] >= ?p" +
+    "strBeginningVendorNumber And [EntityNumber] <= ?pstrEndingVendorNumber";
+            dynamicListLookUpSettings3.SortMember = null;
+            dynamicListLookUpSettings3.ValueMember = "CheckNumber";
+            this.pstrBeginningCheckNumber.ValueSourceSettings = dynamicListLookUpSettings3;
+            // 
+            // pstrEndingCheckNumber
+            // 
+            this.pstrEndingCheckNumber.Description = "Ending Check Number";
+            this.pstrEndingCheckNumber.Name = "pstrEndingCheckNumber";
+            this.pstrEndingCheckNumber.ValueInfo = "ZZZZZZZZZZZ";
             dynamicListLookUpSettings4.DataMember = "ChecksReportLookup";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "CheckDescription";
@@ -2566,21 +2581,7 @@
     "strBeginningVendorNumber And [EntityNumber] <= ?pstrEndingVendorNumber";
             dynamicListLookUpSettings4.SortMember = null;
             dynamicListLookUpSettings4.ValueMember = "CheckNumber";
-            this.pstrBeginningCheckNumber.ValueSourceSettings = dynamicListLookUpSettings4;
-            // 
-            // pstrEndingCheckNumber
-            // 
-            this.pstrEndingCheckNumber.Description = "EndingCheckNumber";
-            this.pstrEndingCheckNumber.Name = "pstrEndingCheckNumber";
-            this.pstrEndingCheckNumber.ValueInfo = "ZZZZZZZZZZZ";
-            dynamicListLookUpSettings5.DataMember = "ChecksReportLookup";
-            dynamicListLookUpSettings5.DataSource = this.Dynamic;
-            dynamicListLookUpSettings5.DisplayMember = "CheckDescription";
-            dynamicListLookUpSettings5.FilterString = "[EntityNumber] = \'\' Or [EntityID] In (?pstrSelectVendor) And [EntityNumber] >= ?p" +
-    "strBeginningVendorNumber And [EntityNumber] <= ?pstrEndingVendorNumber";
-            dynamicListLookUpSettings5.SortMember = null;
-            dynamicListLookUpSettings5.ValueMember = "CheckNumber";
-            this.pstrEndingCheckNumber.ValueSourceSettings = dynamicListLookUpSettings5;
+            this.pstrEndingCheckNumber.ValueSourceSettings = dynamicListLookUpSettings4;
             // 
             // pstrSelectCheck
             // 
@@ -2589,14 +2590,14 @@
             this.pstrSelectCheck.Name = "pstrSelectCheck";
             this.pstrSelectCheck.SelectAllValues = true;
             this.pstrSelectCheck.Type = typeof(int);
-            dynamicListLookUpSettings6.DataMember = "ChecksReportLookup";
-            dynamicListLookUpSettings6.DataSource = this.Dynamic;
-            dynamicListLookUpSettings6.DisplayMember = "CheckDescription";
-            dynamicListLookUpSettings6.FilterString = "[EntityNumber] = \'\' Or [EntityID] In (?pstrSelectVendor) And [EntityNumber] >= ?p" +
+            dynamicListLookUpSettings5.DataMember = "ChecksReportLookup";
+            dynamicListLookUpSettings5.DataSource = this.Dynamic;
+            dynamicListLookUpSettings5.DisplayMember = "CheckDescription";
+            dynamicListLookUpSettings5.FilterString = "[EntityNumber] = \'\' Or [EntityID] In (?pstrSelectVendor) And [EntityNumber] >= ?p" +
     "strBeginningVendorNumber And [EntityNumber] <= ?pstrEndingVendorNumber";
-            dynamicListLookUpSettings6.SortMember = null;
-            dynamicListLookUpSettings6.ValueMember = "CheckID";
-            this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings6;
+            dynamicListLookUpSettings5.SortMember = null;
+            dynamicListLookUpSettings5.ValueMember = "CheckID";
+            this.pstrSelectCheck.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
             // xrSubreport2
             // 
@@ -2636,6 +2637,12 @@
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooReturnElectronicPayments", this.pbooReturnElectronicPayments));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCheckFormat", this.plngCheckFormat));
             this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSAPCheckHeader.CompanyAddressBlockCoverSheet"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrStartingOwnerNumber", this.pstrBeginningVendorNumber));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEndingOwnerNumber", this.pstrEndingVendorNumber));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOverflowOptionCodeID", null, "Dynamic_CheckFormattingOptions.OverflowOptionCodeID"));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrBeginningCheckNumber", this.pstrBeginningCheckNumber));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrEndingCheckNumber", this.pstrEndingCheckNumber));
+            this.xrSubreport1.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrSelectCheck", this.pstrSelectCheck));
             this.xrSubreport1.ReportSource = new ReportsEngine.Reports.RDReports.CheckCoverPageAllRDChecks();
             this.xrSubreport1.SizeF = new System.Drawing.SizeF(809F, 0F);
             // 
@@ -2651,7 +2658,7 @@
             this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
             this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
             this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", this.Dynamic, "DSAPCheckHeader.CompanyAddressBlockCoverSheet"));
+            this.xrCheckCoverPage.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrCompanyAddressBlockLong", null, "Dynamic_DSAPCheckHeader.CompanyAddressBlockCoverSheet"));
             this.xrCheckCoverPage.ReportSource = new ReportsEngine.Reports.RDReports.CheckCoverPage();
             this.xrCheckCoverPage.SizeF = new System.Drawing.SizeF(809F, 0F);
             // 
