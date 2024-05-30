@@ -554,7 +554,7 @@ namespace ReportsEngine.Reports.RDReports
             // 
             this.pstrBeginningCheckNumber.Description = "Beginning Check Number";
             this.pstrBeginningCheckNumber.Name = "pstrBeginningCheckNumber";
-            this.pstrBeginningCheckNumber.ValueInfo = "0";
+            this.pstrBeginningCheckNumber.ValueInfo = "!";
             dynamicListLookUpSettings5.DataMember = "lookupChecks";
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
             dynamicListLookUpSettings5.DisplayMember = "Description";
