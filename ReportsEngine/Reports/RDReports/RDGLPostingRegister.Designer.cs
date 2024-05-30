@@ -2120,7 +2120,7 @@
             this.xrLabel79.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel79.BorderWidth = 1F;
             this.xrLabel79.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyName]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[HeaderText]")});
             this.xrLabel79.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel79.KeepTogether = true;
             this.xrLabel79.LocationFloat = new DevExpress.Utils.PointFloat(0F, 31.03F);
@@ -2139,7 +2139,7 @@
             this.xrLabel78.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel78.BorderWidth = 1F;
             this.xrLabel78.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyName]")});
             this.xrLabel78.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel78.KeepTogether = true;
             this.xrLabel78.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -2329,7 +2329,7 @@
             this.xrLabel93.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel93.BorderWidth = 1F;
             this.xrLabel93.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyName]")});
             this.xrLabel93.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel93.KeepTogether = true;
             this.xrLabel93.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -2348,7 +2348,7 @@
             this.xrLabel92.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel92.BorderWidth = 1F;
             this.xrLabel92.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyName]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[HeaderText]")});
             this.xrLabel92.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel92.KeepTogether = true;
             this.xrLabel92.LocationFloat = new DevExpress.Utils.PointFloat(0F, 31.03002F);
