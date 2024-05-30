@@ -1095,7 +1095,7 @@
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(1.81338F, 8.329995F);
             this.xrLabel24.Name = "xrLabel24";
             this.xrLabel24.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel24.SizeF = new System.Drawing.SizeF(39.58F, 17F);
+            this.xrLabel24.SizeF = new System.Drawing.SizeF(35.49586F, 17F);
             this.xrLabel24.StylePriority.UseBorderColor = false;
             this.xrLabel24.StylePriority.UseBorderDashStyle = false;
             this.xrLabel24.StylePriority.UseBorders = false;
@@ -1118,7 +1118,7 @@
             this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(41.38921F, 8.329995F);
             this.xrLabel25.Name = "xrLabel25";
             this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel25.SizeF = new System.Drawing.SizeF(72.06F, 17F);
+            this.xrLabel25.SizeF = new System.Drawing.SizeF(56.18424F, 17F);
             this.xrLabel25.StylePriority.UseBorderColor = false;
             this.xrLabel25.StylePriority.UseBorderDashStyle = false;
             this.xrLabel25.StylePriority.UseBorders = false;
@@ -1161,10 +1161,10 @@
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[WorkersCompShortDesc]")});
             this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel27.KeepTogether = true;
-            this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(301.9821F, 8.329995F);
+            this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(301.982F, 8.329995F);
             this.xrLabel27.Name = "xrLabel27";
             this.xrLabel27.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel27.SizeF = new System.Drawing.SizeF(122.4F, 17F);
+            this.xrLabel27.SizeF = new System.Drawing.SizeF(122.3982F, 17F);
             this.xrLabel27.StylePriority.UseBorderColor = false;
             this.xrLabel27.StylePriority.UseBorderDashStyle = false;
             this.xrLabel27.StylePriority.UseBorders = false;
