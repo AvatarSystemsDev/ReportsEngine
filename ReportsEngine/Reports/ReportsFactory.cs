@@ -8,6 +8,7 @@ using ReportsEngine.Reports.LTMReports;
 using ReportsEngine.Reports.MDReports;
 using ReportsEngine.Reports.PAReports;
 using ReportsEngine.Reports.ProcessReports;
+using ReportsEngine.Reports.PRReports;
 using ReportsEngine.Reports.RDReports;
 using ReportsEngine.Reports.TaxReports;
 using System;
