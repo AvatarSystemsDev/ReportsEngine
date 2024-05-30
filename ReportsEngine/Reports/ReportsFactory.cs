@@ -328,6 +328,8 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelJIBAllocationInsideImmediate", (databaseID, companyID) => new ExcelJIBAllocation());
             Reports.Add("PR_StateTableListing", (databaseID, companyID) => new PR_StateTableListing());
             Reports.Add("ExcelPR_StateTableListing", (databaseID, companyID) => new ExcelPR_StateTableListing());
+            Reports.Add("PR_WorkersCompGenLiabilityTableListing", (databaseID, companyID) => new PR_WorkersCompGenLiabilityTableListing());
+            //Reports.Add("ExcelPR_WorkersCompGenLiabilityTableListing", (databaseID, companyID) => new ExcelPR_WorkersCompGenLiabilityTableListing());
             //Reports.Add("PR_PreliminaryPaymentTimeRecordRecap", (databaseID, companyID) => new PR_PreliminaryPaymentTimeRecordRecap());
             //Reports.Add("ExcelPR_PreliminaryPaymentTimeRecordRecap", (databaseID, companyID) => new ExcelPR_PreliminaryPaymentTimeRecordRecap());
 
