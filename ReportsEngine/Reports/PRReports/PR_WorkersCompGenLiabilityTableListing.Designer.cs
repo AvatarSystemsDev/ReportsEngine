@@ -575,7 +575,7 @@
             this.xrLabel12,
             this.xrLabel15,
             this.ReportTitle});
-            this.pageHeaderBand1.HeightF = 113.3317F;
+            this.pageHeaderBand1.HeightF = 109.165F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand2});
@@ -930,7 +930,7 @@
             // 
             // SubBand2
             // 
-            this.SubBand2.HeightF = 10.41832F;
+            this.SubBand2.HeightF = 7.086595F;
             this.SubBand2.Name = "SubBand2";
             // 
             // pageFooterBand1
