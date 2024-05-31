@@ -29,17 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PR_WorkersCompGenLiabilityTableListing));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column1 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression1 = new DevExpress.DataAccess.Sql.ColumnExpression();
@@ -108,6 +97,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column33 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression33 = new DevExpress.DataAccess.Sql.ColumnExpression();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PR_WorkersCompGenLiabilityTableListing));
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -127,7 +117,16 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode5 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode5 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source5 = new DevExpress.DataAccess.DataFederation.Source();
-            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -173,58 +172,11 @@
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.xrRichText2 = new DevExpress.XtraReports.UI.XRRichText();
             this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
+            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
-            // 
-            // Dynamic
-            // 
-            this.Dynamic.ConnectionName = "Providence_Connection 1";
-            this.Dynamic.Name = "Dynamic";
-            storedProcQuery1.Name = "dsLookupCompany";
-            queryParameter1.Name = "@plngCompanyID";
-            queryParameter1.Type = typeof(int);
-            queryParameter1.ValueInfo = "0";
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1});
-            storedProcQuery1.StoredProcName = "Companies_ReportLookup";
-            storedProcQuery2.Name = "dsPRWorkersCompGenLiaTableListing";
-            queryParameter2.Name = "@plngCompanyID";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            queryParameter3.Name = "@pstrStateToPrint";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrStateToPrint", typeof(string));
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter2,
-            queryParameter3});
-            storedProcQuery2.StoredProcName = "Report_PR_WorkersCompGenLiabilityTableListing";
-            customSqlQuery1.Name = "PRStateSelected";
-            queryParameter4.Name = "pstrStateToPrint";
-            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrStateToPrint", typeof(string));
-            queryParameter5.Name = "plngCompanyID";
-            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            customSqlQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter4,
-            queryParameter5});
-            customSqlQuery1.Sql = "Select B.StateAbbrev FROM PRState A\r\nLEFT JOIN StateCodes B on A.StateID=B.ID\r\nWh" +
-    "ere A.PRStateID=@pstrStateToPrint\r\nand A.CompanyID=@plngCompanyID";
-            storedProcQuery3.Name = "dsPRStateList2";
-            queryParameter6.Name = "@plngCompanyID";
-            queryParameter6.Type = typeof(int);
-            queryParameter6.ValueInfo = "0";
-            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter6});
-            storedProcQuery3.StoredProcName = "Report_PR_StateList";
-            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1,
-            storedProcQuery2,
-            customSqlQuery1,
-            storedProcQuery3});
-            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // Pulse
             // 
@@ -1117,7 +1069,7 @@
             this.plngCompanyID.Type = typeof(int);
             this.plngCompanyID.ValueInfo = "0";
             dynamicListLookUpSettings1.DataMember = "dsLookupCompany";
-            dynamicListLookUpSettings1.DataSource = this.Dynamic;
+            dynamicListLookUpSettings1.DataSource = null;
             dynamicListLookUpSettings1.DisplayMember = "Description";
             dynamicListLookUpSettings1.ValueMember = "ID";
             this.plngCompanyID.ValueSourceSettings = dynamicListLookUpSettings1;
@@ -1161,64 +1113,44 @@
             // 
             this.federationDataSource1.Name = "federationDataSource1";
             selectNode1.Alias = "Dynamic_dsPRStateList2";
-            sourceNode1.Alias = null;
-            source1.DataMember = "dsPRStateList2";
+            sourceNode1.Alias = "Report_PR_StateList";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"177\" />";
+            source1.DataMember = "Report_PR_StateList";
             source1.DataSource = this.Dynamic;
-            source1.Name = "Dynamic_dsPRStateList2";
+            source1.Name = "Dynamic_Report_PR_StateList";
             sourceNode1.Source = source1;
             selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PRStateID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbrev"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "StateAbbrevAndName")});
+            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode1)});
             selectNode1.Root = sourceNode1;
             selectNode2.Alias = "Dynamic_PRStateSelected";
-            sourceNode2.Alias = null;
+            sourceNode2.Alias = "PRStateSelected";
+            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"97\" />";
             source2.DataMember = "PRStateSelected";
             source2.DataSource = this.Dynamic;
-            source2.Name = "Dynamic_PRStateSelected";
+            source2.Name = "Dynamic_PRStateSelected_1";
             sourceNode2.Source = source2;
             selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "StateAbbrev")});
+            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode2)});
             selectNode2.Root = sourceNode2;
             selectNode3.Alias = "Dynamic_dsPRWorkersCompGenLiaTableListing";
-            sourceNode3.Alias = null;
-            source3.DataMember = "dsPRWorkersCompGenLiaTableListing";
+            sourceNode3.Alias = "Report_PR_WorkersCompGenLiabilityTableListing";
+            sourceNode3.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"477\" />";
+            source3.DataMember = "Report_PR_WorkersCompGenLiabilityTableListing";
             source3.DataSource = this.Dynamic;
-            source3.Name = "Dynamic_dsPRWorkersCompGenLiaTableListing";
+            source3.Name = "Dynamic_Report_PR_WorkersCompGenLiabilityTableListing";
             sourceNode3.Source = source3;
             selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WorkersCompID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "PRStateID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WorkersCompCode"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WorkersCompDesc"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WorkersCompShortDesc"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WorkersCompRate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "WorkersCompWageBase"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "GeneralLiabilityCode"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "GeneralLiabilityRate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "GeneralLiabilityWageBase"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CompanyID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CreateDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "CreateUser"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ModifyDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ModifyUser"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsDeleted"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "IsActive"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "StateAbbrev"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "StateName")});
+            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode3)});
             selectNode3.Root = sourceNode3;
             selectNode4.Alias = "Dynamic_dsLookupCompany";
-            sourceNode4.Alias = null;
-            source4.DataMember = "dsLookupCompany";
+            sourceNode4.Alias = "Companies_ReportLookup";
+            sourceNode4.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"137\" />";
+            source4.DataMember = "Companies_ReportLookup";
             source4.DataSource = this.Dynamic;
-            source4.Name = "Dynamic_dsLookupCompany";
+            source4.Name = "Dynamic_Companies_ReportLookup";
             sourceNode4.Source = source4;
             selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode4)});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Pulse_Master_UserRecord";
             sourceNode5.Alias = null;
@@ -1289,6 +1221,54 @@
             this.xrRichText1.SizeF = new System.Drawing.SizeF(68.78052F, 13.62836F);
             this.xrRichText1.StylePriority.UseFont = false;
             // 
+            // Dynamic
+            // 
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
+            this.Dynamic.Name = "Dynamic";
+            storedProcQuery1.Name = "Companies_ReportLookup";
+            queryParameter1.Name = "@plngCompanyID";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1});
+            storedProcQuery1.StoredProcName = "Companies_ReportLookup";
+            storedProcQuery2.Name = "Report_PR_WorkersCompGenLiabilityTableListing";
+            queryParameter2.Name = "@plngCompanyID";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter3.Name = "@pstrStateToPrint";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrStateToPrint", typeof(int));
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter2,
+            queryParameter3});
+            storedProcQuery2.StoredProcName = "Report_PR_WorkersCompGenLiabilityTableListing";
+            storedProcQuery3.Name = "Report_PR_StateList";
+            queryParameter4.Name = "@plngCompanyID";
+            queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter4});
+            storedProcQuery3.StoredProcName = "Report_PR_StateList";
+            customSqlQuery1.Name = "PRStateSelected";
+            queryParameter5.Name = "plngCompanyID";
+            queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter6.Name = "pstrStateToPrint";
+            queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrStateToPrint", typeof(string));
+            customSqlQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter5,
+            queryParameter6});
+            customSqlQuery1.Sql = "Select B.StateAbbrev FROM PRState A\r\nLEFT JOIN StateCodes B on A.StateID=B.ID\r\nWh" +
+    "ere A.PRStateID=@pstrStateToPrint\r\nand A.CompanyID=@plngCompanyID";
+            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1,
+            storedProcQuery2,
+            storedProcQuery3,
+            customSqlQuery1});
+            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
+            // 
             // PR_WorkersCompGenLiabilityTableListing
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1299,9 +1279,9 @@
             this.pageFooterBand1});
             this.BorderColor = System.Drawing.Color.White;
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.Dynamic,
             this.Pulse,
-            this.federationDataSource1});
+            this.federationDataSource1,
+            this.Dynamic});
             this.CrossBandControls.AddRange(new DevExpress.XtraReports.UI.XRCrossBandControl[] {
             this.xrCrossBandBox3});
             this.DataMember = "Dynamic_dsPRWorkersCompGenLiaTableListing";
@@ -1340,7 +1320,6 @@
         private DevExpress.XtraReports.UI.DetailBand Tablix1;
         private DevExpress.XtraReports.UI.PageHeaderBand pageHeaderBand1;
         private DevExpress.XtraReports.UI.PageFooterBand pageFooterBand1;
-        private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
         private DevExpress.XtraReports.Parameters.Parameter pstrServerName;
         private DevExpress.XtraReports.Parameters.Parameter pstrDatabaseName;
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
@@ -1381,5 +1360,6 @@
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.UI.XRRichText xrRichText1;
         private DevExpress.XtraReports.UI.XRRichText xrRichText2;
+        private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
     }
 }
