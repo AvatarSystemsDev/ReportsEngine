@@ -98,7 +98,7 @@
             this.Details_table.Name = "Details_table";
             this.Details_table.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow2});
-            this.Details_table.SizeF = new System.Drawing.SizeF(768.9581F, 20F);
+            this.Details_table.SizeF = new System.Drawing.SizeF(839.9998F, 20F);
             // 
             // xrTableRow2
             // 
@@ -192,7 +192,7 @@
             xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
             this.WorkersCompWageBase.Summary = xrSummary2;
             this.WorkersCompWageBase.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.WorkersCompWageBase.Weight = 0.1094538516939824D;
+            this.WorkersCompWageBase.Weight = 0.10931777086326766D;
             // 
             // GeneralLiabilityCode
             // 
@@ -207,7 +207,7 @@
             this.GeneralLiabilityCode.Name = "GeneralLiabilityCode";
             this.GeneralLiabilityCode.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.GeneralLiabilityCode.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.GeneralLiabilityCode.Weight = 0.0673698193512781D;
+            this.GeneralLiabilityCode.Weight = 0.10721173945626107D;
             // 
             // GeneralLiabilityRate
             // 
@@ -222,7 +222,7 @@
             this.GeneralLiabilityRate.Name = "GeneralLiabilityRate";
             this.GeneralLiabilityRate.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.GeneralLiabilityRate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.GeneralLiabilityRate.Weight = 0.0753388395676877D;
+            this.GeneralLiabilityRate.Weight = 0.11230613485535079D;
             // 
             // GeneralLiabilityWageBase
             // 
@@ -237,7 +237,7 @@
             this.GeneralLiabilityWageBase.Name = "GeneralLiabilityWageBase";
             this.GeneralLiabilityWageBase.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.GeneralLiabilityWageBase.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.GeneralLiabilityWageBase.Weight = 0.10136349741779963D;
+            this.GeneralLiabilityWageBase.Weight = 0.11806736423368311D;
             // 
             // pstrServerName
             // 
@@ -491,7 +491,7 @@
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(583.1635F, 6.357829E-05F);
             this.xrLabel20.Name = "xrLabel20";
             this.xrLabel20.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel20.SizeF = new System.Drawing.SizeF(51.35876F, 40.62331F);
+            this.xrLabel20.SizeF = new System.Drawing.SizeF(81.56714F, 40.62331F);
             this.xrLabel20.StylePriority.UseBackColor = false;
             this.xrLabel20.StylePriority.UseBorderColor = false;
             this.xrLabel20.StylePriority.UseBorderDashStyle = false;
@@ -514,10 +514,10 @@
             this.xrLabel21.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel21.ForeColor = System.Drawing.Color.Black;
             this.xrLabel21.KeepTogether = true;
-            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(634.5222F, 0F);
+            this.xrLabel21.LocationFloat = new DevExpress.Utils.PointFloat(664.7306F, 0F);
             this.xrLabel21.Name = "xrLabel21";
             this.xrLabel21.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel21.SizeF = new System.Drawing.SizeF(57.31812F, 40.6233F);
+            this.xrLabel21.SizeF = new System.Drawing.SizeF(85.44312F, 40.6233F);
             this.xrLabel21.StylePriority.UseBackColor = false;
             this.xrLabel21.StylePriority.UseBorderColor = false;
             this.xrLabel21.StylePriority.UseBorderDashStyle = false;
@@ -540,10 +540,10 @@
             this.xrLabel22.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel22.ForeColor = System.Drawing.Color.Black;
             this.xrLabel22.KeepTogether = true;
-            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(691.8403F, 3.178914E-05F);
+            this.xrLabel22.LocationFloat = new DevExpress.Utils.PointFloat(750.1737F, 0F);
             this.xrLabel22.Name = "xrLabel22";
             this.xrLabel22.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel22.SizeF = new System.Drawing.SizeF(77.11792F, 40.62333F);
+            this.xrLabel22.SizeF = new System.Drawing.SizeF(89.82617F, 40.62333F);
             this.xrLabel22.StylePriority.UseBackColor = false;
             this.xrLabel22.StylePriority.UseBorderColor = false;
             this.xrLabel22.StylePriority.UseBorderDashStyle = false;
