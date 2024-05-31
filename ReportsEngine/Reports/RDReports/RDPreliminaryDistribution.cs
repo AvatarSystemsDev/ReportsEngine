@@ -15,6 +15,7 @@ namespace ReportsEngine.Reports.APReports
         {
             InitializeComponent();
             xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
+            xrPropertiesSelectedTwo.BeforePrint += xrPropertiesSelected_BeforePrint;
             xrProductsSelected.BeforePrint += XrProductsSelected_BeforePrint;
             xrProductsSelectedTwo.BeforePrint += XrProductsSelected_BeforePrint;
 
