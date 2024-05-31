@@ -221,7 +221,8 @@
             this.GeneralLiabilityRate.KeepTogether = true;
             this.GeneralLiabilityRate.Name = "GeneralLiabilityRate";
             this.GeneralLiabilityRate.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.GeneralLiabilityRate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.GeneralLiabilityRate.StylePriority.UseTextAlignment = false;
+            this.GeneralLiabilityRate.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.GeneralLiabilityRate.Weight = 0.11230613485535079D;
             // 
             // GeneralLiabilityWageBase
@@ -236,7 +237,8 @@
             this.GeneralLiabilityWageBase.KeepTogether = true;
             this.GeneralLiabilityWageBase.Name = "GeneralLiabilityWageBase";
             this.GeneralLiabilityWageBase.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.GeneralLiabilityWageBase.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.GeneralLiabilityWageBase.StylePriority.UseTextAlignment = false;
+            this.GeneralLiabilityWageBase.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.GeneralLiabilityWageBase.Weight = 0.11806736423368311D;
             // 
             // pstrServerName
