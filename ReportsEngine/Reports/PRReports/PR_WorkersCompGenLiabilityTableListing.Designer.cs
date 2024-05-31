@@ -1320,6 +1320,8 @@
             this.federationDataSource1});
             this.CrossBandControls.AddRange(new DevExpress.XtraReports.UI.XRCrossBandControl[] {
             this.xrCrossBandBox3});
+            this.DataMember = "Dynamic_dsPRWorkersCompGenLiaTableListing";
+            this.DataSource = this.federationDataSource1;
             this.DisplayName = "PR_WorkersCompGenLiabilityTableListing";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
