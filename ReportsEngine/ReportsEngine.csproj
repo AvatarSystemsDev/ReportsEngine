@@ -553,6 +553,12 @@
     <Compile Include="Reports\PRReports\ExcelPR_StateTableListing.Designer.cs">
       <DependentUpon>ExcelPR_StateTableListing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_WorkersCompGenLiabilityTableListing.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_WorkersCompGenLiabilityTableListing.Designer.cs">
+      <DependentUpon>ExcelPR_WorkersCompGenLiabilityTableListing.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PRReports\PR_Checks.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2647,6 +2653,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\ExcelPR_StateTableListing.resx">
       <DependentUpon>ExcelPR_StateTableListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\ExcelPR_WorkersCompGenLiabilityTableListing.resx">
+      <DependentUpon>ExcelPR_WorkersCompGenLiabilityTableListing.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\PR_Checks.resx">
       <DependentUpon>PR_Checks.cs</DependentUpon>
