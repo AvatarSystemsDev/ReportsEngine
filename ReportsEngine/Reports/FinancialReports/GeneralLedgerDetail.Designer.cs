@@ -159,9 +159,6 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode9 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode9 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source9 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode10 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode10 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source10 = new DevExpress.DataAccess.DataFederation.Source();
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
@@ -863,17 +860,6 @@
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode9, "Telephone"),
             new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode9, "Initials")});
             selectNode9.Root = sourceNode9;
-            selectNode10.Alias = "FedTestGL";
-            sourceNode10.Alias = "GLTest";
-            sourceNode10.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"137\" />";
-            source10.DataMember = "GLTest";
-            source10.DataSource = this.Dynamic;
-            source10.Name = "Dynamic_GLTest";
-            sourceNode10.Source = source10;
-            selectNode10.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode10, "NetAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode10, "ID")});
-            selectNode10.Root = sourceNode10;
             this.federationDataSource1.Queries.AddRange(new DevExpress.DataAccess.DataFederation.QueryNode[] {
             selectNode1,
             selectNode2,
@@ -883,8 +869,7 @@
             selectNode6,
             selectNode7,
             selectNode8,
-            selectNode9,
-            selectNode10});
+            selectNode9});
             // 
             // topMarginBand1
             // 
@@ -2266,7 +2251,7 @@
             // 
             this.xrLabel72.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
-            this.xrLabel72.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F);
+            this.xrLabel72.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel72.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel72.Multiline = true;
             this.xrLabel72.Name = "xrLabel72";
@@ -4544,7 +4529,6 @@
             this.DisplayName = "GeneralLedgerDetail";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
-            this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
