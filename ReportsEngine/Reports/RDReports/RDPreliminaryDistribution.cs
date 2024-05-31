@@ -22,7 +22,7 @@ namespace ReportsEngine.Reports.APReports
 
         private void XrProductsSelected_BeforePrint(object sender, CancelEventArgs e)
         {
-            Parameter p = this.Parameters["plngProductTypeID"];
+            Parameter p = this.Parameters["pstrSelectProductTypeID"];
             XRLabel label = sender as XRLabel;
 
             if (p.MultiValue == false || p.LookUpSettings == null)
