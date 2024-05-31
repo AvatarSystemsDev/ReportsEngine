@@ -172,8 +172,10 @@
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.xrRichText1 = new DevExpress.XtraReports.UI.XRRichText();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
+            this.xrRichText3 = new DevExpress.XtraReports.UI.XRRichText();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Pulse
@@ -563,6 +565,7 @@
             this.pageHeaderBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.pageHeaderBand1.BorderWidth = 1F;
             this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrRichText3,
             this.xrRichText1,
             this.xrLabel22,
             this.xrLabel21,
@@ -1200,13 +1203,12 @@
             // xrRichText1
             // 
             this.xrRichText1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "\'\\b For State: \\b0\' + Iif(?pstrStateToPrint = 99, \'All States\', [Dynamic_PRStateS" +
-                    "elected].[StateAbbrev])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "\'For State: \' ")});
             this.xrRichText1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrRichText1.LocationFloat = new DevExpress.Utils.PointFloat(3.038279F, 72.87836F);
             this.xrRichText1.Name = "xrRichText1";
             this.xrRichText1.SerializableRtfString = resources.GetString("xrRichText1.SerializableRtfString");
-            this.xrRichText1.SizeF = new System.Drawing.SizeF(312.1517F, 13.62836F);
+            this.xrRichText1.SizeF = new System.Drawing.SizeF(79.94754F, 13.62836F);
             this.xrRichText1.StylePriority.UseFont = false;
             // 
             // Dynamic
@@ -1257,6 +1259,18 @@
             customSqlQuery1});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
+            // xrRichText3
+            // 
+            this.xrRichText3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Rtf", "Iif(?pstrStateToPrint = 99, \'All States\', [Dynamic_PRStateSelected].[StateAbbrev]" +
+                    ")\n")});
+            this.xrRichText3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrRichText3.LocationFloat = new DevExpress.Utils.PointFloat(82.98582F, 72.87836F);
+            this.xrRichText3.Name = "xrRichText3";
+            this.xrRichText3.SerializableRtfString = resources.GetString("xrRichText3.SerializableRtfString");
+            this.xrRichText3.SizeF = new System.Drawing.SizeF(232.2042F, 13.62836F);
+            this.xrRichText3.StylePriority.UseFont = false;
+            // 
             // PR_WorkersCompGenLiabilityTableListing
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1296,6 +1310,7 @@
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1347,5 +1362,6 @@
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
         private DevExpress.XtraReports.UI.XRRichText xrRichText1;
         private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
+        private DevExpress.XtraReports.UI.XRRichText xrRichText3;
     }
 }
