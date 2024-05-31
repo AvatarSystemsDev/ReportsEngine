@@ -1106,7 +1106,7 @@
             // federationDataSource1
             // 
             this.federationDataSource1.Name = "federationDataSource1";
-            selectNode1.Alias = "Dynamic_dsPRStateList2";
+            selectNode1.Alias = "Dynamic_dsPRStateList";
             sourceNode1.Alias = "Report_PR_StateList";
             sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"177\" />";
             source1.DataMember = "Report_PR_StateList";
