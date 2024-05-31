@@ -1077,7 +1077,7 @@
             this.pstrStateToPrint.Name = "pstrStateToPrint";
             this.pstrStateToPrint.Type = typeof(int);
             this.pstrStateToPrint.ValueInfo = "0";
-            dynamicListLookUpSettings2.DataMember = "Dynamic_dsPRStateList2";
+            dynamicListLookUpSettings2.DataMember = "Dynamic_dsPRStateList";
             dynamicListLookUpSettings2.DataSource = this.federationDataSource1;
             dynamicListLookUpSettings2.DisplayMember = "StateAbbrevAndName";
             dynamicListLookUpSettings2.ValueMember = "PRStateID";
