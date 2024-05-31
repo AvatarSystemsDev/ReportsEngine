@@ -1341,11 +1341,11 @@
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OwnerNumber] + \' : \' + [OwnerName]")});
             this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(134.3295F, 0F);
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(131.2045F, 0F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
             this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(625.6705F, 23F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(628.7955F, 23F);
             this.xrLabel1.StylePriority.UseFont = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -1357,7 +1357,7 @@
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(50.99615F, 23F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(47.87115F, 23F);
             this.xrLabel2.StylePriority.UseFont = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
             this.xrLabel2.Text = "Owner:";
