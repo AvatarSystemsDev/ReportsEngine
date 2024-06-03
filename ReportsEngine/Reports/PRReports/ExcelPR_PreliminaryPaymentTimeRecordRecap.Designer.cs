@@ -117,20 +117,20 @@
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 4.166667F;
+            this.bottomMarginBand1.HeightF = 33.33333F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // Tablix1
             // 
             this.Tablix1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.Details_table});
-            this.Tablix1.HeightF = 22.91501F;
+            this.Tablix1.HeightF = 31.24339F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
             // 
             // Details_table
             // 
-            this.Details_table.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.Details_table.LocationFloat = new DevExpress.Utils.PointFloat(0F, 5.41172F);
             this.Details_table.Name = "Details_table";
             this.Details_table.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
             this.xrTableRow1});
@@ -736,7 +736,7 @@
             this.DisplayName = "PR_PreliminaryPaymentTimeRecordRecap";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
-            this.Margins = new DevExpress.Drawing.DXMargins(25F, 0F, 0F, 4.166667F);
+            this.Margins = new DevExpress.Drawing.DXMargins(25F, 0F, 0F, 33.33333F);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
