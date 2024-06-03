@@ -153,7 +153,7 @@
             this.xrLabel15,
             this.xrLabel13,
             this.xrLabel12});
-            this.pageHeaderBand1.HeightF = 40.62F;
+            this.pageHeaderBand1.HeightF = 42.70333F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -261,7 +261,7 @@
             this.xrLabel15.BorderWidth = 1F;
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel15.KeepTogether = true;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(257.2317F, 0F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(256.2317F, 0F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
