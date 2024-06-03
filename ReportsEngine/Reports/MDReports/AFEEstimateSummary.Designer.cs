@@ -248,6 +248,7 @@
             this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
             this.xrOwnerFooterLabel = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand12 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrAFEEstimateSummary = new DevExpress.XtraReports.UI.XRSubreport();
             this.SubBand13 = new DevExpress.XtraReports.UI.SubBand();
             this.xrOwnerFooterLabelEnd = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
@@ -256,7 +257,6 @@
             this.pbooSortBy = new DevExpress.XtraReports.Parameters.Parameter();
             this.Grouping1 = new DevExpress.XtraReports.UI.CalculatedField();
             this.Grouping2 = new DevExpress.XtraReports.UI.CalculatedField();
-            this.xrAFEEstimateSummary = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -669,7 +669,7 @@
             // 
             // pstrBeginningAFENumber
             // 
-            this.pstrBeginningAFENumber.Description = "Beginning AFE Number";
+            this.pstrBeginningAFENumber.Description = "Beginning AFE";
             this.pstrBeginningAFENumber.Name = "pstrBeginningAFENumber";
             this.pstrBeginningAFENumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "Lookup_AFEs";
@@ -858,7 +858,7 @@
             dynamicListLookUpSettings5.DataMember = "Lookup_Property";
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
             dynamicListLookUpSettings5.DisplayMember = "Description";
-            dynamicListLookUpSettings5.FilterString = null;
+            dynamicListLookUpSettings5.FilterString = "[ID] <> 0";
             dynamicListLookUpSettings5.SortMember = null;
             dynamicListLookUpSettings5.ValueMember = "PropertyAndWellNumber";
             this.pstrSelectProperty.ValueSourceSettings = dynamicListLookUpSettings5;
@@ -898,7 +898,7 @@
             dynamicListLookUpSettings8.DataMember = "Lookup_AFEs";
             dynamicListLookUpSettings8.DataSource = this.Dynamic;
             dynamicListLookUpSettings8.DisplayMember = "Description";
-            dynamicListLookUpSettings8.FilterString = null;
+            dynamicListLookUpSettings8.FilterString = "[ID] <> 0";
             dynamicListLookUpSettings8.SortMember = null;
             dynamicListLookUpSettings8.ValueMember = "Number";
             this.pstrSelectAFE.ValueSourceSettings = dynamicListLookUpSettings8;
@@ -2054,6 +2054,23 @@
             this.SubBand12.Name = "SubBand12";
             this.SubBand12.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
             // 
+            // xrAFEEstimateSummary
+            // 
+            this.xrAFEEstimateSummary.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
+            this.xrAFEEstimateSummary.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrAFEEstimateSummary.Name = "xrAFEEstimateSummary";
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAFEMasterID", null, "Dynamic_AFEMasterList.AFEMasterID"));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOwnerID", null, "Dynamic_AFEMasterList.OwnerID"));
+            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
+            this.xrAFEEstimateSummary.ReportSource = new ReportsEngine.Reports.MDReports.AFEEstimateSummarySubreport();
+            this.xrAFEEstimateSummary.SizeF = new System.Drawing.SizeF(769.5486F, 19.40232F);
+            // 
             // SubBand13
             // 
             this.SubBand13.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -2129,23 +2146,6 @@
             this.Grouping2.Expression = "Iif(?pbooSortBy, [AFEMasterID], [OwnerNumber])\n";
             this.Grouping2.FieldType = DevExpress.XtraReports.UI.FieldType.String;
             this.Grouping2.Name = "Grouping2";
-            // 
-            // xrAFEEstimateSummary
-            // 
-            this.xrAFEEstimateSummary.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
-            this.xrAFEEstimateSummary.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrAFEEstimateSummary.Name = "xrAFEEstimateSummary";
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngAFEMasterID", null, "Dynamic_AFEMasterList.AFEMasterID"));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngOwnerID", null, "Dynamic_AFEMasterList.OwnerID"));
-            this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
-            this.xrAFEEstimateSummary.ReportSource = new ReportsEngine.Reports.MDReports.AFEEstimateSummarySubreport();
-            this.xrAFEEstimateSummary.SizeF = new System.Drawing.SizeF(769.5486F, 19.40232F);
             // 
             // AFEEstimateSummary
             // 

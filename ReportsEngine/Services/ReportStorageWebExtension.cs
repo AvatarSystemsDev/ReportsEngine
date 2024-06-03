@@ -192,7 +192,7 @@ namespace ReportsEngine.Services
                 }
                 else if (parameter.Name == "plngCoverSheetTray") // They want this to be defaulted from a field from CompanySettings
                 {
-                    var query = "Select TOP 1 WillPrintAccountDescription FROM CheckPrintingFormat WHERE Company.ID = " + companyid;
+                    string query = "Select TOP 1 WillPrintAccountDescription FROM CheckPrintingFormat WHERE Company.ID = " + companyid;
                     //string connectionStringDynamic = "XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + ReportUser + "; Password=" + ReportUserPassword + "; Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + "; Persist Security Info=true; TrustServerCertificate=true;";
                     string connectionStringDynamic = $"Data Source={report.Parameters["pstrServerName"].Value}; User ID={ReportUser}; Password={ReportUserPassword}; Initial Catalog={report.Parameters["pstrDatabaseName"].Value}; Persist Security Info=true; TrustServerCertificate=true;";
                     ///

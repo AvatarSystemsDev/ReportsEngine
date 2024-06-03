@@ -385,10 +385,10 @@ namespace ReportsEngine.Reports.FinancialReports
             queryParameter16.Name = "@pstrEndingCostCenter";
             queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter16.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenterNumber", typeof(string));
-            queryParameter17.Name = "@plngBeginningBatchID";
+            queryParameter17.Name = "@plngBeginningBatch";
             queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatchID", typeof(int));
-            queryParameter18.Name = "@plngEndingBatchID";
+            queryParameter18.Name = "@plngEndingBatch";
             queryParameter18.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngEndingBatchID", typeof(int));
             queryParameter19.Name = "@plngSortBy";

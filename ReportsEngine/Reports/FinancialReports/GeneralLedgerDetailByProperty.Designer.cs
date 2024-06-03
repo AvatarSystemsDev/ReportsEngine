@@ -467,9 +467,9 @@
             queryParameter19.Name = "@plngEndingBatch";
             queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngEndingBatch", typeof(int));
-            queryParameter20.Name = "@plngShowZeroBalance";
+            queryParameter20.Name = "@pbooShowZeroBalance";
             queryParameter20.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter20.Value = new DevExpress.DataAccess.Expression("?plngShowZeroBalance", typeof(int));
+            queryParameter20.Value = new DevExpress.DataAccess.Expression("?plngShowZeroBalance = 0", typeof(bool));
             queryParameter21.Name = "@pbooShowYearEndClosingEntries";
             queryParameter21.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter21.Value = new DevExpress.DataAccess.Expression("?pbooShowYearEndClosingEntries", typeof(bool));

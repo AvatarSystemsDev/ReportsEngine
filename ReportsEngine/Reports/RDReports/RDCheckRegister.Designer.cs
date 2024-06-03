@@ -2090,7 +2090,7 @@ namespace ReportsEngine
             dynamicListLookUpSettings9.DataMember = "Owners";
             dynamicListLookUpSettings9.DataSource = this.Dynamic;
             dynamicListLookUpSettings9.DisplayMember = "Description";
-            dynamicListLookUpSettings9.FilterString = null;
+            dynamicListLookUpSettings9.FilterString = "[ID] <> 0";
             dynamicListLookUpSettings9.SortMember = null;
             dynamicListLookUpSettings9.ValueMember = "ID";
             this.pstrSelectOwner.ValueSourceSettings = dynamicListLookUpSettings9;
