@@ -1622,6 +1622,7 @@
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrLabel1.TextFormatString = "{0:MM/dd/yyyy}";
             // 
             // xrLabel18
             // 
