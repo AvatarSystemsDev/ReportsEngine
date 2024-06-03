@@ -29,23 +29,24 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelPR_PreliminaryPaymentTimeRecordRecap));
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.CustomSqlQuery customSqlQuery1 = new DevExpress.DataAccess.Sql.CustomSqlQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelPR_PreliminaryPaymentTimeRecordRecap));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Tablix1 = new DevExpress.XtraReports.UI.DetailBand();
-            this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.Details_table = new DevExpress.XtraReports.UI.XRTable();
             this.xrTableRow1 = new DevExpress.XtraReports.UI.XRTableRow();
             this.Number = new DevExpress.XtraReports.UI.XRTableCell();
             this.Name_1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.PayFrequencyCode = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox2 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox4 = new DevExpress.XtraReports.UI.XRTableCell();
@@ -54,14 +55,8 @@
             this.Textbox45 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox50 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox55 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
-            this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
-            this.XPAYDATE = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
+            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
@@ -72,10 +67,48 @@
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel2 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel1 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
+            this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
+            this.XPAYDATE = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
+            // 
+            // Dynamic
+            // 
+            this.Dynamic.ConnectionName = "Providence_Connection 1";
+            this.Dynamic.Name = "Dynamic";
+            storedProcQuery1.Name = "dsLookupCompany";
+            queryParameter1.Name = "@plngCompanyID";
+            queryParameter1.Type = typeof(int);
+            queryParameter1.ValueInfo = "0";
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1});
+            storedProcQuery1.StoredProcName = "Companies_ReportLookup";
+            storedProcQuery2.Name = "dsUnpaidTime";
+            queryParameter2.Name = "@plngCompanyID";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
+            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter2});
+            storedProcQuery2.StoredProcName = "PR_Processing_Report_PreliminaryPaymentTimeRecordRecap";
+            customSqlQuery1.Name = "dsPaymentProcessTracking";
+            queryParameter3.Name = "plngCompanyID";
+            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
+            customSqlQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter3});
+            customSqlQuery1.Sql = "SELECT\n  PRPaymentProcessTracking.PeriodEndingDate\nFROM\n  PRPaymentProcessTrackin" +
+    "g\nWHERE CompanyID = @plngCompanyID AND IsPosted = 0\nand TransactionSourceCodeID=" +
+    "65";
+            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1,
+            storedProcQuery2,
+            customSqlQuery1});
+            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
             // 
@@ -84,7 +117,7 @@
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 0F;
+            this.bottomMarginBand1.HeightF = 4.166667F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // Tablix1
@@ -94,28 +127,6 @@
             this.Tablix1.HeightF = 22.91501F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
-            // 
-            // pageHeaderBand1
-            // 
-            this.pageHeaderBand1.BorderColor = System.Drawing.Color.Black;
-            this.pageHeaderBand1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.pageHeaderBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.pageHeaderBand1.BorderWidth = 1F;
-            this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel1,
-            this.xrLabel11,
-            this.xrLabel3,
-            this.xrLabel4,
-            this.xrLabel5,
-            this.xrLabel6,
-            this.xrLabel7,
-            this.xrLabel8,
-            this.xrLabel9,
-            this.xrLabel10,
-            this.xrLabel2});
-            this.pageHeaderBand1.HeightF = 36.46F;
-            this.pageHeaderBand1.Name = "pageHeaderBand1";
-            this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // Details_table
             // 
@@ -158,7 +169,7 @@
             this.Number.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Number.StylePriority.UseFont = false;
             this.Number.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.Number.Weight = 0.097498353803070467D;
+            this.Number.Weight = 0.11539143935596563D;
             // 
             // Name_1
             // 
@@ -176,7 +187,26 @@
             this.Name_1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Name_1.StylePriority.UseFont = false;
             this.Name_1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.Name_1.Weight = 0.30090375870745606D;
+            this.Name_1.Weight = 0.28301067315456091D;
+            // 
+            // xrTableCell1
+            // 
+            this.xrTableCell1.BackColor = System.Drawing.Color.White;
+            this.xrTableCell1.BorderColor = System.Drawing.Color.Black;
+            this.xrTableCell1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrTableCell1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrTableCell1.BorderWidth = 1F;
+            this.xrTableCell1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyAndWellNumber] + \'    \' + [PropertyDescription]\n")});
+            this.xrTableCell1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrTableCell1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.xrTableCell1.Multiline = true;
+            this.xrTableCell1.Name = "xrTableCell1";
+            this.xrTableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell1.StylePriority.UseFont = false;
+            this.xrTableCell1.Text = "xrTableCell1";
+            this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            this.xrTableCell1.Weight = 0.33809340309094454D;
             // 
             // PayFrequencyCode
             // 
@@ -323,94 +353,53 @@
             this.Textbox55.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox55.Weight = 0.14382104544759344D;
             // 
-            // Dynamic
+            // pageHeaderBand1
             // 
-            this.Dynamic.ConnectionName = "Providence_Connection 1";
-            this.Dynamic.Name = "Dynamic";
-            storedProcQuery1.Name = "dsLookupCompany";
-            queryParameter1.Name = "@plngCompanyID";
-            queryParameter1.Type = typeof(int);
-            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1});
-            storedProcQuery1.StoredProcName = "Companies_ReportLookup";
-            storedProcQuery2.Name = "dsUnpaidTime";
-            queryParameter2.Name = "@plngCompanyID";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter2});
-            storedProcQuery2.StoredProcName = "PR_Processing_Report_PreliminaryPaymentTimeRecordRecap";
-            customSqlQuery1.Name = "dsPaymentProcessTracking";
-            queryParameter3.Name = "plngCompanyID";
-            queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            customSqlQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter3});
-            customSqlQuery1.Sql = "SELECT\n  PRPaymentProcessTracking.PeriodEndingDate\nFROM\n  PRPaymentProcessTrackin" +
-    "g\nWHERE CompanyID = @plngCompanyID AND IsPosted = 0\nand TransactionSourceCodeID=" +
-    "65";
-            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1,
-            storedProcQuery2,
-            customSqlQuery1});
-            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
+            this.pageHeaderBand1.BorderColor = System.Drawing.Color.Black;
+            this.pageHeaderBand1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.pageHeaderBand1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.pageHeaderBand1.BorderWidth = 1F;
+            this.pageHeaderBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel1,
+            this.xrLabel11,
+            this.xrLabel3,
+            this.xrLabel4,
+            this.xrLabel5,
+            this.xrLabel6,
+            this.xrLabel7,
+            this.xrLabel8,
+            this.xrLabel9,
+            this.xrLabel10,
+            this.xrLabel2});
+            this.pageHeaderBand1.HeightF = 40.62667F;
+            this.pageHeaderBand1.Name = "pageHeaderBand1";
+            this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // pstrServerName
+            // xrLabel1
             // 
-            this.pstrServerName.Description = "pstrServerName";
-            this.pstrServerName.Name = "pstrServerName";
-            this.pstrServerName.Visible = false;
-            // 
-            // pstrDatabaseName
-            // 
-            this.pstrDatabaseName.Description = "pstrDatabaseName";
-            this.pstrDatabaseName.Name = "pstrDatabaseName";
-            this.pstrDatabaseName.Visible = false;
-            // 
-            // plngUserID
-            // 
-            this.plngUserID.Description = "plngUserID";
-            this.plngUserID.Name = "plngUserID";
-            this.plngUserID.Type = typeof(int);
-            this.plngUserID.Visible = false;
-            // 
-            // Subtitle
-            // 
-            this.Subtitle.Description = "Subtitle";
-            this.Subtitle.Name = "Subtitle";
-            this.Subtitle.Visible = false;
-            // 
-            // plngCompanyID
-            // 
-            this.plngCompanyID.Description = "plngCompanyID";
-            this.plngCompanyID.Name = "plngCompanyID";
-            this.plngCompanyID.Type = typeof(int);
-            this.plngCompanyID.ValueInfo = "0";
-            dynamicListLookUpSettings1.DataMember = "dsLookupCompany";
-            dynamicListLookUpSettings1.DataSource = this.Dynamic;
-            dynamicListLookUpSettings1.DisplayMember = "Description";
-            dynamicListLookUpSettings1.ValueMember = "ID";
-            this.plngCompanyID.ValueSourceSettings = dynamicListLookUpSettings1;
-            this.plngCompanyID.Visible = false;
-            // 
-            // pbooShowCriteria
-            // 
-            this.pbooShowCriteria.Description = "Show Criteria";
-            this.pbooShowCriteria.Name = "pbooShowCriteria";
-            this.pbooShowCriteria.Type = typeof(bool);
-            this.pbooShowCriteria.ValueInfo = "True";
-            // 
-            // XPAYDATE
-            // 
-            this.XPAYDATE.Description = "XPAYDATE";
-            this.XPAYDATE.Name = "XPAYDATE";
-            this.XPAYDATE.Type = typeof(System.DateTime);
-            dynamicListLookUpSettings2.DataMember = "dsPaymentProcessTracking";
-            dynamicListLookUpSettings2.DataSource = this.Dynamic;
-            dynamicListLookUpSettings2.DisplayMember = "PeriodEndingDate";
-            dynamicListLookUpSettings2.ValueMember = "PeriodEndingDate";
-            this.XPAYDATE.ValueSourceSettings = dynamicListLookUpSettings2;
-            this.XPAYDATE.Visible = false;
+            this.xrLabel1.BackColor = System.Drawing.Color.White;
+            this.xrLabel1.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
+            this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel1.BorderWidth = 1F;
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
+            this.xrLabel1.KeepTogether = true;
+            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(73.89336F, 0F);
+            this.xrLabel1.Name = "xrLabel1";
+            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel1.SizeF = new System.Drawing.SizeF(181.2316F, 36.46F);
+            this.xrLabel1.StylePriority.UseBackColor = false;
+            this.xrLabel1.StylePriority.UseBorderColor = false;
+            this.xrLabel1.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel1.StylePriority.UseBorders = false;
+            this.xrLabel1.StylePriority.UseBorderWidth = false;
+            this.xrLabel1.StylePriority.UseFont = false;
+            this.xrLabel1.StylePriority.UseForeColor = false;
+            this.xrLabel1.StylePriority.UsePadding = false;
+            this.xrLabel1.StylePriority.UseTextAlignment = false;
+            this.xrLabel1.Text = "EMPLOYEE NAME";
+            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel11
             // 
@@ -663,7 +652,7 @@
             this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(62.435F, 36.46F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(73.89334F, 36.46F);
             this.xrLabel2.StylePriority.UseBackColor = false;
             this.xrLabel2.StylePriority.UseBorderColor = false;
             this.xrLabel2.StylePriority.UseBorderDashStyle = false;
@@ -676,50 +665,62 @@
             this.xrLabel2.Text = "EMPLOYEE";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
-            // xrLabel1
+            // pstrServerName
             // 
-            this.xrLabel1.BackColor = System.Drawing.Color.White;
-            this.xrLabel1.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
-            this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel1.BorderWidth = 1F;
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.xrLabel1.KeepTogether = true;
-            this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(62.43502F, 0F);
-            this.xrLabel1.Name = "xrLabel1";
-            this.xrLabel1.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel1.SizeF = new System.Drawing.SizeF(192.6899F, 36.46F);
-            this.xrLabel1.StylePriority.UseBackColor = false;
-            this.xrLabel1.StylePriority.UseBorderColor = false;
-            this.xrLabel1.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel1.StylePriority.UseBorders = false;
-            this.xrLabel1.StylePriority.UseBorderWidth = false;
-            this.xrLabel1.StylePriority.UseFont = false;
-            this.xrLabel1.StylePriority.UseForeColor = false;
-            this.xrLabel1.StylePriority.UsePadding = false;
-            this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "EMPLOYEE NAME";
-            this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            this.pstrServerName.Description = "pstrServerName";
+            this.pstrServerName.Name = "pstrServerName";
+            this.pstrServerName.Visible = false;
             // 
-            // xrTableCell1
+            // pstrDatabaseName
             // 
-            this.xrTableCell1.BackColor = System.Drawing.Color.White;
-            this.xrTableCell1.BorderColor = System.Drawing.Color.Black;
-            this.xrTableCell1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrTableCell1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrTableCell1.BorderWidth = 1F;
-            this.xrTableCell1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertyAndWellNumber] + \'    \' + [PropertyDescription]\n")});
-            this.xrTableCell1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrTableCell1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.xrTableCell1.Multiline = true;
-            this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrTableCell1.StylePriority.UseFont = false;
-            this.xrTableCell1.Text = "xrTableCell1";
-            this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrTableCell1.Weight = 0.33809340309094454D;
+            this.pstrDatabaseName.Description = "pstrDatabaseName";
+            this.pstrDatabaseName.Name = "pstrDatabaseName";
+            this.pstrDatabaseName.Visible = false;
+            // 
+            // plngUserID
+            // 
+            this.plngUserID.Description = "plngUserID";
+            this.plngUserID.Name = "plngUserID";
+            this.plngUserID.Type = typeof(int);
+            this.plngUserID.Visible = false;
+            // 
+            // Subtitle
+            // 
+            this.Subtitle.Description = "Subtitle";
+            this.Subtitle.Name = "Subtitle";
+            this.Subtitle.Visible = false;
+            // 
+            // plngCompanyID
+            // 
+            this.plngCompanyID.Description = "plngCompanyID";
+            this.plngCompanyID.Name = "plngCompanyID";
+            this.plngCompanyID.Type = typeof(int);
+            this.plngCompanyID.ValueInfo = "0";
+            dynamicListLookUpSettings1.DataMember = "dsLookupCompany";
+            dynamicListLookUpSettings1.DataSource = this.Dynamic;
+            dynamicListLookUpSettings1.DisplayMember = "Description";
+            dynamicListLookUpSettings1.ValueMember = "ID";
+            this.plngCompanyID.ValueSourceSettings = dynamicListLookUpSettings1;
+            this.plngCompanyID.Visible = false;
+            // 
+            // pbooShowCriteria
+            // 
+            this.pbooShowCriteria.Description = "Show Criteria";
+            this.pbooShowCriteria.Name = "pbooShowCriteria";
+            this.pbooShowCriteria.Type = typeof(bool);
+            this.pbooShowCriteria.ValueInfo = "True";
+            // 
+            // XPAYDATE
+            // 
+            this.XPAYDATE.Description = "XPAYDATE";
+            this.XPAYDATE.Name = "XPAYDATE";
+            this.XPAYDATE.Type = typeof(System.DateTime);
+            dynamicListLookUpSettings2.DataMember = "dsPaymentProcessTracking";
+            dynamicListLookUpSettings2.DataSource = this.Dynamic;
+            dynamicListLookUpSettings2.DisplayMember = "PeriodEndingDate";
+            dynamicListLookUpSettings2.ValueMember = "PeriodEndingDate";
+            this.XPAYDATE.ValueSourceSettings = dynamicListLookUpSettings2;
+            this.XPAYDATE.Visible = false;
             // 
             // ExcelPR_PreliminaryPaymentTimeRecordRecap
             // 
@@ -735,7 +736,7 @@
             this.DisplayName = "PR_PreliminaryPaymentTimeRecordRecap";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
-            this.Margins = new DevExpress.Drawing.DXMargins(25F, 0F, 0F, 0F);
+            this.Margins = new DevExpress.Drawing.DXMargins(25F, 0F, 0F, 4.166667F);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
