@@ -114,7 +114,7 @@
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 0.643158F;
+            this.bottomMarginBand1.HeightF = 31.27146F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // Tablix1
@@ -131,7 +131,7 @@
             this.xrLabel9,
             this.xrLabel10,
             this.xrLabel11});
-            this.Tablix1.HeightF = 36.03671F;
+            this.Tablix1.HeightF = 51.66006F;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
             // 
@@ -153,7 +153,7 @@
             this.xrLabel15,
             this.xrLabel13,
             this.xrLabel12});
-            this.pageHeaderBand1.HeightF = 41.25001F;
+            this.pageHeaderBand1.HeightF = 36.46F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -261,11 +261,11 @@
             this.xrLabel15.BorderWidth = 1F;
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel15.KeepTogether = true;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(256.2316F, 0F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(257.2317F, 0F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(215.3984F, 35F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(214.3982F, 35F);
             this.xrLabel15.StylePriority.UseFont = false;
             this.xrLabel15.StylePriority.UsePadding = false;
             this.xrLabel15.StylePriority.UseTextAlignment = false;
@@ -737,7 +737,7 @@
             this.DisplayName = "PR_PreliminaryPaymentTimeRecordRecap";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
-            this.Margins = new DevExpress.Drawing.DXMargins(25F, 0F, 0F, 0.643158F);
+            this.Margins = new DevExpress.Drawing.DXMargins(25F, 0F, 0F, 31.27146F);
             this.PageHeight = 850;
             this.PageWidth = 1100;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
