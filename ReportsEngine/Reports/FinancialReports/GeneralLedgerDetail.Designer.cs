@@ -902,8 +902,8 @@
             this.xrDebitLine,
             this.xrLabel2});
             this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[Description] <> \'***Balance Forward***\'\nAND ( [AccountTotal] <> 0 OR ?plngShowZe" +
-                    "roBalance <> 2)\nAND not IsNullOrEmpty([NetAmount])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[Description] <> \'***Balance Forward***\'\nAND ( [TotalBottomHalfCount] <> 0 OR ?pl" +
+                    "ngShowZeroBalance <> 2)\nAND not IsNullOrEmpty([NetAmount])")});
             this.Tablix1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Tablix1.HeightF = 17.00009F;
             this.Tablix1.KeepTogether = true;
@@ -3124,8 +3124,8 @@
             this.xrAccountTotalDebit,
             this.xrLabel31});
             this.SubBand2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", " ([AccountTotal] <> 0 OR ?plngShowZeroBalance <> 2) AND not IsNullOrEmpty( [Accou" +
-                    "ntID])\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", " ([TotalBottomHalfCount] <> 0 OR ?plngShowZeroBalance <> 2) AND not IsNullOrEmpty" +
+                    "( [AccountID])\n")});
             this.SubBand2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.SubBand2.HeightF = 26F;
             this.SubBand2.KeepTogether = true;
@@ -3333,8 +3333,8 @@
             this.xrLabel23});
             this.SubBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif([Description] = \'***Balance Forward***\',false ,true ) AND ?pbooShowPeriodTota" +
-                    "ls\nAND  ([AccountTotal] <> 0 OR ?plngShowZeroBalance <> 2) AND not IsNullOrEmpty" +
-                    "( [AccountID])\n")});
+                    "ls\nAND  ([TotalBottomHalfCount] <> 0 OR ?plngShowZeroBalance <> 2) AND not IsNul" +
+                    "lOrEmpty( [AccountID])\n")});
             this.SubBand1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.SubBand1.HeightF = 14.98771F;
             this.SubBand1.KeepTogether = true;
