@@ -333,7 +333,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPR_WorkersCompGenLiabilityTableListing", (databaseID, companyID) => new ExcelPR_WorkersCompGenLiabilityTableListing());
             Reports.Add("PR_Checks", (databaseID, companyID) => new PR_Checks());
             Reports.Add("PR_PreliminaryPaymentTimeRecordRecap", (databaseID, companyID) => new PR_PreliminaryPaymentTimeRecordRecap());
-            //Reports.Add("ExcelPR_PreliminaryPaymentTimeRecordRecap", (databaseID, companyID) => new ExcelPR_PreliminaryPaymentTimeRecordRecap());
+            Reports.Add("ExcelPR_PreliminaryPaymentTimeRecordRecap", (databaseID, companyID) => new ExcelPR_PreliminaryPaymentTimeRecordRecap());
 
         }
         public static Dictionary<string, Func<int?, int?, XtraReport>> Reports = new Dictionary<string, Func<int?, int?, XtraReport>>();
