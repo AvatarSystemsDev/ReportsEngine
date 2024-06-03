@@ -686,7 +686,7 @@
             this.xrLabel83.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel83.ForeColor = System.Drawing.Color.Black;
             this.xrLabel83.KeepTogether = true;
-            this.xrLabel83.LocationFloat = new DevExpress.Utils.PointFloat(0F, 1.649979F);
+            this.xrLabel83.LocationFloat = new DevExpress.Utils.PointFloat(4.213587F, 0.09498215F);
             this.xrLabel83.Multiline = true;
             this.xrLabel83.Name = "xrLabel83";
             this.xrLabel83.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
@@ -715,7 +715,7 @@
             this.xrLabel81.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel81.ForeColor = System.Drawing.Color.Black;
             this.xrLabel81.KeepTogether = true;
-            this.xrLabel81.LocationFloat = new DevExpress.Utils.PointFloat(100F, 1.649979F);
+            this.xrLabel81.LocationFloat = new DevExpress.Utils.PointFloat(100F, 0.09501266F);
             this.xrLabel81.Multiline = true;
             this.xrLabel81.Name = "xrLabel81";
             this.xrLabel81.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
@@ -1140,7 +1140,7 @@
             // 
             // SubBand5
             // 
-            this.SubBand5.HeightF = 8F;
+            this.SubBand5.HeightF = 9.714953F;
             this.SubBand5.Name = "SubBand5";
             // 
             // pageFooterBand1
