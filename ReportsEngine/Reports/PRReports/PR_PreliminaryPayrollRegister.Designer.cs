@@ -207,10 +207,6 @@
             this.Textbox209 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox210 = new DevExpress.XtraReports.UI.XRTableCell();
             this.Textbox211 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTable8 = new DevExpress.XtraReports.UI.XRTable();
-            this.xrTableRow10 = new DevExpress.XtraReports.UI.XRTableRow();
-            this.Textbox24 = new DevExpress.XtraReports.UI.XRTableCell();
-            this.xrTableCell1 = new DevExpress.XtraReports.UI.XRTableCell();
             this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
             this.Rectangle4 = new DevExpress.XtraReports.UI.XRPanel();
             this.Textbox437 = new DevExpress.XtraReports.UI.XRRichText();
@@ -250,7 +246,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox437)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -310,8 +305,6 @@
             // 
             // Tablix1_GroupFooterBand_3
             // 
-            this.Tablix1_GroupFooterBand_3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrTable8});
             this.Tablix1_GroupFooterBand_3.HeightF = 120F;
             this.Tablix1_GroupFooterBand_3.Level = 2;
             this.Tablix1_GroupFooterBand_3.Name = "Tablix1_GroupFooterBand_3";
@@ -1368,43 +1361,6 @@
             this.Textbox211.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox211.Weight = 0.058850078538060284D;
             // 
-            // xrTable8
-            // 
-            this.xrTable8.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrTable8.Name = "xrTable8";
-            this.xrTable8.Rows.AddRange(new DevExpress.XtraReports.UI.XRTableRow[] {
-            this.xrTableRow10});
-            this.xrTable8.SizeF = new System.Drawing.SizeF(769.9999F, 120F);
-            // 
-            // xrTableRow10
-            // 
-            this.xrTableRow10.Cells.AddRange(new DevExpress.XtraReports.UI.XRTableCell[] {
-            this.Textbox24,
-            this.xrTableCell1});
-            this.xrTableRow10.Name = "xrTableRow10";
-            this.xrTableRow10.Weight = 1D;
-            // 
-            // Textbox24
-            // 
-            this.Textbox24.BackColor = System.Drawing.Color.White;
-            this.Textbox24.BorderColor = System.Drawing.Color.Black;
-            this.Textbox24.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox24.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox24.BorderWidth = 1F;
-            this.Textbox24.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox24.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
-            this.Textbox24.KeepTogether = true;
-            this.Textbox24.Name = "Textbox24";
-            this.Textbox24.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.Textbox24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.Textbox24.Weight = 0.0038999998569488525D;
-            // 
-            // xrTableCell1
-            // 
-            this.xrTableCell1.Name = "xrTableCell1";
-            this.xrTableCell1.Text = "Tablix control \'Tablix\' is not supported inside the table cell.";
-            this.xrTableCell1.Weight = 0.95859992958605245D;
-            // 
             // ReportTitle
             // 
             this.ReportTitle.BorderColor = System.Drawing.Color.Black;
@@ -2365,7 +2321,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox437)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
@@ -2445,10 +2400,6 @@
         private DevExpress.XtraReports.UI.XRTableCell Textbox210;
         private DevExpress.XtraReports.UI.XRTableCell Textbox211;
         private DevExpress.XtraReports.UI.GroupFooterBand Tablix1_GroupFooterBand_3;
-        private DevExpress.XtraReports.UI.XRTable xrTable8;
-        private DevExpress.XtraReports.UI.XRTableRow xrTableRow10;
-        private DevExpress.XtraReports.UI.XRTableCell Textbox24;
-        private DevExpress.XtraReports.UI.XRTableCell xrTableCell1;
         private DevExpress.XtraReports.UI.PageHeaderBand pageHeaderBand1;
         private DevExpress.XtraReports.UI.XRLabel ReportTitle;
         private DevExpress.XtraReports.UI.XRPanel Rectangle4;
