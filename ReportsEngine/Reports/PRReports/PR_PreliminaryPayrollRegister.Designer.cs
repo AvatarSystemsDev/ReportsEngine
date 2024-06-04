@@ -789,7 +789,7 @@
             this.Textbox60.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox60.BorderWidth = 1F;
             this.Textbox60.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([NetAmount]) = [Nothing], 0, sumSum([NetAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "sumSum([NetAmount])")});
             this.Textbox60.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox60.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Textbox60.KeepTogether = true;
@@ -836,7 +836,7 @@
             this.RegularHours2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.RegularHours2.BorderWidth = 1F;
             this.RegularHours2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([RegularHours]) = [Nothing], 0, sumSum([RegularHours]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RegularHours]")});
             this.RegularHours2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.RegularHours2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.RegularHours2.KeepTogether = true;
@@ -856,7 +856,7 @@
             this.OverTimeHours2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.OverTimeHours2.BorderWidth = 1F;
             this.OverTimeHours2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([OverTimeHours]) = [Nothing], 0, sumSum([OverTimeHours]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OverTimeHours]")});
             this.OverTimeHours2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.OverTimeHours2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.OverTimeHours2.KeepTogether = true;
@@ -876,7 +876,7 @@
             this.OTherHours2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.OTherHours2.BorderWidth = 1F;
             this.OTherHours2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([OTherHours]) = [Nothing], 0, sumSum([OTherHours]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OTherHours]")});
             this.OTherHours2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.OTherHours2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.OTherHours2.KeepTogether = true;
@@ -896,7 +896,7 @@
             this.RegularAmount2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.RegularAmount2.BorderWidth = 1F;
             this.RegularAmount2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([RegularAmount]) = [Nothing], 0, sumSum([RegularAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RegularAmount]")});
             this.RegularAmount2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.RegularAmount2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.RegularAmount2.KeepTogether = true;
@@ -916,8 +916,7 @@
             this.OverTimeAmount2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.OverTimeAmount2.BorderWidth = 1F;
             this.OverTimeAmount2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([OverTimeAmount]) + sumSum([DoubleTimeAmount]) = [Nothing], 0, sumSum(" +
-                    "[OverTimeAmount]) + sumSum([DoubleTimeAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OverTimeAmount] + [DoubleTimeAmount]")});
             this.OverTimeAmount2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.OverTimeAmount2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.OverTimeAmount2.KeepTogether = true;
@@ -937,7 +936,7 @@
             this.OTherAmount2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.OTherAmount2.BorderWidth = 1F;
             this.OTherAmount2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([OTherAmount]) = [Nothing], 0, sumSum([OTherAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[OTherAmount]")});
             this.OTherAmount2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.OTherAmount2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.OTherAmount2.KeepTogether = true;
@@ -957,7 +956,7 @@
             this.GrossPay2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.GrossPay2.BorderWidth = 1F;
             this.GrossPay2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([GrossPay]) = 0, [Nothing], sumSum([GrossPay]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[GrossPay]")});
             this.GrossPay2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.GrossPay2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.GrossPay2.KeepTogether = true;
@@ -977,7 +976,7 @@
             this.FICAAmount2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.FICAAmount2.BorderWidth = 1F;
             this.FICAAmount2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([FICAAmount]) = [Nothing], 0, sumSum([FICAAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FICAAmount]")});
             this.FICAAmount2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.FICAAmount2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.FICAAmount2.KeepTogether = true;
@@ -997,7 +996,7 @@
             this.MedicareAmount2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.MedicareAmount2.BorderWidth = 1F;
             this.MedicareAmount2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([MedicareAmount]) = [Nothing], 0, sumSum([MedicareAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MedicareAmount]")});
             this.MedicareAmount2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.MedicareAmount2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.MedicareAmount2.KeepTogether = true;
@@ -1017,7 +1016,7 @@
             this.FITAmount2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.FITAmount2.BorderWidth = 1F;
             this.FITAmount2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([FITAmount]) = [Nothing], 0, sumSum([FITAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[FITAmount]")});
             this.FITAmount2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.FITAmount2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.FITAmount2.KeepTogether = true;
@@ -1037,7 +1036,7 @@
             this.SITAmount2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.SITAmount2.BorderWidth = 1F;
             this.SITAmount2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([SITAmount]) = [Nothing], 0, sumSum([SITAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[SITAmount]")});
             this.SITAmount2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.SITAmount2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.SITAmount2.KeepTogether = true;
@@ -1057,7 +1056,7 @@
             this.Textbox78.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox78.BorderWidth = 1F;
             this.Textbox78.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([DeductionAmount]) = [Nothing], 0, sumSum([DeductionAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DeductionAmount]")});
             this.Textbox78.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox78.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Textbox78.KeepTogether = true;
@@ -1077,7 +1076,7 @@
             this.Textbox79.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox79.BorderWidth = 1F;
             this.Textbox79.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([AllowanceAmount]) = [Nothing], 0, sumSum([AllowanceAmount]))")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AllowanceAmount]")});
             this.Textbox79.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox79.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Textbox79.KeepTogether = true;
