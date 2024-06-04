@@ -19,6 +19,22 @@ namespace ReportsEngine.Reports.RDReports
             xrPageBeginningLabel.PrintOnPage += XrPageBeginningLabel_PrintOnPage;
             xrEndCoverPage.PrintOnPage += XrEndCoverPage_PrintOnPage;
             CheckGroupBottom.BeforePrint += CheckBottomBand_BeforePrint;
+            xrPictureBoxLogo.BeforePrint += XrPictureBoxLogo_BeforePrint;
+            xrPictureBoxLogoTwo.BeforePrint += XrPictureBoxLogo_BeforePrint;
+        }
+
+        private void XrPictureBoxLogo_BeforePrint(object sender, CancelEventArgs e)
+        {
+            XRPictureBox pictureBox = sender as XRPictureBox;
+            string imagePathLogo = GetCurrentColumnValue("LogoPath") is null ? "" : GetCurrentColumnValue("LogoPath").ToString();
+            try
+            {
+                pictureBox.ImageSource = ImageSource.FromFile(imagePathLogo);
+            }
+            catch
+            {
+                // Probably add some error handling here.
+            }
         }
 
         private void CheckBottomBand_BeforePrint(object sender, CancelEventArgs e)

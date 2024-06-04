@@ -164,7 +164,7 @@ namespace ReportsEngine.Reports.RDReports
             this.xrLabel61 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel62 = new DevExpress.XtraReports.UI.XRLabel();
             this.StubEnd = new DevExpress.XtraReports.UI.SubBand();
-            this.xrPictureBox1 = new DevExpress.XtraReports.UI.XRPictureBox();
+            this.xrPictureBoxLogo = new DevExpress.XtraReports.UI.XRPictureBox();
             this.xrLabel3 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel4 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
@@ -1952,7 +1952,7 @@ namespace ReportsEngine.Reports.RDReports
             // StubEnd
             // 
             this.StubEnd.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrPictureBox1,
+            this.xrPictureBoxLogo,
             this.xrLabel3,
             this.xrLabel4,
             this.xrLabel5,
@@ -1973,19 +1973,19 @@ namespace ReportsEngine.Reports.RDReports
             this.StubEnd.HeightF = 297.0433F;
             this.StubEnd.Name = "StubEnd";
             // 
-            // xrPictureBox1
+            // xrPictureBoxLogo
             // 
-            this.xrPictureBox1.BorderColor = System.Drawing.Color.Black;
-            this.xrPictureBox1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrPictureBox1.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrPictureBox1.BorderWidth = 1F;
-            this.xrPictureBox1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.xrPictureBoxLogo.BorderColor = System.Drawing.Color.Black;
+            this.xrPictureBoxLogo.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrPictureBoxLogo.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrPictureBoxLogo.BorderWidth = 1F;
+            this.xrPictureBoxLogo.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[CheckLogoDisplayOptionCodeID] in (1,2)\n"),
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "ImageUrl", "[LogoPath]")});
-            this.xrPictureBox1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 20.83008F);
-            this.xrPictureBox1.Name = "xrPictureBox1";
-            this.xrPictureBox1.SizeF = new System.Drawing.SizeF(115.6199F, 89.10999F);
-            this.xrPictureBox1.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
+            this.xrPictureBoxLogo.LocationFloat = new DevExpress.Utils.PointFloat(0F, 20.83008F);
+            this.xrPictureBoxLogo.Name = "xrPictureBoxLogo";
+            this.xrPictureBoxLogo.SizeF = new System.Drawing.SizeF(115.6199F, 89.10999F);
+            this.xrPictureBoxLogo.Sizing = DevExpress.XtraPrinting.ImageSizeMode.StretchImage;
             // 
             // xrLabel3
             // 
@@ -3005,7 +3005,7 @@ namespace ReportsEngine.Reports.RDReports
         private DevExpress.XtraReports.Parameters.Parameter plngCheckPrintTray;
         private DevExpress.XtraReports.Parameters.Parameter plngCoverSheetTray;
         private DevExpress.XtraReports.Parameters.Parameter plngRemittanceSheetTray;
-        private XRPictureBox xrPictureBox1;
+        private XRPictureBox xrPictureBoxLogo;
         private XRLabel xrLabel3;
         private XRLabel xrLabel4;
         private XRLabel xrLabel5;
