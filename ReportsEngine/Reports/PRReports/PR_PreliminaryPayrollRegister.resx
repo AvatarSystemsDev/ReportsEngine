@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Textbox437.SerializableRtfString" xml:space="preserve">
+    <value>ewBcAHIAdABmADEAXABkAGUAZgBmADAAewBcAGYAbwBuAHQAdABiAGwAewBcAGYAMAAgAEMAYQBsAGkAYgByAGkAOwB9AHsAXABmADEAIABUAGkAbQBlAHMAIABOAGUAdwAgAFIAbwBtAGEAbgA7AH0AewBcAGYAMgAgAFMAZQBnAG8AZQAgAFUASQA7AH0AfQB7AFwAYwBvAGwAbwByAHQAYgBsACAAOwBcAHIAZQBkADAAXABnAHIAZQBlAG4AMABcAGIAbAB1AGUAMAAgADsAXAByAGUAZAAwAFwAZwByAGUAZQBuADAAXABiAGwAdQBlADIANQA1ACAAOwB9AHsAXAAqAFwAZABlAGYAYwBoAHAAIABcAGYAMQBcAGYAcwAyADAAXABjAGYAMQB9AHsAXAAqAFwAZABlAGYAcABhAHAAIABcAHcAaQBkAGMAdABsAHAAYQByAH0AewBcAHMAdAB5AGwAZQBzAGgAZQBlAHQAIAB7AFwAcQBsAFwAZgBzADIAMABcAGMAZgAxACAATgBvAHIAbQBhAGwAOwB9AHsAXAAqAFwAYwBzADEAXABmADEAXABmAHMAMgAwAFwAYwBmADEAIABEAGUAZgBhAHUAbAB0ACAAUABhAHIAYQBnAHIAYQBwAGgAIABGAG8AbgB0ADsAfQB7AFwAKgBcAGMAcwAyAFwAcwBiAGEAcwBlAGQAbwBuADEAXABmAHMAMgAwAFwAYwBmADEAIABMAGkAbgBlACAATgB1AG0AYgBlAHIAOwB9AHsAXAAqAFwAYwBzADMAXABmAHMAMgAwAFwAdQBsAFwAYwBmADIAIABIAHkAcABlAHIAbABpAG4AawA7AH0AewBcACoAXAB0AHMANABcAHQAcwByAG8AdwBkAFwAZgAxAFwAZgBzADIAMABcAGMAZgAxAFwAcQBsAFwAdABzAGMAZQBsAGwAcABhAGQAZABmAGwAMwBcAHQAcwBjAGUAbABsAHAAYQBkAGQAbAAxADAAOABcAHQAcwBjAGUAbABsAHAAYQBkAGQAZgBiADMAXAB0AHMAYwBlAGwAbABwAGEAZABkAGYAcgAzAFwAdABzAGMAZQBsAGwAcABhAGQAZAByADEAMAA4AFwAdABzAGMAZQBsAGwAcABhAGQAZABmAHQAMwBcAHQAcwB2AGUAcgB0AGEAbAB0AFwAYwBsAHQAeABsAHIAdABiACAATgBvAHIAbQBhAGwAIABUAGEAYgBsAGUAOwB9AHsAXAAqAFwAdABzADUAXAB0AHMAcgBvAHcAZABcAHMAYgBhAHMAZQBkAG8AbgA0AFwAZgBzADIAMABcAGMAZgAxAFwAcQBsAFwAdAByAGIAcgBkAHIAdABcAGIAcgBkAHIAcwBcAGIAcgBkAHIAdwAxADAAXAB0AHIAYgByAGQAcgBsAFwAYgByAGQAcgBzAFwAYgByAGQAcgB3ADEAMABcAHQAcgBiAHIAZAByAGIAXABiAHIAZAByAHMAXABiAHIAZAByAHcAMQAwAFwAdAByAGIAcgBkAHIAcgBcAGIAcgBkAHIAcwBcAGIAcgBkAHIAdwAxADAAXAB0AHIAYgByAGQAcgBoAFwAYgByAGQAcgBzAFwAYgByAGQAcgB3ADEAMABcAHQAcgBiAHIAZAByAHYAXABiAHIAZAByAHMAXABiAHIAZAByAHcAMQAwAFwAdABzAGMAZQBsAGwAcABhAGQAZABmAGwAMwBcAHQAcwBjAGUAbABsAHAAYQBkAGQAbAAxADAAOABcAHQAcwBjAGUAbABsAHAAYQBkAGQAZgByADMAXAB0AHMAYwBlAGwAbABwAGEAZABkAHIAMQAwADgAXAB0AHMAdgBlAHIAdABhAGwAdABcAGMAbAB0AHgAbAByAHQAYgAgAFQAYQBiAGwAZQAgAFMAaQBtAHAAbABlACAAMQA7AH0AfQB7AFwAKgBcAGwAaQBzAHQAbwB2AGUAcgByAGkAZABlAHQAYQBiAGwAZQB9AHsAXAAqAFwAZwBlAG4AZQByAGEAdABvAHIAIABEAGUAdgBFAHgAcAByAGUAcwBzACAATwBmAGYAaQBjAGUAIABGAGkAbABlACAAQQBQAEkALwAyADMALgAxAC4ANAAuADAAfQB7AFwAaQBuAGYAbwB7AFwAYQB1AHQAaABvAHIAIABCAG8AdQBhAHMAYQB2AGEAbgBoACAATgBoAG8AeQB9AHsAXABjAHIAZQBhAHQAaQBtAFwAeQByADIAMAAyADQAXABtAG8ANgBcAGQAeQA0AFwAaAByADEAMQBcAG0AaQBuADQAMQB9AHsAXAB2AGUAcgBzAGkAbwBuADEAfQB9AFwAbgBvAHUAaQBjAG8AbQBwAGEAdABcAGgAdABtAGEAdQB0AHMAcABcAHMAcABsAHkAdAB3AG4AaQBuAGUAXABhAGwAbgB0AGIAbABpAG4AZABcAGUAeABwAHMAaAByAHQAbgBcAHMAcABsAHQAcABnAHAAYQByAFwAbgBvAGcAcgBvAHcAYQB1AHQAbwBmAGkAdABcAHUAdABpAG4AbABcAG4AbwBiAHIAawB3AHIAcAB0AGIAbABcAGYAdABuAGwAeQB0AHcAbgBpAG4AZQBcAG4AbwB0AGMAdgBhAHMAcABcAGQAbgB0AGIAbABuAHMAYgBkAGIAXABuAGUAdwB0AGIAbABzAHQAeQByAHUAbABzAFwAZgBvAHIAbQBzAGgAYQBkAGUAXABwAGEAcgBkAFwAcABsAGEAaQBuAFwAcQBsAFwAdwBpAGQAYwB0AGwAcABhAHIAewBcAGYAMgBcAGYAcwAxADYAXABiAFwAYwBmADEAIABGAG8AcgAgAFAAYQB5ACAAUABlAHIAaQBvAGQAIABFAG4AZABpAG4AZwA6AH0AewBcAGYAMgBcAGYAcwAxADYAXABjAGYAMQAgACAAIAB9AFwAZgAyAFwAZgBzADEANgBcAGMAZgAxAFwAcABhAHIAfQA=</value>
+  </data>
+  <data name="customSqlQuery1.Sql" xml:space="preserve">
+    <value>SELECT
+  PRWork.ID
+  ,PRWork.PRAccumUnPaidTimeID
+  ,PRWork.EmployeeID
+  ,PRWork.EarnStateID
+  ,PRWork.TaxingStateID
+  ,PRWork.GrossPay
+  ,PRWork.NetAmount
+  ,PRWork.RegularHours
+  ,PRWork.OverTimeHours
+  ,PRWork.OTherHours
+  ,PRWork.RegularAmount
+  ,PRWork.OverTimeAmount
+  ,PRWork.DoubleTimeAmount
+  ,PRWork.OTherAmount
+  ,PRWork.FICAAmount
+  ,PRWork.MedicareAmount
+  ,PRWork.FITAmount
+  ,PRWork.SITAmount
+  ,PRWork.FUTAmount
+  ,PRWork.SUTAmount
+  ,PRWork.DeductionAmount
+  ,PRWork.AllowanceAmount
+  ,PRWork.DeductionCodes
+  ,PRWork.AllowanceCodes
+  ,PRWork.MaritalStatus_SYEnumID
+  ,PRWork.FederalNumberOfDependents
+  ,PRWork.StateNumberOfDependents
+  ,PRWork.SITSpecialCodes
+  ,PRWork.PayFrequency_SYEnumID
+  ,PRWork.DirectDeposit_SYEnumID
+  ,PRWork.CompanyID
+  ,PRWork.XCFund
+  ,PRWork.XCMatch
+  ,PREmployee.Employee_NameBaseID
+  ,NameBase.Number
+  ,NameBase.Name
+  ,NameBase.ContactName
+  ,NameBase.SortName
+  ,StateCodes.StateAbbrev
+  ,StateCodes.ID StateCodesID
+  ,SY1.Code MaritalStatusCode
+  ,SY2.Code PayFrequencyCode   
+  ,SY3.Code DirectDepositCode
+FROM
+  PRWrk2 AS PRWork
+  LEFT OUTER JOIN PREmployee
+    ON PRWork.EmployeeID = PREmployee.PREmployeeID
+  LEFT OUTER JOIN NameBase
+    ON PREmployee.Employee_NameBaseID = NameBase.ID
+  LEFT JOIN PRState ON PRWork.EarnStateID=PRState.PRStateID
+  LEFT JOIN StateCodes ON PRState.StateID=StateCodes.ID
+  LEFT JOIN SYEnum SY1 ON PRWork.MaritalStatus_SYEnumID = SY1.EnumID
+  LEFT JOIN SYEnum SY2  ON PRWork.PayFrequency_SYEnumID = SY2.EnumID
+  LEFT JOIN SYEnum SY3 ON PRWork.DirectDeposit_SYEnumID = SY3.EnumID
+Where PRWork.CompanyID=@plngCompanyID</value>
+  </data>
+  <data name="customSqlQuery2.Sql" xml:space="preserve">
+    <value>SELECT
+  PRPaymentProcessTracking.ID
+  ,PRPaymentProcessTracking.CashAccountID
+  ,PRPaymentProcessTracking.BankAccountID
+  ,PRPaymentProcessTracking.CompanyID
+  ,PRPaymentProcessTracking.TransactionSourceCodeID
+  ,PRPaymentProcessTracking.PostedByUser
+  ,PRPaymentProcessTracking.PeriodEndingDate
+  ,PRPaymentProcessTracking.IsSetPayPeriodEndingDateItemSelectionComplete
+  ,PRPaymentProcessTracking.IsPreliminaryPaymentTimeRecordRecapComplete
+  ,PRPaymentProcessTracking.IsSetCheckDatePayrollProcessingComplete
+  ,PRPaymentProcessTracking.IsPreliminaryPayrollRegisterComplete
+  ,PRPaymentProcessTracking.IsPayrollCostAllocationComplete
+  ,PRPaymentProcessTracking.IsPayrollReportSelectionComplete
+  ,PRPaymentProcessTracking.CheckDate
+  ,PRPaymentProcessTracking.CheckStartNumber
+  ,PRPaymentProcessTracking.IsCheckPrintingComplete
+  ,PRPaymentProcessTracking.IsPayrollDirectDepositStatementComplete
+  ,PRPaymentProcessTracking.IsReviewPrintedChecksSummaryComplete
+  ,PRPaymentProcessTracking.IsSummaryPaymentRegisterComplete
+  ,PRPaymentProcessTracking.IsSummaryDirectDepositRegisterComplete
+  ,PRPaymentProcessTracking.IsPaymentFinalProcessingComplete
+  ,PRPaymentProcessTracking.IsGLEntryCreationComplete
+  ,PRPaymentProcessTracking.IsPosted
+  ,PRPaymentProcessTracking.IsPostInProgress
+  ,PRPaymentProcessTracking.ProcessingDate
+FROM
+  PRPaymentProcessTracking
+WHERE CompanyID = @plngCompanyID AND IsPosted = 0
+and TransactionSourceCodeID=65</value>
+  </data>
+  <data name="customSqlQuery3.Sql" xml:space="preserve">
+    <value>SELECT
+  PRXAct.ID
+  ,PRXAct.PRAccumUnPaidTimeID
+  ,PRXAct.Status
+  ,PRXAct.BatchID
+  ,PRXAct.EmployeeID
+  ,PRXAct.PRStateID
+  ,PRXAct.TransactionType_SYEnumID
+  ,PRXAct.PRDeductionID
+  ,PRXAct.PRAllowanceID
+  ,PRXAct.Amount
+  ,SYEnum.Code TranTypeCode
+FROM
+  PRXAct2 As PRXAct
+LEFT JOIN SYEnum ON PRXAct.TransactionType_SYEnumID=SYEnum.EnumID</value>
+  </data>
+  <data name="Dynamic.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iRHluYW1pYyI+PFZpZXcgTmFtZT0iZHNMb29rdXBDb21wYW55Ij48RmllbGQgTmFtZT0iSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJOdW1iZXIiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iRGVzY3JpcHRpb24iIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PFZpZXcgTmFtZT0iZHNQUldPUksyIj48RmllbGQgTmFtZT0iSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJQUkFjY3VtVW5QYWlkVGltZUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRW1wbG95ZWVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkVhcm5TdGF0ZUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVGF4aW5nU3RhdGVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ikdyb3NzUGF5IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJOZXRBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlJlZ3VsYXJIb3VycyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT3ZlclRpbWVIb3VycyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT1RoZXJIb3VycyIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iUmVndWxhckFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iT3ZlclRpbWVBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkRvdWJsZVRpbWVBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9Ik9UaGVyQW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJGSUNBQW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJNZWRpY2FyZUFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRklUQW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTSVRBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkZVVEFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iU1VUQW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJEZWR1Y3Rpb25BbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkFsbG93YW5jZUFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRGVkdWN0aW9uQ29kZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQWxsb3dhbmNlQ29kZXMiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iTWFyaXRhbFN0YXR1c19TWUVudW1JRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkZlZGVyYWxOdW1iZXJPZkRlcGVuZGVudHMiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJTdGF0ZU51bWJlck9mRGVwZW5kZW50cyIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlNJVFNwZWNpYWxDb2RlcyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQYXlGcmVxdWVuY3lfU1lFbnVtSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJEaXJlY3REZXBvc2l0X1NZRW51bUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQ29tcGFueUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iWENGdW5kIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJFbXBsb3llZV9OYW1lQmFzZUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iWENNYXRjaCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iTnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29udGFjdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU29ydE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3RhdGVBYmJyZXYiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3RhdGVDb2Rlc0lEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iTWFyaXRhbFN0YXR1c0NvZGUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iUGF5RnJlcXVlbmN5Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJEaXJlY3REZXBvc2l0Q29kZSIgVHlwZT0iU3RyaW5nIiAvPjwvVmlldz48VmlldyBOYW1lPSJkc1BSUGF5bWVudFByb2Nlc3NUcmFja2luZyI+PEZpZWxkIE5hbWU9IklEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQ2FzaEFjY291bnRJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkJhbmtBY2NvdW50SUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJDb21wYW55SUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJUcmFuc2FjdGlvblNvdXJjZUNvZGVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlBvc3RlZEJ5VXNlciIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQZXJpb2RFbmRpbmdEYXRlIiBUeXBlPSJEYXRlVGltZSIgLz48RmllbGQgTmFtZT0iSXNTZXRQYXlQZXJpb2RFbmRpbmdEYXRlSXRlbVNlbGVjdGlvbkNvbXBsZXRlIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc1ByZWxpbWluYXJ5UGF5bWVudFRpbWVSZWNvcmRSZWNhcENvbXBsZXRlIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc1NldENoZWNrRGF0ZVBheXJvbGxQcm9jZXNzaW5nQ29tcGxldGUiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzUHJlbGltaW5hcnlQYXlyb2xsUmVnaXN0ZXJDb21wbGV0ZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNQYXlyb2xsQ29zdEFsbG9jYXRpb25Db21wbGV0ZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNQYXlyb2xsUmVwb3J0U2VsZWN0aW9uQ29tcGxldGUiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IkNoZWNrRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkNoZWNrU3RhcnROdW1iZXIiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJJc0NoZWNrUHJpbnRpbmdDb21wbGV0ZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNQYXlyb2xsRGlyZWN0RGVwb3NpdFN0YXRlbWVudENvbXBsZXRlIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc1Jldmlld1ByaW50ZWRDaGVja3NTdW1tYXJ5Q29tcGxldGUiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzU3VtbWFyeVBheW1lbnRSZWdpc3RlckNvbXBsZXRlIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc1N1bW1hcnlEaXJlY3REZXBvc2l0UmVnaXN0ZXJDb21wbGV0ZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNQYXltZW50RmluYWxQcm9jZXNzaW5nQ29tcGxldGUiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzR0xFbnRyeUNyZWF0aW9uQ29tcGxldGUiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzUG9zdGVkIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc1Bvc3RJblByb2dyZXNzIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJQcm9jZXNzaW5nRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PC9WaWV3PjxWaWV3IE5hbWU9ImRzUFJYQWN0MiI+PEZpZWxkIE5hbWU9IklEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iUFJBY2N1bVVuUGFpZFRpbWVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlN0YXR1cyIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJCYXRjaElEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRW1wbG95ZWVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlBSU3RhdGVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlRyYW5zYWN0aW9uVHlwZV9TWUVudW1JRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlBSRGVkdWN0aW9uSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJQUkFsbG93YW5jZUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iQW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJUcmFuVHlwZUNvZGUiIFR5cGU9IlN0cmluZyIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
+  </data>
+  <data name="Pulse.ResultSchemaSerializable" xml:space="preserve">
+    <value>PERhdGFTZXQgTmFtZT0iUHVsc2UiPjxWaWV3IE5hbWU9Ik1hc3Rlcl9Vc2VyUmVjb3JkIj48RmllbGQgTmFtZT0iSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJMYXN0QXBwbGljYXRpb25Vc2VkSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJMYXN0Q29tcGFueVVzZWRJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ikxhc3REYXRhYmFzZVVzZWRJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IklzU3VwcG9ydGluZ1VzZXIiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9Ik1pbWljVXNlcklEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVGVtcEZ1bGxBY2Nlc3NVc2VySUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJDb21wYW55SUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJFbWFpbEFkZHJlc3MiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSXNJbmFjdGl2ZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNBY2NvdW50TG9ja2VkIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJMb2dpbkF0dGVtcHRDb3VudCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IlF1aWNrRW50cnkiIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzTG9nZ2VkSW4iIFR5cGU9IkJvb2xlYW4iIC8+PEZpZWxkIE5hbWU9IklzRGV2ZWxvcGVyIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJJc1N1cHBvcnRSZXByZXNlbnRhdGl2ZSIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iSXNTeXN0ZW1BZG1pbmlzdHJhdG9yIiBUeXBlPSJCb29sZWFuIiAvPjxGaWVsZCBOYW1lPSJMb2dpbkNvbXB1dGVyTmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJMYXN0TmFtZSIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJGaXJzdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iSGFzaFBhc3N3b3JkIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IlNhbHRQYXNzd29yZCIgVHlwZT0iU3RyaW5nIiAvPjxGaWVsZCBOYW1lPSJQYXNzd29yZEV4cGlyYXRpb25EYXlzIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iUGFzc3dvcmRMYXN0Q2hhbmdlRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IklzRGVsZXRlZCIgVHlwZT0iQm9vbGVhbiIgLz48RmllbGQgTmFtZT0iQ3JlYXRlRGF0ZSIgVHlwZT0iRGF0ZVRpbWUiIC8+PEZpZWxkIE5hbWU9IkNyZWF0ZVVzZXJJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ik1vZGlmeURhdGUiIFR5cGU9IkRhdGVUaW1lIiAvPjxGaWVsZCBOYW1lPSJNb2RpZnlVc2VySUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJQYXNzd29yZFJlc2V0VG9rZW4iIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iVGVsZXBob25lIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9IkluaXRpYWxzIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ikxhc3RJbWFnaW5nRGF0YWJhc2VVc2VkSUQiIFR5cGU9IkludDMyIiAvPjwvVmlldz48L0RhdGFTZXQ+</value>
+  </data>
+</root>
