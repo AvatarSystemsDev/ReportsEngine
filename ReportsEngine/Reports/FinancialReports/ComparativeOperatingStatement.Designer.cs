@@ -44,10 +44,9 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter15 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ComparativeOperatingStatement));
             DevExpress.DataAccess.Sql.SelectQuery selectQuery1 = new DevExpress.DataAccess.Sql.SelectQuery();
@@ -116,7 +115,7 @@
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression31 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter17 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter16 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -250,27 +249,24 @@
             queryParameter7.Name = "@plngDateToUse";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngDateToUse", typeof(int));
-            queryParameter8.Name = "@pbooPropertyLevel";
+            queryParameter8.Name = "@pcurMCFBBLEquivalent";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooPropertyLevel", typeof(bool));
-            queryParameter9.Name = "@pcurMCFBBLEquivalent";
-            queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pcurMCFBBLEquivalent", typeof(decimal));
-            queryParameter10.Name = "@plngStatementType";
-            queryParameter10.Type = typeof(int);
-            queryParameter10.ValueInfo = "1";
-            queryParameter11.Name = "@pstrBeginningOwnerNumber";
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pcurMCFBBLEquivalent", typeof(decimal));
+            queryParameter9.Name = "@plngStatementType";
+            queryParameter9.Type = typeof(int);
+            queryParameter9.ValueInfo = "1";
+            queryParameter10.Name = "@pstrBeginningOwnerNumber";
+            queryParameter10.Type = typeof(string);
+            queryParameter10.ValueInfo = "!";
+            queryParameter11.Name = "@pstrEndingOwnerNumber";
             queryParameter11.Type = typeof(string);
-            queryParameter11.ValueInfo = "!";
-            queryParameter12.Name = "@pstrEndingOwnerNumber";
-            queryParameter12.Type = typeof(string);
-            queryParameter12.ValueInfo = "ZZZZZZZZZZZZZZZZZZZZZZZZ";
-            queryParameter13.Name = "@pbooShowDirectBilledItems";
-            queryParameter13.Type = typeof(bool);
-            queryParameter13.ValueInfo = "True";
-            queryParameter14.Name = "@plngAcquisitionID";
-            queryParameter14.Type = typeof(int);
-            queryParameter14.ValueInfo = "0";
+            queryParameter11.ValueInfo = "ZZZZZZZZZZZZZZZZZZZZZZZZ";
+            queryParameter12.Name = "@pbooShowDirectBilledItems";
+            queryParameter12.Type = typeof(bool);
+            queryParameter12.ValueInfo = "True";
+            queryParameter13.Name = "@plngAcquisitionID";
+            queryParameter13.Type = typeof(int);
+            queryParameter13.ValueInfo = "0";
             storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter2,
             queryParameter3,
@@ -283,19 +279,18 @@
             queryParameter10,
             queryParameter11,
             queryParameter12,
-            queryParameter13,
-            queryParameter14});
+            queryParameter13});
             storedProcQuery2.StoredProcName = "Report_ComparativeOperatingStatement";
             storedProcQuery3.Name = "DSPropertyLookup";
-            queryParameter15.Name = "@pbooIncludeFirstLast";
-            queryParameter15.Type = typeof(bool);
-            queryParameter15.ValueInfo = "True";
-            queryParameter16.Name = "@plngCompanyID";
-            queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter16.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter14.Name = "@pbooIncludeFirstLast";
+            queryParameter14.Type = typeof(bool);
+            queryParameter14.ValueInfo = "True";
+            queryParameter15.Name = "@plngCompanyID";
+            queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter15,
-            queryParameter16});
+            queryParameter14,
+            queryParameter15});
             storedProcQuery3.StoredProcName = "Properties_ReportLookup";
             storedProcQuery4.Name = "DSComparativeDateToUseLookup";
             storedProcQuery4.StoredProcName = "ReportWizard_PopulateComparativeOperatingStatement";
@@ -443,11 +438,11 @@
             selectQuery1.FilterString = "[Master_UserRecord.ID] = ?UserID";
             selectQuery1.GroupFilterString = "";
             selectQuery1.Name = "Master_UserRecord";
-            queryParameter17.Name = "UserID";
-            queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
+            queryParameter16.Name = "UserID";
+            queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter16.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
             selectQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter17});
+            queryParameter16});
             selectQuery1.Tables.Add(table1);
             this.Pulse.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             selectQuery1});

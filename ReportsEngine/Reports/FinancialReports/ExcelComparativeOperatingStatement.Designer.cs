@@ -42,7 +42,6 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelComparativeOperatingStatement));
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -133,27 +132,24 @@
             queryParameter6.Name = "@plngDateToUse";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngDateToUse", typeof(int));
-            queryParameter7.Name = "@pbooPropertyLevel";
+            queryParameter7.Name = "@pcurMCFBBLEquivalent";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooPropertyLevel", typeof(bool));
-            queryParameter8.Name = "@pcurMCFBBLEquivalent";
-            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pcurMCFBBLEquivalent", typeof(decimal));
-            queryParameter9.Name = "@plngStatementType";
-            queryParameter9.Type = typeof(int);
-            queryParameter9.ValueInfo = "1";
-            queryParameter10.Name = "@pstrBeginningOwnerNumber";
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pcurMCFBBLEquivalent", typeof(decimal));
+            queryParameter8.Name = "@plngStatementType";
+            queryParameter8.Type = typeof(int);
+            queryParameter8.ValueInfo = "1";
+            queryParameter9.Name = "@pstrBeginningOwnerNumber";
+            queryParameter9.Type = typeof(string);
+            queryParameter9.ValueInfo = "!";
+            queryParameter10.Name = "@pstrEndingOwnerNumber";
             queryParameter10.Type = typeof(string);
-            queryParameter10.ValueInfo = "!";
-            queryParameter11.Name = "@pstrEndingOwnerNumber";
-            queryParameter11.Type = typeof(string);
-            queryParameter11.ValueInfo = "ZZZZZZZZZZZZZZZZZZZZZZZ";
-            queryParameter12.Name = "@pbooShowDirectBilledItems";
-            queryParameter12.Type = typeof(bool);
-            queryParameter12.ValueInfo = "True";
-            queryParameter13.Name = "@plngAcquisitionID";
-            queryParameter13.Type = typeof(int);
-            queryParameter13.ValueInfo = "0";
+            queryParameter10.ValueInfo = "ZZZZZZZZZZZZZZZZZZZZZZZ";
+            queryParameter11.Name = "@pbooShowDirectBilledItems";
+            queryParameter11.Type = typeof(bool);
+            queryParameter11.ValueInfo = "True";
+            queryParameter12.Name = "@plngAcquisitionID";
+            queryParameter12.Type = typeof(int);
+            queryParameter12.ValueInfo = "0";
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -166,8 +162,7 @@
             queryParameter9,
             queryParameter10,
             queryParameter11,
-            queryParameter12,
-            queryParameter13});
+            queryParameter12});
             storedProcQuery1.StoredProcName = "Report_ComparativeOperatingStatement";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -175,12 +170,12 @@
             // 
             // topMarginBand1
             // 
-            this.topMarginBand1.HeightF = 20F;
+            this.topMarginBand1.HeightF = 0F;
             this.topMarginBand1.Name = "topMarginBand1";
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 20F;
+            this.bottomMarginBand1.HeightF = 0F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // Tablix2
@@ -1443,7 +1438,7 @@
             this.DataSource = this.Dynamic;
             this.DisplayName = "ComparativeOperatingStatement";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(0F, 414F, 20F, 20F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0F, 414F, 0F, 0F);
             this.PageHeight = 850;
             this.PageWidth = 2415;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Custom;

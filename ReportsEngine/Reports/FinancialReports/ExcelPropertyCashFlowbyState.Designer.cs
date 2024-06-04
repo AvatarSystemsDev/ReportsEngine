@@ -43,7 +43,6 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter11 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter12 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter13 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelPropertyCashFlowbyState));
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -1144,12 +1143,9 @@
             queryParameter12.Name = "@pbooPrintStateTotalsOnly";
             queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter12.Value = new DevExpress.DataAccess.Expression("?pbooPrintStateTotalsOnly", typeof(bool));
-            queryParameter13.Name = "@pbooPropertyLevel";
+            queryParameter13.Name = "@pbooPrintInactives";
             queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter13.Value = new DevExpress.DataAccess.Expression("?pbooPropertyLevel", typeof(bool));
-            queryParameter14.Name = "@pbooPrintInactives";
-            queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter14.Value = new DevExpress.DataAccess.Expression("?pbooPrintInactives", typeof(bool));
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("?pbooPrintInactives", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -1163,8 +1159,7 @@
             queryParameter10,
             queryParameter11,
             queryParameter12,
-            queryParameter13,
-            queryParameter14});
+            queryParameter13});
             storedProcQuery1.StoredProcName = "Report_PropertyCashFlowByState";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
