@@ -1386,7 +1386,7 @@
             this.xrLabel25.KeepTogether = true;
             this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(1.879597F, 0F);
             this.xrLabel25.Name = "xrLabel25";
-            this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrLabel25.SizeF = new System.Drawing.SizeF(625.05F, 16.99999F);
             this.xrLabel25.StylePriority.UseBorderColor = false;
             this.xrLabel25.StylePriority.UseBorderDashStyle = false;
@@ -1415,7 +1415,7 @@
             this.xrBalancedForwardAsteriskLabel.LocationFloat = new DevExpress.Utils.PointFloat(626.9296F, 0F);
             this.xrBalancedForwardAsteriskLabel.Multiline = true;
             this.xrBalancedForwardAsteriskLabel.Name = "xrBalancedForwardAsteriskLabel";
-            this.xrBalancedForwardAsteriskLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
+            this.xrBalancedForwardAsteriskLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
             this.xrBalancedForwardAsteriskLabel.SizeF = new System.Drawing.SizeF(165.0961F, 17F);
             this.xrBalancedForwardAsteriskLabel.StyleName = "xrTablixRowStyle";
             this.xrBalancedForwardAsteriskLabel.StylePriority.UseBackColor = false;

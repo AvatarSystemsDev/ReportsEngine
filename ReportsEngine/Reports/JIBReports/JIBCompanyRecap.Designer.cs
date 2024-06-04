@@ -397,7 +397,7 @@
             this.CompanyName.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CompanyName.BorderWidth = 1F;
             this.CompanyName.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Description]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_DSCompaniesLookup].[Description]")});
             this.CompanyName.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.CompanyName.KeepTogether = true;
             this.CompanyName.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
