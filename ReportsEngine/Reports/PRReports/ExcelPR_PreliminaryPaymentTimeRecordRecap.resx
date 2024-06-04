@@ -124,4 +124,8 @@
     <value>Iif([EarningCode_SYEnumID] = 929, 'Hrly', [EarningCode_SYEnumID] = 930, 'OvTm', [EarningCode_SYEnumID] = 931, 'DbOT', [EarningCode_SYEnumID] = 932, 'Slry', [EarningCode_SYEnumID] = 933, 'Othr', [EarningCode_SYEnumID] = 934, 'Rglr', True, '****', null)
 </value>
   </data>
+  <data name="xrLabel6.ExpressionBindings1" xml:space="preserve">
+    <value>Iif([EarningCode_SYEnumID] = 929, 'Hrly', [EarningCode_SYEnumID] = 930, 'OvTm', [EarningCode_SYEnumID] = 931, 'DbOT', [EarningCode_SYEnumID] = 932, 'Slry', [EarningCode_SYEnumID] = 933, 'Othr', [EarningCode_SYEnumID] = 934, 'Rglr', True, '****', null)
+</value>
+  </data>
 </root>
