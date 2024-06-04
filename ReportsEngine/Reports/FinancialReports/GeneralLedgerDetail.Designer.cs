@@ -3336,7 +3336,7 @@
                     "ls\nAND  ([TotalBottomHalfCount] <> 0 OR ?plngShowZeroBalance <> 2) AND not IsNul" +
                     "lOrEmpty( [AccountID])\n")});
             this.SubBand1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.SubBand1.HeightF = 14.98771F;
+            this.SubBand1.HeightF = 16.99671F;
             this.SubBand1.KeepTogether = true;
             this.SubBand1.Name = "SubBand1";
             this.SubBand1.SnapLinePadding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
