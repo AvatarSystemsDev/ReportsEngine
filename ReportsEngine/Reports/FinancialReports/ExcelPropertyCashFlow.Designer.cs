@@ -68,7 +68,6 @@
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.Tablix1_GroupHeaderBand = new DevExpress.XtraReports.UI.GroupHeaderBand();
-            this.Tablix1_PostDate_GroupHeaderBand = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
@@ -162,12 +161,12 @@
             // 
             // topMarginBand1
             // 
-            this.topMarginBand1.HeightF = 25F;
+            this.topMarginBand1.HeightF = 0F;
             this.topMarginBand1.Name = "topMarginBand1";
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 25F;
+            this.bottomMarginBand1.HeightF = 0F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // Tablix1
@@ -198,6 +197,7 @@
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;
             this.Tablix1.Name = "Tablix1";
             this.Tablix1.SortFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
+            new DevExpress.XtraReports.UI.GroupField("PostDate", DevExpress.XtraReports.UI.XRColumnSortOrder.None),
             new DevExpress.XtraReports.UI.GroupField("SortPropertyNumber", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             // 
             // xrLabel27
@@ -701,18 +701,8 @@
             // Tablix1_GroupHeaderBand
             // 
             this.Tablix1_GroupHeaderBand.HeightF = 0F;
-            this.Tablix1_GroupHeaderBand.Level = 1;
             this.Tablix1_GroupHeaderBand.Name = "Tablix1_GroupHeaderBand";
             this.Tablix1_GroupHeaderBand.Visible = false;
-            // 
-            // Tablix1_PostDate_GroupHeaderBand
-            // 
-            this.Tablix1_PostDate_GroupHeaderBand.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("PostDate", DevExpress.XtraReports.UI.XRColumnSortOrder.None)});
-            this.Tablix1_PostDate_GroupHeaderBand.HeightF = 0F;
-            this.Tablix1_PostDate_GroupHeaderBand.Name = "Tablix1_PostDate_GroupHeaderBand";
-            this.Tablix1_PostDate_GroupHeaderBand.PrintAcrossBands = true;
-            this.Tablix1_PostDate_GroupHeaderBand.Visible = false;
             // 
             // pageHeaderBand1
             // 
@@ -1283,7 +1273,6 @@
             this.bottomMarginBand1,
             this.Tablix1,
             this.Tablix1_GroupHeaderBand,
-            this.Tablix1_PostDate_GroupHeaderBand,
             this.pageHeaderBand1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
@@ -1293,7 +1282,7 @@
             this.FilterString = "[PropertyNumber] In (?pstrSelectProperty) Or IsNullOrEmpty([PropertyNumber]) And " +
     "\'!\' In (?pstrSelectProperty)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 25F, 25F);
+            this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
             this.PageWidth = 1700;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Ledger;
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
@@ -1340,7 +1329,6 @@
         private DevExpress.XtraReports.UI.BottomMarginBand bottomMarginBand1;
         private DevExpress.XtraReports.UI.DetailBand Tablix1;
         private DevExpress.XtraReports.UI.GroupHeaderBand Tablix1_GroupHeaderBand;
-        private DevExpress.XtraReports.UI.GroupHeaderBand Tablix1_PostDate_GroupHeaderBand;
         private DevExpress.XtraReports.UI.PageHeaderBand pageHeaderBand1;
         private DevExpress.XtraReports.UI.XRLabel Textbox22;
         private DevExpress.XtraReports.UI.XRLabel Textbox26;
