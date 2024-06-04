@@ -209,24 +209,6 @@
             this.xrLabel9 = new DevExpress.XtraReports.UI.XRLabel();
             this.groupHeaderBand2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
-            this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
-            this.Textbox10 = new DevExpress.XtraReports.UI.XRLabel();
-            this.AFESummaryColumnHeaderBand = new DevExpress.XtraReports.UI.SubBand();
-            this.xrEstimateCostAFESummary = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrDescriptionAFESummary = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand11 = new DevExpress.XtraReports.UI.SubBand();
-            this.AFEMasterFooter = new DevExpress.XtraReports.UI.GroupFooterBand();
-            this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrOwnerFooterLabel = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand12 = new DevExpress.XtraReports.UI.SubBand();
-            this.SubBand13 = new DevExpress.XtraReports.UI.SubBand();
-            this.xrOwnerFooterLabelEnd = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.pbooShowDetail = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngSelectOwnerID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooSortBy = new DevExpress.XtraReports.Parameters.Parameter();
-            this.Grouping1 = new DevExpress.XtraReports.UI.CalculatedField();
-            this.Grouping2 = new DevExpress.XtraReports.UI.CalculatedField();
             this.xrPanel2 = new DevExpress.XtraReports.UI.XRPanel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
@@ -256,7 +238,25 @@
             this.xrLabel60 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel61 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel62 = new DevExpress.XtraReports.UI.XRLabel();
+            this.ReportTitle = new DevExpress.XtraReports.UI.XRLabel();
+            this.Textbox10 = new DevExpress.XtraReports.UI.XRLabel();
+            this.AFESummaryColumnHeaderBand = new DevExpress.XtraReports.UI.SubBand();
+            this.xrEstimateCostAFESummary = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrDescriptionAFESummary = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand11 = new DevExpress.XtraReports.UI.SubBand();
+            this.AFEMasterFooter = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrOwnerFooterLabel = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand12 = new DevExpress.XtraReports.UI.SubBand();
             this.xrAFEEstimateSummary = new DevExpress.XtraReports.UI.XRSubreport();
+            this.SubBand13 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrOwnerFooterLabelEnd = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
+            this.pbooShowDetail = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngSelectOwnerID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooSortBy = new DevExpress.XtraReports.Parameters.Parameter();
+            this.Grouping1 = new DevExpress.XtraReports.UI.CalculatedField();
+            this.Grouping2 = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -838,7 +838,7 @@
             // plngReportGroupAFEID
             // 
             this.plngReportGroupAFEID.AllowNull = true;
-            this.plngReportGroupAFEID.Description = "Select AFE Defintion";
+            this.plngReportGroupAFEID.Description = "AFE Defintion";
             this.plngReportGroupAFEID.Name = "plngReportGroupAFEID";
             this.plngReportGroupAFEID.Type = typeof(int);
             dynamicListLookUpSettings4.DataMember = "Lookup_ReportGroup";
@@ -1534,207 +1534,6 @@
             this.SubBand3.HeightF = 148.5417F;
             this.SubBand3.Name = "SubBand3";
             // 
-            // ReportTitle
-            // 
-            this.ReportTitle.BorderColor = System.Drawing.Color.Black;
-            this.ReportTitle.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.ReportTitle.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.ReportTitle.BorderWidth = 1F;
-            this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.ReportTitle.KeepTogether = true;
-            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 31.38999F);
-            this.ReportTitle.Multiline = true;
-            this.ReportTitle.Name = "ReportTitle";
-            this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.ReportTitle.SizeF = new System.Drawing.SizeF(769.4107F, 30.00001F);
-            this.ReportTitle.StylePriority.UseFont = false;
-            this.ReportTitle.StylePriority.UsePadding = false;
-            this.ReportTitle.Text = "AFE Estimate Summary";
-            this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // Textbox10
-            // 
-            this.Textbox10.BorderColor = System.Drawing.Color.Black;
-            this.Textbox10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.Textbox10.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.Textbox10.BorderWidth = 1F;
-            this.Textbox10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]")});
-            this.Textbox10.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.Textbox10.KeepTogether = true;
-            this.Textbox10.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.Textbox10.Multiline = true;
-            this.Textbox10.Name = "Textbox10";
-            this.Textbox10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.Textbox10.SizeF = new System.Drawing.SizeF(769.4107F, 30F);
-            this.Textbox10.StylePriority.UseFont = false;
-            this.Textbox10.StylePriority.UsePadding = false;
-            this.Textbox10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
-            // 
-            // AFESummaryColumnHeaderBand
-            // 
-            this.AFESummaryColumnHeaderBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrEstimateCostAFESummary,
-            this.xrDescriptionAFESummary});
-            this.AFESummaryColumnHeaderBand.HeightF = 20F;
-            this.AFESummaryColumnHeaderBand.Name = "AFESummaryColumnHeaderBand";
-            // 
-            // xrEstimateCostAFESummary
-            // 
-            this.xrEstimateCostAFESummary.BorderColor = System.Drawing.Color.Black;
-            this.xrEstimateCostAFESummary.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrEstimateCostAFESummary.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrEstimateCostAFESummary.BorderWidth = 1F;
-            this.xrEstimateCostAFESummary.CanShrink = true;
-            this.xrEstimateCostAFESummary.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrEstimateCostAFESummary.KeepTogether = true;
-            this.xrEstimateCostAFESummary.LocationFloat = new DevExpress.Utils.PointFloat(556.9736F, 0F);
-            this.xrEstimateCostAFESummary.Multiline = true;
-            this.xrEstimateCostAFESummary.Name = "xrEstimateCostAFESummary";
-            this.xrEstimateCostAFESummary.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrEstimateCostAFESummary.SizeF = new System.Drawing.SizeF(115.5505F, 20F);
-            this.xrEstimateCostAFESummary.StylePriority.UsePadding = false;
-            this.xrEstimateCostAFESummary.StylePriority.UseTextAlignment = false;
-            this.xrEstimateCostAFESummary.Text = "Estimate Cost";
-            this.xrEstimateCostAFESummary.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrDescriptionAFESummary
-            // 
-            this.xrDescriptionAFESummary.BorderColor = System.Drawing.Color.Black;
-            this.xrDescriptionAFESummary.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrDescriptionAFESummary.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrDescriptionAFESummary.BorderWidth = 1F;
-            this.xrDescriptionAFESummary.CanShrink = true;
-            this.xrDescriptionAFESummary.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
-            this.xrDescriptionAFESummary.KeepTogether = true;
-            this.xrDescriptionAFESummary.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrDescriptionAFESummary.Multiline = true;
-            this.xrDescriptionAFESummary.Name = "xrDescriptionAFESummary";
-            this.xrDescriptionAFESummary.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrDescriptionAFESummary.SizeF = new System.Drawing.SizeF(490.9578F, 20F);
-            this.xrDescriptionAFESummary.StylePriority.UsePadding = false;
-            this.xrDescriptionAFESummary.StylePriority.UseTextAlignment = false;
-            this.xrDescriptionAFESummary.Text = "Description";
-            this.xrDescriptionAFESummary.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // SubBand11
-            // 
-            this.SubBand11.HeightF = 8.25F;
-            this.SubBand11.Name = "SubBand11";
-            // 
-            // AFEMasterFooter
-            // 
-            this.AFEMasterFooter.HeightF = 0F;
-            this.AFEMasterFooter.Name = "AFEMasterFooter";
-            this.AFEMasterFooter.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
-            this.AFEMasterFooter.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
-            this.SubBand5,
-            this.SubBand12,
-            this.SubBand13});
-            // 
-            // SubBand5
-            // 
-            this.SubBand5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrOwnerFooterLabel});
-            this.SubBand5.HeightF = 2F;
-            this.SubBand5.Name = "SubBand5";
-            // 
-            // xrOwnerFooterLabel
-            // 
-            this.xrOwnerFooterLabel.CanGrow = false;
-            this.xrOwnerFooterLabel.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrOwnerFooterLabel.LocationFloat = new DevExpress.Utils.PointFloat(80.51827F, 0F);
-            this.xrOwnerFooterLabel.Multiline = true;
-            this.xrOwnerFooterLabel.Name = "xrOwnerFooterLabel";
-            this.xrOwnerFooterLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrOwnerFooterLabel.SizeF = new System.Drawing.SizeF(2F, 2F);
-            this.xrOwnerFooterLabel.StylePriority.UseFont = false;
-            this.xrOwnerFooterLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // SubBand12
-            // 
-            this.SubBand12.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrAFEEstimateSummary});
-            this.SubBand12.HeightF = 19.40232F;
-            this.SubBand12.Name = "SubBand12";
-            this.SubBand12.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
-            // 
-            // SubBand13
-            // 
-            this.SubBand13.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrOwnerFooterLabelEnd});
-            this.SubBand13.HeightF = 2F;
-            this.SubBand13.Name = "SubBand13";
-            // 
-            // xrOwnerFooterLabelEnd
-            // 
-            this.xrOwnerFooterLabelEnd.CanGrow = false;
-            this.xrOwnerFooterLabelEnd.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrOwnerFooterLabelEnd.LocationFloat = new DevExpress.Utils.PointFloat(388.7937F, 0F);
-            this.xrOwnerFooterLabelEnd.Multiline = true;
-            this.xrOwnerFooterLabelEnd.Name = "xrOwnerFooterLabelEnd";
-            this.xrOwnerFooterLabelEnd.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrOwnerFooterLabelEnd.SizeF = new System.Drawing.SizeF(2F, 2F);
-            this.xrOwnerFooterLabelEnd.StylePriority.UseFont = false;
-            this.xrOwnerFooterLabelEnd.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            // 
-            // xrCrossBandBox2
-            // 
-            this.xrCrossBandBox2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
-            this.xrCrossBandBox2.BorderWidth = 1F;
-            this.xrCrossBandBox2.EndBand = this.SubBand11;
-            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(0.5900065F, 3.999996F);
-            this.xrCrossBandBox2.Name = "xrCrossBandBox2";
-            this.xrCrossBandBox2.StartBand = this.SubBand11;
-            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0.5900065F, 0F);
-            this.xrCrossBandBox2.WidthF = 770.0001F;
-            // 
-            // pbooShowDetail
-            // 
-            this.pbooShowDetail.Description = "Show Detail";
-            this.pbooShowDetail.Name = "pbooShowDetail";
-            this.pbooShowDetail.Type = typeof(bool);
-            this.pbooShowDetail.ValueInfo = "True";
-            // 
-            // plngSelectOwnerID
-            // 
-            this.plngSelectOwnerID.Description = "Select Owner";
-            this.plngSelectOwnerID.Name = "plngSelectOwnerID";
-            this.plngSelectOwnerID.Type = typeof(int);
-            this.plngSelectOwnerID.ValueInfo = "0";
-            dynamicListLookUpSettings9.DataMember = "Lookup_Owner";
-            dynamicListLookUpSettings9.DataSource = this.Dynamic;
-            dynamicListLookUpSettings9.DisplayMember = "OwnerDescription";
-            dynamicListLookUpSettings9.FilterString = null;
-            dynamicListLookUpSettings9.SortMember = null;
-            dynamicListLookUpSettings9.ValueMember = "OwnerID";
-            this.plngSelectOwnerID.ValueSourceSettings = dynamicListLookUpSettings9;
-            // 
-            // pbooSortBy
-            // 
-            this.pbooSortBy.Description = "Sort By";
-            this.pbooSortBy.Name = "pbooSortBy";
-            this.pbooSortBy.Type = typeof(bool);
-            this.pbooSortBy.ValueInfo = "True";
-            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Owner Number"));
-            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "AFE Master"));
-            this.pbooSortBy.ValueSourceSettings = staticListLookUpSettings4;
-            // 
-            // Grouping1
-            // 
-            this.Grouping1.DataMember = "Dynamic_AFEMasterList";
-            this.Grouping1.Expression = "Iif(?pbooSortBy,[OwnerNumber] ,[AFEMasterID] )";
-            this.Grouping1.FieldType = DevExpress.XtraReports.UI.FieldType.String;
-            this.Grouping1.Name = "Grouping1";
-            // 
-            // Grouping2
-            // 
-            this.Grouping2.DataMember = "Dynamic_AFEMasterList";
-            this.Grouping2.Expression = "Iif(?pbooSortBy, [AFEMasterID], [OwnerNumber])\n";
-            this.Grouping2.FieldType = DevExpress.XtraReports.UI.FieldType.String;
-            this.Grouping2.Name = "Grouping2";
-            // 
             // xrPanel2
             // 
             this.xrPanel2.BorderColor = System.Drawing.Color.Black;
@@ -2131,6 +1930,131 @@
             this.xrLabel62.StylePriority.UseFont = false;
             this.xrLabel62.Text = "AFE:";
             // 
+            // ReportTitle
+            // 
+            this.ReportTitle.BorderColor = System.Drawing.Color.Black;
+            this.ReportTitle.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.ReportTitle.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.ReportTitle.BorderWidth = 1F;
+            this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.ReportTitle.KeepTogether = true;
+            this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(0F, 31.38999F);
+            this.ReportTitle.Multiline = true;
+            this.ReportTitle.Name = "ReportTitle";
+            this.ReportTitle.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.ReportTitle.SizeF = new System.Drawing.SizeF(769.4107F, 30.00001F);
+            this.ReportTitle.StylePriority.UseFont = false;
+            this.ReportTitle.StylePriority.UsePadding = false;
+            this.ReportTitle.Text = "AFE Estimate Summary";
+            this.ReportTitle.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // Textbox10
+            // 
+            this.Textbox10.BorderColor = System.Drawing.Color.Black;
+            this.Textbox10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.Textbox10.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.Textbox10.BorderWidth = 1F;
+            this.Textbox10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Dynamic_LookupCompanies].[Description]")});
+            this.Textbox10.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.Textbox10.KeepTogether = true;
+            this.Textbox10.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.Textbox10.Multiline = true;
+            this.Textbox10.Name = "Textbox10";
+            this.Textbox10.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.Textbox10.SizeF = new System.Drawing.SizeF(769.4107F, 30F);
+            this.Textbox10.StylePriority.UseFont = false;
+            this.Textbox10.StylePriority.UsePadding = false;
+            this.Textbox10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
+            // 
+            // AFESummaryColumnHeaderBand
+            // 
+            this.AFESummaryColumnHeaderBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrEstimateCostAFESummary,
+            this.xrDescriptionAFESummary});
+            this.AFESummaryColumnHeaderBand.HeightF = 20F;
+            this.AFESummaryColumnHeaderBand.Name = "AFESummaryColumnHeaderBand";
+            // 
+            // xrEstimateCostAFESummary
+            // 
+            this.xrEstimateCostAFESummary.BorderColor = System.Drawing.Color.Black;
+            this.xrEstimateCostAFESummary.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrEstimateCostAFESummary.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrEstimateCostAFESummary.BorderWidth = 1F;
+            this.xrEstimateCostAFESummary.CanShrink = true;
+            this.xrEstimateCostAFESummary.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrEstimateCostAFESummary.KeepTogether = true;
+            this.xrEstimateCostAFESummary.LocationFloat = new DevExpress.Utils.PointFloat(556.9736F, 0F);
+            this.xrEstimateCostAFESummary.Multiline = true;
+            this.xrEstimateCostAFESummary.Name = "xrEstimateCostAFESummary";
+            this.xrEstimateCostAFESummary.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrEstimateCostAFESummary.SizeF = new System.Drawing.SizeF(115.5505F, 20F);
+            this.xrEstimateCostAFESummary.StylePriority.UsePadding = false;
+            this.xrEstimateCostAFESummary.StylePriority.UseTextAlignment = false;
+            this.xrEstimateCostAFESummary.Text = "Estimate Cost";
+            this.xrEstimateCostAFESummary.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // xrDescriptionAFESummary
+            // 
+            this.xrDescriptionAFESummary.BorderColor = System.Drawing.Color.Black;
+            this.xrDescriptionAFESummary.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrDescriptionAFESummary.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrDescriptionAFESummary.BorderWidth = 1F;
+            this.xrDescriptionAFESummary.CanShrink = true;
+            this.xrDescriptionAFESummary.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrDescriptionAFESummary.KeepTogether = true;
+            this.xrDescriptionAFESummary.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrDescriptionAFESummary.Multiline = true;
+            this.xrDescriptionAFESummary.Name = "xrDescriptionAFESummary";
+            this.xrDescriptionAFESummary.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrDescriptionAFESummary.SizeF = new System.Drawing.SizeF(490.9578F, 20F);
+            this.xrDescriptionAFESummary.StylePriority.UsePadding = false;
+            this.xrDescriptionAFESummary.StylePriority.UseTextAlignment = false;
+            this.xrDescriptionAFESummary.Text = "Description";
+            this.xrDescriptionAFESummary.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // SubBand11
+            // 
+            this.SubBand11.HeightF = 8.25F;
+            this.SubBand11.Name = "SubBand11";
+            // 
+            // AFEMasterFooter
+            // 
+            this.AFEMasterFooter.HeightF = 0F;
+            this.AFEMasterFooter.Name = "AFEMasterFooter";
+            this.AFEMasterFooter.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
+            this.AFEMasterFooter.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
+            this.SubBand5,
+            this.SubBand12,
+            this.SubBand13});
+            // 
+            // SubBand5
+            // 
+            this.SubBand5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrOwnerFooterLabel});
+            this.SubBand5.HeightF = 2F;
+            this.SubBand5.Name = "SubBand5";
+            // 
+            // xrOwnerFooterLabel
+            // 
+            this.xrOwnerFooterLabel.CanGrow = false;
+            this.xrOwnerFooterLabel.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrOwnerFooterLabel.LocationFloat = new DevExpress.Utils.PointFloat(80.51827F, 0F);
+            this.xrOwnerFooterLabel.Multiline = true;
+            this.xrOwnerFooterLabel.Name = "xrOwnerFooterLabel";
+            this.xrOwnerFooterLabel.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrOwnerFooterLabel.SizeF = new System.Drawing.SizeF(2F, 2F);
+            this.xrOwnerFooterLabel.StylePriority.UseFont = false;
+            this.xrOwnerFooterLabel.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // SubBand12
+            // 
+            this.SubBand12.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrAFEEstimateSummary});
+            this.SubBand12.HeightF = 19.40232F;
+            this.SubBand12.Name = "SubBand12";
+            this.SubBand12.PageBreak = DevExpress.XtraReports.UI.PageBreak.BeforeBand;
+            // 
             // xrAFEEstimateSummary
             // 
             this.xrAFEEstimateSummary.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -2147,6 +2071,82 @@
             this.xrAFEEstimateSummary.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pbooShowCriteria", this.pbooShowCriteria));
             this.xrAFEEstimateSummary.ReportSource = new ReportsEngine.Reports.MDReports.AFEEstimateSummarySubreport();
             this.xrAFEEstimateSummary.SizeF = new System.Drawing.SizeF(769.5486F, 19.40232F);
+            // 
+            // SubBand13
+            // 
+            this.SubBand13.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrOwnerFooterLabelEnd});
+            this.SubBand13.HeightF = 2F;
+            this.SubBand13.Name = "SubBand13";
+            // 
+            // xrOwnerFooterLabelEnd
+            // 
+            this.xrOwnerFooterLabelEnd.CanGrow = false;
+            this.xrOwnerFooterLabelEnd.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrOwnerFooterLabelEnd.LocationFloat = new DevExpress.Utils.PointFloat(388.7937F, 0F);
+            this.xrOwnerFooterLabelEnd.Multiline = true;
+            this.xrOwnerFooterLabelEnd.Name = "xrOwnerFooterLabelEnd";
+            this.xrOwnerFooterLabelEnd.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrOwnerFooterLabelEnd.SizeF = new System.Drawing.SizeF(2F, 2F);
+            this.xrOwnerFooterLabelEnd.StylePriority.UseFont = false;
+            this.xrOwnerFooterLabelEnd.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
+            // 
+            // xrCrossBandBox2
+            // 
+            this.xrCrossBandBox2.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
+            this.xrCrossBandBox2.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrCrossBandBox2.BorderWidth = 1F;
+            this.xrCrossBandBox2.EndBand = this.SubBand11;
+            this.xrCrossBandBox2.EndPointFloat = new DevExpress.Utils.PointFloat(0.5900065F, 3.999996F);
+            this.xrCrossBandBox2.Name = "xrCrossBandBox2";
+            this.xrCrossBandBox2.StartBand = this.SubBand11;
+            this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0.5900065F, 0F);
+            this.xrCrossBandBox2.WidthF = 770.0001F;
+            // 
+            // pbooShowDetail
+            // 
+            this.pbooShowDetail.Description = "Show Detail";
+            this.pbooShowDetail.Name = "pbooShowDetail";
+            this.pbooShowDetail.Type = typeof(bool);
+            this.pbooShowDetail.ValueInfo = "True";
+            // 
+            // plngSelectOwnerID
+            // 
+            this.plngSelectOwnerID.Description = "Select Owner";
+            this.plngSelectOwnerID.Name = "plngSelectOwnerID";
+            this.plngSelectOwnerID.Type = typeof(int);
+            this.plngSelectOwnerID.ValueInfo = "0";
+            dynamicListLookUpSettings9.DataMember = "Lookup_Owner";
+            dynamicListLookUpSettings9.DataSource = this.Dynamic;
+            dynamicListLookUpSettings9.DisplayMember = "OwnerDescription";
+            dynamicListLookUpSettings9.FilterString = null;
+            dynamicListLookUpSettings9.SortMember = null;
+            dynamicListLookUpSettings9.ValueMember = "OwnerID";
+            this.plngSelectOwnerID.ValueSourceSettings = dynamicListLookUpSettings9;
+            // 
+            // pbooSortBy
+            // 
+            this.pbooSortBy.Description = "Sort By";
+            this.pbooSortBy.Name = "pbooSortBy";
+            this.pbooSortBy.Type = typeof(bool);
+            this.pbooSortBy.ValueInfo = "True";
+            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Owner Number"));
+            staticListLookUpSettings4.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "AFE Master"));
+            this.pbooSortBy.ValueSourceSettings = staticListLookUpSettings4;
+            // 
+            // Grouping1
+            // 
+            this.Grouping1.DataMember = "Dynamic_AFEMasterList";
+            this.Grouping1.Expression = "Iif(?pbooSortBy,[OwnerNumber] ,[AFEMasterID] )";
+            this.Grouping1.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.Grouping1.Name = "Grouping1";
+            // 
+            // Grouping2
+            // 
+            this.Grouping2.DataMember = "Dynamic_AFEMasterList";
+            this.Grouping2.Expression = "Iif(?pbooSortBy, [AFEMasterID], [OwnerNumber])\n";
+            this.Grouping2.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.Grouping2.Name = "Grouping2";
             // 
             // AFEEstimateSummary
             // 
