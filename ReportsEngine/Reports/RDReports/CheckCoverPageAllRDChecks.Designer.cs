@@ -213,6 +213,7 @@
             this.pstrSelectCheck.Description = "Select Check";
             this.pstrSelectCheck.MultiValue = true;
             this.pstrSelectCheck.Name = "pstrSelectCheck";
+            this.pstrSelectCheck.Type = typeof(int);
             this.pstrSelectCheck.Visible = false;
             // 
             // groupHeaderBand1
