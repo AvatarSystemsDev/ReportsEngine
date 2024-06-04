@@ -1671,7 +1671,7 @@
             this.xrCrossBandHeader.Name = "xrCrossBandHeader";
             this.xrCrossBandHeader.StartBand = this.SubBand1;
             this.xrCrossBandHeader.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrCrossBandHeader.WidthF = 1619.012F;
+            this.xrCrossBandHeader.WidthF = 1319.999F;
             // 
             // federationDataSource1
             // 
@@ -2216,7 +2216,7 @@
             this.xrCrossBandBox1.Name = "xrCrossBandBox1";
             this.xrCrossBandBox1.StartBand = this.SubBand2;
             this.xrCrossBandBox1.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrCrossBandBox1.WidthF = 1619.012F;
+            this.xrCrossBandBox1.WidthF = 1319.999F;
             // 
             // PropertyCashFlow
             // 
