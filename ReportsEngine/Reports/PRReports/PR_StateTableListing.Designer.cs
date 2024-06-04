@@ -864,7 +864,7 @@
             this.xrLabel1.StylePriority.UseForeColor = false;
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
-            this.xrLabel1.Text = "------ Withholding -----";
+            this.xrLabel1.Text = "----- Withholding ----";
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel7
@@ -890,7 +890,7 @@
             this.xrLabel7.StylePriority.UseForeColor = false;
             this.xrLabel7.StylePriority.UsePadding = false;
             this.xrLabel7.StylePriority.UseTextAlignment = false;
-            this.xrLabel7.Text = "---- Unemployment ---";
+            this.xrLabel7.Text = "--- Unemployment ---";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // xrLabel10
@@ -1140,7 +1140,7 @@
             // 
             // SubBand5
             // 
-            this.SubBand5.HeightF = 9.714953F;
+            this.SubBand5.HeightF = 8F;
             this.SubBand5.Name = "SubBand5";
             // 
             // pageFooterBand1
