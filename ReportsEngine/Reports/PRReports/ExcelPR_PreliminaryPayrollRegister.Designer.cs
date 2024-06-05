@@ -184,7 +184,7 @@
             // 
             // Textbox64
             // 
-            this.Textbox64.BackColor = System.Drawing.Color.White;
+            this.Textbox64.BackColor = System.Drawing.Color.Transparent;
             this.Textbox64.BorderColor = System.Drawing.Color.Black;
             this.Textbox64.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox64.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -196,12 +196,13 @@
             this.Textbox64.KeepTogether = true;
             this.Textbox64.Name = "Textbox64";
             this.Textbox64.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox64.StylePriority.UseBackColor = false;
             this.Textbox64.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.Textbox64.Weight = 0.11371839000056086D;
             // 
             // Textbox65
             // 
-            this.Textbox65.BackColor = System.Drawing.Color.White;
+            this.Textbox65.BackColor = System.Drawing.Color.Transparent;
             this.Textbox65.BorderColor = System.Drawing.Color.Black;
             this.Textbox65.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox65.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -213,12 +214,13 @@
             this.Textbox65.KeepTogether = true;
             this.Textbox65.Name = "Textbox65";
             this.Textbox65.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox65.StylePriority.UseBackColor = false;
             this.Textbox65.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.Textbox65.Weight = 0.29673240803730072D;
             // 
             // Textbox66
             // 
-            this.Textbox66.BackColor = System.Drawing.Color.White;
+            this.Textbox66.BackColor = System.Drawing.Color.Transparent;
             this.Textbox66.BorderColor = System.Drawing.Color.Black;
             this.Textbox66.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox66.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -230,12 +232,13 @@
             this.Textbox66.KeepTogether = true;
             this.Textbox66.Name = "Textbox66";
             this.Textbox66.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox66.StylePriority.UseBackColor = false;
             this.Textbox66.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox66.Weight = 0.057520123137717066D;
             // 
             // Textbox67
             // 
-            this.Textbox67.BackColor = System.Drawing.Color.White;
+            this.Textbox67.BackColor = System.Drawing.Color.Transparent;
             this.Textbox67.BorderColor = System.Drawing.Color.Black;
             this.Textbox67.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox67.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -247,12 +250,13 @@
             this.Textbox67.KeepTogether = true;
             this.Textbox67.Name = "Textbox67";
             this.Textbox67.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox67.StylePriority.UseBackColor = false;
             this.Textbox67.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox67.Weight = 0.053596283972533194D;
             // 
             // Textbox68
             // 
-            this.Textbox68.BackColor = System.Drawing.Color.White;
+            this.Textbox68.BackColor = System.Drawing.Color.Transparent;
             this.Textbox68.BorderColor = System.Drawing.Color.Black;
             this.Textbox68.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox68.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -264,12 +268,13 @@
             this.Textbox68.KeepTogether = true;
             this.Textbox68.Name = "Textbox68";
             this.Textbox68.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox68.StylePriority.UseBackColor = false;
             this.Textbox68.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox68.Weight = 0.041825601596421277D;
             // 
             // Textbox69
             // 
-            this.Textbox69.BackColor = System.Drawing.Color.White;
+            this.Textbox69.BackColor = System.Drawing.Color.Transparent;
             this.Textbox69.BorderColor = System.Drawing.Color.Black;
             this.Textbox69.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox69.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -281,12 +286,13 @@
             this.Textbox69.KeepTogether = true;
             this.Textbox69.Name = "Textbox69";
             this.Textbox69.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox69.StylePriority.UseBackColor = false;
             this.Textbox69.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox69.Weight = 0.035289567628279984D;
             // 
             // Textbox70
             // 
-            this.Textbox70.BackColor = System.Drawing.Color.White;
+            this.Textbox70.BackColor = System.Drawing.Color.Transparent;
             this.Textbox70.BorderColor = System.Drawing.Color.Black;
             this.Textbox70.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox70.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -298,12 +304,13 @@
             this.Textbox70.KeepTogether = true;
             this.Textbox70.Name = "Textbox70";
             this.Textbox70.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox70.StylePriority.UseBackColor = false;
             this.Textbox70.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox70.Weight = 0.043921287138824164D;
             // 
             // Textbox71
             // 
-            this.Textbox71.BackColor = System.Drawing.Color.White;
+            this.Textbox71.BackColor = System.Drawing.Color.Transparent;
             this.Textbox71.BorderColor = System.Drawing.Color.Black;
             this.Textbox71.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox71.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -315,12 +322,13 @@
             this.Textbox71.KeepTogether = true;
             this.Textbox71.Name = "Textbox71";
             this.Textbox71.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox71.StylePriority.UseBackColor = false;
             this.Textbox71.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox71.Weight = 0.052814462023332634D;
             // 
             // Textbox72
             // 
-            this.Textbox72.BackColor = System.Drawing.Color.White;
+            this.Textbox72.BackColor = System.Drawing.Color.Transparent;
             this.Textbox72.BorderColor = System.Drawing.Color.Black;
             this.Textbox72.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox72.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -332,12 +340,13 @@
             this.Textbox72.KeepTogether = true;
             this.Textbox72.Name = "Textbox72";
             this.Textbox72.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox72.StylePriority.UseBackColor = false;
             this.Textbox72.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox72.Weight = 0.087842431473267382D;
             // 
             // Textbox73
             // 
-            this.Textbox73.BackColor = System.Drawing.Color.White;
+            this.Textbox73.BackColor = System.Drawing.Color.Transparent;
             this.Textbox73.BorderColor = System.Drawing.Color.Black;
             this.Textbox73.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox73.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -349,12 +358,13 @@
             this.Textbox73.KeepTogether = true;
             this.Textbox73.Name = "Textbox73";
             this.Textbox73.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox73.StylePriority.UseBackColor = false;
             this.Textbox73.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox73.Weight = 0.087842651720733134D;
             // 
             // Textbox74
             // 
-            this.Textbox74.BackColor = System.Drawing.Color.White;
+            this.Textbox74.BackColor = System.Drawing.Color.Transparent;
             this.Textbox74.BorderColor = System.Drawing.Color.Black;
             this.Textbox74.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox74.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -366,6 +376,7 @@
             this.Textbox74.KeepTogether = true;
             this.Textbox74.Name = "Textbox74";
             this.Textbox74.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox74.StylePriority.UseBackColor = false;
             this.Textbox74.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox74.Weight = 0.085492032382669988D;
             // 
@@ -386,7 +397,7 @@
             // 
             // Textbox76
             // 
-            this.Textbox76.BackColor = System.Drawing.Color.White;
+            this.Textbox76.BackColor = System.Drawing.Color.Transparent;
             this.Textbox76.BorderColor = System.Drawing.Color.Black;
             this.Textbox76.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox76.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -398,6 +409,7 @@
             this.Textbox76.KeepTogether = true;
             this.Textbox76.Name = "Textbox76";
             this.Textbox76.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.Textbox76.StylePriority.UseBackColor = false;
             this.Textbox76.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.Textbox76.Weight = 0.086807363484717487D;
             // 
@@ -463,7 +475,7 @@
             // 
             // xrLabel2
             // 
-            this.xrLabel2.BackColor = System.Drawing.Color.White;
+            this.xrLabel2.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel2.BorderColor = System.Drawing.Color.Black;
             this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -490,7 +502,7 @@
             // 
             // xrLabel15
             // 
-            this.xrLabel15.BackColor = System.Drawing.Color.White;
+            this.xrLabel15.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel15.BorderColor = System.Drawing.Color.Black;
             this.xrLabel15.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel15.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -517,7 +529,7 @@
             // 
             // xrLabel16
             // 
-            this.xrLabel16.BackColor = System.Drawing.Color.White;
+            this.xrLabel16.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel16.BorderColor = System.Drawing.Color.Black;
             this.xrLabel16.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel16.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -544,7 +556,7 @@
             // 
             // xrLabel26
             // 
-            this.xrLabel26.BackColor = System.Drawing.Color.White;
+            this.xrLabel26.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel26.BorderColor = System.Drawing.Color.Black;
             this.xrLabel26.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel26.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -571,7 +583,7 @@
             // 
             // xrLabel1
             // 
-            this.xrLabel1.BackColor = System.Drawing.Color.White;
+            this.xrLabel1.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel1.BorderColor = System.Drawing.Color.Black;
             this.xrLabel1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -598,7 +610,7 @@
             // 
             // xrLabel27
             // 
-            this.xrLabel27.BackColor = System.Drawing.Color.White;
+            this.xrLabel27.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel27.BorderColor = System.Drawing.Color.Black;
             this.xrLabel27.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel27.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -620,12 +632,12 @@
             this.xrLabel27.StylePriority.UseForeColor = false;
             this.xrLabel27.StylePriority.UsePadding = false;
             this.xrLabel27.StylePriority.UseTextAlignment = false;
-            this.xrLabel27.Text = "Federal Deps\r\n";
+            this.xrLabel27.Text = "Fed\r\nDeps\r\n";
             this.xrLabel27.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
             // 
             // xrLabel28
             // 
-            this.xrLabel28.BackColor = System.Drawing.Color.White;
+            this.xrLabel28.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel28.BorderColor = System.Drawing.Color.Black;
             this.xrLabel28.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel28.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -652,7 +664,7 @@
             // 
             // xrLabel29
             // 
-            this.xrLabel29.BackColor = System.Drawing.Color.White;
+            this.xrLabel29.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel29.BorderColor = System.Drawing.Color.Black;
             this.xrLabel29.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel29.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -679,7 +691,7 @@
             // 
             // xrLabel30
             // 
-            this.xrLabel30.BackColor = System.Drawing.Color.White;
+            this.xrLabel30.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel30.BorderColor = System.Drawing.Color.Black;
             this.xrLabel30.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel30.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -706,7 +718,7 @@
             // 
             // xrLabel31
             // 
-            this.xrLabel31.BackColor = System.Drawing.Color.White;
+            this.xrLabel31.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel31.BorderColor = System.Drawing.Color.Black;
             this.xrLabel31.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel31.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -733,7 +745,7 @@
             // 
             // xrLabel32
             // 
-            this.xrLabel32.BackColor = System.Drawing.Color.White;
+            this.xrLabel32.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel32.BorderColor = System.Drawing.Color.Black;
             this.xrLabel32.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel32.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -760,7 +772,7 @@
             // 
             // xrLabel33
             // 
-            this.xrLabel33.BackColor = System.Drawing.Color.White;
+            this.xrLabel33.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel33.BorderColor = System.Drawing.Color.Black;
             this.xrLabel33.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel33.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -787,7 +799,7 @@
             // 
             // xrLabel34
             // 
-            this.xrLabel34.BackColor = System.Drawing.Color.White;
+            this.xrLabel34.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel34.BorderColor = System.Drawing.Color.Black;
             this.xrLabel34.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel34.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -814,7 +826,7 @@
             // 
             // xrLabel35
             // 
-            this.xrLabel35.BackColor = System.Drawing.Color.White;
+            this.xrLabel35.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel35.BorderColor = System.Drawing.Color.Black;
             this.xrLabel35.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel35.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -841,7 +853,7 @@
             // 
             // xrLabel36
             // 
-            this.xrLabel36.BackColor = System.Drawing.Color.White;
+            this.xrLabel36.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel36.BorderColor = System.Drawing.Color.Black;
             this.xrLabel36.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel36.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -868,7 +880,7 @@
             // 
             // xrLabel37
             // 
-            this.xrLabel37.BackColor = System.Drawing.Color.White;
+            this.xrLabel37.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel37.BorderColor = System.Drawing.Color.Black;
             this.xrLabel37.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel37.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -895,7 +907,7 @@
             // 
             // xrLabel38
             // 
-            this.xrLabel38.BackColor = System.Drawing.Color.White;
+            this.xrLabel38.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel38.BorderColor = System.Drawing.Color.Black;
             this.xrLabel38.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel38.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -922,7 +934,7 @@
             // 
             // xrLabel39
             // 
-            this.xrLabel39.BackColor = System.Drawing.Color.White;
+            this.xrLabel39.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel39.BorderColor = System.Drawing.Color.Black;
             this.xrLabel39.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel39.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -949,7 +961,7 @@
             // 
             // xrLabel40
             // 
-            this.xrLabel40.BackColor = System.Drawing.Color.White;
+            this.xrLabel40.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel40.BorderColor = System.Drawing.Color.Black;
             this.xrLabel40.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel40.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -976,7 +988,7 @@
             // 
             // xrLabel41
             // 
-            this.xrLabel41.BackColor = System.Drawing.Color.White;
+            this.xrLabel41.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel41.BorderColor = System.Drawing.Color.Black;
             this.xrLabel41.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel41.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1003,7 +1015,7 @@
             // 
             // xrLabel42
             // 
-            this.xrLabel42.BackColor = System.Drawing.Color.White;
+            this.xrLabel42.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel42.BorderColor = System.Drawing.Color.Black;
             this.xrLabel42.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel42.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1030,7 +1042,7 @@
             // 
             // xrLabel43
             // 
-            this.xrLabel43.BackColor = System.Drawing.Color.White;
+            this.xrLabel43.BackColor = System.Drawing.Color.Transparent;
             this.xrLabel43.BorderColor = System.Drawing.Color.Black;
             this.xrLabel43.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Double;
             this.xrLabel43.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1057,7 +1069,7 @@
             // 
             // xrTableCell1
             // 
-            this.xrTableCell1.BackColor = System.Drawing.Color.White;
+            this.xrTableCell1.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell1.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell1.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell1.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1069,13 +1081,14 @@
             this.xrTableCell1.Multiline = true;
             this.xrTableCell1.Name = "xrTableCell1";
             this.xrTableCell1.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell1.StylePriority.UseBackColor = false;
             this.xrTableCell1.Text = "xrTableCell1";
             this.xrTableCell1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell1.Weight = 0.0878424901033927D;
             // 
             // xrTableCell2
             // 
-            this.xrTableCell2.BackColor = System.Drawing.Color.White;
+            this.xrTableCell2.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell2.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell2.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1087,13 +1100,14 @@
             this.xrTableCell2.Multiline = true;
             this.xrTableCell2.Name = "xrTableCell2";
             this.xrTableCell2.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell2.StylePriority.UseBackColor = false;
             this.xrTableCell2.Text = "xrTableCell2";
             this.xrTableCell2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell2.Weight = 0.0878424901033927D;
             // 
             // xrTableCell3
             // 
-            this.xrTableCell3.BackColor = System.Drawing.Color.White;
+            this.xrTableCell3.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell3.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell3.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell3.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1105,13 +1119,14 @@
             this.xrTableCell3.Multiline = true;
             this.xrTableCell3.Name = "xrTableCell3";
             this.xrTableCell3.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell3.StylePriority.UseBackColor = false;
             this.xrTableCell3.Text = "xrTableCell3";
             this.xrTableCell3.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell3.Weight = 0.0878424901033927D;
             // 
             // xrTableCell4
             // 
-            this.xrTableCell4.BackColor = System.Drawing.Color.White;
+            this.xrTableCell4.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell4.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell4.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell4.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1123,13 +1138,14 @@
             this.xrTableCell4.Multiline = true;
             this.xrTableCell4.Name = "xrTableCell4";
             this.xrTableCell4.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell4.StylePriority.UseBackColor = false;
             this.xrTableCell4.Text = "xrTableCell4";
             this.xrTableCell4.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell4.Weight = 0.0878424901033927D;
             // 
             // xrTableCell5
             // 
-            this.xrTableCell5.BackColor = System.Drawing.Color.White;
+            this.xrTableCell5.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell5.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell5.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell5.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1141,13 +1157,14 @@
             this.xrTableCell5.Multiline = true;
             this.xrTableCell5.Name = "xrTableCell5";
             this.xrTableCell5.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell5.StylePriority.UseBackColor = false;
             this.xrTableCell5.Text = "xrTableCell5";
             this.xrTableCell5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell5.Weight = 0.0878424901033927D;
             // 
             // xrTableCell6
             // 
-            this.xrTableCell6.BackColor = System.Drawing.Color.White;
+            this.xrTableCell6.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell6.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell6.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell6.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1159,13 +1176,14 @@
             this.xrTableCell6.Multiline = true;
             this.xrTableCell6.Name = "xrTableCell6";
             this.xrTableCell6.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell6.StylePriority.UseBackColor = false;
             this.xrTableCell6.Text = "xrTableCell6";
             this.xrTableCell6.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell6.Weight = 0.0878424901033927D;
             // 
             // xrTableCell7
             // 
-            this.xrTableCell7.BackColor = System.Drawing.Color.White;
+            this.xrTableCell7.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell7.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell7.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell7.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1177,13 +1195,14 @@
             this.xrTableCell7.Multiline = true;
             this.xrTableCell7.Name = "xrTableCell7";
             this.xrTableCell7.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell7.StylePriority.UseBackColor = false;
             this.xrTableCell7.Text = "xrTableCell7";
             this.xrTableCell7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell7.Weight = 0.0878424901033927D;
             // 
             // xrTableCell8
             // 
-            this.xrTableCell8.BackColor = System.Drawing.Color.White;
+            this.xrTableCell8.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell8.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell8.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell8.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1195,13 +1214,14 @@
             this.xrTableCell8.Multiline = true;
             this.xrTableCell8.Name = "xrTableCell8";
             this.xrTableCell8.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell8.StylePriority.UseBackColor = false;
             this.xrTableCell8.Text = "xrTableCell8";
             this.xrTableCell8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell8.Weight = 0.0878424901033927D;
             // 
             // xrTableCell9
             // 
-            this.xrTableCell9.BackColor = System.Drawing.Color.White;
+            this.xrTableCell9.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell9.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell9.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell9.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1213,13 +1233,14 @@
             this.xrTableCell9.Multiline = true;
             this.xrTableCell9.Name = "xrTableCell9";
             this.xrTableCell9.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell9.StylePriority.UseBackColor = false;
             this.xrTableCell9.Text = "xrTableCell9";
             this.xrTableCell9.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell9.Weight = 0.0878424901033927D;
             // 
             // xrTableCell10
             // 
-            this.xrTableCell10.BackColor = System.Drawing.Color.White;
+            this.xrTableCell10.BackColor = System.Drawing.Color.Transparent;
             this.xrTableCell10.BorderColor = System.Drawing.Color.Black;
             this.xrTableCell10.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrTableCell10.Borders = DevExpress.XtraPrinting.BorderSide.None;
@@ -1231,6 +1252,7 @@
             this.xrTableCell10.Multiline = true;
             this.xrTableCell10.Name = "xrTableCell10";
             this.xrTableCell10.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrTableCell10.StylePriority.UseBackColor = false;
             this.xrTableCell10.Text = "xrTableCell10";
             this.xrTableCell10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrTableCell10.Weight = 0.0878424901033927D;
