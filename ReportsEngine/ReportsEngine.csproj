@@ -553,6 +553,12 @@
     <Compile Include="Reports\PRReports\ExcelPR_PreliminaryPaymentTimeRecordRecap.Designer.cs">
       <DependentUpon>ExcelPR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_PreliminaryPayrollRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_PreliminaryPayrollRegister.Designer.cs">
+      <DependentUpon>ExcelPR_PreliminaryPayrollRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PRReports\ExcelPR_StateTableListing.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2665,6 +2671,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\ExcelPR_PreliminaryPaymentTimeRecordRecap.resx">
       <DependentUpon>ExcelPR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\ExcelPR_PreliminaryPayrollRegister.resx">
+      <DependentUpon>ExcelPR_PreliminaryPayrollRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\ExcelPR_StateTableListing.resx">
       <DependentUpon>ExcelPR_StateTableListing.cs</DependentUpon>
