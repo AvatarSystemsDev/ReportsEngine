@@ -595,6 +595,12 @@
     <Compile Include="Reports\PRReports\PR_StateTableListing.Designer.cs">
       <DependentUpon>PR_StateTableListing.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\PR_TaxableEarningsRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\PR_TaxableEarningsRegister.Designer.cs">
+      <DependentUpon>PR_TaxableEarningsRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PRReports\PR_WorkersCompGenLiabilityTableListing.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2692,6 +2698,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\PR_StateTableListing.resx">
       <DependentUpon>PR_StateTableListing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\PR_TaxableEarningsRegister.resx">
+      <DependentUpon>PR_TaxableEarningsRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\PR_WorkersCompGenLiabilityTableListing.resx">
       <DependentUpon>PR_WorkersCompGenLiabilityTableListing.cs</DependentUpon>
