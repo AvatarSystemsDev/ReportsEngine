@@ -340,30 +340,28 @@ namespace ReportsEngine.Services
                     // report.Parameters[parameterName].Value = multivariateParameter;
                     JToken token = JToken.Parse(parameters.Get(parameterName));
                     string jsonInput = parameters.Get(parameterName);
-
-                    if (token.Type == JTokenType.Array)
+                    switch (token.Type)
                     {
-                        report.Parameters[parameterName].Value = token.ToObject<string[]>();
-                    }
-                    else if (token.Type == JTokenType.Object)
-                    {
-                        JObject jsonObject = JObject.Parse(jsonInput);
-                        List<string> values = new List<string>();
+                        case JTokenType.Array: report.Parameters[parameterName].Value = token.ToObject<string[]>(); break;
+                        case JTokenType.Object:
+                            JObject jsonObject = JObject.Parse(jsonInput);
+                            List<string> values = new List<string>();
 
-                        // Iterate through the properties of the object
-                        foreach (var prop in jsonObject.Properties())
-                        {
-                            // Add the property value to the list
-                            values.Add(prop.Value.ToString());
-                        }
+                            // Iterate through the properties of the object
+                            foreach (var prop in jsonObject.Properties())
+                            {
+                                // Add the property value to the list
+                                values.Add(prop.Value.ToString());
+                            }
 
-                        // Set the parameter value as an array of strings
-                        report.Parameters[parameterName].Value = values.ToArray();
-                    }
-                    else
-                    {
-                        // Handle the single token value (whether it's a string, int, or any other simple type)
-                        report.Parameters[parameterName].Value = new string[] { token.ToString() };
+                            // Set the parameter value as an array of strings
+                            report.Parameters[parameterName].Value = values.ToArray();
+                            break;
+                        case JTokenType.Integer: report.Parameters[parameterName].Value = new int[] { int.Parse(token.ToString()) }; break;
+                        case JTokenType.Boolean: report.Parameters[parameterName].Value = new bool[] { bool.Parse(token.ToString()) }; break;
+                        case JTokenType.Date: report.Parameters[parameterName].Value = new DateTime[] { DateTime.Parse(token.ToString()) }; break;
+                        case JTokenType.Float: report.Parameters[parameterName].Value = new float[] { float.Parse(token.ToString()) }; break;
+                        default: report.Parameters[parameterName].Value = new string[] { token.ToString() }; break;
                     }
 
                 }
@@ -377,6 +375,10 @@ namespace ReportsEngine.Services
                     {
 
                     }
+                }
+                else if (report.Parameters[parameterName] is null)
+                {
+                    throw new Exception("Parameter passed to report is invalid. Please contact customer support.");
                 }
                 else if (report.Parameters[parameterName].Type == typeof(DateTime))
                 {

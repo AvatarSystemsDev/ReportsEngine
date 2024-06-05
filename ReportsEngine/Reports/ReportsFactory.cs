@@ -49,7 +49,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelGeneralLedgerDetailbyProperty", (databaseID, companyID) => new ExcelGeneralLedgerDetailbyProperty());
             Reports.Add("ChartOfAccountsAmounts", (databaseID, companyID) => new ChartOfAccountsAmounts());
             Reports.Add("ExcelChartOfAccountsAmounts", (databaseID, companyID) => new ExcelChartOfAccountsAmounts());
-            Reports.Add("RDCheckStubs", (databaseID, companyID) => new RDCheckStubs()); // Will print RD Check Stubs. Might delete later. Just need to see what the report looks like.
+            Reports.Add("RDCheckStubs", (databaseID, companyID) => new RDCheckStubs());
             Reports.Add("ExcelRDCheckStubs", (databaseID, companyID) => new ExcelRDCheckStubs());
             Reports.Add("DOIbyOwnerDetail", (databaseID, companyID) => new DOIbyOwnerDetail());
             Reports.Add("ExcelDOIbyOwnerDetail", (databaseID, companyID) => new ExcelDOIbyOwnerDetail());

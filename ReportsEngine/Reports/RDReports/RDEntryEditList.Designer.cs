@@ -290,7 +290,7 @@
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIsFinal = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngBatchID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectBatchID = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngSortOrder = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningPurchaserNumber = new DevExpress.XtraReports.Parameters.Parameter();
@@ -468,9 +468,9 @@
     "CompanyID = @plngCompanyID)\n\tAND IsPosted = 0 AND IsProcessingPost = 0\nGROUP BY " +
     "DistributionGroup";
             storedProcQuery3.Name = "EntryEditList";
-            queryParameter5.Name = "@plngBatchID";
+            queryParameter5.Name = "@pstrSelectBatchID";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?plngBatchID", typeof(int));
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectBatchID, \',\')", typeof(string));
             queryParameter6.Name = "@plngCompanyID";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
@@ -2776,18 +2776,19 @@
             this.plngCompanyID.ValueSourceSettings = dynamicListLookUpSettings1;
             this.plngCompanyID.Visible = false;
             // 
-            // plngBatchID
+            // pstrSelectBatchID
             // 
-            this.plngBatchID.Description = "Batch";
-            this.plngBatchID.Name = "plngBatchID";
-            this.plngBatchID.Type = typeof(int);
-            this.plngBatchID.ValueInfo = "0";
+            this.pstrSelectBatchID.Description = "Batch";
+            this.pstrSelectBatchID.MultiValue = true;
+            this.pstrSelectBatchID.Name = "pstrSelectBatchID";
+            this.pstrSelectBatchID.Type = typeof(int);
+            this.pstrSelectBatchID.ValueInfo = "0";
             dynamicListLookUpSettings2.DataMember = "RDBatches";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "Item";
             dynamicListLookUpSettings2.FilterString = resources.GetString("dynamicListLookUpSettings2.FilterString");
             dynamicListLookUpSettings2.ValueMember = "ItemData";
-            this.plngBatchID.ValueSourceSettings = dynamicListLookUpSettings2;
+            this.pstrSelectBatchID.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
             // plngSortOrder
             // 
@@ -6081,7 +6082,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPurchaserNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPurchaserNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectPurchaserNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBatchID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectBatchID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortOrder, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngItemsToReport, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowMMBTU, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -6105,7 +6106,7 @@
             this.pstrBeginningPurchaserNumber,
             this.pstrEndingPurchaserNumber,
             this.pstrSelectPurchaserNumber,
-            this.plngBatchID,
+            this.pstrSelectBatchID,
             this.plngSortOrder,
             this.plngItemsToReport,
             this.pbooShowMMBTU,
@@ -6142,7 +6143,7 @@
         private DevExpress.XtraReports.Parameters.Parameter Subtitle;
         private DevExpress.XtraReports.Parameters.Parameter pbooIsFinal;
         private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
-        private DevExpress.XtraReports.Parameters.Parameter plngBatchID;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectBatchID;
         private DevExpress.XtraReports.Parameters.Parameter plngSortOrder;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningPurchaserNumber;
