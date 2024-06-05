@@ -787,38 +787,7 @@
             source8.Name = "Dynamic_DSGeneralLedgerDetail";
             sourceNode8.Source = source8;
             selectNode8.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "BatchID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountNumberPrefix"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountNumberSuffix"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "NetAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "NetAmountVisible"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AmountType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "Description"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "DocumentVoucher"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "InvoiceReference"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "OwnerNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "OwnerName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PostDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "Source"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "VendorNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "VendorName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AFEMasterNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "isBBF"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PhaseWellDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PropertyNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PhaseNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PhaseWellTypeCode"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountTotal"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "AccountingCenterNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "First"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "BottomHalfID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "TotalBottomHalfCount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "SumNetAmountNotZero")});
+            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode8)});
             selectNode8.Root = sourceNode8;
             selectNode9.Alias = "Pulse_Master_UserRecord";
             sourceNode9.Alias = null;
@@ -4528,6 +4497,7 @@
             this.DisplayName = "GeneralLedgerDetail";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
+            this.FilterString = resources.GetString("$this.FilterString");
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
