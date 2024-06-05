@@ -101,7 +101,7 @@
             // 
             // bottomMarginBand1
             // 
-            this.bottomMarginBand1.HeightF = 4.025014F;
+            this.bottomMarginBand1.HeightF = 0F;
             this.bottomMarginBand1.Name = "bottomMarginBand1";
             // 
             // Tablix1
@@ -141,7 +141,7 @@
             this.xrLabel16,
             this.xrLabel26,
             this.xrLabel2});
-            this.pageHeaderBand1.HeightF = 38.47501F;
+            this.pageHeaderBand1.HeightF = 38.54333F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
@@ -206,6 +206,8 @@
             this.Textbox65.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.Textbox65.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox65.BorderWidth = 1F;
+            this.Textbox65.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Name]")});
             this.Textbox65.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox65.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(51)))));
             this.Textbox65.KeepTogether = true;
@@ -380,7 +382,7 @@
             this.Textbox75.Name = "Textbox75";
             this.Textbox75.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox75.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.Textbox75.Weight = 0.0023504683132181958D;
+            this.Textbox75.Weight = 0.0033855949318934092D;
             // 
             // Textbox76
             // 
@@ -397,7 +399,7 @@
             this.Textbox76.Name = "Textbox76";
             this.Textbox76.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
             this.Textbox76.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.Textbox76.Weight = 0.0878424901033927D;
+            this.Textbox76.Weight = 0.086807363484717487D;
             // 
             // Dynamic
             // 
@@ -1246,7 +1248,7 @@
             this.DataSource = this.Dynamic;
             this.DisplayName = "PR_PreliminaryPayrollRegister";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
-            this.Margins = new DevExpress.Drawing.DXMargins(25F, 0F, 0F, 4.025014F);
+            this.Margins = new DevExpress.Drawing.DXMargins(25F, 0F, 0F, 0F);
             this.PageWidth = 1668;
             this.PaperKind = DevExpress.Drawing.Printing.DXPaperKind.Custom;
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
