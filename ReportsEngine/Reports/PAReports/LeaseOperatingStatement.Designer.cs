@@ -1060,16 +1060,14 @@
             this.xrLabel57.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel57.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel57.BorderWidth = 1F;
-            this.xrLabel57.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Properties/Wells: \'\r\n")});
             this.xrLabel57.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel57.ForeColor = System.Drawing.Color.Black;
             this.xrLabel57.KeepTogether = true;
-            this.xrLabel57.LocationFloat = new DevExpress.Utils.PointFloat(946.4982F, 3.814697E-06F);
+            this.xrLabel57.LocationFloat = new DevExpress.Utils.PointFloat(912.1232F, 7.629395E-06F);
             this.xrLabel57.Multiline = true;
             this.xrLabel57.Name = "xrLabel57";
             this.xrLabel57.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel57.SizeF = new System.Drawing.SizeF(81.20319F, 18.00003F);
+            this.xrLabel57.SizeF = new System.Drawing.SizeF(115.5782F, 18.00003F);
             this.xrLabel57.StylePriority.UseBackColor = false;
             this.xrLabel57.StylePriority.UseBorderColor = false;
             this.xrLabel57.StylePriority.UseBorderDashStyle = false;
@@ -1079,6 +1077,7 @@
             this.xrLabel57.StylePriority.UseForeColor = false;
             this.xrLabel57.StylePriority.UsePadding = false;
             this.xrLabel57.StylePriority.UseTextAlignment = false;
+            this.xrLabel57.Text = "For Properties/Wells:";
             this.xrLabel57.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel2
@@ -1088,16 +1087,14 @@
             this.xrLabel2.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel2.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel2.BorderWidth = 1F;
-            this.xrLabel2.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Aquisition: \'\r\n")});
             this.xrLabel2.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel2.ForeColor = System.Drawing.Color.Black;
             this.xrLabel2.KeepTogether = true;
-            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(525.2971F, 0F);
+            this.xrLabel2.LocationFloat = new DevExpress.Utils.PointFloat(525.2972F, 7.629395E-06F);
             this.xrLabel2.Multiline = true;
             this.xrLabel2.Name = "xrLabel2";
             this.xrLabel2.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel2.SizeF = new System.Drawing.SizeF(88.49493F, 18.00002F);
+            this.xrLabel2.SizeF = new System.Drawing.SizeF(81.20319F, 18.00002F);
             this.xrLabel2.StylePriority.UseBackColor = false;
             this.xrLabel2.StylePriority.UseBorderColor = false;
             this.xrLabel2.StylePriority.UseBorderDashStyle = false;
@@ -1107,6 +1104,7 @@
             this.xrLabel2.StylePriority.UseForeColor = false;
             this.xrLabel2.StylePriority.UsePadding = false;
             this.xrLabel2.StylePriority.UseTextAlignment = false;
+            this.xrLabel2.Text = "For Aquisition:";
             this.xrLabel2.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrAcquisitionSelection
@@ -1117,11 +1115,11 @@
             this.xrAcquisitionSelection.BorderWidth = 1F;
             this.xrAcquisitionSelection.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrAcquisitionSelection.KeepTogether = true;
-            this.xrAcquisitionSelection.LocationFloat = new DevExpress.Utils.PointFloat(613.7921F, 3.814697E-06F);
+            this.xrAcquisitionSelection.LocationFloat = new DevExpress.Utils.PointFloat(606.5004F, 7.629395E-06F);
             this.xrAcquisitionSelection.Multiline = true;
             this.xrAcquisitionSelection.Name = "xrAcquisitionSelection";
             this.xrAcquisitionSelection.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrAcquisitionSelection.SizeF = new System.Drawing.SizeF(332.7062F, 18F);
+            this.xrAcquisitionSelection.SizeF = new System.Drawing.SizeF(305.6229F, 18F);
             this.xrAcquisitionSelection.StylePriority.UseFont = false;
             this.xrAcquisitionSelection.StylePriority.UsePadding = false;
             this.xrAcquisitionSelection.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
