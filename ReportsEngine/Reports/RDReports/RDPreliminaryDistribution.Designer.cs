@@ -1404,28 +1404,7 @@
             source4.Name = "Dynamic_DSRDPreliminaryDistribution";
             sourceNode4.Source = source4;
             selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PurchaserNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PurchaserName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ProcessingDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ProductType"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "UseMCFVolume"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SaleDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "WillCalculateProductionTax"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredBarrels"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredMCF"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredGross"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellCounty"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellState"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "DOIDeckCodeNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "DOIDeckCodeDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "NonDeletedInterest"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredTaxes"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredDeductions"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "EnteredNet"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "RDTransactionTypeCodeDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "PhaseWellDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "SortField")});
+            new DevExpress.DataAccess.DataFederation.SelectAllNodeColumnsExpression(sourceNode4)});
             selectNode4.Root = sourceNode4;
             selectNode5.Alias = "Pulse_Master_UserRecord";
             sourceNode5.Alias = null;
@@ -2142,6 +2121,7 @@
             this.DisplayName = "RDPreliminaryDistribution";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
+            this.FilterString = "[PhaseWellID] In (?pstrSelectProperty)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {

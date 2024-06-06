@@ -1249,6 +1249,7 @@
             this.DataMember = "DSRDPreliminaryDistribution";
             this.DataSource = this.Dynamic;
             this.DisplayName = "RDPreliminaryDistribution";
+            this.FilterString = "[PhaseWellID] In (?pstrSelectProperty)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(0F, 0F, 0F, 0F);
