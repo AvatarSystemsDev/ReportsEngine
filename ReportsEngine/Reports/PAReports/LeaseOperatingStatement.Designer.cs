@@ -1037,7 +1037,7 @@
             this.xrPropertiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrPropertiesSelected.ForeColor = System.Drawing.Color.Black;
             this.xrPropertiesSelected.KeepTogether = true;
-            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(1027.702F, 3.814697E-06F);
+            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(1027.702F, 7.629395E-06F);
             this.xrPropertiesSelected.Multiline = true;
             this.xrPropertiesSelected.Name = "xrPropertiesSelected";
             this.xrPropertiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);

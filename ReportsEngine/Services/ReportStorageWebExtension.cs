@@ -1,6 +1,7 @@
 ﻿using DevExpress.DataAccess.ConnectionParameters;
 using DevExpress.DataAccess.Native.Web;
 using DevExpress.DataProcessing.InMemoryDataProcessor;
+using DevExpress.PivotGrid.OLAP;
 using DevExpress.XtraReports;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
@@ -338,11 +339,23 @@ namespace ReportsEngine.Services
                 {
                     //string[] multivariateParameter = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));
                     // report.Parameters[parameterName].Value = multivariateParameter;
+                    
                     JToken token = JToken.Parse(parameters.Get(parameterName));
                     string jsonInput = parameters.Get(parameterName);
                     switch (token.Type)
                     {
-                        case JTokenType.Array: report.Parameters[parameterName].Value = token.ToObject<string[]>(); break;
+                        case JTokenType.Array:
+                            switch (report.Parameters[parameterName].Type.Name)
+                            {
+                                case "Int32": report.Parameters[parameterName].Value = token.ToObject<int[]>(); break;
+                                case "String": report.Parameters[parameterName].Value = token.ToObject<string[]>(); break;
+                                case "Bool": report.Parameters[parameterName].Value = token.ToObject<bool[]>(); break;
+                                case "Float":  report.Parameters[parameterName].Value = token.ToObject<float[]>(); break;
+                                case "DateTime": report.Parameters[parameterName].Value = token.ToObject<DateTime[]>(); break;
+                                default: report.Parameters[parameterName].Value = token.ToObject<string[]>(); break;
+                            }
+                            break;
+
                         case JTokenType.Object:
                             JObject jsonObject = JObject.Parse(jsonInput);
                             List<string> values = new List<string>();
