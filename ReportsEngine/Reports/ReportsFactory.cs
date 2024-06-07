@@ -337,6 +337,7 @@ namespace ReportsEngine.Reports
             Reports.Add("PR_PreliminaryPayrollRegister", (databaseID, companyID) => new PR_PreliminaryPayrollRegister());
             Reports.Add("ExcelPR_PreliminaryPayrollRegister", (databaseID, companyID) => new ExcelPR_PreliminaryPayrollRegister());
             Reports.Add("PR_TaxableEarningsRegister", (databaseID, companyID) => new PR_TaxableEarningsRegister());
+            Reports.Add("ExcelPR_TaxableEarningsRegister", (databaseID, companyID) => new ExcelPR_TaxableEarningsRegister());
 
         }
         public static Dictionary<string, Func<int?, int?, XtraReport>> Reports = new Dictionary<string, Func<int?, int?, XtraReport>>();
