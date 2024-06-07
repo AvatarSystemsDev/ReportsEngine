@@ -117,47 +117,4 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="customSqlQuery1.Sql" xml:space="preserve">
-    <value>SELECT
-  PRWork.ID
-  ,PRWork.PRAccumUnPaidTimeID
-  ,PRWork.EmployeeID
-  ,PRWork.EarnStateID
-  ,PRWork.TaxingStateID
-  ,PRWork.GrossPay
-  ,PRWork.FICAAmount
-  ,PRWork.MedicareAmount
-  ,PRWork.FITAmount
-  ,PRWork.SITAmount
-  ,PRWork.FUTAmount
-  ,PRWork.SUTAmount
-  ,PRWork.CompanyID
-  ,PREmployee.Employee_NameBaseID
-  ,NameBase.Number
-  ,NameBase.Name
-  ,NameBase.ContactName
-  ,NameBase.SortName
-  ,PRWork.FICASubj
-  ,PRWork.MedicareSubj
-  ,PRWork.FITSubj
-  ,PRWork.SITSubj
-  ,PRWork.FUTSubj
-  ,PRWork.SUTSubj
-  ,PRWork.WorkersCompSubj
-  ,PRWork.LiabSubj
-  ,StateCodes.StateAbbrev
-  ,StateCodes.ID StateCodesID
-FROM
-   PRWrk2 AS PRWork
-  LEFT OUTER JOIN PREmployee
-    ON PRWork.EmployeeID = PREmployee.PREmployeeID
-  LEFT OUTER JOIN NameBase
-    ON PREmployee.Employee_NameBaseID = NameBase.ID
-  LEFT JOIN PRState ON PRWork.EarnStateID=PRState.PRStateID
-  LEFT JOIN StateCodes ON PRState.StateID=StateCodes.ID
-WHERE PRWork.CompanyID = @plngCompanyID</value>
-  </data>
-  <data name="Dynamic.ResultSchemaSerializable" xml:space="preserve">
-    <value>PERhdGFTZXQgTmFtZT0iRHluYW1pYyI+PFZpZXcgTmFtZT0iZHNQUldPUksyIj48RmllbGQgTmFtZT0iSUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJQUkFjY3VtVW5QYWlkVGltZUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iRW1wbG95ZWVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9IkVhcm5TdGF0ZUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iVGF4aW5nU3RhdGVJRCIgVHlwZT0iSW50MzIiIC8+PEZpZWxkIE5hbWU9Ikdyb3NzUGF5IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJGSUNBQW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJNZWRpY2FyZUFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRklUQW1vdW50IiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTSVRBbW91bnQiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkZVVEFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iRklDQVN1YmoiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IlNVVEFtb3VudCIgVHlwZT0iRGVjaW1hbCIgLz48RmllbGQgTmFtZT0iTWVkaWNhcmVTdWJqIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJGSVRTdWJqIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTSVRTdWJqIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJGVVRTdWJqIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJTVVRTdWJqIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJXb3JrZXJzQ29tcFN1YmoiIFR5cGU9IkRlY2ltYWwiIC8+PEZpZWxkIE5hbWU9IkxpYWJTdWJqIiBUeXBlPSJEZWNpbWFsIiAvPjxGaWVsZCBOYW1lPSJDb21wYW55SUQiIFR5cGU9IkludDMyIiAvPjxGaWVsZCBOYW1lPSJFbXBsb3llZV9OYW1lQmFzZUlEIiBUeXBlPSJJbnQzMiIgLz48RmllbGQgTmFtZT0iTnVtYmVyIiBUeXBlPSJTdHJpbmciIC8+PEZpZWxkIE5hbWU9Ik5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iQ29udGFjdE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU29ydE5hbWUiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3RhdGVBYmJyZXYiIFR5cGU9IlN0cmluZyIgLz48RmllbGQgTmFtZT0iU3RhdGVDb2Rlc0lEIiBUeXBlPSJJbnQzMiIgLz48L1ZpZXc+PC9EYXRhU2V0Pg==</value>
-  </data>
 </root>
