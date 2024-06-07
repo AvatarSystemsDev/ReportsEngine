@@ -547,6 +547,12 @@
     <Compile Include="Reports\JIBReports\JIBAllocation.Designer.cs">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_DepartmentRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_DepartmentRegister.Designer.cs">
+      <DependentUpon>ExcelPR_DepartmentRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PRReports\ExcelPR_PreliminaryPaymentTimeRecordRecap.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2686,6 +2692,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\JIBAllocation.resx">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\ExcelPR_DepartmentRegister.resx">
+      <DependentUpon>ExcelPR_DepartmentRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\ExcelPR_PreliminaryPaymentTimeRecordRecap.resx">
       <DependentUpon>ExcelPR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
