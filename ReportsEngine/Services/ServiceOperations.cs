@@ -15,9 +15,9 @@ using WebApiODataServiceProject;
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf.Canvas.Parser.Listener;
-using DevExpress.XtraCharts.Native;
-using DevExpress.Office.Utils;
-
+using System.Text.RegularExpressions;
+using ReportsEngine.Reports.CommonReportsFunctions;
+using static DevExpress.Web.Internal.ColorPicker;
 
 namespace ReportsEngine.Services
 {
@@ -77,7 +77,6 @@ namespace ReportsEngine.Services
                         CustomData = base64String,
                     };
 
-                    //return SendEmail(emailAddress, emailSubject, emailMessage, attachment);
                 }
             }
             else if (customData.action == "export to excel")
@@ -94,11 +93,16 @@ namespace ReportsEngine.Services
                     XtraReport report = ReportsFactory.Reports[reportType](0, 0);
                     int companyID = customData.CompanyID;
                     string parameters = customData.reportParameters.ToString();
+                    if (parameters.Contains("pbooSearchSortParameters=false"))
+                    {
+                        ChangeToNonDescriptionParameters(ref parameters, reportType);
+                        parameters = parameters.Replace("pbooSearchSortParameters=false","");
+                    }
+                    parameters = parameters.Replace("pbooSearchSortParameters=true", "");
 
                     CustomReportStorageWebExtension.setReportParameters(report, HttpUtility.ParseQueryString(parameters), companyID);
 
                     XlsxExportOptions exportOptions = new XlsxExportOptions();
-                    //exportOptions.TextExportMode = TextExportMode.Value;
                     exportOptions.ShowGridLines = true;
 
                     report.ExportToXlsx(fileDownloadName, exportOptions);
@@ -112,10 +116,13 @@ namespace ReportsEngine.Services
                 }
                 catch
                 {
+                    string errorString = "Report Name : " + customData.reportNameExcel + Environment.NewLine + "Error getting report to Excel";
+                    Exception error = new Exception(errorString);
+                    DebugErrorHandler.Error_Occurred(error);
                     return new DocumentOperationResponse
                     {
                         Succeeded = false,
-                        Message = "Error getting report to excel",
+                        Message = "Error getting report to Excel",
                     };
                 }
             }
@@ -334,6 +341,28 @@ namespace ReportsEngine.Services
 
             public String Base64String { get; set; }
             public List<KeyValuePair<int, int>> keyValuePagesToTray { get; set; }
+        }
+        // I added this because initially there was only a single pair of the parameters with the 
+        private static void ChangeToNonDescriptionParameters(ref string parameters, string reportType)
+        {
+            XSelected_PrintOnPageLabelFunction.getSelectDescriptionParameter(ref parameters, FindParametersInQueryString(parameters, "pstrSelect"), reportType);
+            XSelected_PrintOnPageLabelFunction.getBeginningDescriptionParameter(ref parameters, FindParametersInQueryString(parameters, "pstrBeginning"), reportType);
+            XSelected_PrintOnPageLabelFunction.getEndingDescriptionParameter(ref parameters, FindParametersInQueryString(parameters, "pstrEnding"), reportType);
+            XSelected_PrintOnPageLabelFunction.getBeginningDescriptionParameter(ref parameters, FindParametersInQueryString(parameters, "plngBeginning"), reportType);
+            XSelected_PrintOnPageLabelFunction.getEndingDescriptionParameter(ref parameters, FindParametersInQueryString(parameters, "plngEnding"), reportType);
+        }
+        private static List<string> FindParametersInQueryString(string parameters, string parameterStringToSearchfor)
+        {
+            string pattern = @"(" + parameterStringToSearchfor + @"[^=]*)=";
+            MatchCollection matches = Regex.Matches(parameters, pattern);
+            List<string> result = new List<string>();
+
+            foreach (Match match in matches)
+            {
+                result.Add(match.Groups[1].Value);
+            }
+
+            return result;
         }
 
     }

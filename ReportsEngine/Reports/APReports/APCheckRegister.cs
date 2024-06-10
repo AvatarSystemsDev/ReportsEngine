@@ -1,4 +1,5 @@
-﻿using DevExpress.Data.Browsing;
+﻿using DevExpress.CodeParser;
+using DevExpress.Data.Browsing;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
 using ReportsEngine.Reports.ProcessReports;

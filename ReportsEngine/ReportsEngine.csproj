@@ -535,6 +535,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\CommonReportsFunctions\XSelected_PrintOnPageLabelFunction.cs" />
     <Compile Include="Reports\JIBReports\ExcelJIBAllocation.cs">
       <SubType>Component</SubType>
     </Compile>

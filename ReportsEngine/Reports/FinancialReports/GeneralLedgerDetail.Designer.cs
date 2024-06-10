@@ -213,6 +213,14 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings25 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings26 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings27 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings28 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings29 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings30 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings31 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings32 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings33 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings34 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings35 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
@@ -406,6 +414,14 @@
             this.pstrBeginningOwnerDescription = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingOwnerDescription = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOwnerDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningCostCenterDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingCostCenterDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectAccountingCenterDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningVendorDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingVendorDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectVendorDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngBeginningBatchDescription = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngEndingBatchDescription = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -433,37 +449,46 @@
         "ption)", typeof(string));
             queryParameter6.Name = "@pstrBeginningPropertyNumber";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrBeginningPropertyNumber", typeof(string));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?pstrBeginningPropertyNumber, ?pstrBeginningProper" +
+        "tyDescription)", typeof(string));
             queryParameter7.Name = "@pstrEndingPropertyNumber";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pstrEndingPropertyNumber", typeof(string));
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?pstrEndingPropertyNumber, ?pstrEndingPropertyDesc" +
+        "ription)", typeof(string));
             queryParameter8.Name = "@pstrBeginningOwnerNumber";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pstrBeginningOwnerNumber", typeof(string));
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?pstrBeginningOwnerNumber, ?pstrBeginningOwnerDesc" +
+        "ription)", typeof(string));
             queryParameter9.Name = "@pstrEndingOwnerNumber";
             queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?pstrEndingOwnerNumber", typeof(string));
+            queryParameter9.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?pstrEndingOwnerNumber, ?pstrEndingOwnerDescriptio" +
+        "n)", typeof(string));
             queryParameter10.Name = "@pstrBeginningVendorNumber";
             queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("?pstrBeginningVendorNumber", typeof(string));
+            queryParameter10.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?pstrBeginningVendorNumber, ?pstrBeginningVendorDe" +
+        "scription)", typeof(string));
             queryParameter11.Name = "@pstrEndingVendorNumber";
             queryParameter11.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter11.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
+            queryParameter11.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?pstrEndingVendorNumber, ?pstrEndingVendorDescript" +
+        "ion)", typeof(string));
             queryParameter12.Name = "@plngBookCodeID";
             queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngBookCodeID", typeof(int));
             queryParameter13.Name = "@pstrBeginningCostCenter";
             queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter13.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenter", typeof(string));
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?pstrBeginningCostCenter, ?pstrBeginningCostCenter" +
+        "Description)", typeof(string));
             queryParameter14.Name = "@pstrEndingCostCenter";
             queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter14.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
+            queryParameter14.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?pstrEndingCostCenter, ?pstrEndingCostCenterDescri" +
+        "ption)", typeof(string));
             queryParameter15.Name = "@plngBeginningBatch";
             queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter15.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatch", typeof(int));
+            queryParameter15.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?plngBeginningBatch, ?plngBeginningBatchDescriptio" +
+        "n)", typeof(int));
             queryParameter16.Name = "@plngEndingBatch";
             queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter16.Value = new DevExpress.DataAccess.Expression("?plngEndingBatch", typeof(int));
+            queryParameter16.Value = new DevExpress.DataAccess.Expression("Iif(?pbooSearchSortParameters, ?plngEndingBatch, ?plngEndingBatchDescription)", typeof(int));
             queryParameter17.Name = "@pbooShowYearEndClosingEntries";
             queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter17.Value = new DevExpress.DataAccess.Expression("?pbooShowYearEndClosingEntries", typeof(bool));
@@ -2808,7 +2833,8 @@
             // 
             this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "DSPropertiesLookup";
@@ -2821,7 +2847,8 @@
             // 
             this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings3.DataMember = "DSPropertiesLookup";
@@ -2834,7 +2861,8 @@
             // 
             this.pstrBeginningOwnerNumber.Description = "Beginning Owner";
             this.pstrBeginningOwnerNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
             dynamicListLookUpSettings4.DataMember = "DSOwnersReportLookup";
@@ -2865,14 +2893,14 @@
             // 
             this.pstrBeginningAccountNumber.Description = "Beginning Account";
             this.pstrBeginningAccountNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrBeginningAccountNumber.Name = "pstrBeginningAccountNumber";
             this.pstrBeginningAccountNumber.ValueInfo = "!";
             dynamicListLookUpSettings5.DataMember = "DSAccountLookup";
             dynamicListLookUpSettings5.DataSource = this.Dynamic;
             dynamicListLookUpSettings5.DisplayMember = "Description";
-            dynamicListLookUpSettings5.SortMember = "Number";
-            dynamicListLookUpSettings5.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings5.SortMember = null;
             dynamicListLookUpSettings5.ValueMember = "Number";
             this.pstrBeginningAccountNumber.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
@@ -2880,14 +2908,14 @@
             // 
             this.pstrEndingAccountNumber.Description = "Ending Account";
             this.pstrEndingAccountNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrEndingAccountNumber.Name = "pstrEndingAccountNumber";
             this.pstrEndingAccountNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZ";
             dynamicListLookUpSettings6.DataMember = "DSAccountLookup";
             dynamicListLookUpSettings6.DataSource = this.Dynamic;
             dynamicListLookUpSettings6.DisplayMember = "Description";
-            dynamicListLookUpSettings6.SortMember = "Number";
-            dynamicListLookUpSettings6.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings6.SortMember = null;
             dynamicListLookUpSettings6.ValueMember = "Number";
             this.pstrEndingAccountNumber.ValueSourceSettings = dynamicListLookUpSettings6;
             // 
@@ -2954,6 +2982,9 @@
             // pstrBeginningVendorNumber
             // 
             this.pstrBeginningVendorNumber.Description = "Beginning Entity";
+            this.pstrBeginningVendorNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
             this.pstrBeginningVendorNumber.ValueInfo = "!";
             dynamicListLookUpSettings7.DataMember = "DSVendorsReportLookup";
@@ -2967,6 +2998,9 @@
             // pstrEndingVendorNumber
             // 
             this.pstrEndingVendorNumber.Description = "Ending Entity";
+            this.pstrEndingVendorNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
             this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings8.DataMember = "DSVendorsReportLookup";
@@ -2981,7 +3015,8 @@
             // 
             this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters\n")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings9.DataMember = "DSOwnersReportLookup";
@@ -2995,6 +3030,9 @@
             // pstrBeginningCostCenter
             // 
             this.pstrBeginningCostCenter.Description = "Beginning Acct. Center";
+            this.pstrBeginningCostCenter.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrBeginningCostCenter.Name = "pstrBeginningCostCenter";
             this.pstrBeginningCostCenter.ValueInfo = "!";
             dynamicListLookUpSettings10.DataMember = "DSAcountingCenterReportLookup";
@@ -3008,6 +3046,9 @@
             // pstrEndingCostCenter
             // 
             this.pstrEndingCostCenter.Description = "Ending Acct. Center";
+            this.pstrEndingCostCenter.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
             this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
             dynamicListLookUpSettings11.DataMember = "DSAcountingCenterReportLookup";
@@ -3022,38 +3063,44 @@
             // 
             this.pstrSelectAccount.Description = "Select Account";
             this.pstrSelectAccount.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrSelectAccount.MultiValue = true;
             this.pstrSelectAccount.Name = "pstrSelectAccount";
             this.pstrSelectAccount.SelectAllValues = true;
+            this.pstrSelectAccount.Type = typeof(int);
             dynamicListLookUpSettings12.DataMember = "DSAccountLookup";
             dynamicListLookUpSettings12.DataSource = this.Dynamic;
             dynamicListLookUpSettings12.DisplayMember = "Description";
             dynamicListLookUpSettings12.FilterString = "[ID] <> 0";
-            dynamicListLookUpSettings12.SortMember = "Number";
-            dynamicListLookUpSettings12.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings12.SortMember = null;
             dynamicListLookUpSettings12.ValueMember = "ID";
             this.pstrSelectAccount.ValueSourceSettings = dynamicListLookUpSettings12;
             // 
             // pstrSelectAccountingCenter
             // 
             this.pstrSelectAccountingCenter.Description = "Select Acct. Center List";
+            this.pstrSelectAccountingCenter.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrSelectAccountingCenter.MultiValue = true;
             this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
             this.pstrSelectAccountingCenter.SelectAllValues = true;
+            this.pstrSelectAccountingCenter.Type = typeof(int);
             dynamicListLookUpSettings13.DataMember = "DSAcountingCenterReportLookup";
             dynamicListLookUpSettings13.DataSource = this.Dynamic;
             dynamicListLookUpSettings13.DisplayMember = "Name";
-            dynamicListLookUpSettings13.FilterString = null;
+            dynamicListLookUpSettings13.FilterString = "[ID] <> 0";
             dynamicListLookUpSettings13.SortMember = null;
-            dynamicListLookUpSettings13.ValueMember = "Number";
+            dynamicListLookUpSettings13.ValueMember = "ID";
             this.pstrSelectAccountingCenter.ValueSourceSettings = dynamicListLookUpSettings13;
             // 
             // pstrSelectOwner
             // 
             this.pstrSelectOwner.Description = "Select Owner";
             this.pstrSelectOwner.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters\n")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrSelectOwner.MultiValue = true;
             this.pstrSelectOwner.Name = "pstrSelectOwner";
             this.pstrSelectOwner.SelectAllValues = true;
@@ -3070,7 +3117,8 @@
             // 
             this.pstrSelectProperty.Description = "Select Property/Well";
             this.pstrSelectProperty.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrSelectProperty.MultiValue = true;
             this.pstrSelectProperty.Name = "pstrSelectProperty";
             this.pstrSelectProperty.SelectAllValues = true;
@@ -3086,15 +3134,19 @@
             // pstrSelectVendor
             // 
             this.pstrSelectVendor.Description = "Select Entity List";
+            this.pstrSelectVendor.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrSelectVendor.MultiValue = true;
             this.pstrSelectVendor.Name = "pstrSelectVendor";
             this.pstrSelectVendor.SelectAllValues = true;
+            this.pstrSelectVendor.Type = typeof(int);
             dynamicListLookUpSettings16.DataMember = "DSVendorsReportLookup";
             dynamicListLookUpSettings16.DataSource = this.Dynamic;
             dynamicListLookUpSettings16.DisplayMember = "Description";
-            dynamicListLookUpSettings16.FilterString = null;
+            dynamicListLookUpSettings16.FilterString = "[ID] <> 0";
             dynamicListLookUpSettings16.SortMember = null;
-            dynamicListLookUpSettings16.ValueMember = "Number";
+            dynamicListLookUpSettings16.ValueMember = "ID";
             this.pstrSelectVendor.ValueSourceSettings = dynamicListLookUpSettings16;
             // 
             // pbooShowYearEndClosingEntries
@@ -3107,6 +3159,9 @@
             // plngBeginningBatch
             // 
             this.plngBeginningBatch.Description = "Beginning Batch";
+            this.plngBeginningBatch.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.plngBeginningBatch.Name = "plngBeginningBatch";
             this.plngBeginningBatch.Type = typeof(int);
             this.plngBeginningBatch.ValueInfo = "-1";
@@ -3121,6 +3176,9 @@
             // plngEndingBatch
             // 
             this.plngEndingBatch.Description = "Ending Batch";
+            this.plngEndingBatch.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.plngEndingBatch.Name = "plngEndingBatch";
             this.plngEndingBatch.Type = typeof(int);
             this.plngEndingBatch.ValueInfo = "999999999";
@@ -4514,7 +4572,8 @@
             // 
             this.pstrBeginningAccountDescription.Description = "Beginning Account ";
             this.pstrBeginningAccountDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
             this.pstrBeginningAccountDescription.Name = "pstrBeginningAccountDescription";
             this.pstrBeginningAccountDescription.ValueInfo = "!";
             dynamicListLookUpSettings19.DataMember = "DSAccountLookup";
@@ -4529,7 +4588,8 @@
             // 
             this.pstrEndingAccountDescription.Description = "Ending Account";
             this.pstrEndingAccountDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
             this.pstrEndingAccountDescription.Name = "pstrEndingAccountDescription";
             this.pstrEndingAccountDescription.ValueInfo = "ZZZZZZZZZZ-ZZZZ";
             dynamicListLookUpSettings20.DataMember = "DSAccountLookup";
@@ -4544,10 +4604,12 @@
             // 
             this.pstrSelectAccountDescription.Description = "Select Account";
             this.pstrSelectAccountDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
             this.pstrSelectAccountDescription.MultiValue = true;
             this.pstrSelectAccountDescription.Name = "pstrSelectAccountDescription";
             this.pstrSelectAccountDescription.SelectAllValues = true;
+            this.pstrSelectAccountDescription.Type = typeof(int);
             dynamicListLookUpSettings21.DataMember = "DSAccountLookup";
             dynamicListLookUpSettings21.DataSource = this.Dynamic;
             dynamicListLookUpSettings21.DisplayMember = "DescriptionFirstThenNumber";
@@ -4570,9 +4632,10 @@
             // 
             // pstrBeginningPropertyDescription
             // 
-            this.pstrBeginningPropertyDescription.Description = "Beginning Property";
+            this.pstrBeginningPropertyDescription.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters\n")});
             this.pstrBeginningPropertyDescription.Name = "pstrBeginningPropertyDescription";
             this.pstrBeginningPropertyDescription.ValueInfo = "!";
             dynamicListLookUpSettings22.DataMember = "DSPropertiesLookup";
@@ -4586,9 +4649,10 @@
             // 
             // pstrEndingPropertyDescription
             // 
-            this.pstrEndingPropertyDescription.Description = "Ending Property Description";
+            this.pstrEndingPropertyDescription.Description = "Ending Property/Well";
             this.pstrEndingPropertyDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters\n")});
             this.pstrEndingPropertyDescription.Name = "pstrEndingPropertyDescription";
             this.pstrEndingPropertyDescription.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
             dynamicListLookUpSettings23.DataMember = "DSPropertiesLookup";
@@ -4602,9 +4666,10 @@
             // 
             // pstrSelectPropertyDescription
             // 
-            this.pstrSelectPropertyDescription.Description = "Select Property";
+            this.pstrSelectPropertyDescription.Description = "Select Property/Well";
             this.pstrSelectPropertyDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters\n")});
             this.pstrSelectPropertyDescription.MultiValue = true;
             this.pstrSelectPropertyDescription.Name = "pstrSelectPropertyDescription";
             this.pstrSelectPropertyDescription.SelectAllValues = true;
@@ -4622,14 +4687,16 @@
             // 
             this.pstrBeginningOwnerDescription.Description = "Beginning Owner";
             this.pstrBeginningOwnerDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrBeginningOwnerDescription.Name = "pstrBeginningOwnerDescription";
             this.pstrBeginningOwnerDescription.ValueInfo = "!";
             dynamicListLookUpSettings25.DataMember = "DSOwnersReportLookup";
             dynamicListLookUpSettings25.DataSource = this.Dynamic;
             dynamicListLookUpSettings25.DisplayMember = "DescriptionFirstThenNumber";
             dynamicListLookUpSettings25.FilterString = null;
-            dynamicListLookUpSettings25.SortMember = null;
+            dynamicListLookUpSettings25.SortMember = "DescriptionFirstThenNumber";
+            dynamicListLookUpSettings25.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
             dynamicListLookUpSettings25.ValueMember = "Number";
             this.pstrBeginningOwnerDescription.ValueSourceSettings = dynamicListLookUpSettings25;
             // 
@@ -4637,14 +4704,16 @@
             // 
             this.pstrEndingOwnerDescription.Description = "Ending Owner";
             this.pstrEndingOwnerDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrEndingOwnerDescription.Name = "pstrEndingOwnerDescription";
             this.pstrEndingOwnerDescription.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings26.DataMember = "DSOwnersReportLookup";
             dynamicListLookUpSettings26.DataSource = this.Dynamic;
             dynamicListLookUpSettings26.DisplayMember = "DescriptionFirstThenNumber";
             dynamicListLookUpSettings26.FilterString = null;
-            dynamicListLookUpSettings26.SortMember = null;
+            dynamicListLookUpSettings26.SortMember = "DescriptionFirstThenNumber";
+            dynamicListLookUpSettings26.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
             dynamicListLookUpSettings26.ValueMember = "Number";
             this.pstrEndingOwnerDescription.ValueSourceSettings = dynamicListLookUpSettings26;
             // 
@@ -4652,7 +4721,8 @@
             // 
             this.pstrSelectOwnerDescription.Description = "Select Owner";
             this.pstrSelectOwnerDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
             this.pstrSelectOwnerDescription.MultiValue = true;
             this.pstrSelectOwnerDescription.Name = "pstrSelectOwnerDescription";
             this.pstrSelectOwnerDescription.SelectAllValues = true;
@@ -4661,9 +4731,152 @@
             dynamicListLookUpSettings27.DataSource = this.Dynamic;
             dynamicListLookUpSettings27.DisplayMember = "DescriptionFirstThenNumber";
             dynamicListLookUpSettings27.FilterString = "[ID] <> 0";
-            dynamicListLookUpSettings27.SortMember = null;
+            dynamicListLookUpSettings27.SortMember = "DescriptionFirstThenNumber";
+            dynamicListLookUpSettings27.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
             dynamicListLookUpSettings27.ValueMember = "ID";
             this.pstrSelectOwnerDescription.ValueSourceSettings = dynamicListLookUpSettings27;
+            // 
+            // pstrBeginningCostCenterDescription
+            // 
+            this.pstrBeginningCostCenterDescription.Description = "Beginning Acct. Center";
+            this.pstrBeginningCostCenterDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters\n")});
+            this.pstrBeginningCostCenterDescription.Name = "pstrBeginningCostCenterDescription";
+            this.pstrBeginningCostCenterDescription.ValueInfo = "!";
+            dynamicListLookUpSettings28.DataMember = "DSAcountingCenterReportLookup";
+            dynamicListLookUpSettings28.DataSource = this.Dynamic;
+            dynamicListLookUpSettings28.DisplayMember = "Name";
+            dynamicListLookUpSettings28.FilterString = null;
+            dynamicListLookUpSettings28.SortMember = "DescriptionFirst";
+            dynamicListLookUpSettings28.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings28.ValueMember = "Number";
+            this.pstrBeginningCostCenterDescription.ValueSourceSettings = dynamicListLookUpSettings28;
+            // 
+            // pstrEndingCostCenterDescription
+            // 
+            this.pstrEndingCostCenterDescription.Description = "Ending Acct. Center";
+            this.pstrEndingCostCenterDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters\n")});
+            this.pstrEndingCostCenterDescription.Name = "pstrEndingCostCenterDescription";
+            this.pstrEndingCostCenterDescription.ValueInfo = "ZZZZ";
+            dynamicListLookUpSettings29.DataMember = "DSAcountingCenterReportLookup";
+            dynamicListLookUpSettings29.DataSource = this.Dynamic;
+            dynamicListLookUpSettings29.DisplayMember = "Name";
+            dynamicListLookUpSettings29.FilterString = null;
+            dynamicListLookUpSettings29.SortMember = "DescriptionFirst";
+            dynamicListLookUpSettings29.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings29.ValueMember = "Number";
+            this.pstrEndingCostCenterDescription.ValueSourceSettings = dynamicListLookUpSettings29;
+            // 
+            // pstrSelectAccountingCenterDescription
+            // 
+            this.pstrSelectAccountingCenterDescription.Description = "Select Acct. Center";
+            this.pstrSelectAccountingCenterDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters\n")});
+            this.pstrSelectAccountingCenterDescription.MultiValue = true;
+            this.pstrSelectAccountingCenterDescription.Name = "pstrSelectAccountingCenterDescription";
+            this.pstrSelectAccountingCenterDescription.SelectAllValues = true;
+            this.pstrSelectAccountingCenterDescription.Type = typeof(int);
+            dynamicListLookUpSettings30.DataMember = "DSAcountingCenterReportLookup";
+            dynamicListLookUpSettings30.DataSource = this.Dynamic;
+            dynamicListLookUpSettings30.DisplayMember = "Name";
+            dynamicListLookUpSettings30.FilterString = "[ID] <> 0";
+            dynamicListLookUpSettings30.SortMember = "DescriptionFirst";
+            dynamicListLookUpSettings30.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings30.ValueMember = "ID";
+            this.pstrSelectAccountingCenterDescription.ValueSourceSettings = dynamicListLookUpSettings30;
+            // 
+            // pstrBeginningVendorDescription
+            // 
+            this.pstrBeginningVendorDescription.Description = "Beginning Entity";
+            this.pstrBeginningVendorDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
+            this.pstrBeginningVendorDescription.Name = "pstrBeginningVendorDescription";
+            this.pstrBeginningVendorDescription.ValueInfo = "!";
+            dynamicListLookUpSettings31.DataMember = "DSVendorsReportLookup";
+            dynamicListLookUpSettings31.DataSource = this.Dynamic;
+            dynamicListLookUpSettings31.DisplayMember = "Description";
+            dynamicListLookUpSettings31.FilterString = null;
+            dynamicListLookUpSettings31.SortMember = "DescriptionFirst";
+            dynamicListLookUpSettings31.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings31.ValueMember = "Number";
+            this.pstrBeginningVendorDescription.ValueSourceSettings = dynamicListLookUpSettings31;
+            // 
+            // pstrEndingVendorDescription
+            // 
+            this.pstrEndingVendorDescription.Description = "Ending Entity";
+            this.pstrEndingVendorDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
+            this.pstrEndingVendorDescription.Name = "pstrEndingVendorDescription";
+            this.pstrEndingVendorDescription.ValueInfo = "ZZZZZZZZZZ";
+            dynamicListLookUpSettings32.DataMember = "DSVendorsReportLookup";
+            dynamicListLookUpSettings32.DataSource = this.Dynamic;
+            dynamicListLookUpSettings32.DisplayMember = "Description";
+            dynamicListLookUpSettings32.FilterString = null;
+            dynamicListLookUpSettings32.SortMember = "DescriptionFirst";
+            dynamicListLookUpSettings32.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings32.ValueMember = "Number";
+            this.pstrEndingVendorDescription.ValueSourceSettings = dynamicListLookUpSettings32;
+            // 
+            // pstrSelectVendorDescription
+            // 
+            this.pstrSelectVendorDescription.Description = "Select Entity";
+            this.pstrSelectVendorDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
+            this.pstrSelectVendorDescription.MultiValue = true;
+            this.pstrSelectVendorDescription.Name = "pstrSelectVendorDescription";
+            this.pstrSelectVendorDescription.SelectAllValues = true;
+            this.pstrSelectVendorDescription.Type = typeof(int);
+            dynamicListLookUpSettings33.DataMember = "DSVendorsReportLookup";
+            dynamicListLookUpSettings33.DataSource = this.Dynamic;
+            dynamicListLookUpSettings33.DisplayMember = "Description";
+            dynamicListLookUpSettings33.FilterString = "[ID] <> 0";
+            dynamicListLookUpSettings33.SortMember = "DescriptionFirst";
+            dynamicListLookUpSettings33.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings33.ValueMember = "ID";
+            this.pstrSelectVendorDescription.ValueSourceSettings = dynamicListLookUpSettings33;
+            // 
+            // plngBeginningBatchDescription
+            // 
+            this.plngBeginningBatchDescription.Description = "Beginning Batch";
+            this.plngBeginningBatchDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
+            this.plngBeginningBatchDescription.Name = "plngBeginningBatchDescription";
+            this.plngBeginningBatchDescription.Type = typeof(int);
+            this.plngBeginningBatchDescription.ValueInfo = "-1";
+            dynamicListLookUpSettings34.DataMember = "DSBatchReportLookup";
+            dynamicListLookUpSettings34.DataSource = this.Dynamic;
+            dynamicListLookUpSettings34.DisplayMember = "Description";
+            dynamicListLookUpSettings34.FilterString = null;
+            dynamicListLookUpSettings34.SortMember = "JustDescription";
+            dynamicListLookUpSettings34.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings34.ValueMember = "Number";
+            this.plngBeginningBatchDescription.ValueSourceSettings = dynamicListLookUpSettings34;
+            // 
+            // plngEndingBatchDescription
+            // 
+            this.plngEndingBatchDescription.Description = "Ending Batch";
+            this.plngEndingBatchDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters"),
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
+            this.plngEndingBatchDescription.Name = "plngEndingBatchDescription";
+            this.plngEndingBatchDescription.Type = typeof(int);
+            this.plngEndingBatchDescription.ValueInfo = "999999999";
+            dynamicListLookUpSettings35.DataMember = "DSBatchReportLookup";
+            dynamicListLookUpSettings35.DataSource = this.Dynamic;
+            dynamicListLookUpSettings35.DisplayMember = "Description";
+            dynamicListLookUpSettings35.FilterString = null;
+            dynamicListLookUpSettings35.SortMember = "JustDescription";
+            dynamicListLookUpSettings35.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+            dynamicListLookUpSettings35.ValueMember = "Number";
+            this.plngEndingBatchDescription.ValueSourceSettings = dynamicListLookUpSettings35;
             // 
             // GeneralLedgerDetail
             // 
@@ -4719,6 +4932,9 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccountingCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenterDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenterDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccountingCenterDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -4740,8 +4956,13 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendorDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatchDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatchDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClosingEntries, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowZeroBalance, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowPeriodTotals, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -4759,6 +4980,9 @@
             this.pstrBeginningCostCenter,
             this.pstrEndingCostCenter,
             this.pstrSelectAccountingCenter,
+            this.pstrBeginningCostCenterDescription,
+            this.pstrEndingCostCenterDescription,
+            this.pstrSelectAccountingCenterDescription,
             this.pstrDatabaseName,
             this.pstrServerName,
             this.plngUserID,
@@ -4780,8 +5004,13 @@
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
             this.pstrSelectVendor,
+            this.pstrBeginningVendorDescription,
+            this.pstrEndingVendorDescription,
+            this.pstrSelectVendorDescription,
             this.plngBeginningBatch,
             this.plngEndingBatch,
+            this.plngBeginningBatchDescription,
+            this.plngEndingBatchDescription,
             this.pbooShowYearEndClosingEntries,
             this.plngShowZeroBalance,
             this.pbooShowPeriodTotals,
@@ -4995,5 +5224,13 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningOwnerDescription;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingOwnerDescription;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwnerDescription;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenterDescription;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenterDescription;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccountingCenterDescription;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningVendorDescription;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingVendorDescription;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendorDescription;
+        private DevExpress.XtraReports.Parameters.Parameter plngBeginningBatchDescription;
+        private DevExpress.XtraReports.Parameters.Parameter plngEndingBatchDescription;
     }
 }
