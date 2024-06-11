@@ -208,6 +208,8 @@
             this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrCrossBandBox4 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1337,6 +1339,8 @@
             this.xrLabel28});
             this.ReportHeader.HeightF = 117.2267F;
             this.ReportHeader.Name = "ReportHeader";
+            this.ReportHeader.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
+            this.SubBand5});
             // 
             // xrLabel14
             // 
@@ -1672,6 +1676,23 @@
             this.xrLabel28.Text = " \r\nActive";
             this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomCenter;
             // 
+            // SubBand5
+            // 
+            this.SubBand5.HeightF = 8.25F;
+            this.SubBand5.Name = "SubBand5";
+            // 
+            // xrCrossBandBox4
+            // 
+            this.xrCrossBandBox4.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
+            this.xrCrossBandBox4.Borders = ((DevExpress.XtraPrinting.BorderSide)((DevExpress.XtraPrinting.BorderSide.Top | DevExpress.XtraPrinting.BorderSide.Bottom)));
+            this.xrCrossBandBox4.BorderWidth = 1F;
+            this.xrCrossBandBox4.EndBand = this.SubBand5;
+            this.xrCrossBandBox4.EndPointFloat = new DevExpress.Utils.PointFloat(0F, 4F);
+            this.xrCrossBandBox4.Name = "xrCrossBandBox4";
+            this.xrCrossBandBox4.StartBand = this.SubBand5;
+            this.xrCrossBandBox4.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrCrossBandBox4.WidthF = 770.0001F;
+            // 
             // ChartOfAccountsAmounts
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1687,6 +1708,7 @@
             this.Pulse,
             this.federationDataSource1});
             this.CrossBandControls.AddRange(new DevExpress.XtraReports.UI.XRCrossBandControl[] {
+            this.xrCrossBandBox4,
             this.xrCrossBandBox5,
             this.xrCrossBandBox1,
             this.xrCrossBandBox2});
@@ -1812,5 +1834,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel25;
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;
         private DevExpress.XtraReports.UI.XRLabel xrLabel28;
+        private DevExpress.XtraReports.UI.SubBand SubBand5;
+        private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox4;
     }
 }

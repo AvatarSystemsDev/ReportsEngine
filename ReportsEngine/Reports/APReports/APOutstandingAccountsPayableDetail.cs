@@ -14,7 +14,15 @@ namespace ReportsEngine.Reports.APReports
         {
             InitializeComponent();
             xrEntitiesSelected.BeforePrint += xrEntitiesSelected_BeforePrint;
+            this.BeforePrint += APPayablesDetail_BeforePrint;
         }
+
+        private void APPayablesDetail_BeforePrint(object sender, CancelEventArgs e)
+        {
+            string pbooshowDetail = Parameters["pbooShowDetail"].Value.ToString();
+            this.Landscape = pbooshowDetail == "True";
+        }
+
         private void xrEntitiesSelected_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;

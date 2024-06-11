@@ -89,6 +89,7 @@
             this.plngShowOnlyInvoicesOnHold = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooUseInvoiceDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowDetail = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -955,6 +956,13 @@
             this.pstrSelectVendor.MultiValue = true;
             this.pstrSelectVendor.Name = "pstrSelectVendor";
             // 
+            // pbooShowDetail
+            // 
+            this.pbooShowDetail.Description = "Parameter1";
+            this.pbooShowDetail.Name = "pbooShowDetail";
+            this.pbooShowDetail.Type = typeof(bool);
+            this.pbooShowDetail.ValueInfo = "False";
+            // 
             // ExcelAPPayablesDetail
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1006,7 +1014,8 @@
             this.pbooShowCriteria,
             this.plngShowOnlyInvoicesOnHold,
             this.pbooUseInvoiceDate,
-            this.pstrSelectVendor});
+            this.pstrSelectVendor,
+            this.pbooShowDetail});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1060,5 +1069,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
         private DevExpress.XtraReports.UI.XRLabel xrLabel25;
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowDetail;
     }
 }

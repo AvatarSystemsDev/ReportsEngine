@@ -1376,10 +1376,10 @@
     <Compile Include="Reports\JIBReports\JIBStatementFooter.Designer.cs">
       <DependentUpon>JIBStatementFooter.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\PAReports\ExcelLeaseOperatingStatement.cs">
+    <Compile Include="Reports\FinancialReports\ExcelLeaseOperatingStatement.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\PAReports\ExcelLeaseOperatingStatement.Designer.cs">
+    <Compile Include="Reports\FinancialReports\ExcelLeaseOperatingStatement.Designer.cs">
       <DependentUpon>ExcelLeaseOperatingStatement.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\PAReports\ExcelPA_AllocationDecimalList.cs">
@@ -1400,10 +1400,10 @@
     <Compile Include="Reports\PAReports\ExcelPA_NMC115.Designer.cs">
       <DependentUpon>ExcelPA_NMC115.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\PAReports\LeaseOperatingStatement.cs">
+    <Compile Include="Reports\FinancialReports\LeaseOperatingStatement.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Reports\PAReports\LeaseOperatingStatement.Designer.cs">
+    <Compile Include="Reports\FinancialReports\LeaseOperatingStatement.Designer.cs">
       <DependentUpon>LeaseOperatingStatement.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\PAReports\PA_AllocationDecimalList.cs">
@@ -3121,7 +3121,7 @@
     <EmbeddedResource Include="Reports\JIBReports\JIBStatementFooter.resx">
       <DependentUpon>JIBStatementFooter.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\PAReports\ExcelLeaseOperatingStatement.resx">
+    <EmbeddedResource Include="Reports\FinancialReports\ExcelLeaseOperatingStatement.resx">
       <DependentUpon>ExcelLeaseOperatingStatement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\ExcelPA_AllocationDecimalList.resx">
@@ -3133,7 +3133,7 @@
     <EmbeddedResource Include="Reports\PAReports\ExcelPA_NMC115.resx">
       <DependentUpon>ExcelPA_NMC115.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Reports\PAReports\LeaseOperatingStatement.resx">
+    <EmbeddedResource Include="Reports\FinancialReports\LeaseOperatingStatement.resx">
       <DependentUpon>LeaseOperatingStatement.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PAReports\PA_AllocationDecimalList.resx">
