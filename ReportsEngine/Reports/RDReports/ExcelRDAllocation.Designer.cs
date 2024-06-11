@@ -509,7 +509,7 @@
             this.xrLabel16.StylePriority.UsePadding = false;
             this.xrLabel16.StylePriority.UseTextAlignment = false;
             this.xrLabel16.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel16.TextFormatString = "{0:0.00000000;(0.00000000)}";
+            this.xrLabel16.TextFormatString = "{0:0.0000000000;(0.0000000000)}";
             // 
             // xrLabel17
             // 

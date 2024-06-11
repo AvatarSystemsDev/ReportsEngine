@@ -1122,9 +1122,9 @@
             this.xrLabel13.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel13.BorderWidth = 1F;
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Allocation Decimal: \' + FormatString(\'{0:0.00000000;(0.00000000)}\', [AllocationD" +
-                    "ecimal])"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Not IsNull([AllocationDecimal])")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Not IsNull([AllocationDecimal])"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'Allocation Decimal: \' + FormatString(\'{0:0.0000000000;(0.0000000000)}\', [Allocat" +
+                    "ionDecimal])")});
             this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel13.ForeColor = System.Drawing.Color.Black;
             this.xrLabel13.KeepTogether = true;

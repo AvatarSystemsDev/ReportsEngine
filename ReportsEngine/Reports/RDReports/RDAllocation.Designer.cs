@@ -158,7 +158,6 @@
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.groupHeaderBand2 = new DevExpress.XtraReports.UI.GroupHeaderBand();
-            this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel48 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
@@ -183,6 +182,7 @@
             this.xrLabel47 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel49 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
+            this.groupFooterBand2 = new DevExpress.XtraReports.UI.GroupFooterBand();
             this.xrLabel38 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel39 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
@@ -438,7 +438,7 @@
             this.xrLabel32.StylePriority.UsePadding = false;
             this.xrLabel32.StylePriority.UseTextAlignment = false;
             this.xrLabel32.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
-            this.xrLabel32.TextFormatString = "{0:0.00000000;(0.00000000)}";
+            this.xrLabel32.TextFormatString = "{0:0.0000000000;(0.0000000000)}";
             // 
             // xrLabel33
             // 
@@ -1087,19 +1087,6 @@
             this.groupHeaderBand2.Level = 1;
             this.groupHeaderBand2.Name = "groupHeaderBand2";
             // 
-            // groupFooterBand2
-            // 
-            this.groupFooterBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel38,
-            this.xrLabel39,
-            this.xrLabel40,
-            this.xrLabel42,
-            this.xrLabel43,
-            this.xrLabel44});
-            this.groupFooterBand2.HeightF = 20F;
-            this.groupFooterBand2.Level = 1;
-            this.groupFooterBand2.Name = "groupFooterBand2";
-            // 
             // xrLabel48
             // 
             this.xrLabel48.BackColor = System.Drawing.Color.Transparent;
@@ -1742,6 +1729,19 @@
             this.xrLabel7.StylePriority.UseTextAlignment = false;
             this.xrLabel7.Text = "Gross";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.BottomLeft;
+            // 
+            // groupFooterBand2
+            // 
+            this.groupFooterBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel38,
+            this.xrLabel39,
+            this.xrLabel40,
+            this.xrLabel42,
+            this.xrLabel43,
+            this.xrLabel44});
+            this.groupFooterBand2.HeightF = 20F;
+            this.groupFooterBand2.Level = 1;
+            this.groupFooterBand2.Name = "groupFooterBand2";
             // 
             // xrLabel38
             // 
