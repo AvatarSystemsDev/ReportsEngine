@@ -2739,7 +2739,7 @@
             this.xrCopyright.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", " \'  Copyright Avatar Systems, Inc.\'")});
             this.xrCopyright.KeepTogether = true;
-            this.xrCopyright.LocationFloat = new DevExpress.Utils.PointFloat(767.9127F, 21.70843F);
+            this.xrCopyright.LocationFloat = new DevExpress.Utils.PointFloat(768.9562F, 21.70843F);
             this.xrCopyright.Multiline = true;
             this.xrCopyright.Name = "xrCopyright";
             this.xrCopyright.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
@@ -2778,7 +2778,7 @@
             // 
             this.xrPageInfo1.BackColor = System.Drawing.Color.Transparent;
             this.xrPageInfo1.BorderColor = System.Drawing.Color.Transparent;
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(959.2731F, 10.00004F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(960.3166F, 10.00004F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(59.68317F, 11.7084F);
@@ -3079,7 +3079,7 @@
             // 
             // pstrSelectAccountingCenter
             // 
-            this.pstrSelectAccountingCenter.Description = "Select Acct. Center List";
+            this.pstrSelectAccountingCenter.Description = "Select Acct. Center";
             this.pstrSelectAccountingCenter.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
@@ -3133,7 +3133,7 @@
             // 
             // pstrSelectVendor
             // 
-            this.pstrSelectVendor.Description = "Select Entity List";
+            this.pstrSelectVendor.Description = "Select Entity";
             this.pstrSelectVendor.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters"),
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
@@ -3887,11 +3887,11 @@
             this.xrOwnersSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrOwnersSelected.ForeColor = System.Drawing.Color.Black;
             this.xrOwnersSelected.KeepTogether = true;
-            this.xrOwnersSelected.LocationFloat = new DevExpress.Utils.PointFloat(518.7112F, 22.95483F);
+            this.xrOwnersSelected.LocationFloat = new DevExpress.Utils.PointFloat(512.4615F, 22.95481F);
             this.xrOwnersSelected.Multiline = true;
             this.xrOwnersSelected.Name = "xrOwnersSelected";
             this.xrOwnersSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrOwnersSelected.SizeF = new System.Drawing.SizeF(182.1393F, 13.5417F);
+            this.xrOwnersSelected.SizeF = new System.Drawing.SizeF(188.389F, 13.5417F);
             this.xrOwnersSelected.StyleName = "xrCompanySubheaderStyle";
             this.xrOwnersSelected.StylePriority.UseBackColor = false;
             this.xrOwnersSelected.StylePriority.UseBorderColor = false;
@@ -3916,11 +3916,11 @@
             this.xrEntitiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrEntitiesSelected.ForeColor = System.Drawing.Color.Black;
             this.xrEntitiesSelected.KeepTogether = true;
-            this.xrEntitiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(518.7115F, 36.49653F);
+            this.xrEntitiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(512.4617F, 36.49651F);
             this.xrEntitiesSelected.Multiline = true;
             this.xrEntitiesSelected.Name = "xrEntitiesSelected";
             this.xrEntitiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrEntitiesSelected.SizeF = new System.Drawing.SizeF(182.1396F, 13.54164F);
+            this.xrEntitiesSelected.SizeF = new System.Drawing.SizeF(188.3893F, 13.54164F);
             this.xrEntitiesSelected.StyleName = "xrCompanySubheaderStyle";
             this.xrEntitiesSelected.StylePriority.UseBackColor = false;
             this.xrEntitiesSelected.StylePriority.UseBorderColor = false;
@@ -3945,11 +3945,11 @@
             this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel17.ForeColor = System.Drawing.Color.Black;
             this.xrLabel17.KeepTogether = true;
-            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(396.6989F, 36.49653F);
+            this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(396.6989F, 36.49651F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
             this.xrLabel17.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel17.SizeF = new System.Drawing.SizeF(122.0125F, 13.54164F);
+            this.xrLabel17.SizeF = new System.Drawing.SizeF(115.7625F, 13.54164F);
             this.xrLabel17.StyleName = "xrCompanySubheaderStyle";
             this.xrLabel17.StylePriority.UseBackColor = false;
             this.xrLabel17.StylePriority.UseBorderColor = false;
@@ -3974,11 +3974,11 @@
             this.xrLabel15.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel15.ForeColor = System.Drawing.Color.Black;
             this.xrLabel15.KeepTogether = true;
-            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(396.6989F, 22.95483F);
+            this.xrLabel15.LocationFloat = new DevExpress.Utils.PointFloat(396.6989F, 22.95481F);
             this.xrLabel15.Multiline = true;
             this.xrLabel15.Name = "xrLabel15";
             this.xrLabel15.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel15.SizeF = new System.Drawing.SizeF(122.0123F, 13.5417F);
+            this.xrLabel15.SizeF = new System.Drawing.SizeF(115.7623F, 13.5417F);
             this.xrLabel15.StyleName = "xrCompanySubheaderStyle";
             this.xrLabel15.StylePriority.UseBackColor = false;
             this.xrLabel15.StylePriority.UseBorderColor = false;
@@ -4003,11 +4003,11 @@
             this.xrPropertiesSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrPropertiesSelected.ForeColor = System.Drawing.Color.Black;
             this.xrPropertiesSelected.KeepTogether = true;
-            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(518.7112F, 9.413116F);
+            this.xrPropertiesSelected.LocationFloat = new DevExpress.Utils.PointFloat(512.4615F, 9.413083F);
             this.xrPropertiesSelected.Multiline = true;
             this.xrPropertiesSelected.Name = "xrPropertiesSelected";
             this.xrPropertiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(181.0975F, 13.54172F);
+            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(187.3473F, 13.54172F);
             this.xrPropertiesSelected.StyleName = "xrCompanySubheaderStyle";
             this.xrPropertiesSelected.StylePriority.UseBackColor = false;
             this.xrPropertiesSelected.StylePriority.UseBorderColor = false;
@@ -4143,16 +4143,14 @@
             this.xrLabel26.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
             this.xrLabel26.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel26.BorderWidth = 1F;
-            this.xrLabel26.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'For Properties/Wells:\'\n")});
             this.xrLabel26.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel26.ForeColor = System.Drawing.Color.Black;
             this.xrLabel26.KeepTogether = true;
-            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(396.6986F, 9.413116F);
+            this.xrLabel26.LocationFloat = new DevExpress.Utils.PointFloat(396.6986F, 9.413083F);
             this.xrLabel26.Multiline = true;
             this.xrLabel26.Name = "xrLabel26";
             this.xrLabel26.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel26.SizeF = new System.Drawing.SizeF(122.0126F, 13.54172F);
+            this.xrLabel26.SizeF = new System.Drawing.SizeF(115.7626F, 13.54172F);
             this.xrLabel26.StyleName = "xrCompanySubheaderStyle";
             this.xrLabel26.StylePriority.UseBackColor = false;
             this.xrLabel26.StylePriority.UseBorderColor = false;
@@ -4163,6 +4161,7 @@
             this.xrLabel26.StylePriority.UseForeColor = false;
             this.xrLabel26.StylePriority.UsePadding = false;
             this.xrLabel26.StylePriority.UseTextAlignment = false;
+            this.xrLabel26.Text = "For Properties/Wells:";
             this.xrLabel26.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // SubBand7
@@ -4688,7 +4687,7 @@
             this.pstrBeginningOwnerDescription.Description = "Beginning Owner";
             this.pstrBeginningOwnerDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
             this.pstrBeginningOwnerDescription.Name = "pstrBeginningOwnerDescription";
             this.pstrBeginningOwnerDescription.ValueInfo = "!";
             dynamicListLookUpSettings25.DataMember = "DSOwnersReportLookup";
@@ -4705,7 +4704,7 @@
             this.pstrEndingOwnerDescription.Description = "Ending Owner";
             this.pstrEndingOwnerDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
             this.pstrEndingOwnerDescription.Name = "pstrEndingOwnerDescription";
             this.pstrEndingOwnerDescription.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings26.DataMember = "DSOwnersReportLookup";
@@ -4722,7 +4721,7 @@
             this.pstrSelectOwnerDescription.Description = "Select Owner";
             this.pstrSelectOwnerDescription.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters\n"),
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?pbooSearchSortParameters")});
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "not ?pbooSearchSortParameters")});
             this.pstrSelectOwnerDescription.MultiValue = true;
             this.pstrSelectOwnerDescription.Name = "pstrSelectOwnerDescription";
             this.pstrSelectOwnerDescription.SelectAllValues = true;
@@ -4746,7 +4745,7 @@
             this.pstrBeginningCostCenterDescription.ValueInfo = "!";
             dynamicListLookUpSettings28.DataMember = "DSAcountingCenterReportLookup";
             dynamicListLookUpSettings28.DataSource = this.Dynamic;
-            dynamicListLookUpSettings28.DisplayMember = "Name";
+            dynamicListLookUpSettings28.DisplayMember = "DescriptionFirst";
             dynamicListLookUpSettings28.FilterString = null;
             dynamicListLookUpSettings28.SortMember = "DescriptionFirst";
             dynamicListLookUpSettings28.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
@@ -4763,7 +4762,7 @@
             this.pstrEndingCostCenterDescription.ValueInfo = "ZZZZ";
             dynamicListLookUpSettings29.DataMember = "DSAcountingCenterReportLookup";
             dynamicListLookUpSettings29.DataSource = this.Dynamic;
-            dynamicListLookUpSettings29.DisplayMember = "Name";
+            dynamicListLookUpSettings29.DisplayMember = "DescriptionFirst";
             dynamicListLookUpSettings29.FilterString = null;
             dynamicListLookUpSettings29.SortMember = "DescriptionFirst";
             dynamicListLookUpSettings29.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
@@ -4782,7 +4781,7 @@
             this.pstrSelectAccountingCenterDescription.Type = typeof(int);
             dynamicListLookUpSettings30.DataMember = "DSAcountingCenterReportLookup";
             dynamicListLookUpSettings30.DataSource = this.Dynamic;
-            dynamicListLookUpSettings30.DisplayMember = "Name";
+            dynamicListLookUpSettings30.DisplayMember = "DescriptionFirst";
             dynamicListLookUpSettings30.FilterString = "[ID] <> 0";
             dynamicListLookUpSettings30.SortMember = "DescriptionFirst";
             dynamicListLookUpSettings30.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
@@ -4799,7 +4798,7 @@
             this.pstrBeginningVendorDescription.ValueInfo = "!";
             dynamicListLookUpSettings31.DataMember = "DSVendorsReportLookup";
             dynamicListLookUpSettings31.DataSource = this.Dynamic;
-            dynamicListLookUpSettings31.DisplayMember = "Description";
+            dynamicListLookUpSettings31.DisplayMember = "DescriptionFirst";
             dynamicListLookUpSettings31.FilterString = null;
             dynamicListLookUpSettings31.SortMember = "DescriptionFirst";
             dynamicListLookUpSettings31.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
@@ -4816,7 +4815,7 @@
             this.pstrEndingVendorDescription.ValueInfo = "ZZZZZZZZZZ";
             dynamicListLookUpSettings32.DataMember = "DSVendorsReportLookup";
             dynamicListLookUpSettings32.DataSource = this.Dynamic;
-            dynamicListLookUpSettings32.DisplayMember = "Description";
+            dynamicListLookUpSettings32.DisplayMember = "DescriptionFirst";
             dynamicListLookUpSettings32.FilterString = null;
             dynamicListLookUpSettings32.SortMember = "DescriptionFirst";
             dynamicListLookUpSettings32.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
@@ -4835,7 +4834,7 @@
             this.pstrSelectVendorDescription.Type = typeof(int);
             dynamicListLookUpSettings33.DataMember = "DSVendorsReportLookup";
             dynamicListLookUpSettings33.DataSource = this.Dynamic;
-            dynamicListLookUpSettings33.DisplayMember = "Description";
+            dynamicListLookUpSettings33.DisplayMember = "DescriptionFirst";
             dynamicListLookUpSettings33.FilterString = "[ID] <> 0";
             dynamicListLookUpSettings33.SortMember = "DescriptionFirst";
             dynamicListLookUpSettings33.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
@@ -4853,7 +4852,7 @@
             this.plngBeginningBatchDescription.ValueInfo = "-1";
             dynamicListLookUpSettings34.DataMember = "DSBatchReportLookup";
             dynamicListLookUpSettings34.DataSource = this.Dynamic;
-            dynamicListLookUpSettings34.DisplayMember = "Description";
+            dynamicListLookUpSettings34.DisplayMember = "JustDescription";
             dynamicListLookUpSettings34.FilterString = null;
             dynamicListLookUpSettings34.SortMember = "JustDescription";
             dynamicListLookUpSettings34.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
@@ -4871,7 +4870,7 @@
             this.plngEndingBatchDescription.ValueInfo = "999999999";
             dynamicListLookUpSettings35.DataMember = "DSBatchReportLookup";
             dynamicListLookUpSettings35.DataSource = this.Dynamic;
-            dynamicListLookUpSettings35.DisplayMember = "Description";
+            dynamicListLookUpSettings35.DisplayMember = "JustDescription";
             dynamicListLookUpSettings35.FilterString = null;
             dynamicListLookUpSettings35.SortMember = "JustDescription";
             dynamicListLookUpSettings35.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
