@@ -33,36 +33,39 @@ namespace ReportsEngine.Reports.MDReports
         }
         private void LoadDefaultAFE(int databaseID, int companyID)
         {
-            DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo((int)databaseID);
-            //Get the Database ConnectionString based on plngDatabaseID
-            string connectionStringDynamic = $"Data Source={connectionStringParts.ServerName}; User ID={ReportUser}; Password={ReportUserPassword}; Initial Catalog={connectionStringParts.DatabaseName}; Persist Security Info=true; TrustServerCertificate=true;";
-
-            using (SqlConnection connection = new SqlConnection(connectionStringDynamic))
+            if (databaseID != 0 || companyID != 0)
             {
-                using (SqlCommand command = new SqlCommand("AFEs_ReportLookup", connection))
+                DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo((int)databaseID);
+                //Get the Database ConnectionString based on plngDatabaseID
+                string connectionStringDynamic = $"Data Source={connectionStringParts.ServerName}; User ID={ReportUser}; Password={ReportUserPassword}; Initial Catalog={connectionStringParts.DatabaseName}; Persist Security Info=true; TrustServerCertificate=true;";
+
+                using (SqlConnection connection = new SqlConnection(connectionStringDynamic))
                 {
-                    command.CommandType = CommandType.StoredProcedure;
-
-                    // Add parameters
-                    command.Parameters.Add(new SqlParameter("@plngCompanyID", SqlDbType.Int)).Value = companyID;
-
-                    connection.Open();
-                    try
+                    using (SqlCommand command = new SqlCommand("AFEs_ReportLookup", connection))
                     {
-                        using (SqlDataReader reader = command.ExecuteReader())
+                        command.CommandType = CommandType.StoredProcedure;
+
+                        // Add parameters
+                        command.Parameters.Add(new SqlParameter("@plngCompanyID", SqlDbType.Int)).Value = companyID;
+
+                        connection.Open();
+                        try
                         {
-                            if (reader.Read())
+                            using (SqlDataReader reader = command.ExecuteReader())
                             {
-                                // Assuming OverflowOptionCodeID is a column in the result set
-                                Parameter parameter = Parameters["plngReportGroupAFEID"];
-                                int AFEID = int.Parse(reader["ID"].ToString());
-                                parameter.Value = AFEID;
+                                if (reader.Read())
+                                {
+                                    Parameter parameter = Parameters["plngReportGroupAFEID"];
+                                    int AFEID = int.Parse(reader["ID"].ToString());
+                                    parameter.Value = AFEID;
+                                }
                             }
                         }
-                    }
-                    catch (SystemException ex)
-                    {
-                        throw new FaultException("Could not get report data." + ex.Message);
+                        catch (SystemException ex)
+                        {
+                            Console.WriteLine(ex.ToString());
+                            // Just means no data in AFE Company
+                        }
                     }
                 }
             }
