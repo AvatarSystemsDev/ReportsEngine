@@ -1,16 +1,10 @@
 ﻿using DevExpress.XtraReports.UI;
 using ReportsEngine.Services;
 using System;
-using System.Collections;
-using System.ComponentModel;
 using System.Data.SqlClient;
 using System.Data;
-using System.Drawing;
-using System.ServiceModel;
-using WebMatrix.Data;
 using DevExpress.XtraReports.Parameters;
-using static DevExpress.Web.Internal.ColorPicker;
-using DevExpress.Web.Internal.XmlProcessor;
+using System.Collections.Generic;
 
 namespace ReportsEngine.Reports.MDReports
 {
@@ -41,23 +35,28 @@ namespace ReportsEngine.Reports.MDReports
 
                 using (SqlConnection connection = new SqlConnection(connectionStringDynamic))
                 {
-                    using (SqlCommand command = new SqlCommand("AFEs_ReportLookup", connection))
+                    using (SqlCommand command = new SqlCommand("ReportGroup_ReportLookup", connection))
                     {
                         command.CommandType = CommandType.StoredProcedure;
 
                         // Add parameters
                         command.Parameters.Add(new SqlParameter("@plngCompanyID", SqlDbType.Int)).Value = companyID;
+                        command.Parameters.Add(new SqlParameter("@plngReportGroupMasterID", SqlDbType.Int)).Value = 7;
 
                         connection.Open();
                         try
                         {
                             using (SqlDataReader reader = command.ExecuteReader())
                             {
+                                reader.Read(); //Get past (First)
                                 if (reader.Read())
                                 {
                                     Parameter parameter = Parameters["plngReportGroupAFEID"];
                                     int AFEID = int.Parse(reader["ID"].ToString());
-                                    parameter.Value = AFEID;
+                                    if (AFEID > 0)
+                                    {
+                                        parameter.Value = AFEID;
+                                    }
                                 }
                             }
                         }
