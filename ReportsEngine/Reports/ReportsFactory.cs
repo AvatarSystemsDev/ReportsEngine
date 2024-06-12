@@ -310,7 +310,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPreVoidCheckReport", (databaseID, companyID) => new PreVoidCheckReport());
             Reports.Add("AFEEstimateSummary", (databaseID, companyID) => new AFEEstimateSummary());
             Reports.Add("ExcelAFEEstimateSummary", (databaseID, companyID) => new ExcelAFEEstimateSummary());
-            Reports.Add("AFEDetail", (databaseID, companyID) => new DetailAFE());
+            Reports.Add("AFEDetail", (databaseID, companyID) => new DetailAFE(databaseID ?? 0, companyID ?? 0));
             Reports.Add("ExcelAFEDetail", (databaseID, companyID) => new ExcelAFEDetail());
             Reports.Add("AFEBudgetReceivables", (databaseID, companyID) => new AFEBudgetReceivables());
             Reports.Add("ExcelAFEBudgetReceivables", (databaseID, companyID) => new ExcelAFEBudgetReceivables());

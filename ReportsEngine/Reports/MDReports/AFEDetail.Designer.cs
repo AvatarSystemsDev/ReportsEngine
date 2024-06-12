@@ -664,7 +664,7 @@
             this.xrLabel12.BorderWidth = 1F;
             this.xrLabel12.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Bold", "[IsHeaderRow] OR [WillPrintAsTotal]\n"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PercentageVariance]/100")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PercentageVariance]")});
             this.xrLabel12.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel12.KeepTogether = true;
             this.xrLabel12.LocationFloat = new DevExpress.Utils.PointFloat(505F, 0F);
