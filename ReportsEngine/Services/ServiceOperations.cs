@@ -17,7 +17,6 @@ using iText.Kernel.Pdf.Canvas.Parser;
 using iText.Kernel.Pdf.Canvas.Parser.Listener;
 using System.Text.RegularExpressions;
 using ReportsEngine.Reports.CommonReportsFunctions;
-using static DevExpress.Web.Internal.ColorPicker;
 
 namespace ReportsEngine.Services
 {
@@ -29,19 +28,64 @@ namespace ReportsEngine.Services
             return true;
         }
 
+        // This method is called via PerformCustomDocumentOperation
         public override DocumentOperationResponse PerformOperation(DocumentOperationRequest request, PrintingSystemBase initialPrintingSystem, PrintingSystemBase printingSystemWithEditingFields)
         {
-            string customDataJson = request.CustomData;
-            dynamic customData = JsonConvert.DeserializeObject(customDataJson);
+            string customDataJson;
+            dynamic customData;
+            // CustomData is equal to whatever you passed to passed in PerformCustomDocumentOperation.
+            try
+            {
+                customDataJson = request.CustomData;
+            }
+            catch (Exception ex)
+            {
+                Exception e = new Exception("Could not perform document operation. No CustomData passed to ServiceOperations " + Environment.NewLine + ex.Message);
+                DebugErrorHandler.Error_Occurred(e);
+                return new DocumentOperationResponse
+                {
+                    Succeeded = false,
+                    Message = "Error performing operation. Please contact customer support."
+                };
+            }
+            // Custom Data should be a JSON string string.
+            try
+            {
+                customData = JsonConvert.DeserializeObject(customDataJson);
+            }
+            catch (Exception ex)
+            {
+                Exception e = new Exception("Could not perform document operation. Error desearilizing request.CustomData in ServiceOperations. " + Environment.NewLine + "Object string attempted to be deserialized:" + customDataJson + Environment.NewLine +"Error: " + ex.Message);
+                DebugErrorHandler.Error_Occurred(e);
+                return new DocumentOperationResponse
+                {
+                    Succeeded = false,
+                    Message = "Error performing operation. Please contact customer support."
+                };
+            }
+            // Checking if action is passed in JSON string.
+            string customDataAction;
+            try
+            {
+                customDataAction = customData.action;
+            }
+            catch (Exception ex)
+            {
+                Exception e = new Exception("No Action sent in PerformCustomDocumentOperation JSON string. Custom Operation set up in ServiceOperations. Add operation to PerformOperation method." + Environment.NewLine + ex.Message);
+                DebugErrorHandler.Error_Occurred(e);
+                return new DocumentOperationResponse
+                {
+                    Succeeded = false,
+                    Message = "Invalid Operation.",
+                };
+            }
+
             if (customData.action == "email")
             {
                 using (var stream = new MemoryStream())
                 {
                     printingSystemWithEditingFields.ExportToPdf(stream);
                     stream.Position = 0;
-                    //var mailAddress = new MailAddress(request.CustomData);
-                    //var recipients = new MailAddressCollection() { mailAddress };
-                    //var emailDataJson = request.CustomData; // Assuming request.CustomData is the JSON string
 
                     string emailAddress = customData.emailAddress;
                     string emailMessage = customData.emailMessage;
@@ -186,13 +230,17 @@ namespace ReportsEngine.Services
                     };
                 }
             }
+            // No action created
             else
             {
-                string message = "Invalid custom operation. Custom Operation set up in ServiceOperations";
+                // If you got here, it was because you did not pass a valid action into the JSON string in PerformCustomDocumentOperation
+                string message = "Invalid custom operation. Custom Operation set up in ServiceOperations. Add operation to PerformOperation method. Custom action passed: " + customData.action;
+                Exception e = new Exception(message);
+                DebugErrorHandler.Error_Occurred(e);
                 return new DocumentOperationResponse
                 {
                     Succeeded = false,
-                    Message = message,
+                    Message = "Invalid Operation.",
                 };
             }
         }
@@ -224,8 +272,10 @@ namespace ReportsEngine.Services
                 {
                     EmailSystem.SendEmail(recipient, subject, messageBody, attachment);
                 }
-                catch (Exception)
+                catch (Exception ex)
                 {
+                    Exception e = new Exception("Could not perform SendEmail operation in ServiceOperations. " + Environment.NewLine + "Error sending mail to recipient " + currentRecipient + Environment.NewLine + ex.Message);
+                    DebugErrorHandler.Error_Occurred(e);
                     message += " " + currentRecipient;
                     SentToEveryone = false;
                 }

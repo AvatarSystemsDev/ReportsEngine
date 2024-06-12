@@ -1,7 +1,4 @@
 ﻿using DevExpress.DataAccess.ConnectionParameters;
-using DevExpress.DataAccess.Native.Web;
-using DevExpress.DataProcessing.InMemoryDataProcessor;
-using DevExpress.PivotGrid.OLAP;
 using DevExpress.XtraReports;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
@@ -130,10 +127,23 @@ namespace ReportsEngine.Services
             }
             catch (SystemException ex)
             {
-                throw new FaultException("Could not get report data." + ex.Message);
+                FaultException couldNotGetReportData =  new FaultException("Could not get report data." + ex.Message);
+                DebugErrorHandler.Error_Occurred(couldNotGetReportData);
+                throw new FaultException("Could not get report data.");
             }
-            throw new FaultException(
-                string.Format("Could not find report '{0}'.", url));
+            // Will only get to this point if there is an error.
+            // I don't just want to return a message with the query string.
+            FaultException faultException = new FaultException(string.Format("Could not find report '{0}'.", url));
+            DebugErrorHandler.Error_Occurred(faultException);
+
+            // Get report name from query string.
+            string pattern = @"[&?]pstrReportName=([^&]+)"; 
+            Match match = Regex.Match(url, pattern);
+            if (match.Success) // report name found
+            {
+                throw new FaultException("Could not get report data: " + match.Groups[1].Value);
+            }
+            throw new FaultException("Could not get report data.");
         }
 
         public override Dictionary<string, string> GetUrls()
@@ -219,205 +229,211 @@ namespace ReportsEngine.Services
                         // Handle general exceptions
                         Console.WriteLine("General Error: " + ex.Message);
                     }
-
-                    ///
                 }
             }
 
-
-            foreach (string parameterName in parameters.AllKeys)
+            try
             {
-                if (parameterName == null)
+                foreach (string parameterName in parameters.AllKeys)
                 {
-                    continue;
-                }
-                if (parameterName == "plngDatabaseID")
-                {
-                    DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();
-                    string currentDatabaseID = parameters["plngDatabaseID"];
-                    //Get the Database ConnectionString based on plngDatabaseID
-                    connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
-                    report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
-                    report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
-                    if (ParameterExists(report.Parameters, "plngDatabaseID"))
+                    if (parameterName == null)
                     {
-                        report.Parameters["plngDatabaseID"].Value = int.Parse(currentDatabaseID.ToString());
+                        continue;
                     }
-                    if (report.Parameters["plngCompanyID"] != null)
+                    if (parameterName == "plngDatabaseID")
                     {
-                        report.Parameters["plngCompanyID"].Value = companyid;
-                    }
-
-                    string connectionStringDynamic = $"Data Source={report.Parameters["pstrServerName"].Value}; User ID={ReportUser}; Password={ReportUserPassword}; Initial Catalog={report.Parameters["pstrDatabaseName"].Value}; Persist Security Info=true; TrustServerCertificate=true;";
-                    string connectionStringPulse = $"Data Source={PulseServerName}; User ID={Pulseuser}; Password={Pulsepassword}; Initial Catalog={PulseDatabaseName}; Persist Security Info=true; TrustServerCertificate=true;";
-
-                    var dataSources = DataSourceManager.GetDataSources(report, true);
-                    foreach (var dataSource in dataSources)
-                    {
-                        if (dataSource is DevExpress.DataAccess.Sql.SqlDataSource sds && !String.IsNullOrEmpty(sds.ConnectionName))
+                        DynamicConnectionHandler.ConnectionStringInfo connectionStringParts = new DynamicConnectionHandler.ConnectionStringInfo();
+                        string currentDatabaseID = parameters["plngDatabaseID"];
+                        //Get the Database ConnectionString based on plngDatabaseID
+                        connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
+                        report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
+                        report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+                        if (ParameterExists(report.Parameters, "plngDatabaseID"))
                         {
-                            if (sds.Name == "Dynamic")
-                            {
-                                OlapConnectionParameters olapParams = new OlapConnectionParameters();
-                                olapParams.ConnectionString = connectionStringDynamic;
-                                sds.ConnectionParameters = olapParams;
-                            }
-                            else if (sds.Name == "Pulse")
-                            {
-                                OlapConnectionParameters olapParams = new OlapConnectionParameters();
-                                olapParams.ConnectionString = connectionStringPulse;
-                                sds.ConnectionParameters = olapParams;
-                            }
+                            report.Parameters["plngDatabaseID"].Value = int.Parse(currentDatabaseID.ToString());
                         }
-                    }
-                }
-                else if (parameterName == "pstrSubtitle")
-                {
-                    report.Parameters["Subtitle"].Value = parameters["pstrSubtitle"].ToString();
-                }
-                else if (parameterName == "pstrParamVisibility")
-                {
-                    List<Parameter> reportParameters = report.Parameters.Cast<Parameter>().ToList(); //The unsorted parameters from the report
-                    string[] hiddenIndexes = Regex.Split(parameters["pstrParamVisibility"], "-");
-                    if (hiddenIndexes.Length > 0)
-                    {
-                        for (int i = 0; i < hiddenIndexes.Length; i++) //for each index seperated by -
+                        if (report.Parameters["plngCompanyID"] != null)
                         {
-                            string indexWithBool = hiddenIndexes[i]; //get the string
-                            string strIndexOnly = indexWithBool.Substring(0, indexWithBool.Length - 1); //get just the index part of the string
-                            int indexOnly = Int32.Parse(strIndexOnly); //convert the index to an int
-                            string visiBoolChar = indexWithBool.Substring(indexWithBool.Length - 1, 1); //get the T or F at the end of the string.
-                            bool visiBool = true; //default visible value. If visiBoolChar is not defined, it will always be visible.
-                            if (visiBoolChar.ToUpper() == "T")
-                                visiBool = true;
-                            else if (visiBoolChar.ToUpper() == "F")
-                                visiBool = false;
+                            report.Parameters["plngCompanyID"].Value = companyid;
+                        }
 
-                            //NOTE indexOnly is incremented by the 3 hardcoded parameters always passed to reports
-                            string parameterKey = parameters.GetKey(indexOnly + 3);
-                            var foundParameter = reportParameters.Find(param => param.Name == parameterKey);
-                            if (foundParameter != null)
+                        string connectionStringDynamic = $"Data Source={report.Parameters["pstrServerName"].Value}; User ID={ReportUser}; Password={ReportUserPassword}; Initial Catalog={report.Parameters["pstrDatabaseName"].Value}; Persist Security Info=true; TrustServerCertificate=true;";
+                        string connectionStringPulse = $"Data Source={PulseServerName}; User ID={Pulseuser}; Password={Pulsepassword}; Initial Catalog={PulseDatabaseName}; Persist Security Info=true; TrustServerCertificate=true;";
+
+                        var dataSources = DataSourceManager.GetDataSources(report, true);
+                        foreach (var dataSource in dataSources)
+                        {
+                            if (dataSource is DevExpress.DataAccess.Sql.SqlDataSource sds && !String.IsNullOrEmpty(sds.ConnectionName))
                             {
-                                foundParameter.Visible = visiBool;
+                                if (sds.Name == "Dynamic")
+                                {
+                                    OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                    olapParams.ConnectionString = connectionStringDynamic;
+                                    sds.ConnectionParameters = olapParams;
+                                }
+                                else if (sds.Name == "Pulse")
+                                {
+                                    OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                    olapParams.ConnectionString = connectionStringPulse;
+                                    sds.ConnectionParameters = olapParams;
+                                }
                             }
                         }
                     }
-                }
-                else if (parameterName == "pbooAwaitParameterInput")
-                {
-                    AwaitParameterInputPassed = true;
-                    var RequestParametersAwait = parameters["pbooAwaitParameterInput"].ToString().ToLower();
-                    report.RequestParameters = RequestParametersAwait == "true";
-                    bool parameterExists = false;
-                    foreach (var param in report.Parameters)
+                    else if (parameterName == "pstrSubtitle")
                     {
-                        if (param.Name == "pbooAwaitParameterInput")
+                        report.Parameters["Subtitle"].Value = parameters["pstrSubtitle"].ToString();
+                    }
+                    else if (parameterName == "pstrParamVisibility")
+                    {
+                        List<Parameter> reportParameters = report.Parameters.Cast<Parameter>().ToList(); //The unsorted parameters from the report
+                        string[] hiddenIndexes = Regex.Split(parameters["pstrParamVisibility"], "-");
+                        if (hiddenIndexes.Length > 0)
                         {
-                            parameterExists = true;
-                            break;
+                            for (int i = 0; i < hiddenIndexes.Length; i++) //for each index seperated by -
+                            {
+                                string indexWithBool = hiddenIndexes[i]; //get the string
+                                string strIndexOnly = indexWithBool.Substring(0, indexWithBool.Length - 1); //get just the index part of the string
+                                int indexOnly = Int32.Parse(strIndexOnly); //convert the index to an int
+                                string visiBoolChar = indexWithBool.Substring(indexWithBool.Length - 1, 1); //get the T or F at the end of the string.
+                                bool visiBool = true; //default visible value. If visiBoolChar is not defined, it will always be visible.
+                                if (visiBoolChar.ToUpper() == "T")
+                                    visiBool = true;
+                                else if (visiBoolChar.ToUpper() == "F")
+                                    visiBool = false;
+
+                                //NOTE indexOnly is incremented by the 3 hardcoded parameters always passed to reports
+                                string parameterKey = parameters.GetKey(indexOnly + 3);
+                                var foundParameter = reportParameters.Find(param => param.Name == parameterKey);
+                                if (foundParameter != null)
+                                {
+                                    foundParameter.Visible = visiBool;
+                                }
+                            }
                         }
                     }
+                    else if (parameterName == "pbooAwaitParameterInput")
+                    {
+                        AwaitParameterInputPassed = true;
+                        var RequestParametersAwait = parameters["pbooAwaitParameterInput"].ToString().ToLower();
+                        report.RequestParameters = RequestParametersAwait == "true";
+                        bool parameterExists = false;
+                        foreach (var param in report.Parameters)
+                        {
+                            if (param.Name == "pbooAwaitParameterInput")
+                            {
+                                parameterExists = true;
+                                break;
+                            }
+                        }
 
-                    if (parameterExists)
+                        if (parameterExists)
+                        {
+                            try
+                            {
+                                report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                            }
+                            catch (Exception ex)
+                            {
+
+                            }
+                        }
+                    }
+                    else if (parameterName.Contains("pstrReportName"))
+                    {
+                        report.DisplayName = parameters.Get(parameterName).ToString();
+                        report.Name = parameters.Get(parameterName).ToString();
+                    }
+                    else if (parameterName.Contains("pstrSelect")) // I've made all my multivariate parameters with this naming convention. I know that sucks.
+                    {
+                        //string[] multivariateParameter = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));
+                        // report.Parameters[parameterName].Value = multivariateParameter;
+
+                        JToken token = JToken.Parse(parameters.Get(parameterName));
+                        string jsonInput = parameters.Get(parameterName);
+                        switch (token.Type)
+                        {
+                            case JTokenType.Array:
+                                switch (report.Parameters[parameterName].Type.Name)
+                                {
+                                    case "Int32": report.Parameters[parameterName].Value = token.ToObject<int[]>(); break;
+                                    case "String": report.Parameters[parameterName].Value = token.ToObject<string[]>(); break;
+                                    case "Bool": report.Parameters[parameterName].Value = token.ToObject<bool[]>(); break;
+                                    case "Float": report.Parameters[parameterName].Value = token.ToObject<float[]>(); break;
+                                    case "DateTime": report.Parameters[parameterName].Value = token.ToObject<DateTime[]>(); break;
+                                    default: report.Parameters[parameterName].Value = token.ToObject<string[]>(); break;
+                                }
+                                break;
+
+                            case JTokenType.Object:
+                                JObject jsonObject = JObject.Parse(jsonInput);
+                                List<string> values = new List<string>();
+
+                                // Iterate through the properties of the object
+                                foreach (var prop in jsonObject.Properties())
+                                {
+                                    // Add the property value to the list
+                                    values.Add(prop.Value.ToString());
+                                }
+
+                                // Set the parameter value as an array of strings
+                                report.Parameters[parameterName].Value = values.ToArray();
+                                break;
+                            case JTokenType.Integer: report.Parameters[parameterName].Value = new int[] { int.Parse(token.ToString()) }; break;
+                            case JTokenType.Boolean: report.Parameters[parameterName].Value = new bool[] { bool.Parse(token.ToString()) }; break;
+                            case JTokenType.Date: report.Parameters[parameterName].Value = new DateTime[] { DateTime.Parse(token.ToString()) }; break;
+                            case JTokenType.Float: report.Parameters[parameterName].Value = new float[] { float.Parse(token.ToString()) }; break;
+                            default: report.Parameters[parameterName].Value = new string[] { token.ToString() }; break;
+                        }
+
+                    }
+                    else if (parameterName == "plngUserID")
                     {
                         try
                         {
-                            report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                            report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type); // Run Report button passes in User ID parameter but that is not usually necessary on the report. Many reports do not have user ID and that causes an error.
                         }
-                        catch (Exception ex)
+                        catch
                         {
 
                         }
                     }
-                }
-                else if (parameterName.Contains("pstrReportName"))
-                {
-                    report.DisplayName = parameters.Get(parameterName).ToString();
-                    report.Name = parameters.Get(parameterName).ToString();
-                }
-                else if (parameterName.Contains("pstrSelect")) // I've made all my multivariate parameters with this naming convention. I know that sucks.
-                {
-                    //string[] multivariateParameter = JsonConvert.DeserializeObject<string[]>(parameters.Get(parameterName));
-                    // report.Parameters[parameterName].Value = multivariateParameter;
-                    
-                    JToken token = JToken.Parse(parameters.Get(parameterName));
-                    string jsonInput = parameters.Get(parameterName);
-                    switch (token.Type)
+                    else if (report.Parameters[parameterName] is null)
                     {
-                        case JTokenType.Array:
-                            switch (report.Parameters[parameterName].Type.Name)
-                            {
-                                case "Int32": report.Parameters[parameterName].Value = token.ToObject<int[]>(); break;
-                                case "String": report.Parameters[parameterName].Value = token.ToObject<string[]>(); break;
-                                case "Bool": report.Parameters[parameterName].Value = token.ToObject<bool[]>(); break;
-                                case "Float":  report.Parameters[parameterName].Value = token.ToObject<float[]>(); break;
-                                case "DateTime": report.Parameters[parameterName].Value = token.ToObject<DateTime[]>(); break;
-                                default: report.Parameters[parameterName].Value = token.ToObject<string[]>(); break;
-                            }
-                            break;
-
-                        case JTokenType.Object:
-                            JObject jsonObject = JObject.Parse(jsonInput);
-                            List<string> values = new List<string>();
-
-                            // Iterate through the properties of the object
-                            foreach (var prop in jsonObject.Properties())
-                            {
-                                // Add the property value to the list
-                                values.Add(prop.Value.ToString());
-                            }
-
-                            // Set the parameter value as an array of strings
-                            report.Parameters[parameterName].Value = values.ToArray();
-                            break;
-                        case JTokenType.Integer: report.Parameters[parameterName].Value = new int[] { int.Parse(token.ToString()) }; break;
-                        case JTokenType.Boolean: report.Parameters[parameterName].Value = new bool[] { bool.Parse(token.ToString()) }; break;
-                        case JTokenType.Date: report.Parameters[parameterName].Value = new DateTime[] { DateTime.Parse(token.ToString()) }; break;
-                        case JTokenType.Float: report.Parameters[parameterName].Value = new float[] { float.Parse(token.ToString()) }; break;
-                        default: report.Parameters[parameterName].Value = new string[] { token.ToString() }; break;
+                        throw new Exception("Parameter " + parameterName + " passed to report is invalid. Please contact customer support.");
                     }
-
-                }
-                else if (parameterName == "plngUserID")
-                {
-                    try
+                    else if (report.Parameters[parameterName].Type == typeof(DateTime))
                     {
-                        report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type); // Run Report button passes in User ID parameter but that is not usually necessary on the report. Many reports do not have user ID and that causes an error.
+                        string dateTimeString = parameters.Get(parameterName).ToString();
+                        DateTime dateTimeParameter = DateTime.Parse(dateTimeString);
+                        report.Parameters[parameterName].Value = dateTimeParameter;
                     }
-                    catch
+                    else
                     {
-
+                        switch (parameters.Get(parameterName)) // Not always a string
+                        {
+                            case null:
+                            case "null":
+                            case "undefined":
+                                report.Parameters[parameterName].Value = null;
+                                break;
+                            default:
+                                report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);
+                                break;
+                        }
                     }
                 }
-                else if (report.Parameters[parameterName] is null)
+
+                if (!AwaitParameterInputPassed)
                 {
-                    throw new Exception("Parameter passed to report is invalid. Please contact customer support.");
+                    report.RequestParameters = false;
                 }
-                else if (report.Parameters[parameterName].Type == typeof(DateTime))
-                {
-                    string dateTimeString = parameters.Get(parameterName).ToString();
-                    DateTime dateTimeParameter = DateTime.Parse(dateTimeString);
-                    report.Parameters[parameterName].Value = dateTimeParameter;
-                }
-                else
-                {
-                    switch (parameters.Get(parameterName)) // Not always a string
-                    {
-                        case null:
-                        case "null":
-                        case "undefined":
-                            report.Parameters[parameterName].Value = null;
-                            break;
-                        default:
-                            report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type);
-                            break;
-                    }
-                } 
             }
-
-            if (!AwaitParameterInputPassed)
+            catch (Exception ex)
             {
-                report.RequestParameters = false;
+                string errorString = "Report Name : " + report.Name + Environment.NewLine + "Parameter could not be read." + Environment.NewLine + "Error: " + Environment.NewLine + ex.ToString();
+                Exception error = new Exception(errorString);
+                DebugErrorHandler.Error_Occurred(error);
             }
         }
 
