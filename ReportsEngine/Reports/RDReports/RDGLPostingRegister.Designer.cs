@@ -245,6 +245,8 @@
             this.xrCrossBandBox6 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.groupHeaderBand4 = new DevExpress.XtraReports.UI.GroupHeaderBand();
             this.groupFooterBand1 = new DevExpress.XtraReports.UI.GroupFooterBand();
+            this.plngBatchID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrPostType = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText12)).BeginInit();
@@ -2672,6 +2674,22 @@
             this.groupFooterBand1.Name = "groupFooterBand1";
             this.groupFooterBand1.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
             // 
+            // plngBatchID
+            // 
+            this.plngBatchID.Description = "Parameter1";
+            this.plngBatchID.Enabled = false;
+            this.plngBatchID.Name = "plngBatchID";
+            this.plngBatchID.Type = typeof(int);
+            this.plngBatchID.ValueInfo = "0";
+            this.plngBatchID.Visible = false;
+            // 
+            // pstrPostType
+            // 
+            this.pstrPostType.Description = "Parameter1";
+            this.pstrPostType.Enabled = false;
+            this.pstrPostType.Name = "pstrPostType";
+            this.pstrPostType.Visible = false;
+            // 
             // RDGLPostingRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2725,7 +2743,9 @@
             this.plngRDProcessTrackingID,
             this.pbooShowDetail,
             this.plngUserID,
-            this.pbooShowCriteria});
+            this.pbooShowCriteria,
+            this.plngBatchID,
+            this.pstrPostType});
             this.Version = "23.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText11)).EndInit();
@@ -2854,5 +2874,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrPageCountLandscape;
         private DevExpress.XtraReports.UI.GroupHeaderBand groupHeaderBand4;
         private DevExpress.XtraReports.UI.GroupFooterBand groupFooterBand1;
+        private DevExpress.XtraReports.Parameters.Parameter plngBatchID;
+        private DevExpress.XtraReports.Parameters.Parameter pstrPostType;
     }
 }

@@ -61,6 +61,7 @@
             this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -270,10 +271,21 @@
             // 
             // pstrSelectCheckNumber
             // 
+            this.pstrSelectCheckNumber.AllowNull = true;
             this.pstrSelectCheckNumber.Description = "Select Check";
             this.pstrSelectCheckNumber.MultiValue = true;
             this.pstrSelectCheckNumber.Name = "pstrSelectCheckNumber";
             this.pstrSelectCheckNumber.Type = typeof(int);
+            this.pstrSelectCheckNumber.Visible = false;
+            // 
+            // pstrSelectOwner
+            // 
+            this.pstrSelectOwner.AllowNull = true;
+            this.pstrSelectOwner.Description = "Select Owner";
+            this.pstrSelectOwner.MultiValue = true;
+            this.pstrSelectOwner.Name = "pstrSelectOwner";
+            this.pstrSelectOwner.Type = typeof(int);
+            this.pstrSelectOwner.Visible = false;
             // 
             // RDChecksRemittanceOnly
             // 
@@ -295,6 +307,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrStartingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckFormat, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -313,6 +326,7 @@
             this.plngUserID,
             this.Subtitle,
             this.plngCheckPrintingProcessTrackingID,
+            this.pstrSelectOwner,
             this.pstrStartingOwnerNumber,
             this.pstrEndingOwnerNumber,
             this.plngCheckFormat,
@@ -354,5 +368,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooWillPrintCompanyAddressOnStub;
         private DevExpress.XtraReports.Parameters.Parameter pbooWillCenterCompanyNameOnStub;
         private DevExpress.XtraReports.Parameters.Parameter pbooTrue;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
     }
 }

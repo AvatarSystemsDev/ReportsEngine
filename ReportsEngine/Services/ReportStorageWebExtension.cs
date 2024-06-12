@@ -400,7 +400,7 @@ namespace ReportsEngine.Services
                     }
                     else if (report.Parameters[parameterName] is null)
                     {
-                        throw new Exception("Parameter " + parameterName + " passed to report is invalid. Please contact customer support.");
+                        throw new Exception("Parameter " + parameterName + " passed to report " + report.DisplayName + " is invalid.");
                     }
                     else if (report.Parameters[parameterName].Type == typeof(DateTime))
                     {
@@ -431,9 +431,10 @@ namespace ReportsEngine.Services
             }
             catch (Exception ex)
             {
-                string errorString = "Report Name : " + report.Name + Environment.NewLine + "Parameter could not be read." + Environment.NewLine + "Error: " + Environment.NewLine + ex.ToString();
+                string errorString = "Report Name: " + report.DisplayName + Environment.NewLine + "Parameter could not be read." + Environment.NewLine + "Error: " + Environment.NewLine + ex.ToString();
                 Exception error = new Exception(errorString);
                 DebugErrorHandler.Error_Occurred(error);
+                throw new Exception("Error reading report parameters. Please contact customer support");
             }
         }
 
