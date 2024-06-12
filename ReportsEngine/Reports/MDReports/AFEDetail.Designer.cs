@@ -628,7 +628,7 @@
             this.xrLabel42.BorderWidth = 1F;
             this.xrLabel42.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Font.Bold", "[IsHeaderRow] OR [WillPrintAsTotal]\n"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PercentageVariance]/100")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PercentageVariance]")});
             this.xrLabel42.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel42.KeepTogether = true;
             this.xrLabel42.LocationFloat = new DevExpress.Utils.PointFloat(505F, 0F);
@@ -1758,7 +1758,7 @@
             this.xrLabel10.SizeF = new System.Drawing.SizeF(95F, 20F);
             this.xrLabel10.StylePriority.UsePadding = false;
             this.xrLabel10.StylePriority.UseTextAlignment = false;
-            this.xrLabel10.Text = "% Variance";
+            this.xrLabel10.Text = "% Budget";
             this.xrLabel10.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // SubBand1
