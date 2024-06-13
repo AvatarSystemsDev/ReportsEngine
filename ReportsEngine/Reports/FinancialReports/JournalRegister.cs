@@ -11,12 +11,6 @@ namespace ReportsEngine.Reports.FinancialReports
         public JournalRegister()
         {
             InitializeComponent();
-            xrAccountsSelected.BeforePrint += xrAccountsSelected_BeforePrint;
-            xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
-            xrAccountingCentersSelected.BeforePrint += xrAccountingCentersSelected_BeforePrint;
-            xrBatchesSelected.BeforePrint += xrBatchesSelected_BeforePrint;
-            xrEntitiesSelected.BeforePrint += xrEntitiesSelected_BeforePrint;
-            xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
             this.ParametersRequestValueChanged += new EventHandler<ParametersRequestValueChangedEventArgs>(ParametersRequestValueChangedEvent);
         }
         private void ParametersRequestValueChangedEvent(object sender, ParametersRequestValueChangedEventArgs e)
