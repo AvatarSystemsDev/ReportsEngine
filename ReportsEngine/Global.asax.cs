@@ -1,4 +1,4 @@
-﻿using DevExpress.Drawing;
+using DevExpress.Drawing;
 using DevExpress.Security.Resources;
 using DevExpress.Web.Mvc;
 using DevExpress.XtraReports.Security;
@@ -12,6 +12,7 @@ using System.Web.Http;
 using System.Web.Mvc;
 using System.Web.Routing;
 
+using System.Web.Optimization;
 namespace ReportsEngine
 {
     // Note: For instructions on enabling IIS6 or IIS7 classic mode, 
@@ -21,6 +22,7 @@ namespace ReportsEngine
     {
         protected void Application_Start()
         {
+            DevExtremeBundleConfig.RegisterBundles(BundleTable.Bundles);
             DevExpress.XtraReports.Configuration.Settings.Default.UserDesignerOptions.DataBindingMode = DevExpress.XtraReports.UI.DataBindingMode.Expressions;
             DevExpress.XtraReports.Web.WebDocumentViewer.Native.WebDocumentViewerBootstrapper.SessionState = System.Web.SessionState.SessionStateBehavior.Default;
             DevExpress.XtraReports.Web.QueryBuilder.Native.QueryBuilderBootstrapper.SessionState = System.Web.SessionState.SessionStateBehavior.Default;

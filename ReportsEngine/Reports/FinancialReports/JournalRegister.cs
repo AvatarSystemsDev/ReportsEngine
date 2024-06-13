@@ -17,7 +17,21 @@ namespace ReportsEngine.Reports.FinancialReports
             xrBatchesSelected.BeforePrint += xrBatchesSelected_BeforePrint;
             xrEntitiesSelected.BeforePrint += xrEntitiesSelected_BeforePrint;
             xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
+            this.ParametersRequestValueChanged += new EventHandler<ParametersRequestValueChangedEventArgs>(ParametersRequestValueChangedEvent);
         }
+        private void ParametersRequestValueChangedEvent(object sender, ParametersRequestValueChangedEventArgs e)
+        {
+            bool sortByNumber = (bool)this.Parameters["pbooSearchSortParameters"].Value;
+            foreach (Parameter parameter in Parameters)
+            {
+                if (parameter.ValueSourceSettings.GetType() == typeof(DynamicListLookUpSettings))
+                {
+                    DynamicListLookUpSettings parameterLookupSettings = parameter.ValueSourceSettings as DynamicListLookUpSettings;
+                    parameterLookupSettings.SortMember = sortByNumber ? parameterLookupSettings.DisplayMember.ToString() : "DescriptionFirstThenNumber";
+                }
+            }
+        }
+
         private void xrAccountsSelected_BeforePrint(object sender, CancelEventArgs e)
         {
             XRLabel label = sender as XRLabel;

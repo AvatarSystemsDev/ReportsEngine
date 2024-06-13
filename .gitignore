@@ -232,6 +232,7 @@ _pkginfo.txt
 ClientBin/
 ~$*
 *~
+DevExpressDLLs/
 #*.dbmdl
 *.dbproj.schemaview
 #*.jfm
@@ -360,3 +361,4 @@ MigrationBackup/
 
 # Fody - auto-generated XML schema
 FodyWeavers.xsd
+*.dll

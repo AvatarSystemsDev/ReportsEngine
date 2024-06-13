@@ -188,6 +188,7 @@ namespace ReportsEngine.Reports.FinancialReports
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings17 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings18 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings19 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -329,6 +330,13 @@ namespace ReportsEngine.Reports.FinancialReports
             this.SelectAccountList = new DevExpress.XtraReports.UI.CalculatedField();
             this.pbooShowYearEndClosingEntries = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowZeroBalance = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooSearchSortParameters = new DevExpress.XtraReports.Parameters.Parameter();
+            this.BatchSort = new DevExpress.XtraReports.UI.CalculatedField();
+            this.AccountSort = new DevExpress.XtraReports.UI.CalculatedField();
+            this.AccountingCenterSort = new DevExpress.XtraReports.UI.CalculatedField();
+            this.OwnerSort = new DevExpress.XtraReports.UI.CalculatedField();
+            this.PropertySort = new DevExpress.XtraReports.UI.CalculatedField();
+            this.EntitySort = new DevExpress.XtraReports.UI.CalculatedField();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1793,7 +1801,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings7.DataSource = this.Dynamic;
             dynamicListLookUpSettings7.DisplayMember = "Name";
             dynamicListLookUpSettings7.FilterString = null;
-            dynamicListLookUpSettings7.SortMember = null;
             dynamicListLookUpSettings7.ValueMember = "Number";
             this.pstrEndingCostCenterNumber.ValueSourceSettings = dynamicListLookUpSettings7;
             // 
@@ -1838,7 +1845,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings8.DataSource = this.Dynamic;
             dynamicListLookUpSettings8.DisplayMember = "Description";
             dynamicListLookUpSettings8.FilterString = null;
-            dynamicListLookUpSettings8.SortMember = null;
             dynamicListLookUpSettings8.ValueMember = "Number";
             this.pstrBeginningVendorNumber.ValueSourceSettings = dynamicListLookUpSettings8;
             // 
@@ -1851,7 +1857,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings9.DataSource = this.Dynamic;
             dynamicListLookUpSettings9.DisplayMember = "Description";
             dynamicListLookUpSettings9.FilterString = null;
-            dynamicListLookUpSettings9.SortMember = null;
             dynamicListLookUpSettings9.ValueMember = "Number";
             this.pstrEndingVendorNumber.ValueSourceSettings = dynamicListLookUpSettings9;
             // 
@@ -1864,7 +1869,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings10.DataSource = this.Dynamic;
             dynamicListLookUpSettings10.DisplayMember = "Description";
             dynamicListLookUpSettings10.FilterString = null;
-            dynamicListLookUpSettings10.SortMember = null;
             dynamicListLookUpSettings10.ValueMember = "Number";
             this.pstrBeginningOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings10;
             // 
@@ -1877,7 +1881,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings11.DataSource = this.Dynamic;
             dynamicListLookUpSettings11.DisplayMember = "Description";
             dynamicListLookUpSettings11.FilterString = null;
-            dynamicListLookUpSettings11.SortMember = null;
             dynamicListLookUpSettings11.ValueMember = "Number";
             this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings11;
             // 
@@ -1891,7 +1894,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings12.DataSource = this.Dynamic;
             dynamicListLookUpSettings12.DisplayMember = "Description";
             dynamicListLookUpSettings12.FilterString = null;
-            dynamicListLookUpSettings12.SortMember = null;
             dynamicListLookUpSettings12.ValueMember = "Number";
             this.plngBeginningBatchID.ValueSourceSettings = dynamicListLookUpSettings12;
             // 
@@ -1900,12 +1902,11 @@ namespace ReportsEngine.Reports.FinancialReports
             this.plngEndingBatchID.Description = "Ending Batch";
             this.plngEndingBatchID.Name = "plngEndingBatchID";
             this.plngEndingBatchID.Type = typeof(int);
-            this.plngEndingBatchID.ValueInfo = "999999999";
+            this.plngEndingBatchID.ValueInfo = "0";
             dynamicListLookUpSettings13.DataMember = "DSBatchReportLookup";
             dynamicListLookUpSettings13.DataSource = this.Dynamic;
             dynamicListLookUpSettings13.DisplayMember = "Description";
             dynamicListLookUpSettings13.FilterString = null;
-            dynamicListLookUpSettings13.SortMember = null;
             dynamicListLookUpSettings13.ValueMember = "Number";
             this.plngEndingBatchID.ValueSourceSettings = dynamicListLookUpSettings13;
             // 
@@ -2313,7 +2314,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings14.DataSource = this.Dynamic;
             dynamicListLookUpSettings14.DisplayMember = "Description";
             dynamicListLookUpSettings14.FilterString = null;
-            dynamicListLookUpSettings14.SortMember = null;
             dynamicListLookUpSettings14.ValueMember = "Number";
             this.pstrSelectAccount.ValueSourceSettings = dynamicListLookUpSettings14;
             // 
@@ -2341,7 +2341,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings16.DataSource = this.Dynamic;
             dynamicListLookUpSettings16.DisplayMember = "Description";
             dynamicListLookUpSettings16.FilterString = null;
-            dynamicListLookUpSettings16.SortMember = null;
             dynamicListLookUpSettings16.ValueMember = "Number";
             this.pstrSelectOwner.ValueSourceSettings = dynamicListLookUpSettings16;
             // 
@@ -2355,7 +2354,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings17.DataSource = this.Dynamic;
             dynamicListLookUpSettings17.DisplayMember = "Description";
             dynamicListLookUpSettings17.FilterString = null;
-            dynamicListLookUpSettings17.SortMember = null;
             dynamicListLookUpSettings17.ValueMember = "Number";
             this.pstrSelectVendor.ValueSourceSettings = dynamicListLookUpSettings17;
             // 
@@ -2385,7 +2383,6 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings19.DataSource = this.Dynamic;
             dynamicListLookUpSettings19.DisplayMember = "Description";
             dynamicListLookUpSettings19.FilterString = null;
-            dynamicListLookUpSettings19.SortMember = null;
             dynamicListLookUpSettings19.ValueMember = "PropertyAndWellNumber";
             this.pstrSelectProperty.ValueSourceSettings = dynamicListLookUpSettings19;
             // 
@@ -3324,6 +3321,64 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pbooShowZeroBalance.Type = typeof(bool);
             this.pbooShowZeroBalance.ValueInfo = "False";
             // 
+            // pbooSearchSortParameters
+            // 
+            this.pbooSearchSortParameters.Description = "Search/Sort Parameters by";
+            this.pbooSearchSortParameters.Name = "pbooSearchSortParameters";
+            this.pbooSearchSortParameters.Type = typeof(bool);
+            this.pbooSearchSortParameters.ValueInfo = "True";
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Number"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
+            this.pbooSearchSortParameters.ValueSourceSettings = staticListLookUpSettings2;
+            // 
+            // BatchSort
+            // 
+            this.BatchSort.DataMember = "DSBatchReportLookup";
+            this.BatchSort.DataSource = this.Dynamic;
+            this.BatchSort.Expression = "Iif(?pbooSearchSortParameters, [Number] , [JustDescription] + [Number] )";
+            this.BatchSort.Name = "BatchSort";
+            // 
+            // AccountSort
+            // 
+            this.AccountSort.DataMember = "DSAccountLookup";
+            this.AccountSort.DataSource = this.Dynamic;
+            this.AccountSort.Expression = "Iif(?pbooSearchSortParameters, [Number], [DescriptionFirstThenNumber] )";
+            this.AccountSort.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.AccountSort.Name = "AccountSort";
+            // 
+            // AccountingCenterSort
+            // 
+            this.AccountingCenterSort.DataMember = "DSAccountingCenterLookup";
+            this.AccountingCenterSort.DataSource = this.Dynamic;
+            this.AccountingCenterSort.Expression = "Iif(?pbooSearchSortParameters, [Number], [DescriptionFirst] )\n";
+            this.AccountingCenterSort.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.AccountingCenterSort.Name = "AccountingCenterSort";
+            // 
+            // OwnerSort
+            // 
+            this.OwnerSort.DataMember = "DSOwnersReportLookup";
+            this.OwnerSort.DataSource = this.Dynamic;
+            this.OwnerSort.Expression = "Iif(?pbooSearchSortParameters, [Number], [DescriptionFirstThenNumber] )\n";
+            this.OwnerSort.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.OwnerSort.Name = "OwnerSort";
+            // 
+            // PropertySort
+            // 
+            this.PropertySort.DataMember = "DSPropertiesLookup";
+            this.PropertySort.DataSource = this.Dynamic;
+            this.PropertySort.Expression = "Iif(?pbooSearchSortParameters, [PropertyAndWellNumber], [DescriptionFirstThenNumb" +
+    "er] )\n";
+            this.PropertySort.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.PropertySort.Name = "PropertySort";
+            // 
+            // EntitySort
+            // 
+            this.EntitySort.DataMember = "DSVendorReportLookup";
+            this.EntitySort.DataSource = this.Dynamic;
+            this.EntitySort.Expression = "Iif(?pbooSearchSortParameters, [Number], [DescriptionFirstThenNumber] )";
+            this.EntitySort.FieldType = DevExpress.XtraReports.UI.FieldType.String;
+            this.EntitySort.Name = "EntitySort";
+            // 
             // JournalRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -3341,7 +3396,13 @@ namespace ReportsEngine.Reports.FinancialReports
             this.GroupValue2,
             this.GroupValue3,
             this.First,
-            this.SelectAccountList});
+            this.SelectAccountList,
+            this.BatchSort,
+            this.AccountSort,
+            this.AccountingCenterSort,
+            this.OwnerSort,
+            this.PropertySort,
+            this.EntitySort});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic,
             this.Pulse,
@@ -3368,6 +3429,7 @@ namespace ReportsEngine.Reports.FinancialReports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningServiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingServiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooSearchSortParameters, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortBy, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -3403,6 +3465,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pdteEndingPostDate,
             this.pdteBeginningServiceDate,
             this.pdteEndingServiceDate,
+            this.pbooSearchSortParameters,
             this.plngSortBy,
             this.pstrBeginningAccountNumber,
             this.pstrEndingAccountNumber,
@@ -3628,5 +3691,12 @@ namespace ReportsEngine.Reports.FinancialReports
         private CalculatedField SelectAccountList;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEndClosingEntries;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowZeroBalance;
+        private DevExpress.XtraReports.Parameters.Parameter pbooSearchSortParameters;
+        private CalculatedField BatchSort;
+        private CalculatedField AccountSort;
+        private CalculatedField AccountingCenterSort;
+        private CalculatedField OwnerSort;
+        private CalculatedField PropertySort;
+        private CalculatedField EntitySort;
     }
 }
