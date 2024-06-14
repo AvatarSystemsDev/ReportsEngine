@@ -434,58 +434,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\Charset.css" />
-    <Content Include="Content\devextreme.light.custom.css" />
-    <Content Include="Content\dx-diagram.css" />
-    <Content Include="Content\dx-diagram.min.css" />
-    <Content Include="Content\dx-gantt.css" />
-    <Content Include="Content\dx-gantt.min.css" />
-    <Content Include="Content\dx.carmine.compact.css" />
-    <Content Include="Content\dx.carmine.css" />
-    <Content Include="Content\dx.contrast.compact.css" />
-    <Content Include="Content\dx.contrast.css" />
-    <Content Include="Content\dx.dark.compact.css" />
-    <Content Include="Content\dx.dark.css" />
-    <Content Include="Content\dx.darkmoon.compact.css" />
-    <Content Include="Content\dx.darkmoon.css" />
-    <Content Include="Content\dx.darkviolet.compact.css" />
-    <Content Include="Content\dx.darkviolet.css" />
-    <Content Include="Content\dx.fluent.blue.dark.compact.css" />
-    <Content Include="Content\dx.fluent.blue.dark.css" />
-    <Content Include="Content\dx.fluent.blue.light.compact.css" />
-    <Content Include="Content\dx.fluent.blue.light.css" />
-    <Content Include="Content\dx.fluent.saas.dark.compact.css" />
-    <Content Include="Content\dx.fluent.saas.dark.css" />
-    <Content Include="Content\dx.fluent.saas.light.compact.css" />
-    <Content Include="Content\dx.fluent.saas.light.css" />
-    <Content Include="Content\dx.greenmist.compact.css" />
-    <Content Include="Content\dx.greenmist.css" />
-    <Content Include="Content\dx.light.compact.css" />
-    <Content Include="Content\dx.light.css" />
-    <Content Include="Content\dx.material.blue.dark.compact.css" />
-    <Content Include="Content\dx.material.blue.dark.css" />
-    <Content Include="Content\dx.material.blue.light.compact.css" />
-    <Content Include="Content\dx.material.blue.light.css" />
-    <Content Include="Content\dx.material.lime.dark.compact.css" />
-    <Content Include="Content\dx.material.lime.dark.css" />
-    <Content Include="Content\dx.material.lime.light.compact.css" />
-    <Content Include="Content\dx.material.lime.light.css" />
-    <Content Include="Content\dx.material.orange.dark.compact.css" />
-    <Content Include="Content\dx.material.orange.dark.css" />
-    <Content Include="Content\dx.material.orange.light.compact.css" />
-    <Content Include="Content\dx.material.orange.light.css" />
-    <Content Include="Content\dx.material.purple.dark.compact.css" />
-    <Content Include="Content\dx.material.purple.dark.css" />
-    <Content Include="Content\dx.material.purple.light.compact.css" />
-    <Content Include="Content\dx.material.purple.light.css" />
-    <Content Include="Content\dx.material.teal.dark.compact.css" />
-    <Content Include="Content\dx.material.teal.dark.css" />
-    <Content Include="Content\dx.material.teal.light.compact.css" />
-    <Content Include="Content\dx.material.teal.light.css" />
-    <Content Include="Content\dx.softblue.compact.css" />
-    <Content Include="Content\dx.softblue.css" />
     <Content Include="Content\jquery-ui.css" />
     <Content Include="Content\jquery-ui.min.css" />
     <Content Include="Content\reporting.light.custom.css" />
@@ -493,27 +441,6 @@
     <Content Include="Global.asax" />
     <Content Include="Reports\PRReports\PayrollSignature1.png" />
     <Content Include="WebServices\ReportOperations.asmx" />
-    <Content Include="Content\fonts\Roboto-300.ttf" />
-    <Content Include="Content\fonts\Roboto-300.woff" />
-    <Content Include="Content\fonts\Roboto-300.woff2" />
-    <Content Include="Content\fonts\Roboto-400.ttf" />
-    <Content Include="Content\fonts\Roboto-400.woff" />
-    <Content Include="Content\fonts\Roboto-400.woff2" />
-    <Content Include="Content\fonts\Roboto-500.ttf" />
-    <Content Include="Content\fonts\Roboto-500.woff" />
-    <Content Include="Content\fonts\Roboto-500.woff2" />
-    <Content Include="Content\fonts\Roboto-700.ttf" />
-    <Content Include="Content\fonts\Roboto-700.woff" />
-    <Content Include="Content\fonts\Roboto-700.woff2" />
-    <Content Include="Content\icons\dxicons.ttf" />
-    <Content Include="Content\icons\dxicons.woff" />
-    <Content Include="Content\icons\dxicons.woff2" />
-    <Content Include="Content\icons\dxiconsfluent.ttf" />
-    <Content Include="Content\icons\dxiconsfluent.woff" />
-    <Content Include="Content\icons\dxiconsfluent.woff2" />
-    <Content Include="Content\icons\dxiconsmaterial.ttf" />
-    <Content Include="Content\icons\dxiconsmaterial.woff" />
-    <Content Include="Content\icons\dxiconsmaterial.woff2" />
     <Content Include="App.config" />
     <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
@@ -584,6 +511,42 @@
     </Compile>
     <Compile Include="Reports\JIBReports\JIBAllocation.Designer.cs">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_CurrentOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_CurrentOwner.Designer.cs">
+      <DependentUpon>ExcelSplitSuspenseEditList_CurrentOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_ItemsToBeSplit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_ItemsToBeSplit.Designer.cs">
+      <DependentUpon>ExcelSplitSuspenseEditList_ItemsToBeSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_NewOwners.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_NewOwners.Designer.cs">
+      <DependentUpon>ExcelSplitSuspenseEditList_NewOwners.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\SplitSuspenseEditList_CurrentOwner.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\SplitSuspenseEditList_CurrentOwner.Designer.cs">
+      <DependentUpon>SplitSuspenseEditList_CurrentOwner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\SplitSuspenseEditList_ItemsToBeSplit.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\SplitSuspenseEditList_ItemsToBeSplit.Designer.cs">
+      <DependentUpon>SplitSuspenseEditList_ItemsToBeSplit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\SplitSuspenseEditList_NewOwners.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\ProcessReports\SplitSuspenseEditList_NewOwners.Designer.cs">
+      <DependentUpon>SplitSuspenseEditList_NewOwners.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\PRReports\ExcelPR_DepartmentRegister.cs">
       <SubType>Component</SubType>
@@ -2730,6 +2693,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\JIBAllocation.resx">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_CurrentOwner.resx">
+      <DependentUpon>ExcelSplitSuspenseEditList_CurrentOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_ItemsToBeSplit.resx">
+      <DependentUpon>ExcelSplitSuspenseEditList_ItemsToBeSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_NewOwners.resx">
+      <DependentUpon>ExcelSplitSuspenseEditList_NewOwners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\SplitSuspenseEditList_CurrentOwner.resx">
+      <DependentUpon>SplitSuspenseEditList_CurrentOwner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\SplitSuspenseEditList_ItemsToBeSplit.resx">
+      <DependentUpon>SplitSuspenseEditList_ItemsToBeSplit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProcessReports\SplitSuspenseEditList_NewOwners.resx">
+      <DependentUpon>SplitSuspenseEditList_NewOwners.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\ExcelPR_DepartmentRegister.resx">
       <DependentUpon>ExcelPR_DepartmentRegister.cs</DependentUpon>
