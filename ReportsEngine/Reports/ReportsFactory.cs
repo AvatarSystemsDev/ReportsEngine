@@ -341,7 +341,12 @@ namespace ReportsEngine.Reports
             Reports.Add("PR_DepartmentRegister", (databaseID, companyID) => new PR_DepartmentRegister());
             Reports.Add("ExcelPR_DepartmentRegister", (databaseID, companyID) => new ExcelPR_DepartmentRegister());
             Reports.Add("PR_DeductionsRegister", (databaseID, companyID) => new PR_DeductionsRegister());
-
+            Reports.Add("SplitSuspenseEditList_NewOwners", (databaseID, companyID) => new SplitSuspenseEditList_NewOwners());
+            Reports.Add("ExcelSplitSuspenseEditList_NewOwners", (databaseID, companyID) => new ExcelSplitSuspenseEditList_NewOwners());
+            Reports.Add("SplitSuspenseEditList_CurrentOwner", (databaseID, companyID) => new SplitSuspenseEditList_CurrentOwner());
+            Reports.Add("ExcelSplitSuspenseEditList_CurrentOwner", (databaseID, companyID) => new ExcelSplitSuspenseEditList_CurrentOwner());
+            Reports.Add("SplitSuspenseEditList_ItemsToBeSplit", (databaseID, companyID) => new SplitSuspenseEditList_ItemsToBeSplit());
+            Reports.Add("ExcelSplitSuspenseEditList_ItemsToBeSplit", (databaseID, companyID) => new ExcelSplitSuspenseEditList_ItemsToBeSplit());
         }
         public static Dictionary<string, Func<int?, int?, XtraReport>> Reports = new Dictionary<string, Func<int?, int?, XtraReport>>();
     }
