@@ -350,5 +350,65 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                 }
             }
         }
+        // Used to get parameter description names if they map to an entry in the dictionary
+        internal static string GetDescriptionParameterName(string parameterName)
+        {
+            if (parameterName == null)
+            {
+                return null;
+            }
+            else if (parameterName.StartsWith("pstrSelect"))
+            {
+                return GetSelectDescriptionParameterName(parameterName);
+            }
+            else if (parameterName.StartsWith("pstrBeginning"))
+            {
+                return GetBeginningDescriptionParameterName(parameterName);
+            }
+            else if (parameterName.StartsWith("pstrEnding"))
+            {
+                return GetEndingDescriptionParameterName(parameterName);
+            }
+            return null;
+        }
+        // Helper method to GetDescriptionParameterName
+        private static string GetSelectDescriptionParameterName(string parameterName)
+        {
+            foreach (KeyValuePair<string, string[]> dataDictionaryEntry in dataDictionary)
+            {
+                string filterParameterName = dataDictionaryEntry.Value[0]; // Happen to be even indexes for filter parameters
+                if (parameterName == filterParameterName)
+                {
+                    return dataDictionaryEntry.Value[1];
+                }
+            }
+            return null;
+        }
+        // Helper method to GetDescriptionParameterName
+        private static string GetBeginningDescriptionParameterName(string parameterName)
+        {
+            foreach (KeyValuePair<string, string[]> dataDictionaryEntry in dataDictionary)
+            {
+                string filterParameterName = dataDictionaryEntry.Value[2]; // Happen to be even indexes for filter parameters
+                if (parameterName == filterParameterName)
+                {
+                    return dataDictionaryEntry.Value[3];
+                }
+            }
+            return null;
+        }
+        // Helper method to GetDescriptionParameterName
+        private static string GetEndingDescriptionParameterName(string parameterName)
+        {
+            foreach (KeyValuePair<string, string[]> dataDictionaryEntry in dataDictionary)
+            {
+                string filterParameterName = dataDictionaryEntry.Value[4]; // Happen to be even indexes for filter parameters
+                if (parameterName == filterParameterName)
+                {
+                    return dataDictionaryEntry.Value[5];
+                }
+            }
+            return null;
+        }
     }
 }

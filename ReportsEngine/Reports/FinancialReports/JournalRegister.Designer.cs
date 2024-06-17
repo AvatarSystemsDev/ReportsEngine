@@ -189,6 +189,7 @@ namespace ReportsEngine.Reports.FinancialReports
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings18 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings19 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -3326,7 +3327,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pbooSearchSortParameters.Description = "Search/Sort Parameters by";
             this.pbooSearchSortParameters.Name = "pbooSearchSortParameters";
             this.pbooSearchSortParameters.Type = typeof(bool);
-            this.pbooSearchSortParameters.ValueInfo = "True";
+            this.pbooSearchSortParameters.ValueInfo = "False";
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Number"));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
             this.pbooSearchSortParameters.ValueSourceSettings = staticListLookUpSettings2;
@@ -3497,6 +3498,9 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pbooShowCriteria,
             this.pstrDatabaseName});
             this.Version = "24.1";
+            xrWatermark1.Id = "Watermark1";
+            this.Watermarks.AddRange(new DevExpress.XtraPrinting.Drawing.Watermark[] {
+            xrWatermark1});
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

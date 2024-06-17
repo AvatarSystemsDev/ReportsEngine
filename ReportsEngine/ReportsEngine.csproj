@@ -497,7 +497,6 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\DevExtremeBundleConfig.cs" />
     <Compile Include="Reports\CommonReportsFunctions\LoadDefaultParameter.cs" />
     <Compile Include="Reports\CommonReportsFunctions\XSelected_PrintOnPageLabelFunction.cs" />
     <Compile Include="Reports\JIBReports\ExcelJIBAllocation.cs">
