@@ -262,8 +262,8 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pstrEndingVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngBeginningBatchID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngEndingBatchID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngBeginningBatch = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngEndingBatch = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCrossBandHeader = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
@@ -396,10 +396,10 @@ namespace ReportsEngine.Reports.FinancialReports
             queryParameter16.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenterNumber", typeof(string));
             queryParameter17.Name = "@plngBeginningBatch";
             queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatchID", typeof(int));
+            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatch", typeof(int));
             queryParameter18.Name = "@plngEndingBatch";
             queryParameter18.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngEndingBatchID", typeof(int));
+            queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngEndingBatch", typeof(int));
             queryParameter19.Name = "@plngSortBy";
             queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngSortBy", typeof(int));
@@ -1885,31 +1885,31 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings11.ValueMember = "Number";
             this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings11;
             // 
-            // plngBeginningBatchID
+            // plngBeginningBatch
             // 
-            this.plngBeginningBatchID.Description = "Beginning Batch";
-            this.plngBeginningBatchID.Name = "plngBeginningBatchID";
-            this.plngBeginningBatchID.Type = typeof(int);
-            this.plngBeginningBatchID.ValueInfo = "-1";
+            this.plngBeginningBatch.Description = "Beginning Batch";
+            this.plngBeginningBatch.Name = "plngBeginningBatch";
+            this.plngBeginningBatch.Type = typeof(int);
+            this.plngBeginningBatch.ValueInfo = "-1";
             dynamicListLookUpSettings12.DataMember = "DSBatchReportLookup";
             dynamicListLookUpSettings12.DataSource = this.Dynamic;
             dynamicListLookUpSettings12.DisplayMember = "Description";
             dynamicListLookUpSettings12.FilterString = null;
             dynamicListLookUpSettings12.ValueMember = "Number";
-            this.plngBeginningBatchID.ValueSourceSettings = dynamicListLookUpSettings12;
+            this.plngBeginningBatch.ValueSourceSettings = dynamicListLookUpSettings12;
             // 
-            // plngEndingBatchID
+            // plngEndingBatch
             // 
-            this.plngEndingBatchID.Description = "Ending Batch";
-            this.plngEndingBatchID.Name = "plngEndingBatchID";
-            this.plngEndingBatchID.Type = typeof(int);
-            this.plngEndingBatchID.ValueInfo = "0";
+            this.plngEndingBatch.Description = "Ending Batch";
+            this.plngEndingBatch.Name = "plngEndingBatch";
+            this.plngEndingBatch.Type = typeof(int);
+            this.plngEndingBatch.ValueInfo = "0";
             dynamicListLookUpSettings13.DataMember = "DSBatchReportLookup";
             dynamicListLookUpSettings13.DataSource = this.Dynamic;
             dynamicListLookUpSettings13.DisplayMember = "Description";
             dynamicListLookUpSettings13.FilterString = null;
             dynamicListLookUpSettings13.ValueMember = "Number";
-            this.plngEndingBatchID.ValueSourceSettings = dynamicListLookUpSettings13;
+            this.plngEndingBatch.ValueSourceSettings = dynamicListLookUpSettings13;
             // 
             // xrCrossBandHeader
             // 
@@ -3452,8 +3452,8 @@ namespace ReportsEngine.Reports.FinancialReports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatchID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatchID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeState, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeDescription, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -3488,8 +3488,8 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
             this.pstrSelectVendor,
-            this.plngBeginningBatchID,
-            this.plngEndingBatchID,
+            this.plngBeginningBatch,
+            this.plngEndingBatch,
             this.pstrSelectBatch,
             this.pbooIncludeState,
             this.pbooIncludeDescription,
@@ -3620,8 +3620,8 @@ namespace ReportsEngine.Reports.FinancialReports
         private DevExpress.XtraReports.UI.XRLabel xrLabel25;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningOwnerNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingOwnerNumber;
-        private DevExpress.XtraReports.Parameters.Parameter plngBeginningBatchID;
-        private DevExpress.XtraReports.Parameters.Parameter plngEndingBatchID;
+        private DevExpress.XtraReports.Parameters.Parameter plngBeginningBatch;
+        private DevExpress.XtraReports.Parameters.Parameter plngEndingBatch;
         private DevExpress.DataAccess.Sql.SqlDataSource Pulse;
         private DevExpress.XtraReports.UI.SubBand SubBand2;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandHeader;

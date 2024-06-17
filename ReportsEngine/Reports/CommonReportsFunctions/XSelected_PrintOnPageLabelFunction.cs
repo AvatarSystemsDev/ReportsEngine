@@ -42,6 +42,20 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                 "ZZZZZZZZZZ-ZZZZ"
             };
 
+            dataDictionary["CostCenter"] = new string[10]
+            {
+                "pstrSelectAccountingCenter",
+                "pstrSelectAccountingCenterDescription",
+                "pstrBeginningCostCenterNumber",
+                "pstrBeginningCostCenterDescription",
+                "pstrEndingCostCenterNumber",
+                "pstrEndingCostCenterDescription",
+                "Accounting Center",
+                "Accounting Centers",
+                "!",
+                "ZZZZ"
+            };
+
             dataDictionary["AccountingCenter"] = new string[10]
             {
                 "pstrSelectAccountingCenter",
@@ -351,7 +365,7 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
             }
         }
         // Used to get parameter description names if they map to an entry in the dictionary
-        internal static string GetDescriptionParameterName(string parameterName)
+        internal static string GetDescriptionParameterName(string parameterName, bool getOriginalParameterName = false)
         {
             if (parameterName == null)
             {
@@ -359,53 +373,53 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
             }
             else if (parameterName.StartsWith("pstrSelect"))
             {
-                return GetSelectDescriptionParameterName(parameterName);
+                return GetSelectDescriptionParameterName(parameterName, getOriginalParameterName);
             }
-            else if (parameterName.StartsWith("pstrBeginning"))
+            else if (parameterName.StartsWith("pstrBeginning") || parameterName.StartsWith("plngBeginning"))
             {
-                return GetBeginningDescriptionParameterName(parameterName);
+                return GetBeginningDescriptionParameterName(parameterName, getOriginalParameterName);
             }
-            else if (parameterName.StartsWith("pstrEnding"))
+            else if (parameterName.StartsWith("pstrEnding") || parameterName.StartsWith("plngEnding"))
             {
-                return GetEndingDescriptionParameterName(parameterName);
+                return GetEndingDescriptionParameterName(parameterName, getOriginalParameterName);
             }
             return null;
         }
         // Helper method to GetDescriptionParameterName
-        private static string GetSelectDescriptionParameterName(string parameterName)
+        private static string GetSelectDescriptionParameterName(string parameterName, bool getOriginalParameterName = false)
         {
             foreach (KeyValuePair<string, string[]> dataDictionaryEntry in dataDictionary)
             {
-                string filterParameterName = dataDictionaryEntry.Value[0]; // Happen to be even indexes for filter parameters
+                string filterParameterName = dataDictionaryEntry.Value[getOriginalParameterName ? 1: 0]; // Happen to be even indexes for filter parameters
                 if (parameterName == filterParameterName)
                 {
-                    return dataDictionaryEntry.Value[1];
+                    return dataDictionaryEntry.Value[getOriginalParameterName ? 0 : 1];
                 }
             }
             return null;
         }
         // Helper method to GetDescriptionParameterName
-        private static string GetBeginningDescriptionParameterName(string parameterName)
+        private static string GetBeginningDescriptionParameterName(string parameterName, bool getOriginalParameterName = false)
         {
             foreach (KeyValuePair<string, string[]> dataDictionaryEntry in dataDictionary)
             {
-                string filterParameterName = dataDictionaryEntry.Value[2]; // Happen to be even indexes for filter parameters
+                string filterParameterName = dataDictionaryEntry.Value[getOriginalParameterName ? 3: 2]; // Happen to be even indexes for filter parameters
                 if (parameterName == filterParameterName)
                 {
-                    return dataDictionaryEntry.Value[3];
+                    return dataDictionaryEntry.Value[getOriginalParameterName ? 2 : 3];
                 }
             }
             return null;
         }
         // Helper method to GetDescriptionParameterName
-        private static string GetEndingDescriptionParameterName(string parameterName)
+        private static string GetEndingDescriptionParameterName(string parameterName, bool getOriginalParameterName = false)
         {
             foreach (KeyValuePair<string, string[]> dataDictionaryEntry in dataDictionary)
             {
-                string filterParameterName = dataDictionaryEntry.Value[4]; // Happen to be even indexes for filter parameters
+                string filterParameterName = dataDictionaryEntry.Value[getOriginalParameterName ? 5 : 4]; // Happen to be even indexes for filter parameters
                 if (parameterName == filterParameterName)
                 {
-                    return dataDictionaryEntry.Value[5];
+                    return dataDictionaryEntry.Value[getOriginalParameterName ? 4 : 5];
                 }
             }
             return null;

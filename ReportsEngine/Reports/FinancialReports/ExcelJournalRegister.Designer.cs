@@ -114,8 +114,8 @@
             this.pbooIncludeState = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteEndingServiceDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteBeginningServiceDate = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngBeginningBatchID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngEndingBatchID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngBeginningBatch = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngEndingBatch = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningCostCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingCostCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
@@ -188,10 +188,10 @@
             queryParameter16.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenterNumber", typeof(string));
             queryParameter17.Name = "@plngBeginningBatchID";
             queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatchID", typeof(int));
+            queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatch", typeof(int));
             queryParameter18.Name = "@plngEndingBatchID";
             queryParameter18.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngEndingBatchID", typeof(int));
+            queryParameter18.Value = new DevExpress.DataAccess.Expression("?plngEndingBatch", typeof(int));
             queryParameter19.Name = "@plngSortBy";
             queryParameter19.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter19.Value = new DevExpress.DataAccess.Expression("?plngSortBy", typeof(int));
@@ -1380,19 +1380,19 @@
             this.pdteBeginningServiceDate.Type = typeof(System.DateTime);
             this.pdteBeginningServiceDate.ValueInfo = "1900-01-01";
             // 
-            // plngBeginningBatchID
+            // plngBeginningBatch
             // 
-            this.plngBeginningBatchID.Description = "Beginning Batch";
-            this.plngBeginningBatchID.Name = "plngBeginningBatchID";
-            this.plngBeginningBatchID.Type = typeof(int);
-            this.plngBeginningBatchID.ValueInfo = "0";
+            this.plngBeginningBatch.Description = "Beginning Batch";
+            this.plngBeginningBatch.Name = "plngBeginningBatch";
+            this.plngBeginningBatch.Type = typeof(int);
+            this.plngBeginningBatch.ValueInfo = "0";
             // 
-            // plngEndingBatchID
+            // plngEndingBatch
             // 
-            this.plngEndingBatchID.Description = "Ending Batch";
-            this.plngEndingBatchID.Name = "plngEndingBatchID";
-            this.plngEndingBatchID.Type = typeof(int);
-            this.plngEndingBatchID.ValueInfo = "9999999";
+            this.plngEndingBatch.Description = "Ending Batch";
+            this.plngEndingBatch.Name = "plngEndingBatch";
+            this.plngEndingBatch.Type = typeof(int);
+            this.plngEndingBatch.ValueInfo = "9999999";
             // 
             // pstrBeginningCostCenterNumber
             // 
@@ -1523,8 +1523,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningServiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingServiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortBy, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatchID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatchID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenterNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenterNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1542,7 +1542,9 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClosingEntries, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowZeroBalance, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -1556,8 +1558,8 @@
             this.pdteBeginningServiceDate,
             this.pdteEndingServiceDate,
             this.plngSortBy,
-            this.plngBeginningBatchID,
-            this.plngEndingBatchID,
+            this.plngBeginningBatch,
+            this.plngEndingBatch,
             this.pstrBeginningCostCenterNumber,
             this.pstrEndingCostCenterNumber,
             this.pstrBeginningVendorNumber,
@@ -1578,7 +1580,7 @@
             this.pstrSelectProperty,
             this.pbooShowYearEndClosingEntries,
             this.pbooShowZeroBalance});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1636,8 +1638,8 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeState;
         private DevExpress.XtraReports.Parameters.Parameter pdteEndingServiceDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteBeginningServiceDate;
-        private DevExpress.XtraReports.Parameters.Parameter plngBeginningBatchID;
-        private DevExpress.XtraReports.Parameters.Parameter plngEndingBatchID;
+        private DevExpress.XtraReports.Parameters.Parameter plngBeginningBatch;
+        private DevExpress.XtraReports.Parameters.Parameter plngEndingBatch;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenterNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenterNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningVendorNumber;
