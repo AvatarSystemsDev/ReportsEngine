@@ -902,7 +902,7 @@
             this.xrLabel49.StylePriority.UseForeColor = false;
             this.xrLabel49.StylePriority.UsePadding = false;
             this.xrLabel49.StylePriority.UseTextAlignment = false;
-            this.xrLabel49.Text = "Split Suspense Edit - Split Items Results";
+            this.xrLabel49.Text = "Split Suspense Edit - Owner to Split";
             this.xrLabel49.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             // 
             // SubBand2

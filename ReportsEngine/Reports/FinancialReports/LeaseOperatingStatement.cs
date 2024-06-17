@@ -17,6 +17,7 @@ namespace ReportsEngine.Reports.PAReports
             xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
             xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
             xrAcquisitionSelection.BeforePrint += xrAcquisitionSelection_BeforePrint;
+            
         }
         private void xrPropertiesSelected_BeforePrint(object sender, CancelEventArgs e)
         {
