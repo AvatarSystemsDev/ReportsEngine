@@ -364,7 +364,7 @@
             this.CompanyName.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.CompanyName.BorderWidth = 1F;
             this.CompanyName.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Description]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyName]")});
             this.CompanyName.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.CompanyName.KeepTogether = true;
             this.CompanyName.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
@@ -866,7 +866,7 @@
             this.plngUserID,
             this.plngJIBPrintingProcessTrackingID,
             this.Subtitle});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
