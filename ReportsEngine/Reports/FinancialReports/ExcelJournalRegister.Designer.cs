@@ -53,6 +53,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter21 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelJournalRegister));
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
+            DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -116,8 +117,8 @@
             this.pdteBeginningServiceDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngBeginningBatch = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngEndingBatch = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrBeginningCostCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrEndingCostCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningOwnerNumber = new DevExpress.XtraReports.Parameters.Parameter();
@@ -131,6 +132,7 @@
             this.First = new DevExpress.XtraReports.UI.CalculatedField();
             this.pbooShowYearEndClosingEntries = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowZeroBalance = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooSearchSortParameters = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -182,10 +184,10 @@
             queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngBookCodeID", typeof(int));
             queryParameter15.Name = "@pstrBeginningCostCenter";
             queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter15.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenterNumber", typeof(string));
+            queryParameter15.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenter", typeof(string));
             queryParameter16.Name = "@pstrEndingCostCenter";
             queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter16.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenterNumber", typeof(string));
+            queryParameter16.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
             queryParameter17.Name = "@plngBeginningBatchID";
             queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatch", typeof(int));
@@ -1234,8 +1236,6 @@
             this.Textbox20.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.Textbox20.BorderWidth = 0F;
             this.Textbox20.CanGrow = false;
-            this.Textbox20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Document\r\nVoucher")});
             this.Textbox20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.Textbox20.KeepTogether = true;
             this.Textbox20.LocationFloat = new DevExpress.Utils.PointFloat(305.5758F, 0F);
@@ -1247,7 +1247,7 @@
             this.Textbox20.StylePriority.UseFont = false;
             this.Textbox20.StylePriority.UsePadding = false;
             this.Textbox20.StylePriority.UseTextAlignment = false;
-            this.Textbox20.Text = "Doc  ";
+            this.Textbox20.Text = "Document Voucher";
             this.Textbox20.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             // 
             // Textbox23
@@ -1394,17 +1394,17 @@
             this.plngEndingBatch.Type = typeof(int);
             this.plngEndingBatch.ValueInfo = "9999999";
             // 
-            // pstrBeginningCostCenterNumber
+            // pstrBeginningCostCenter
             // 
-            this.pstrBeginningCostCenterNumber.Description = "Beginning Cost Center";
-            this.pstrBeginningCostCenterNumber.Name = "pstrBeginningCostCenterNumber";
-            this.pstrBeginningCostCenterNumber.ValueInfo = "!";
+            this.pstrBeginningCostCenter.Description = "Beginning Cost Center";
+            this.pstrBeginningCostCenter.Name = "pstrBeginningCostCenter";
+            this.pstrBeginningCostCenter.ValueInfo = "!";
             // 
-            // pstrEndingCostCenterNumber
+            // pstrEndingCostCenter
             // 
-            this.pstrEndingCostCenterNumber.Description = "Ending Cost Center";
-            this.pstrEndingCostCenterNumber.Name = "pstrEndingCostCenterNumber";
-            this.pstrEndingCostCenterNumber.ValueInfo = "ZZZZ";
+            this.pstrEndingCostCenter.Description = "Ending Cost Center";
+            this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
+            this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
             // 
             // pstrBeginningVendorNumber
             // 
@@ -1438,7 +1438,7 @@
             // 
             // pstrSelectAccountingCenter
             // 
-            this.pstrSelectAccountingCenter.Description = "Parameter1";
+            this.pstrSelectAccountingCenter.Description = "Select Accounting Center";
             this.pstrSelectAccountingCenter.MultiValue = true;
             this.pstrSelectAccountingCenter.Name = "pstrSelectAccountingCenter";
             // 
@@ -1489,6 +1489,13 @@
             this.pbooShowZeroBalance.Type = typeof(bool);
             this.pbooShowZeroBalance.ValueInfo = "False";
             // 
+            // pbooSearchSortParameters
+            // 
+            this.pbooSearchSortParameters.Description = "Search Sort Parameters";
+            this.pbooSearchSortParameters.Name = "pbooSearchSortParameters";
+            this.pbooSearchSortParameters.Type = typeof(bool);
+            this.pbooSearchSortParameters.ValueInfo = "False";
+            // 
             // ExcelJournalRegister
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1525,8 +1532,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortBy, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenterNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenterNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1544,7 +1551,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClosingEntries, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowZeroBalance, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowZeroBalance, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooSearchSortParameters, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -1560,8 +1568,8 @@
             this.plngSortBy,
             this.plngBeginningBatch,
             this.plngEndingBatch,
-            this.pstrBeginningCostCenterNumber,
-            this.pstrEndingCostCenterNumber,
+            this.pstrBeginningCostCenter,
+            this.pstrEndingCostCenter,
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
             this.pstrBeginningOwnerNumber,
@@ -1579,8 +1587,13 @@
             this.pstrSelectVendor,
             this.pstrSelectProperty,
             this.pbooShowYearEndClosingEntries,
-            this.pbooShowZeroBalance});
+            this.pbooShowZeroBalance,
+            this.pbooSearchSortParameters});
+            this.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopCenter;
             this.Version = "24.1";
+            xrWatermark1.Id = "Watermark1";
+            this.Watermarks.AddRange(new DevExpress.XtraPrinting.Drawing.Watermark[] {
+            xrWatermark1});
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -1640,8 +1653,8 @@
         private DevExpress.XtraReports.Parameters.Parameter pdteBeginningServiceDate;
         private DevExpress.XtraReports.Parameters.Parameter plngBeginningBatch;
         private DevExpress.XtraReports.Parameters.Parameter plngEndingBatch;
-        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenterNumber;
-        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenterNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningVendorNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingVendorNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningOwnerNumber;
@@ -1665,5 +1678,6 @@
         private DevExpress.XtraReports.UI.CalculatedField First;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEndClosingEntries;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowZeroBalance;
+        private DevExpress.XtraReports.Parameters.Parameter pbooSearchSortParameters;
     }
 }

@@ -4,6 +4,8 @@ using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
 using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.Linq;
 
 namespace ReportsEngine.Reports.CommonReportsFunctions
 {
@@ -423,6 +425,51 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                 }
             }
             return null;
+        }
+
+        internal static void RewireDataSourceWithDescriptionParameters(ref DevExpress.DataAccess.Sql.SqlDataSource dynamic, ref DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource, string mainDataMember, ParameterCollection Parameters, bool pbooSearchSortParameters)
+        {
+            // Change the expression for what is loaded into SQL stored procedures in Dynamic (changes "Dynamic" query parameters that the federation data source member for the report uses)
+            var mainQueryNode = federationDataSource.Queries.OfType<DevExpress.DataAccess.DataFederation.SelectNode>().FirstOrDefault(q => q.Alias == mainDataMember); // Gets main member of federation source that the report uses
+
+            if (mainQueryNode != null)
+            {
+                foreach (var source in mainQueryNode.Sources)
+                {
+                    if (source.DataSource is DevExpress.DataAccess.Sql.SqlDataSource sqlDataSource && sqlDataSource == dynamic) // Getting Dynamic query that the federation data source member uses.
+                    {
+                        foreach (var query in sqlDataSource.Queries)
+                        {
+                            foreach (DevExpress.DataAccess.Sql.QueryParameter parameter in query.Parameters)
+                            {
+                                if (parameter.Value is DevExpress.DataAccess.Expression)
+                                {
+                                    var parameterValue = (DevExpress.DataAccess.Expression)parameter.Value;
+                                    // Might need to change parameters back to the original ones set in the designer hense the if statement.
+                                    if (!pbooSearchSortParameters)
+                                    {
+                                        string parameterDescriptionName = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterValue.ExpressionString.ToString().Substring(1), false);
+                                        if (!string.IsNullOrEmpty(parameterDescriptionName))
+                                        {
+                                            Parameter parameter1 = Parameters[parameterDescriptionName];
+                                            bool stringType = parameterDescriptionName.StartsWith("pstr");
+                                            parameter.Value = new DevExpress.DataAccess.Expression("?" + parameter1.Name, stringType ? typeof(string) : typeof(int)); // Changing the parameter to use the Description parameter instead of regular.
+                                        }
+                                    }
+                                    else
+                                    {
+                                        string parameterOriginalName = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterValue.ExpressionString.ToString().Substring(1), true);
+                                        if (!string.IsNullOrEmpty(parameterOriginalName))
+                                        {
+                                            parameter.Value = new DevExpress.DataAccess.Expression("?" + parameterOriginalName, parameterOriginalName.StartsWith("pstr") ? typeof(string) : typeof(int)); // Changing the parameter to use the Description parameter instead of regular.
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
         }
     }
 }

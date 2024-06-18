@@ -245,7 +245,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingPropertyNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrBeginningCostCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteBeginningPostDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteEndingPostDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningAccountNumber = new DevExpress.XtraReports.Parameters.Parameter();
@@ -254,7 +254,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.plngBookCodeID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteBeginningServiceDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteEndingServiceDate = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrEndingCostCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngSortBy = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeState = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeDescription = new DevExpress.XtraReports.Parameters.Parameter();
@@ -390,10 +390,10 @@ namespace ReportsEngine.Reports.FinancialReports
             queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngBookCodeID", typeof(int));
             queryParameter15.Name = "@pstrBeginningCostCenter";
             queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter15.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenterNumber", typeof(string));
+            queryParameter15.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenter", typeof(string));
             queryParameter16.Name = "@pstrEndingCostCenter";
             queryParameter16.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter16.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenterNumber", typeof(string));
+            queryParameter16.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
             queryParameter17.Name = "@plngBeginningBatch";
             queryParameter17.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter17.Value = new DevExpress.DataAccess.Expression("?plngBeginningBatch", typeof(int));
@@ -1709,16 +1709,16 @@ namespace ReportsEngine.Reports.FinancialReports
             dynamicListLookUpSettings3.ValueMember = "PropertyAndWellNumber";
             this.pstrEndingPropertyNumber.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
-            // pstrBeginningCostCenterNumber
+            // pstrBeginningCostCenter
             // 
-            this.pstrBeginningCostCenterNumber.Description = "Beginning Acct. Center";
-            this.pstrBeginningCostCenterNumber.Name = "pstrBeginningCostCenterNumber";
-            this.pstrBeginningCostCenterNumber.ValueInfo = "!";
+            this.pstrBeginningCostCenter.Description = "Beginning Acct. Center";
+            this.pstrBeginningCostCenter.Name = "pstrBeginningCostCenter";
+            this.pstrBeginningCostCenter.ValueInfo = "!";
             dynamicListLookUpSettings4.DataMember = "DSAccountingCenterLookup";
             dynamicListLookUpSettings4.DataSource = this.Dynamic;
             dynamicListLookUpSettings4.DisplayMember = "Name";
             dynamicListLookUpSettings4.ValueMember = "Number";
-            this.pstrBeginningCostCenterNumber.ValueSourceSettings = dynamicListLookUpSettings4;
+            this.pstrBeginningCostCenter.ValueSourceSettings = dynamicListLookUpSettings4;
             // 
             // pdteBeginningPostDate
             // 
@@ -1793,17 +1793,17 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pdteEndingServiceDate.Type = typeof(System.DateTime);
             this.pdteEndingServiceDate.ValueInfo = "2023-07-24";
             // 
-            // pstrEndingCostCenterNumber
+            // pstrEndingCostCenter
             // 
-            this.pstrEndingCostCenterNumber.Description = "Ending Acct. Center";
-            this.pstrEndingCostCenterNumber.Name = "pstrEndingCostCenterNumber";
-            this.pstrEndingCostCenterNumber.ValueInfo = "ZZZZ";
+            this.pstrEndingCostCenter.Description = "Ending Acct. Center";
+            this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
+            this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
             dynamicListLookUpSettings7.DataMember = "DSAccountingCenterLookup";
             dynamicListLookUpSettings7.DataSource = this.Dynamic;
             dynamicListLookUpSettings7.DisplayMember = "Name";
             dynamicListLookUpSettings7.FilterString = null;
             dynamicListLookUpSettings7.ValueMember = "Number";
-            this.pstrEndingCostCenterNumber.ValueSourceSettings = dynamicListLookUpSettings7;
+            this.pstrEndingCostCenter.ValueSourceSettings = dynamicListLookUpSettings7;
             // 
             // plngSortBy
             // 
@@ -1903,7 +1903,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.plngEndingBatch.Description = "Ending Batch";
             this.plngEndingBatch.Name = "plngEndingBatch";
             this.plngEndingBatch.Type = typeof(int);
-            this.plngEndingBatch.ValueInfo = "0";
+            this.plngEndingBatch.ValueInfo = "999999999";
             dynamicListLookUpSettings13.DataMember = "DSBatchReportLookup";
             dynamicListLookUpSettings13.DataSource = this.Dynamic;
             dynamicListLookUpSettings13.DisplayMember = "Description";
@@ -3327,7 +3327,7 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pbooSearchSortParameters.Description = "Search/Sort Parameters by";
             this.pbooSearchSortParameters.Name = "pbooSearchSortParameters";
             this.pbooSearchSortParameters.Type = typeof(bool);
-            this.pbooSearchSortParameters.ValueInfo = "False";
+            this.pbooSearchSortParameters.ValueInfo = "True";
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Number"));
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
             this.pbooSearchSortParameters.ValueSourceSettings = staticListLookUpSettings2;
@@ -3442,8 +3442,8 @@ namespace ReportsEngine.Reports.FinancialReports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingPropertyNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenterNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenterNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccountingCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBookCodeID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -3478,8 +3478,8 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pstrBeginningPropertyNumber,
             this.pstrEndingPropertyNumber,
             this.pstrSelectProperty,
-            this.pstrBeginningCostCenterNumber,
-            this.pstrEndingCostCenterNumber,
+            this.pstrBeginningCostCenter,
+            this.pstrEndingCostCenter,
             this.pstrSelectAccountingCenter,
             this.plngBookCodeID,
             this.pstrBeginningOwnerNumber,
@@ -3567,7 +3567,7 @@ namespace ReportsEngine.Reports.FinancialReports
         private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningPropertyNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingPropertyNumber;
-        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenterNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
         private DevExpress.XtraReports.Parameters.Parameter pdteBeginningPostDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteEndingPostDate;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningAccountNumber;
@@ -3601,7 +3601,7 @@ namespace ReportsEngine.Reports.FinancialReports
         private DevExpress.XtraReports.UI.XRLabel xrLabel37;
         private DevExpress.XtraReports.Parameters.Parameter pdteBeginningServiceDate;
         private DevExpress.XtraReports.Parameters.Parameter pdteEndingServiceDate;
-        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenterNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.XRLabel xrUser;
         private DevExpress.XtraReports.UI.XRLabel xrCopyright;
