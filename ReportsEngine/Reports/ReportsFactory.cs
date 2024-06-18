@@ -341,6 +341,7 @@ namespace ReportsEngine.Reports
             Reports.Add("PR_DepartmentRegister", (databaseID, companyID) => new PR_DepartmentRegister());
             Reports.Add("ExcelPR_DepartmentRegister", (databaseID, companyID) => new ExcelPR_DepartmentRegister());
             Reports.Add("PR_DeductionsRegister", (databaseID, companyID) => new PR_DeductionsRegister());
+            Reports.Add("ExcelPR_DeductionsRegister", (databaseID, companyID) => new ExcelPR_DeductionsRegister());
             Reports.Add("SplitSuspenseEditList_NewOwners", (databaseID, companyID) => new SplitSuspenseEditList_NewOwners());
             Reports.Add("ExcelSplitSuspenseEditList_NewOwners", (databaseID, companyID) => new ExcelSplitSuspenseEditList_NewOwners());
             Reports.Add("SplitSuspenseEditList_CurrentOwner", (databaseID, companyID) => new SplitSuspenseEditList_CurrentOwner());
