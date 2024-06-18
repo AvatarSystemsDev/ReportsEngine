@@ -547,6 +547,12 @@
     <Compile Include="Reports\ProcessReports\SplitSuspenseEditList_NewOwners.Designer.cs">
       <DependentUpon>SplitSuspenseEditList_NewOwners.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_AllowanceRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_AllowanceRegister.Designer.cs">
+      <DependentUpon>ExcelPR_AllowanceRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PRReports\ExcelPR_DeductionsRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2722,6 +2728,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ProcessReports\SplitSuspenseEditList_NewOwners.resx">
       <DependentUpon>SplitSuspenseEditList_NewOwners.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\ExcelPR_AllowanceRegister.resx">
+      <DependentUpon>ExcelPR_AllowanceRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\ExcelPR_DeductionsRegister.resx">
       <DependentUpon>ExcelPR_DeductionsRegister.cs</DependentUpon>
