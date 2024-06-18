@@ -619,6 +619,12 @@
     <Compile Include="Reports\PRReports\PR_DepartmentRegister.Designer.cs">
       <DependentUpon>PR_DepartmentRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\PR_EmployerDepartmentExpenseRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\PR_EmployerDepartmentExpenseRegister.Designer.cs">
+      <DependentUpon>PR_EmployerDepartmentExpenseRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PRReports\PR_PreliminaryPaymentTimeRecordRecap.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2764,6 +2770,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\PR_DepartmentRegister.resx">
       <DependentUpon>PR_DepartmentRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\PR_EmployerDepartmentExpenseRegister.resx">
+      <DependentUpon>PR_EmployerDepartmentExpenseRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\PR_PreliminaryPaymentTimeRecordRecap.resx">
       <DependentUpon>PR_PreliminaryPaymentTimeRecordRecap.cs</DependentUpon>
