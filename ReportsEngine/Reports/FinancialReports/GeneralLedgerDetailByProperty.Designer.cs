@@ -348,7 +348,7 @@
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCrossBandBox1 = new DevExpress.XtraReports.UI.XRCrossBandBox();
             this.pstrSelectAccount = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectEntity = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOwner = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -3337,19 +3337,19 @@
             dynamicListLookUpSettings11.ValueMember = "Number";
             this.pstrSelectAccount.ValueSourceSettings = dynamicListLookUpSettings11;
             // 
-            // pstrSelectVendor
+            // pstrSelectEntity
             // 
-            this.pstrSelectVendor.Description = "Select Entity List";
-            this.pstrSelectVendor.MultiValue = true;
-            this.pstrSelectVendor.Name = "pstrSelectVendor";
-            this.pstrSelectVendor.SelectAllValues = true;
+            this.pstrSelectEntity.Description = "Select Entity List";
+            this.pstrSelectEntity.MultiValue = true;
+            this.pstrSelectEntity.Name = "pstrSelectEntity";
+            this.pstrSelectEntity.SelectAllValues = true;
             dynamicListLookUpSettings12.DataMember = "DSVendorLookup";
             dynamicListLookUpSettings12.DataSource = this.Dynamic;
             dynamicListLookUpSettings12.DisplayMember = "Description";
             dynamicListLookUpSettings12.FilterString = null;
             dynamicListLookUpSettings12.SortMember = null;
             dynamicListLookUpSettings12.ValueMember = "Number";
-            this.pstrSelectVendor.ValueSourceSettings = dynamicListLookUpSettings12;
+            this.pstrSelectEntity.ValueSourceSettings = dynamicListLookUpSettings12;
             // 
             // pstrSelectOwner
             // 
@@ -4643,7 +4643,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBookCodeID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectEntity, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -4676,7 +4676,7 @@
             this.plngBookCodeID,
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
-            this.pstrSelectVendor,
+            this.pstrSelectEntity,
             this.plngBeginningBatch,
             this.plngEndingBatch,
             this.pstrSelectBatch,
@@ -4765,7 +4765,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel33;
         private DevExpress.XtraReports.UI.XRLabel xrLabel39;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectAccount;
-        private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectEntity;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectOwner;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectProperty;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;

@@ -15,8 +15,6 @@ namespace ReportsEngine.Reports.FinancialReports
         {
             InitializeComponent();
             this.DataSourceDemanded += JournalRegister_BeforePrint;
-            this.BeforePrint += JournalRegister_BeforePrint;
-            AddDescriptionParametersToReport();
             originalFilterString = this.FilterString;
             xrAccountsSelected.BeforePrint += xrAccountsSelected_BeforePrint;
             xrAccountingCentersSelected.BeforePrint += xrAccountingCentersSelected_BeforePrint;
@@ -24,18 +22,9 @@ namespace ReportsEngine.Reports.FinancialReports
             xrOwnersSelected.BeforePrint += XrOwnersSelected_BeforePrint;
             xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
             xrBatchesSelected.BeforePrint += xrBatchesSelected_BeforePrint;
+            this.BeforePrint += JournalRegister_BeforePrint;
+            AddDescriptionParametersToReport();
         }
-
-        private void XrOwnersSelected_BeforePrint(object sender, CancelEventArgs e)
-        {
-            ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "Owner", this.DisplayName, true, true);
-        }
-
-        private void XrEntitiesSelected_BeforePrint(object sender, CancelEventArgs e)
-        {
-            ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "Entity", this.DisplayName, true, true);
-        }
-
         private void JournalRegister_BeforePrint(object sender, EventArgs e)
         {
             bool pbooSearchSortParameters = bool.Parse(Parameters["pbooSearchSortParameters"].Value.ToString());
@@ -120,6 +109,15 @@ namespace ReportsEngine.Reports.FinancialReports
                     }
                 }
             }
+        }
+        private void XrOwnersSelected_BeforePrint(object sender, CancelEventArgs e)
+        {
+            ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "Owner", this.DisplayName, true, true);
+        }
+
+        private void XrEntitiesSelected_BeforePrint(object sender, CancelEventArgs e)
+        {
+            ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "Entity", this.DisplayName, true, true);
         }
         private void xrAccountsSelected_BeforePrint(object sender, CancelEventArgs e)
         {

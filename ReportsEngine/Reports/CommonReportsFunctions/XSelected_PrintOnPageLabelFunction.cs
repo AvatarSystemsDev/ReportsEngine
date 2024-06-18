@@ -147,6 +147,13 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                 "ZZZZZZZZZZ-ZZZZZZZZZZ"
             };
         }
+        private static void FillDictionary()
+        {
+            if (dataDictionary is null)
+            {
+                XSelected_PrintOnPageLabelFunctionSetter();
+            }
+        }
 
         internal static void X_BeforePrint(ref object sender, ParameterCollection Parameters, string dataDictionaryKey, string reportName, bool useSelectParameter = true, bool hasDescriptionParameter = true)
         {
@@ -168,18 +175,14 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                     return;
                 }
             }
-            
-            
+
+            FillDictionary();
             if (dataDictionaryKey is null || !dataDictionary.ContainsKey(dataDictionaryKey))
             {
                 string noKeyForDataDictionaryError = errorStart + "dataDictionary does not contain a key for " + dataDictionaryKey + Environment.NewLine + "Please add a select parameter name, beginning parameter name, and ending parameter name for both description and number parameters, singular of that parameter, plural of that parameter, the beginning index, and the ending index of that parameter to the constructor of XSelected_PrintOnPageLabelFunction.";
                 Exception error = new Exception(noKeyForDataDictionaryError);
                 DebugErrorHandler.Error_Occurred(error);
                 return;
-            }
-            if (dataDictionary is null)
-            {
-                XSelected_PrintOnPageLabelFunctionSetter();
             }
             string[] dictionaryValues = dataDictionary[dataDictionaryKey];
 
@@ -295,6 +298,7 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
 
         internal static string getDescriptionParameter(string parameterName, string reportName)
         {
+            FillDictionary();
             foreach (KeyValuePair<string, string[]> dataDictionaryentry in dataDictionary)
             {
                 for (int i = 0; i < 2; i++)
@@ -378,6 +382,7 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
         // Used to get parameter description names if they map to an entry in the dictionary
         internal static string GetDescriptionParameterName(string parameterName, bool getOriginalParameterName = false)
         {
+            FillDictionary();
             if (parameterName == null)
             {
                 return null;
