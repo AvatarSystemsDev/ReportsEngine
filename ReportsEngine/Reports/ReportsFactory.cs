@@ -348,6 +348,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelSplitSuspenseEditList_CurrentOwner", (databaseID, companyID) => new ExcelSplitSuspenseEditList_CurrentOwner());
             Reports.Add("SplitSuspenseEditList_ItemsToBeSplit", (databaseID, companyID) => new SplitSuspenseEditList_ItemsToBeSplit());
             Reports.Add("ExcelSplitSuspenseEditList_ItemsToBeSplit", (databaseID, companyID) => new ExcelSplitSuspenseEditList_ItemsToBeSplit());
+            Reports.Add("PR_AllowanceRegister", (databaseID, companyID) => new PR_AllowanceRegister());
         }
         public static Dictionary<string, Func<int?, int?, XtraReport>> Reports = new Dictionary<string, Func<int?, int?, XtraReport>>();
     }
