@@ -14,6 +14,11 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
         private static Dictionary<string, string[]> dataDictionary;
         static XSelected_PrintOnPageLabelFunction()
         {
+            XSelected_PrintOnPageLabelFunctionSetter(); // Sometimes not set after initially running
+        }
+
+        private static void XSelected_PrintOnPageLabelFunctionSetter()
+        {
             dataDictionary = new Dictionary<string, string[]>();
 
             dataDictionary["APCheck"] = new string[10]
@@ -147,6 +152,7 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
         {
             // reportName is exclusively for error logging.
             string errorStart = "Report Name : " + reportName + Environment.NewLine;
+
             bool useSelectDescriptionParameter = false;
             if (hasDescriptionParameter)
             {
@@ -171,7 +177,10 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                 DebugErrorHandler.Error_Occurred(error);
                 return;
             }
-
+            if (dataDictionary is null)
+            {
+                XSelected_PrintOnPageLabelFunctionSetter();
+            }
             string[] dictionaryValues = dataDictionary[dataDictionaryKey];
 
             if (dictionaryValues.Length == 10)

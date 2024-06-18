@@ -825,7 +825,8 @@
             dynamicListLookUpSettings2.DataMember = "DSJIBProcessDatesLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "FormattedDate";
-            dynamicListLookUpSettings2.ValueMember = "ID";
+            dynamicListLookUpSettings2.FilterString = "[JIBPrintingProcessTrackingID] > 0";
+            dynamicListLookUpSettings2.ValueMember = "JIBPrintingProcessTrackingID";
             this.plngJIBPrintingProcessTrackingID.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
             // Subtitle
