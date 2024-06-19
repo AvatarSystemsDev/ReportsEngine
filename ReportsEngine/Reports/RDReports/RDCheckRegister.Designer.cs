@@ -1,6 +1,4 @@
-﻿using DevExpress.XtraBars.ToastNotifications;
-
-namespace ReportsEngine
+﻿namespace ReportsEngine
 {
     partial class RDCheckRegister
     {
