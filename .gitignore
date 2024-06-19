@@ -232,6 +232,8 @@ _pkginfo.txt
 ClientBin/
 ~$*
 *~
+DevExpressDLLs/Components/
+DevExpressDLLs/Design/
 #*.dbmdl
 *.dbproj.schemaview
 #*.jfm
