@@ -407,8 +407,7 @@
             this.xrRichText4.BorderWidth = 1F;
             this.xrRichText4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>For Pr" +
-                    "ocessing Date: </b>  \' + FormatString(\'{0:MM/dd/yyyy}\',[Dynamic_DSJIBProcessDate" +
-                    "sLookup].[ProcessingDate])\n\n\n")});
+                    "ocessing Date: </b>  \' + FormatString(\'{0:MM/dd/yyyy}\',[ProcessingDate])\n\n\n")});
             this.xrRichText4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText4.KeepTogether = true;
             this.xrRichText4.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);

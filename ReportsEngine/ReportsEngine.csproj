@@ -497,6 +497,7 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Reports\IReportWithDescriptionParameters.cs" />
     <Compile Include="Reports\CommonReportsFunctions\LoadDefaultParameter.cs" />
     <Compile Include="Reports\CommonReportsFunctions\XSelected_PrintOnPageLabelFunction.cs" />
     <Compile Include="Reports\JIBReports\ExcelJIBAllocation.cs">
@@ -2305,6 +2306,9 @@
     <Compile Include="Reports\RDReports\TexasTaxProducerSummary.Designer.cs">
       <DependentUpon>TexasTaxProducerSummary.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ReportWithDescriptionParameters.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\TaxReports\ExcelThe1099Form.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2690,6 +2694,7 @@
     <Compile Include="Reports\RDReports\TexasTaxProducerDetail.Designer.cs">
       <DependentUpon>TexasTaxProducerDetail.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ReportWithDescriptionParametersHelper.cs" />
     <Compile Include="Services\DynamicConnectionHandler.cs" />
     <Compile Include="Services\ExcelAccountingCenterListing.cs">
       <SubType>Component</SubType>
