@@ -3628,6 +3628,9 @@
     <EmbeddedResource Include="Reports\RDReports\TexasTaxProducerSummary.resx">
       <DependentUpon>TexasTaxProducerSummary.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ReportWithDescriptionParameters.resx">
+      <DependentUpon>ReportWithDescriptionParameters.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\TaxReports\ExcelThe1099Form.resx">
       <DependentUpon>ExcelThe1099Form.cs</DependentUpon>
     </EmbeddedResource>
