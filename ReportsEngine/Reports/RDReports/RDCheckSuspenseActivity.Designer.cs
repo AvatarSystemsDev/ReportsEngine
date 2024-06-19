@@ -1439,6 +1439,7 @@
             this.ReportTitle});
             this.pageHeaderBand1.HeightF = 118.3334F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
+            this.pageHeaderBand1.PrintOn = DevExpress.XtraReports.UI.PrintOnPages.NotWithReportHeader;
             this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand1});
             this.pageHeaderBand1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -1874,7 +1875,7 @@
             this.pstrEndingOwnerNumber,
             this.pstrSelectOwner,
             this.pbooShowCriteria});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
