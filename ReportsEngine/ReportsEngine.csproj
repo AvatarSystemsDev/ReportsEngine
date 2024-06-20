@@ -511,6 +511,18 @@
     <Compile Include="Reports\JIBReports\JIBAllocation.Designer.cs">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\CompanyProfile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\CompanyProfile.Designer.cs">
+      <DependentUpon>CompanyProfile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelCompanyProfile.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelCompanyProfile.Designer.cs">
+      <DependentUpon>ExcelCompanyProfile.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_CurrentOwner.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2725,6 +2737,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\JIBAllocation.resx">
       <DependentUpon>JIBAllocation.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\CompanyProfile.resx">
+      <DependentUpon>CompanyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelCompanyProfile.resx">
+      <DependentUpon>ExcelCompanyProfile.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_CurrentOwner.resx">
       <DependentUpon>ExcelSplitSuspenseEditList_CurrentOwner.cs</DependentUpon>
