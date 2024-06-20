@@ -144,24 +144,6 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode2 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode2 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source2 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode3 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode3 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source3 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode4 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode4 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source4 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode5 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode5 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source5 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode6 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode6 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source6 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode7 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode7 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source7 = new DevExpress.DataAccess.DataFederation.Source();
-            DevExpress.DataAccess.DataFederation.SelectNode selectNode8 = new DevExpress.DataAccess.DataFederation.SelectNode();
-            DevExpress.DataAccess.DataFederation.SourceNode sourceNode8 = new DevExpress.DataAccess.DataFederation.SourceNode();
-            DevExpress.DataAccess.DataFederation.Source source8 = new DevExpress.DataAccess.DataFederation.Source();
             DevExpress.DataAccess.Sql.SelectQuery selectQuery2 = new DevExpress.DataAccess.Sql.SelectQuery();
             DevExpress.DataAccess.Sql.Column column33 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression33 = new DevExpress.DataAccess.Sql.ColumnExpression();
@@ -2893,176 +2875,106 @@
             // federationDataSource1
             // 
             this.federationDataSource1.Name = "federationDataSource1";
-            selectNode1.Alias = "Dynamic_DSCompaniesLookup";
+            selectNode1.Alias = "Dynamic_DSAPEditSheet";
             sourceNode1.Alias = null;
-            source1.DataMember = "DSCompaniesLookup";
+            sourceNode1.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1037\" />";
+            source1.DataMember = "DSAPEditSheet";
             source1.DataSource = this.Dynamic;
-            source1.Name = "Dynamic_DSCompaniesLookup";
+            source1.Name = "Dynamic_DSAPEditSheet";
             sourceNode1.Source = source1;
             selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BatchNumberName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BatchCashAccount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BatchCashAccountPrefix"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BatchCashAccountSuffix"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BatchCashAccountDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PostDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceCheckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceDiscount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DiscountDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceDueDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceNetAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Invoice88Amount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceIsSuspended"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceVendorNumberName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "VendorNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "InvoiceVoucher"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsSuspended"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "CrossReferenceNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountNumberPrefix"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountNumberSuffix"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "FormattedPhaseWellNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "ServiceDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AFENumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Description"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "HoldLine"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DOIDecimal"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DOIDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "The88Amount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "NetAmount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DOIDeckDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "DOIDeckNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "The1099DestinationCodeDescription"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "Hold"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PurchaseOrderNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "IsBillable"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "AccountingCenterNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BeneficiaryVendorNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "BeneficiaryVendorName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "WellNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PropertyWellName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "OwnerName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "VendorName")});
             selectNode1.Root = sourceNode1;
-            selectNode2.Alias = "Dynamic_DSAPEditSheet";
+            selectNode2.Alias = "Pulse_Master_UserRecord";
             sourceNode2.Alias = null;
-            sourceNode2.MetaSerializable = "<Meta X=\"30\" Y=\"30\" Width=\"125\" Height=\"1037\" />";
-            source2.DataMember = "DSAPEditSheet";
-            source2.DataSource = this.Dynamic;
-            source2.Name = "Dynamic_DSAPEditSheet";
+            source2.DataMember = "Master_UserRecord";
+            source2.DataSource = this.Pulse;
+            source2.Name = "Pulse_Master_UserRecord";
             sourceNode2.Source = source2;
             selectNode2.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchNumberName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchCashAccount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchCashAccountPrefix"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchCashAccountSuffix"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BatchCashAccountDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PostDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceCheckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceDiscount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DiscountDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceDueDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceNetAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Invoice88Amount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceIsSuspended"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceVendorNumberName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "VendorNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "InvoiceVoucher"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsSuspended"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CrossReferenceNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "AccountNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "AccountNumberPrefix"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "AccountNumberSuffix"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FormattedPhaseWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ServiceDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "AFENumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Description"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "HoldLine"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DOIDecimal"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DOIDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "The88Amount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "NetAmount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "OwnerNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DOIDeckDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "DOIDeckNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "The1099DestinationCodeDescription"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Hold"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PurchaseOrderNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsBillable"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "AccountingCenterNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BeneficiaryVendorNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "BeneficiaryVendorName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "WellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PropertyWellName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "OwnerName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "VendorName")});
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "LastApplicationUsedID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "LastCompanyUsedID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "LastDatabaseUsedID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsSupportingUser"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "MimicUserID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "TempFullAccessUserID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CompanyID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "EmailAddress"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsInactive"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsAccountLocked"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "LoginAttemptCount"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "QuickEntry"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsLoggedIn"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsDeveloper"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsSupportRepresentative"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsSystemAdministrator"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "LoginComputerName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "LastName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "FirstName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "HashPassword"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "SaltPassword"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PasswordExpirationDays"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PasswordLastChangeDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "IsDeleted"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CreateDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "CreateUserID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ModifyDate"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "ModifyUserID"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "PasswordResetToken"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Telephone"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode2, "Initials")});
             selectNode2.Root = sourceNode2;
-            selectNode3.Alias = "Dynamic_DSEditListBatchesLookup";
-            sourceNode3.Alias = null;
-            source3.DataMember = "DSEditListBatchesLookup";
-            source3.DataSource = this.Dynamic;
-            source3.Name = "Dynamic_DSEditListBatchesLookup";
-            sourceNode3.Source = source3;
-            selectNode3.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "ItemData"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode3, "Item")});
-            selectNode3.Root = sourceNode3;
-            selectNode4.Alias = "Dynamic_DSVendorLookup";
-            sourceNode4.Alias = null;
-            source4.DataMember = "DSVendorLookup";
-            source4.DataSource = this.Dynamic;
-            source4.Name = "Dynamic_DSVendorLookup";
-            sourceNode4.Source = source4;
-            selectNode4.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode4, "Description")});
-            selectNode4.Root = sourceNode4;
-            selectNode5.Alias = "Dynamic_DSPropertiesLookup";
-            sourceNode5.Alias = null;
-            source5.DataMember = "DSPropertiesLookup";
-            source5.DataSource = this.Dynamic;
-            source5.Name = "Dynamic_DSPropertiesLookup";
-            sourceNode5.Source = source5;
-            selectNode5.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "PropertyAndWellNumber"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode5, "Description")});
-            selectNode5.Root = sourceNode5;
-            selectNode6.Alias = "Dynamic_DSOwnerLookup";
-            sourceNode6.Alias = null;
-            source6.DataMember = "DSOwnerLookup";
-            source6.DataSource = this.Dynamic;
-            source6.Name = "Dynamic_DSOwnerLookup";
-            sourceNode6.Source = source6;
-            selectNode6.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode6, "Description")});
-            selectNode6.Root = sourceNode6;
-            selectNode7.Alias = "Dynamic_DSVoucherLookup";
-            sourceNode7.Alias = null;
-            source7.DataMember = "DSVoucherLookup";
-            source7.DataSource = this.Dynamic;
-            source7.Name = "Dynamic_DSVoucherLookup";
-            sourceNode7.Source = source7;
-            selectNode7.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "Number"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode7, "Description")});
-            selectNode7.Root = sourceNode7;
-            selectNode8.Alias = "Pulse_Master_UserRecord";
-            sourceNode8.Alias = null;
-            source8.DataMember = "Master_UserRecord";
-            source8.DataSource = this.Pulse;
-            source8.Name = "Pulse_Master_UserRecord";
-            sourceNode8.Source = source8;
-            selectNode8.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "ID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "LastApplicationUsedID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "LastCompanyUsedID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "LastDatabaseUsedID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "IsSupportingUser"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "MimicUserID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "TempFullAccessUserID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "CompanyID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "EmailAddress"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "IsInactive"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "IsAccountLocked"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "LoginAttemptCount"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "QuickEntry"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "IsLoggedIn"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "IsDeveloper"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "IsSupportRepresentative"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "IsSystemAdministrator"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "LoginComputerName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "LastName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "FirstName"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "HashPassword"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "SaltPassword"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PasswordExpirationDays"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PasswordLastChangeDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "IsDeleted"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "CreateDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "CreateUserID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "ModifyDate"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "ModifyUserID"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "PasswordResetToken"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "Telephone"),
-            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode8, "Initials")});
-            selectNode8.Root = sourceNode8;
             this.federationDataSource1.Queries.AddRange(new DevExpress.DataAccess.DataFederation.QueryNode[] {
             selectNode1,
-            selectNode2,
-            selectNode3,
-            selectNode4,
-            selectNode5,
-            selectNode6,
-            selectNode7,
-            selectNode8});
+            selectNode2});
             // 
             // sqlDataSource1
             // 

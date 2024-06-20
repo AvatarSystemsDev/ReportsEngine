@@ -4384,19 +4384,19 @@
             // xrCrossBandBox5
             // 
             this.xrCrossBandBox5.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox5.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrCrossBandBox5.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrCrossBandBox5.BorderWidth = 1F;
             this.xrCrossBandBox5.EndBand = this.SubBand2;
-            this.xrCrossBandBox5.EndPointFloat = new DevExpress.Utils.PointFloat(873.9348F, 3F);
+            this.xrCrossBandBox5.EndPointFloat = new DevExpress.Utils.PointFloat(873.9348F, 3.000005F);
             this.xrCrossBandBox5.Name = "xrCrossBandBox5";
             this.xrCrossBandBox5.StartBand = this.SubBand2;
             this.xrCrossBandBox5.StartPointFloat = new DevExpress.Utils.PointFloat(873.9348F, 0F);
-            this.xrCrossBandBox5.WidthF = 68.67F;
+            this.xrCrossBandBox5.WidthF = 68.67004F;
             // 
             // xrCrossBandBox8
             // 
             this.xrCrossBandBox8.AnchorVertical = DevExpress.XtraReports.UI.VerticalAnchorStyles.None;
-            this.xrCrossBandBox8.Borders = DevExpress.XtraPrinting.BorderSide.Bottom;
+            this.xrCrossBandBox8.Borders = DevExpress.XtraPrinting.BorderSide.Top;
             this.xrCrossBandBox8.BorderWidth = 1F;
             this.xrCrossBandBox8.EndBand = this.SubBand2;
             this.xrCrossBandBox8.EndPointFloat = new DevExpress.Utils.PointFloat(949.9163F, 2F);

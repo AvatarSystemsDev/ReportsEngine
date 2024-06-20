@@ -42,6 +42,9 @@ namespace ReportsEngine.Reports.FinancialReports
 
             xrBalancedForwardAsteriskLabel.BeforePrint += XrBalancedForwardAsteriskLabel_BeforePrint;
             NewAccountLine.BeforePrint += NewAccountLine_BeforePrint;
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
 
         private void NewAccountLine_BeforePrint(object sender, CancelEventArgs e)

@@ -51,32 +51,7 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter19 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter20 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter21 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter22 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery3 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter23 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter24 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery4 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter25 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery5 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter26 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery6 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter27 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter28 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery7 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter29 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelGeneralLedgerDetailbyProperty));
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings4 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings7 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings8 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings9 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings10 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -240,64 +215,8 @@
             queryParameter20,
             queryParameter21});
             storedProcQuery1.StoredProcName = "Report_GeneralLedgerDetailbyProperty";
-            storedProcQuery2.Name = "DSCompaniesLookup";
-            queryParameter22.Name = "@plngCompanyID";
-            queryParameter22.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter22.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter22});
-            storedProcQuery2.StoredProcName = "Companies_ReportLookup";
-            storedProcQuery3.Name = "DSPropertiesLookup";
-            queryParameter23.Name = "@pbooIncludeFirstLast";
-            queryParameter23.Type = typeof(bool);
-            queryParameter23.ValueInfo = "True";
-            queryParameter24.Name = "@plngCompanyID";
-            queryParameter24.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter24.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery3.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter23,
-            queryParameter24});
-            storedProcQuery3.StoredProcName = "Properties_ReportLookup";
-            storedProcQuery4.Name = "DSAccountLookup";
-            queryParameter25.Name = "@plngCompanyID";
-            queryParameter25.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter25.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            storedProcQuery4.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter25});
-            storedProcQuery4.StoredProcName = "Accounts_ReportLookup";
-            storedProcQuery5.Name = "DSOperatorLookup";
-            queryParameter26.Name = "@plngCompanyID";
-            queryParameter26.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter26.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            storedProcQuery5.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter26});
-            storedProcQuery5.StoredProcName = "Operators_ReportLookup";
-            storedProcQuery6.Name = "DSVendorLookup";
-            queryParameter27.Name = "@plngVendorsToShow";
-            queryParameter27.Type = typeof(int);
-            queryParameter27.ValueInfo = "0";
-            queryParameter28.Name = "@plngCompanyID";
-            queryParameter28.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter28.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
-            storedProcQuery6.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter27,
-            queryParameter28});
-            storedProcQuery6.StoredProcName = "Vendors_ReportLookup";
-            storedProcQuery7.Name = "DSOwnerLookup";
-            queryParameter29.Name = "@plngCompanyID";
-            queryParameter29.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter29.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(string));
-            storedProcQuery7.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter29});
-            storedProcQuery7.StoredProcName = "Owners_ReportLookup";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1,
-            storedProcQuery2,
-            storedProcQuery3,
-            storedProcQuery4,
-            storedProcQuery5,
-            storedProcQuery6,
-            storedProcQuery7});
+            storedProcQuery1});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // topMarginBand1
@@ -849,11 +768,6 @@
             this.plngCompanyID.Name = "plngCompanyID";
             this.plngCompanyID.Type = typeof(int);
             this.plngCompanyID.ValueInfo = "1";
-            dynamicListLookUpSettings1.DataMember = "DSCompaniesLookup";
-            dynamicListLookUpSettings1.DataSource = this.Dynamic;
-            dynamicListLookUpSettings1.DisplayMember = "Description";
-            dynamicListLookUpSettings1.ValueMember = "ID";
-            this.plngCompanyID.ValueSourceSettings = dynamicListLookUpSettings1;
             this.plngCompanyID.Visible = false;
             // 
             // pdteBeginningPostDate
@@ -875,22 +789,12 @@
             this.pstrBeginningAccountNumber.Description = "Beginning Account";
             this.pstrBeginningAccountNumber.Name = "pstrBeginningAccountNumber";
             this.pstrBeginningAccountNumber.ValueInfo = "!";
-            dynamicListLookUpSettings2.DataMember = "DSAccountLookup";
-            dynamicListLookUpSettings2.DataSource = this.Dynamic;
-            dynamicListLookUpSettings2.DisplayMember = "Description";
-            dynamicListLookUpSettings2.ValueMember = "Number";
-            this.pstrBeginningAccountNumber.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
             // pstrEndingAccountNumber
             // 
             this.pstrEndingAccountNumber.Description = "Ending Account";
             this.pstrEndingAccountNumber.Name = "pstrEndingAccountNumber";
             this.pstrEndingAccountNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZ";
-            dynamicListLookUpSettings3.DataMember = "DSAccountLookup";
-            dynamicListLookUpSettings3.DataSource = this.Dynamic;
-            dynamicListLookUpSettings3.DisplayMember = "Description";
-            dynamicListLookUpSettings3.ValueMember = "Number";
-            this.pstrEndingAccountNumber.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
             // pbooShowBBF
             // 
@@ -904,44 +808,24 @@
             this.pstrBeginningPropertyNumber.Description = "Beginning Property/Well";
             this.pstrBeginningPropertyNumber.Name = "pstrBeginningPropertyNumber";
             this.pstrBeginningPropertyNumber.ValueInfo = "!";
-            dynamicListLookUpSettings4.DataMember = "DSPropertiesLookup";
-            dynamicListLookUpSettings4.DataSource = this.Dynamic;
-            dynamicListLookUpSettings4.DisplayMember = "Description";
-            dynamicListLookUpSettings4.ValueMember = "PropertyAndWellNumber";
-            this.pstrBeginningPropertyNumber.ValueSourceSettings = dynamicListLookUpSettings4;
             // 
             // pstrEndingPropertyNumber
             // 
             this.pstrEndingPropertyNumber.Description = "Ending Property/Well";
             this.pstrEndingPropertyNumber.Name = "pstrEndingPropertyNumber";
             this.pstrEndingPropertyNumber.ValueInfo = "ZZZZZZZZZZ-ZZZZZZZZZZ";
-            dynamicListLookUpSettings5.DataMember = "DSPropertiesLookup";
-            dynamicListLookUpSettings5.DataSource = this.Dynamic;
-            dynamicListLookUpSettings5.DisplayMember = "Description";
-            dynamicListLookUpSettings5.ValueMember = "PropertyAndWellNumber";
-            this.pstrEndingPropertyNumber.ValueSourceSettings = dynamicListLookUpSettings5;
             // 
             // pstrBeginningOwnerNumber
             // 
             this.pstrBeginningOwnerNumber.Description = "Beginning Owner";
             this.pstrBeginningOwnerNumber.Name = "pstrBeginningOwnerNumber";
             this.pstrBeginningOwnerNumber.ValueInfo = "!";
-            dynamicListLookUpSettings6.DataMember = "DSOwnerLookup";
-            dynamicListLookUpSettings6.DataSource = this.Dynamic;
-            dynamicListLookUpSettings6.DisplayMember = "Description";
-            dynamicListLookUpSettings6.ValueMember = "Number";
-            this.pstrBeginningOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings6;
             // 
             // pstrEndingOwnerNumber
             // 
             this.pstrEndingOwnerNumber.Description = "Ending Owner";
             this.pstrEndingOwnerNumber.Name = "pstrEndingOwnerNumber";
             this.pstrEndingOwnerNumber.ValueInfo = "ZZZZZZZZZZ";
-            dynamicListLookUpSettings7.DataMember = "DSOwnerLookup";
-            dynamicListLookUpSettings7.DataSource = this.Dynamic;
-            dynamicListLookUpSettings7.DisplayMember = "Description";
-            dynamicListLookUpSettings7.ValueMember = "Number";
-            this.pstrEndingOwnerNumber.ValueSourceSettings = dynamicListLookUpSettings7;
             // 
             // plngBookCodeID
             // 
@@ -956,32 +840,17 @@
             this.pstrBeginningVendorNumber.Description = "Beginning Entity";
             this.pstrBeginningVendorNumber.Name = "pstrBeginningVendorNumber";
             this.pstrBeginningVendorNumber.ValueInfo = "!";
-            dynamicListLookUpSettings8.DataMember = "DSVendorLookup";
-            dynamicListLookUpSettings8.DataSource = this.Dynamic;
-            dynamicListLookUpSettings8.DisplayMember = "Description";
-            dynamicListLookUpSettings8.ValueMember = "Number";
-            this.pstrBeginningVendorNumber.ValueSourceSettings = dynamicListLookUpSettings8;
             // 
             // pstrEndingVendorNumber
             // 
             this.pstrEndingVendorNumber.Description = "Ending Entity";
             this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
             this.pstrEndingVendorNumber.ValueInfo = "ZZZZZZZZZZ";
-            dynamicListLookUpSettings9.DataMember = "DSVendorLookup";
-            dynamicListLookUpSettings9.DataSource = this.Dynamic;
-            dynamicListLookUpSettings9.DisplayMember = "Description";
-            dynamicListLookUpSettings9.ValueMember = "Number";
-            this.pstrEndingVendorNumber.ValueSourceSettings = dynamicListLookUpSettings9;
             // 
             // parameter1
             // 
             this.parameter1.Description = "Operator";
             this.parameter1.Name = "parameter1";
-            dynamicListLookUpSettings10.DataMember = "DSOperatorLookup";
-            dynamicListLookUpSettings10.DataSource = this.Dynamic;
-            dynamicListLookUpSettings10.DisplayMember = "Description";
-            dynamicListLookUpSettings10.ValueMember = "Number";
-            this.parameter1.ValueSourceSettings = dynamicListLookUpSettings10;
             // 
             // plngOperatorsToShow
             // 
@@ -989,10 +858,6 @@
             this.plngOperatorsToShow.Name = "plngOperatorsToShow";
             this.plngOperatorsToShow.Type = typeof(int);
             this.plngOperatorsToShow.ValueInfo = "0";
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "All"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Oberated by"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Not Operated by"));
-            this.plngOperatorsToShow.ValueSourceSettings = staticListLookUpSettings1;
             // 
             // pbooShowCriteria
             // 
@@ -1477,7 +1342,6 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.parameter1, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngOperatorsToShow, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectProperty, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccount, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1488,7 +1352,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBeginningBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectBatch, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClosingEntries, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowYearEndClosingEntries, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -1509,7 +1374,6 @@
             this.pstrEndingVendorNumber,
             this.parameter1,
             this.plngOperatorsToShow,
-            this.pbooShowCriteria,
             this.pstrSelectProperty,
             this.pstrSelectAccount,
             this.pstrSelectVendor,
@@ -1520,8 +1384,9 @@
             this.plngBeginningBatch,
             this.plngEndingBatch,
             this.pstrSelectBatch,
-            this.pbooShowYearEndClosingEntries});
-            this.Version = "23.1";
+            this.pbooShowYearEndClosingEntries,
+            this.pbooShowCriteria});
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
