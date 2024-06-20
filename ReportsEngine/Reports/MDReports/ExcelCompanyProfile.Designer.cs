@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelCompanyProfile));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Tablix3 = new DevExpress.XtraReports.UI.DetailBand();
@@ -36,10 +39,11 @@
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -72,6 +76,16 @@
             // 
             this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
+            storedProcQuery1.Name = "CompanyProfile";
+            queryParameter1.Name = "@pstrSELECTCompanyID";
+            queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectCompanyID)", typeof(string));
+            storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
+            queryParameter1});
+            storedProcQuery1.StoredProcName = "Report_CompanyProfile";
+            this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
+            storedProcQuery1});
+            this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // pstrServerName
             // 
@@ -85,13 +99,13 @@
             this.pstrDatabaseName.Name = "pstrDatabaseName";
             this.pstrDatabaseName.Visible = false;
             // 
-            // plngCompanyID
+            // pstrSelectCompanyID
             // 
-            this.plngCompanyID.Description = "plngCompanyID";
-            this.plngCompanyID.Name = "plngCompanyID";
-            this.plngCompanyID.Type = typeof(int);
-            this.plngCompanyID.ValueInfo = "0";
-            this.plngCompanyID.Visible = false;
+            this.pstrSelectCompanyID.Description = "Select Company";
+            this.pstrSelectCompanyID.MultiValue = true;
+            this.pstrSelectCompanyID.Name = "pstrSelectCompanyID";
+            this.pstrSelectCompanyID.Type = typeof(int);
+            this.pstrSelectCompanyID.Visible = false;
             // 
             // pbooShowCriteria
             // 
@@ -114,6 +128,13 @@
             this.Subtitle.Name = "Subtitle";
             this.Subtitle.Visible = false;
             // 
+            // plngCompanyID
+            // 
+            this.plngCompanyID.Description = "Parameter1";
+            this.plngCompanyID.Name = "plngCompanyID";
+            this.plngCompanyID.Type = typeof(int);
+            this.plngCompanyID.ValueInfo = "0";
+            // 
             // ExcelCompanyProfile
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -123,7 +144,7 @@
             this.pageHeaderBand1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
             this.Dynamic});
-            this.DataMember = "PropertyListAllCompanies";
+            this.DataMember = "CompanyProfile";
             this.DataSource = this.Dynamic;
             this.DisplayName = "PropertyListAllCompanies";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
@@ -132,6 +153,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -139,6 +161,7 @@
             this.pstrServerName,
             this.pstrDatabaseName,
             this.plngCompanyID,
+            this.pstrSelectCompanyID,
             this.plngUserID,
             this.Subtitle,
             this.pbooShowCriteria});
@@ -156,9 +179,10 @@
         private DevExpress.DataAccess.Sql.SqlDataSource Dynamic;
         private DevExpress.XtraReports.Parameters.Parameter pstrServerName;
         private DevExpress.XtraReports.Parameters.Parameter pstrDatabaseName;
-        private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectCompanyID;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
         private DevExpress.XtraReports.Parameters.Parameter Subtitle;
+        private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
     }
 }

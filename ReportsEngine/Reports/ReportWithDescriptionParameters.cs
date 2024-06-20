@@ -64,7 +64,15 @@ namespace ReportsEngine.Reports
             Parameter pbooSearchSortParameter = Parameters["pbooSearchSortParameters"];
             if (pbooSearchSortParameter != null)
             {
-                bool pbooSearchSortParameterValue = bool.Parse(pbooSearchSortParameter.Value.ToString());
+                bool pbooSearchSortParameterValue = false;
+                try
+                {
+                    pbooSearchSortParameterValue = bool.Parse(pbooSearchSortParameter.Value.ToString());
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                }
                 AddDescriptionParametersToReport();
                 haveFilterStringUseDescriptionParameters(pbooSearchSortParameterValue);
             }
@@ -96,7 +104,7 @@ namespace ReportsEngine.Reports
                 pbooSearchSortParameter.MultiValue = false;
                 pbooSearchSortParameter.Visible = true;
                 pbooSearchSortParameter.Enabled = true;
-                pbooSearchSortParameter.AllowNull = false;
+                pbooSearchSortParameter.AllowNull = true;
                 pbooSearchSortParameterStaticLookupSettings.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Number"));
                 pbooSearchSortParameterStaticLookupSettings.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
                 pbooSearchSortParameter.ValueSourceSettings = pbooSearchSortParameterStaticLookupSettings;
@@ -125,64 +133,70 @@ namespace ReportsEngine.Reports
 
         private void AddDescriptionParametersToReport()
         {
-            if (!DescriptionParametersInitialized)
-            {
-                DescriptionParametersInitialized = true;
-                for (int index = 0; index < Parameters.Count; index++)
+            try {
+                if (!DescriptionParametersInitialized)
                 {
-                    string parameterName = Parameters[index].Name;
-                    string descriptionParameterIdentity = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterName);
-                    if (Parameters[index].ValueSourceSettings is DynamicListLookUpSettings && !(descriptionParameterIdentity is null))
+                    DescriptionParametersInitialized = true;
+                    for (int index = 0; index < Parameters.Count; index++)
                     {
-                        string parameterDescription = Parameters[index].Description;
-                        var parameterValue = Parameters[index].Value;
-                        Parameter newDescriptionParameter = new Parameter();
-                        newDescriptionParameter.Value = parameterValue;
-                        newDescriptionParameter.Description = parameterDescription;
-                        newDescriptionParameter.Name = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterName);
-
-                        DynamicListLookUpSettings descriptionParameterLookupSettings = new DynamicListLookUpSettings();
-                        descriptionParameterLookupSettings.ValueMember = (Parameters[index].ValueSourceSettings as DynamicListLookUpSettings).ValueMember;
-                        descriptionParameterLookupSettings.DataMember = (Parameters[index].ValueSourceSettings as DynamicListLookUpSettings).DataMember;
-                        descriptionParameterLookupSettings.DataSource = (Parameters[index].ValueSourceSettings as DynamicListLookUpSettings).DataSource;
-                        descriptionParameterLookupSettings.FilterString = (Parameters[index].ValueSourceSettings as DynamicListLookUpSettings).FilterString;
-                        descriptionParameterLookupSettings.DisplayMember = "DescriptionFirstThenNumber";
-                        descriptionParameterLookupSettings.SortMember = descriptionParameterLookupSettings.DisplayMember;
-                        descriptionParameterLookupSettings.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
-                        newDescriptionParameter.ValueSourceSettings = descriptionParameterLookupSettings;
-
-                        newDescriptionParameter.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] { new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ?pbooSearchSortParameters") });
-                        Parameters[index].ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] { new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?pbooSearchSortParameters") });
-                        try
+                        string parameterName = Parameters[index].Name;
+                        string descriptionParameterIdentity = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterName);
+                        if (Parameters[index].ValueSourceSettings is DynamicListLookUpSettings && !(descriptionParameterIdentity is null))
                         {
-                            ParameterLayoutItem DescriptionParameterLayoutItem = new ParameterLayoutItem(newDescriptionParameter, DevExpress.XtraReports.Parameters.Orientation.Horizontal);
-                            int LayoutItemIndex = 0;
-                            for (; LayoutItemIndex < ParameterPanelLayoutItems.Count; LayoutItemIndex++)
+                            string parameterDescription = Parameters[index].Description;
+                            var parameterValue = Parameters[index].Value;
+                            Parameter newDescriptionParameter = new Parameter();
+                            newDescriptionParameter.Value = parameterValue;
+                            newDescriptionParameter.Description = parameterDescription;
+                            newDescriptionParameter.Name = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterName);
+
+                            DynamicListLookUpSettings descriptionParameterLookupSettings = new DynamicListLookUpSettings();
+                            descriptionParameterLookupSettings.ValueMember = (Parameters[index].ValueSourceSettings as DynamicListLookUpSettings).ValueMember;
+                            descriptionParameterLookupSettings.DataMember = (Parameters[index].ValueSourceSettings as DynamicListLookUpSettings).DataMember;
+                            descriptionParameterLookupSettings.DataSource = (Parameters[index].ValueSourceSettings as DynamicListLookUpSettings).DataSource;
+                            descriptionParameterLookupSettings.FilterString = (Parameters[index].ValueSourceSettings as DynamicListLookUpSettings).FilterString;
+                            descriptionParameterLookupSettings.DisplayMember = "DescriptionFirstThenNumber";
+                            descriptionParameterLookupSettings.SortMember = descriptionParameterLookupSettings.DisplayMember;
+                            descriptionParameterLookupSettings.SortOrder = DevExpress.Data.ColumnSortOrder.Ascending;
+                            newDescriptionParameter.ValueSourceSettings = descriptionParameterLookupSettings;
+
+                            newDescriptionParameter.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] { new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "not ISNULL(?pbooSearchSortParameters, false)") });
+                            Parameters[index].ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] { new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "ISNULL(?pbooSearchSortParameters, false)") });
+                            try
                             {
-                                ParameterLayoutItem layoutItem = (ParameterLayoutItem)ParameterPanelLayoutItems[LayoutItemIndex];
-
-                                string layoutItemString = layoutItem.Parameter.Name.ToString();
-                                if (layoutItemString == parameterName)
+                                ParameterLayoutItem DescriptionParameterLayoutItem = new ParameterLayoutItem(newDescriptionParameter, DevExpress.XtraReports.Parameters.Orientation.Horizontal);
+                                int LayoutItemIndex = 0;
+                                for (; LayoutItemIndex < ParameterPanelLayoutItems.Count; LayoutItemIndex++)
                                 {
-                                    break;
-                                }
-                            }
-                            ParameterPanelLayoutItems.Insert(LayoutItemIndex, DescriptionParameterLayoutItem);
-                        }
-                        catch (Exception ex)
-                        {
-                            Console.WriteLine(ex.ToString());
-                        }
+                                    ParameterLayoutItem layoutItem = (ParameterLayoutItem)ParameterPanelLayoutItems[LayoutItemIndex];
 
-                        if (newDescriptionParameter.Name.StartsWith("pstrSelect"))
-                        {
-                            newDescriptionParameter.MultiValue = true;
-                            newDescriptionParameter.SelectAllValues = true;
+                                    string layoutItemString = layoutItem.Parameter.Name.ToString();
+                                    if (layoutItemString == parameterName)
+                                    {
+                                        break;
+                                    }
+                                }
+                                ParameterPanelLayoutItems.Insert(LayoutItemIndex, DescriptionParameterLayoutItem);
+                            }
+                            catch (Exception ex)
+                            {
+                                Console.WriteLine(ex.ToString());
+                            }
+
+                            if (newDescriptionParameter.Name.StartsWith("pstrSelect"))
+                            {
+                                newDescriptionParameter.MultiValue = true;
+                                newDescriptionParameter.SelectAllValues = true;
+                            }
+                            index++;
+                            this.Parameters.Insert(index, newDescriptionParameter);
                         }
-                        index++;
-                        this.Parameters.Insert(index, newDescriptionParameter);
                     }
                 }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.ToString());
             }
         }
         private void haveFilterStringUseDescriptionParameters(bool pbooSearchSortParameters)
