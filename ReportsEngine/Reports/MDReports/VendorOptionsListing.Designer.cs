@@ -2328,7 +2328,6 @@
             this.pbooShowCriteria,
             this.plngUserID});
             this.Version = "23.1";
-            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.VendorOptionsListing_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

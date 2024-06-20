@@ -10,11 +10,14 @@ using System.Linq;
 
 namespace ReportsEngine.Reports.RDReports
 {
-    public partial class RDEntryEditList : DevExpress.XtraReports.UI.XtraReport
+    public partial class RDEntryEditList : ReportWithDescriptionParameters
     {
         public RDEntryEditList()
         {
             InitializeComponent();
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
 
         private void ShowingReportType_BeforePrint(object sender, CancelEventArgs e)

@@ -155,8 +155,8 @@
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.xrCrossBandBox2 = new DevExpress.XtraReports.UI.XRCrossBandBox();
-            this.pstrBeginningAccountCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrEndingAccountCenterNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.pbooShowActive = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
@@ -170,7 +170,7 @@
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrAccountingCentersSelected = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
             this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
@@ -188,10 +188,10 @@
             queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
             queryParameter2.Name = "@pstrBeginningAccountCenterNumber";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningAccountCenterNumber", typeof(string));
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenter", typeof(string));
             queryParameter3.Name = "@pstrEndingAccountCenterNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingAccountCenterNumber", typeof(string));
+            queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
             queryParameter4.Name = "@plngShowActive";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?pbooShowActive", typeof(int));
@@ -854,31 +854,31 @@
             this.xrCrossBandBox2.StartPointFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrCrossBandBox2.WidthF = 770.0001F;
             // 
-            // pstrBeginningAccountCenterNumber
+            // pstrBeginningCostCenter
             // 
-            this.pstrBeginningAccountCenterNumber.Description = "Beginning Acct. Center";
-            this.pstrBeginningAccountCenterNumber.Name = "pstrBeginningAccountCenterNumber";
-            this.pstrBeginningAccountCenterNumber.ValueInfo = "!";
+            this.pstrBeginningCostCenter.Description = "Beginning Acct. Center";
+            this.pstrBeginningCostCenter.Name = "pstrBeginningCostCenter";
+            this.pstrBeginningCostCenter.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "LookupAccountingCenter";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "Name";
             dynamicListLookUpSettings2.FilterString = null;
             dynamicListLookUpSettings2.SortMember = "Number";
             dynamicListLookUpSettings2.ValueMember = "Number";
-            this.pstrBeginningAccountCenterNumber.ValueSourceSettings = dynamicListLookUpSettings2;
+            this.pstrBeginningCostCenter.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
-            // pstrEndingAccountCenterNumber
+            // pstrEndingCostCenter
             // 
-            this.pstrEndingAccountCenterNumber.Description = "Ending Acct. Center";
-            this.pstrEndingAccountCenterNumber.Name = "pstrEndingAccountCenterNumber";
-            this.pstrEndingAccountCenterNumber.ValueInfo = "ZZZZ";
+            this.pstrEndingCostCenter.Description = "Ending Acct. Center";
+            this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
+            this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
             dynamicListLookUpSettings3.DataMember = "LookupAccountingCenter";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
             dynamicListLookUpSettings3.DisplayMember = "Name";
             dynamicListLookUpSettings3.FilterString = null;
             dynamicListLookUpSettings3.SortMember = "Number";
             dynamicListLookUpSettings3.ValueMember = "Number";
-            this.pstrEndingAccountCenterNumber.ValueSourceSettings = dynamicListLookUpSettings3;
+            this.pstrEndingCostCenter.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
             // federationDataSource1
             // 
@@ -1119,7 +1119,7 @@
             this.xrLabel16,
             this.xrLabel17,
             this.xrLabel18,
-            this.xrLabel19});
+            this.xrAccountingCentersSelected});
             this.xrPanel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)")});
             this.xrPanel1.LocationFloat = new DevExpress.Utils.PointFloat(0F, 36.33334F);
@@ -1214,34 +1214,34 @@
             this.xrLabel18.StylePriority.UseTextAlignment = false;
             this.xrLabel18.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // xrLabel19
+            // xrAccountingCentersSelected
             // 
-            this.xrLabel19.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel19.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel19.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel19.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel19.BorderWidth = 1F;
-            this.xrLabel19.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.xrAccountingCentersSelected.BackColor = System.Drawing.Color.Transparent;
+            this.xrAccountingCentersSelected.BorderColor = System.Drawing.Color.Black;
+            this.xrAccountingCentersSelected.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrAccountingCentersSelected.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrAccountingCentersSelected.BorderWidth = 1F;
+            this.xrAccountingCentersSelected.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowCriteria = True, True, False)\n"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrLabel19.ExpressionBindings"))});
-            this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
-            this.xrLabel19.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel19.KeepTogether = true;
-            this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(147.395F, 0F);
-            this.xrLabel19.Multiline = true;
-            this.xrLabel19.Name = "xrLabel19";
-            this.xrLabel19.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 2, 100F);
-            this.xrLabel19.SizeF = new System.Drawing.SizeF(254.0554F, 13.54165F);
-            this.xrLabel19.StylePriority.UseBackColor = false;
-            this.xrLabel19.StylePriority.UseBorderColor = false;
-            this.xrLabel19.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel19.StylePriority.UseBorders = false;
-            this.xrLabel19.StylePriority.UseBorderWidth = false;
-            this.xrLabel19.StylePriority.UseFont = false;
-            this.xrLabel19.StylePriority.UseForeColor = false;
-            this.xrLabel19.StylePriority.UsePadding = false;
-            this.xrLabel19.StylePriority.UseTextAlignment = false;
-            this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", resources.GetString("xrAccountingCentersSelected.ExpressionBindings"))});
+            this.xrAccountingCentersSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrAccountingCentersSelected.ForeColor = System.Drawing.Color.Black;
+            this.xrAccountingCentersSelected.KeepTogether = true;
+            this.xrAccountingCentersSelected.LocationFloat = new DevExpress.Utils.PointFloat(147.395F, 0F);
+            this.xrAccountingCentersSelected.Multiline = true;
+            this.xrAccountingCentersSelected.Name = "xrAccountingCentersSelected";
+            this.xrAccountingCentersSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 2, 100F);
+            this.xrAccountingCentersSelected.SizeF = new System.Drawing.SizeF(254.0554F, 13.54165F);
+            this.xrAccountingCentersSelected.StylePriority.UseBackColor = false;
+            this.xrAccountingCentersSelected.StylePriority.UseBorderColor = false;
+            this.xrAccountingCentersSelected.StylePriority.UseBorderDashStyle = false;
+            this.xrAccountingCentersSelected.StylePriority.UseBorders = false;
+            this.xrAccountingCentersSelected.StylePriority.UseBorderWidth = false;
+            this.xrAccountingCentersSelected.StylePriority.UseFont = false;
+            this.xrAccountingCentersSelected.StylePriority.UseForeColor = false;
+            this.xrAccountingCentersSelected.StylePriority.UsePadding = false;
+            this.xrAccountingCentersSelected.StylePriority.UseTextAlignment = false;
+            this.xrAccountingCentersSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel20
             // 
@@ -1325,8 +1325,8 @@
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI light", 8F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningAccountCenterNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingAccountCenterNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectAccountingCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1336,8 +1336,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowActive, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
-            this.pstrBeginningAccountCenterNumber,
-            this.pstrEndingAccountCenterNumber,
+            this.pstrBeginningCostCenter,
+            this.pstrEndingCostCenter,
             this.pstrSelectAccountingCenter,
             this.pstrDatabaseName,
             this.pstrServerName,
@@ -1346,7 +1346,7 @@
             this.Subtitle,
             this.pbooShowCriteria,
             this.pbooShowActive});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1380,8 +1380,8 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox5;
         private DevExpress.XtraReports.UI.XRLabel xrLabel6;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox2;
-        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningAccountCenterNumber;
-        private DevExpress.XtraReports.Parameters.Parameter pstrEndingAccountCenterNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
         private DevExpress.XtraReports.UI.XRPanel xrFooterControl;
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
@@ -1401,7 +1401,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel19;
+        private DevExpress.XtraReports.UI.XRLabel xrAccountingCentersSelected;
         private DevExpress.XtraReports.UI.XRLabel xrLabel20;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
         private DevExpress.XtraReports.UI.XRCrossBandBox xrCrossBandBox1;

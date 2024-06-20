@@ -2117,7 +2117,6 @@
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.xrControlStyle2});
             this.Version = "23.1";
-            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.DOIbyOwnerAddress_BeforePrint_1);
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

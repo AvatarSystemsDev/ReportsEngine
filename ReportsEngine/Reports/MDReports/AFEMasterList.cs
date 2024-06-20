@@ -6,82 +6,16 @@ using System;
 
 namespace ReportsEngine.Reports
 {
-    public partial class AFEMasterList : DevExpress.XtraReports.UI.XtraReport
+    public partial class AFEMasterList : ReportWithDescriptionParameters
     {
         public AFEMasterList()
         {
             InitializeComponent();
-            xrAFEsSelected.BeforePrint += xrAFEsSelected_BeforePrint;
-        }
-        private void xrAFEsSelected_BeforePrint(object sender, CancelEventArgs e)
-        {
-            XRLabel label = sender as XRLabel;
-            Parameter p = this.Parameters["pstrSelectAFE"];
-            Parameter start = this.Parameters["pstrBeginningAFENumber"];
-            Parameter end = this.Parameters["pstrEndingAFENumber"];
-
-            if (p.MultiValue == false || p.LookUpSettings == null)
-            {
-                return;
-            }
-            var dataContext = ((IServiceProvider)label.RootReport).GetService(typeof(DataContext)) as DataContext;
-            LookUpValueCollection col = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext);
-            if (col.Count == (p.Value as Array).Length)
-            {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZ")
-                {
-                    label.Text = "All AFEs";
-                }
-                else
-                {
-                    if (start.Value.ToString() == "!")
-                    {
-                        label.Text = "First AFE to ";
-                    }
-                    else
-                    {
-                        label.Text = start.Value.ToString() + " to ";
-                    }
-                    if (end.Value.ToString() == "ZZZZZZZZ")
-                    {
-                        label.Text += "Last AFE";
-                    }
-                    else
-                    {
-                        label.Text += end.Value.ToString();
-                    }
-                }
-            }
-            else if ((p.Value as Array).Length == 0)
-            {
-                label.Text = "No Values Selected";
-            }
-            else
-            {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZ")
-                {
-                    label.Text = "Selected AFEs";
-                }
-                else
-                {
-                    if (start.Value.ToString() == "!")
-                    {
-                        label.Text = "First AFE to ";
-                    }
-                    else
-                    {
-                        label.Text = start.Value.ToString() + " to ";
-                    }
-                    if (end.Value.ToString() == "ZZZZZZZZ")
-                    {
-                        label.Text += "Last AFE";
-                    }
-                    else
-                    {
-                        label.Text += end.Value.ToString();
-                    }
-                }
-            }
+            xrAFEsSelected.BeforePrint += XrAFEsSelected_BeforePrint;
+            xrOperatorsSelected.BeforePrint += XrOperatorsSelected_BeforePrint; ;
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
     }
 }

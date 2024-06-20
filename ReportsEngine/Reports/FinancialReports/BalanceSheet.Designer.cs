@@ -176,8 +176,8 @@
             this.plngBookCodeID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowZeroBalances = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooIncludeStartingBalances = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrBeginningAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pstrEndingAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingCostCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowAccountNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.ReportHeader = new DevExpress.XtraReports.UI.ReportHeaderBand();
@@ -219,10 +219,10 @@
             queryParameter4.Value = new DevExpress.DataAccess.Expression("?pdteEndingPostDate", typeof(System.DateTime));
             queryParameter5.Name = "@pstrBeginningAccountingCenter";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrBeginningAccountingCenter", typeof(string));
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCostCenter", typeof(string));
             queryParameter6.Name = "@pstrEndingAccountingCenter";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrEndingAccountingCenter", typeof(string));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pstrEndingCostCenter", typeof(string));
             queryParameter7.Name = "@pbooIncludeStartingBalances";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooIncludeStartingBalances", typeof(bool));
@@ -1322,31 +1322,31 @@
             this.pbooIncludeStartingBalances.Type = typeof(bool);
             this.pbooIncludeStartingBalances.ValueInfo = "True";
             // 
-            // pstrBeginningAccountingCenter
+            // pstrBeginningCostCenter
             // 
-            this.pstrBeginningAccountingCenter.Description = "Beginning Accounting Center";
-            this.pstrBeginningAccountingCenter.Name = "pstrBeginningAccountingCenter";
-            this.pstrBeginningAccountingCenter.ValueInfo = "!";
+            this.pstrBeginningCostCenter.Description = "Beginning Accounting Center";
+            this.pstrBeginningCostCenter.Name = "pstrBeginningCostCenter";
+            this.pstrBeginningCostCenter.ValueInfo = "!";
             dynamicListLookUpSettings2.DataMember = "DSAccountingCenterLookup";
             dynamicListLookUpSettings2.DataSource = this.Dynamic;
             dynamicListLookUpSettings2.DisplayMember = "Name";
             dynamicListLookUpSettings2.FilterString = null;
             dynamicListLookUpSettings2.SortMember = null;
             dynamicListLookUpSettings2.ValueMember = "Number";
-            this.pstrBeginningAccountingCenter.ValueSourceSettings = dynamicListLookUpSettings2;
+            this.pstrBeginningCostCenter.ValueSourceSettings = dynamicListLookUpSettings2;
             // 
-            // pstrEndingAccountingCenter
+            // pstrEndingCostCenter
             // 
-            this.pstrEndingAccountingCenter.Description = "Ending Accounting Center";
-            this.pstrEndingAccountingCenter.Name = "pstrEndingAccountingCenter";
-            this.pstrEndingAccountingCenter.ValueInfo = "ZZZZ";
+            this.pstrEndingCostCenter.Description = "Ending Accounting Center";
+            this.pstrEndingCostCenter.Name = "pstrEndingCostCenter";
+            this.pstrEndingCostCenter.ValueInfo = "ZZZZ";
             dynamicListLookUpSettings3.DataMember = "DSAccountingCenterLookup";
             dynamicListLookUpSettings3.DataSource = this.Dynamic;
             dynamicListLookUpSettings3.DisplayMember = "Name";
             dynamicListLookUpSettings3.FilterString = null;
             dynamicListLookUpSettings3.SortMember = null;
             dynamicListLookUpSettings3.ValueMember = "Number";
-            this.pstrEndingAccountingCenter.ValueSourceSettings = dynamicListLookUpSettings3;
+            this.pstrEndingCostCenter.ValueSourceSettings = dynamicListLookUpSettings3;
             // 
             // pbooShowAccountNumber
             // 
@@ -1842,8 +1842,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooIncludeStartingBalances, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningAccountingCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingAccountingCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingCostCenter, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBookCodeID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowZeroBalances, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1859,14 +1859,14 @@
             this.pdteBeginningPostDate,
             this.pdteEndingPostDate,
             this.pbooIncludeStartingBalances,
-            this.pstrBeginningAccountingCenter,
-            this.pstrEndingAccountingCenter,
+            this.pstrBeginningCostCenter,
+            this.pstrEndingCostCenter,
             this.plngBookCodeID,
             this.pbooShowZeroBalances,
             this.pbooShowAccountNumber,
             this.pbooShowDetail,
             this.pbooShowCriteria});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -1894,8 +1894,8 @@
         private DevExpress.XtraReports.UI.XRLabel Textbox1;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowZeroBalances;
         private DevExpress.XtraReports.Parameters.Parameter pbooIncludeStartingBalances;
-        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningAccountingCenter;
-        private DevExpress.XtraReports.Parameters.Parameter pstrEndingAccountingCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCostCenter;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCostCenter;
         private DevExpress.XtraReports.UI.XRPageInfo xrPageInfo1;
         private DevExpress.XtraReports.UI.XRLabel xrCopyright;
         private DevExpress.XtraReports.UI.XRLabel Textbox5;

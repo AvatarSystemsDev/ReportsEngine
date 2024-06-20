@@ -6,11 +6,14 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.MDReports
 {
-    public partial class OwnerLabels : DevExpress.XtraReports.UI.XtraReport
+    public partial class OwnerLabels : ReportWithDescriptionParameters
     {
         public OwnerLabels()
         {
             InitializeComponent();
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
 
     }

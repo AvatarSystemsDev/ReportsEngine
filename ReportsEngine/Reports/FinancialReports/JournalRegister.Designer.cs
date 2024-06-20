@@ -188,7 +188,6 @@ namespace ReportsEngine.Reports.FinancialReports
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings17 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings18 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings19 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
-            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
@@ -331,7 +330,6 @@ namespace ReportsEngine.Reports.FinancialReports
             this.SelectAccountList = new DevExpress.XtraReports.UI.CalculatedField();
             this.pbooShowYearEndClosingEntries = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowZeroBalance = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooSearchSortParameters = new DevExpress.XtraReports.Parameters.Parameter();
             this.BatchSort = new DevExpress.XtraReports.UI.CalculatedField();
             this.AccountSort = new DevExpress.XtraReports.UI.CalculatedField();
             this.AccountingCenterSort = new DevExpress.XtraReports.UI.CalculatedField();
@@ -3322,16 +3320,6 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pbooShowZeroBalance.Type = typeof(bool);
             this.pbooShowZeroBalance.ValueInfo = "False";
             // 
-            // pbooSearchSortParameters
-            // 
-            this.pbooSearchSortParameters.Description = "Search/Sort Parameters by";
-            this.pbooSearchSortParameters.Name = "pbooSearchSortParameters";
-            this.pbooSearchSortParameters.Type = typeof(bool);
-            this.pbooSearchSortParameters.ValueInfo = "True";
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Number"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
-            this.pbooSearchSortParameters.ValueSourceSettings = staticListLookUpSettings2;
-            // 
             // BatchSort
             // 
             this.BatchSort.DataMember = "DSBatchReportLookup";
@@ -3430,7 +3418,6 @@ namespace ReportsEngine.Reports.FinancialReports
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningServiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingServiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooSearchSortParameters, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngSortBy, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingAccountNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -3466,7 +3453,6 @@ namespace ReportsEngine.Reports.FinancialReports
             this.pdteEndingPostDate,
             this.pdteBeginningServiceDate,
             this.pdteEndingServiceDate,
-            this.pbooSearchSortParameters,
             this.plngSortBy,
             this.pstrBeginningAccountNumber,
             this.pstrEndingAccountNumber,
@@ -3695,7 +3681,6 @@ namespace ReportsEngine.Reports.FinancialReports
         private CalculatedField SelectAccountList;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEndClosingEntries;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowZeroBalance;
-        private DevExpress.XtraReports.Parameters.Parameter pbooSearchSortParameters;
         private CalculatedField BatchSort;
         private CalculatedField AccountSort;
         private CalculatedField AccountingCenterSort;

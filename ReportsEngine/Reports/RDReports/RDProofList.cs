@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.RDReports
 {
-    public partial class RDProofList : DevExpress.XtraReports.UI.XtraReport
+    public partial class RDProofList : ReportWithDescriptionParameters
     {
         private double LeaseCashDifferenceGroupSum;
         private double NetCashDifferenceGroupSum;
@@ -19,6 +19,9 @@ namespace ReportsEngine.Reports.RDReports
             xrNetCashDifferenceGroup.PrintOnPage += xrNetCashDifferenceGroupSum_PrintOnPage;
             xrLeaseCashDifferenceReport.PrintOnPage += xrLeaseCashDifferenceReport_PrintOnPage;
             xrNetCashDifferenceReport.PrintOnPage += xrNetCashDifferenceReport_PrintOnPage;
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
         private void RDProofList_BeforePrint(object sender, CancelEventArgs e)
         {

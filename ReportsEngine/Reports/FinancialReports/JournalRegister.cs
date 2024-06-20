@@ -8,16 +8,16 @@ namespace ReportsEngine.Reports.FinancialReports
         public JournalRegister()
         {
             InitializeComponent();
-            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
             xrAccountsSelected.BeforePrint += XrAccountsSelected_BeforePrint;
             xrAccountingCentersSelected.BeforePrint += XrAccountingCentersSelected_BeforePrint;
             xrEntitiesSelected.BeforePrint += XrEntitiesSelected_BeforePrint;
             xrOwnersSelected.BeforePrint += XrOwnersSelected_BeforePrint;
             xrPropertiesSelected.BeforePrint += XrPropertiesSelected_BeforePrint;
             xrBatchesSelected.BeforePrint += XrBatchesSelected_BeforePrint;
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
             this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
-            this.BeforePrint += EnableDescriptionParametersOnDataSourceDemanded;
-            this.BeforePrint += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters, true);
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
+            //this.BeforePrint += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
     }
 }

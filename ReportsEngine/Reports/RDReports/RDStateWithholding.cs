@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.RDReports
 {
-    public partial class RDStateWithholding : DevExpress.XtraReports.UI.XtraReport
+    public partial class RDStateWithholding : ReportWithDescriptionParameters
     {
         public RDStateWithholding()
         {

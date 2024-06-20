@@ -51,6 +51,9 @@
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings5 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings6 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.DataAccess.DataFederation.SelectNode selectNode1 = new DevExpress.DataAccess.DataFederation.SelectNode();
+            DevExpress.DataAccess.DataFederation.SourceNode sourceNode1 = new DevExpress.DataAccess.DataFederation.SourceNode();
+            DevExpress.DataAccess.DataFederation.Source source1 = new DevExpress.DataAccess.DataFederation.Source();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -166,6 +169,8 @@
             this.xrLabel85 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel86 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel87 = new DevExpress.XtraReports.UI.XRLabel();
+            this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -2524,6 +2529,44 @@
             this.xrLabel87.Text = "[PayorName]";
             this.xrLabel87.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // federationDataSource1
+            // 
+            this.federationDataSource1.Name = "federationDataSource1";
+            selectNode1.Alias = "Dynamic_DataSource";
+            sourceNode1.Alias = null;
+            source1.DataMember = "DataSource";
+            source1.DataSource = this.Dynamic;
+            source1.Name = "Dynamic_DataSource";
+            sourceNode1.Source = source1;
+            selectNode1.Expressions.AddRange(new DevExpress.DataAccess.DataFederation.ISelectExpression[] {
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "GroupingName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "NumberOfDR0021WForms"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldJanuary"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldFebruary"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldMarch"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldApril"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldMay"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldJune"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldJuly"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldAugust"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldSeptember"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldOctober"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldNovember"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldDecember"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "SeveranceTaxWithheldYear"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayorName"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayorFederalIDNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayorAddressLine1"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayorState"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayorZip"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayorCountry"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayorCity"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayorColoradoAccountNumber"),
+            new DevExpress.DataAccess.DataFederation.SelectColumnExpression(sourceNode1, "PayorAddress")});
+            selectNode1.Root = sourceNode1;
+            this.federationDataSource1.Queries.AddRange(new DevExpress.DataAccess.DataFederation.QueryNode[] {
+            selectNode1});
+            // 
             // RDColoradoDR0456W
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2532,12 +2575,15 @@
             this.JIBItems,
             this.groupHeaderBand1});
             this.ComponentStorage.AddRange(new System.ComponentModel.IComponent[] {
-            this.Dynamic});
-            this.DataMember = "DataSource";
-            this.DataSource = this.Dynamic;
+            this.Dynamic,
+            this.federationDataSource1});
+            this.DataMember = "Dynamic_DataSource";
+            this.DataSource = this.federationDataSource1;
             this.DisplayName = "JIBARDetailByOwner";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0\n")});
+            this.FilterString = "[OwnerNumber] In (?pstrSelectOwner) Or IsNullOrEmpty([OwnerNumber]) And \'!\' In (?" +
+    "pstrSelectOwner)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(50F, 50F, 50F, 50F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
@@ -2574,7 +2620,8 @@
             this.pdblPenalty,
             this.pdblInterest,
             this.pbooShowCriteria});
-            this.Version = "23.1";
+            this.Version = "24.1";
+            ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }
@@ -2696,5 +2743,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel85;
         private DevExpress.XtraReports.UI.XRLabel xrLabel86;
         private DevExpress.XtraReports.UI.XRLabel xrLabel87;
+        private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
     }
 }

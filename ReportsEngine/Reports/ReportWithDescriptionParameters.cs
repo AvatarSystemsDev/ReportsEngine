@@ -1,6 +1,7 @@
 ﻿using System;
 using System.ComponentModel;
 using System.Web.WebPages;
+using DevExpress.DataAccess.DataFederation;
 using DevExpress.XtraReports.Parameters;
 using DevExpress.XtraReports.UI;
 
@@ -20,6 +21,19 @@ namespace ReportsEngine.Reports
     {
         private string originalFilterString;
         private bool DescriptionParametersInitialized = false;
+
+        protected internal bool WireParametersToDataSource(ref DevExpress.DataAccess.Sql.SqlDataSource dynamic, ref DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource, string mainDataMember)
+        {
+            try
+            {
+                ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref dynamic, ref federationDataSource, mainDataMember, this.Parameters);
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
         protected internal bool EnableDescriptionParameters(string filterString, ref DevExpress.DataAccess.Sql.SqlDataSource dynamic, ref DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource, string mainDataMember)
         {
             try
@@ -36,7 +50,7 @@ namespace ReportsEngine.Reports
                     bool pbooSearchSortParameterValue = bool.Parse(pbooSearchSortParameter.Value.ToString());
                     AddDescriptionParametersToReport();
                     haveFilterStringUseDescriptionParameters(pbooSearchSortParameterValue);
-                    ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref dynamic, ref federationDataSource, mainDataMember, this.Parameters, true);
+                    ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref dynamic, ref federationDataSource, mainDataMember, this.Parameters);
                 }
             }
             catch
@@ -83,8 +97,8 @@ namespace ReportsEngine.Reports
                 pbooSearchSortParameter.Visible = true;
                 pbooSearchSortParameter.Enabled = true;
                 pbooSearchSortParameter.AllowNull = false;
-                pbooSearchSortParameterStaticLookupSettings.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
                 pbooSearchSortParameterStaticLookupSettings.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Number"));
+                pbooSearchSortParameterStaticLookupSettings.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Description"));
                 pbooSearchSortParameter.ValueSourceSettings = pbooSearchSortParameterStaticLookupSettings;
 
                 ParameterLayoutItem layoutItemNew = new ParameterLayoutItem(pbooSearchSortParameter, Orientation.Horizontal);
@@ -217,12 +231,26 @@ namespace ReportsEngine.Reports
         protected internal void XrPropertiesSelected_BeforePrint(object sender, CancelEventArgs e)
         {
             ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "Property", this.DisplayName, true, true);
-
         }
         protected internal void XrBatchesSelected_BeforePrint(object sender, CancelEventArgs e)
         {
             ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "Batch", this.DisplayName, true, true);
-
+        }
+        protected internal void XrDeckCodesSelected_BeforePrint(object sender, CancelEventArgs e)
+        {
+            ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "DeckCode", this.DisplayName, true, true);
+        }
+        protected internal void XrAFEsSelected_BeforePrint(object sender, CancelEventArgs e)
+        {
+            ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "AFE", this.DisplayName, true, true);
+        }
+        protected internal void XrOperatorsSelected_BeforePrint(object sender, CancelEventArgs e)
+        {
+            ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "Operator", this.DisplayName, true, true);
+        }
+        protected internal void XrPurchasersSelected_BeforePrint(object sender, CancelEventArgs e)
+        {
+            ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.X_BeforePrint(ref sender, Parameters, "Purchaser", this.DisplayName, true, true);
         }
     }
 }

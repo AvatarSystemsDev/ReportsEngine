@@ -11,13 +11,16 @@ using System.Linq;
 
 namespace ReportsEngine.Reports.MDReports
 {
-    public partial class VendorNameAddress : DevExpress.XtraReports.UI.XtraReport
+    public partial class VendorNameAddress : ReportWithDescriptionParameters
     {
         public VendorNameAddress()
         {
             InitializeComponent();
-            xrVendorsSelected.BeforePrint += xrOwnersSelected_BeforePrint;
+            xrVendorsSelected.BeforePrint += XrVendorsSelected_BeforePrint;
             xrRoleType.BeforePrint += XrRoleType_BeforePrint;
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
 
         private void XrRoleType_BeforePrint(object sender, CancelEventArgs e)
@@ -44,77 +47,5 @@ namespace ReportsEngine.Reports.MDReports
                 label.Text = "Selected Roles";
             }
         }
-
-        private void xrOwnersSelected_BeforePrint(object sender, CancelEventArgs e)
-        {
-            XRLabel label = sender as XRLabel;
-            Parameter p = this.Parameters["pstrSelectVendor"];
-            Parameter start = this.Parameters["pstrBeginningVendorNumber"];
-            Parameter end = this.Parameters["pstrEndingVendorNumber"];
-
-            if (p.MultiValue == false || p.LookUpSettings == null)
-            {
-                return;
-            }
-            var dataContext = ((IServiceProvider)label.RootReport).GetService(typeof(DataContext)) as DataContext;
-            LookUpValueCollection col = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext);
-            if (col.Count == (p.Value as Array).Length)
-            {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
-                {
-                    label.Text = "All Entities";
-                }
-                else
-                {
-                    if (start.Value.ToString() == "!")
-                    {
-                        label.Text = "First Entity to ";
-                    }
-                    else
-                    {
-                        label.Text = start.Value.ToString() + " to ";
-                    }
-                    if (end.Value.ToString() == "ZZZZZZZZZZ")
-                    {
-                        label.Text += "Last Entity";
-                    }
-                    else
-                    {
-                        label.Text += end.Value.ToString();
-                    }
-                }
-            }
-            else if ((p.Value as Array).Length == 0)
-            {
-                label.Text = "No Values Selected";
-            }
-            else
-            {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
-                {
-                    label.Text = "Selected Entities";
-                }
-                else
-                {
-                    if (start.Value.ToString() == "!")
-                    {
-                        label.Text = "First Entity to ";
-                    }
-                    else
-                    {
-                        label.Text = start.Value.ToString() + " to ";
-                    }
-                    if (end.Value.ToString() == "ZZZZZZZZZZ")
-                    {
-                        label.Text += "Last Entity";
-                    }
-                    else
-                    {
-                        label.Text += end.Value.ToString();
-                    }
-                }
-            }
-        }
-
     }
 }

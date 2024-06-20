@@ -35,6 +35,62 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                 "999999999"
             };
 
+            dataDictionary["DeckCode"] = new string[10]
+            {
+                "pstrSelectDeckCode",
+                "pstrSelectDeckCodeDescription",
+                "pstrBeginningDeckCode",
+                "pstrBeginningDeckCodeDescription",
+                "pstrEndingDeckCode",
+                "pstrEndingDeckCodeDescription",
+                "Deck Code",
+                "Deck Codes",
+                "",
+                "ZZZZZZ"
+            };
+
+            dataDictionary["AFE"] = new string[10]
+            {
+                "pstrSelectAFE",
+                "pstrSelectAFEDescription",
+                "pstrBeginningAFENumber",
+                "pstrBeginningAFEDescription",
+                "pstrEndingAFENumber",
+                "pstrEndingAFEDescription",
+                "AFE",
+                "AFEs",
+                "!",
+                "ZZZZZZZZ"
+            };
+
+            dataDictionary["Operator"] = new string[10]
+            {
+                "pstrSelectOperator",
+                "pstrSelectOperatorDescription",
+                "pstrBeginningOperatorNumber",
+                "pstrBeginningOperatorDescription",
+                "pstrEndingOperatorNumber",
+                "pstrEndingOperatorDescription",
+                "Operator",
+                "Operators",
+                "!",
+                "ZZZZZZZZZZ"
+            };
+
+            dataDictionary["Purchaser"] = new string[10]
+            {
+                "pstrSelectPurchaser",
+                "pstrSelectPurchaserDescription",
+                "pstrBeginningPurchaserNumber",
+                "pstrBeginningPurchaserDescription",
+                "pstrEndingPurchaserNumber",
+                "pstrEndingPurchaserDescription",
+                "Purchaser",
+                "Purchasers",
+                "!",
+                "ZZZZZZZZZZ"
+            };
+
             dataDictionary["Account"] = new string[10]
             {
                 "pstrSelectAccount",
@@ -47,20 +103,6 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                 "Accounts",
                 "!",
                 "ZZZZZZZZZZ-ZZZZ"
-            };
-
-            dataDictionary["CostCenter"] = new string[10]
-            {
-                "pstrSelectAccountingCenter",
-                "pstrSelectAccountingCenterDescription",
-                "pstrBeginningCostCenterNumber",
-                "pstrBeginningCostCenterDescription",
-                "pstrEndingCostCenterNumber",
-                "pstrEndingCostCenterDescription",
-                "Accounting Center",
-                "Accounting Centers",
-                "!",
-                "ZZZZ"
             };
 
             dataDictionary["AccountingCenter"] = new string[10]
@@ -441,11 +483,12 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
             return null;
         }
 
-        internal static void RewireDataSourceWithDescriptionParameters(ref DevExpress.DataAccess.Sql.SqlDataSource dynamic, ref DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource, string mainDataMember, ParameterCollection Parameters, bool pbooSearchSortParameters)
+        internal static void RewireDataSourceWithDescriptionParameters(ref DevExpress.DataAccess.Sql.SqlDataSource dynamic, ref DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource, string mainDataMember, ParameterCollection Parameters)
         {
             // Change the expression for what is loaded into SQL stored procedures in Dynamic (changes "Dynamic" query parameters that the federation data source member for the report uses)
             try
             {
+
                 var mainQueryNode = federationDataSource.Queries.OfType<DevExpress.DataAccess.DataFederation.SelectNode>().FirstOrDefault(q => q.Alias == mainDataMember); // Gets main member of federation source that the report uses
 
                 if (mainQueryNode != null)
@@ -461,10 +504,15 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                                     if (parameter.Value is DevExpress.DataAccess.Expression)
                                     {
                                         var parameterValue = (DevExpress.DataAccess.Expression)parameter.Value;
-                                        // Might need to change parameters back to the original ones set in the designer hense the if statement.
-                                        if (!pbooSearchSortParameters)
+                                        bool pbooSearchSortParameters = true;
+                                        if (!(Parameters["pbooSearchSortParameters"] is null))
                                         {
-                                            string parameterDescriptionName = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterValue.ExpressionString.ToString().Substring(1), false);
+                                            pbooSearchSortParameters = bool.Parse(Parameters["pbooSearchSortParameters"].Value.ToString());
+                                        }
+                                        // Might need to change parameters back to the original ones set in the designer hense the if statement.
+                                        if (pbooSearchSortParameters)
+                                        {
+                                            string parameterDescriptionName = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterValue.ExpressionString.ToString().Substring(1), true);
                                             if (!string.IsNullOrEmpty(parameterDescriptionName))
                                             {
                                                 Parameter parameter1 = Parameters[parameterDescriptionName];
@@ -474,10 +522,12 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                                         }
                                         else
                                         {
-                                            string parameterOriginalName = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterValue.ExpressionString.ToString().Substring(1), true);
+                                            string parameterOriginalName = ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.GetDescriptionParameterName(parameterValue.ExpressionString.ToString().Substring(1), false);
                                             if (!string.IsNullOrEmpty(parameterOriginalName))
                                             {
-                                                parameter.Value = new DevExpress.DataAccess.Expression("?" + parameterOriginalName, parameterOriginalName.StartsWith("pstr") ? typeof(string) : typeof(int)); // Changing the parameter to use the Description parameter instead of regular.
+                                                Parameter parameter1 = Parameters[parameterOriginalName];
+                                                bool stringType = parameterOriginalName.StartsWith("pstr");
+                                                parameter.Value = new DevExpress.DataAccess.Expression("?" + parameter1.Name, stringType ? typeof(string) : typeof(int)); // Changing the parameter to use the Description parameter instead of regular.
                                             }
                                         }
                                     }

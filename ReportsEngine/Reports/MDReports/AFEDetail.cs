@@ -8,7 +8,7 @@ using System.Collections.Generic;
 
 namespace ReportsEngine.Reports.MDReports
 {
-    public partial class DetailAFE : DevExpress.XtraReports.UI.XtraReport
+    public partial class DetailAFE : ReportWithDescriptionParameters
     {
         private int PageNumber = 1;
         private bool EndAFE = false;
@@ -24,6 +24,9 @@ namespace ReportsEngine.Reports.MDReports
             xrAFEOver.PrintOnPage += XrAFEOver_PrintOnPage;
             xrPageNumber.PrintOnPage += XrPageNumber_PrintOnPage;
             LoadDefaultAFE(databaseID, companyID);
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
         private void LoadDefaultAFE(int databaseID, int companyID)
         {

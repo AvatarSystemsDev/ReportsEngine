@@ -6,7 +6,7 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.FinancialReports
 {
-    public partial class SummaryWithholding : DevExpress.XtraReports.UI.XtraReport
+    public partial class SummaryWithholding : ReportWithDescriptionParameters
     {
         private int VendorCount;
         public SummaryWithholding()
@@ -14,8 +14,10 @@ namespace ReportsEngine.Reports.FinancialReports
             InitializeComponent();
             xrVendorTotal.AfterPrint += xrTotalVendor_AfterPrint;
             xrVendorCount.PrintOnPage += XrVendorCount_PrintOnPage;
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
-
         private void XrVendorCount_PrintOnPage(object sender, PrintOnPageEventArgs e)
         {
             ((XRLabel)sender).Text = VendorCount.ToString("N0");

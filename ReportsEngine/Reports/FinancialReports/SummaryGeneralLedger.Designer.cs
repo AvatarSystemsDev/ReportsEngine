@@ -2968,7 +2968,6 @@
             this.pbooShowYearEndClose,
             this.pbooShowCriteria});
             this.Version = "23.1";
-            this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.SummaryGeneralLedger_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

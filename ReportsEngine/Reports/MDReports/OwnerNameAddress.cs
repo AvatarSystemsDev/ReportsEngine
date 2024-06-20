@@ -10,13 +10,16 @@ using System.Linq;
 
 namespace ReportsEngine.Reports.MDReports
 {
-    public partial class OwnerNameAddress : DevExpress.XtraReports.UI.XtraReport
+    public partial class OwnerNameAddress : ReportWithDescriptionParameters
     {
         public OwnerNameAddress()
         {
             InitializeComponent();
-            xrOwnersSelected.BeforePrint += xrOwnersSelected_BeforePrint;
+            xrOwnersSelected.BeforePrint += XrOwnersSelected_BeforePrint;
             xrSortBy.BeforePrint += xrSortBy_BeforePrint;
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
 
         private void xrSortBy_BeforePrint(object sender, CancelEventArgs e)
@@ -25,77 +28,6 @@ namespace ReportsEngine.Reports.MDReports
             Parameter p = this.Parameters["plngSortOrder"];
             List<LookUpValue> staticValueCollection = (p.LookUpSettings as StaticListLookUpSettings).LookUpValues.ToList();
             (sender as XRLabel).Text = staticValueCollection.FirstOrDefault(x => Object.Equals(x.Value, this.Parameters["plngSortOrder"].Value)).Description;
-        }
-
-        private void xrOwnersSelected_BeforePrint(object sender, CancelEventArgs e)
-        {
-            XRLabel label = sender as XRLabel;
-            Parameter p = this.Parameters["pstrSelectOwner"];
-            Parameter start = this.Parameters["pstrBeginningOwnerNumber"];
-            Parameter end = this.Parameters["pstrEndingOwnerNumber"];
-
-            if (p.MultiValue == false || p.LookUpSettings == null)
-            {
-                return;
-            }
-            var dataContext = ((IServiceProvider)label.RootReport).GetService(typeof(DataContext)) as DataContext;
-            LookUpValueCollection col = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext);
-            if (col.Count == (p.Value as Array).Length)
-            {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
-                {
-                    label.Text = "All Owners";
-                }
-                else
-                {
-                    if (start.Value.ToString() == "!")
-                    {
-                        label.Text = "First Owner to ";
-                    }
-                    else
-                    {
-                        label.Text = start.Value.ToString() + " to ";
-                    }
-                    if (end.Value.ToString() == "ZZZZZZZZZZ")
-                    {
-                        label.Text += "Last Owner";
-                    }
-                    else
-                    {
-                        label.Text += end.Value.ToString();
-                    }
-                }
-            }
-            else if ((p.Value as Array).Length == 0)
-            {
-                label.Text = "No Values Selected";
-            }
-            else
-            {
-                if (start.Value.ToString() == "!" && end.Value.ToString() == "ZZZZZZZZZZ")
-                {
-                    label.Text = "Selected Owners";
-                }
-                else
-                {
-                    if (start.Value.ToString() == "!")
-                    {
-                        label.Text = "First Owner to ";
-                    }
-                    else
-                    {
-                        label.Text = start.Value.ToString() + " to ";
-                    }
-                    if (end.Value.ToString() == "ZZZZZZZZZZ")
-                    {
-                        label.Text += "Last Owner";
-                    }
-                    else
-                    {
-                        label.Text += end.Value.ToString();
-                    }
-                }
-            }
         }
     }
 }

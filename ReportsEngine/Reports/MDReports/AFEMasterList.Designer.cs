@@ -222,6 +222,8 @@ namespace ReportsEngine.Reports
             this.pstrBeginningOperatorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingOperatorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectOperator = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrOperatorsSelected = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel53 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -1861,6 +1863,8 @@ namespace ReportsEngine.Reports
             this.xrPanel1.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrPanel1.BorderWidth = 1F;
             this.xrPanel1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrOperatorsSelected,
+            this.xrLabel53,
             this.xrAFEsSelected,
             this.xrLabel12});
             this.xrPanel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
@@ -1890,7 +1894,7 @@ namespace ReportsEngine.Reports
             this.xrLabel12.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
             this.xrLabel12.SizeF = new System.Drawing.SizeF(56.47667F, 17.00002F);
             this.xrLabel12.StylePriority.UseFont = false;
-            this.xrLabel12.Text = "For AFE\'s:";
+            this.xrLabel12.Text = "For AFEs:";
             // 
             // xrLabel10
             // 
@@ -1997,6 +2001,29 @@ namespace ReportsEngine.Reports
             dynamicListLookUpSettings7.ValueMember = "Number";
             this.pstrSelectOperator.ValueSourceSettings = dynamicListLookUpSettings7;
             // 
+            // xrOperatorsSelected
+            // 
+            this.xrOperatorsSelected.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrOperatorsSelected.LocationFloat = new DevExpress.Utils.PointFloat(370.6765F, 3.637979E-12F);
+            this.xrOperatorsSelected.Multiline = true;
+            this.xrOperatorsSelected.Name = "xrOperatorsSelected";
+            this.xrOperatorsSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrOperatorsSelected.SizeF = new System.Drawing.SizeF(232.7233F, 17.00002F);
+            this.xrOperatorsSelected.StylePriority.UseFont = false;
+            this.xrOperatorsSelected.StylePriority.UseTextAlignment = false;
+            this.xrOperatorsSelected.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // xrLabel53
+            // 
+            this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(289.2F, 3.814697E-06F);
+            this.xrLabel53.Multiline = true;
+            this.xrLabel53.Name = "xrLabel53";
+            this.xrLabel53.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel53.SizeF = new System.Drawing.SizeF(81.47659F, 17.00002F);
+            this.xrLabel53.StylePriority.UseFont = false;
+            this.xrLabel53.Text = "For Operators:";
+            // 
             // AFEMasterList
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2055,7 +2082,7 @@ namespace ReportsEngine.Reports
             this.pbooShowCriteria});
             this.StyleSheet.AddRange(new DevExpress.XtraReports.UI.XRControlStyle[] {
             this.xrControlStyle3});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -2153,5 +2180,7 @@ namespace ReportsEngine.Reports
         private DevExpress.XtraReports.UI.XRLabel xrLabel49;
         private DevExpress.XtraReports.UI.XRLabel xrLabel50;
         private DevExpress.XtraReports.UI.XRLabel xrLabel51;
+        private DevExpress.XtraReports.UI.XRLabel xrOperatorsSelected;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel53;
     }
 }

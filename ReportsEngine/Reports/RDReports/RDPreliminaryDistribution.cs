@@ -9,16 +9,18 @@ using System.Drawing;
 
 namespace ReportsEngine.Reports.APReports
 {
-    public partial class RDPreliminaryDistribution : DevExpress.XtraReports.UI.XtraReport
+    public partial class RDPreliminaryDistribution : ReportWithDescriptionParameters
     {
         public RDPreliminaryDistribution()
         {
             InitializeComponent();
-            xrPropertiesSelected.BeforePrint += xrPropertiesSelected_BeforePrint;
-            xrPropertiesSelectedTwo.BeforePrint += xrPropertiesSelected_BeforePrint;
+            xrPropertiesSelected.BeforePrint += XrPropertiesSelected_BeforePrint;
+            xrPropertiesSelectedTwo.BeforePrint += XrPropertiesSelected_BeforePrint;
             xrProductsSelected.BeforePrint += XrProductsSelected_BeforePrint;
             xrProductsSelectedTwo.BeforePrint += XrProductsSelected_BeforePrint;
-
+            EnableDescriptionParameters(this.FilterString, ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString());
+            this.DataSourceDemanded += EnableDescriptionParametersOnDataSourceDemanded;
+            this.DataSourceDemanded += (sender, args) => ReportsEngine.Reports.CommonReportsFunctions.XSelected_PrintOnPageLabelFunction.RewireDataSourceWithDescriptionParameters(ref this.Dynamic, ref this.federationDataSource1, this.DataMember.ToString(), this.Parameters);
         }
 
         private void XrProductsSelected_BeforePrint(object sender, CancelEventArgs e)
