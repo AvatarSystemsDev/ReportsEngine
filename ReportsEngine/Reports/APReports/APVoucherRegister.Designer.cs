@@ -1902,7 +1902,8 @@
             this.xrLabel25,
             this.xrLabel34});
             this.groupHeaderBand1.GroupFields.AddRange(new DevExpress.XtraReports.UI.GroupField[] {
-            new DevExpress.XtraReports.UI.GroupField("BatchNumberName", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
+            new DevExpress.XtraReports.UI.GroupField("BatchNumberName", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending),
+            new DevExpress.XtraReports.UI.GroupField("InvoiceVendorNumberName", DevExpress.XtraReports.UI.XRColumnSortOrder.Ascending)});
             this.groupHeaderBand1.HeightF = 17.00002F;
             this.groupHeaderBand1.Name = "groupHeaderBand1";
             // 
@@ -2297,7 +2298,7 @@
             this.pbooShowCriteria,
             this.plngCompanyID,
             this.plngPostedByUser});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.Textbox62)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox65)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox70)).EndInit();

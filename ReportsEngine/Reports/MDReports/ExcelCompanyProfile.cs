@@ -4,11 +4,11 @@ using System.Collections;
 using System.ComponentModel;
 using System.Drawing;
 
-namespace ReportsEngine.Reports.RDReports
+namespace ReportsEngine.Reports.MDReports
 {
-    public partial class CombinedRevenueReport : ReportWithDescriptionParameters
+    public partial class ExcelCompanyProfile : DevExpress.XtraReports.UI.XtraReport
     {
-        public CombinedRevenueReport()
+        public ExcelCompanyProfile()
         {
             InitializeComponent();
         }
