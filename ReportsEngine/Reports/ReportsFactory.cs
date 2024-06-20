@@ -354,6 +354,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPR_EmployerDepartmentExpenseRegister", (databaseID, companyID) => new ExcelPR_EmployerDepartmentExpenseRegister());
             Reports.Add("CompanyProfile", (databaseID, companyID) => new CompanyProfile());
             Reports.Add("ExcelCompanyProfile", (databaseID, companyID) => new ExcelCompanyProfile());
+            Reports.Add("PR_CompanyFundedDeductionRegister", (databaseID, companyID) => new PR_CompanyFundedDeductionRegister());
 
         }
         public static Dictionary<string, Func<int?, int?, XtraReport>> Reports = new Dictionary<string, Func<int?, int?, XtraReport>>();

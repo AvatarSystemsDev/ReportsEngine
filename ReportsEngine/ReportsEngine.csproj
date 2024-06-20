@@ -625,6 +625,12 @@
     <Compile Include="Reports\PRReports\PR_Checks.Designer.cs">
       <DependentUpon>PR_Checks.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\PR_CompanyFundedDeductionRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\PR_CompanyFundedDeductionRegister.Designer.cs">
+      <DependentUpon>PR_CompanyFundedDeductionRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PRReports\PR_DeductionsRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2794,6 +2800,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\PR_Checks.resx">
       <DependentUpon>PR_Checks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\PR_CompanyFundedDeductionRegister.resx">
+      <DependentUpon>PR_CompanyFundedDeductionRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\PR_DeductionsRegister.resx">
       <DependentUpon>PR_DeductionsRegister.cs</DependentUpon>
