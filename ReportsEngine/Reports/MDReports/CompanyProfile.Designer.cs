@@ -192,6 +192,7 @@
             this.xrLabel44 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel45 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCompanyProfileControlAccountsSubreport = new DevExpress.XtraReports.UI.XRSubreport();
+            this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -399,7 +400,8 @@
             this.CompanyProfileControlAccountSubreportBand,
             this.CompanyShareFileSubBand,
             this.TheCompany1099InformationSubBand,
-            this.SubBand1});
+            this.SubBand1,
+            this.SubBand2});
             // 
             // CompanyNumberNameSubBand
             // 
@@ -1535,6 +1537,12 @@
             this.xrCompanyProfileControlAccountsSubreport.ReportSource = new ReportsEngine.Reports.MDReports.CompanyProfileControlAccountsSubreport();
             this.xrCompanyProfileControlAccountsSubreport.SizeF = new System.Drawing.SizeF(770.0001F, 19.40232F);
             // 
+            // SubBand2
+            // 
+            this.SubBand2.HeightF = 0F;
+            this.SubBand2.Name = "SubBand2";
+            this.SubBand2.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
+            // 
             // CompanyProfile
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -1662,5 +1670,6 @@
         private DevExpress.XtraReports.UI.SubBand SubBand1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel44;
         private DevExpress.XtraReports.UI.XRLabel xrLabel45;
+        private DevExpress.XtraReports.UI.SubBand SubBand2;
     }
 }
