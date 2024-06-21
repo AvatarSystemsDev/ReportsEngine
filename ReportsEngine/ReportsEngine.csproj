@@ -529,6 +529,12 @@
     <Compile Include="Reports\MDReports\ExcelCompanyProfile.Designer.cs">
       <DependentUpon>ExcelCompanyProfile.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\MDReports\ExcelCompanyProfileControlAccountSubreport.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\MDReports\ExcelCompanyProfileControlAccountSubreport.Designer.cs">
+      <DependentUpon>ExcelCompanyProfileControlAccountSubreport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_CurrentOwner.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2764,6 +2770,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelCompanyProfile.resx">
       <DependentUpon>ExcelCompanyProfile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\MDReports\ExcelCompanyProfileControlAccountSubreport.resx">
+      <DependentUpon>ExcelCompanyProfileControlAccountSubreport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\ProcessReports\ExcelSplitSuspenseEditList_CurrentOwner.resx">
       <DependentUpon>ExcelSplitSuspenseEditList_CurrentOwner.cs</DependentUpon>

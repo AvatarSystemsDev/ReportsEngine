@@ -11,6 +11,7 @@ namespace ReportsEngine.Reports.MDReports
         public CompanyProfile()
         {
             InitializeComponent();
+            pstrSelectCompanyID.Value = plngCompanyID;
         }
 
     }
