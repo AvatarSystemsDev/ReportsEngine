@@ -444,7 +444,6 @@
     <Content Include="App.config" />
     <Content Include="libman.json" />
     <None Include="Properties\PublishProfiles\IISProfile.pubxml" />
-    <Content Include="Reports\PRReports\PR_StateTableListing.rdl" />
     <None Include="Reports\RDReports\NonNegotiable.png" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\DisplayTemplates\Boolean.cshtml" />

@@ -393,9 +393,20 @@ namespace ReportsEngine.Services
                         {
                             report.Parameters[parameterName].Value = Convert.ChangeType(parameters.Get(parameterName), report.Parameters[parameterName].Type); // Run Report button passes in User ID parameter but that is not usually necessary on the report. Many reports do not have user ID and that causes an error.
                         }
-                        catch
+                        catch (Exception ex)
                         {
-
+                            Console.WriteLine(ex.ToString());
+                        }
+                    }
+                    else if (parameterName == "plngCompanyID")
+                    {
+                        try
+                        {
+                            report.Parameters[parameterName].Value = companyid; // Run Report button passes in User ID parameter but that is not usually necessary on the report. Many reports do not have user ID and that causes an error.
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine(ex.ToString());
                         }
                     }
                     else if (report.Parameters[parameterName] is null)

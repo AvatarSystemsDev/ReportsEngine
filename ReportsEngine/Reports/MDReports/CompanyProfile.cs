@@ -8,10 +8,18 @@ namespace ReportsEngine.Reports.MDReports
 {
     public partial class CompanyProfile : DevExpress.XtraReports.UI.XtraReport
     {
-        public CompanyProfile()
+        public CompanyProfile() : this(null) { }
+        public CompanyProfile(int? CompanyID)
         {
             InitializeComponent();
-            pstrSelectCompanyID.Value = plngCompanyID;
+            instantiateCompanyParameters(CompanyID);
+        }
+        private void instantiateCompanyParameters(int? CompanyID)
+        {
+            if (CompanyID != null)
+            {
+                pstrSelectCompanyID.Value = CompanyID;
+            }
         }
 
     }

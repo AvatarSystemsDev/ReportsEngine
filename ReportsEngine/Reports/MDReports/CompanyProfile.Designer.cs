@@ -192,7 +192,6 @@
             this.xrLabel44 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel45 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrCompanyProfileControlAccountsSubreport = new DevExpress.XtraReports.UI.XRSubreport();
-            this.SubBand2 = new DevExpress.XtraReports.UI.SubBand();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -397,11 +396,10 @@
             this.SubBand11,
             this.CompanyCityStateSubBand,
             this.SubBand13,
-            this.CompanyProfileControlAccountSubreportBand,
             this.CompanyShareFileSubBand,
             this.TheCompany1099InformationSubBand,
             this.SubBand1,
-            this.SubBand2});
+            this.CompanyProfileControlAccountSubreportBand});
             // 
             // CompanyNumberNameSubBand
             // 
@@ -522,7 +520,7 @@
             this.xrLabel11,
             this.xrLabel8});
             this.SubBand4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "BackColor", "[AddressLine2] <> \'\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine2] <> \'\'\n")});
             this.SubBand4.HeightF = 20.00001F;
             this.SubBand4.Name = "SubBand4";
             // 
@@ -959,7 +957,6 @@
             this.plngCompanyID.Enabled = false;
             this.plngCompanyID.Name = "plngCompanyID";
             this.plngCompanyID.Type = typeof(int);
-            this.plngCompanyID.ValueInfo = "0";
             this.plngCompanyID.Visible = false;
             // 
             // Subtitle
@@ -1144,7 +1141,6 @@
             this.pstrSelectCompanyID.Description = "Select Company";
             this.pstrSelectCompanyID.MultiValue = true;
             this.pstrSelectCompanyID.Name = "pstrSelectCompanyID";
-            this.pstrSelectCompanyID.SelectAllValues = true;
             this.pstrSelectCompanyID.Type = typeof(int);
             dynamicListLookUpSettings1.DataMember = "LookupCompanies";
             dynamicListLookUpSettings1.DataSource = this.Dynamic;
@@ -1489,6 +1485,8 @@
             this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel44,
             this.xrLabel45});
+            this.SubBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[CompanyWebAddress] <> \'\'")});
             this.SubBand1.HeightF = 20.00008F;
             this.SubBand1.Name = "SubBand1";
             // 
@@ -1536,12 +1534,6 @@
             this.xrCompanyProfileControlAccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
             this.xrCompanyProfileControlAccountsSubreport.ReportSource = new ReportsEngine.Reports.MDReports.CompanyProfileControlAccountsSubreport();
             this.xrCompanyProfileControlAccountsSubreport.SizeF = new System.Drawing.SizeF(770.0001F, 19.40232F);
-            // 
-            // SubBand2
-            // 
-            this.SubBand2.HeightF = 0F;
-            this.SubBand2.Name = "SubBand2";
-            this.SubBand2.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
             // 
             // CompanyProfile
             // 
@@ -1670,6 +1662,5 @@
         private DevExpress.XtraReports.UI.SubBand SubBand1;
         private DevExpress.XtraReports.UI.XRLabel xrLabel44;
         private DevExpress.XtraReports.UI.XRLabel xrLabel45;
-        private DevExpress.XtraReports.UI.SubBand SubBand2;
     }
 }

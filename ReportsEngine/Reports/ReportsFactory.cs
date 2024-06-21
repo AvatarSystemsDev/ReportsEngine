@@ -352,7 +352,7 @@ namespace ReportsEngine.Reports
             Reports.Add("ExcelPR_AllowanceRegister", (databaseID, companyID) => new ExcelPR_AllowanceRegister());
             Reports.Add("PR_EmployerDepartmentExpenseRegister", (databaseID, companyID) => new PR_EmployerDepartmentExpenseRegister());
             Reports.Add("ExcelPR_EmployerDepartmentExpenseRegister", (databaseID, companyID) => new ExcelPR_EmployerDepartmentExpenseRegister());
-            Reports.Add("CompanyProfile", (databaseID, companyID) => new CompanyProfile());
+            Reports.Add("CompanyProfile", (databaseID, companyID) => new CompanyProfile(companyID));
             Reports.Add("ExcelCompanyProfile", (databaseID, companyID) => new ExcelCompanyProfile());
             Reports.Add("PR_CompanyFundedDeductionRegister", (databaseID, companyID) => new PR_CompanyFundedDeductionRegister());
             Reports.Add("ExcelPR_CompanyFundedDeductionRegister", (databaseID, companyID) => new ExcelPR_CompanyFundedDeductionRegister());
