@@ -101,6 +101,8 @@
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter3 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings2 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.DataAccess.DataFederation.SelectNode selectNode1 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode1 = new DevExpress.DataAccess.DataFederation.SourceNode();
@@ -131,34 +133,34 @@
             this.CompanyAddressLine1SubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel10 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel7 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand4 = new DevExpress.XtraReports.UI.SubBand();
+            this.CompanyAddressLine2SubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel11 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel8 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand5 = new DevExpress.XtraReports.UI.SubBand();
+            this.CompanyAddressLine3SubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel12 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel13 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand6 = new DevExpress.XtraReports.UI.SubBand();
+            this.CompanyAddressLine4SubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel14 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel15 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand7 = new DevExpress.XtraReports.UI.SubBand();
+            this.CompanyAddressLine5SubBandSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel16 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel17 = new DevExpress.XtraReports.UI.XRLabel();
             this.CompanyPhone1SubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel18 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel19 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand9 = new DevExpress.XtraReports.UI.SubBand();
+            this.CompanyPhone2SubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel20 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel21 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand10 = new DevExpress.XtraReports.UI.SubBand();
+            this.CompanyPhone3SubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel22 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand11 = new DevExpress.XtraReports.UI.SubBand();
+            this.CompanyPhone4SubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
             this.CompanyCityStateSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel26 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel27 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand13 = new DevExpress.XtraReports.UI.SubBand();
+            this.FederalIDNumberSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel29 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
             this.CompanyShareFileSubBand = new DevExpress.XtraReports.UI.SubBand();
@@ -173,15 +175,20 @@
             this.xrLabel42 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel39 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel40 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.WebAddressSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel44 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel45 = new DevExpress.XtraReports.UI.XRLabel();
             this.CompanyProfileControlAccountSubreportBand = new DevExpress.XtraReports.UI.SubBand();
             this.pstrDatabaseName = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrServerName = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngUserID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.Subtitle = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrSelectSystemAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
+            this.CompanyProfileRDIncomeControlAcccountsSubreportSubBand = new DevExpress.XtraReports.UI.SubBand();
+            this.plngRDIncomeControlAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
+            this.CompanyEmailSubreportSubBand = new DevExpress.XtraReports.UI.SubBand();
+            this.PageBreakSubBand = new DevExpress.XtraReports.UI.SubBand();
+            this.plngCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pageHeaderBand1 = new DevExpress.XtraReports.UI.PageHeaderBand();
             this.xrLabel56 = new DevExpress.XtraReports.UI.XRLabel();
             this.pageFooterBand1 = new DevExpress.XtraReports.UI.PageFooterBand();
@@ -192,6 +199,9 @@
             this.pstrSelectCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.xrCompanyProfileControlAccountsSubreport = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport = new DevExpress.XtraReports.UI.XRSubreport();
+            this.xrCompanyProfilesEmailSubreport = new DevExpress.XtraReports.UI.XRSubreport();
+            this.pbooShowCompanyEmail = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -386,20 +396,23 @@
             this.CompanyVendorSubBand,
             this.FiscalYearSubBand,
             this.CompanyAddressLine1SubBand,
-            this.SubBand4,
-            this.SubBand5,
-            this.SubBand6,
-            this.SubBand7,
+            this.CompanyAddressLine2SubBand,
+            this.CompanyAddressLine3SubBand,
+            this.CompanyAddressLine4SubBand,
+            this.CompanyAddressLine5SubBandSubBand,
             this.CompanyPhone1SubBand,
-            this.SubBand9,
-            this.SubBand10,
-            this.SubBand11,
+            this.CompanyPhone2SubBand,
+            this.CompanyPhone3SubBand,
+            this.CompanyPhone4SubBand,
             this.CompanyCityStateSubBand,
-            this.SubBand13,
+            this.FederalIDNumberSubBand,
             this.CompanyShareFileSubBand,
             this.TheCompany1099InformationSubBand,
-            this.SubBand1,
-            this.CompanyProfileControlAccountSubreportBand});
+            this.WebAddressSubBand,
+            this.CompanyProfileControlAccountSubreportBand,
+            this.CompanyProfileRDIncomeControlAcccountsSubreportSubBand,
+            this.CompanyEmailSubreportSubBand,
+            this.PageBreakSubBand});
             // 
             // CompanyNumberNameSubBand
             // 
@@ -632,15 +645,15 @@
             this.xrLabel7.Text = "Address Line 1";
             this.xrLabel7.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // SubBand4
+            // CompanyAddressLine2SubBand
             // 
-            this.SubBand4.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CompanyAddressLine2SubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel11,
             this.xrLabel8});
-            this.SubBand4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.CompanyAddressLine2SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine2] <> \'\'\n")});
-            this.SubBand4.HeightF = 20.00001F;
-            this.SubBand4.Name = "SubBand4";
+            this.CompanyAddressLine2SubBand.HeightF = 20.00001F;
+            this.CompanyAddressLine2SubBand.Name = "CompanyAddressLine2SubBand";
             // 
             // xrLabel11
             // 
@@ -673,15 +686,15 @@
             this.xrLabel8.Text = "Address Line 2";
             this.xrLabel8.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // SubBand5
+            // CompanyAddressLine3SubBand
             // 
-            this.SubBand5.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CompanyAddressLine3SubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel12,
             this.xrLabel13});
-            this.SubBand5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.CompanyAddressLine3SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine3] <> \'\'\n")});
-            this.SubBand5.HeightF = 20.00001F;
-            this.SubBand5.Name = "SubBand5";
+            this.CompanyAddressLine3SubBand.HeightF = 20.00001F;
+            this.CompanyAddressLine3SubBand.Name = "CompanyAddressLine3SubBand";
             // 
             // xrLabel12
             // 
@@ -714,15 +727,15 @@
             this.xrLabel13.StylePriority.UseFont = false;
             this.xrLabel13.Text = "xrLabel1";
             // 
-            // SubBand6
+            // CompanyAddressLine4SubBand
             // 
-            this.SubBand6.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CompanyAddressLine4SubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel14,
             this.xrLabel15});
-            this.SubBand6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.CompanyAddressLine4SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine4] <> \'\'")});
-            this.SubBand6.HeightF = 20.00001F;
-            this.SubBand6.Name = "SubBand6";
+            this.CompanyAddressLine4SubBand.HeightF = 20.00001F;
+            this.CompanyAddressLine4SubBand.Name = "CompanyAddressLine4SubBand";
             // 
             // xrLabel14
             // 
@@ -755,15 +768,15 @@
             this.xrLabel15.Text = "Address Line 4";
             this.xrLabel15.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // SubBand7
+            // CompanyAddressLine5SubBandSubBand
             // 
-            this.SubBand7.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CompanyAddressLine5SubBandSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel16,
             this.xrLabel17});
-            this.SubBand7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.CompanyAddressLine5SubBandSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine5] <> \'\'")});
-            this.SubBand7.HeightF = 20.00001F;
-            this.SubBand7.Name = "SubBand7";
+            this.CompanyAddressLine5SubBandSubBand.HeightF = 20.00001F;
+            this.CompanyAddressLine5SubBandSubBand.Name = "CompanyAddressLine5SubBandSubBand";
             // 
             // xrLabel16
             // 
@@ -837,15 +850,15 @@
             this.xrLabel19.StylePriority.UseFont = false;
             this.xrLabel19.Text = "xrLabel1";
             // 
-            // SubBand9
+            // CompanyPhone2SubBand
             // 
-            this.SubBand9.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CompanyPhone2SubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel20,
             this.xrLabel21});
-            this.SubBand9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.CompanyPhone2SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[Phone2] <> \'\'")});
-            this.SubBand9.HeightF = 20.00008F;
-            this.SubBand9.Name = "SubBand9";
+            this.CompanyPhone2SubBand.HeightF = 20.00008F;
+            this.CompanyPhone2SubBand.Name = "CompanyPhone2SubBand";
             // 
             // xrLabel20
             // 
@@ -878,15 +891,15 @@
             this.xrLabel21.Text = "Phone 2";
             this.xrLabel21.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // SubBand10
+            // CompanyPhone3SubBand
             // 
-            this.SubBand10.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CompanyPhone3SubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel22,
             this.xrLabel23});
-            this.SubBand10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.CompanyPhone3SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[Phone3] <> \'\'")});
-            this.SubBand10.HeightF = 20.00001F;
-            this.SubBand10.Name = "SubBand10";
+            this.CompanyPhone3SubBand.HeightF = 20.00001F;
+            this.CompanyPhone3SubBand.Name = "CompanyPhone3SubBand";
             // 
             // xrLabel22
             // 
@@ -919,15 +932,15 @@
             this.xrLabel23.StylePriority.UseFont = false;
             this.xrLabel23.Text = "xrLabel1";
             // 
-            // SubBand11
+            // CompanyPhone4SubBand
             // 
-            this.SubBand11.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.CompanyPhone4SubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel24,
             this.xrLabel25});
-            this.SubBand11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.CompanyPhone4SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[Phone4] <> \'\'")});
-            this.SubBand11.HeightF = 20.00001F;
-            this.SubBand11.Name = "SubBand11";
+            this.CompanyPhone4SubBand.HeightF = 20.00001F;
+            this.CompanyPhone4SubBand.Name = "CompanyPhone4SubBand";
             // 
             // xrLabel24
             // 
@@ -1001,15 +1014,15 @@
             this.xrLabel27.StylePriority.UseFont = false;
             this.xrLabel27.Text = "xrLabel1";
             // 
-            // SubBand13
+            // FederalIDNumberSubBand
             // 
-            this.SubBand13.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.FederalIDNumberSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel29,
             this.xrLabel28});
-            this.SubBand13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.FederalIDNumberSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[MaskedFederalIDNumber] <> \'\'\n")});
-            this.SubBand13.HeightF = 20.00001F;
-            this.SubBand13.Name = "SubBand13";
+            this.FederalIDNumberSubBand.HeightF = 20.00001F;
+            this.FederalIDNumberSubBand.Name = "FederalIDNumberSubBand";
             // 
             // xrLabel29
             // 
@@ -1219,15 +1232,15 @@
             this.xrLabel40.Text = "Transmitter Contact";
             this.xrLabel40.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // SubBand1
+            // WebAddressSubBand
             // 
-            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.WebAddressSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel44,
             this.xrLabel45});
-            this.SubBand1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            this.WebAddressSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[CompanyWebAddress] <> \'\'")});
-            this.SubBand1.HeightF = 20.00008F;
-            this.SubBand1.Name = "SubBand1";
+            this.WebAddressSubBand.HeightF = 20.00008F;
+            this.WebAddressSubBand.Name = "WebAddressSubBand";
             // 
             // xrLabel44
             // 
@@ -1264,9 +1277,10 @@
             // 
             this.CompanyProfileControlAccountSubreportBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrCompanyProfileControlAccountsSubreport});
-            this.CompanyProfileControlAccountSubreportBand.HeightF = 19.40232F;
+            this.CompanyProfileControlAccountSubreportBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty(?pstrSelectSystemAccountTypes)")});
+            this.CompanyProfileControlAccountSubreportBand.HeightF = 11.06899F;
             this.CompanyProfileControlAccountSubreportBand.Name = "CompanyProfileControlAccountSubreportBand";
-            this.CompanyProfileControlAccountSubreportBand.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
             // 
             // pstrDatabaseName
             // 
@@ -1288,19 +1302,75 @@
             this.plngUserID.ValueInfo = "0";
             this.plngUserID.Visible = false;
             // 
+            // Subtitle
+            // 
+            this.Subtitle.Description = "Subtitle";
+            this.Subtitle.Name = "Subtitle";
+            this.Subtitle.Visible = false;
+            // 
+            // pstrSelectSystemAccountTypes
+            // 
+            this.pstrSelectSystemAccountTypes.AllowNull = true;
+            this.pstrSelectSystemAccountTypes.Description = "Select RD Income Control Accounts";
+            this.pstrSelectSystemAccountTypes.MultiValue = true;
+            this.pstrSelectSystemAccountTypes.Name = "pstrSelectSystemAccountTypes";
+            this.pstrSelectSystemAccountTypes.SelectAllValues = true;
+            this.pstrSelectSystemAccountTypes.Type = typeof(int);
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "General"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "AP"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "JIB"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(4, "RD"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(6, "Land"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(7, "Payroll"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(8, "Sales and Billing"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(9, "Oil First Purchaser"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(10, "DDA/Inv Asset"));
+            this.pstrSelectSystemAccountTypes.ValueSourceSettings = staticListLookUpSettings1;
+            // 
+            // CompanyProfileRDIncomeControlAcccountsSubreportSubBand
+            // 
+            this.CompanyProfileRDIncomeControlAcccountsSubreportSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport});
+            this.CompanyProfileRDIncomeControlAcccountsSubreportSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngRDIncomeControlAccountTypes < 4")});
+            this.CompanyProfileRDIncomeControlAcccountsSubreportSubBand.HeightF = 11.06899F;
+            this.CompanyProfileRDIncomeControlAcccountsSubreportSubBand.Name = "CompanyProfileRDIncomeControlAcccountsSubreportSubBand";
+            // 
+            // plngRDIncomeControlAccountTypes
+            // 
+            this.plngRDIncomeControlAccountTypes.Description = "Show RD Income Control Accounts";
+            this.plngRDIncomeControlAccountTypes.Name = "plngRDIncomeControlAccountTypes";
+            this.plngRDIncomeControlAccountTypes.Type = typeof(int);
+            this.plngRDIncomeControlAccountTypes.ValueInfo = "0";
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "All"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "RD Entry Only"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Revenue Accrual Only"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "None"));
+            this.plngRDIncomeControlAccountTypes.ValueSourceSettings = staticListLookUpSettings2;
+            // 
+            // CompanyEmailSubreportSubBand
+            // 
+            this.CompanyEmailSubreportSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrCompanyProfilesEmailSubreport});
+            this.CompanyEmailSubreportSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowCompanyEmail")});
+            this.CompanyEmailSubreportSubBand.HeightF = 11.06899F;
+            this.CompanyEmailSubreportSubBand.Name = "CompanyEmailSubreportSubBand";
+            // 
+            // PageBreakSubBand
+            // 
+            this.PageBreakSubBand.HeightF = 0F;
+            this.PageBreakSubBand.Name = "PageBreakSubBand";
+            this.PageBreakSubBand.PageBreak = DevExpress.XtraReports.UI.PageBreak.AfterBandExceptLastEntry;
+            // 
             // plngCompanyID
             // 
             this.plngCompanyID.Description = "Current Company";
             this.plngCompanyID.Enabled = false;
             this.plngCompanyID.Name = "plngCompanyID";
             this.plngCompanyID.Type = typeof(int);
+            this.plngCompanyID.ValueInfo = "0";
             this.plngCompanyID.Visible = false;
-            // 
-            // Subtitle
-            // 
-            this.Subtitle.Description = "Subtitle";
-            this.Subtitle.Name = "Subtitle";
-            this.Subtitle.Visible = false;
             // 
             // pageHeaderBand1
             // 
@@ -1352,7 +1422,7 @@
             // 
             this.xrPageInfo1.BackColor = System.Drawing.Color.Transparent;
             this.xrPageInfo1.BorderColor = System.Drawing.Color.Transparent;
-            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(708.2338F, 9.797184F);
+            this.xrPageInfo1.LocationFloat = new DevExpress.Utils.PointFloat(709.2751F, 9.797184F);
             this.xrPageInfo1.Name = "xrPageInfo1";
             this.xrPageInfo1.Padding = new DevExpress.XtraPrinting.PaddingInfo(0, 0, 0, 0, 100F);
             this.xrPageInfo1.SizeF = new System.Drawing.SizeF(60.72473F, 11.7084F);
@@ -1531,10 +1601,48 @@
             this.xrCompanyProfileControlAccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
             this.xrCompanyProfileControlAccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
             this.xrCompanyProfileControlAccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrCompanyProfileControlAccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", this.plngCompanyID));
+            this.xrCompanyProfileControlAccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", null, "Dynamic_CompanyProfile.CompanyID"));
             this.xrCompanyProfileControlAccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrCompanyProfileControlAccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrSelectSystemAccountTypes", this.pstrSelectSystemAccountTypes));
             this.xrCompanyProfileControlAccountsSubreport.ReportSource = new ReportsEngine.Reports.MDReports.CompanyProfileControlAccountsSubreport();
-            this.xrCompanyProfileControlAccountsSubreport.SizeF = new System.Drawing.SizeF(770.0001F, 19.40232F);
+            this.xrCompanyProfileControlAccountsSubreport.SizeF = new System.Drawing.SizeF(770.0001F, 11.06899F);
+            // 
+            // xrCompanyProfileRDIncomeControlAcccountsSubreport
+            // 
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.Name = "xrCompanyProfileRDIncomeControlAcccountsSubreport";
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", null, "Dynamic_CompanyProfile.CompanyID"));
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngRDIncomeControlAccountTypes", this.plngRDIncomeControlAccountTypes));
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.ReportSource = new ReportsEngine.Reports.MDReports.CompanyProfileRDIncomeControlAcccountsSubreport();
+            this.xrCompanyProfileRDIncomeControlAcccountsSubreport.SizeF = new System.Drawing.SizeF(770.0001F, 11.06899F);
+            // 
+            // xrCompanyProfilesEmailSubreport
+            // 
+            this.xrCompanyProfilesEmailSubreport.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
+            this.xrCompanyProfilesEmailSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrCompanyProfilesEmailSubreport.Name = "xrCompanyProfilesEmailSubreport";
+            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
+            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
+            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
+            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", null, "Dynamic_CompanyProfile.CompanyID"));
+            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
+            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngRDIncomeControlAccountTypes", this.plngRDIncomeControlAccountTypes));
+            this.xrCompanyProfilesEmailSubreport.ReportSource = new ReportsEngine.Reports.MDReports.CompanyProfilesEmailSubreport();
+            this.xrCompanyProfilesEmailSubreport.SizeF = new System.Drawing.SizeF(770.0001F, 11.06899F);
+            // 
+            // pbooShowCompanyEmail
+            // 
+            this.pbooShowCompanyEmail.Description = "Show Company Email Info";
+            this.pbooShowCompanyEmail.Name = "pbooShowCompanyEmail";
+            this.pbooShowCompanyEmail.Type = typeof(bool);
+            this.pbooShowCompanyEmail.ValueInfo = "True";
             // 
             // CompanyProfile
             // 
@@ -1560,6 +1668,9 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectSystemAccountTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngRDIncomeControlAccountTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCompanyEmail, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
@@ -1567,6 +1678,9 @@
             this.pstrDatabaseName,
             this.plngCompanyID,
             this.pstrSelectCompanyID,
+            this.pstrSelectSystemAccountTypes,
+            this.plngRDIncomeControlAccountTypes,
+            this.pbooShowCompanyEmail,
             this.plngUserID,
             this.Subtitle});
             this.Version = "24.1";
@@ -1606,35 +1720,35 @@
         private DevExpress.XtraReports.UI.SubBand CompanyAddressLine1SubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel10;
         private DevExpress.XtraReports.UI.XRLabel xrLabel7;
-        private DevExpress.XtraReports.UI.SubBand SubBand4;
+        private DevExpress.XtraReports.UI.SubBand CompanyAddressLine2SubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel8;
         private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
         private DevExpress.XtraReports.UI.XRLabel xrLabel11;
-        private DevExpress.XtraReports.UI.SubBand SubBand5;
+        private DevExpress.XtraReports.UI.SubBand CompanyAddressLine3SubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel12;
         private DevExpress.XtraReports.UI.XRLabel xrLabel13;
-        private DevExpress.XtraReports.UI.SubBand SubBand6;
+        private DevExpress.XtraReports.UI.SubBand CompanyAddressLine4SubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel14;
         private DevExpress.XtraReports.UI.XRLabel xrLabel15;
-        private DevExpress.XtraReports.UI.SubBand SubBand7;
+        private DevExpress.XtraReports.UI.SubBand CompanyAddressLine5SubBandSubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel16;
         private DevExpress.XtraReports.UI.XRLabel xrLabel17;
         private DevExpress.XtraReports.UI.SubBand CompanyPhone1SubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
-        private DevExpress.XtraReports.UI.SubBand SubBand9;
+        private DevExpress.XtraReports.UI.SubBand CompanyPhone2SubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel20;
         private DevExpress.XtraReports.UI.XRLabel xrLabel21;
-        private DevExpress.XtraReports.UI.SubBand SubBand10;
+        private DevExpress.XtraReports.UI.SubBand CompanyPhone3SubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel22;
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
-        private DevExpress.XtraReports.UI.SubBand SubBand11;
+        private DevExpress.XtraReports.UI.SubBand CompanyPhone4SubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
         private DevExpress.XtraReports.UI.XRLabel xrLabel25;
         private DevExpress.XtraReports.UI.SubBand CompanyCityStateSubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;
         private DevExpress.XtraReports.UI.XRLabel xrLabel27;
-        private DevExpress.XtraReports.UI.SubBand SubBand13;
+        private DevExpress.XtraReports.UI.SubBand FederalIDNumberSubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel29;
         private DevExpress.XtraReports.UI.XRLabel xrLabel28;
         private DevExpress.XtraReports.UI.SubBand CompanyProfileControlAccountSubreportBand;
@@ -1660,8 +1774,16 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
         private DevExpress.XtraReports.UI.XRLabel xrLabel43;
         private DevExpress.XtraReports.UI.XRLabel xrLabel42;
-        private DevExpress.XtraReports.UI.SubBand SubBand1;
+        private DevExpress.XtraReports.UI.SubBand WebAddressSubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel44;
         private DevExpress.XtraReports.UI.XRLabel xrLabel45;
+        private DevExpress.XtraReports.Parameters.Parameter pstrSelectSystemAccountTypes;
+        private DevExpress.XtraReports.Parameters.Parameter plngRDIncomeControlAccountTypes;
+        private DevExpress.XtraReports.UI.SubBand PageBreakSubBand;
+        private DevExpress.XtraReports.UI.SubBand CompanyProfileRDIncomeControlAcccountsSubreportSubBand;
+        private DevExpress.XtraReports.UI.XRSubreport xrCompanyProfileRDIncomeControlAcccountsSubreport;
+        private DevExpress.XtraReports.UI.SubBand CompanyEmailSubreportSubBand;
+        private DevExpress.XtraReports.UI.XRSubreport xrCompanyProfilesEmailSubreport;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowCompanyEmail;
     }
 }
