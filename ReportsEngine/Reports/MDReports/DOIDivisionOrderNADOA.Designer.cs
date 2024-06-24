@@ -138,13 +138,13 @@
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode6 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source6 = new DevExpress.DataAccess.DataFederation.Source();
             DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
+            DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
             this.Tablix12 = new DevExpress.XtraReports.UI.DetailBand();
             this.xrLabel43 = new DevExpress.XtraReports.UI.XRLabel();
-            this.xrLabel104 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel103 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel102 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel101 = new DevExpress.XtraReports.UI.XRLabel();
@@ -227,6 +227,7 @@
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.pdteEffectiveDate = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngMaskFederalID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.xrLabel104 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
@@ -467,8 +468,8 @@
             // Tablix12
             // 
             this.Tablix12.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel43,
             this.xrLabel104,
+            this.xrLabel43,
             this.xrLabel103,
             this.xrLabel102,
             this.xrLabel101,
@@ -507,34 +508,6 @@
             this.xrLabel43.StylePriority.UsePadding = false;
             this.xrLabel43.StylePriority.UseTextAlignment = false;
             this.xrLabel43.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            // 
-            // xrLabel104
-            // 
-            this.xrLabel104.BackColor = System.Drawing.Color.Transparent;
-            this.xrLabel104.BorderColor = System.Drawing.Color.Black;
-            this.xrLabel104.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
-            this.xrLabel104.Borders = DevExpress.XtraPrinting.BorderSide.None;
-            this.xrLabel104.BorderWidth = 1F;
-            this.xrLabel104.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "?plngProductID")});
-            this.xrLabel104.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
-            this.xrLabel104.ForeColor = System.Drawing.Color.Black;
-            this.xrLabel104.KeepTogether = true;
-            this.xrLabel104.LocationFloat = new DevExpress.Utils.PointFloat(719.1293F, 0F);
-            this.xrLabel104.Multiline = true;
-            this.xrLabel104.Name = "xrLabel104";
-            this.xrLabel104.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
-            this.xrLabel104.SizeF = new System.Drawing.SizeF(50.87091F, 40.00002F);
-            this.xrLabel104.StylePriority.UseBackColor = false;
-            this.xrLabel104.StylePriority.UseBorderColor = false;
-            this.xrLabel104.StylePriority.UseBorderDashStyle = false;
-            this.xrLabel104.StylePriority.UseBorders = false;
-            this.xrLabel104.StylePriority.UseBorderWidth = false;
-            this.xrLabel104.StylePriority.UseFont = false;
-            this.xrLabel104.StylePriority.UseForeColor = false;
-            this.xrLabel104.StylePriority.UsePadding = false;
-            this.xrLabel104.StylePriority.UseTextAlignment = false;
-            this.xrLabel104.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // xrLabel103
             // 
@@ -921,6 +894,7 @@
             // plngProductID
             // 
             this.plngProductID.Description = "Product";
+            this.plngProductID.Enabled = false;
             this.plngProductID.Name = "plngProductID";
             this.plngProductID.ValueInfo = "Oil";
             dynamicListLookUpSettings5.DataMember = "LookupProducts";
@@ -928,6 +902,7 @@
             dynamicListLookUpSettings5.DisplayMember = "Description";
             dynamicListLookUpSettings5.ValueMember = "Description";
             this.plngProductID.ValueSourceSettings = dynamicListLookUpSettings5;
+            this.plngProductID.Visible = false;
             // 
             // Subtitle
             // 
@@ -1122,7 +1097,6 @@
             this.xrLabel1.StylePriority.UsePadding = false;
             this.xrLabel1.StylePriority.UseTextAlignment = false;
             this.xrLabel1.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
-            this.xrLabel1.TextFormatString = "{0:MMMM d, yyyy}";
             // 
             // xrLabel4
             // 
@@ -2025,6 +1999,34 @@
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Mask"));
             this.plngMaskFederalID.ValueSourceSettings = staticListLookUpSettings1;
             // 
+            // xrLabel104
+            // 
+            this.xrLabel104.BackColor = System.Drawing.Color.Transparent;
+            this.xrLabel104.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel104.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel104.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel104.BorderWidth = 1F;
+            this.xrLabel104.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ProductType]")});
+            this.xrLabel104.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel104.ForeColor = System.Drawing.Color.Black;
+            this.xrLabel104.KeepTogether = true;
+            this.xrLabel104.LocationFloat = new DevExpress.Utils.PointFloat(719.129F, 0F);
+            this.xrLabel104.Multiline = true;
+            this.xrLabel104.Name = "xrLabel104";
+            this.xrLabel104.Padding = new DevExpress.XtraPrinting.PaddingInfo(3, 3, 3, 3, 100F);
+            this.xrLabel104.SizeF = new System.Drawing.SizeF(50.87091F, 40.00002F);
+            this.xrLabel104.StylePriority.UseBackColor = false;
+            this.xrLabel104.StylePriority.UseBorderColor = false;
+            this.xrLabel104.StylePriority.UseBorderDashStyle = false;
+            this.xrLabel104.StylePriority.UseBorders = false;
+            this.xrLabel104.StylePriority.UseBorderWidth = false;
+            this.xrLabel104.StylePriority.UseFont = false;
+            this.xrLabel104.StylePriority.UseForeColor = false;
+            this.xrLabel104.StylePriority.UsePadding = false;
+            this.xrLabel104.StylePriority.UseTextAlignment = false;
+            this.xrLabel104.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
             // DOIDivisionOrderNADOA
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2072,7 +2074,10 @@
             this.pdteEffectiveDate,
             this.plngMaskFederalID,
             this.pbooShowCriteria});
-            this.Version = "23.1";
+            this.Version = "24.1";
+            xrWatermark1.Id = "Watermark1";
+            this.Watermarks.AddRange(new DevExpress.XtraPrinting.Drawing.Watermark[] {
+            xrWatermark1});
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
@@ -2130,7 +2135,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel56;
         private DevExpress.XtraReports.UI.XRLabel xrLabel54;
         private DevExpress.XtraReports.UI.XRLabel xrLabel57;
-        private DevExpress.XtraReports.UI.XRLabel xrLabel104;
         private DevExpress.XtraReports.UI.XRLabel xrLabel103;
         private DevExpress.XtraReports.UI.XRLabel xrLabel102;
         private DevExpress.XtraReports.UI.XRLabel xrLabel101;
@@ -2171,5 +2175,6 @@
         private DevExpress.XtraReports.UI.SubBand SubBand3;
         private DevExpress.XtraReports.Parameters.Parameter pdteEffectiveDate;
         private DevExpress.XtraReports.Parameters.Parameter plngMaskFederalID;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel104;
     }
 }

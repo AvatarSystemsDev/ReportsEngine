@@ -247,7 +247,7 @@
             this.PostJIBInsideImmediateSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel77 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel78 = new DevExpress.XtraReports.UI.XRLabel();
-            this.SubBand1 = new DevExpress.XtraReports.UI.SubBand();
+            this.JIBStatementMessageSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel79 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel80 = new DevExpress.XtraReports.UI.XRLabel();
             this.CheckFormatsSubBand = new DevExpress.XtraReports.UI.SubBand();
@@ -487,12 +487,12 @@
             this.PrintJIBStatementsAfterCycleSubBand,
             this.PrintAccountDescriptionJIBSubBand,
             this.PostJIBInsideImmediateSubBand,
-            this.SubBand1,
+            this.JIBStatementMessageSubBand,
             this.CompanyProfileControlAccountSubreportBand,
             this.CompanyProfileRDIncomeControlAcccountsSubreportSubBand,
             this.CompanyEmailSubreportSubBand,
-            this.PageBreakSubBand,
-            this.CheckFormatsSubBand});
+            this.CheckFormatsSubBand,
+            this.PageBreakSubBand});
             // 
             // CompanyNumberNameSubBand
             // 
@@ -509,7 +509,7 @@
             this.xrLabel9.CanGrow = false;
             this.xrLabel9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyName]")});
-            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel9.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 20.00007F);
             this.xrLabel9.Multiline = true;
             this.xrLabel9.Name = "xrLabel9";
@@ -523,7 +523,7 @@
             this.xrLabel1.CanGrow = false;
             this.xrLabel1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyNumber]")});
-            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel1.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel1.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel1.Multiline = true;
             this.xrLabel1.Name = "xrLabel1";
@@ -596,7 +596,7 @@
             this.xrLabel36.CanGrow = false;
             this.xrLabel36.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyOwnerNumber] + \' : \' + [CompanyName]")});
-            this.xrLabel36.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel36.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel36.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 9.536742E-05F);
             this.xrLabel36.Multiline = true;
             this.xrLabel36.Name = "xrLabel36";
@@ -618,7 +618,7 @@
             this.xrLabel37.CanGrow = false;
             this.xrLabel37.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyVendorNumber] + \' : \' + [CompanyVendorContactName]")});
-            this.xrLabel37.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel37.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel37.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 9.536742E-05F);
             this.xrLabel37.Multiline = true;
             this.xrLabel37.Name = "xrLabel37";
@@ -658,7 +658,7 @@
             this.xrLabel33.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "FormatString(\'{0:MM/dd}\', [FiscalYearStartingDate]) + \' to \' + FormatString(\'{0:M" +
                     "M/dd}\', [FiscalYearEndingDate])\n")});
-            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel33.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 9.536742E-05F);
             this.xrLabel33.Multiline = true;
             this.xrLabel33.Name = "xrLabel33";
@@ -699,7 +699,7 @@
             this.xrLabel10.CanGrow = false;
             this.xrLabel10.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AddressLine1]")});
-            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel10.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel10.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel10.Multiline = true;
             this.xrLabel10.Name = "xrLabel10";
@@ -740,7 +740,7 @@
             this.xrLabel11.CanGrow = false;
             this.xrLabel11.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AddressLine2]")});
-            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel11.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel11.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 9.536742E-05F);
             this.xrLabel11.Multiline = true;
             this.xrLabel11.Name = "xrLabel11";
@@ -798,7 +798,7 @@
             this.xrLabel13.CanGrow = false;
             this.xrLabel13.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AddressLine3]")});
-            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel13.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel13.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0.0001271566F);
             this.xrLabel13.Multiline = true;
             this.xrLabel13.Name = "xrLabel13";
@@ -822,7 +822,7 @@
             this.xrLabel14.CanGrow = false;
             this.xrLabel14.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AddressLine4]")});
-            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel14.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel14.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 6.357828E-05F);
             this.xrLabel14.Multiline = true;
             this.xrLabel14.Name = "xrLabel14";
@@ -880,7 +880,7 @@
             this.xrLabel17.CanGrow = false;
             this.xrLabel17.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[AddressLine5]")});
-            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel17.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel17.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 6.357828E-05F);
             this.xrLabel17.Multiline = true;
             this.xrLabel17.Name = "xrLabel17";
@@ -921,7 +921,7 @@
             this.xrLabel19.CanGrow = false;
             this.xrLabel19.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Phone1]")});
-            this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel19.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel19.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel19.Multiline = true;
             this.xrLabel19.Name = "xrLabel19";
@@ -945,7 +945,7 @@
             this.xrLabel20.CanGrow = false;
             this.xrLabel20.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Phone2]")});
-            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel20.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel20.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0.0001907348F);
             this.xrLabel20.Multiline = true;
             this.xrLabel20.Name = "xrLabel20";
@@ -1003,7 +1003,7 @@
             this.xrLabel23.CanGrow = false;
             this.xrLabel23.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Phone3]")});
-            this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel23.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel23.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel23.Multiline = true;
             this.xrLabel23.Name = "xrLabel23";
@@ -1027,7 +1027,7 @@
             this.xrLabel24.CanGrow = false;
             this.xrLabel24.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Phone4]")});
-            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel24.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel24.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0.0003178914F);
             this.xrLabel24.Multiline = true;
             this.xrLabel24.Name = "xrLabel24";
@@ -1085,7 +1085,7 @@
             this.xrLabel27.CanGrow = false;
             this.xrLabel27.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyCity] + \', \' + [CompanyState] + \' \' + [CompanyZip]")});
-            this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel27.Multiline = true;
             this.xrLabel27.Name = "xrLabel27";
@@ -1109,7 +1109,7 @@
             this.xrLabel29.CanGrow = false;
             this.xrLabel29.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[MaskedFederalIDNumber]")});
-            this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel29.Multiline = true;
             this.xrLabel29.Name = "xrLabel29";
@@ -1152,7 +1152,7 @@
             this.xrLabel32.CanGrow = false;
             this.xrLabel32.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PropertiesCompanyNumber] + \' : \' + [PropertiesCompanyName]\n")});
-            this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel32.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel32.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 39.99995F);
             this.xrLabel32.Multiline = true;
             this.xrLabel32.Name = "xrLabel32";
@@ -1200,7 +1200,7 @@
             this.xrLabel4.CanGrow = false;
             this.xrLabel4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ChartOfAccountsCompanyNumber] + \' : \' + [ChartOfAccountsCompanyName]\n")});
-            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel4.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 20.00001F);
             this.xrLabel4.Multiline = true;
             this.xrLabel4.Name = "xrLabel4";
@@ -1231,7 +1231,7 @@
             this.xrLabel3.CanGrow = false;
             this.xrLabel3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[EntityCompanyNumber] + \' : \' + [EntityCompanyName]\n")});
-            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel3.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel3.Multiline = true;
             this.xrLabel3.Name = "xrLabel3";
@@ -1255,7 +1255,7 @@
             this.xrLabel43.CanGrow = false;
             this.xrLabel43.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([WillFile1099ByTaxID], \'Yes\', \'No\')")});
-            this.xrLabel43.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel43.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel43.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 20.00001F);
             this.xrLabel43.Multiline = true;
             this.xrLabel43.Name = "xrLabel43";
@@ -1286,7 +1286,7 @@
             this.xrLabel39.CanGrow = false;
             this.xrLabel39.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[The1099TransmitterNumber] + \' : \' + [The1099TransmitterContactName]")});
-            this.xrLabel39.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel39.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel39.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel39.Multiline = true;
             this.xrLabel39.Name = "xrLabel39";
@@ -1344,7 +1344,7 @@
             this.xrLabel45.CanGrow = false;
             this.xrLabel45.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyWebAddress]")});
-            this.xrLabel45.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel45.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel45.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0.0001907348F);
             this.xrLabel45.Multiline = true;
             this.xrLabel45.Name = "xrLabel45";
@@ -1718,7 +1718,7 @@
             this.xrLabel46.CanGrow = false;
             this.xrLabel46.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([WillPostRDInsideImmediate], \'Yes\' , \'No\' )")});
-            this.xrLabel46.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel46.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel46.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel46.Multiline = true;
             this.xrLabel46.Name = "xrLabel46";
@@ -1774,7 +1774,7 @@
             this.xrLabel49.CanGrow = false;
             this.xrLabel49.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([WillPostJIBInsideImmediate], \'Yes\' , \'No\' )")});
-            this.xrLabel49.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel49.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel49.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel49.Multiline = true;
             this.xrLabel49.Name = "xrLabel49";
@@ -1813,7 +1813,7 @@
             this.xrLabel51.CanGrow = false;
             this.xrLabel51.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "IIF([WillPrintChecksWithRDDistribution], \'Yes\' , \'No\' )")});
-            this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel51.Multiline = true;
             this.xrLabel51.Name = "xrLabel51";
@@ -1852,7 +1852,7 @@
             this.xrLabel53.CanGrow = false;
             this.xrLabel53.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "IIF([WillPrintChecksWithRDDistribution], \'Yes\' , \'No\' )")});
-            this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel53.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel53.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel53.Multiline = true;
             this.xrLabel53.Name = "xrLabel53";
@@ -1882,7 +1882,7 @@
             this.xrLabel54.CanGrow = false;
             this.xrLabel54.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RDMinimumCheckAmount]")});
-            this.xrLabel54.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel54.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel54.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel54.Multiline = true;
             this.xrLabel54.Name = "xrLabel54";
@@ -1931,7 +1931,7 @@
             this.xrLabel58.CanGrow = false;
             this.xrLabel58.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyRDBatchOffsetAccountTypeCode]")});
-            this.xrLabel58.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel58.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel58.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel58.Multiline = true;
             this.xrLabel58.Name = "xrLabel58";
@@ -1953,7 +1953,7 @@
             this.xrLabel59.CanGrow = false;
             this.xrLabel59.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RDAccrualMethodTypeCodeDescription]")});
-            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel59.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel59.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel59.Multiline = true;
             this.xrLabel59.Name = "xrLabel59";
@@ -2009,7 +2009,7 @@
             this.xrLabel62.CanGrow = false;
             this.xrLabel62.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RDAccrualPeriod]")});
-            this.xrLabel62.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel62.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel62.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel62.Multiline = true;
             this.xrLabel62.Name = "xrLabel62";
@@ -2031,7 +2031,7 @@
             this.xrLabel63.CanGrow = false;
             this.xrLabel63.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CDEXPurchaserCode]")});
-            this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel63.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel63.Multiline = true;
             this.xrLabel63.Name = "xrLabel63";
@@ -2087,7 +2087,7 @@
             this.xrLabel66.CanGrow = false;
             this.xrLabel66.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[JIBServiceChargeCodeDescription]")});
-            this.xrLabel66.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel66.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel66.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel66.Multiline = true;
             this.xrLabel66.Name = "xrLabel66";
@@ -2126,7 +2126,7 @@
             this.xrLabel68.CanGrow = false;
             this.xrLabel68.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DefaultJIBServiceChargeRatePercentage]")});
-            this.xrLabel68.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel68.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel68.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel68.Multiline = true;
             this.xrLabel68.Name = "xrLabel68";
@@ -2166,7 +2166,7 @@
             this.xrLabel70.CanGrow = false;
             this.xrLabel70.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[JIBMinimumInvoiceAmount]")});
-            this.xrLabel70.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel70.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel70.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel70.Multiline = true;
             this.xrLabel70.Name = "xrLabel70";
@@ -2189,7 +2189,7 @@
             this.xrLabel71.CanGrow = false;
             this.xrLabel71.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ARPaymentApplyCodeDescription]")});
-            this.xrLabel71.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel71.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel71.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel71.Multiline = true;
             this.xrLabel71.Name = "xrLabel71";
@@ -2228,7 +2228,7 @@
             this.xrLabel73.CanGrow = false;
             this.xrLabel73.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[JIBServiceChargeCodeDescription]")});
-            this.xrLabel73.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel73.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel73.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel73.Multiline = true;
             this.xrLabel73.Name = "xrLabel73";
@@ -2284,7 +2284,7 @@
             this.xrLabel76.CanGrow = false;
             this.xrLabel76.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([WillPrintAccountDescription], \'Yes\', \'No\' )")});
-            this.xrLabel76.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel76.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel76.Multiline = true;
             this.xrLabel76.Name = "xrLabel76";
@@ -2306,7 +2306,7 @@
             this.xrLabel77.CanGrow = false;
             this.xrLabel77.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif([WillPostJIBInsideImmediate], \'Yes\', \'No\' )")});
-            this.xrLabel77.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel77.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel77.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel77.Multiline = true;
             this.xrLabel77.Name = "xrLabel77";
@@ -2332,13 +2332,13 @@
             this.xrLabel78.Text = "Post JIB Inside Immediate";
             this.xrLabel78.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
-            // SubBand1
+            // JIBStatementMessageSubBand
             // 
-            this.SubBand1.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.JIBStatementMessageSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel79,
             this.xrLabel80});
-            this.SubBand1.HeightF = 20F;
-            this.SubBand1.Name = "SubBand1";
+            this.JIBStatementMessageSubBand.HeightF = 20F;
+            this.JIBStatementMessageSubBand.Name = "JIBStatementMessageSubBand";
             // 
             // xrLabel79
             // 
@@ -2362,7 +2362,7 @@
             this.xrLabel80.CanGrow = false;
             this.xrLabel80.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DefaultJIBStatementMessage]")});
-            this.xrLabel80.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel80.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel80.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel80.Multiline = true;
             this.xrLabel80.Name = "xrLabel80";
@@ -2392,7 +2392,7 @@
             this.xrLabel81.CanGrow = false;
             this.xrLabel81.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[APCheckPrintingFormatNumber] + \' : \' + [APCheckPrintingFormatDescription]")});
-            this.xrLabel81.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel81.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel81.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 0F);
             this.xrLabel81.Multiline = true;
             this.xrLabel81.Name = "xrLabel81";
@@ -2440,7 +2440,7 @@
             this.xrLabel84.CanGrow = false;
             this.xrLabel84.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[LandCheckPrintingFormatNumber] + \' : \' + [LandCheckPrintingFormatDescription]")});
-            this.xrLabel84.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel84.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel84.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 19.99995F);
             this.xrLabel84.Multiline = true;
             this.xrLabel84.Name = "xrLabel84";
@@ -2455,7 +2455,7 @@
             this.xrLabel85.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[ManualCheckPrintingFormatNumber] + \' : \' + [ManualCheckPrintingFormatDescription" +
                     "]")});
-            this.xrLabel85.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel85.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel85.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 39.9999F);
             this.xrLabel85.Multiline = true;
             this.xrLabel85.Name = "xrLabel85";
@@ -2504,7 +2504,7 @@
             this.xrLabel88.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[PayrollCheckPrintingFormatNumber] + \' : \' + [PayrollCheckPrintingFormatDescripti" +
                     "on]")});
-            this.xrLabel88.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel88.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel88.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 59.99985F);
             this.xrLabel88.Multiline = true;
             this.xrLabel88.Name = "xrLabel88";
@@ -2518,7 +2518,7 @@
             this.xrLabel89.CanGrow = false;
             this.xrLabel89.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[RDCheckPrintingFormatNumber] + \' : \' + [RDCheckPrintingFormatDescription]")});
-            this.xrLabel89.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F);
+            this.xrLabel89.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel89.LocationFloat = new DevExpress.Utils.PointFloat(192.6927F, 79.9998F);
             this.xrLabel89.Multiline = true;
             this.xrLabel89.Name = "xrLabel89";
@@ -2585,7 +2585,6 @@
             this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
             this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", null, "Dynamic_CompanyProfile.CompanyID"));
             this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngRDIncomeControlAccountTypes", this.plngRDIncomeControlAccountTypes));
             this.xrCompanyProfilesEmailSubreport.ReportSource = new ReportsEngine.Reports.MDReports.CompanyProfilesEmailSubreport();
             this.xrCompanyProfilesEmailSubreport.SizeF = new System.Drawing.SizeF(770.0001F, 11.06899F);
             // 
@@ -2613,8 +2612,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectSystemAccountTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngRDIncomeControlAccountTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectSystemAccountTypes, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCompanyEmail, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -2623,8 +2622,8 @@
             this.pstrDatabaseName,
             this.plngCompanyID,
             this.pstrSelectCompanyID,
-            this.pstrSelectSystemAccountTypes,
             this.plngRDIncomeControlAccountTypes,
+            this.pstrSelectSystemAccountTypes,
             this.pbooShowCompanyEmail,
             this.plngUserID,
             this.Subtitle});
@@ -2778,7 +2777,7 @@
         private DevExpress.XtraReports.UI.SubBand PostJIBInsideImmediateSubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel77;
         private DevExpress.XtraReports.UI.XRLabel xrLabel78;
-        private DevExpress.XtraReports.UI.SubBand SubBand1;
+        private DevExpress.XtraReports.UI.SubBand JIBStatementMessageSubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel79;
         private DevExpress.XtraReports.UI.XRLabel xrLabel80;
         private DevExpress.XtraReports.UI.SubBand CheckFormatsSubBand;
