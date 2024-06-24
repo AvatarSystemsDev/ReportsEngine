@@ -32,7 +32,6 @@
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CompanyProfileControlAccountsSubreport));
-            DevExpress.XtraReports.Parameters.StaticListLookUpSettings staticListLookUpSettings1 = new DevExpress.XtraReports.Parameters.StaticListLookUpSettings();
             DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -109,7 +108,7 @@
             storedProcQuery1.Name = "CompanyAccounts";
             queryParameter1.Name = "@plngCompanyID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngCompanyID", typeof(int));
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("1", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1});
             storedProcQuery1.StoredProcName = "CompanyAccounts_Select";
@@ -169,6 +168,7 @@
             this.xrLabel2,
             this.xrLabel54});
             this.SubBand1.HeightF = 36F;
+            this.SubBand1.KeepTogether = true;
             this.SubBand1.Name = "SubBand1";
             // 
             // xrLabel3
@@ -220,7 +220,7 @@
             this.xrLabel54.Multiline = true;
             this.xrLabel54.Name = "xrLabel54";
             this.xrLabel54.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel54.SizeF = new System.Drawing.SizeF(141.57F, 18F);
+            this.xrLabel54.SizeF = new System.Drawing.SizeF(770.0001F, 18F);
             this.xrLabel54.StylePriority.UsePadding = false;
             this.xrLabel54.Text = "Control Accounts";
             this.xrLabel54.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -230,6 +230,7 @@
             this.SubBand2.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel5});
             this.SubBand2.HeightF = 4F;
+            this.SubBand2.KeepTogether = true;
             this.SubBand2.Name = "SubBand2";
             // 
             // xrLabel5
@@ -255,18 +256,7 @@
             this.pstrSelectSystemAccountTypes.Description = "Select RD Income Control Accounts";
             this.pstrSelectSystemAccountTypes.MultiValue = true;
             this.pstrSelectSystemAccountTypes.Name = "pstrSelectSystemAccountTypes";
-            this.pstrSelectSystemAccountTypes.SelectAllValues = true;
             this.pstrSelectSystemAccountTypes.Type = typeof(int);
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "General"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "AP"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "JIB"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(4, "RD"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(6, "Land"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(7, "Payroll"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(8, "Sales and Billing"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(9, "Oil First Purchaser"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(10, "DDA/Inv Asset"));
-            this.pstrSelectSystemAccountTypes.ValueSourceSettings = staticListLookUpSettings1;
             // 
             // CompanyProfileControlAccountsSubreport
             // 
@@ -282,7 +272,7 @@
             this.DisplayName = "CompanyProfileControlAccountsSubreport";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0\n")});
-            this.FilterString = "[ID] In (?pstrSelectSystemAccountTypes)";
+            this.FilterString = "[ModuleID] In (?pstrSelectSystemAccountTypes)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
             this.ParameterPanelLayoutItems.AddRange(new DevExpress.XtraReports.Parameters.ParameterPanelLayoutItem[] {
