@@ -594,6 +594,12 @@
     <Compile Include="Reports\PRReports\ExcelPR_CompanyFundedDeductionRegister.Designer.cs">
       <DependentUpon>ExcelPR_CompanyFundedDeductionRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_CompanyMatchedDeductionRegister.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\PRReports\ExcelPR_CompanyMatchedDeductionRegister.Designer.cs">
+      <DependentUpon>ExcelPR_CompanyMatchedDeductionRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reports\PRReports\ExcelPR_DeductionsRegister.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2820,6 +2826,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\ExcelPR_CompanyFundedDeductionRegister.resx">
       <DependentUpon>ExcelPR_CompanyFundedDeductionRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\PRReports\ExcelPR_CompanyMatchedDeductionRegister.resx">
+      <DependentUpon>ExcelPR_CompanyMatchedDeductionRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\PRReports\ExcelPR_DeductionsRegister.resx">
       <DependentUpon>ExcelPR_DeductionsRegister.cs</DependentUpon>
