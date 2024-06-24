@@ -217,6 +217,7 @@
             this.xrLabel113 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel115 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel117 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel122 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel50 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel52 = new DevExpress.XtraReports.UI.XRLabel();
@@ -235,7 +236,6 @@
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
             this.plngMaskFederalID = new DevExpress.XtraReports.Parameters.Parameter();
             this.pdteEffectiveDate = new DevExpress.XtraReports.Parameters.Parameter();
-            this.SubBand8 = new DevExpress.XtraReports.UI.SubBand();
             this.pbooShowInterestFundsReleaseLine = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).BeginInit();
@@ -2101,6 +2101,15 @@
             this.xrLabel117.Text = "________________________";
             this.xrLabel117.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
+            // SubBand8
+            // 
+            this.SubBand8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel122});
+            this.SubBand8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowInterestFundsReleaseLine")});
+            this.SubBand8.HeightF = 20F;
+            this.SubBand8.Name = "SubBand8";
+            // 
             // xrLabel122
             // 
             this.xrLabel122.BorderColor = System.Drawing.Color.Black;
@@ -2390,16 +2399,6 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEffectiveDate.Name = "pdteEffectiveDate";
             this.pdteEffectiveDate.Type = typeof(System.DateTime);
-            this.pdteEffectiveDate.ValueInfo = "0";
-            // 
-            // SubBand8
-            // 
-            this.SubBand8.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrLabel122});
-            this.SubBand8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowInterestFundsReleaseLine")});
-            this.SubBand8.HeightF = 20F;
-            this.SubBand8.Name = "SubBand8";
             // 
             // pbooShowInterestFundsReleaseLine
             // 
@@ -2438,10 +2437,10 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEffectiveDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngPhaseWellID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngDOIHeaderID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEffectiveDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngMaskFederalID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowInterestFundsReleaseLine, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
@@ -2451,10 +2450,10 @@
             this.plngUserID,
             this.plngCompanyID,
             this.Subtitle,
-            this.pdteEffectiveDate,
             this.plngPhaseWellID,
             this.plngDOIHeaderID,
             this.pstrOwnerNumber,
+            this.pdteEffectiveDate,
             this.plngMaskFederalID,
             this.pbooShowInterestFundsReleaseLine,
             this.pbooShowCriteria});

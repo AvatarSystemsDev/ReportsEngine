@@ -1729,13 +1729,12 @@
             this.xrLabel64});
             this.CDEXCodeSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[CDEXPurchaserCode] <> \'\'")});
-            this.CDEXCodeSubBand.HeightF = 20F;
+            this.CDEXCodeSubBand.HeightF = 35F;
             this.CDEXCodeSubBand.KeepTogether = true;
             this.CDEXCodeSubBand.Name = "CDEXCodeSubBand";
             // 
             // xrLabel63
             // 
-            this.xrLabel63.CanGrow = false;
             this.xrLabel63.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CDEXPurchaserCode]")});
             this.xrLabel63.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
@@ -1743,7 +1742,7 @@
             this.xrLabel63.Multiline = true;
             this.xrLabel63.Name = "xrLabel63";
             this.xrLabel63.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel63.SizeF = new System.Drawing.SizeF(554.3903F, 19.99995F);
+            this.xrLabel63.SizeF = new System.Drawing.SizeF(554.39F, 34.99998F);
             this.xrLabel63.StylePriority.UseFont = false;
             this.xrLabel63.Text = "xrLabel1";
             // 
@@ -1759,7 +1758,7 @@
             this.xrLabel64.Multiline = true;
             this.xrLabel64.Name = "xrLabel64";
             this.xrLabel64.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel64.SizeF = new System.Drawing.SizeF(215.6094F, 20F);
+            this.xrLabel64.SizeF = new System.Drawing.SizeF(215.6094F, 35F);
             this.xrLabel64.StylePriority.UsePadding = false;
             this.xrLabel64.Text = "CDEX Code";
             this.xrLabel64.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -2055,7 +2054,7 @@
             this.xrLabel80});
             this.JIBStatementMessageSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DefaultJIBStatementMessage] <> \'\'")});
-            this.JIBStatementMessageSubBand.HeightF = 20F;
+            this.JIBStatementMessageSubBand.HeightF = 35F;
             this.JIBStatementMessageSubBand.KeepTogether = true;
             this.JIBStatementMessageSubBand.Name = "JIBStatementMessageSubBand";
             // 
@@ -2071,7 +2070,7 @@
             this.xrLabel79.Multiline = true;
             this.xrLabel79.Name = "xrLabel79";
             this.xrLabel79.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
-            this.xrLabel79.SizeF = new System.Drawing.SizeF(215.6094F, 20F);
+            this.xrLabel79.SizeF = new System.Drawing.SizeF(215.6094F, 34.99996F);
             this.xrLabel79.StylePriority.UsePadding = false;
             this.xrLabel79.Text = "JIB Statement Message";
             this.xrLabel79.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
@@ -2086,7 +2085,7 @@
             this.xrLabel80.Multiline = true;
             this.xrLabel80.Name = "xrLabel80";
             this.xrLabel80.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
-            this.xrLabel80.SizeF = new System.Drawing.SizeF(554.3912F, 19.99995F);
+            this.xrLabel80.SizeF = new System.Drawing.SizeF(554.39F, 35F);
             this.xrLabel80.StylePriority.UseFont = false;
             this.xrLabel80.Text = "xrLabel1";
             // 
@@ -2189,7 +2188,6 @@
             this.xrLabel84,
             this.xrLabel81,
             this.xrLabel82});
-            this.CheckFormatsSubBand.Expanded = false;
             this.CheckFormatsSubBand.HeightF = 123.9998F;
             this.CheckFormatsSubBand.Name = "CheckFormatsSubBand";
             // 

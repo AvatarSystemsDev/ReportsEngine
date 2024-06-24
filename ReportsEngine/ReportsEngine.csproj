@@ -726,16 +726,16 @@
     <Compile Include="Reports\RDReports\CombinedStateWithholdingSubreport.Designer.cs">
       <DependentUpon>CombinedStateWithholdingSubreport.cs</DependentUpon>
     </Compile>
-    <Compile Include="ExcelPreVoidCheckReport.cs">
+    <Compile Include="Reports\CheckReports\ExcelPreVoidCheckReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="ExcelPreVoidCheckReport.Designer.cs">
+    <Compile Include="Reports\CheckReports\ExcelPreVoidCheckReport.Designer.cs">
       <DependentUpon>ExcelPreVoidCheckReport.cs</DependentUpon>
     </Compile>
-    <Compile Include="PreVoidCheckReport.cs">
+    <Compile Include="Reports\CheckReports\PreVoidCheckReport.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="PreVoidCheckReport.Designer.cs">
+    <Compile Include="Reports\CheckReports\PreVoidCheckReport.Designer.cs">
       <DependentUpon>PreVoidCheckReport.cs</DependentUpon>
     </Compile>
     <Compile Include="Reports\JIBReports\TestCheckReport.cs">
@@ -2893,10 +2893,10 @@
     <EmbeddedResource Include="Reports\RDReports\CombinedStateWithholdingSubreport.resx">
       <DependentUpon>CombinedStateWithholdingSubreport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ExcelPreVoidCheckReport.resx">
+    <EmbeddedResource Include="Reports\CheckReports\ExcelPreVoidCheckReport.resx">
       <DependentUpon>ExcelPreVoidCheckReport.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PreVoidCheckReport.resx">
+    <EmbeddedResource Include="Reports\CheckReports\PreVoidCheckReport.resx">
       <DependentUpon>PreVoidCheckReport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\JIBReports\TestCheckReport.resx">
