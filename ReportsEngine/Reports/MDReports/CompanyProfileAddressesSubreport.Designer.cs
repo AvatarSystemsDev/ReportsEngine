@@ -538,7 +538,7 @@
             // 
             this.xrLabel27.CanGrow = false;
             this.xrLabel27.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[CompanyCity] + \', \' + [CompanyState] + \' \' + [CompanyZip]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[City] + \', \' + [State] + \' \' + [Zip]")});
             this.xrLabel27.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel27.LocationFloat = new DevExpress.Utils.PointFloat(215.6094F, 0F);
             this.xrLabel27.Multiline = true;
