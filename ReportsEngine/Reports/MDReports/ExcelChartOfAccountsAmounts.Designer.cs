@@ -737,7 +737,7 @@
             this.pstrBeginningCostCenter,
             this.pstrEndingCostCenter,
             this.pstrSelectAccountingCenter});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

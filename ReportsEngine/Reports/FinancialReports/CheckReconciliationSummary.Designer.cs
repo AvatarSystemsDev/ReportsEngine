@@ -1164,7 +1164,7 @@
             this.plngCheckReconciliationID,
             this.pbooShowCriteria,
             this.plngReportType});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.BankName)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.BankName2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.DepositDate)).EndInit();

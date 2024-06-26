@@ -52,7 +52,7 @@
             this.BottomMargin,
             this.Detail});
             this.Font = new DevExpress.Drawing.DXFont("Arial", 9.75F);
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

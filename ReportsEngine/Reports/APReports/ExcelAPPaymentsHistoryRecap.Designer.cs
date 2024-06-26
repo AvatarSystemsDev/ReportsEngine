@@ -765,7 +765,7 @@
             this.pbooInclude1099Exempt,
             this.pstrSelectVendor,
             this.pstrSelect1099Type});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

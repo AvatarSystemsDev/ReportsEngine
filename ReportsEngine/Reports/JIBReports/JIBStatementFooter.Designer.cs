@@ -465,7 +465,7 @@
             this.pstrBeginningOwnerNumber,
             this.pstrEndingOwnerNumber,
             this.plngID});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();

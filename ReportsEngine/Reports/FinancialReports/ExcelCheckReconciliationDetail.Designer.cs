@@ -837,7 +837,7 @@
             this.plngCheckReconciliationID,
             this.pbooShowCriteria,
             this.plngReportType});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.DepositDate)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();

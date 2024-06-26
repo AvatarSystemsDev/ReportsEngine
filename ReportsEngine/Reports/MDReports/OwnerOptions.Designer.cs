@@ -2694,7 +2694,7 @@
             this.pbooSortByCode,
             this.pbooShowCriteria,
             this.pstrHeaderText});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

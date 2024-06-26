@@ -184,7 +184,7 @@
             this.plngUserID,
             this.pstrCoverPageAddress,
             this.pstrCompanyAddressBlockLong});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

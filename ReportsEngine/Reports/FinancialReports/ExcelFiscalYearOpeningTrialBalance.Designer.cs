@@ -635,7 +635,7 @@
             this.pbooShowCriteria,
             this.plngYear,
             this.pbooShowIncomeAndExpense});
-            this.Version = "23.1";
+            this.Version = "24.1";
             this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.ExcelFiscalYearOpeningTrialBalance_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

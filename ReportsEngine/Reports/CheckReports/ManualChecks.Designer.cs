@@ -2455,7 +2455,7 @@
             this.pstrBeginningCheckNumber,
             this.pstrEndingCheckNumber,
             this.pstrSelectCheck});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText7)).EndInit();

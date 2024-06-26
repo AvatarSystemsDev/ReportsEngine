@@ -490,7 +490,7 @@
             this.pbooRunningAtEnd,
             this.plngOverflowOptionCodeID,
             this.pstrCompanyAddressBlockLong});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).EndInit();

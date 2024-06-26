@@ -1826,7 +1826,7 @@
             this.pbooShowCriteria,
             this.plngPostingProcessTrackingID,
             this.plngPostingUserID});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();

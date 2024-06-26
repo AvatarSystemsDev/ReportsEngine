@@ -2680,7 +2680,7 @@
             this.pdteBeginningDate,
             this.pdteEndingDate,
             this.pbooShowCriteria});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.Textbox137)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.OwnerNumber)).EndInit();

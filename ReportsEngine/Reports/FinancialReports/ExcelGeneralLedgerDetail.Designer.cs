@@ -2144,7 +2144,7 @@
             this.plngEndingBatch,
             this.pstrSelectBatch,
             this.pbooShowPeriodTotals});
-            this.Version = "23.1";
+            this.Version = "24.1";
             this.BeforePrint += new DevExpress.XtraReports.UI.BeforePrintEventHandler(this.ExcelGeneralLedgerDetail_BeforePrint);
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 

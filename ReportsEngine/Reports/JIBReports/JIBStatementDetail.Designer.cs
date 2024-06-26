@@ -512,7 +512,7 @@
             this.plngJIBProcessTrackingID,
             this.plngJIBStatementID,
             this.plngOwnerID});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

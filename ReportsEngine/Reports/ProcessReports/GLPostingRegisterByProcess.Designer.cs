@@ -2452,7 +2452,7 @@
             this.pstrDatabaseName,
             this.pbooShowDetail,
             this.pbooShowCriteria});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText13)).EndInit();

@@ -13362,7 +13362,7 @@
             this.pbitPrintNetAcresAllDepths,
             this.pbitPrintTractText,
             this.pbitPrintMineralOwnerAddress});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.Details_table)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable4)).EndInit();

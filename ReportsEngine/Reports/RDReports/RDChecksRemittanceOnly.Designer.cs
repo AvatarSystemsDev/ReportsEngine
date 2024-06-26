@@ -339,7 +339,7 @@
             this.pbooWillPrintCompanyAddressOnStub,
             this.pbooWillCenterCompanyNameOnStub,
             this.pbooTrue});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
         }

@@ -1306,7 +1306,7 @@
             this.pbooPrintCorrections,
             this.pbooPrintNoStateWithholding,
             this.plngSortOrder});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrTable8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrTable10)).EndInit();

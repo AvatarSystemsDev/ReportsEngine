@@ -1009,7 +1009,7 @@
             this.plngSplitOwnerDOIID,
             this.plngUserID,
             this.pbooShowCriteria});
-            this.Version = "23.1";
+            this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.Textbox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Textbox25)).EndInit();
