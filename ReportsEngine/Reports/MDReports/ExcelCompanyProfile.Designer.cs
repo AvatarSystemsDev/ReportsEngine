@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelCompanyProfile));
             DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -102,9 +103,10 @@
             this.xrLabel5 = new DevExpress.XtraReports.UI.XRLabel();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.pstrSelectCompanyID = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngRDIncomeControlAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectSystemAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngMaskFederalID = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowCompanyEmail = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -1332,8 +1334,12 @@
             queryParameter1.Name = "@pstrSELECTCompanyID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter1.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectCompanyID)", typeof(string));
+            queryParameter2.Name = "@plngMaskFederalID";
+            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngMaskFederalID", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter1});
+            queryParameter1,
+            queryParameter2});
             storedProcQuery1.StoredProcName = "Report_CompanyProfile";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -1346,13 +1352,6 @@
             this.pstrSelectCompanyID.Name = "pstrSelectCompanyID";
             this.pstrSelectCompanyID.Type = typeof(int);
             this.pstrSelectCompanyID.Visible = false;
-            // 
-            // pbooShowCriteria
-            // 
-            this.pbooShowCriteria.Description = "Show Criteria";
-            this.pbooShowCriteria.Name = "pbooShowCriteria";
-            this.pbooShowCriteria.Type = typeof(bool);
-            this.pbooShowCriteria.ValueInfo = "True";
             // 
             // plngRDIncomeControlAccountTypes
             // 
@@ -1367,6 +1366,20 @@
             this.pstrSelectSystemAccountTypes.Name = "pstrSelectSystemAccountTypes";
             this.pstrSelectSystemAccountTypes.Type = typeof(int);
             this.pstrSelectSystemAccountTypes.ValueInfo = "0";
+            // 
+            // plngMaskFederalID
+            // 
+            this.plngMaskFederalID.Description = "Mask Federal ID";
+            this.plngMaskFederalID.Name = "plngMaskFederalID";
+            this.plngMaskFederalID.Type = typeof(int);
+            this.plngMaskFederalID.ValueInfo = "0";
+            // 
+            // pbooShowCompanyEmail
+            // 
+            this.pbooShowCompanyEmail.Description = "Parameter1";
+            this.pbooShowCompanyEmail.Name = "pbooShowCompanyEmail";
+            this.pbooShowCompanyEmail.Type = typeof(bool);
+            this.pbooShowCompanyEmail.ValueInfo = "False";
             // 
             // ExcelCompanyProfile
             // 
@@ -1390,8 +1403,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngUserID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrDatabaseName,
@@ -1399,9 +1411,10 @@
             this.pstrSelectCompanyID,
             this.plngUserID,
             this.Subtitle,
-            this.pbooShowCriteria,
             this.plngRDIncomeControlAccountTypes,
-            this.pstrSelectSystemAccountTypes});
+            this.pstrSelectSystemAccountTypes,
+            this.plngMaskFederalID,
+            this.pbooShowCompanyEmail});
             this.Version = "24.1";
             xrWatermark1.Id = "Watermark1";
             this.Watermarks.AddRange(new DevExpress.XtraPrinting.Drawing.Watermark[] {
@@ -1420,7 +1433,6 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrServerName;
         private DevExpress.XtraReports.Parameters.Parameter pstrDatabaseName;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectCompanyID;
-        private DevExpress.XtraReports.Parameters.Parameter pbooShowCriteria;
         private DevExpress.XtraReports.Parameters.Parameter plngUserID;
         private DevExpress.XtraReports.Parameters.Parameter Subtitle;
         private DevExpress.XtraReports.Parameters.Parameter plngCompanyID;
@@ -1484,5 +1496,7 @@
         private DevExpress.XtraReports.UI.XRSubreport xrCompanyProfileControlAccountsSubreport;
         private DevExpress.XtraReports.Parameters.Parameter plngRDIncomeControlAccountTypes;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectSystemAccountTypes;
+        private DevExpress.XtraReports.Parameters.Parameter plngMaskFederalID;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowCompanyEmail;
     }
 }
