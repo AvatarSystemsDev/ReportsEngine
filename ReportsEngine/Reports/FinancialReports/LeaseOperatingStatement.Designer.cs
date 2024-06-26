@@ -1530,7 +1530,6 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "GetDate(\'01/01/\'+GetYear(Today()))")});
             this.pdteBeginningDate.Name = "pdteBeginningDate";
             this.pdteBeginningDate.Type = typeof(System.DateTime);
-            this.pdteBeginningDate.ValueInfo = "0";
             // 
             // pdteEndingDate
             // 
@@ -3885,9 +3884,8 @@
             this.DisplayName = "LeaseOperatingStatement";
             this.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[DataSource.RowCount] > 0")});
-            this.FilterString = "([PropertyNumber] In (?pstrSelectProperty) Or IsNullOrEmpty([PropertyNumber]) And" +
-    " \'!\' In (?pstrSelectProperty)) And ([PropertyNumber] Is Null Or ?pbooPropertyLev" +
-    "el = 1)";
+            this.FilterString = "IsNullOrEmpty([PropertyNumber]) And \'!\' In (?pstrSelectProperty) Or [PropertyNumb" +
+    "er] In (?pstrSelectProperty)";
             this.Font = new DevExpress.Drawing.DXFont("Segoe UI", 10F);
             this.Landscape = true;
             this.Margins = new DevExpress.Drawing.DXMargins(40F, 40F, 40F, 40F);
