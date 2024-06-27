@@ -40,7 +40,7 @@ namespace ReportsEngine.Reports.APReports
             LookUpValueCollection col = LookUpHelper.GetLookUpValues(p.LookUpSettings, dataContext);
             if (col.Count == (p.Value as Array).Length)
             {
-                if (start.Value.ToString() == "0" && end.Value.ToString() == "999999999")
+                if (start.Value.ToString() == "0" && end.Value.ToString() == "999999999999")
                 {
                     label.Text = "All Checks";
                 }
@@ -54,7 +54,7 @@ namespace ReportsEngine.Reports.APReports
                     {
                         label.Text = start.Value.ToString() + " to ";
                     }
-                    if (end.Value.ToString() == "999999999")
+                    if (end.Value.ToString() == "999999999999")
                     {
                         label.Text += "Last Check";
                     }
@@ -70,7 +70,7 @@ namespace ReportsEngine.Reports.APReports
             }
             else
             {
-                if (start.Value.ToString() == "0" && end.Value.ToString() == "999999999")
+                if (start.Value.ToString() == "0" && end.Value.ToString() == "999999999999")
                 {
                     label.Text = "Selected Checks";
                 }
@@ -84,7 +84,7 @@ namespace ReportsEngine.Reports.APReports
                     {
                         label.Text = start.Value.ToString() + " to ";
                     }
-                    if (end.Value.ToString() == "999999999")
+                    if (end.Value.ToString() == "999999999999")
                     {
                         label.Text += "Last Check";
                     }

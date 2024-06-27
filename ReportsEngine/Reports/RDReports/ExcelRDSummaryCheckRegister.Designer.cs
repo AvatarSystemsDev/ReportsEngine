@@ -669,22 +669,22 @@
             // 
             this.plngBegininningCheckSortNumber.Description = "Beginning Check Sort Number";
             this.plngBegininningCheckSortNumber.Name = "plngBegininningCheckSortNumber";
-            this.plngBegininningCheckSortNumber.Type = typeof(int);
+            this.plngBegininningCheckSortNumber.Type = typeof(long);
             this.plngBegininningCheckSortNumber.ValueInfo = "0";
             // 
             // plngEndingCheckSortNumber
             // 
             this.plngEndingCheckSortNumber.Description = "Ending Check Sort Number";
             this.plngEndingCheckSortNumber.Name = "plngEndingCheckSortNumber";
-            this.plngEndingCheckSortNumber.Type = typeof(int);
-            this.plngEndingCheckSortNumber.ValueInfo = "0";
+            this.plngEndingCheckSortNumber.Type = typeof(long);
+            this.plngEndingCheckSortNumber.ValueInfo = "999999999999";
             // 
             // pstrSelectRDCheckID
             // 
             this.pstrSelectRDCheckID.Description = "Parameter1";
             this.pstrSelectRDCheckID.MultiValue = true;
             this.pstrSelectRDCheckID.Name = "pstrSelectRDCheckID";
-            this.pstrSelectRDCheckID.Type = typeof(int);
+            this.pstrSelectRDCheckID.Type = typeof(long);
             // 
             // pdteBeginningCheckDate
             // 
@@ -729,7 +729,12 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingOwnerNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCheckPrintingProcessTrackingID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectOwner, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngBegininningCheckSortNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngEndingCheckSortNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectRDCheckID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrDatabaseName,

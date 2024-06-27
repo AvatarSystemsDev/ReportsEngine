@@ -265,7 +265,7 @@
             // 
             this.plngBeginningCheckSortNumber.Description = "Beginning Check Number";
             this.plngBeginningCheckSortNumber.Name = "plngBeginningCheckSortNumber";
-            this.plngBeginningCheckSortNumber.Type = typeof(int);
+            this.plngBeginningCheckSortNumber.Type = typeof(long);
             this.plngBeginningCheckSortNumber.ValueInfo = "0";
             this.plngBeginningCheckSortNumber.Visible = false;
             // 
@@ -289,8 +289,8 @@
             // 
             this.plngEndingCheckSortNumber.Description = "Ending Check Number";
             this.plngEndingCheckSortNumber.Name = "plngEndingCheckSortNumber";
-            this.plngEndingCheckSortNumber.Type = typeof(int);
-            this.plngEndingCheckSortNumber.ValueInfo = "999999999";
+            this.plngEndingCheckSortNumber.Type = typeof(long);
+            this.plngEndingCheckSortNumber.ValueInfo = "999999999999";
             this.plngEndingCheckSortNumber.Visible = false;
             // 
             // pstrBeginningOwnerNumber

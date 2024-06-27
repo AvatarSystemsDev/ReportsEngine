@@ -1494,7 +1494,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0\n"),
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0")});
             this.plngBeginningCheckSortNumber.Name = "plngBeginningCheckSortNumber";
-            this.plngBeginningCheckSortNumber.Type = typeof(int);
+            this.plngBeginningCheckSortNumber.Type = typeof(long);
             this.plngBeginningCheckSortNumber.ValueInfo = "0";
             dynamicListLookUpSettings6.DataMember = "RDCheckSortNumberLookup";
             dynamicListLookUpSettings6.DataSource = this.Dynamic;
@@ -1511,8 +1511,8 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngCheckPrintingProcessTrackingID = 0"),
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngCheckPrintingProcessTrackingID = 0\n")});
             this.plngEndingCheckSortNumber.Name = "plngEndingCheckSortNumber";
-            this.plngEndingCheckSortNumber.Type = typeof(int);
-            this.plngEndingCheckSortNumber.ValueInfo = "999999999";
+            this.plngEndingCheckSortNumber.Type = typeof(long);
+            this.plngEndingCheckSortNumber.ValueInfo = "999999999999";
             dynamicListLookUpSettings7.DataMember = "RDCheckSortNumberLookup";
             dynamicListLookUpSettings7.DataSource = this.Dynamic;
             dynamicListLookUpSettings7.DisplayMember = "Number";
@@ -1530,7 +1530,7 @@
             this.pstrSelectRDCheckID.MultiValue = true;
             this.pstrSelectRDCheckID.Name = "pstrSelectRDCheckID";
             this.pstrSelectRDCheckID.SelectAllValues = true;
-            this.pstrSelectRDCheckID.Type = typeof(int);
+            this.pstrSelectRDCheckID.Type = typeof(long);
             dynamicListLookUpSettings8.DataMember = "RDCheckSortNumberLookup";
             dynamicListLookUpSettings8.DataSource = this.Dynamic;
             dynamicListLookUpSettings8.DisplayMember = "Number";

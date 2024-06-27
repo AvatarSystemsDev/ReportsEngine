@@ -2154,7 +2154,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingCheckDate.Name = "pdteEndingCheckDate";
             this.pdteEndingCheckDate.Type = typeof(System.DateTime);
-            this.pdteEndingCheckDate.ValueInfo = "2024-04-17";
+            this.pdteEndingCheckDate.ValueInfo = "0";
             // 
             // pstrSelectCashAccountID
             // 
@@ -2227,7 +2227,7 @@
             this.pstrSelectAPCheckID.MultiValue = true;
             this.pstrSelectAPCheckID.Name = "pstrSelectAPCheckID";
             this.pstrSelectAPCheckID.SelectAllValues = true;
-            this.pstrSelectAPCheckID.Type = typeof(int);
+            this.pstrSelectAPCheckID.Type = typeof(System.Guid);
             dynamicListLookUpSettings7.DataMember = "APChecksQuery";
             dynamicListLookUpSettings7.DataSource = this.Dynamic;
             dynamicListLookUpSettings7.DisplayMember = "Number";
@@ -2280,7 +2280,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngID = 0")});
             this.plngEndingCheckSortNumber.Name = "plngEndingCheckSortNumber";
             this.plngEndingCheckSortNumber.Type = typeof(int);
-            this.plngEndingCheckSortNumber.ValueInfo = "999999999";
+            this.plngEndingCheckSortNumber.ValueInfo = "2147483647";
             dynamicListLookUpSettings10.DataMember = "APChecksQuery";
             dynamicListLookUpSettings10.DataSource = this.Dynamic;
             dynamicListLookUpSettings10.DisplayMember = "Number";

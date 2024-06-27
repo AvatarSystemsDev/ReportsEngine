@@ -32,7 +32,7 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
                 "Check",
                 "Checks",
                 "0",
-                "999999999"
+                "999999999999"
             };
 
             dataDictionary["DeckCode"] = new string[10]

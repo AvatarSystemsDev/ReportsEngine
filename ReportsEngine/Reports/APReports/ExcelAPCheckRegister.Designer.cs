@@ -986,15 +986,15 @@
             // 
             this.plngBeginningCheckSortNumber.Description = "Parameter1";
             this.plngBeginningCheckSortNumber.Name = "plngBeginningCheckSortNumber";
-            this.plngBeginningCheckSortNumber.Type = typeof(int);
+            this.plngBeginningCheckSortNumber.Type = typeof(long);
             this.plngBeginningCheckSortNumber.ValueInfo = "0";
             // 
             // plngEndingCheckSortNumber
             // 
             this.plngEndingCheckSortNumber.Description = "Parameter1";
             this.plngEndingCheckSortNumber.Name = "plngEndingCheckSortNumber";
-            this.plngEndingCheckSortNumber.Type = typeof(int);
-            this.plngEndingCheckSortNumber.ValueInfo = "999999999";
+            this.plngEndingCheckSortNumber.Type = typeof(long);
+            this.plngEndingCheckSortNumber.ValueInfo = "999999999999";
             // 
             // groupHeaderBand1
             // 
