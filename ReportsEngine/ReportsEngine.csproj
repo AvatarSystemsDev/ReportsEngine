@@ -534,12 +534,6 @@
     <Compile Include="Reports\MDReports\CompanyProfileRDIncomeControlAcccountsSubreport.Designer.cs">
       <DependentUpon>CompanyProfileRDIncomeControlAcccountsSubreport.cs</DependentUpon>
     </Compile>
-    <Compile Include="Reports\MDReports\CompanyProfilesEmailSubreport.cs">
-      <SubType>Component</SubType>
-    </Compile>
-    <Compile Include="Reports\MDReports\CompanyProfilesEmailSubreport.Designer.cs">
-      <DependentUpon>CompanyProfilesEmailSubreport.cs</DependentUpon>
-    </Compile>
     <Compile Include="Reports\MDReports\ExcelCompanyProfile.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -2802,9 +2796,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\CompanyProfileRDIncomeControlAcccountsSubreport.resx">
       <DependentUpon>CompanyProfileRDIncomeControlAcccountsSubreport.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Reports\MDReports\CompanyProfilesEmailSubreport.resx">
-      <DependentUpon>CompanyProfilesEmailSubreport.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Reports\MDReports\ExcelCompanyProfile.resx">
       <DependentUpon>ExcelCompanyProfile.cs</DependentUpon>
