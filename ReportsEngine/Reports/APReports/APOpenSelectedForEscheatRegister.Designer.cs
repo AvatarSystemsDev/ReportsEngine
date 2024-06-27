@@ -986,6 +986,7 @@
             this.plngID.Description = "plngID";
             this.plngID.Name = "plngID";
             this.plngID.Type = typeof(int);
+            this.plngID.ValueInfo = "0";
             this.plngID.Visible = false;
             // 
             // plngStateID
@@ -993,6 +994,7 @@
             this.plngStateID.Description = "plngStateID";
             this.plngStateID.Name = "plngStateID";
             this.plngStateID.Type = typeof(int);
+            this.plngStateID.ValueInfo = "0";
             this.plngStateID.Visible = false;
             // 
             // pdteBegInvoiceDate
@@ -1556,22 +1558,22 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrServerName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrDatabaseName, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngStateID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBegInvoiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndInvoiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndInvoiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.plngUserID,
             this.Subtitle,
             this.pstrServerName,
             this.pstrDatabaseName,
             this.plngCompanyID,
-            this.pbooShowCriteria,
-            this.plngID,
             this.plngStateID,
             this.pdteBegInvoiceDate,
-            this.pdteEndInvoiceDate});
+            this.pdteEndInvoiceDate,
+            this.plngID,
+            this.pbooShowCriteria});
             this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText5)).EndInit();

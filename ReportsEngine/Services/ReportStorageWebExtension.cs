@@ -102,27 +102,33 @@ namespace ReportsEngine.Services
                     companyid = Int32.Parse(url.Substring(companyidindex, indexQ - companyidindex));
                 }
                 XtraReport report = null;
-
-                if (ReportsFactory.Reports.ContainsKey(reportName))
+                try
                 {
-                    report = ReportsFactory.Reports[reportName](databaseID, companyid);
-                }
-
-                if (report != null)
-                {
-                    //TODO names of these parameters will be different by report
-                    //Set Date Ranges to current month 
-                    DateTime now = DateTime.Now;
-                    var startDate = new DateTime(now.Year, now.Month, 1);
-
-                    // Assign parameters here
-                    setReportParameters(report, HttpUtility.ParseQueryString(parametersString), companyid);
-
-                    using (MemoryStream ms = new MemoryStream())
+                    if (ReportsFactory.Reports.ContainsKey(reportName))
                     {
-                        report.SaveLayoutToXml(ms);
-                        return ms.ToArray();
+                        report = ReportsFactory.Reports[reportName](databaseID, companyid);
                     }
+
+                    if (report != null)
+                    {
+                        //TODO names of these parameters will be different by report
+                        //Set Date Ranges to current month 
+                        DateTime now = DateTime.Now;
+                        var startDate = new DateTime(now.Year, now.Month, 1);
+
+                        // Assign parameters here
+                        setReportParameters(report, HttpUtility.ParseQueryString(parametersString), companyid);
+
+                        using (MemoryStream ms = new MemoryStream())
+                        {
+                            report.SaveLayoutToXml(ms);
+                            return ms.ToArray();
+                        }
+                    }
+                }
+                catch (SystemException e)
+                {
+                    throw new SystemException("Company: " + companyid + Environment.NewLine + "Database: " + databaseID + Environment.NewLine + e.ToString());
                 }
             }
             catch (SystemException ex)
@@ -442,7 +448,7 @@ namespace ReportsEngine.Services
             }
             catch (Exception ex)
             {
-                string errorString = "Report Name: " + report.DisplayName + Environment.NewLine + "Parameter could not be read." + Environment.NewLine + "Error: " + Environment.NewLine + ex.ToString();
+                string errorString = "Company: " + companyid + Environment.NewLine + "Report Name: " + report.DisplayName + Environment.NewLine + "Parameter could not be read." + Environment.NewLine + "Error: " + Environment.NewLine + ex.ToString();
                 Exception error = new Exception(errorString);
                 DebugErrorHandler.Error_Occurred(error);
                 throw new Exception("Error reading report parameters. Please contact customer support");

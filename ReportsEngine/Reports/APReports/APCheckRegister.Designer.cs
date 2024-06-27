@@ -1603,9 +1603,9 @@
             this.plngRunType.Name = "plngRunType";
             this.plngRunType.Type = typeof(int);
             this.plngRunType.ValueInfo = "1";
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Accounts Payable Computer Check Register"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Accounts Payable Manual Check Register"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "Accounts Payable Clear Zero Items"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "AP Check Register"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "AP Manual Check Register"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "AP Clear Zero Items"));
             this.plngRunType.ValueSourceSettings = staticListLookUpSettings1;
             this.plngRunType.Visible = false;
             // 
@@ -2154,7 +2154,6 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "Today()")});
             this.pdteEndingCheckDate.Name = "pdteEndingCheckDate";
             this.pdteEndingCheckDate.Type = typeof(System.DateTime);
-            this.pdteEndingCheckDate.ValueInfo = "0";
             // 
             // pstrSelectCashAccountID
             // 

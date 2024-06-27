@@ -219,7 +219,7 @@
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.federationDataSource1 = new DevExpress.DataAccess.DataFederation.FederationDataSource();
-            this.pbooUseInvoiceDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngDateToUse = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowReportType = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
@@ -245,9 +245,9 @@
             queryParameter5.Name = "@pstrEndingVendorNumber";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
-            queryParameter6.Name = "@pbooUseInvoiceDate";
+            queryParameter6.Name = "@plngDateToUse";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooUseInvoiceDate", typeof(bool));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngDateToUse", typeof(int));
             queryParameter7.Name = "@pdteBeginningPostDate";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?pdteBeginningPostDate", typeof(string));
@@ -1748,15 +1748,17 @@
             selectNode5,
             selectNode6});
             // 
-            // pbooUseInvoiceDate
+            // plngDateToUse
             // 
-            this.pbooUseInvoiceDate.Description = "Date to Use";
-            this.pbooUseInvoiceDate.Name = "pbooUseInvoiceDate";
-            this.pbooUseInvoiceDate.Type = typeof(bool);
-            this.pbooUseInvoiceDate.ValueInfo = "False";
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(false, "Use Invoice Date"));
-            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(true, "Use Due Date"));
-            this.pbooUseInvoiceDate.ValueSourceSettings = staticListLookUpSettings2;
+            this.plngDateToUse.Description = "Date to Use";
+            this.plngDateToUse.Name = "plngDateToUse";
+            this.plngDateToUse.Type = typeof(int);
+            this.plngDateToUse.ValueInfo = "0";
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Invoice Date"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Due Date"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "GL Date"));
+            staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "Check Date"));
+            this.plngDateToUse.ValueSourceSettings = staticListLookUpSettings2;
             // 
             // pbooShowReportType
             // 
@@ -1798,7 +1800,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngCompanyID, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowReportType, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.Subtitle, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooUseInvoiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteBeginningPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteEndingPostDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngReportType, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
@@ -1818,7 +1820,7 @@
             this.plngCompanyID,
             this.pbooShowReportType,
             this.Subtitle,
-            this.pbooUseInvoiceDate,
+            this.plngDateToUse,
             this.pdteBeginningPostDate,
             this.pdteEndingPostDate,
             this.plngReportType,
@@ -1901,7 +1903,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectProperty;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
         private DevExpress.DataAccess.DataFederation.FederationDataSource federationDataSource1;
-        private DevExpress.XtraReports.Parameters.Parameter pbooUseInvoiceDate;
+        private DevExpress.XtraReports.Parameters.Parameter plngDateToUse;
         private DevExpress.XtraReports.UI.XRLabel xrEntitiesSelected;
         private DevExpress.XtraReports.UI.XRLabel xrLabel20;
         private DevExpress.XtraReports.UI.XRLabel xrPropertiesSelected;

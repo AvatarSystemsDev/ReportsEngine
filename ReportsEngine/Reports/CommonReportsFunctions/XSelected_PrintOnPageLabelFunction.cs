@@ -21,20 +21,6 @@ namespace ReportsEngine.Reports.CommonReportsFunctions
         {
             dataDictionary = new Dictionary<string, string[]>();
 
-            dataDictionary["APCheck"] = new string[10]
-            {
-                "pstrSelectAPCheckID",
-                "pstrSelectAPCheckIDDescription",
-                "plngBeginningCheckSortNumber",
-                "plngBeginningCheckSortDescription",
-                "plngEndingCheckSortNumber",
-                "plngEndingCheckSortDescription",
-                "Check",
-                "Checks",
-                "0",
-                "999999999999"
-            };
-
             dataDictionary["DeckCode"] = new string[10]
             {
                 "pstrSelectDeckCode",

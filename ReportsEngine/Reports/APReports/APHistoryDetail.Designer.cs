@@ -1162,13 +1162,14 @@
             // 
             // plngDateUsed
             // 
-            this.plngDateUsed.Description = "Date Used";
+            this.plngDateUsed.Description = "Date To Use";
             this.plngDateUsed.Name = "plngDateUsed";
             this.plngDateUsed.Type = typeof(int);
             this.plngDateUsed.ValueInfo = "0";
             staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(0, "Invoice Date"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "GL Date"));
-            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "Check Date"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(1, "Due Date"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(2, "GL Date"));
+            staticListLookUpSettings1.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "Check Date"));
             this.plngDateUsed.ValueSourceSettings = staticListLookUpSettings1;
             // 
             // pCheckNumber
@@ -1214,7 +1215,7 @@
             this.pTitle.AllowNull = true;
             this.pTitle.Description = "pTitle";
             this.pTitle.Name = "pTitle";
-            this.pTitle.ValueInfo = "Accounts Payable Paid Items History Report";
+            this.pTitle.ValueInfo = "AP Paid Items History Report";
             this.pTitle.Visible = false;
             // 
             // Subtitle

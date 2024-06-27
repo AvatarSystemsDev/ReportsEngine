@@ -39,8 +39,6 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter9 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter10 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ExcelAPPayables));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -85,7 +83,7 @@
             this.pstrBeginningVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowCriteria = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooUseInvoiceDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngDateToUse = new DevExpress.XtraReports.Parameters.Parameter();
             this.plngShowOnlyInvoicesOnHold = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooHideBeneficiary = new DevExpress.XtraReports.Parameters.Parameter();
@@ -800,9 +798,9 @@
             queryParameter3.Name = "@pstrEndingVendorNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
-            queryParameter4.Name = "@pbooUseInvoiceDate";
+            queryParameter4.Name = "@plngDateToUse";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngShowOnlyInvoicesOnHold", typeof(bool));
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?plngDateToUse", typeof(int));
             queryParameter5.Name = "@pdteBeginningPostDate";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter5.Value = new DevExpress.DataAccess.Expression("?pdteBeginningPostDate", typeof(string));
@@ -812,15 +810,9 @@
             queryParameter7.Name = "@plngReportType";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?plngReportType", typeof(int));
-            queryParameter8.Name = "@pbooUseGroupTypes";
+            queryParameter8.Name = "@plngShowInvoicesOnHold";
             queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooUseGroupTypes", typeof(bool));
-            queryParameter9.Name = "@plngUserID";
-            queryParameter9.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter9.Value = new DevExpress.DataAccess.Expression("?plngUserID", typeof(int));
-            queryParameter10.Name = "@plngShowInvoicesOnHold";
-            queryParameter10.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter10.Value = new DevExpress.DataAccess.Expression("?plngShowOnlyInvoicesOnHold", typeof(int));
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?plngShowOnlyInvoicesOnHold", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
@@ -829,9 +821,7 @@
             queryParameter5,
             queryParameter6,
             queryParameter7,
-            queryParameter8,
-            queryParameter9,
-            queryParameter10});
+            queryParameter8});
             storedProcQuery1.StoredProcName = "Report_APPayables";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -919,12 +909,12 @@
             this.pbooShowCriteria.Type = typeof(bool);
             this.pbooShowCriteria.ValueInfo = "True";
             // 
-            // pbooUseInvoiceDate
+            // plngDateToUse
             // 
-            this.pbooUseInvoiceDate.Description = "DateToUse";
-            this.pbooUseInvoiceDate.Name = "pbooUseInvoiceDate";
-            this.pbooUseInvoiceDate.Type = typeof(bool);
-            this.pbooUseInvoiceDate.ValueInfo = "False";
+            this.plngDateToUse.Description = "DateToUse";
+            this.plngDateToUse.Name = "plngDateToUse";
+            this.plngDateToUse.Type = typeof(int);
+            this.plngDateToUse.ValueInfo = "0";
             // 
             // plngShowOnlyInvoicesOnHold
             // 
@@ -1004,9 +994,11 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooShowCriteria, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooUseInvoiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowOnlyInvoicesOnHold, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrSelectVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooHideBeneficiary, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngGroupByVendor, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrDatabaseName,
@@ -1020,7 +1012,7 @@
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
             this.pbooShowCriteria,
-            this.pbooUseInvoiceDate,
+            this.plngDateToUse,
             this.plngShowOnlyInvoicesOnHold,
             this.pstrSelectVendor,
             this.pbooHideBeneficiary,
@@ -1059,7 +1051,7 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel39;
         private DevExpress.XtraReports.UI.XRLabel xrLabel40;
         private DevExpress.XtraReports.UI.XRLabel xrLabel1;
-        private DevExpress.XtraReports.Parameters.Parameter pbooUseInvoiceDate;
+        private DevExpress.XtraReports.Parameters.Parameter plngDateToUse;
         private DevExpress.XtraReports.Parameters.Parameter plngShowOnlyInvoicesOnHold;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
         private DevExpress.XtraReports.UI.XRLabel xrLabel26;

@@ -1576,8 +1576,8 @@
             this.ReportTitle.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.ReportTitle.BorderWidth = 1F;
             this.ReportTitle.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iIF(?plngTransactionSourceCodeID = 3,  \'Recurring Accounts Payable Edit List\',  \'" +
-                    "Accounts Payable Edit List\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "iIF(?plngTransactionSourceCodeID = 3,  \'Recurring AP Edit List\',  \'AP Edit List\')" +
+                    "")});
             this.ReportTitle.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.ReportTitle.KeepTogether = true;
             this.ReportTitle.LocationFloat = new DevExpress.Utils.PointFloat(1.040014F, 29.99999F);
@@ -2324,8 +2324,8 @@
             this.xrLabel51.Borders = DevExpress.XtraPrinting.BorderSide.None;
             this.xrLabel51.BorderWidth = 1F;
             this.xrLabel51.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngTransactionSourceCodeID = 3,  \'Recurring Accounts Payable Edit List\',  \'" +
-                    "Accounts Payable Edit List\')")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?plngTransactionSourceCodeID = 3,  \'Recurring AP Edit List\',  \'AP Edit List\')" +
+                    "")});
             this.xrLabel51.Font = new DevExpress.Drawing.DXFont("Segoe UI Light", 12F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel51.KeepTogether = true;
             this.xrLabel51.LocationFloat = new DevExpress.Utils.PointFloat(1.040014F, 30.00002F);

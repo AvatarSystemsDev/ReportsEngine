@@ -85,7 +85,7 @@
             this.plngShowOnlyInvoicesOnHold = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrBeginningVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrEndingVendorNumber = new DevExpress.XtraReports.Parameters.Parameter();
-            this.pbooUseInvoiceDate = new DevExpress.XtraReports.Parameters.Parameter();
+            this.plngDateToUse = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectVendor = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectProperty = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
@@ -110,9 +110,9 @@
             queryParameter5.Name = "@pstrEndingVendorNumber";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
-            queryParameter6.Name = "@pbooUseInvoiceDate";
+            queryParameter6.Name = "@plngDateToUse";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooUseInvoiceDate", typeof(bool));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?plngDateToUse", typeof(int));
             queryParameter7.Name = "@pdteBeginningPostDate";
             queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter7.Value = new DevExpress.DataAccess.Expression("?pdteBeginningPostDate", typeof(string));
@@ -807,12 +807,12 @@
             this.pstrEndingVendorNumber.Description = "Parameter1";
             this.pstrEndingVendorNumber.Name = "pstrEndingVendorNumber";
             // 
-            // pbooUseInvoiceDate
+            // plngDateToUse
             // 
-            this.pbooUseInvoiceDate.Description = "Use Invoice Date";
-            this.pbooUseInvoiceDate.Name = "pbooUseInvoiceDate";
-            this.pbooUseInvoiceDate.Type = typeof(bool);
-            this.pbooUseInvoiceDate.ValueInfo = "False";
+            this.plngDateToUse.Description = "Use Invoice Date";
+            this.plngDateToUse.Name = "plngDateToUse";
+            this.plngDateToUse.Type = typeof(int);
+            this.plngDateToUse.ValueInfo = "0";
             // 
             // pstrSelectVendor
             // 
@@ -862,7 +862,7 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngShowOnlyInvoicesOnHold, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrBeginningVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrEndingVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooUseInvoiceDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.plngDateToUse, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.pstrServerName,
             this.pstrSelectVendor,
@@ -881,7 +881,7 @@
             this.plngShowOnlyInvoicesOnHold,
             this.pstrBeginningVendorNumber,
             this.pstrEndingVendorNumber,
-            this.pbooUseInvoiceDate});
+            this.plngDateToUse});
             this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -929,7 +929,7 @@
         private DevExpress.XtraReports.Parameters.Parameter plngShowOnlyInvoicesOnHold;
         private DevExpress.XtraReports.Parameters.Parameter pstrBeginningVendorNumber;
         private DevExpress.XtraReports.Parameters.Parameter pstrEndingVendorNumber;
-        private DevExpress.XtraReports.Parameters.Parameter pbooUseInvoiceDate;
+        private DevExpress.XtraReports.Parameters.Parameter plngDateToUse;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectVendor;
         private DevExpress.XtraReports.Parameters.Parameter pstrSelectProperty;
     }

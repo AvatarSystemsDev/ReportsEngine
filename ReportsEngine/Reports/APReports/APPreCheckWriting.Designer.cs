@@ -1036,6 +1036,8 @@
             // pdteForPaymentOnDate
             // 
             this.pdteForPaymentOnDate.Description = "For Payment on Date";
+            this.pdteForPaymentOnDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
+            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteForPaymentOnDate.Name = "pdteForPaymentOnDate";
             this.pdteForPaymentOnDate.Type = typeof(System.DateTime);
             this.pdteForPaymentOnDate.ValueInfo = "2023-09-25";
