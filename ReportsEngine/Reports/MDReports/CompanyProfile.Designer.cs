@@ -212,7 +212,6 @@
             this.pstrSelectSystemAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
             this.CompanyProfileRDIncomeControlAcccountsSubreportSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.plngRDIncomeControlAccountTypes = new DevExpress.XtraReports.Parameters.Parameter();
-            this.CompanyEmailSubreportSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.CheckFormatsSubBand = new DevExpress.XtraReports.UI.SubBand();
             this.xrLabel94 = new DevExpress.XtraReports.UI.XRLabel();
             this.xrLabel91 = new DevExpress.XtraReports.UI.XRLabel();
@@ -250,7 +249,6 @@
             this.xrCompanyProfileAddressesSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrCompanyProfileControlAccountsSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             this.xrCompanyProfileRDIncomeControlAcccountsSubreport = new DevExpress.XtraReports.UI.XRSubreport();
-            this.xrCompanyProfilesEmailSubreport = new DevExpress.XtraReports.UI.XRSubreport();
             ((System.ComponentModel.ISupportInitialize)(this.federationDataSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
@@ -268,7 +266,7 @@
             storedProcQuery2.Name = "CompanyProfile";
             queryParameter2.Name = "@pstrSELECTCompanyID";
             queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectCompanyID, \',\')", typeof(string));
+            queryParameter2.Value = new DevExpress.DataAccess.Expression("1", typeof(string));
             queryParameter3.Name = "@plngMaskFederalID";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?plngMaskFederalID", typeof(int));
@@ -474,7 +472,6 @@
             this.JIBStatementMessageSubBand,
             this.CompanyProfileControlAccountSubreportBand,
             this.CompanyProfileRDIncomeControlAcccountsSubreportSubBand,
-            this.CompanyEmailSubreportSubBand,
             this.CheckFormatsSubBand,
             this.PageBreakSubBand});
             // 
@@ -886,7 +883,7 @@
             this.xrLabel44,
             this.xrLabel45});
             this.WebAddressSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[CompanyWebAddress] <> \'\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([CompanyWebAddress])")});
             this.WebAddressSubBand.HeightF = 20.00021F;
             this.WebAddressSubBand.KeepTogether = true;
             this.WebAddressSubBand.Name = "WebAddressSubBand";
@@ -1758,15 +1755,6 @@
             staticListLookUpSettings2.LookUpValues.Add(new DevExpress.XtraReports.Parameters.LookUpValue(3, "None"));
             this.plngRDIncomeControlAccountTypes.ValueSourceSettings = staticListLookUpSettings2;
             // 
-            // CompanyEmailSubreportSubBand
-            // 
-            this.CompanyEmailSubreportSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
-            this.xrCompanyProfilesEmailSubreport});
-            this.CompanyEmailSubreportSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowCompanyEmail")});
-            this.CompanyEmailSubreportSubBand.HeightF = 11.06899F;
-            this.CompanyEmailSubreportSubBand.Name = "CompanyEmailSubreportSubBand";
-            // 
             // CheckFormatsSubBand
             // 
             this.CheckFormatsSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
@@ -2414,20 +2402,6 @@
             this.xrCompanyProfileRDIncomeControlAcccountsSubreport.ReportSource = new ReportsEngine.Reports.MDReports.CompanyProfileRDIncomeControlAcccountsSubreport();
             this.xrCompanyProfileRDIncomeControlAcccountsSubreport.SizeF = new System.Drawing.SizeF(770.0001F, 11.06899F);
             // 
-            // xrCompanyProfilesEmailSubreport
-            // 
-            this.xrCompanyProfilesEmailSubreport.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
-            this.xrCompanyProfilesEmailSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
-            this.xrCompanyProfilesEmailSubreport.Name = "xrCompanyProfilesEmailSubreport";
-            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));
-            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrServerName", this.pstrServerName));
-            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngUserID", this.plngUserID));
-            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("plngCompanyID", null, "Dynamic_CompanyProfile.CompanyID"));
-            this.xrCompanyProfilesEmailSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("Subtitle", this.Subtitle));
-            this.xrCompanyProfilesEmailSubreport.ReportSource = new ReportsEngine.Reports.MDReports.CompanyProfilesEmailSubreport();
-            this.xrCompanyProfilesEmailSubreport.SizeF = new System.Drawing.SizeF(770.0001F, 11.06899F);
-            // 
             // CompanyProfile
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -2537,8 +2511,6 @@
         private DevExpress.XtraReports.UI.SubBand PageBreakSubBand;
         private DevExpress.XtraReports.UI.SubBand CompanyProfileRDIncomeControlAcccountsSubreportSubBand;
         private DevExpress.XtraReports.UI.XRSubreport xrCompanyProfileRDIncomeControlAcccountsSubreport;
-        private DevExpress.XtraReports.UI.SubBand CompanyEmailSubreportSubBand;
-        private DevExpress.XtraReports.UI.XRSubreport xrCompanyProfilesEmailSubreport;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowCompanyEmail;
         private DevExpress.XtraReports.UI.SubBand PostRevenueInsideImmediateSubBand;
         private DevExpress.XtraReports.UI.XRLabel xrLabel46;

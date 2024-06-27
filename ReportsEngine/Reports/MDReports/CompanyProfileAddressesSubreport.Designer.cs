@@ -87,6 +87,9 @@
             this.xrLabel23 = new DevExpress.XtraReports.UI.XRLabel();
             this.ReportFooter = new DevExpress.XtraReports.UI.ReportFooterBand();
             this.xrLabel24 = new DevExpress.XtraReports.UI.XRLabel();
+            this.SubBand3 = new DevExpress.XtraReports.UI.SubBand();
+            this.xrLabel25 = new DevExpress.XtraReports.UI.XRLabel();
+            this.xrLabel28 = new DevExpress.XtraReports.UI.XRLabel();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -116,7 +119,8 @@
             this.PhoneSubBand,
             this.FaxSubBand,
             this.CityStateZipSubBand,
-            this.CountrySubBand});
+            this.CountrySubBand,
+            this.SubBand3});
             // 
             // pageHeaderBand1
             // 
@@ -236,7 +240,7 @@
             this.xrLabel1,
             this.xrLabel10});
             this.AddressLine1SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine1] <> \'\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([AddressLine1])")});
             this.AddressLine1SubBand.HeightF = 20F;
             this.AddressLine1SubBand.Name = "AddressLine1SubBand";
             // 
@@ -246,7 +250,7 @@
             this.xrLabel8,
             this.xrLabel4});
             this.AddressLine2SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine2] <> \'\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([AddressLine2])\n")});
             this.AddressLine2SubBand.HeightF = 20.00005F;
             this.AddressLine2SubBand.Name = "AddressLine2SubBand";
             // 
@@ -256,7 +260,7 @@
             this.xrLabel13,
             this.xrLabel12});
             this.AddressLine3SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine3] <> \'\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([AddressLine3])")});
             this.AddressLine3SubBand.HeightF = 20.00008F;
             this.AddressLine3SubBand.Name = "AddressLine3SubBand";
             // 
@@ -266,7 +270,7 @@
             this.xrLabel15,
             this.xrLabel14});
             this.AddressLine4SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine4] <> \'\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([AddressLine4])")});
             this.AddressLine4SubBand.HeightF = 20.00008F;
             this.AddressLine4SubBand.Name = "AddressLine4SubBand";
             // 
@@ -276,7 +280,7 @@
             this.xrLabel17,
             this.xrLabel16});
             this.AddressLine5SubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[AddressLine5] <> \'\'\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([AddressLine5])\n")});
             this.AddressLine5SubBand.HeightF = 20F;
             this.AddressLine5SubBand.Name = "AddressLine5SubBand";
             // 
@@ -446,7 +450,7 @@
             this.xrLabel19,
             this.xrLabel18});
             this.PhoneSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[Phone1] <> \'\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([Phone1])")});
             this.PhoneSubBand.HeightF = 20F;
             this.PhoneSubBand.Name = "PhoneSubBand";
             // 
@@ -488,7 +492,7 @@
             this.xrLabel21,
             this.xrLabel20});
             this.FaxSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[Phone2] <> \'\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([Phone2])")});
             this.FaxSubBand.HeightF = 20.00014F;
             this.FaxSubBand.Name = "FaxSubBand";
             // 
@@ -529,8 +533,6 @@
             this.CityStateZipSubBand.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
             this.xrLabel27,
             this.xrLabel26});
-            this.CityStateZipSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[CompanyCity] <> \'\'")});
             this.CityStateZipSubBand.HeightF = 20F;
             this.CityStateZipSubBand.Name = "CityStateZipSubBand";
             // 
@@ -572,7 +574,7 @@
             this.xrLabel5,
             this.xrLabel9});
             this.CountrySubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[Country] <> \'\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([Country])\n")});
             this.CountrySubBand.HeightF = 20F;
             this.CountrySubBand.Name = "CountrySubBand";
             // 
@@ -640,7 +642,7 @@
             this.xrLabel3,
             this.xrLabel6});
             this.SalutationSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[Salutation] <> \'\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([Salutation])\n")});
             this.SalutationSubBand.HeightF = 20F;
             this.SalutationSubBand.Name = "SalutationSubBand";
             // 
@@ -682,7 +684,7 @@
             this.xrLabel7,
             this.xrLabel22});
             this.MailingNameSubBand.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "[MailingName] <> \'\'")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not IsNullOrEmpty([MailingName])")});
             this.MailingNameSubBand.HeightF = 20F;
             this.MailingNameSubBand.Name = "MailingNameSubBand";
             // 
@@ -774,6 +776,48 @@
             this.xrLabel24.StylePriority.UseFont = false;
             this.xrLabel24.StylePriority.UsePadding = false;
             this.xrLabel24.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
+            // 
+            // SubBand3
+            // 
+            this.SubBand3.Controls.AddRange(new DevExpress.XtraReports.UI.XRControl[] {
+            this.xrLabel25,
+            this.xrLabel28});
+            this.SubBand3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "NOT IsNullOrEmpty([Email])")});
+            this.SubBand3.HeightF = 20F;
+            this.SubBand3.Name = "SubBand3";
+            // 
+            // xrLabel25
+            // 
+            this.xrLabel25.CanGrow = false;
+            this.xrLabel25.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[Email]")});
+            this.xrLabel25.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
+            this.xrLabel25.LocationFloat = new DevExpress.Utils.PointFloat(215.6094F, 0F);
+            this.xrLabel25.Multiline = true;
+            this.xrLabel25.Name = "xrLabel25";
+            this.xrLabel25.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 0, 0, 100F);
+            this.xrLabel25.SizeF = new System.Drawing.SizeF(554.3908F, 19.99995F);
+            this.xrLabel25.StylePriority.UseFont = false;
+            this.xrLabel25.Text = "xrLabel1";
+            // 
+            // xrLabel28
+            // 
+            this.xrLabel28.BorderColor = System.Drawing.Color.Black;
+            this.xrLabel28.BorderDashStyle = DevExpress.XtraPrinting.BorderDashStyle.Solid;
+            this.xrLabel28.Borders = DevExpress.XtraPrinting.BorderSide.None;
+            this.xrLabel28.BorderWidth = 1F;
+            this.xrLabel28.CanGrow = false;
+            this.xrLabel28.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
+            this.xrLabel28.KeepTogether = true;
+            this.xrLabel28.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
+            this.xrLabel28.Multiline = true;
+            this.xrLabel28.Name = "xrLabel28";
+            this.xrLabel28.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
+            this.xrLabel28.SizeF = new System.Drawing.SizeF(215.6094F, 20F);
+            this.xrLabel28.StylePriority.UsePadding = false;
+            this.xrLabel28.Text = "Email";
+            this.xrLabel28.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             // 
             // CompanyProfileAddressesSubreport
             // 
@@ -870,5 +914,8 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel23;
         private DevExpress.XtraReports.UI.ReportFooterBand ReportFooter;
         private DevExpress.XtraReports.UI.XRLabel xrLabel24;
+        private DevExpress.XtraReports.UI.SubBand SubBand3;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel25;
+        private DevExpress.XtraReports.UI.XRLabel xrLabel28;
     }
 }
