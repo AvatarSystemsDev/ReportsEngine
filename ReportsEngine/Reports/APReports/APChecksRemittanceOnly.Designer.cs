@@ -36,6 +36,8 @@
             DevExpress.DataAccess.Sql.QueryParameter queryParameter4 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter5 = new DevExpress.DataAccess.Sql.QueryParameter();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter6 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter7 = new DevExpress.DataAccess.Sql.QueryParameter();
+            DevExpress.DataAccess.Sql.QueryParameter queryParameter8 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APChecksRemittanceOnly));
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
             this.bottomMarginBand1 = new DevExpress.XtraReports.UI.BottomMarginBand();
@@ -59,6 +61,8 @@
             this.pbooReturnElectronicPayments = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnChecks = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooReturnACH = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrBeginningCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pstrEndingCheckNumber = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // topMarginBand1
@@ -186,22 +190,30 @@
             queryParameter3.Name = "@pstrEndingVendorNumber";
             queryParameter3.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter3.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendor", typeof(string));
-            queryParameter4.Name = "@pbooReturnElectronicPayments";
+            queryParameter4.Name = "@pstrBeginningCheckNumber";
             queryParameter4.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(bool));
-            queryParameter5.Name = "@pbooReturnChecks";
+            queryParameter4.Value = new DevExpress.DataAccess.Expression("?pstrBeginningCheckNumber", typeof(string));
+            queryParameter5.Name = "@pstrEndingCheckNumber";
             queryParameter5.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pbooReturnChecks", typeof(bool));
-            queryParameter6.Name = "@pbooReturnACH";
+            queryParameter5.Value = new DevExpress.DataAccess.Expression("?pstrEndingCheckNumber", typeof(string));
+            queryParameter6.Name = "@pbooReturnElectronicPayments";
             queryParameter6.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooReturnACH", typeof(bool));
+            queryParameter6.Value = new DevExpress.DataAccess.Expression("?pbooReturnElectronicPayments", typeof(bool));
+            queryParameter7.Name = "@pbooReturnChecks";
+            queryParameter7.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter7.Value = new DevExpress.DataAccess.Expression("?pbooReturnChecks", typeof(bool));
+            queryParameter8.Name = "@pbooReturnACH";
+            queryParameter8.Type = typeof(DevExpress.DataAccess.Expression);
+            queryParameter8.Value = new DevExpress.DataAccess.Expression("?pbooReturnACH", typeof(bool));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1,
             queryParameter2,
             queryParameter3,
             queryParameter4,
             queryParameter5,
-            queryParameter6});
+            queryParameter6,
+            queryParameter7,
+            queryParameter8});
             storedProcQuery1.StoredProcName = "APCheckPrinting_GetChecksToPayHeaders";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
             storedProcQuery1});
@@ -256,6 +268,17 @@
             this.pbooReturnACH.Type = typeof(bool);
             this.pbooReturnACH.ValueInfo = "False";
             // 
+            // pstrBeginningCheckNumber
+            // 
+            this.pstrBeginningCheckNumber.Description = "pstrBeginningCheckNumber";
+            this.pstrBeginningCheckNumber.Name = "pstrBeginningCheckNumber";
+            // 
+            // pstrEndingCheckNumber
+            // 
+            this.pstrEndingCheckNumber.Description = "Parameter1";
+            this.pstrEndingCheckNumber.Name = "pstrEndingCheckNumber";
+            this.pstrEndingCheckNumber.Visible = false;
+            // 
             // APChecksRemittanceOnly
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -297,7 +320,9 @@
             this.pbooReturnElectronicPayments,
             this.pbooReturnChecks,
             this.pbooReturnACH,
-            this.pbooShowDetailOnChecks});
+            this.pbooShowDetailOnChecks,
+            this.pstrBeginningCheckNumber,
+            this.pstrEndingCheckNumber});
             this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -327,5 +352,7 @@
         private DevExpress.XtraReports.Parameters.Parameter pbooReturnChecks;
         private DevExpress.XtraReports.Parameters.Parameter pbooReturnACH;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowDetailOnChecks;
+        private DevExpress.XtraReports.Parameters.Parameter pstrBeginningCheckNumber;
+        private DevExpress.XtraReports.Parameters.Parameter pstrEndingCheckNumber;
     }
 }

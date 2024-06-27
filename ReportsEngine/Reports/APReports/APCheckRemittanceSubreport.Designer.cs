@@ -31,8 +31,6 @@
             this.components = new System.ComponentModel.Container();
             DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery1 = new DevExpress.DataAccess.Sql.StoredProcQuery();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter1 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.DataAccess.Sql.StoredProcQuery storedProcQuery2 = new DevExpress.DataAccess.Sql.StoredProcQuery();
-            DevExpress.DataAccess.Sql.QueryParameter queryParameter2 = new DevExpress.DataAccess.Sql.QueryParameter();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(APCheckRemittanceSubreport));
             DevExpress.XtraPrinting.Shape.ShapeLine shapeLine1 = new DevExpress.XtraPrinting.Shape.ShapeLine();
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -218,23 +216,15 @@
             // 
             this.Dynamic.ConnectionName = "Providence_Connection 1";
             this.Dynamic.Name = "Dynamic";
-            storedProcQuery1.Name = "DSAPCheckRemittanceInformation";
+            storedProcQuery1.Name = "DSAPCheckGetRawData";
             queryParameter1.Name = "@plngID";
             queryParameter1.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngID", typeof(string));
+            queryParameter1.Value = new DevExpress.DataAccess.Expression("?plngID", typeof(int));
             storedProcQuery1.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
             queryParameter1});
-            storedProcQuery1.StoredProcName = "APCheckPrinting_GetCheckRemittanceInformation";
-            storedProcQuery2.Name = "DSAPCheckGetRawData";
-            queryParameter2.Name = "@plngID";
-            queryParameter2.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter2.Value = new DevExpress.DataAccess.Expression("?plngID", typeof(int));
-            storedProcQuery2.Parameters.AddRange(new DevExpress.DataAccess.Sql.QueryParameter[] {
-            queryParameter2});
-            storedProcQuery2.StoredProcName = "APCheckPrinting_GetRawDataFromRemittance";
+            storedProcQuery1.StoredProcName = "APCheckPrinting_GetRawDataFromRemittance";
             this.Dynamic.Queries.AddRange(new DevExpress.DataAccess.Sql.SqlQuery[] {
-            storedProcQuery1,
-            storedProcQuery2});
+            storedProcQuery1});
             this.Dynamic.ResultSchemaSerializable = resources.GetString("Dynamic.ResultSchemaSerializable");
             // 
             // Subtitle
@@ -1189,7 +1179,7 @@
             // 
             this.pstrCheckNumber.Description = "Check Number";
             this.pstrCheckNumber.Name = "pstrCheckNumber";
-            this.pstrCheckNumber.Type = typeof(int);
+            this.pstrCheckNumber.Type = typeof(long);
             this.pstrCheckNumber.ValueInfo = "0";
             this.pstrCheckNumber.Visible = false;
             // 
@@ -1243,7 +1233,8 @@
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdblCheckAmount, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pdteCheckDate, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
             new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrCheckNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
-            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pstrVendorNumber, DevExpress.XtraReports.Parameters.Orientation.Horizontal),
+            new DevExpress.XtraReports.Parameters.ParameterLayoutItem(this.pbooPrintDetailOnChecks, DevExpress.XtraReports.Parameters.Orientation.Horizontal)});
             this.Parameters.AddRange(new DevExpress.XtraReports.Parameters.Parameter[] {
             this.Subtitle,
             this.pstrDatabaseName,
