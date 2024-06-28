@@ -1346,7 +1346,7 @@
             this.xrLabel58.BorderWidth = 1F;
             this.xrLabel58.CanGrow = false;
             this.xrLabel58.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowPONumber\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pbooShowPONumber, \'PO Num.\nAFE\' ,\'\nAFE\' )")});
             this.xrLabel58.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel58.KeepTogether = true;
             this.xrLabel58.LocationFloat = new DevExpress.Utils.PointFloat(598.5018F, 0F);
@@ -1911,7 +1911,8 @@
             this.xrLabel29.BorderWidth = 1F;
             this.xrLabel29.CanGrow = false;
             this.xrLabel29.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?pbooShowPONumber\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif(?pbooShowPONumber, \'PO Num.\nAFE\' ,\'\nAFE\' )"),
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(?pbooShowPONumber, \'PO Num.\nAFE\' ,\'\nAFE\' )")});
             this.xrLabel29.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel29.KeepTogether = true;
             this.xrLabel29.LocationFloat = new DevExpress.Utils.PointFloat(598.5018F, 0F);
@@ -2151,7 +2152,7 @@
             this.xrLabel72.Multiline = true;
             this.xrLabel72.Name = "xrLabel72";
             this.xrLabel72.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel72.SizeF = new System.Drawing.SizeF(69.92908F, 12.70834F);
+            this.xrLabel72.SizeF = new System.Drawing.SizeF(69.92908F, 15.62679F);
             this.xrLabel72.StylePriority.UseBackColor = false;
             this.xrLabel72.StylePriority.UseBorderColor = false;
             this.xrLabel72.StylePriority.UseBorderDashStyle = false;
@@ -2179,7 +2180,7 @@
             this.xrOwnersSelected.Multiline = true;
             this.xrOwnersSelected.Name = "xrOwnersSelected";
             this.xrOwnersSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrOwnersSelected.SizeF = new System.Drawing.SizeF(184.2219F, 12.70835F);
+            this.xrOwnersSelected.SizeF = new System.Drawing.SizeF(184.2219F, 15.62679F);
             this.xrOwnersSelected.StylePriority.UseBackColor = false;
             this.xrOwnersSelected.StylePriority.UseBorderColor = false;
             this.xrOwnersSelected.StylePriority.UseBorderDashStyle = false;
@@ -2207,7 +2208,7 @@
             this.xrPropertiesSelected.Multiline = true;
             this.xrPropertiesSelected.Name = "xrPropertiesSelected";
             this.xrPropertiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(180.0555F, 12.70836F);
+            this.xrPropertiesSelected.SizeF = new System.Drawing.SizeF(180.0555F, 15.62679F);
             this.xrPropertiesSelected.StylePriority.UseBackColor = false;
             this.xrPropertiesSelected.StylePriority.UseBorderColor = false;
             this.xrPropertiesSelected.StylePriority.UseBorderDashStyle = false;
@@ -2235,7 +2236,7 @@
             this.xrLabel71.Multiline = true;
             this.xrLabel71.Name = "xrLabel71";
             this.xrLabel71.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel71.SizeF = new System.Drawing.SizeF(123.0542F, 12.70836F);
+            this.xrLabel71.SizeF = new System.Drawing.SizeF(123.0542F, 15.62679F);
             this.xrLabel71.StylePriority.UseBackColor = false;
             this.xrLabel71.StylePriority.UseBorderColor = false;
             this.xrLabel71.StylePriority.UseBorderDashStyle = false;
@@ -2263,7 +2264,7 @@
             this.xrLabel31.Multiline = true;
             this.xrLabel31.Name = "xrLabel31";
             this.xrLabel31.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrLabel31.SizeF = new System.Drawing.SizeF(73.05417F, 11.87496F);
+            this.xrLabel31.SizeF = new System.Drawing.SizeF(73.05417F, 14.7934F);
             this.xrLabel31.StylePriority.UseBackColor = false;
             this.xrLabel31.StylePriority.UseBorderColor = false;
             this.xrLabel31.StylePriority.UseBorderDashStyle = false;
@@ -2291,7 +2292,7 @@
             this.xrEntitiesSelected.Multiline = true;
             this.xrEntitiesSelected.Name = "xrEntitiesSelected";
             this.xrEntitiesSelected.Padding = new DevExpress.XtraPrinting.PaddingInfo(1, 1, 1, 1, 100F);
-            this.xrEntitiesSelected.SizeF = new System.Drawing.SizeF(182.1396F, 11.87498F);
+            this.xrEntitiesSelected.SizeF = new System.Drawing.SizeF(182.1396F, 14.79341F);
             this.xrEntitiesSelected.StylePriority.UseBackColor = false;
             this.xrEntitiesSelected.StylePriority.UseBorderColor = false;
             this.xrEntitiesSelected.StylePriority.UseBorderDashStyle = false;

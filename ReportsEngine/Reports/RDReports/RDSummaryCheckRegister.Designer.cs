@@ -275,10 +275,10 @@
             queryParameter12.Value = new DevExpress.DataAccess.Expression("?pdteEndingCheckDate", typeof(System.DateTime));
             queryParameter13.Name = "@plngBegininningCheckSortNumber";
             queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngBeginningCheckSortNumber", typeof(int));
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngBeginningCheckSortNumber", typeof(long));
             queryParameter14.Name = "@plngEndingCheckSortNumber";
             queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngEndingCheckSortNumber", typeof(int));
+            queryParameter14.Value = new DevExpress.DataAccess.Expression("?plngEndingCheckSortNumber", typeof(long));
             queryParameter15.Name = "@pstrSelectRDCheckID";
             queryParameter15.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter15.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectRDCheckID, \',\')", typeof(string));
