@@ -128,7 +128,7 @@ namespace ReportsEngine.Services
                 }
                 catch (SystemException e)
                 {
-                    throw new SystemException("Company: " + companyid + Environment.NewLine + "Database: " + databaseID + Environment.NewLine + e.ToString());
+                    throw new SystemException("Company: " + companyid + Environment.NewLine + "Database: " + databaseID + Environment.NewLine + "Report Name: " + reportName + Environment.NewLine + e.ToString());
                 }
             }
             catch (SystemException ex)
@@ -207,35 +207,6 @@ namespace ReportsEngine.Services
                 {
                     parameter.Value = DateTime.Today;
                 }
-                else if (parameter.Name == "plngCoverSheetTray") // They want this to be defaulted from a field from CompanySettings
-                {
-                    string query = "Select TOP 1 WillPrintAccountDescription FROM CheckPrintingFormat WHERE Company.ID = " + companyid;
-                    //string connectionStringDynamic = "XpoProvider=MSSqlServer;Data Source=" + report.Parameters["pstrServerName"].Value + "; User ID=" + ReportUser + "; Password=" + ReportUserPassword + "; Initial Catalog=" + report.Parameters["pstrDatabaseName"].Value + "; Persist Security Info=true; TrustServerCertificate=true;";
-                    string connectionStringDynamic = $"Data Source={report.Parameters["pstrServerName"].Value}; User ID={ReportUser}; Password={ReportUserPassword}; Initial Catalog={report.Parameters["pstrDatabaseName"].Value}; Persist Security Info=true; TrustServerCertificate=true;";
-                    ///
-                    try
-                    {
-                        using (SqlConnection conn = new SqlConnection(connectionStringDynamic))
-                        {
-                            conn.Open();
-                            using (SqlCommand cmd = new SqlCommand(query, conn))
-                            {
-                                var result = cmd.ExecuteScalar(); // Assuming the query returns a single value
-                                report.Parameters["pbooWillUseAccountNumberForJIBInvoice"].Value = result != DBNull.Value && result != null ? Convert.ToBoolean(result) : false;
-                            }
-                        }
-                    }
-                    catch (SqlException ex)
-                    {
-                        // Log or handle the exception
-                        Console.WriteLine("SQL Error: " + ex.Message);
-                    }
-                    catch (Exception ex)
-                    {
-                        // Handle general exceptions
-                        Console.WriteLine("General Error: " + ex.Message);
-                    }
-                }
             }
 
             try
@@ -252,8 +223,22 @@ namespace ReportsEngine.Services
                         string currentDatabaseID = parameters["plngDatabaseID"];
                         //Get the Database ConnectionString based on plngDatabaseID
                         connectionStringParts = DynamicConnectionHandler.getConnectionStringInfo(currentDatabaseID);
-                        report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
-                        report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+                        try
+                        {
+                            report.Parameters["pstrServerName"].Value = connectionStringParts.ServerName;
+                        }
+                        catch (SystemException ex)
+                        {
+                            throw new SystemException(ex.ToString() + Environment.NewLine + "pstrServerName either not on the report or unable to get connection string from databaseID: " + currentDatabaseID);
+                        }
+                        try
+                        {
+                            report.Parameters["pstrDatabaseName"].Value = connectionStringParts.DatabaseName;
+                        }
+                        catch (SystemException ex)
+                        {
+                            throw new SystemException(ex.ToString() + Environment.NewLine + "pstrDatabaseName either not on the report or unable to get connection string from databaseID: " + currentDatabaseID);
+                        }
                         if (ParameterExists(report.Parameters, "plngDatabaseID"))
                         {
                             report.Parameters["plngDatabaseID"].Value = int.Parse(currentDatabaseID.ToString());
@@ -273,15 +258,29 @@ namespace ReportsEngine.Services
                             {
                                 if (sds.Name == "Dynamic")
                                 {
-                                    OlapConnectionParameters olapParams = new OlapConnectionParameters();
-                                    olapParams.ConnectionString = connectionStringDynamic;
-                                    sds.ConnectionParameters = olapParams;
+                                    try
+                                    {
+                                        OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                        olapParams.ConnectionString = connectionStringDynamic;
+                                        sds.ConnectionParameters = olapParams;
+                                    }
+                                    catch (SystemException ex)
+                                    {
+                                        throw new SystemException(ex.ToString() + Environment.NewLine + "Dynamic connection could not be established from connection string " + connectionStringDynamic);
+                                    }
                                 }
                                 else if (sds.Name == "Pulse")
                                 {
-                                    OlapConnectionParameters olapParams = new OlapConnectionParameters();
-                                    olapParams.ConnectionString = connectionStringPulse;
-                                    sds.ConnectionParameters = olapParams;
+                                    try
+                                    {
+                                        OlapConnectionParameters olapParams = new OlapConnectionParameters();
+                                        olapParams.ConnectionString = connectionStringPulse;
+                                        sds.ConnectionParameters = olapParams;
+                                    }
+                                    catch (SystemException ex)
+                                    {
+                                        throw new SystemException(ex.ToString() + Environment.NewLine + "Pulse connection could not be established from connection string " + connectionStringPulse);
+                                    }
                                 }
                             }
                         }
@@ -448,7 +447,7 @@ namespace ReportsEngine.Services
             }
             catch (Exception ex)
             {
-                string errorString = "Company: " + companyid + Environment.NewLine + "Report Name: " + report.DisplayName + Environment.NewLine + "Parameter could not be read." + Environment.NewLine + "Error: " + Environment.NewLine + ex.ToString();
+                string errorString = "Company: " + companyid + Environment.NewLine + "Report Name: " + report.GetType().ToString() + Environment.NewLine + "Parameter could not be read." + Environment.NewLine + "Error: " + Environment.NewLine + ex.ToString();
                 Exception error = new Exception(errorString);
                 DebugErrorHandler.Error_Occurred(error);
                 throw new Exception("Error reading report parameters. Please contact customer support");
