@@ -660,7 +660,7 @@
             this.Textbox31,
             this.Textbox44,
             this.Textbox57});
-            this.pageHeaderBand1.HeightF = 102.42F;
+            this.pageHeaderBand1.HeightF = 101.03F;
             this.pageHeaderBand1.Name = "pageHeaderBand1";
             this.pageHeaderBand1.PrintOn = DevExpress.XtraReports.UI.PrintOnPages.NotWithReportHeader;
             this.pageHeaderBand1.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
@@ -818,7 +818,7 @@
             this.Textbox56.BorderWidth = 1F;
             this.Textbox56.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox56.KeepTogether = true;
-            this.Textbox56.LocationFloat = new DevExpress.Utils.PointFloat(683.5444F, 82.41997F);
+            this.Textbox56.LocationFloat = new DevExpress.Utils.PointFloat(683.5444F, 81.03001F);
             this.Textbox56.Multiline = true;
             this.Textbox56.Name = "Textbox56";
             this.Textbox56.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -836,7 +836,7 @@
             this.Textbox33.BorderWidth = 1F;
             this.Textbox33.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox33.KeepTogether = true;
-            this.Textbox33.LocationFloat = new DevExpress.Utils.PointFloat(297.532F, 82.41997F);
+            this.Textbox33.LocationFloat = new DevExpress.Utils.PointFloat(297.532F, 81.03001F);
             this.Textbox33.Multiline = true;
             this.Textbox33.Name = "Textbox33";
             this.Textbox33.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -854,7 +854,7 @@
             this.Textbox55.BorderWidth = 1F;
             this.Textbox55.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox55.KeepTogether = true;
-            this.Textbox55.LocationFloat = new DevExpress.Utils.PointFloat(395.792F, 82.41997F);
+            this.Textbox55.LocationFloat = new DevExpress.Utils.PointFloat(395.792F, 81.03001F);
             this.Textbox55.Multiline = true;
             this.Textbox55.Name = "Textbox55";
             this.Textbox55.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -873,7 +873,7 @@
             this.Textbox31.BorderWidth = 1F;
             this.Textbox31.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox31.KeepTogether = true;
-            this.Textbox31.LocationFloat = new DevExpress.Utils.PointFloat(56.7023F, 82.41997F);
+            this.Textbox31.LocationFloat = new DevExpress.Utils.PointFloat(56.7023F, 81.03001F);
             this.Textbox31.Multiline = true;
             this.Textbox31.Name = "Textbox31";
             this.Textbox31.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 8, 2, 2, 100F);
@@ -890,7 +890,7 @@
             this.Textbox44.BorderWidth = 1F;
             this.Textbox44.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox44.KeepTogether = true;
-            this.Textbox44.LocationFloat = new DevExpress.Utils.PointFloat(168.9821F, 82.41997F);
+            this.Textbox44.LocationFloat = new DevExpress.Utils.PointFloat(168.9821F, 81.03001F);
             this.Textbox44.Multiline = true;
             this.Textbox44.Name = "Textbox44";
             this.Textbox44.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -907,7 +907,7 @@
             this.Textbox57.BorderWidth = 1F;
             this.Textbox57.Font = new DevExpress.Drawing.DXFont("Segoe UI", 9F, DevExpress.Drawing.DXFontStyle.Bold);
             this.Textbox57.KeepTogether = true;
-            this.Textbox57.LocationFloat = new DevExpress.Utils.PointFloat(490.0297F, 82.41997F);
+            this.Textbox57.LocationFloat = new DevExpress.Utils.PointFloat(490.0297F, 81.03001F);
             this.Textbox57.Multiline = true;
             this.Textbox57.Name = "Textbox57";
             this.Textbox57.Padding = new DevExpress.XtraPrinting.PaddingInfo(2, 2, 2, 2, 100F);
@@ -1036,8 +1036,6 @@
             // pdteForPaymentOnDate
             // 
             this.pdteForPaymentOnDate.Description = "For Payment on Date";
-            this.pdteForPaymentOnDate.ExpressionBindings.AddRange(new DevExpress.XtraReports.Expressions.BasicExpressionBinding[] {
-            new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Value", "today()")});
             this.pdteForPaymentOnDate.Name = "pdteForPaymentOnDate";
             this.pdteForPaymentOnDate.Type = typeof(System.DateTime);
             this.pdteForPaymentOnDate.ValueInfo = "2023-09-25";
