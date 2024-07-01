@@ -1752,9 +1752,8 @@
             this.xrLabel65.BorderWidth = 1F;
             this.xrLabel65.CanGrow = false;
             this.xrLabel65.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "ROUND(sumSum(Iif(not [IsReleasedFromSuspense], [NetCashAmount] - [ARAmount] - [JI" +
-                    "BPaymentTotalAmountIncrement] + [OwnerStateWithholding] + [BackupWithholdingAmou" +
-                    "nt],0 )),2)\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "ROUND(sumSum(Iif(not [IsReleasedFromSuspense], [NetCashAmount] - [JIBPaymentTotal" +
+                    "AmountIncrement] + [OwnerStateWithholding] + [BackupWithholdingAmount],0 )),2)\n")});
             this.xrLabel65.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel65.KeepTogether = true;
             this.xrLabel65.LocationFloat = new DevExpress.Utils.PointFloat(395.2023F, 0F);
@@ -2134,8 +2133,8 @@
             this.xrLabel71.BorderWidth = 1F;
             this.xrLabel71.CanGrow = false;
             this.xrLabel71.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "ROUND(sumSum([NetCashAmount] - [ARAmount] - [JIBPaymentTotalAmountIncrement] + [O" +
-                    "wnerStateWithholding]+ [BackupWithholdingAmount]),2)\n\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "ROUND(sumSum([NetCashAmount] - [JIBPaymentTotalAmountIncrement] + [OwnerStateWith" +
+                    "holding]+ [BackupWithholdingAmount]),2)\n\n")});
             this.xrLabel71.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel71.KeepTogether = true;
             this.xrLabel71.LocationFloat = new DevExpress.Utils.PointFloat(395.2021F, 17F);
