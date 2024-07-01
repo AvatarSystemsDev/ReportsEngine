@@ -296,10 +296,10 @@
             queryParameter11.Value = new DevExpress.DataAccess.Expression("?pstrEndingVendorNumber", typeof(string));
             queryParameter12.Name = "@plngBegininningCheckSortNumber";
             queryParameter12.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngBeginningCheckSortNumber", typeof(int));
+            queryParameter12.Value = new DevExpress.DataAccess.Expression("?plngBeginningCheckSortNumber", typeof(long));
             queryParameter13.Name = "@plngEndingCheckSortNumber";
             queryParameter13.Type = typeof(DevExpress.DataAccess.Expression);
-            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngEndingCheckSortNumber", typeof(int));
+            queryParameter13.Value = new DevExpress.DataAccess.Expression("?plngEndingCheckSortNumber", typeof(long));
             queryParameter14.Name = "@pstrSelectAPCheckID";
             queryParameter14.Type = typeof(DevExpress.DataAccess.Expression);
             queryParameter14.Value = new DevExpress.DataAccess.Expression("JOIN(?pstrSelectAPCheckID,\',\')", typeof(string));
@@ -2226,7 +2226,7 @@
             this.pstrSelectAPCheckID.MultiValue = true;
             this.pstrSelectAPCheckID.Name = "pstrSelectAPCheckID";
             this.pstrSelectAPCheckID.SelectAllValues = true;
-            this.pstrSelectAPCheckID.Type = typeof(System.Guid);
+            this.pstrSelectAPCheckID.Type = typeof(int);
             dynamicListLookUpSettings7.DataMember = "APChecksQuery";
             dynamicListLookUpSettings7.DataSource = this.Dynamic;
             dynamicListLookUpSettings7.DisplayMember = "Number";
@@ -2260,7 +2260,7 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngID = 0"),
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngID = 0")});
             this.plngBeginningCheckSortNumber.Name = "plngBeginningCheckSortNumber";
-            this.plngBeginningCheckSortNumber.Type = typeof(int);
+            this.plngBeginningCheckSortNumber.Type = typeof(long);
             this.plngBeginningCheckSortNumber.ValueInfo = "0";
             dynamicListLookUpSettings9.DataMember = "APChecksQuery";
             dynamicListLookUpSettings9.DataSource = this.Dynamic;
@@ -2278,8 +2278,8 @@
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Visible", "?plngID = 0"),
             new DevExpress.XtraReports.Expressions.BasicExpressionBinding("Enabled", "?plngID = 0")});
             this.plngEndingCheckSortNumber.Name = "plngEndingCheckSortNumber";
-            this.plngEndingCheckSortNumber.Type = typeof(int);
-            this.plngEndingCheckSortNumber.ValueInfo = "2147483647";
+            this.plngEndingCheckSortNumber.Type = typeof(long);
+            this.plngEndingCheckSortNumber.ValueInfo = "999999999999";
             dynamicListLookUpSettings10.DataMember = "APChecksQuery";
             dynamicListLookUpSettings10.DataSource = this.Dynamic;
             dynamicListLookUpSettings10.DisplayMember = "Number";
