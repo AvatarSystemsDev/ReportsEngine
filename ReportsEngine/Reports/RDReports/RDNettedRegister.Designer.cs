@@ -2515,8 +2515,6 @@
             // 
             // xrCombinedStateWithholdingSubreport
             // 
-            this.xrCombinedStateWithholdingSubreport.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "?plngPrintRemittance <> 2 AND [OverflowOptionCodeID] <> 2")});
             this.xrCombinedStateWithholdingSubreport.LocationFloat = new DevExpress.Utils.PointFloat(0F, 0F);
             this.xrCombinedStateWithholdingSubreport.Name = "xrCombinedStateWithholdingSubreport";
             this.xrCombinedStateWithholdingSubreport.ParameterBindings.Add(new DevExpress.XtraReports.UI.ParameterBinding("pstrDatabaseName", this.pstrDatabaseName));

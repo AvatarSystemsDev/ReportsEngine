@@ -511,9 +511,6 @@
             this.xrLabel7,
             this.xrLabel2,
             this.xrLabel18});
-            this.Tablix1.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "Iif([DebitAmount] = 0 AND [CreditAmount] = 0 AND not ?pbooShowZeroAmounts,\nFALSE," +
-                    "TRUE)")});
             this.Tablix1.HeightF = 14.79333F;
             this.Tablix1.KeepTogether = true;
             this.Tablix1.MultiColumn.ColumnSpacing = 50F;

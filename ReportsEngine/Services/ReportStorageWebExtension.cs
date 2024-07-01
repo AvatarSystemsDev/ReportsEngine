@@ -340,7 +340,7 @@ namespace ReportsEngine.Services
                             }
                             catch (Exception ex)
                             {
-
+                                Console.WriteLine(ex.ToString());
                             }
                         }
                     }
