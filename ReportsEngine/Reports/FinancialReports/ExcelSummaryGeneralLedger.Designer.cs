@@ -83,6 +83,7 @@
             this.pstrSelectAccount = new DevExpress.XtraReports.Parameters.Parameter();
             this.pstrSelectAccountingCenter = new DevExpress.XtraReports.Parameters.Parameter();
             this.pbooShowYearEndClose = new DevExpress.XtraReports.Parameters.Parameter();
+            this.pbooShowZeroBalance = new DevExpress.XtraReports.Parameters.Parameter();
             ((System.ComponentModel.ISupportInitialize)(this)).BeginInit();
             // 
             // Dynamic
@@ -783,8 +784,6 @@
             // 
             this.pstrDatabaseName.Description = "pstrDatabaseName";
             this.pstrDatabaseName.Name = "pstrDatabaseName";
-            this.pstrDatabaseName.Type = typeof(bool);
-            this.pstrDatabaseName.ValueInfo = "False";
             this.pstrDatabaseName.Visible = false;
             // 
             // pstrServerName
@@ -890,6 +889,13 @@
             this.pbooShowYearEndClose.Type = typeof(bool);
             this.pbooShowYearEndClose.ValueInfo = "False";
             // 
+            // pbooShowZeroBalance
+            // 
+            this.pbooShowZeroBalance.Description = "pbooShowZeroBalance";
+            this.pbooShowZeroBalance.Name = "pbooShowZeroBalance";
+            this.pbooShowZeroBalance.Type = typeof(bool);
+            this.pbooShowZeroBalance.ValueInfo = "False";
+            // 
             // ExcelSummaryGeneralLedger
             // 
             this.Bands.AddRange(new DevExpress.XtraReports.UI.Band[] {
@@ -943,7 +949,8 @@
             this.pstrEndingCostCenter,
             this.pstrSelectAccount,
             this.pstrSelectAccountingCenter,
-            this.pbooShowYearEndClose});
+            this.pbooShowYearEndClose,
+            this.pbooShowZeroBalance});
             this.Version = "24.1";
             ((System.ComponentModel.ISupportInitialize)(this)).EndInit();
 
@@ -996,5 +1003,6 @@
         private DevExpress.XtraReports.UI.XRLabel xrLabel19;
         private DevExpress.XtraReports.UI.XRLabel xrLabel18;
         private DevExpress.XtraReports.Parameters.Parameter pbooShowYearEndClose;
+        private DevExpress.XtraReports.Parameters.Parameter pbooShowZeroBalance;
     }
 }
