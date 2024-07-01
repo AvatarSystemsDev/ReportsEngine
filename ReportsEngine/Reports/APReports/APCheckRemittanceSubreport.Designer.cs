@@ -830,8 +830,7 @@
             this.xrLabel6.BorderWidth = 1F;
             this.xrLabel6.CanGrow = false;
             this.xrLabel6.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NetAmount]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not [WillPrintDetailOnChecks]\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[NetAmount]")});
             this.xrLabel6.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel6.KeepTogether = true;
             this.xrLabel6.LocationFloat = new DevExpress.Utils.PointFloat(671.3599F, 0F);
@@ -856,8 +855,7 @@
             this.xrLabel7.BorderWidth = 1F;
             this.xrLabel7.CanGrow = false;
             this.xrLabel7.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DiscountTaken]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not [WillPrintDetailOnChecks]\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[DiscountTaken]")});
             this.xrLabel7.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel7.KeepTogether = true;
             this.xrLabel7.LocationFloat = new DevExpress.Utils.PointFloat(557.8201F, 0F);
@@ -882,8 +880,7 @@
             this.xrLabel5.BorderWidth = 1F;
             this.xrLabel5.CanGrow = false;
             this.xrLabel5.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[APPaymentAmount]"),
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Visible", "not [WillPrintDetailOnChecks]")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "[APPaymentAmount]")});
             this.xrLabel5.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrLabel5.KeepTogether = true;
             this.xrLabel5.LocationFloat = new DevExpress.Utils.PointFloat(446.1548F, 0F);

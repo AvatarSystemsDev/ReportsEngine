@@ -1960,6 +1960,7 @@
             // 
             // ReportFooter
             // 
+            this.ReportFooter.Expanded = false;
             this.ReportFooter.HeightF = 0F;
             this.ReportFooter.Name = "ReportFooter";
             // 

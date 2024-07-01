@@ -1328,6 +1328,7 @@
             this.ReportFooter.SubBands.AddRange(new DevExpress.XtraReports.UI.SubBand[] {
             this.SubBand12,
             this.SubBand13});
+            this.ReportFooter.Visible = false;
             // 
             // SubBand12
             // 
