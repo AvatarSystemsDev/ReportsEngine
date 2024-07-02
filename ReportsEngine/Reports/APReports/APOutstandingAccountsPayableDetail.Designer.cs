@@ -114,10 +114,6 @@
             DevExpress.DataAccess.Sql.Column column32 = new DevExpress.DataAccess.Sql.Column();
             DevExpress.DataAccess.Sql.ColumnExpression columnExpression32 = new DevExpress.DataAccess.Sql.ColumnExpression();
             DevExpress.DataAccess.Sql.QueryParameter queryParameter14 = new DevExpress.DataAccess.Sql.QueryParameter();
-            DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.UI.XRSummary xrSummary4 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings1 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings2 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
             DevExpress.XtraReports.Parameters.DynamicListLookUpSettings dynamicListLookUpSettings3 = new DevExpress.XtraReports.Parameters.DynamicListLookUpSettings();
@@ -134,11 +130,12 @@
             DevExpress.DataAccess.DataFederation.SelectNode selectNode3 = new DevExpress.DataAccess.DataFederation.SelectNode();
             DevExpress.DataAccess.DataFederation.SourceNode sourceNode3 = new DevExpress.DataAccess.DataFederation.SourceNode();
             DevExpress.DataAccess.DataFederation.Source source3 = new DevExpress.DataAccess.DataFederation.Source();
+            DevExpress.XtraReports.UI.XRSummary xrSummary1 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRSummary xrSummary2 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRSummary xrSummary3 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRSummary xrSummary4 = new DevExpress.XtraReports.UI.XRSummary();
             DevExpress.XtraReports.UI.XRSummary xrSummary5 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.UI.XRSummary xrSummary6 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.UI.XRSummary xrSummary7 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.UI.XRSummary xrSummary8 = new DevExpress.XtraReports.UI.XRSummary();
-            DevExpress.XtraReports.UI.XRSummary xrSummary9 = new DevExpress.XtraReports.UI.XRSummary();
+            DevExpress.XtraReports.UI.XRWatermark xrWatermark1 = new DevExpress.XtraReports.UI.XRWatermark();
             this.Dynamic = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.Pulse = new DevExpress.DataAccess.Sql.SqlDataSource(this.components);
             this.topMarginBand1 = new DevExpress.XtraReports.UI.TopMarginBand();
@@ -616,8 +613,6 @@
             this.xrLabel5.StylePriority.UseForeColor = false;
             this.xrLabel5.StylePriority.UsePadding = false;
             this.xrLabel5.StylePriority.UseTextAlignment = false;
-            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
-            this.xrLabel5.Summary = xrSummary1;
             this.xrLabel5.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel5.TextFormatString = "{0:N0}";
             // 
@@ -646,8 +641,6 @@
             this.xrLabel19.StylePriority.UseForeColor = false;
             this.xrLabel19.StylePriority.UsePadding = false;
             this.xrLabel19.StylePriority.UseTextAlignment = false;
-            xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
-            this.xrLabel19.Summary = xrSummary2;
             this.xrLabel19.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel19.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
@@ -1030,8 +1023,6 @@
             this.xrLabel51.StylePriority.UseForeColor = false;
             this.xrLabel51.StylePriority.UsePadding = false;
             this.xrLabel51.StylePriority.UseTextAlignment = false;
-            xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
-            this.xrLabel51.Summary = xrSummary3;
             this.xrLabel51.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel51.TextFormatString = "{0:N0}";
             // 
@@ -1060,8 +1051,6 @@
             this.xrLabel52.StylePriority.UseForeColor = false;
             this.xrLabel52.StylePriority.UsePadding = false;
             this.xrLabel52.StylePriority.UseTextAlignment = false;
-            xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
-            this.xrLabel52.Summary = xrSummary4;
             this.xrLabel52.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel52.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
@@ -1444,7 +1433,7 @@
             this.xrRichText4.BorderWidth = 1F;
             this.xrRichText4.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Date t" +
-                    "o Use:  </b>  \' +Iif(?pbooUseInvoiceDate, \'Due Date\' ,\'Invoice Date\' )+\n\'</span>" +
+                    "o Use:  </b>  \' +Iif(?plngUseInvoiceDate, \'Due Date\' ,\'Invoice Date\' )+\n\'</span>" +
                     "\'\n\n\n")});
             this.xrRichText4.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText4.KeepTogether = true;
@@ -1850,7 +1839,7 @@
             this.xrRichText9.BorderWidth = 1F;
             this.xrRichText9.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Date t" +
-                    "o Use:  </b>  \' +Iif(?pbooUseInvoiceDate, \'Due Date\' ,\'Invoice Date\' )+\n\'</span>" +
+                    "o Use:  </b>  \' +Iif(?plngUseInvoiceDate, \'Due Date\' ,\'Invoice Date\' )+\n\'</span>" +
                     "\'\n\n\n")});
             this.xrRichText9.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText9.KeepTogether = true;
@@ -2929,7 +2918,7 @@
             this.xrRichText3.BorderWidth = 1F;
             this.xrRichText3.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Date t" +
-                    "o Use:  </b>  \' +Iif(?pbooUseInvoiceDate, \'Due Date\' ,\'Invoice Date\' )+\n\'</span>" +
+                    "o Use:  </b>  \' +Iif(?plngUseInvoiceDate, \'Due Date\' ,\'Invoice Date\' )+\n\'</span>" +
                     "\'\n\n\n")});
             this.xrRichText3.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText3.KeepTogether = true;
@@ -3453,7 +3442,7 @@
             this.xrRichText8.BorderWidth = 1F;
             this.xrRichText8.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
             new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Html", "\'<span style=\"font-family: \'\'Segoe UI\'\'; font-size: 8pt; color: black;\"><b>Date t" +
-                    "o Use:  </b>  \' +Iif(?pbooUseInvoiceDate, \'Due Date\' ,\'Invoice Date\' )+\n\'</span>" +
+                    "o Use:  </b>  \' +Iif(?plngUseInvoiceDate, \'Due Date\' ,\'Invoice Date\' )+\n\'</span>" +
                     "\'\n\n\n")});
             this.xrRichText8.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F);
             this.xrRichText8.KeepTogether = true;
@@ -3543,8 +3532,8 @@
             this.xrLabel38.StylePriority.UseForeColor = false;
             this.xrLabel38.StylePriority.UsePadding = false;
             this.xrLabel38.StylePriority.UseTextAlignment = false;
-            xrSummary5.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
-            this.xrLabel38.Summary = xrSummary5;
+            xrSummary1.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
+            this.xrLabel38.Summary = xrSummary1;
             this.xrLabel38.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel38.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
@@ -3638,8 +3627,8 @@
             this.xrLabel101.StylePriority.UseForeColor = false;
             this.xrLabel101.StylePriority.UsePadding = false;
             this.xrLabel101.StylePriority.UseTextAlignment = false;
-            xrSummary6.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
-            this.xrLabel101.Summary = xrSummary6;
+            xrSummary2.Running = DevExpress.XtraReports.UI.SummaryRunning.Report;
+            this.xrLabel101.Summary = xrSummary2;
             this.xrLabel101.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel101.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
@@ -3714,8 +3703,8 @@
             this.xrLabel47.StylePriority.UseForeColor = false;
             this.xrLabel47.StylePriority.UsePadding = false;
             this.xrLabel47.StylePriority.UseTextAlignment = false;
-            xrSummary7.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
-            this.xrLabel47.Summary = xrSummary7;
+            xrSummary3.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
+            this.xrLabel47.Summary = xrSummary3;
             this.xrLabel47.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel47.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
@@ -3754,8 +3743,8 @@
             this.xrLabel98.StylePriority.UseForeColor = false;
             this.xrLabel98.StylePriority.UsePadding = false;
             this.xrLabel98.StylePriority.UseTextAlignment = false;
-            xrSummary8.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
-            this.xrLabel98.Summary = xrSummary8;
+            xrSummary4.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
+            this.xrLabel98.Summary = xrSummary4;
             this.xrLabel98.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopRight;
             this.xrLabel98.TextFormatString = "{0:#,0.00;(#,0.00)}";
             // 
@@ -3841,8 +3830,8 @@
             this.xrLabel50.StylePriority.UseForeColor = false;
             this.xrLabel50.StylePriority.UsePadding = false;
             this.xrLabel50.StylePriority.UseTextAlignment = false;
-            xrSummary9.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
-            this.xrLabel50.Summary = xrSummary9;
+            xrSummary5.Running = DevExpress.XtraReports.UI.SummaryRunning.Group;
+            this.xrLabel50.Summary = xrSummary5;
             this.xrLabel50.Text = "Total Invoice";
             this.xrLabel50.TextAlignment = DevExpress.XtraPrinting.TextAlignment.TopLeft;
             this.xrLabel50.TextFormatString = "{0:#,0.00;(#,0.00)}";
@@ -4066,6 +4055,9 @@
             this.pbooShowDetail,
             this.pbooShowCriteria});
             this.Version = "24.1";
+            xrWatermark1.Id = "Watermark1";
+            this.Watermarks.AddRange(new DevExpress.XtraPrinting.Drawing.Watermark[] {
+            xrWatermark1});
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xrRichText9)).EndInit();

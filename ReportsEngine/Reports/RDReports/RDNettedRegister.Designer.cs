@@ -3042,8 +3042,8 @@
             this.xrLabel76.BorderWidth = 1F;
             this.xrLabel76.CanGrow = false;
             this.xrLabel76.ExpressionBindings.AddRange(new DevExpress.XtraReports.UI.ExpressionBinding[] {
-            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "\'AR Amount: \' + FORMATSTRING(\'{0:N2}\', SUMSUM([ARAmount] + [JIBPaymentTotalAmount" +
-                    "Increment]))\n")});
+            new DevExpress.XtraReports.UI.ExpressionBinding("BeforePrint", "Text", "Iif(sumSum([ARAmount] + [JIBPaymentTotalAmountIncrement]), \'AR Amount: \' + FORMAT" +
+                    "STRING(\'{0:N2}\', SUMSUM([ARAmount] + [JIBPaymentTotalAmountIncrement])) ,\'\')")});
             this.xrLabel76.Font = new DevExpress.Drawing.DXFont("Segoe UI", 8F, DevExpress.Drawing.DXFontStyle.Bold);
             this.xrLabel76.KeepTogether = true;
             this.xrLabel76.LocationFloat = new DevExpress.Utils.PointFloat(557.2848F, 0F);
